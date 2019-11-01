@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-prescribable-product-code-value-set"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2019-10-29T22:40:15.000-04:00"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
+    <version value="1.0.0"/>
+    <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
+    <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
+    <status value="draft"/>
+    <date value="2019-10-29"/>
+    <publisher value="CARIN Alliance"/>
+    <compose>
+        <include>
+            <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+            <filter>
+                <property value="TTY"/>
+                <op value="in"/>
+                <value value="SCD,SBD,GPCK,BPCK"/>
+            </filter>
+        </include>
+        <include>
+            <system value="http://example.org/ndc11/placeholder"/>
+        </include>
+    </compose>
+</ValueSet>

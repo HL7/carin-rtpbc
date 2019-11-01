@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-billing-unit-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "11" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T02:13:09.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.\n        </div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"];
+  fhir:CodeSystem.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:CodeSystem.name [ fhir:value "CarinRtpbcBillingUnitCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Billing Unit Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-10-25T00:00:00-05:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "GM" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Gram" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Quantity unit of measure for products billed as a number of grams" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "ML" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Milliliter" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Quantity unit of measure for products billed as a number of milliliters" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "EA" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Each" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Quantity unit of measure for products billed as individual items (e.g., tablets)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

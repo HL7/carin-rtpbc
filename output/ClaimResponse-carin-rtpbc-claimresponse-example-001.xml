@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClaimResponse xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-claimresponse-example-001"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-11-01T15:56:28.000-04:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-claimresponse-example-001</p><p><b>meta</b>: </p><p><b>contained</b>: , </p><p><b>identifier</b>: rtpbcresponse0001</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 1:10:55 PM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Coinsurance <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'coinsurance' = 'Per prescription coinsurance', given as 'Coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total Patient Responsibility <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'total' = 'Total patient responsibility', given as 'Total Patient Responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: unknown resource contained</p><p><b>productOrService</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>
+  </text>
+  <contained>
+    <Patient>
+      <id value="patient-1"/>
+      <name>
+        <family value="Doe"/>
+        <given value="Jane"/>
+      </name>
+      <gender value="female"/>
+      <birthDate value="1975-12-05"/>
+      <address>
+        <line value="100 Oak Court"/>
+        <city value="Madison"/>
+        <state value="WI"/>
+        <postalCode value="53510"/>
+        <country value="US"/>
+      </address>
+    </Patient>
+  </contained>
+  <contained>
+    <Organization>
+      <id value="pharmacy-2-mail"/>
+      <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="3232121244"/>
+      </identifier>
+      <name value="PP US Mail Service Pharmacy"/>
+      <telecom>
+        <system value="phone"/>
+        <value value="5551112222"/>
+      </telecom>
+    </Organization>
+  </contained>
+  <identifier>
+    <value value="rtpbcresponse0001"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="pharmacy"/>
+      <display value="Pharmacy"/>
+    </coding>
+  </type>
+  <use value="predetermination"/>
+  <patient>
+    <reference value="#patient-1"/>
+  </patient>
+  <created value="2019-11-01T13:10:55-05:00"/>
+  <insurer>
+    <identifier>
+      <value value="Pharmacy Plans US"/>
+    </identifier>
+  </insurer>
+  <request>
+    <identifier>
+      <value value="rtpbc0001"/>
+    </identifier>
+  </request>
+  <outcome value="complete"/>
+  <disposition value="Processed successfully"/>
+  <item>
+    <itemSequence value="1"/>
+    <noteNumber value="1"/>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="copay"/>
+          <display value="Copay"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="10"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="coinsurance"/>
+          <display value="Coinsurance"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="15"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="total"/>
+          <display value="Total Patient Responsibility"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="25"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+  </item>
+  <addItem>
+    <itemSequence value="1"/>
+    <provider>
+      <reference value="#pharmacy-2-mail"/>
+    </provider>
+    <productOrService>
+      <coding>
+        <system value="http://example.org/ndc11/placeholder"/>
+        <code value="00777310402"/>
+        <display value="Prozac 10mg capsule"/>
+      </coding>
+    </productOrService>
+    <quantity>
+      <value value="180"/>
+      <unit value="EA"/>
+    </quantity>
+    <noteNumber value="2"/>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="copay"/>
+          <display value="Copay"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="20"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="coinsurance"/>
+          <display value="Coinsurance"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="30"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+          <code value="total"/>
+          <display value="Total Patient Responsibiity"/>
+        </coding>
+      </category>
+      <amount>
+        <value value="50"/>
+        <currency value="USD"/>
+      </amount>
+    </adjudication>
+  </addItem>
+  <processNote>
+    <number value="1"/>
+    <text value="Covered"/>
+  </processNote>
+  <processNote>
+    <number value="2"/>
+    <text value="Covered"/>
+  </processNote>
+</ClaimResponse>

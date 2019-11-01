@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carin-rtpbc-coverage-determination-code-system",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-01T03:27:49.000-05:00"
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines coverage levels that may apply to a prescription product.   \n        </div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination",
+  "version": "0.1.00-DRAFT",
+  "name": "CarinRtpbcCoverageDeterminationCodeSystem",
+  "title": "CARIN RTPBC Coverage Determination Code System",
+  "status": "draft",
+  "date": "2019-10-31T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "description": "This code system defines coverage levels that may apply to a prescription product.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "covered",
+      "display": "Covered"
+    },
+    {
+      "code": "prior-auth",
+      "display": "Covered with restriction: Prior authorization required",
+      "definition": "Covered with restriction: Prior authorization required"
+    },
+    {
+      "code": "step-therapy",
+      "display": "Covered with restriction: Step therapy applies",
+      "definition": "Covered with restriction: Step therapy applies"
+    },
+    {
+      "code": "quantity-limit",
+      "display": "Covered with restriction: Quantity limits apply",
+      "definition": "Covered with restriction: Quantity limits apply"
+    },
+    {
+      "code": "other-restriction",
+      "display": "Covered with restriction: Other restriction applies",
+      "definition": "Covered with restriction: Other restriction applies"
+    },
+    {
+      "code": "not-covered",
+      "display": "Not covered",
+      "definition": "Not covered"
+    }
+  ]
+}

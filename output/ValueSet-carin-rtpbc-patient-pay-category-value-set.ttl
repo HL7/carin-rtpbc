@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-patient-pay-category-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-patient-pay-category-value-set"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T02:16:21.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;  \n        </div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"];
+  fhir:ValueSet.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:ValueSet.name [ fhir:value "CarinRtbpcPatientPayCategoryValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Patient Pay Category Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-10-25T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
+  fhir:ValueSet.description [ fhir:value "This value set contains components of a patient's responsibility for a prescription product's cost."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "deductible" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Deductible" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "coinsurance" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Per prescription coinsurance" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "copay" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Copay" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "tax" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tax" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "other" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "total" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Total patient responsibility" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-patient-pay-category-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-patient-pay-category-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+

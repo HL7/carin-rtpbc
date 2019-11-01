@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-MedicationRequest"/>
+    <meta>
+        <versionId value="32"/>
+        <lastUpdated value="2019-11-01T06:28:22.000-04:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div>
+                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>
+            </div>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
+    <version value="0.0.1"/>
+    <name value="CarinRtpbcRequestPrescriptionInfo"/>
+    <title value="CARIN RTPBC Request Prescription Information"/>
+    <status value="draft"/>
+    <date value="2019-10-15"/>
+    <publisher value="CARIN Alliance"/>
+    <description value="This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy"/>
+    <fhirVersion value="4.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="MedicationRequest"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="MedicationRequest">
+            <path value="MedicationRequest"/>
+        </element>
+        <element id="MedicationRequest.status">
+            <path value="MedicationRequest.status"/>
+            <label value="Request Status"/>
+            <short value="Request Status"/>
+            <definition value="Status of the request for dispensing"/>
+            <comment value="Always equals 'draft'"/>
+            <fixedCode value="draft"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.intent">
+            <path value="MedicationRequest.intent"/>
+            <label value="Request Intent"/>
+            <short value="Request Intent"/>
+            <definition value="Intent of the request for dispensing"/>
+            <comment value="Always equals 'proposal'"/>
+            <fixedCode value="proposal"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.medication[x]">
+            <path value="MedicationRequest.medication[x]"/>
+            <label value="Prescribed Product"/>
+            <short value="Prescribed Product"/>
+            <definition value="A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"/>
+            <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="CodeableConcept"/>
+            </type>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="CARIN RTPBC prescribable product codes (NDC and RxNorm)"/>
+                <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
+            </binding>
+        </element>
+        <element id="MedicationRequest.medicationCodeableConcept.coding">
+            <path value="MedicationRequest.medicationCodeableConcept.coding"/>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="MedicationRequest.medicationCodeableConcept.coding.system">
+            <path value="MedicationRequest.medicationCodeableConcept.coding.system"/>
+            <min value="1"/>
+        </element>
+        <element id="MedicationRequest.medicationCodeableConcept.coding.code">
+            <path value="MedicationRequest.medicationCodeableConcept.coding.code"/>
+            <min value="1"/>
+        </element>
+        <element id="MedicationRequest.medicationCodeableConcept.coding.display">
+            <path value="MedicationRequest.medicationCodeableConcept.coding.display"/>
+            <label value="Product Description"/>
+            <short value="Product Description"/>
+            <definition value="The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired"/>
+            <min value="1"/>
+        </element>
+        <element id="MedicationRequest.subject">
+            <path value="MedicationRequest.subject"/>
+            <label value="Patient"/>
+            <short value="Patient"/>
+            <definition value="The patient for whom this medication is being requested"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.subject.reference">
+            <path value="MedicationRequest.subject.reference"/>
+            <label value="Patient Reference"/>
+            <short value="Patient Reference"/>
+            <definition value="Reference to a Patient resource"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.requester">
+            <path value="MedicationRequest.requester"/>
+            <label value="Prescriber"/>
+            <short value="Prescriber"/>
+            <definition value="The prescriber of the medication being requested"/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.requester.reference">
+            <path value="MedicationRequest.requester.reference"/>
+            <label value="Prescriber Reference"/>
+            <short value="Prescriber Reference"/>
+            <definition value="Reference to a Practitioner resource"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.reasonCode">
+            <path value="MedicationRequest.reasonCode"/>
+        </element>
+        <element id="MedicationRequest.reasonCode.coding">
+            <path value="MedicationRequest.reasonCode.coding"/>
+            <min value="1"/>
+            <max value="*"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest">
+            <path value="MedicationRequest.dispenseRequest"/>
+            <label value="Mandatory dispense request"/>
+            <short value="Mandatory dispense request"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.substitution">
+            <path value="MedicationRequest.substitution"/>
+            <label value="Substitution"/>
+            <short value="Substitution"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.substitution.allowed[x]">
+            <path value="MedicationRequest.substitution.allowed[x]"/>
+            <label value="Substitution Allowed"/>
+            <short value="Substitution Allowed"/>
+            <definition value="Whether or not the pharmacy may dispense a substitutable generic product instead of a requested branded product"/>
+            <type>
+                <code value="boolean"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.quantity">
+            <path value="MedicationRequest.dispenseRequest.quantity"/>
+            <label value="Prescribed Quantity"/>
+            <short value="Prescribed Quantity"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
+            <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration"/>
+            <label value="Days Supply"/>
+            <short value="Days Supply"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.performer">
+            <path value="MedicationRequest.dispenseRequest.performer"/>
+            <label value="Pharmacy"/>
+            <short value="Pharmacy"/>
+            <definition value="Proposed dispensing pharmacy."/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.performer.reference">
+            <path value="MedicationRequest.dispenseRequest.performer.reference"/>
+            <label value="Pharmacy Reference"/>
+            <short value="Pharmacy Reference"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration.value">
+            <path value="MedicationRequest.dispenseRequest.expectedSupplyDuration.value"/>
+            <label value="Days Supply Value"/>
+            <short value="Days Supply Value"/>
+            <definition value="The number of days the requested dispense quantity is intended to last"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.quantity.value">
+            <path value="MedicationRequest.dispenseRequest.quantity.value"/>
+            <label value="Quantity in Billing Units"/>
+            <short value="Quantity in Billing Units"/>
+            <definition value="The prescribed quantity in terms of the applicable billing unit of measure"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.dispenseRequest.quantity.unit">
+            <path value="MedicationRequest.dispenseRequest.quantity.unit"/>
+            <label value="Billing unit of measure"/>
+            <short value="Billing unit of measure"/>
+            <definition value="Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Billing quantity unity of measure"/>
+            </binding>
+        </element>
+    </differential>
+</StructureDefinition>

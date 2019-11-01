@@ -1,0 +1,91 @@
+{
+  "package": "hl7.fhir.us.carin-rtpbc",
+  "version": "0.1.00-DRAFT",
+  "fhirVersion": "4.0.1",
+  "extensions": [],
+  "profiles": {
+    "Claim": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
+        "title": "CARIN RTPBC Request using Claim"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
+        "title": "CARIN RTPBC Response using ClaimResponse"
+      }
+    ],
+    "OperationOutcome": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response",
+        "title": "CARIN RTPBC Exception Response"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy",
+        "title": "CARIN RTPBC Pharmacy"
+      }
+    ],
+    "Coverage": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers",
+        "title": "CARIN RTPBC Request Coverage Identifiers"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info",
+        "title": "CARIN RTPBC Request Patient Info"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info",
+        "title": "CARIN RTPBC Request Prescriber Info"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info",
+        "title": "CARIN RTPBC Request Prescription Information"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ]
+  }
+}

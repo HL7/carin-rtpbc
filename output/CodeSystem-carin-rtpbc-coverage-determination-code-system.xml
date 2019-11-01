@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-coverage-determination-code-system"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-01T03:27:49.000-05:00"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This code system defines coverage levels that may apply to a prescription product.   
+        </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
+  <version value="0.1.00-DRAFT"/>
+  <name value="CarinRtpbcCoverageDeterminationCodeSystem"/>
+  <title value="CARIN RTPBC Coverage Determination Code System"/>
+  <status value="draft"/>
+  <date value="2019-10-31T00:00:00-05:00"/>
+  <publisher value="CARIN Alliance"/>
+  <description value="This code system defines coverage levels that may apply to a prescription product."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="covered"/>
+    <display value="Covered"/>
+  </concept>
+  <concept>
+    <code value="prior-auth"/>
+    <display value="Covered with restriction: Prior authorization required"/>
+    <definition value="Covered with restriction: Prior authorization required"/>
+  </concept>
+  <concept>
+    <code value="step-therapy"/>
+    <display value="Covered with restriction: Step therapy applies"/>
+    <definition value="Covered with restriction: Step therapy applies"/>
+  </concept>
+  <concept>
+    <code value="quantity-limit"/>
+    <display value="Covered with restriction: Quantity limits apply"/>
+    <definition value="Covered with restriction: Quantity limits apply"/>
+  </concept>
+  <concept>
+    <code value="other-restriction"/>
+    <display value="Covered with restriction: Other restriction applies"/>
+    <definition value="Covered with restriction: Other restriction applies"/>
+  </concept>
+  <concept>
+    <code value="not-covered"/>
+    <display value="Not covered"/>
+    <definition value="Not covered"/>
+  </concept>
+</CodeSystem>

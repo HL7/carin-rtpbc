@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "carin-rtpbc-billing-unit-value-set",
+  "meta": {
+    "versionId": "6",
+    "lastUpdated": "2019-10-28T18:15:51.000-05:00"
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products\n        </div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit",
+  "version": "0.1.00-DRAFT",
+  "name": "CarinRtbpcBillingUnitValueSet",
+  "title": "CARIN RTPBC Billing Unit Value Set",
+  "status": "draft",
+  "date": "2019-10-25T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "description": "This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit",
+        "concept": [
+          {
+            "code": "GM",
+            "display": "Gram"
+          },
+          {
+            "code": "ML",
+            "display": "Milliliter"
+          },
+          {
+            "code": "EA",
+            "display": "Each"
+          }
+        ]
+      }
+    ]
+  }
+}

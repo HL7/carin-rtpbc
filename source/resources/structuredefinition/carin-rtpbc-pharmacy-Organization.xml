@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-pharmacy-Organization"/>
+    <meta>
+        <versionId value="29"/>
+        <lastUpdated value="2019-11-01T07:27:30.000-04:00"/>
+    </meta>
+    <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"/>
+    <version value="0.0.1"/>
+    <name value="CarinRtpbcPharmacy"/>
+    <title value="CARIN RTPBC Pharmacy"/>
+    <status value="draft"/>
+    <publisher value="CARIN Alliance"/>
+    <fhirVersion value="4.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Organization"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Organization">
+            <path value="Organization"/>
+        </element>
+        <element id="Organization.identifier">
+            <path value="Organization.identifier"/>
+            <label value="Pharmacy Identifier"/>
+            <slicing>
+                <discriminator>
+                    <type value="pattern"/>
+                    <path value="$this"/>
+                </discriminator>
+                <rules value="open"/>
+            </slicing>
+            <short value="Pharmacy Identifier"/>
+            <definition value="The pharmacy's identifier (organizational NPI or NCPDP ID)"/>
+            <comment value="Either an NPI or NCPDP ID must be present"/>
+            <min value="1"/>
+        </element>
+        <element id="Organization.identifier.system">
+            <path value="Organization.identifier.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.identifier.value">
+            <path value="Organization.identifier.value"/>
+            <min value="1"/>
+            <max value="1"/>
+        </element>
+        <element id="Organization.identifier:pharmacyNpi">
+            <path value="Organization.identifier"/>
+            <sliceName value="pharmacyNpi"/>
+            <label value="Pharmacy's organizational NPI"/>
+            <short value="Pharmacy's organizational NPI"/>
+            <definition value="The pharmacy's organizational NPI"/>
+            <requirements value="Populate with the organizational NPI that most specifically represents the intended pharmacy location"/>
+            <min value="0"/>
+            <max value="1"/>
+            <patternIdentifier>
+                <system value="http://hl7.org/fhir/sid/us-npi"/>
+            </patternIdentifier>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.identifier:pharmacyNcpdpId">
+            <path value="Organization.identifier"/>
+            <sliceName value="pharmacyNcpdpId"/>
+            <label value="Pharmacy's NCPDP ID"/>
+            <short value="Pharmacy's NCPDP ID"/>
+            <definition value="The pharmacy's NCPDP ID"/>
+            <min value="0"/>
+            <max value="1"/>
+            <patternIdentifier>
+                <system value="http://example.org/ncpdpid/placeholder"/>
+            </patternIdentifier>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.name">
+            <path value="Organization.name"/>
+            <label value="Pharmacy Name"/>
+            <short value="Pharmacy Name"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.telecom">
+            <path value="Organization.telecom"/>
+            <label value="Pharmacy Telephone"/>
+            <short value="Pharmacy Telephone"/>
+            <definition value="Pharmacy telephone number for patients, customers"/>
+            <comment value="Must Support when the pharmacy is included in the RTPBC response (ClaimResponse). &quot;Must support&quot; means that (a) the responding payer/PBM can provide a patient-appropriate telephone number for covered pharmacies and (b) the patient application can make the phone number available to the user as it deems appropriate"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.address">
+            <path value="Organization.address"/>
+            <label value="Pharmacy Address"/>
+            <short value="Pharmacy Address"/>
+            <definition value="The pharmacy store address"/>
+            <comment value="Must Support when the pharmacy is included in the RTPBC response (ClaimResponse). &quot;Must support&quot; means that (a) the responding payer/PBM can provide pharmacy address information for covered pharmacies that the patient may have a need to contact or visit (e.g., a retail pharmacy location) and (b) the patient application can make the address available to the user as it deems appropriate"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.address.line">
+            <path value="Organization.address.line"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.address.city">
+            <path value="Organization.address.city"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.address.state">
+            <path value="Organization.address.state"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="US Postal State Codes"/>
+            </binding>
+        </element>
+        <element id="Organization.address.postalCode">
+            <path value="Organization.address.postalCode"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.address.country">
+            <path value="Organization.address.country"/>
+            <comment value="Populate when not a US address"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="ISO 2-Character Country Codes"/>
+            </binding>
+        </element>
+        <element id="Organization.telecom.system">
+            <path value="Organization.telecom.system"/>
+            <min value="1"/>
+            <fixedCode value="phone"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.telecom.value">
+            <path value="Organization.telecom.value"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Organization.identifier:pharmacy-ncpdp-id.system">
+            <path value="Organization.identifier.system"/>
+        </element>
+    </differential>
+</StructureDefinition>

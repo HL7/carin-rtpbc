@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-Practitioner"/>
+    <meta>
+        <versionId value="10"/>
+        <lastUpdated value="2019-10-31T17:28:36.000-04:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div
+                xmlns="http://www.w3.org/1999/xhtml">
+                <div
+                    xmlns="http://www.w3.org/1999/xhtml">This profile constrains the Practitioner resource to convey identifying prescriber
+information required in the consumer real-time pharmacy benefit 
+check (RTPBC) process.
+                </div>
+            </div>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
+    <version value="0.0.1"/>
+    <name value="CarinRtpbcRequestPrescriberInfo"/>
+    <title value="CARIN RTPBC Request Prescriber Info"/>
+    <status value="draft"/>
+    <date value="2019-10-03"/>
+    <publisher value="CARIN Alliance"/>
+    <description value="This profile constrains the Practitioner resource to convey identifying prescriber information required in the consumer real-time pharmacy benefit check (RTPBC) process."/>
+    <fhirVersion value="4.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Practitioner"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Practitioner">
+            <path value="Practitioner"/>
+        </element>
+        <element id="Practitioner.identifier">
+            <path value="Practitioner.identifier"/>
+            <label value="Individual Provider NPI"/>
+            <short value="Individual Provider NPI"/>
+            <definition value="The prescriber's individual NPI"/>
+            <min value="1"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Practitioner.name">
+            <path value="Practitioner.name"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Practitioner.name.family">
+            <path value="Practitioner.name.family"/>
+            <label value="Prescriber Family Name"/>
+            <short value="Prescriber Family Name"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Practitioner.identifier.system">
+            <path value="Practitioner.identifier.system"/>
+            <min value="1"/>
+            <fixedUri value="http://hl7.org/fhir/sid/us-npi"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Practitioner.identifier.value">
+            <path value="Practitioner.identifier.value"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

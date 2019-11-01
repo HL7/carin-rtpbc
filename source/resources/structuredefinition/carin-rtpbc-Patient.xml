@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-Patient"/>
+    <meta>
+        <versionId value="21"/>
+        <lastUpdated value="2019-10-31T13:31:00.000-04:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div
+                xmlns="http://www.w3.org/1999/xhtml">
+                <div
+                    xmlns="http://www.w3.org/1999/xhtml">
+                    <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit 
+check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>
+                </div>
+            </div>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
+    <version value="0.0.1"/>
+    <name value="CarinRtpbcRequestPatientInfo"/>
+    <title value="CARIN RTPBC Request Patient Info"/>
+    <status value="draft"/>
+    <date value="2019-10-03"/>
+    <publisher value="CARIN Alliance"/>
+    <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. "/>
+    <fhirVersion value="4.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Patient"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Patient">
+            <path value="Patient"/>
+        </element>
+        <element id="Patient.name">
+            <path value="Patient.name"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.gender">
+            <path value="Patient.gender"/>
+            <label value="Patient gender"/>
+            <short value="Patient gender"/>
+            <definition value="The patient's administrative gender (male, female, other, unknown)"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Administrative gender"/>
+            </binding>
+        </element>
+        <element id="Patient.birthDate">
+            <path value="Patient.birthDate"/>
+            <label value="Patient birth date"/>
+            <short value="Patient birth date"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address">
+            <path value="Patient.address"/>
+            <label value="Patient address"/>
+            <short value="Patient address"/>
+            <definition value="The patient's home address"/>
+            <comment value="Address may be used by the payer to identify the patient's insurance records"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address.line">
+            <path value="Patient.address.line"/>
+            <min value="1"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address.city">
+            <path value="Patient.address.city"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address.state">
+            <path value="Patient.address.state"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="Two Letter USPS alphabetic codes"/>
+            </binding>
+        </element>
+        <element id="Patient.address.postalCode">
+            <path value="Patient.address.postalCode"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.address.country">
+            <path value="Patient.address.country"/>
+            <comment value="Populate when not a US address"/>
+            <min value="0"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="ISO 3166 2-character country codes"/>
+            </binding>
+        </element>
+        <element id="Patient.name.family">
+            <path value="Patient.name.family"/>
+            <label value="Patient family name"/>
+            <short value="Patient family name"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Patient.name.given">
+            <path value="Patient.name.given"/>
+            <label value="Patient given name(s)"/>
+            <short value="Patient given name(s)"/>
+            <definition value="One or more given names of the patient"/>
+            <alias value="first name, middle name"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

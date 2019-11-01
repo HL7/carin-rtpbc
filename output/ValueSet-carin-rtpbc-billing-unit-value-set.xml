@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-billing-unit-value-set"/>
+  <meta>
+    <versionId value="6"/>
+    <lastUpdated value="2019-10-28T18:15:51.000-05:00"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products
+        </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
+  <version value="0.1.00-DRAFT"/>
+  <name value="CarinRtbpcBillingUnitValueSet"/>
+  <title value="CARIN RTPBC Billing Unit Value Set"/>
+  <status value="draft"/>
+  <date value="2019-10-25T00:00:00-05:00"/>
+  <publisher value="CARIN Alliance"/>
+  <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
+      <concept>
+        <code value="GM"/>
+        <display value="Gram"/>
+      </concept>
+      <concept>
+        <code value="ML"/>
+        <display value="Milliliter"/>
+      </concept>
+      <concept>
+        <code value="EA"/>
+        <display value="Each"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

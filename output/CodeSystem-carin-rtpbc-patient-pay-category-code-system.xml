@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-patient-pay-category-code-system"/>
+  <meta>
+    <versionId value="2"/>
+    <lastUpdated value="2019-11-01T02:12:13.000-05:00"/>
+  </meta>
+  <text>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This code system defines components of a patient's responsibility for a prescription product's cost.
+        </div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+  <version value="0.1.00-DRAFT"/>
+  <name value="CarinRtpbcPatientPayCategoryCodeSystem"/>
+  <title value="CARIN RTPBC Patient Pay Category Code System"/>
+  <status value="draft"/>
+  <date value="2019-10-31T00:00:00-05:00"/>
+  <publisher value="CARIN Alliance"/>
+  <description value="This code system defines components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <concept>
+    <code value="deductible"/>
+    <display value="Deductible"/>
+    <definition value="Amount to be collected from a patient to be applied to a periodic deductible."/>
+  </concept>
+  <concept>
+    <code value="coinsurance"/>
+    <display value="Per prescription coinsurance"/>
+    <definition value="Amount to be collected from a patient to satisfy a per prescription coinsurance."/>
+  </concept>
+  <concept>
+    <code value="copay"/>
+    <display value="Copay"/>
+    <definition value="Amount to be collected from the patient to satisfy a per prescription copay."/>
+  </concept>
+  <concept>
+    <code value="tax"/>
+    <display value="Tax"/>
+    <definition value="Amount to be collected from the patient for sales tax."/>
+  </concept>
+  <concept>
+    <code value="other"/>
+    <display value="Other"/>
+    <definition value="Other amount to be collected from the patient (PLACEHOLDER DURING IG DEVELOPMENT)."/>
+  </concept>
+  <concept>
+    <code value="total"/>
+    <display value="Total patient responsibility"/>
+    <definition value="Amount equalling the total patient responsibility for a prescription product&#39;s cost."/>
+  </concept>
+</CodeSystem>

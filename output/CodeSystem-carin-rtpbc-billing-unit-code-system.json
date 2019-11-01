@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carin-rtpbc-billing-unit-code-system",
+  "meta": {
+    "versionId": "11",
+    "lastUpdated": "2019-11-01T02:13:09.000-05:00"
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.\n        </div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit",
+  "version": "0.1.00-DRAFT",
+  "name": "CarinRtpbcBillingUnitCodeSystem",
+  "title": "CARIN RTPBC Billing Unit Code System",
+  "status": "draft",
+  "date": "2019-10-25T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "description": "This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "GM",
+      "display": "Gram",
+      "definition": "Quantity unit of measure for products billed as a number of grams"
+    },
+    {
+      "code": "ML",
+      "display": "Milliliter",
+      "definition": "Quantity unit of measure for products billed as a number of milliliters"
+    },
+    {
+      "code": "EA",
+      "display": "Each",
+      "definition": "Quantity unit of measure for products billed as individual items (e.g., tablets)"
+    }
+  ]
+}

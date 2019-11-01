@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-billing-unit-code-system"/>
+    <meta>
+        <versionId value="11"/>
+        <lastUpdated value="2019-11-01T03:13:09.000-04:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
+    <version value="1.0.0"/>
+    <name value="CarinRtpbcBillingUnitCodeSystem"/>
+    <title value="CARIN RTPBC Billing Unit Code System"/>
+    <status value="draft"/>
+    <date value="2019-10-25"/>
+    <publisher value="CARIN Alliance"/>
+    <description value="This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products."/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="GM"/>
+        <display value="Gram"/>
+        <definition value="Quantity unit of measure for products billed as a number of grams"/>
+    </concept>
+    <concept>
+        <code value="ML"/>
+        <display value="Milliliter"/>
+        <definition value="Quantity unit of measure for products billed as a number of milliliters"/>
+    </concept>
+    <concept>
+        <code value="EA"/>
+        <display value="Each"/>
+        <definition value="Quantity unit of measure for products billed as individual items (e.g., tablets)"/>
+    </concept>
+</CodeSystem>

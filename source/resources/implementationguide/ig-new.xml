@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="CARIN-RTPBC"/>
+  <meta>
+    <versionId value="153"/>
+    <lastUpdated value="2019-11-01T14:18:24.000-05:00"/>
+  </meta>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.
+        
+        
+        </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc10\source\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc10\framework"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc10\source\pages"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/CARIN-RTPBC"/>
+  <version value="0.1.00-DRAFT"/>
+  <name value="CarinRtpbc"/>
+  <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
+  <status value="draft"/>
+  <publisher value="HL7 International - Pharmacy"/>
+  <contact>
+    <name value="HL7 Pharmacy Workgroup"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://confluence.hl7.org/display/PHAR/Pharmacy"/>
+    </telecom>
+  </contact>
+  <description value="*(Jump to the table of contents...*  Need to fix... ../CARIN-RTPBC/toc.html)&#xA;&#xA;&lt;br&gt;&#xA;&#xA;This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.&#xA;Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;The process looks like this...&#xA; &#xA;&lt;div&gt;&lt;img src=&quot;https://www.frankmckinney.com/carin-rtpbc/basic-info-flow.png&quot; alt=&quot;basic information flow&quot;&gt;&lt;/div&gt;&lt;br&gt;&#xA;&#xA;***The stakeholders...***&#xA;* the **patient,** who wishes to understand how their medication is covered by their insurance: their out of pocket cost, restrictions, and pharmacy options&#xA;* the **consumer app** that submits the RTPBC request to the payer, and interprets the response for the patient&#xA;* the patient&#39;s **insurer or agent** that processes the RTPBC request and returns a response containing pricing, coverage restrictions, pharmacy options for the requested drug and alternative medications (typically the pharmacy benefit manager that handles the patient&#39;s prescription benefit) &#xA;* *(optionally, the patient app may retrieve related information such as cash or discount pricing from other entities. Those parties and exchanges are out of scope of this guide)*&#xA;&#xA;***In the request...***&#xA;*  the patient&#39;s app gathers information about the prescription... entered by the patient or imported from another source&#xA;*  the patient provides coverage information from their insurance card, or the app retrieves it using an eligibility service (outside the scope of this guide)&#xA;*  the app packages up the patient, coverage, prescription and preferred pharmacy information in FHIR resources and submits them to the patient&#39;s insurer&#xA;&#xA;***The response and its use...***&#xA;*  the insurer determines the patient cost and coverage details for the requested pharmacy and potentially for other pharmacy options--such as a mail service pharmacy&#xA;*  the insurer also checks for preferred alternative medications with better coverage under the patient&#39;s plan, and returns cost, coverage and pharmacy options for those as well&#xA;*  the patient&#39;s app interprets and presents the information in an understandable way, possibly alongside cash or discount pricing gathered from other sources (outside this guide&#39;s scope)&#xA;*  ***with the information from the insurer&#39;s response,*** the patient can learn whether the drug is covered, compare insurance out of pocket costs between pharmacies--and can also compare to cash prices and discount options gathered by their app.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Scope of this guide&#xA;Consumer RTPBC is intended to be used...&#xA;* in the United States (as it reflects unique US pharmacy insurance roles and conventions)&#xA;* for medications that are covered under the *pharmacy benefit* portion of the patient&#39;s health insurance, which typically excludes medications administered during hospital care or as part of medical procedures&#xA;* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that&#39;s the most useful and meaningful to patients. As a result, certain details that are part of the *provider-focused RTPBC standard* are not included here. Additional content could potentially be added in a later effort.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;*Related information flows outside of consumer RTPBC*&#xA;The patient&#39;s app might gather related information before or after submitting the consumer RTPBC request. *These exchanges are outside the scope of this guide.*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Author&#xA;This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.&#xA;&#xA;&lt;br&gt; &#xA;&#xA;The guide is currently in development and incomplete. &#xA;&#xA;&lt;br&gt;&#xA;&#xA;Comments and suggestions are welcome...&#xA;&#xA;* on our Zulip stream...&#xA;https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG&#xA;&#xA;* or send a note to fm@frankmckinney.com&#xA;&#xA;&#xA;&lt;br&gt;"/>
+  <packageId value="hl7.fhir.us.carin-rtpbc"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-ClaimResponse"/>
+        <display value="CarinRtpbcResponse"/>
+      </reference>
+      <name value="CarinRtpbcResponse"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-Patient"/>
+        <display value="CarinRtpbcRequestPatientInfo"/>
+      </reference>
+      <name value="CarinRtpbcRequestPatientInfo"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-Practitioner"/>
+        <display value="CarinRtpbcRequestPrescriberInfo"/>
+      </reference>
+      <name value="CarinRtpbcRequestPrescriberInfo"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-OperationOutcome"/>
+        <display value="CarinRtpbcExceptionResponse"/>
+      </reference>
+      <name value="CarinRtpbcExceptionResponse"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-MedicationRequest"/>
+        <display value="CarinRtpbcRequestPrescriptionInfo"/>
+      </reference>
+      <name value="CarinRtpbcRequestPrescriptionInfo"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-Coverage"/>
+        <display value="CarinRtpbcRequestCoverageIdentifiers"/>
+      </reference>
+      <name value="CarinRtpbcRequestCoverageIdentifiers"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-request-Claim"/>
+        <display value="CarinRtpbcRequest"/>
+      </reference>
+      <name value="CarinRtpbcRequest"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/carin-rtpbc-billing-unit-code-system"/>
+        <display value="CarinRtpbcBillingUnitCodeSystem"/>
+      </reference>
+      <name value="CarinRtpbcBillingUnitCodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-billing-unit-value-set"/>
+        <display value="CarinRtbpcBillingUnitValueSet"/>
+      </reference>
+      <name value="CarinRtbpcBillingUnitValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-pharmacy-Organization"/>
+        <display value="CarinRtpbcPharmacy"/>
+      </reference>
+      <name value="CarinRtpbcPharmacy"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-patient-pay-category-value-set"/>
+        <display value="CarinRtbpcPatientPayCategoryValueSet"/>
+      </reference>
+      <name value="CarinRtbpcPatientPayCategoryValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-coverage-determination-value-set"/>
+        <display value="CarinRtbpcCoverageDeterminationValueSet"/>
+      </reference>
+      <name value="CarinRtbpcCoverageDeterminationValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-prescribable-product-code-value-set"/>
+        <display value="CARINRTPBCPrescribableProductCodeValueSet"/>
+      </reference>
+      <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/carin-rtpbc-patient-pay-category-code-system"/>
+        <display value="CarinRtpbcPatientPayCategoryCodeSystem"/>
+      </reference>
+      <name value="CarinRtpbcPatientPayCategoryCodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/carin-rtpbc-coverage-determination-code-system"/>
+        <display value="CarinRtpbcCoverageDeterminationCodeSystem"/>
+      </reference>
+      <name value="CarinRtpbcCoverageDeterminationCodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Claim/carin-rtpbc-claim-example-001"/>
+        <display value="carin-rtpbc-claim-example-001"/>
+      </reference>
+      <name value="carin-rtpbc-claim-example-001"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ClaimResponse/carin-rtpbc-claimresponse-example-001"/>
+        <display value="carin-rtpbc-claimresponse-example-001"/>
+      </reference>
+      <name value="carin-rtpbc-claimresponse-example-001"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.md"/>
+      <title value="Table of contents"/>
+      <generation value="generated"/>
+      <page>
+        <nameUrl value="CARIN_Initiative_and_Consumer_RTPBC.html"/>
+        <title value="CARIN Initiative and Consumer RTPBC"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="FHIR_implementation_approach.html"/>
+        <title value="FHIR implementation approach"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Use_Case_and_Scenarios.html"/>
+        <title value="Use Case and Scenarios"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="High-level_content_structure.html"/>
+        <title value="High-level content structure"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="High-level_FHIR_resource_mapping.html"/>
+        <title value="High-level FHIR resource mapping"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Processing_overview.html"/>
+        <title value="Processing overview"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Terminology_overview.html"/>
+        <title value="Terminology overview"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Examples.html"/>
+        <title value="Examples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="Feedback.html"/>
+        <title value="Feedback"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="apply"/>
+      <value value="version"/>
+    </parameter>
+    <parameter>
+      <code value="generate"/>
+      <value value="xml"/>
+    </parameter>
+    <parameter>
+      <code value="generate"/>
+      <value value="JSON"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

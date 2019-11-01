@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-prescribable-product-code-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-prescribable-product-code-value-set"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-10-29T21:40:15.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include codes from <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li><li>Include all codes defined in <code>http://example.org/ndc11/placeholder</code></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"];
+  fhir:ValueSet.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:ValueSet.name [ fhir:value "CARINRTPBCPrescribableProductCodeValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Prescribable Product Code Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-10-29T00:00:00-05:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.nlm.nih.gov/research/umls/rxnorm" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "TTY" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "in" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "SCD,SBD,GPCK,BPCK" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://example.org/ndc11/placeholder" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-prescribable-product-code-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-prescribable-product-code-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+

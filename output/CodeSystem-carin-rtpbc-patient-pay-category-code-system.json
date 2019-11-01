@@ -1,0 +1,54 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carin-rtpbc-patient-pay-category-code-system",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2019-11-01T02:12:13.000-05:00"
+  },
+  "text": {
+    "status": "additional",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines components of a patient's responsibility for a prescription product's cost.\n        </div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+  "version": "0.1.00-DRAFT",
+  "name": "CarinRtpbcPatientPayCategoryCodeSystem",
+  "title": "CARIN RTPBC Patient Pay Category Code System",
+  "status": "draft",
+  "date": "2019-10-31T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "description": "This code system defines components of a patient's responsibility for a prescription product's cost.",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "deductible",
+      "display": "Deductible",
+      "definition": "Amount to be collected from a patient to be applied to a periodic deductible."
+    },
+    {
+      "code": "coinsurance",
+      "display": "Per prescription coinsurance",
+      "definition": "Amount to be collected from a patient to satisfy a per prescription coinsurance."
+    },
+    {
+      "code": "copay",
+      "display": "Copay",
+      "definition": "Amount to be collected from the patient to satisfy a per prescription copay."
+    },
+    {
+      "code": "tax",
+      "display": "Tax",
+      "definition": "Amount to be collected from the patient for sales tax."
+    },
+    {
+      "code": "other",
+      "display": "Other",
+      "definition": "Other amount to be collected from the patient (PLACEHOLDER DURING IG DEVELOPMENT)."
+    },
+    {
+      "code": "total",
+      "display": "Total patient responsibility",
+      "definition": "Amount equalling the total patient responsibility for a prescription product's cost."
+    }
+  ]
+}

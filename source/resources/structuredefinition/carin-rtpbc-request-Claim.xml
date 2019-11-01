@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition
+    xmlns="http://hl7.org/fhir">
+    <id value="carin-rtpbc-request-Claim"/>
+    <meta>
+        <versionId value="70"/>
+        <lastUpdated value="2019-11-01T06:26:37.000-04:00"/>
+    </meta>
+    <text>
+        <status value="additional"/>
+        <div
+            xmlns="http://www.w3.org/1999/xhtml">
+            <div>This profile constrains the Claim resource so that it can serve as the                                   
+                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          
+            </div>
+        </div>
+    </text>
+    <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"/>
+    <version value="0.0.1"/>
+    <name value="CarinRtpbcRequest"/>
+    <title value="CARIN RTPBC Request using Claim"/>
+    <status value="draft"/>
+    <date value="2019-10-03"/>
+    <publisher value="CARIN Alliance"/>
+    <description value="This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process"/>
+    <jurisdiction>
+        <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+            <display value="United States of America"/>
+        </coding>
+    </jurisdiction>
+    <fhirVersion value="4.0.0"/>
+    <kind value="resource"/>
+    <abstract value="false"/>
+    <type value="Claim"/>
+    <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Claim"/>
+    <derivation value="constraint"/>
+    <differential>
+        <element id="Claim">
+            <path value="Claim"/>
+        </element>
+        <element id="Claim.id">
+            <path value="Claim.id"/>
+            <label value="Unique Claim Resource Identifier"/>
+            <short value="Unique Claim Resource Identifier"/>
+            <definition value="Unique Claim Resource Identifier assigned by the submitting patient application"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.identifier">
+            <path value="Claim.identifier"/>
+            <label value="RTPBC request identifier"/>
+            <short value="RTPBC request identifier"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.identifier.value">
+            <path value="Claim.identifier.value"/>
+            <label value="Unique RTPBC request ID"/>
+            <short value="Unique RTPBC request ID"/>
+            <definition value="An identifier for each RTPBC request that is assigned by and unique to the submitter"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.status">
+            <path value="Claim.status"/>
+            <label value="Request status"/>
+            <short value="Request status"/>
+            <definition value="The status of this request (active)"/>
+            <comment value="Value is always 'active'"/>
+            <fixedCode value="active"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.type">
+            <path value="Claim.type"/>
+            <label value="Requested Service Type"/>
+            <short value="Requested Service Type"/>
+            <definition value="The type of service for which pricing and coverage predetermination is being requested"/>
+            <comment value="Value is always 'pharmacy'"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+                    <code value="pharmacy"/>
+                    <display value="Pharmacy"/>
+                </coding>
+            </fixedCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.type.coding">
+            <path value="Claim.type.coding"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.type.coding.system">
+            <path value="Claim.type.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.type.coding.code">
+            <path value="Claim.type.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.subType">
+            <path value="Claim.subType"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.use">
+            <path value="Claim.use"/>
+            <label value="Processing Mode"/>
+            <short value="Processing Mode"/>
+            <definition value="The mode of processing being requested of the payer/PBM"/>
+            <comment value="Value is always 'predetermination'"/>
+            <fixedCode value="predetermination"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.patient">
+            <path value="Claim.patient"/>
+            <label value="Request Patient Information"/>
+            <short value="Request Patient Information"/>
+            <definition value="Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.patient.reference">
+            <path value="Claim.patient.reference"/>
+            <label value="Patient Reference"/>
+            <short value="Patient Reference"/>
+            <definition value="Reference to a Patient resource"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.billablePeriod">
+            <path value="Claim.billablePeriod"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.created">
+            <path value="Claim.created"/>
+            <label value="Created DateTime"/>
+            <short value="Created DateTime"/>
+            <definition value="The date and time on which this RTBPC request was created"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.enterer">
+            <path value="Claim.enterer"/>
+            <max value="0"/>
+            <type>
+                <code value="Reference"/>
+            </type>
+        </element>
+        <element id="Claim.provider">
+            <path value="Claim.provider"/>
+            <label value="Preferred Pharmacy"/>
+            <short value="Preferred Pharmacy"/>
+            <definition value="The patient's preferred pharmacy to be considered during creation of the response"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.provider.reference">
+            <path value="Claim.provider.reference"/>
+            <label value="Reference to Pharmacy Organization"/>
+            <short value="Reference to Pharmacy Organization"/>
+            <definition value="Reference to an Organization resource representing the patient's preferred pharmacy"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.priority">
+            <path value="Claim.priority"/>
+            <label value="Processing priority"/>
+            <short value="Processing priority"/>
+            <definition value="The processing priority requested of the payer/PBM"/>
+            <comment value="All requests are responded to in real-time, without differentiated priority levels. Value is always 'normal'"/>
+            <fixedCodeableConcept>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+                    <code value="normal"/>
+                    <display value="Normal"/>
+                </coding>
+            </fixedCodeableConcept>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.priority.coding">
+            <path value="Claim.priority.coding"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.priority.coding.system">
+            <path value="Claim.priority.coding.system"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.priority.coding.code">
+            <path value="Claim.priority.coding.code"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.fundsReserve">
+            <path value="Claim.fundsReserve"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.related">
+            <path value="Claim.related"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.originalPrescription">
+            <path value="Claim.originalPrescription"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.payee">
+            <path value="Claim.payee"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.referral">
+            <path value="Claim.referral"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.facility">
+            <path value="Claim.facility"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.careTeam">
+            <path value="Claim.careTeam"/>
+            <label value="Care Team"/>
+            <short value="Care Team"/>
+            <definition value="Prescriber reference and identifier"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.supportingInfo">
+            <path value="Claim.supportingInfo"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.careTeam.sequence">
+            <path value="Claim.careTeam.sequence"/>
+            <fixedInteger value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.careTeam.provider">
+            <path value="Claim.careTeam.provider"/>
+            <label value="Prescriber"/>
+            <short value="Prescriber"/>
+            <definition value="Prescriber of the item being submitted"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.careTeam.provider.reference">
+            <path value="Claim.careTeam.provider.reference"/>
+            <label value="Prescriber Reference"/>
+            <short value="Prescriber Reference"/>
+            <definition value="Reference to a Practitioner resource that represents the prescriber"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.diagnosis">
+            <path value="Claim.diagnosis"/>
+            <max value="0"/>
+            <mustSupport value="false"/>
+        </element>
+        <element id="Claim.procedure">
+            <path value="Claim.procedure"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.insurance">
+            <path value="Claim.insurance"/>
+            <label value="Pharmacy Coverage"/>
+            <short value="Pharmacy Coverage"/>
+            <definition value="The patient's pharmacy coverage information"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.accident">
+            <path value="Claim.accident"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item">
+            <path value="Claim.item"/>
+            <label value="Max 1 item per request"/>
+            <short value="Max 1 item per request"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.total">
+            <path value="Claim.total"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.sequence">
+            <path value="Claim.item.sequence"/>
+            <comment value="A maximum of one product is submitted per request. Value is always '1'"/>
+            <fixedInteger value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.careTeamSequence">
+            <path value="Claim.item.careTeamSequence"/>
+            <label value="Care Team Sequence ID Reference"/>
+            <short value="Care Team Sequence ID Reference"/>
+            <definition value="A reference to the Care Team composite in this resource that reflects the prescriber"/>
+            <comment value="Populate with a reference to .careTeam.sequence.@id"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.revenue">
+            <path value="Claim.item.revenue"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.category">
+            <path value="Claim.item.category"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.productOrService">
+            <path value="Claim.item.productOrService"/>
+            <label value="Prescribed Product"/>
+            <short value="Prescribed Product"/>
+            <definition value="A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"/>
+            <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="extensible"/>
+                <description value="CARIN RTPBC prescribable product codes (NDC and RxNorm)"/>
+                <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
+            </binding>
+        </element>
+        <element id="Claim.item.productOrService.coding">
+            <path value="Claim.item.productOrService.coding"/>
+            <min value="1"/>
+            <max value="*"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.productOrService.coding.system">
+            <path value="Claim.item.productOrService.coding.system"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.productOrService.coding.code">
+            <path value="Claim.item.productOrService.coding.code"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.productOrService.coding.display">
+            <path value="Claim.item.productOrService.coding.display"/>
+            <label value="Product Description"/>
+            <short value="Product Description"/>
+            <definition value="The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.modifier">
+            <path value="Claim.item.modifier"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.programCode">
+            <path value="Claim.item.programCode"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.serviced[x]">
+            <path value="Claim.item.serviced[x]"/>
+            <label value="Predetermination is processed as of the request date"/>
+            <short value="Predetermination as of request date"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.location[x]">
+            <path value="Claim.item.location[x]"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.quantity">
+            <path value="Claim.item.quantity"/>
+            <label value="Prescribed Quantity"/>
+            <short value="Prescribed Quantity"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.unitPrice">
+            <path value="Claim.item.unitPrice"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.factor">
+            <path value="Claim.item.factor"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.net">
+            <path value="Claim.item.net"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.bodySite">
+            <path value="Claim.item.bodySite"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.subSite">
+            <path value="Claim.item.subSite"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.encounter">
+            <path value="Claim.item.encounter"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.detail">
+            <path value="Claim.item.detail"/>
+            <max value="0"/>
+        </element>
+        <element id="Claim.item.quantity.value">
+            <path value="Claim.item.quantity.value"/>
+            <label value="Quantity in Billing Units"/>
+            <short value="Quantity in Billing Units"/>
+            <definition value="The prescribed quantity in terms of the applicable billing unit of measure"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.item.quantity.unit">
+            <path value="Claim.item.quantity.unit"/>
+            <label value="Billing unit of measure"/>
+            <short value="Billing unit of measure"/>
+            <definition value="Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)"/>
+            <min value="1"/>
+            <mustSupport value="true"/>
+            <binding>
+                <strength value="required"/>
+                <description value="Billing quantity unity of measure"/>
+                <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
+            </binding>
+        </element>
+        <element id="Claim.insurance.sequence">
+            <path value="Claim.insurance.sequence"/>
+            <comment value="Only one set of coverage is submitted in the request. Value is always '1'"/>
+            <fixedInteger value="1"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.insurance.focal">
+            <path value="Claim.insurance.focal"/>
+            <fixedBoolean value="true"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.insurance.coverage">
+            <path value="Claim.insurance.coverage"/>
+            <label value="Pharmacy Coverage Reference"/>
+            <short value="Pharmacy Coverage Reference"/>
+            <definition value="Reference to a Coverage resource containing identification of the patient's pharmacy coverage"/>
+            <min value="1"/>
+            <max value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
+            </type>
+            <mustSupport value="true"/>
+        </element>
+        <element id="Claim.insurance.coverage.reference">
+            <path value="Claim.insurance.coverage.reference"/>
+            <label value="Pharmacy Coverage Reference"/>
+            <short value="Pharmacy Coverage Reference"/>
+            <definition value="Reference to a Coverage resource containing identification of the patient's pharmacy coverage"/>
+            <min value="1"/>
+            <max value="1"/>
+            <mustSupport value="true"/>
+        </element>
+    </differential>
+</StructureDefinition>

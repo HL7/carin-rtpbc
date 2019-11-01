@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "carin-rtpbc-prescribable-product-code-value-set",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-10-29T21:40:15.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include codes from <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li><li>Include all codes defined in <code>http://example.org/ndc11/placeholder</code></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code",
+  "version": "0.1.00-DRAFT",
+  "name": "CARINRTPBCPrescribableProductCodeValueSet",
+  "title": "CARIN RTPBC Prescribable Product Code Value Set",
+  "status": "draft",
+  "date": "2019-10-29T00:00:00-05:00",
+  "publisher": "CARIN Alliance",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "filter": [
+          {
+            "property": "TTY",
+            "op": "in",
+            "value": "SCD,SBD,GPCK,BPCK"
+          }
+        ]
+      },
+      {
+        "system": "http://example.org/ndc11/placeholder"
+      }
+    ]
+  }
+}
