@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="CARIN-RTPBC"/>
     <meta>
-        <versionId value="153"/>
-        <lastUpdated value="2019-11-01T15:18:24.000-04:00"/>
+        <versionId value="160"/>
+        <lastUpdated value="2019-11-04T15:52:04.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -27,7 +27,7 @@
             <value value="https://confluence.hl7.org/display/PHAR/Pharmacy"/>
         </telecom>
     </contact>
-    <description value="*(Jump to the table of contents...*  Need to fix... ../CARIN-RTPBC/toc.html)&#xA;&#xA;&lt;br&gt;&#xA;&#xA;This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.&#xA;Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;The process looks like this...&#xA; &#xA;&lt;div&gt;&lt;img src=&quot;https://www.frankmckinney.com/carin-rtpbc/basic-info-flow.png&quot; alt=&quot;basic information flow&quot;&gt;&lt;/div&gt;&lt;br&gt;&#xA;&#xA;***The stakeholders...***&#xA;* the **patient,** who wishes to understand how their medication is covered by their insurance: their out of pocket cost, restrictions, and pharmacy options&#xA;* the **consumer app** that submits the RTPBC request to the payer, and interprets the response for the patient&#xA;* the patient's **insurer or agent** that processes the RTPBC request and returns a response containing pricing, coverage restrictions, pharmacy options for the requested drug and alternative medications (typically the pharmacy benefit manager that handles the patient's prescription benefit) &#xA;* *(optionally, the patient app may retrieve related information such as cash or discount pricing from other entities. Those parties and exchanges are out of scope of this guide)*&#xA;&#xA;***In the request...***&#xA;*  the patient's app gathers information about the prescription... entered by the patient or imported from another source&#xA;*  the patient provides coverage information from their insurance card, or the app retrieves it using an eligibility service (outside the scope of this guide)&#xA;*  the app packages up the patient, coverage, prescription and preferred pharmacy information in FHIR resources and submits them to the patient's insurer&#xA;&#xA;***The response and its use...***&#xA;*  the insurer determines the patient cost and coverage details for the requested pharmacy and potentially for other pharmacy options--such as a mail service pharmacy&#xA;*  the insurer also checks for preferred alternative medications with better coverage under the patient's plan, and returns cost, coverage and pharmacy options for those as well&#xA;*  the patient's app interprets and presents the information in an understandable way, possibly alongside cash or discount pricing gathered from other sources (outside this guide's scope)&#xA;*  ***with the information from the insurer's response,*** the patient can learn whether the drug is covered, compare insurance out of pocket costs between pharmacies--and can also compare to cash prices and discount options gathered by their app.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Scope of this guide&#xA;Consumer RTPBC is intended to be used...&#xA;* in the United States (as it reflects unique US pharmacy insurance roles and conventions)&#xA;* for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures&#xA;* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain details that are part of the *provider-focused RTPBC standard* are not included here. Additional content could potentially be added in a later effort.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;*Related information flows outside of consumer RTPBC*&#xA;The patient's app might gather related information before or after submitting the consumer RTPBC request. *These exchanges are outside the scope of this guide.*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Author&#xA;This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.&#xA;&#xA;&lt;br&gt; &#xA;&#xA;The guide is currently in development and incomplete. &#xA;&#xA;&lt;br&gt;&#xA;&#xA;Comments and suggestions are welcome...&#xA;&#xA;* on our Zulip stream...&#xA;https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG&#xA;&#xA;* or send a note to fm@frankmckinney.com&#xA;&#xA;&#xA;&lt;br&gt;"/>
+    <description value="This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.&#xA;Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed, including...&#xA;* how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply&#xA;* discount pricing available for the medication. &#xA;&#xA;&lt;br&gt;&#xA;&#xA;Consumer RTPBC leverages the predetermination process supported by the FHIR Claim and ClaimResponse resources&#xA;* Accompanying resources carrying information to identify the patient and their insurance coverage, prescription information and preferred pharmacy&#xA;	* *Patient, Coverage, MedicationRequest, Practitioner, Organization (pharmacy), OperationOutcome (exceptions)*&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;* The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;&#xA;&#xA;*This guide is currently in development *&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;&#xA;### Scope of this guide&#xA;Consumer RTPBC is intended to be used...&#xA;* in the United States (as it reflects unique US pharmacy insurance roles and conventions)&#xA;* for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures&#xA;* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain details that are part of the *provider-focused RTPBC standard* are not included here. Additional content could potentially be added in a later effort.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;*Related information flows outside of consumer RTPBC*&#xA;The patient's app might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Author&#xA;This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.&#xA;&#xA;&lt;br&gt;&#xA;&#xA;Comments and suggestions are welcome...&#xA;&#xA;* on our Zulip stream...&#xA;https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG&#xA;&#xA;* or send a note to fm@frankmckinney.com&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;### Change log&#xA;&#xA;0.1.01 (This version): Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. &#xA;&#xA;0.1.00 (previous version): Initial resources and narrative content.&#xA;&#xA;&lt;br&gt;"/>
     <packageId value="hl7.fhir.us.carin-rtpbc"/>
     <fhirVersion value="4.0.1"/>
     <definition>
@@ -168,52 +168,22 @@
             <exampleBoolean value="true"/>
         </resource>
         <page>
-            <nameUrl value="toc.md"/>
-            <title value="Table of contents"/>
-            <generation value="generated"/>
+            <nameUrl value="Guidance.html"/>
+            <title value="Guidance"/>
+            <generation value="markdown"/>
             <page>
-                <nameUrl value="CARIN_Initiative_and_Consumer_RTPBC.html"/>
-                <title value="CARIN Initiative and Consumer RTPBC"/>
+                <nameUrl value="Use_cases.html"/>
+                <title value="Use cases"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="FHIR_implementation_approach.html"/>
-                <title value="FHIR implementation approach"/>
+                <nameUrl value="Information_content_and_FHIR_resources.html"/>
+                <title value="Information content and FHIR resources"/>
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="Use_Case_and_Scenarios.html"/>
-                <title value="Use Case and Scenarios"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="High-level_content_structure.html"/>
-                <title value="High-level content structure"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="High-level_FHIR_resource_mapping.html"/>
-                <title value="High-level FHIR resource mapping"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="Processing_overview.html"/>
-                <title value="Processing overview"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="Terminology_overview.html"/>
-                <title value="Terminology overview"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="Examples.html"/>
-                <title value="Examples"/>
-                <generation value="markdown"/>
-            </page>
-            <page>
-                <nameUrl value="Feedback.html"/>
-                <title value="Feedback"/>
+                <nameUrl value="Consumer_vs_provider_RTPBC.html"/>
+                <title value="Consumer vs provider RTPBC"/>
                 <generation value="markdown"/>
             </page>
         </page>

@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "557bfa2a-20c6-4642-8910-1431b9fe470e",
+  "id" : "3a9757cd-b5cc-407c-8090-8a845af6be51",
   "meta" : {
-    "lastUpdated" : "2019-11-01T14:58:29.473-05:00"
+    "lastUpdated" : "2019-11-04T14:57:36.950-06:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -27,8 +27,8 @@
       "publisher" : "CARIN Alliance",
       "description" : "This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products",
       "expansion" : {
-        "identifier" : "urn:uuid:3958c958-245d-4713-9a58-05003579c2f9",
-        "timestamp" : "2019-11-01T14:58:43-05:00",
+        "identifier" : "urn:uuid:cbfe8e73-ced6-44fb-ade5-301e921c24f9",
+        "timestamp" : "2019-11-04T14:57:58-06:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -78,8 +78,8 @@
       "publisher" : "CARIN Alliance",
       "description" : "This value set contains components of a patient's responsibility for a prescription product's cost.",
       "expansion" : {
-        "identifier" : "urn:uuid:d96fa8ee-ff8f-4ec5-881a-7c41328ced86",
-        "timestamp" : "2019-11-01T14:58:44-05:00",
+        "identifier" : "urn:uuid:234c600d-dbc2-4eff-9860-2234c1c3e528",
+        "timestamp" : "2019-11-04T14:57:59-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -144,8 +144,8 @@
       "publisher" : "CARIN Alliance",
       "description" : "This value set contains coverage levels that may apply to a prescription product.",
       "expansion" : {
-        "identifier" : "urn:uuid:ed0b1e3c-8029-4a4e-9152-56f80f1a3c19",
-        "timestamp" : "2019-11-01T14:58:44-05:00",
+        "identifier" : "urn:uuid:21d1f194-332a-4d8d-adf0-5cf99cff3f0d",
+        "timestamp" : "2019-11-04T14:57:59-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -212,8 +212,8 @@
           "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
           "valueBoolean" : true
         }],
-        "identifier" : "urn:uuid:f56b8c16-6a4f-497c-b453-c69f6dce6de1",
-        "timestamp" : "2019-11-01T19:58:44.502Z",
+        "identifier" : "urn:uuid:e334523d-e2f1-4f31-aaab-3b9cdea266fc",
+        "timestamp" : "2019-11-04T20:57:59.655Z",
         "parameter" : [{
           "name" : "expansion-source",
           "valueString" : "ValueSet/carin-rtpbc-prescribable-product-code-value-set"

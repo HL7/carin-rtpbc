@@ -239,6 +239,7 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
   <li><a href="#description" id="markdown-toc-description">Description</a></li>
   <li><a href="#scope-of-this-guide" id="markdown-toc-scope-of-this-guide">Scope of this guide</a></li>
   <li><a href="#author" id="markdown-toc-author">Author</a></li>
+  <li><a href="#change-log" id="markdown-toc-change-log">Change log</a></li>
   <li><a href="#authors" id="markdown-toc-authors">Authors</a></li>
 </ul>
 
@@ -246,42 +247,33 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 
 <h3 id="description">Description</h3>
 
-<p><em>(Jump to the table of contents…</em>  Need to fix… ../CARIN-RTPBC/toc.html)</p>
-
-<p><br /></p>
-
 <p>This is a guide for implementing the <strong>consumer-focused real-time pharmacy benefit check</strong> (consumer RTPBC) using FHIR R4.
-Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.</p>
+Using RTPBC, a patient can learn the cost and insurance coverage related to medications they’ve been prescribed, including…</p>
+<ul>
+  <li>how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply</li>
+  <li>discount pricing available for the medication.</li>
+</ul>
 
 <p><br /></p>
 
-<p>The process looks like this…</p>
+<p>Consumer RTPBC leverages the predetermination process supported by the FHIR Claim and ClaimResponse resources</p>
+<ul>
+  <li>Accompanying resources carrying information to identify the patient and their insurance coverage, prescription information and preferred pharmacy
+    <ul>
+      <li><em>Patient, Coverage, MedicationRequest, Practitioner, Organization (pharmacy), OperationOutcome (exceptions)</em></li>
+    </ul>
+  </li>
+</ul>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/basic-info-flow.png" alt="basic information flow" /></div>
 <p><br /></p>
 
-<p><strong><em>The stakeholders…</em></strong></p>
 <ul>
-  <li>the <strong>patient,</strong> who wishes to understand how their medication is covered by their insurance: their out of pocket cost, restrictions, and pharmacy options</li>
-  <li>the <strong>consumer app</strong> that submits the RTPBC request to the payer, and interprets the response for the patient</li>
-  <li>the patient’s <strong>insurer or agent</strong> that processes the RTPBC request and returns a response containing pricing, coverage restrictions, pharmacy options for the requested drug and alternative medications (typically the pharmacy benefit manager that handles the patient’s prescription benefit)</li>
-  <li><em>(optionally, the patient app may retrieve related information such as cash or discount pricing from other entities. Those parties and exchanges are out of scope of this guide)</em></li>
+  <li>The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain</li>
 </ul>
 
-<p><strong><em>In the request…</em></strong></p>
-<ul>
-  <li>the patient’s app gathers information about the prescription… entered by the patient or imported from another source</li>
-  <li>the patient provides coverage information from their insurance card, or the app retrieves it using an eligibility service (outside the scope of this guide)</li>
-  <li>the app packages up the patient, coverage, prescription and preferred pharmacy information in FHIR resources and submits them to the patient’s insurer</li>
-</ul>
+<p><br /></p>
 
-<p><strong><em>The response and its use…</em></strong></p>
-<ul>
-  <li>the insurer determines the patient cost and coverage details for the requested pharmacy and potentially for other pharmacy options–such as a mail service pharmacy</li>
-  <li>the insurer also checks for preferred alternative medications with better coverage under the patient’s plan, and returns cost, coverage and pharmacy options for those as well</li>
-  <li>the patient’s app interprets and presents the information in an understandable way, possibly alongside cash or discount pricing gathered from other sources (outside this guide’s scope)</li>
-  <li><strong><em>with the information from the insurer’s response,</em></strong> the patient can learn whether the drug is covered, compare insurance out of pocket costs between pharmacies–and can also compare to cash prices and discount options gathered by their app.</li>
-</ul>
+<p>*This guide is currently in development *</p>
 
 <p><br /></p>
 
@@ -300,16 +292,12 @@ Using RTPBC, a patient can learn how their medications will be covered at the ph
 <p><br /></p>
 
 <p><em>Related information flows outside of consumer RTPBC</em>
-The patient’s app might gather related information before or after submitting the consumer RTPBC request. <em>These exchanges are outside the scope of this guide.</em></p>
+The patient’s app might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. <em>These exchanges are outside the scope of this guide.</em></p>
 
 <p><br /></p>
 
 <h3 id="author">Author</h3>
 <p>This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.</p>
-
-<p><br /></p>
-
-<p>The guide is currently in development and incomplete.</p>
 
 <p><br /></p>
 
@@ -324,6 +312,14 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
     <p>or send a note to fm@frankmckinney.com</p>
   </li>
 </ul>
+
+<p><br /></p>
+
+<h3 id="change-log">Change log</h3>
+
+<p>0.1.01 (This version): Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
+
+<p>0.1.00 (previous version): Initial resources and narrative content.</p>
 
 <p><br /></p>
 
@@ -374,7 +370,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.00-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Fri, Nov 1, 2019 14:58-0500.
+      CarinRtpbc Version: 0.1.00-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Mon, Nov 4, 2019 14:57-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

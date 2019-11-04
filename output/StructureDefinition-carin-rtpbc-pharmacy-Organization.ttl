@@ -21,7 +21,7 @@
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcPharmacy"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Pharmacy"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.date [ fhir:value "2019-11-01T14:58:29-05:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-11-04T14:57:36-06:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
