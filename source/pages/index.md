@@ -18,23 +18,16 @@ active: home
 ### Description
 
 This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.
-Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed, including...
-* how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
+
+Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed. Specifically... 
+* how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
 * discount pricing available for the medication. 
 
-<br>
+Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.
 
-Consumer RTPBC leverages the predetermination process supported by the FHIR Claim and ClaimResponse resources
-* Accompanying resources carrying information to identify the patient and their insurance coverage, prescription information and preferred pharmacy
-	* *Patient, Coverage, MedicationRequest, Practitioner, Organization (pharmacy), OperationOutcome (exceptions)*
+The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.
 
 <br/>
-
-* The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain
-
-<br/>
-
-
 
 *This guide is currently in development *
 
@@ -42,30 +35,23 @@ Consumer RTPBC leverages the predetermination process supported by the FHIR Clai
 
 
 ### Scope of this guide
-Consumer RTPBC is intended to be used...
+**Consumer RTPBC is intended to be used...**
 * in the United States (as it reflects unique US pharmacy insurance roles and conventions)
 * for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures
 * for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*
 
-<br>
+***Relationship to the NCPDP provider-focused RTPBC transactions*** <br/>
+This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort.
 
-This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain details that are part of the *provider-focused RTPBC standard* are not included here. Additional content could potentially be added in a later effort.
-
-<br>
-
-*Related information flows outside of consumer RTPBC*
-The patient's app might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*
+***Related information flows outside of consumer RTPBC*** <br/>
+The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*
 
 <br>
 
-### Author
+### Feedback
 This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.
 
-<br>
-
-Comments and suggestions are welcome...
-
-* on our Zulip stream...
+Comments and suggestions are welcome on our Zulip stream...
 https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 * or send a note to fm@frankmckinney.com
@@ -74,9 +60,11 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-0.1.01 (This version): Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. 
+**0.1.02 (This version):** Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup 
 
-0.1.00 (previous version): Initial resources and narrative content.
+**0.1.01:** Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. 
+
+**0.1.00:** Initial resources and narrative content.
 
 <br>
 
@@ -93,6 +81,10 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 <tr>
 <td>HL7 Pharmacy Workgroup</td>
 <td></td>
+</tr>
+<tr>
+<td>Frank McKinney</td>
+<td><a href="mailto:fm@frankmckinney.com">fm@frankmckinney.com</a></td>
 </tr>
 </tbody>
 </table>

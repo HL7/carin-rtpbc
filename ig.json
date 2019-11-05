@@ -164,6 +164,6 @@
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.00-DRAFT",
+	"fixed-business-version": "0.1.02",
 	"dependencyList": []
 }

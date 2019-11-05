@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;  \n        </div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"];
-  fhir:ValueSet.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:ValueSet.version [ fhir:value "0.1.02"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcPatientPayCategoryValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Patient Pay Category Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];

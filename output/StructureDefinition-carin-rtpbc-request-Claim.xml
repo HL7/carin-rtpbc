@@ -3,8 +3,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-request-Claim"/>
   <meta>
-    <versionId value="70"/>
-    <lastUpdated value="2019-11-01T05:26:37.000-05:00"/>
+    <versionId value="71"/>
+    <lastUpdated value="2019-11-04T18:13:28.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -14,7 +14,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"/>
-  <version value="0.1.00-DRAFT"/>
+  <version value="0.1.02"/>
   <name value="CarinRtpbcRequest"/>
   <title value="CARIN RTPBC Request using Claim"/>
   <status value="draft"/>
@@ -1268,7 +1268,7 @@
       <comment value="This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type."/>
       <requirements value="Some jurisdictions need a finer grained claim type for routing and adjudication."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.subType"/>
         <min value="0"/>
@@ -1597,7 +1597,7 @@
       <comment value="Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and predeterminations. Typically line item dates of service should fall within the billing period if one is specified."/>
       <requirements value="A number jurisdictions required the submission of the billing period when submitting claims for example for hospital stays or long-term care."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.billablePeriod"/>
         <min value="0"/>
@@ -1664,7 +1664,7 @@
       <definition value="Individual who created the claim, predetermination or preauthorization."/>
       <requirements value="Some jurisdictions require the contact information for personnel completing claims."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.enterer"/>
         <min value="0"/>
@@ -1672,6 +1672,8 @@
       </base>
       <type>
         <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -2443,7 +2445,7 @@
       <requirements value="In the case of a Pre-Determination/Pre-Authorization the provider may request that funds in the amount of the expected Benefit be reserved (&#39;Patient&#39; or &#39;Provider&#39;) to pay for the Benefits determined on the subsequent claim(s). &#39;None&#39; explicitly indicates no funds reserving is requested."/>
       <alias value="Fund pre-allocation"/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.fundsReserve"/>
         <min value="0"/>
@@ -2484,7 +2486,7 @@
       <comment value="For example,  for the original treatment and follow-up exams."/>
       <requirements value="For workplace or other accidents it is common to relate separate claims arising from the same event."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.related"/>
         <min value="0"/>
@@ -2741,7 +2743,7 @@
       <comment value="For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the &#39;prescription&#39; and that from the physician becomes the &#39;original prescription&#39;."/>
       <requirements value="Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.originalPrescription"/>
         <min value="0"/>
@@ -2774,7 +2776,7 @@
       <comment value="Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and choose to pay the subscriber instead."/>
       <requirements value="The provider needs to specify who they wish to be reimbursed and the claims processor needs express who they will reimburse."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.payee"/>
         <min value="0"/>
@@ -2978,7 +2980,7 @@
       <comment value="The referral resource which lists the date, practitioner, reason and other supporting information."/>
       <requirements value="Some insurers require proof of referral to pay for services or to pay specialist rates for services."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.referral"/>
         <min value="0"/>
@@ -3009,7 +3011,7 @@
       <definition value="Facility where the services were provided."/>
       <requirements value="Insurance adjudication can be dependant on where services were delivered."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.facility"/>
         <min value="0"/>
@@ -3548,7 +3550,7 @@
       <requirements value="Typically these information codes are required to support the services rendered or the adjudication of the services rendered."/>
       <alias value="Attachments&#xA;Exception Codes&#xA;Occurrence Codes&#xA;Value codes"/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.supportingInfo"/>
         <min value="0"/>
@@ -3887,7 +3889,7 @@
       <definition value="Information about diagnoses relevant to the claim items."/>
       <requirements value="Required for the adjudication by provided context for the services and product listed."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.diagnosis"/>
         <min value="0"/>
@@ -3904,7 +3906,6 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="false"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -4198,7 +4199,7 @@
       <definition value="Procedures performed on the patient relevant to the billing items with the claim."/>
       <requirements value="The specific clinical invention are sometimes required to be provided to justify billing a greater than customary amount for a service."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.procedure"/>
         <min value="0"/>
@@ -5041,7 +5042,7 @@
       <definition value="Details of an accident which resulted in injuries which required the products and services listed in the claim."/>
       <requirements value="When healthcare products and services are accident related, benefits may be payable under accident provisions of policies, such as automotive, etc before they are payable under normal health insurance."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.accident"/>
         <min value="0"/>
@@ -5541,7 +5542,7 @@
       <definition value="The type of revenue or cost center providing the product and/or service."/>
       <requirements value="Needed in the processing of institutional claims."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.revenue"/>
         <min value="0"/>
@@ -5576,7 +5577,7 @@
       <comment value="Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage."/>
       <requirements value="Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.category"/>
         <min value="0"/>
@@ -6075,7 +6076,7 @@
       <comment value="For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours."/>
       <requirements value="To support inclusion of the item for adjudication or to charge an elevated fee."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.item.modifier"/>
         <min value="0"/>
@@ -6110,7 +6111,7 @@
       <comment value="For example: Neonatal program, child dental program or drug users recovery program."/>
       <requirements value="Commonly used in in the identification of publicly provided program focused on population segments or disease classifications."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.item.programCode"/>
         <min value="0"/>
@@ -6140,12 +6141,11 @@
     </element>
     <element id="Claim.item.serviced[x]">
       <path value="Claim.item.serviced[x]"/>
-      <label value="Predetermination is processed as of the request date"/>
-      <short value="Predetermination as of request date"/>
+      <short value="Date or dates of service or product delivery"/>
       <definition value="The date or dates when the service or product was supplied, performed or completed."/>
       <requirements value="Needed to determine whether the  service or product was provided during the term of the insurance coverage."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.serviced[x]"/>
         <min value="0"/>
@@ -6178,7 +6178,7 @@
       <definition value="Where the product or service was provided."/>
       <requirements value="The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.location[x]"/>
         <min value="0"/>
@@ -6520,7 +6520,7 @@
       <definition value="If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group."/>
       <requirements value="The amount charged to the patient by the provider for a single unit."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.unitPrice"/>
         <min value="0"/>
@@ -6547,7 +6547,7 @@
       <comment value="To show a 10% senior&#39;s discount, the value entered is: 0.90 (1.00 - 0.10)."/>
       <requirements value="When discounts are provided to a patient (example: Senior&#39;s discount) then this must be documented for adjudication."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.factor"/>
         <min value="0"/>
@@ -6574,7 +6574,7 @@
       <comment value="For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied."/>
       <requirements value="Provides the total amount claimed  for the group (if a grouper) or the line item."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.net"/>
         <min value="0"/>
@@ -6628,7 +6628,7 @@
       <comment value="For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed."/>
       <requirements value="Allows insurer to validate specific procedures."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.item.bodySite"/>
         <min value="0"/>
@@ -6662,7 +6662,7 @@
       <definition value="A region or surface of the bodySite, e.g. limb region or tooth surface(s)."/>
       <requirements value="Allows insurer to validate specific procedures."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.item.subSite"/>
         <min value="0"/>
@@ -6697,7 +6697,7 @@
       <comment value="This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter."/>
       <requirements value="Used in some jurisdictions to link clinical events to claim items."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.item.encounter"/>
         <min value="0"/>
@@ -6731,7 +6731,7 @@
       <definition value="A claim detail line. Either a simple (a product or service) or a &#39;group&#39; of sub-details which are simple items."/>
       <requirements value="The items to be processed for adjudication."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="*"/>
       <base>
         <path value="Claim.item.detail"/>
         <min value="0"/>
@@ -7673,7 +7673,7 @@
       <definition value="The total value of the all the items in the claim."/>
       <requirements value="Used for  control total purposes."/>
       <min value="0"/>
-      <max value="0"/>
+      <max value="1"/>
       <base>
         <path value="Claim.total"/>
         <min value="0"/>
@@ -7764,10 +7764,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Claim.subType">
-      <path value="Claim.subType"/>
-      <max value="0"/>
-    </element>
     <element id="Claim.use">
       <path value="Claim.use"/>
       <label value="Processing Mode"/>
@@ -7797,23 +7793,12 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Claim.billablePeriod">
-      <path value="Claim.billablePeriod"/>
-      <max value="0"/>
-    </element>
     <element id="Claim.created">
       <path value="Claim.created"/>
       <label value="Created DateTime"/>
       <short value="Created DateTime"/>
       <definition value="The date and time on which this RTBPC request was created"/>
       <mustSupport value="true"/>
-    </element>
-    <element id="Claim.enterer">
-      <path value="Claim.enterer"/>
-      <max value="0"/>
-      <type>
-        <code value="Reference"/>
-      </type>
     </element>
     <element id="Claim.provider">
       <path value="Claim.provider"/>
@@ -7868,30 +7853,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Claim.fundsReserve">
-      <path value="Claim.fundsReserve"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.related">
-      <path value="Claim.related"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.originalPrescription">
-      <path value="Claim.originalPrescription"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.payee">
-      <path value="Claim.payee"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.referral">
-      <path value="Claim.referral"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.facility">
-      <path value="Claim.facility"/>
-      <max value="0"/>
-    </element>
     <element id="Claim.careTeam">
       <path value="Claim.careTeam"/>
       <label value="Care Team"/>
@@ -7927,19 +7888,6 @@
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
-    </element>
-    <element id="Claim.supportingInfo">
-      <path value="Claim.supportingInfo"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.diagnosis">
-      <path value="Claim.diagnosis"/>
-      <max value="0"/>
-      <mustSupport value="false"/>
-    </element>
-    <element id="Claim.procedure">
-      <path value="Claim.procedure"/>
-      <max value="0"/>
     </element>
     <element id="Claim.insurance">
       <path value="Claim.insurance"/>
@@ -7983,10 +7931,6 @@
       <max value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Claim.accident">
-      <path value="Claim.accident"/>
-      <max value="0"/>
-    </element>
     <element id="Claim.item">
       <path value="Claim.item"/>
       <label value="Max 1 item per request"/>
@@ -8010,14 +7954,6 @@
       <min value="1"/>
       <max value="1"/>
       <mustSupport value="true"/>
-    </element>
-    <element id="Claim.item.revenue">
-      <path value="Claim.item.revenue"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.category">
-      <path value="Claim.item.category"/>
-      <max value="0"/>
     </element>
     <element id="Claim.item.productOrService">
       <path value="Claim.item.productOrService"/>
@@ -8056,24 +7992,6 @@
       <min value="1"/>
       <mustSupport value="true"/>
     </element>
-    <element id="Claim.item.modifier">
-      <path value="Claim.item.modifier"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.programCode">
-      <path value="Claim.item.programCode"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.serviced[x]">
-      <path value="Claim.item.serviced[x]"/>
-      <label value="Predetermination is processed as of the request date"/>
-      <short value="Predetermination as of request date"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.location[x]">
-      <path value="Claim.item.location[x]"/>
-      <max value="0"/>
-    </element>
     <element id="Claim.item.quantity">
       <path value="Claim.item.quantity"/>
       <label value="Prescribed Quantity"/>
@@ -8101,38 +8019,6 @@
         <description value="Billing quantity unity of measure"/>
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
-    </element>
-    <element id="Claim.item.unitPrice">
-      <path value="Claim.item.unitPrice"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.factor">
-      <path value="Claim.item.factor"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.net">
-      <path value="Claim.item.net"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.bodySite">
-      <path value="Claim.item.bodySite"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.subSite">
-      <path value="Claim.item.subSite"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.encounter">
-      <path value="Claim.item.encounter"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.item.detail">
-      <path value="Claim.item.detail"/>
-      <max value="0"/>
-    </element>
-    <element id="Claim.total">
-      <path value="Claim.total"/>
-      <max value="0"/>
     </element>
   </differential>
 </StructureDefinition>

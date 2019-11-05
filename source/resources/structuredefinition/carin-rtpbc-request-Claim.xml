@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-request-Claim"/>
     <meta>
-        <versionId value="70"/>
-        <lastUpdated value="2019-11-01T06:26:37.000-04:00"/>
+        <versionId value="71"/>
+        <lastUpdated value="2019-11-04T19:13:28.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -106,10 +106,6 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.subType">
-            <path value="Claim.subType"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.use">
             <path value="Claim.use"/>
             <label value="Processing Mode"/>
@@ -139,23 +135,12 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.billablePeriod">
-            <path value="Claim.billablePeriod"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.created">
             <path value="Claim.created"/>
             <label value="Created DateTime"/>
             <short value="Created DateTime"/>
             <definition value="The date and time on which this RTBPC request was created"/>
             <mustSupport value="true"/>
-        </element>
-        <element id="Claim.enterer">
-            <path value="Claim.enterer"/>
-            <max value="0"/>
-            <type>
-                <code value="Reference"/>
-            </type>
         </element>
         <element id="Claim.provider">
             <path value="Claim.provider"/>
@@ -210,30 +195,6 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.fundsReserve">
-            <path value="Claim.fundsReserve"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.related">
-            <path value="Claim.related"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.originalPrescription">
-            <path value="Claim.originalPrescription"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.payee">
-            <path value="Claim.payee"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.referral">
-            <path value="Claim.referral"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.facility">
-            <path value="Claim.facility"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.careTeam">
             <path value="Claim.careTeam"/>
             <label value="Care Team"/>
@@ -242,10 +203,6 @@
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
-        </element>
-        <element id="Claim.supportingInfo">
-            <path value="Claim.supportingInfo"/>
-            <max value="0"/>
         </element>
         <element id="Claim.careTeam.sequence">
             <path value="Claim.careTeam.sequence"/>
@@ -274,15 +231,6 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.diagnosis">
-            <path value="Claim.diagnosis"/>
-            <max value="0"/>
-            <mustSupport value="false"/>
-        </element>
-        <element id="Claim.procedure">
-            <path value="Claim.procedure"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.insurance">
             <path value="Claim.insurance"/>
             <label value="Pharmacy Coverage"/>
@@ -292,10 +240,6 @@
             <max value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.accident">
-            <path value="Claim.accident"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.item">
             <path value="Claim.item"/>
             <label value="Max 1 item per request"/>
@@ -303,10 +247,6 @@
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
-        </element>
-        <element id="Claim.total">
-            <path value="Claim.total"/>
-            <max value="0"/>
         </element>
         <element id="Claim.item.sequence">
             <path value="Claim.item.sequence"/>
@@ -323,14 +263,6 @@
             <min value="1"/>
             <max value="1"/>
             <mustSupport value="true"/>
-        </element>
-        <element id="Claim.item.revenue">
-            <path value="Claim.item.revenue"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.category">
-            <path value="Claim.item.category"/>
-            <max value="0"/>
         </element>
         <element id="Claim.item.productOrService">
             <path value="Claim.item.productOrService"/>
@@ -369,58 +301,12 @@
             <min value="1"/>
             <mustSupport value="true"/>
         </element>
-        <element id="Claim.item.modifier">
-            <path value="Claim.item.modifier"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.programCode">
-            <path value="Claim.item.programCode"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.serviced[x]">
-            <path value="Claim.item.serviced[x]"/>
-            <label value="Predetermination is processed as of the request date"/>
-            <short value="Predetermination as of request date"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.location[x]">
-            <path value="Claim.item.location[x]"/>
-            <max value="0"/>
-        </element>
         <element id="Claim.item.quantity">
             <path value="Claim.item.quantity"/>
             <label value="Prescribed Quantity"/>
             <short value="Prescribed Quantity"/>
             <min value="1"/>
             <mustSupport value="true"/>
-        </element>
-        <element id="Claim.item.unitPrice">
-            <path value="Claim.item.unitPrice"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.factor">
-            <path value="Claim.item.factor"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.net">
-            <path value="Claim.item.net"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.bodySite">
-            <path value="Claim.item.bodySite"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.subSite">
-            <path value="Claim.item.subSite"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.encounter">
-            <path value="Claim.item.encounter"/>
-            <max value="0"/>
-        </element>
-        <element id="Claim.item.detail">
-            <path value="Claim.item.detail"/>
-            <max value="0"/>
         </element>
         <element id="Claim.item.quantity.value">
             <path value="Claim.item.quantity.value"/>

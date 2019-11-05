@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-request-Claim"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "70" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T05:26:37.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "71" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-04T18:13:28.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.02"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequest"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request using Claim"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -1614,7 +1614,7 @@
        fhir:ElementDefinition.comment [ fhir:value "This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type." ];
        fhir:ElementDefinition.requirements [ fhir:value "Some jurisdictions need a finer grained claim type for routing and adjudication." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.subType" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -2040,7 +2040,7 @@
        fhir:ElementDefinition.comment [ fhir:value "Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and predeterminations. Typically line item dates of service should fall within the billing period if one is specified." ];
        fhir:ElementDefinition.requirements [ fhir:value "A number jurisdictions required the submission of the billing period when submitting claims for example for hospital stays or long-term care." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.billablePeriod" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -2121,7 +2121,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Individual who created the claim, predetermination or preauthorization." ];
        fhir:ElementDefinition.requirements [ fhir:value "Some jurisdictions require the contact information for personnel completing claims." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.enterer" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -2129,7 +2129,16 @@
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ]
+         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
+         fhir:ElementDefinition.type.targetProfile [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
+           fhir:index 0;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
+         ], [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
+           fhir:index 1;
+           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
+         ]
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -3108,7 +3117,7 @@
          fhir:index 0
        ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.fundsReserve" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -3163,7 +3172,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example,  for the original treatment and follow-up exams." ];
        fhir:ElementDefinition.requirements [ fhir:value "For workplace or other accidents it is common to relate separate claims arising from the same event." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.related" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -3510,7 +3519,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'." ];
        fhir:ElementDefinition.requirements [ fhir:value "Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.originalPrescription" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -3561,7 +3570,7 @@
        fhir:ElementDefinition.comment [ fhir:value "Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and choose to pay the subscriber instead." ];
        fhir:ElementDefinition.requirements [ fhir:value "The provider needs to specify who they wish to be reimbursed and the claims processor needs express who they will reimburse." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.payee" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -3845,7 +3854,7 @@
        fhir:ElementDefinition.comment [ fhir:value "The referral resource which lists the date, practitioner, reason and other supporting information." ];
        fhir:ElementDefinition.requirements [ fhir:value "Some insurers require proof of referral to pay for services or to pay specialist rates for services." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.referral" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -3887,7 +3896,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Facility where the services were provided." ];
        fhir:ElementDefinition.requirements [ fhir:value "Insurance adjudication can be dependant on where services were delivered." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.facility" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -4597,7 +4606,7 @@
          fhir:index 0
        ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.supportingInfo" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -5040,7 +5049,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Information about diagnoses relevant to the claim items." ];
        fhir:ElementDefinition.requirements [ fhir:value "Required for the adjudication by provided context for the services and product listed." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.diagnosis" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -5062,7 +5071,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -5454,7 +5462,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Procedures performed on the patient relevant to the billing items with the claim." ];
        fhir:ElementDefinition.requirements [ fhir:value "The specific clinical invention are sometimes required to be provided to justify billing a greater than customary amount for a service." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.procedure" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -6555,7 +6563,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Details of an accident which resulted in injuries which required the products and services listed in the claim." ];
        fhir:ElementDefinition.requirements [ fhir:value "When healthcare products and services are accident related, benefits may be payable under accident provisions of policies, such as automotive, etc before they are payable under normal health insurance." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.accident" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -7206,7 +7214,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The type of revenue or cost center providing the product and/or service." ];
        fhir:ElementDefinition.requirements [ fhir:value "Needed in the processing of institutional claims." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.revenue" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -7252,7 +7260,7 @@
        fhir:ElementDefinition.comment [ fhir:value "Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage." ];
        fhir:ElementDefinition.requirements [ fhir:value "Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.category" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -7879,7 +7887,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours." ];
        fhir:ElementDefinition.requirements [ fhir:value "To support inclusion of the item for adjudication or to charge an elevated fee." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.modifier" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -7925,7 +7933,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example: Neonatal program, child dental program or drug users recovery program." ];
        fhir:ElementDefinition.requirements [ fhir:value "Commonly used in in the identification of publicly provided program focused on population segments or disease classifications." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.programCode" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -7966,12 +7974,11 @@
        fhir:index 173;
        fhir:Element.id [ fhir:value "Claim.item.serviced[x]" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.serviced[x]" ];
-       fhir:ElementDefinition.label [ fhir:value "Predetermination is processed as of the request date" ];
-       fhir:ElementDefinition.short [ fhir:value "Predetermination as of request date" ];
+       fhir:ElementDefinition.short [ fhir:value "Date or dates of service or product delivery" ];
        fhir:ElementDefinition.definition [ fhir:value "The date or dates when the service or product was supplied, performed or completed." ];
        fhir:ElementDefinition.requirements [ fhir:value "Needed to determine whether the  service or product was provided during the term of the insurance coverage." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.serviced[x]" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8011,7 +8018,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Where the product or service was provided." ];
        fhir:ElementDefinition.requirements [ fhir:value "The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.location[x]" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8451,7 +8458,7 @@
        fhir:ElementDefinition.definition [ fhir:value "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group." ];
        fhir:ElementDefinition.requirements [ fhir:value "The amount charged to the patient by the provider for a single unit." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.unitPrice" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8484,7 +8491,7 @@
        fhir:ElementDefinition.comment [ fhir:value "To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10)." ];
        fhir:ElementDefinition.requirements [ fhir:value "When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.factor" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8517,7 +8524,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied." ];
        fhir:ElementDefinition.requirements [ fhir:value "Provides the total amount claimed  for the group (if a grouper) or the line item." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.net" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8587,7 +8594,7 @@
        fhir:ElementDefinition.comment [ fhir:value "For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed." ];
        fhir:ElementDefinition.requirements [ fhir:value "Allows insurer to validate specific procedures." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.bodySite" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8632,7 +8639,7 @@
        fhir:ElementDefinition.definition [ fhir:value "A region or surface of the bodySite, e.g. limb region or tooth surface(s)." ];
        fhir:ElementDefinition.requirements [ fhir:value "Allows insurer to validate specific procedures." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.subSite" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8678,7 +8685,7 @@
        fhir:ElementDefinition.comment [ fhir:value "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter." ];
        fhir:ElementDefinition.requirements [ fhir:value "Used in some jurisdictions to link clinical events to claim items." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.encounter" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -8725,7 +8732,7 @@
        fhir:ElementDefinition.definition [ fhir:value "A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items." ];
        fhir:ElementDefinition.requirements [ fhir:value "The items to be processed for adjudication." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.item.detail" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -9966,7 +9973,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The total value of the all the items in the claim." ];
        fhir:ElementDefinition.requirements [ fhir:value "Used for  control total purposes." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "Claim.total" ];
          fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -10074,11 +10081,6 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 9;
-       fhir:Element.id [ fhir:value "Claim.subType" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.subType" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 10;
        fhir:Element.id [ fhir:value "Claim.use" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.use" ];
        fhir:ElementDefinition.label [ fhir:value "Processing Mode" ];
@@ -10088,7 +10090,7 @@
        fhir:ElementDefinition.fixedCode [ fhir:value "predetermination" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:Element.id [ fhir:value "Claim.patient" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.patient" ];
        fhir:ElementDefinition.label [ fhir:value "Request Patient Information" ];
@@ -10105,7 +10107,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "Claim.patient.reference" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.patient.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Reference" ];
@@ -10115,12 +10117,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
-       fhir:Element.id [ fhir:value "Claim.billablePeriod" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.billablePeriod" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 14;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "Claim.created" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.created" ];
        fhir:ElementDefinition.label [ fhir:value "Created DateTime" ];
@@ -10128,16 +10125,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The date and time on which this RTBPC request was created" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
-       fhir:Element.id [ fhir:value "Claim.enterer" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.enterer" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ]
-       ]
-     ], [
-       fhir:index 16;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "Claim.provider" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.provider" ];
        fhir:ElementDefinition.label [ fhir:value "Preferred Pharmacy" ];
@@ -10154,7 +10142,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "Claim.provider.reference" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.provider.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Reference to Pharmacy Organization" ];
@@ -10164,7 +10152,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 15;
        fhir:Element.id [ fhir:value "Claim.priority" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.priority" ];
        fhir:ElementDefinition.label [ fhir:value "Processing priority" ];
@@ -10181,58 +10169,28 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 16;
        fhir:Element.id [ fhir:value "Claim.priority.coding" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.priority.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 17;
        fhir:Element.id [ fhir:value "Claim.priority.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.priority.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "Claim.priority.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.priority.coding.code" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 22;
-       fhir:Element.id [ fhir:value "Claim.fundsReserve" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.fundsReserve" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 23;
-       fhir:Element.id [ fhir:value "Claim.related" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.related" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 24;
-       fhir:Element.id [ fhir:value "Claim.originalPrescription" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.originalPrescription" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 25;
-       fhir:Element.id [ fhir:value "Claim.payee" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.payee" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 26;
-       fhir:Element.id [ fhir:value "Claim.referral" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.referral" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 27;
-       fhir:Element.id [ fhir:value "Claim.facility" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.facility" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 28;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "Claim.careTeam" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.careTeam" ];
        fhir:ElementDefinition.label [ fhir:value "Care Team" ];
@@ -10242,13 +10200,13 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 29;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "Claim.careTeam.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.careTeam.sequence" ];
        fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 30;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "Claim.careTeam.provider" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.careTeam.provider" ];
        fhir:ElementDefinition.label [ fhir:value "Prescriber" ];
@@ -10267,7 +10225,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 31;
+       fhir:index 22;
        fhir:Element.id [ fhir:value "Claim.careTeam.provider.reference" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.careTeam.provider.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Prescriber Reference" ];
@@ -10277,23 +10235,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 32;
-       fhir:Element.id [ fhir:value "Claim.supportingInfo" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.supportingInfo" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 33;
-       fhir:Element.id [ fhir:value "Claim.diagnosis" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.diagnosis" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 34;
-       fhir:Element.id [ fhir:value "Claim.procedure" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.procedure" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 35;
+       fhir:index 23;
        fhir:Element.id [ fhir:value "Claim.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage" ];
@@ -10303,20 +10245,20 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 36;
+       fhir:index 24;
        fhir:Element.id [ fhir:value "Claim.insurance.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance.sequence" ];
        fhir:ElementDefinition.comment [ fhir:value "Only one set of coverage is submitted in the request. Value is always '1'" ];
        fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 37;
+       fhir:index 25;
        fhir:Element.id [ fhir:value "Claim.insurance.focal" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance.focal" ];
        fhir:ElementDefinition.fixedBoolean [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 38;
+       fhir:index 26;
        fhir:Element.id [ fhir:value "Claim.insurance.coverage" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance.coverage" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
@@ -10335,7 +10277,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 39;
+       fhir:index 27;
        fhir:Element.id [ fhir:value "Claim.insurance.coverage.reference" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance.coverage.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
@@ -10345,12 +10287,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 40;
-       fhir:Element.id [ fhir:value "Claim.accident" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.accident" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 41;
+       fhir:index 28;
        fhir:Element.id [ fhir:value "Claim.item" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item" ];
        fhir:ElementDefinition.label [ fhir:value "Max 1 item per request" ];
@@ -10359,14 +10296,14 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 42;
+       fhir:index 29;
        fhir:Element.id [ fhir:value "Claim.item.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.sequence" ];
        fhir:ElementDefinition.comment [ fhir:value "A maximum of one product is submitted per request. Value is always '1'" ];
        fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 43;
+       fhir:index 30;
        fhir:Element.id [ fhir:value "Claim.item.careTeamSequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.careTeamSequence" ];
        fhir:ElementDefinition.label [ fhir:value "Care Team Sequence ID Reference" ];
@@ -10377,17 +10314,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 44;
-       fhir:Element.id [ fhir:value "Claim.item.revenue" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.revenue" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 45;
-       fhir:Element.id [ fhir:value "Claim.item.category" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.category" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 46;
+       fhir:index 31;
        fhir:Element.id [ fhir:value "Claim.item.productOrService" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.productOrService" ];
        fhir:ElementDefinition.label [ fhir:value "Prescribed Product" ];
@@ -10404,26 +10331,26 @@
          ]
        ]
      ], [
-       fhir:index 47;
+       fhir:index 32;
        fhir:Element.id [ fhir:value "Claim.item.productOrService.coding" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.productOrService.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 48;
+       fhir:index 33;
        fhir:Element.id [ fhir:value "Claim.item.productOrService.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.productOrService.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 49;
+       fhir:index 34;
        fhir:Element.id [ fhir:value "Claim.item.productOrService.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.productOrService.coding.code" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 50;
+       fhir:index 35;
        fhir:Element.id [ fhir:value "Claim.item.productOrService.coding.display" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.productOrService.coding.display" ];
        fhir:ElementDefinition.label [ fhir:value "Product Description" ];
@@ -10432,29 +10359,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 51;
-       fhir:Element.id [ fhir:value "Claim.item.modifier" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.modifier" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 52;
-       fhir:Element.id [ fhir:value "Claim.item.programCode" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.programCode" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 53;
-       fhir:Element.id [ fhir:value "Claim.item.serviced[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.serviced[x]" ];
-       fhir:ElementDefinition.label [ fhir:value "Predetermination is processed as of the request date" ];
-       fhir:ElementDefinition.short [ fhir:value "Predetermination as of request date" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 54;
-       fhir:Element.id [ fhir:value "Claim.item.location[x]" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.location[x]" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 55;
+       fhir:index 36;
        fhir:Element.id [ fhir:value "Claim.item.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.quantity" ];
        fhir:ElementDefinition.label [ fhir:value "Prescribed Quantity" ];
@@ -10462,7 +10367,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 56;
+       fhir:index 37;
        fhir:Element.id [ fhir:value "Claim.item.quantity.value" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.quantity.value" ];
        fhir:ElementDefinition.label [ fhir:value "Quantity in Billing Units" ];
@@ -10471,7 +10376,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 57;
+       fhir:index 38;
        fhir:Element.id [ fhir:value "Claim.item.quantity.unit" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.quantity.unit" ];
        fhir:ElementDefinition.label [ fhir:value "Billing unit of measure" ];
@@ -10487,46 +10392,6 @@
            fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
          ]
        ]
-     ], [
-       fhir:index 58;
-       fhir:Element.id [ fhir:value "Claim.item.unitPrice" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.unitPrice" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 59;
-       fhir:Element.id [ fhir:value "Claim.item.factor" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.factor" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 60;
-       fhir:Element.id [ fhir:value "Claim.item.net" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.net" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 61;
-       fhir:Element.id [ fhir:value "Claim.item.bodySite" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.bodySite" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 62;
-       fhir:Element.id [ fhir:value "Claim.item.subSite" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.subSite" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 63;
-       fhir:Element.id [ fhir:value "Claim.item.encounter" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.encounter" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 64;
-       fhir:Element.id [ fhir:value "Claim.item.detail" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.item.detail" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
-     ], [
-       fhir:index 65;
-       fhir:Element.id [ fhir:value "Claim.total" ];
-       fhir:ElementDefinition.path [ fhir:value "Claim.total" ];
-       fhir:ElementDefinition.max [ fhir:value "0" ]
      ]
   ] .
 

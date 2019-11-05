@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines coverage levels that may apply to a prescription product.   \n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination",
-  "version": "0.1.00-DRAFT",
+  "version": "0.1.02",
   "name": "CarinRtpbcCoverageDeterminationCodeSystem",
   "title": "CARIN RTPBC Coverage Determination Code System",
   "status": "draft",

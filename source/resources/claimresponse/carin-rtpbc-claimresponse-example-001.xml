@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-claimresponse-example-001"/>
     <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2019-11-01T15:56:28.000-04:00"/>
+        <versionId value="4"/>
+        <lastUpdated value="2019-11-04T19:30:25.000-05:00"/>
     </meta>
     <contained>
         <Patient>
@@ -87,7 +87,7 @@
                 <coding>
                     <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
                     <code value="coinsurance"/>
-                    <display value="Coinsurance"/>
+                    <display value="Per prescription coinsurance"/>
                 </coding>
             </category>
             <amount>
@@ -100,7 +100,7 @@
                 <coding>
                     <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
                     <code value="total"/>
-                    <display value="Total Patient Responsibility"/>
+                    <display value="Total patient responsibility"/>
                 </coding>
             </category>
             <amount>
@@ -144,7 +144,7 @@
                 <coding>
                     <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
                     <code value="coinsurance"/>
-                    <display value="Coinsurance"/>
+                    <display value="Per prescription coinsurance"/>
                 </coding>
             </category>
             <amount>
@@ -157,7 +157,7 @@
                 <coding>
                     <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
                     <code value="total"/>
-                    <display value="Total Patient Responsibiity"/>
+                    <display value="Total patient responsibility"/>
                 </coding>
             </category>
             <amount>

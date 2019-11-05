@@ -3,11 +3,11 @@
 <ClaimResponse xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-claimresponse-example-001"/>
   <meta>
-    <versionId value="3"/>
-    <lastUpdated value="2019-11-01T15:56:28.000-04:00"/>
+    <versionId value="4"/>
+    <lastUpdated value="2019-11-04T19:30:25.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-claimresponse-example-001</p><p><b>meta</b>: </p><p><b>contained</b>: , </p><p><b>identifier</b>: rtpbcresponse0001</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 1:10:55 PM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Coinsurance <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'coinsurance' = 'Per prescription coinsurance', given as 'Coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total Patient Responsibility <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'total' = 'Total patient responsibility', given as 'Total Patient Responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: unknown resource contained</p><p><b>productOrService</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-claimresponse-example-001</p><p><b>meta</b>: </p><p><b>contained</b>: , </p><p><b>identifier</b>: rtpbcresponse0001</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 1:10:55 PM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: unknown resource contained</p><p><b>productOrService</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>
   </text>
   <contained>
     <Patient>
@@ -90,7 +90,7 @@
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
           <code value="coinsurance"/>
-          <display value="Coinsurance"/>
+          <display value="Per prescription coinsurance"/>
         </coding>
       </category>
       <amount>
@@ -103,7 +103,7 @@
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
           <code value="total"/>
-          <display value="Total Patient Responsibility"/>
+          <display value="Total patient responsibility"/>
         </coding>
       </category>
       <amount>
@@ -147,7 +147,7 @@
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
           <code value="coinsurance"/>
-          <display value="Coinsurance"/>
+          <display value="Per prescription coinsurance"/>
         </coding>
       </category>
       <amount>
@@ -160,7 +160,7 @@
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
           <code value="total"/>
-          <display value="Total Patient Responsibiity"/>
+          <display value="Total patient responsibility"/>
         </coding>
       </category>
       <amount>

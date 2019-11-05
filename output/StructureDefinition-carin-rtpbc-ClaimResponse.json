@@ -2,15 +2,15 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-ClaimResponse",
   "meta": {
-    "versionId": "49",
-    "lastUpdated": "2019-11-01T14:50:00.000-05:00"
+    "versionId": "50",
+    "lastUpdated": "2019-11-04T18:32:36.000-06:00"
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    </div>\n                </div>\n            </div>\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
-  "version": "0.1.00-DRAFT",
+  "version": "0.1.02",
   "name": "CarinRtpbcResponse",
   "title": "CARIN RTPBC Response using ClaimResponse",
   "status": "draft",
@@ -965,7 +965,7 @@
             {
               "system": "http://terminology.hl7.org/CodeSystem/claim-type",
               "code": "pharmacy",
-              "display": "http://terminology.hl7.org/CodeSystem/claim-type"
+              "display": "Pharmacy"
             }
           ]
         },
@@ -10368,7 +10368,7 @@
             {
               "system": "http://terminology.hl7.org/CodeSystem/claim-type",
               "code": "pharmacy",
-              "display": "http://terminology.hl7.org/CodeSystem/claim-type"
+              "display": "Pharmacy"
             }
           ]
         },

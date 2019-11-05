@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-ClaimResponse"/>
     <meta>
-        <versionId value="49"/>
-        <lastUpdated value="2019-11-01T15:50:00.000-04:00"/>
+        <versionId value="50"/>
+        <lastUpdated value="2019-11-04T19:32:36.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -13,7 +13,11 @@
             <div>
                 <div>
                     <div>This profile constrains the ClaimResponse resource to serve as the   
+                        
+                        
                         <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's "predetermination" processing mode   
+                    
+                    
                     </div>
                 </div>
             </div>
@@ -72,7 +76,7 @@
                 <coding>
                     <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
                     <code value="pharmacy"/>
-                    <display value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+                    <display value="Pharmacy"/>
                 </coding>
             </fixedCodeableConcept>
             <mustSupport value="true"/>

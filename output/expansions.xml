@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="3a9757cd-b5cc-407c-8090-8a845af6be51"/>
+  <id value="511e360e-635a-493f-85ed-9a32a18db44c"/>
   <meta>
-    <lastUpdated value="2019-11-04T14:57:36.950-06:00"/>
+    <lastUpdated value="2019-11-04T18:41:37.022-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -19,7 +19,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit version 0.1.00-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit version 0.1.02</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit</code>
@@ -65,7 +65,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-        <version value="0.1.00-DRAFT"/>
+        <version value="0.1.02"/>
         <name value="CarinRtbpcBillingUnitValueSet"/>
         <title value="CARIN RTPBC Billing Unit Value Set"/>
         <status value="draft"/>
@@ -73,8 +73,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
         <expansion>
-          <identifier value="urn:uuid:cbfe8e73-ced6-44fb-ade5-301e921c24f9"/>
-          <timestamp value="2019-11-04T14:57:58-06:00"/>
+          <identifier value="urn:uuid:e1e9f71c-d2bf-4aad-8330-74b65c699722"/>
+          <timestamp value="2019-11-04T18:41:50-06:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -82,7 +82,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit|0.1.00-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit|0.1.02"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
@@ -116,7 +116,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category version 0.1.00-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category version 0.1.02</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category</code>
@@ -186,7 +186,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
-        <version value="0.1.00-DRAFT"/>
+        <version value="0.1.02"/>
         <name value="CarinRtbpcPatientPayCategoryValueSet"/>
         <title value="CARIN RTPBC Patient Pay Category Value Set"/>
         <status value="draft"/>
@@ -194,8 +194,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:234c600d-dbc2-4eff-9860-2234c1c3e528"/>
-          <timestamp value="2019-11-04T14:57:59-06:00"/>
+          <identifier value="urn:uuid:a6af88ff-1a66-492f-8b50-8396e5e7b293"/>
+          <timestamp value="2019-11-04T18:41:51-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -203,7 +203,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category|0.1.00-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category|0.1.02"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
@@ -252,7 +252,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination version 0.1.00-DRAFT</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination version 0.1.02</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination</code>
@@ -322,7 +322,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-determination"/>
-        <version value="0.1.00-DRAFT"/>
+        <version value="0.1.02"/>
         <name value="CarinRtbpcCoverageDeterminationValueSet"/>
         <title value="CARIN RTPBC Coverage Determination Value Set"/>
         <status value="draft"/>
@@ -330,8 +330,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains coverage levels that may apply to a prescription product."/>
         <expansion>
-          <identifier value="urn:uuid:21d1f194-332a-4d8d-adf0-5cf99cff3f0d"/>
-          <timestamp value="2019-11-04T14:57:59-06:00"/>
+          <identifier value="urn:uuid:b7a77c6c-e211-4cf2-9c6c-2fd4c7ca7d6d"/>
+          <timestamp value="2019-11-04T18:41:51-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -339,7 +339,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination|0.1.00-DRAFT"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination|0.1.02"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
@@ -6404,7 +6404,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
-        <version value="0.1.00-DRAFT"/>
+        <version value="0.1.02"/>
         <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
         <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
         <status value="draft"/>
@@ -6413,8 +6413,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:e334523d-e2f1-4f31-aaab-3b9cdea266fc"/>
-          <timestamp value="2019-11-04T20:57:59.655Z"/>
+          <identifier value="urn:uuid:bac550a8-5c8e-48c4-967c-8b82da2afac3"/>
+          <timestamp value="2019-11-05T00:41:51.419Z"/>
           <parameter>
             <name value="expansion-source"/>
             <valueString value="ValueSet/carin-rtpbc-prescribable-product-code-value-set"/>

@@ -11,7 +11,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-  <version value="0.1.00-DRAFT"/>
+  <version value="0.1.02"/>
   <name value="CarinRtpbcPatientPayCategoryCodeSystem"/>
   <title value="CARIN RTPBC Patient Pay Category Code System"/>
   <status value="draft"/>

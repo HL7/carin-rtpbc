@@ -2,10 +2,10 @@
   "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/CARIN-RTPBC",
   "name": "CarinRtpbc",
   "package-id": "hl7.fhir.us.carin-rtpbc",
-  "ig-ver": "0.1.00-DRAFT",
-  "date": "Mon, 04 Nov, 2019 14:57:36 -0600",
+  "ig-ver": "0.1.02",
+  "date": "Mon, 04 Nov, 2019 18:41:37 -0600",
   "errs": 0,
-  "warnings": 8,
+  "warnings": 0,
   "hints": 0,
   "version": "4.0.1",
   "tool": "4.1.0 (3)"

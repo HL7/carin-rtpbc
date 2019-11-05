@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>\n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info",
-  "version": "0.1.00-DRAFT",
+  "version": "0.1.02",
   "name": "CarinRtpbcRequestPrescriptionInfo",
   "title": "CARIN RTPBC Request Prescription Information",
   "status": "draft",

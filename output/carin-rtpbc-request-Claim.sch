@@ -15,25 +15,11 @@
       <sch:assert test="count(f:id) &gt;= 1">id: minimum cardinality of 'id' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &gt;= 1">identifier: minimum cardinality of 'identifier' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>
-      <sch:assert test="count(f:subType) &lt;= 0">subType: maximum cardinality of 'subType' is 0</sch:assert>
-      <sch:assert test="count(f:billablePeriod) &lt;= 0">billablePeriod: maximum cardinality of 'billablePeriod' is 0</sch:assert>
-      <sch:assert test="count(f:enterer) &lt;= 0">enterer: maximum cardinality of 'enterer' is 0</sch:assert>
-      <sch:assert test="count(f:fundsReserve) &lt;= 0">fundsReserve: maximum cardinality of 'fundsReserve' is 0</sch:assert>
-      <sch:assert test="count(f:related) &lt;= 0">related: maximum cardinality of 'related' is 0</sch:assert>
-      <sch:assert test="count(f:originalPrescription) &lt;= 0">originalPrescription: maximum cardinality of 'originalPrescription' is 0</sch:assert>
-      <sch:assert test="count(f:payee) &lt;= 0">payee: maximum cardinality of 'payee' is 0</sch:assert>
-      <sch:assert test="count(f:referral) &lt;= 0">referral: maximum cardinality of 'referral' is 0</sch:assert>
-      <sch:assert test="count(f:facility) &lt;= 0">facility: maximum cardinality of 'facility' is 0</sch:assert>
       <sch:assert test="count(f:careTeam) &gt;= 1">careTeam: minimum cardinality of 'careTeam' is 1</sch:assert>
       <sch:assert test="count(f:careTeam) &lt;= 1">careTeam: maximum cardinality of 'careTeam' is 1</sch:assert>
-      <sch:assert test="count(f:supportingInfo) &lt;= 0">supportingInfo: maximum cardinality of 'supportingInfo' is 0</sch:assert>
-      <sch:assert test="count(f:diagnosis) &lt;= 0">diagnosis: maximum cardinality of 'diagnosis' is 0</sch:assert>
-      <sch:assert test="count(f:procedure) &lt;= 0">procedure: maximum cardinality of 'procedure' is 0</sch:assert>
       <sch:assert test="count(f:insurance) &lt;= 1">insurance: maximum cardinality of 'insurance' is 1</sch:assert>
-      <sch:assert test="count(f:accident) &lt;= 0">accident: maximum cardinality of 'accident' is 0</sch:assert>
       <sch:assert test="count(f:item) &gt;= 1">item: minimum cardinality of 'item' is 1</sch:assert>
       <sch:assert test="count(f:item) &lt;= 1">item: maximum cardinality of 'item' is 1</sch:assert>
-      <sch:assert test="count(f:total) &lt;= 0">total: maximum cardinality of 'total' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -947,20 +933,7 @@
     <sch:rule context="f:Claim/f:item">
       <sch:assert test="count(f:careTeamSequence) &gt;= 1">careTeamSequence: minimum cardinality of 'careTeamSequence' is 1</sch:assert>
       <sch:assert test="count(f:careTeamSequence) &lt;= 1">careTeamSequence: maximum cardinality of 'careTeamSequence' is 1</sch:assert>
-      <sch:assert test="count(f:revenue) &lt;= 0">revenue: maximum cardinality of 'revenue' is 0</sch:assert>
-      <sch:assert test="count(f:category) &lt;= 0">category: maximum cardinality of 'category' is 0</sch:assert>
-      <sch:assert test="count(f:modifier) &lt;= 0">modifier: maximum cardinality of 'modifier' is 0</sch:assert>
-      <sch:assert test="count(f:programCode) &lt;= 0">programCode: maximum cardinality of 'programCode' is 0</sch:assert>
-      <sch:assert test="count(f:serviced[x]) &lt;= 0">serviced[x]: maximum cardinality of 'serviced[x]' is 0</sch:assert>
-      <sch:assert test="count(f:location[x]) &lt;= 0">location[x]: maximum cardinality of 'location[x]' is 0</sch:assert>
       <sch:assert test="count(f:quantity) &gt;= 1">quantity: minimum cardinality of 'quantity' is 1</sch:assert>
-      <sch:assert test="count(f:unitPrice) &lt;= 0">unitPrice: maximum cardinality of 'unitPrice' is 0</sch:assert>
-      <sch:assert test="count(f:factor) &lt;= 0">factor: maximum cardinality of 'factor' is 0</sch:assert>
-      <sch:assert test="count(f:net) &lt;= 0">net: maximum cardinality of 'net' is 0</sch:assert>
-      <sch:assert test="count(f:bodySite) &lt;= 0">bodySite: maximum cardinality of 'bodySite' is 0</sch:assert>
-      <sch:assert test="count(f:subSite) &lt;= 0">subSite: maximum cardinality of 'subSite' is 0</sch:assert>
-      <sch:assert test="count(f:encounter) &lt;= 0">encounter: maximum cardinality of 'encounter' is 0</sch:assert>
-      <sch:assert test="count(f:detail) &lt;= 0">detail: maximum cardinality of 'detail' is 0</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

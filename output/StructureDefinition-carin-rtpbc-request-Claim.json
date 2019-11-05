@@ -2,15 +2,15 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-request-Claim",
   "meta": {
-    "versionId": "70",
-    "lastUpdated": "2019-11-01T05:26:37.000-05:00"
+    "versionId": "71",
+    "lastUpdated": "2019-11-04T18:13:28.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-  "version": "0.1.00-DRAFT",
+  "version": "0.1.02",
   "name": "CarinRtpbcRequest",
   "title": "CARIN RTPBC Request using Claim",
   "status": "draft",
@@ -1547,7 +1547,7 @@
         "comment": "This may contain the local bill type codes, for example the US UB-04 bill type code or the CMS bill type.",
         "requirements": "Some jurisdictions need a finer grained claim type for routing and adjudication.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.subType",
           "min": 0,
@@ -1962,7 +1962,7 @@
         "comment": "Typically this would be today or in the past for a claim, and today or in the future for preauthorizations and predeterminations. Typically line item dates of service should fall within the billing period if one is specified.",
         "requirements": "A number jurisdictions required the submission of the billing period when submitting claims for example for hospital stays or long-term care.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.billablePeriod",
           "min": 0,
@@ -2043,7 +2043,7 @@
         "definition": "Individual who created the claim, predetermination or preauthorization.",
         "requirements": "Some jurisdictions require the contact information for personnel completing claims.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.enterer",
           "min": 0,
@@ -2051,7 +2051,11 @@
         },
         "type": [
           {
-            "code": "Reference"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
           }
         ],
         "constraint": [
@@ -3015,7 +3019,7 @@
           "Fund pre-allocation"
         ],
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.fundsReserve",
           "min": 0,
@@ -3068,7 +3072,7 @@
         "comment": "For example,  for the original treatment and follow-up exams.",
         "requirements": "For workplace or other accidents it is common to relate separate claims arising from the same event.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.related",
           "min": 0,
@@ -3387,7 +3391,7 @@
         "comment": "For example, a physician may prescribe a medication which the pharmacy determines is contraindicated, or for which the patient has an intolerance, and therefore issues a new prescription for an alternate medication which has the same therapeutic intent. The prescription from the pharmacy becomes the 'prescription' and that from the physician becomes the 'original prescription'.",
         "requirements": "Often required when a fulfiller varies what is fulfilled from that authorized on the original prescription.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.originalPrescription",
           "min": 0,
@@ -3430,7 +3434,7 @@
         "comment": "Often providers agree to receive the benefits payable to reduce the near-term costs to the patient. The insurer may decline to pay the provider and choose to pay the subscriber instead.",
         "requirements": "The provider needs to specify who they wish to be reimbursed and the claims processor needs express who they will reimburse.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.payee",
           "min": 0,
@@ -3683,7 +3687,7 @@
         "comment": "The referral resource which lists the date, practitioner, reason and other supporting information.",
         "requirements": "Some insurers require proof of referral to pay for services or to pay specialist rates for services.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.referral",
           "min": 0,
@@ -3723,7 +3727,7 @@
         "definition": "Facility where the services were provided.",
         "requirements": "Insurance adjudication can be dependant on where services were delivered.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.facility",
           "min": 0,
@@ -4404,7 +4408,7 @@
           "Attachments\nException Codes\nOccurrence Codes\nValue codes"
         ],
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.supportingInfo",
           "min": 0,
@@ -4822,7 +4826,7 @@
         "definition": "Information about diagnoses relevant to the claim items.",
         "requirements": "Required for the adjudication by provided context for the services and product listed.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.diagnosis",
           "min": 0,
@@ -4843,7 +4847,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -5210,7 +5213,7 @@
         "definition": "Procedures performed on the patient relevant to the billing items with the claim.",
         "requirements": "The specific clinical invention are sometimes required to be provided to justify billing a greater than customary amount for a service.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.procedure",
           "min": 0,
@@ -6260,7 +6263,7 @@
         "definition": "Details of an accident which resulted in injuries which required the products and services listed in the claim.",
         "requirements": "When healthcare products and services are accident related, benefits may be payable under accident provisions of policies, such as automotive, etc before they are payable under normal health insurance.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.accident",
           "min": 0,
@@ -6874,7 +6877,7 @@
         "definition": "The type of revenue or cost center providing the product and/or service.",
         "requirements": "Needed in the processing of institutional claims.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.revenue",
           "min": 0,
@@ -6917,7 +6920,7 @@
         "comment": "Examples include Medical Care, Periodontics, Renal Dialysis, Vision Coverage.",
         "requirements": "Needed in the processing of institutional claims as this allows the insurer to determine whether a facial X-Ray is for dental, orthopedic, or facial surgery purposes.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.category",
           "min": 0,
@@ -7528,7 +7531,7 @@
         "comment": "For example in Oral whether the treatment is cosmetic or associated with TMJ, or for Medical whether the treatment was outside the clinic or outside of office hours.",
         "requirements": "To support inclusion of the item for adjudication or to charge an elevated fee.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.item.modifier",
           "min": 0,
@@ -7571,7 +7574,7 @@
         "comment": "For example: Neonatal program, child dental program or drug users recovery program.",
         "requirements": "Commonly used in in the identification of publicly provided program focused on population segments or disease classifications.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.item.programCode",
           "min": 0,
@@ -7609,12 +7612,11 @@
       {
         "id": "Claim.item.serviced[x]",
         "path": "Claim.item.serviced[x]",
-        "label": "Predetermination is processed as of the request date",
-        "short": "Predetermination as of request date",
+        "short": "Date or dates of service or product delivery",
         "definition": "The date or dates when the service or product was supplied, performed or completed.",
         "requirements": "Needed to determine whether the  service or product was provided during the term of the insurance coverage.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.serviced[x]",
           "min": 0,
@@ -7654,7 +7656,7 @@
         "definition": "Where the product or service was provided.",
         "requirements": "The location can alter whether the item was acceptable for insurance purposes or impact the determination of the benefit amount.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.location[x]",
           "min": 0,
@@ -8079,7 +8081,7 @@
         "definition": "If the item is not a group then this is the fee for the product or service, otherwise this is the total of the fees for the details of the group.",
         "requirements": "The amount charged to the patient by the provider for a single unit.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.unitPrice",
           "min": 0,
@@ -8111,7 +8113,7 @@
         "comment": "To show a 10% senior's discount, the value entered is: 0.90 (1.00 - 0.10).",
         "requirements": "When discounts are provided to a patient (example: Senior's discount) then this must be documented for adjudication.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.factor",
           "min": 0,
@@ -8143,7 +8145,7 @@
         "comment": "For example, the formula: quantity * unitPrice * factor  = net. Quantity and factor are assumed to be 1 if not supplied.",
         "requirements": "Provides the total amount claimed  for the group (if a grouper) or the line item.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.net",
           "min": 0,
@@ -8209,7 +8211,7 @@
         "comment": "For example: Providing a tooth code, allows an insurer to identify a provider performing a filling on a tooth that was previously removed.",
         "requirements": "Allows insurer to validate specific procedures.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.item.bodySite",
           "min": 0,
@@ -8251,7 +8253,7 @@
         "definition": "A region or surface of the bodySite, e.g. limb region or tooth surface(s).",
         "requirements": "Allows insurer to validate specific procedures.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.item.subSite",
           "min": 0,
@@ -8294,7 +8296,7 @@
         "comment": "This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.",
         "requirements": "Used in some jurisdictions to link clinical events to claim items.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.item.encounter",
           "min": 0,
@@ -8340,7 +8342,7 @@
         "definition": "A claim detail line. Either a simple (a product or service) or a 'group' of sub-details which are simple items.",
         "requirements": "The items to be processed for adjudication.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Claim.item.detail",
           "min": 0,
@@ -9501,7 +9503,7 @@
         "definition": "The total value of the all the items in the claim.",
         "requirements": "Used for  control total purposes.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Claim.total",
           "min": 0,
@@ -9610,11 +9612,6 @@
         "mustSupport": true
       },
       {
-        "id": "Claim.subType",
-        "path": "Claim.subType",
-        "max": "0"
-      },
-      {
         "id": "Claim.use",
         "path": "Claim.use",
         "label": "Processing Mode",
@@ -9651,27 +9648,12 @@
         "mustSupport": true
       },
       {
-        "id": "Claim.billablePeriod",
-        "path": "Claim.billablePeriod",
-        "max": "0"
-      },
-      {
         "id": "Claim.created",
         "path": "Claim.created",
         "label": "Created DateTime",
         "short": "Created DateTime",
         "definition": "The date and time on which this RTBPC request was created",
         "mustSupport": true
-      },
-      {
-        "id": "Claim.enterer",
-        "path": "Claim.enterer",
-        "max": "0",
-        "type": [
-          {
-            "code": "Reference"
-          }
-        ]
       },
       {
         "id": "Claim.provider",
@@ -9739,36 +9721,6 @@
         "mustSupport": true
       },
       {
-        "id": "Claim.fundsReserve",
-        "path": "Claim.fundsReserve",
-        "max": "0"
-      },
-      {
-        "id": "Claim.related",
-        "path": "Claim.related",
-        "max": "0"
-      },
-      {
-        "id": "Claim.originalPrescription",
-        "path": "Claim.originalPrescription",
-        "max": "0"
-      },
-      {
-        "id": "Claim.payee",
-        "path": "Claim.payee",
-        "max": "0"
-      },
-      {
-        "id": "Claim.referral",
-        "path": "Claim.referral",
-        "max": "0"
-      },
-      {
-        "id": "Claim.facility",
-        "path": "Claim.facility",
-        "max": "0"
-      },
-      {
         "id": "Claim.careTeam",
         "path": "Claim.careTeam",
         "label": "Care Team",
@@ -9811,22 +9763,6 @@
         "min": 1,
         "max": "1",
         "mustSupport": true
-      },
-      {
-        "id": "Claim.supportingInfo",
-        "path": "Claim.supportingInfo",
-        "max": "0"
-      },
-      {
-        "id": "Claim.diagnosis",
-        "path": "Claim.diagnosis",
-        "max": "0",
-        "mustSupport": false
-      },
-      {
-        "id": "Claim.procedure",
-        "path": "Claim.procedure",
-        "max": "0"
       },
       {
         "id": "Claim.insurance",
@@ -9880,11 +9816,6 @@
         "mustSupport": true
       },
       {
-        "id": "Claim.accident",
-        "path": "Claim.accident",
-        "max": "0"
-      },
-      {
         "id": "Claim.item",
         "path": "Claim.item",
         "label": "Max 1 item per request",
@@ -9910,16 +9841,6 @@
         "min": 1,
         "max": "1",
         "mustSupport": true
-      },
-      {
-        "id": "Claim.item.revenue",
-        "path": "Claim.item.revenue",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.category",
-        "path": "Claim.item.category",
-        "max": "0"
       },
       {
         "id": "Claim.item.productOrService",
@@ -9964,28 +9885,6 @@
         "mustSupport": true
       },
       {
-        "id": "Claim.item.modifier",
-        "path": "Claim.item.modifier",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.programCode",
-        "path": "Claim.item.programCode",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.serviced[x]",
-        "path": "Claim.item.serviced[x]",
-        "label": "Predetermination is processed as of the request date",
-        "short": "Predetermination as of request date",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.location[x]",
-        "path": "Claim.item.location[x]",
-        "max": "0"
-      },
-      {
         "id": "Claim.item.quantity",
         "path": "Claim.item.quantity",
         "label": "Prescribed Quantity",
@@ -10015,46 +9914,6 @@
           "description": "Billing quantity unity of measure",
           "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
         }
-      },
-      {
-        "id": "Claim.item.unitPrice",
-        "path": "Claim.item.unitPrice",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.factor",
-        "path": "Claim.item.factor",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.net",
-        "path": "Claim.item.net",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.bodySite",
-        "path": "Claim.item.bodySite",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.subSite",
-        "path": "Claim.item.subSite",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.encounter",
-        "path": "Claim.item.encounter",
-        "max": "0"
-      },
-      {
-        "id": "Claim.item.detail",
-        "path": "Claim.item.detail",
-        "max": "0"
-      },
-      {
-        "id": "Claim.total",
-        "path": "Claim.total",
-        "max": "0"
       }
     ]
   }

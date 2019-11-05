@@ -11,7 +11,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-  <version value="0.1.00-DRAFT"/>
+  <version value="0.1.02"/>
   <name value="CarinRtpbcCoverageDeterminationCodeSystem"/>
   <title value="CARIN RTPBC Coverage Determination Code System"/>
   <status value="draft"/>

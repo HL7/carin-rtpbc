@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.00-DRAFT). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.02). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -238,7 +238,7 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 <ul id="markdown-toc">
   <li><a href="#description" id="markdown-toc-description">Description</a></li>
   <li><a href="#scope-of-this-guide" id="markdown-toc-scope-of-this-guide">Scope of this guide</a></li>
-  <li><a href="#author" id="markdown-toc-author">Author</a></li>
+  <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
   <li><a href="#change-log" id="markdown-toc-change-log">Change log</a></li>
   <li><a href="#authors" id="markdown-toc-authors">Authors</a></li>
 </ul>
@@ -247,29 +247,17 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 
 <h3 id="description">Description</h3>
 
-<p>This is a guide for implementing the <strong>consumer-focused real-time pharmacy benefit check</strong> (consumer RTPBC) using FHIR R4.
-Using RTPBC, a patient can learn the cost and insurance coverage related to medications they’ve been prescribed, including…</p>
+<p>This is a guide for implementing the <strong>consumer-focused real-time pharmacy benefit check</strong> (consumer RTPBC) using FHIR R4.</p>
+
+<p>Using RTPBC, a patient can learn the cost and insurance coverage related to medications they’ve been prescribed. Specifically…</p>
 <ul>
-  <li>how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply</li>
+  <li>how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply</li>
   <li>discount pricing available for the medication.</li>
 </ul>
 
-<p><br /></p>
+<p>Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.</p>
 
-<p>Consumer RTPBC leverages the predetermination process supported by the FHIR Claim and ClaimResponse resources</p>
-<ul>
-  <li>Accompanying resources carrying information to identify the patient and their insurance coverage, prescription information and preferred pharmacy
-    <ul>
-      <li><em>Patient, Coverage, MedicationRequest, Practitioner, Organization (pharmacy), OperationOutcome (exceptions)</em></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<ul>
-  <li>The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain</li>
-</ul>
+<p>The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.</p>
 
 <p><br /></p>
 
@@ -278,48 +266,40 @@ Using RTPBC, a patient can learn the cost and insurance coverage related to medi
 <p><br /></p>
 
 <h3 id="scope-of-this-guide">Scope of this guide</h3>
-<p>Consumer RTPBC is intended to be used…</p>
+<p><strong>Consumer RTPBC is intended to be used…</strong></p>
 <ul>
   <li>in the United States (as it reflects unique US pharmacy insurance roles and conventions)</li>
   <li>for medications that are covered under the <em>pharmacy benefit</em> portion of the patient’s health insurance, which typically excludes medications administered during hospital care or as part of medical procedures</li>
   <li>for commercially available medication products that are not compounded at the pharmacy. <em>(Support for compounds could potentially be added later)</em></li>
 </ul>
 
-<p><br /></p>
+<p><strong><em>Relationship to the NCPDP provider-focused RTPBC transactions</em></strong> <br />
+This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that’s the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort.</p>
 
-<p>This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that’s the most useful and meaningful to patients. As a result, certain details that are part of the <em>provider-focused RTPBC standard</em> are not included here. Additional content could potentially be added in a later effort.</p>
-
-<p><br /></p>
-
-<p><em>Related information flows outside of consumer RTPBC</em>
-The patient’s app might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. <em>These exchanges are outside the scope of this guide.</em></p>
+<p><strong><em>Related information flows outside of consumer RTPBC</em></strong> <br />
+The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. <em>These exchanges are outside the scope of this guide.</em></p>
 
 <p><br /></p>
 
-<h3 id="author">Author</h3>
+<h3 id="feedback">Feedback</h3>
 <p>This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.</p>
 
-<p><br /></p>
-
-<p>Comments and suggestions are welcome…</p>
+<p>Comments and suggestions are welcome on our Zulip stream…
+https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 
 <ul>
-  <li>
-    <p>on our Zulip stream…
-https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
-  </li>
-  <li>
-    <p>or send a note to fm@frankmckinney.com</p>
-  </li>
+  <li>or send a note to fm@frankmckinney.com</li>
 </ul>
 
 <p><br /></p>
 
 <h3 id="change-log">Change log</h3>
 
-<p>0.1.01 (This version): Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
+<p><strong>0.1.02 (This version):</strong> Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup</p>
 
-<p>0.1.00 (previous version): Initial resources and narrative content.</p>
+<p><strong>0.1.01:</strong> Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
+
+<p><strong>0.1.00:</strong> Initial resources and narrative content.</p>
 
 <p><br /></p>
 
@@ -336,6 +316,10 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 <tr>
 <td>HL7 Pharmacy Workgroup</td>
 <td></td>
+</tr>
+<tr>
+<td>Frank McKinney</td>
+<td><a href="mailto:fm@frankmckinney.com">fm@frankmckinney.com</a></td>
 </tr>
 </tbody>
 </table>
@@ -370,7 +354,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.00-DRAFT  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Mon, Nov 4, 2019 14:57-0600.
+      CarinRtpbc Version: 0.1.02  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.0</a> (IG Publisher v4.0.0-a53ec6ee1b) generated on Mon, Nov 4, 2019 18:41-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

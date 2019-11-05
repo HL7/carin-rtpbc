@@ -66,7 +66,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
   <coding>
     <system value=""http://terminology.hl7.org/CodeSystem/claim-type""/>
     <code value=""pharmacy""/>
-    <display value=""http://terminology.hl7.org/CodeSystem/claim-type""/>
+    <display value=""Pharmacy""/>
   </coding>
 </valueCodeableConcept>","","","","",,"extensible","The type or discipline-style of the claim.","http://hl7.org/fhir/ValueSet/claim-type","",,,,"ClaimResponse.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"

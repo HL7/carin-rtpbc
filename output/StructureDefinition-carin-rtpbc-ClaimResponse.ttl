@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-ClaimResponse"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "49" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T14:50:00.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "50" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-04T18:32:36.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    </div>\n                </div>\n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.02"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -1023,7 +1023,7 @@
            fhir:index 0;
            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ];
            fhir:Coding.code [ fhir:value "pharmacy" ];
-           fhir:Coding.display [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ]
+           fhir:Coding.display [ fhir:value "Pharmacy" ]
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -10788,7 +10788,7 @@
            fhir:index 0;
            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ];
            fhir:Coding.code [ fhir:value "pharmacy" ];
-           fhir:Coding.display [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ]
+           fhir:Coding.display [ fhir:value "Pharmacy" ]
          ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]

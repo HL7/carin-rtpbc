@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.\n        </div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"];
-  fhir:CodeSystem.version [ fhir:value "0.1.00-DRAFT"];
+  fhir:CodeSystem.version [ fhir:value "0.1.02"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcBillingUnitCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Billing Unit Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
