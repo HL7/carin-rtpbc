@@ -7,10 +7,10 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines components of a patient's responsibility for a prescription product's cost.\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines components of a patient's responsibility for a prescription product's cost.</div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
-  "version": "0.1.02",
+  "version": "0.1.03",
   "name": "CarinRtpbcPatientPayCategoryCodeSystem",
   "title": "CARIN RTPBC Patient Pay Category Code System",
   "status": "draft",

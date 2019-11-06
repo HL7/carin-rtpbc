@@ -1,0 +1,23 @@
+{
+  "resourceType": "Practitioner",
+  "id": "rtpbc-practitioner-03",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-05T22:51:22.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-practitioner-03</p><p><b>meta</b>: </p><p><b>identifier</b>: 1234567890</p><p><b>name</b>: Johnson </p></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/sid/us-npi",
+      "value": "1234567890"
+    }
+  ],
+  "name": [
+    {
+      "family": "Johnson"
+    }
+  ]
+}

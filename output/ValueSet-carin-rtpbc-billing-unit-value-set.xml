@@ -7,11 +7,10 @@
     <lastUpdated value="2019-10-28T18:15:51.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products
-        </div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products</div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-  <version value="0.1.02"/>
+  <version value="0.1.03"/>
   <name value="CarinRtbpcBillingUnitValueSet"/>
   <title value="CARIN RTPBC Billing Unit Value Set"/>
   <status value="draft"/>

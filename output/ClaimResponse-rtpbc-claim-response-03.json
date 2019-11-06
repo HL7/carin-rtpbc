@@ -1,0 +1,184 @@
+{
+  "resourceType": "ClaimResponse",
+  "id": "rtpbc-claim-response-03",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-06T03:53:37.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>meta</b>: </p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03m.html\">Generated Summary: id: rtpbc-organization-03m; 5515515515; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>"
+  },
+  "identifier": [
+    {
+      "value": "rtpbc-03-response"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "pharmacy",
+        "display": "Pharmacy"
+      }
+    ]
+  },
+  "use": "predetermination",
+  "patient": {
+    "reference": "Patient/rtpbc-patient-03"
+  },
+  "created": "2019-11-01T11:20:59-05:00",
+  "insurer": {
+    "identifier": {
+      "value": "Pharmacy Plans US"
+    }
+  },
+  "request": {
+    "identifier": {
+      "value": "rtpbc-03"
+    }
+  },
+  "outcome": "complete",
+  "disposition": "Processed successfully",
+  "item": [
+    {
+      "itemSequence": 1,
+      "noteNumber": [
+        1
+      ],
+      "adjudication": [
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "copay",
+                "display": "Copay"
+              }
+            ]
+          },
+          "amount": {
+            "value": 10,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "coinsurance",
+                "display": "Per prescription coinsurance"
+              }
+            ]
+          },
+          "amount": {
+            "value": 15,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "total",
+                "display": "Total patient responsibility"
+              }
+            ]
+          },
+          "amount": {
+            "value": 25,
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  ],
+  "addItem": [
+    {
+      "itemSequence": [
+        1
+      ],
+      "provider": [
+        {
+          "reference": "Organization/rtpbc-organization-03m"
+        }
+      ],
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://example.org/ndc11/placeholder",
+            "code": "00777310402",
+            "display": "Prozac 10mg capsule"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 180,
+        "unit": "EA"
+      },
+      "noteNumber": [
+        2
+      ],
+      "adjudication": [
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "copay",
+                "display": "Copay"
+              }
+            ]
+          },
+          "amount": {
+            "value": 20,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "coinsurance",
+                "display": "Per prescription coinsurance"
+              }
+            ]
+          },
+          "amount": {
+            "value": 30,
+            "currency": "USD"
+          }
+        },
+        {
+          "category": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category",
+                "code": "total",
+                "display": "Total patient responsibility"
+              }
+            ]
+          },
+          "amount": {
+            "value": 50,
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  ],
+  "processNote": [
+    {
+      "number": 1,
+      "text": "Covered"
+    },
+    {
+      "number": 2,
+      "text": "Covered"
+    }
+  ]
+}

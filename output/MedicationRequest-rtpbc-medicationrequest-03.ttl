@@ -1,0 +1,67 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "rtpbc-medicationrequest-03"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-05T22:54:39.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-medicationrequest-03</p><p><b>meta</b>: </p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>medication</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>subject</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>requester</b>: <a href=\"Practitioner-rtpbc-practitioner-03.html\">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></p><h3>DispenseRequests</h3><table class=\"grid\"><tr><td>-</td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>60 EA</td><td>30 days<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code d = 'd')</span></td><td><a href=\"Organization-rtpbc-organization-03.html\">Generated Summary: id: rtpbc-organization-03; 9876543210; name: Hometown Drug; ph: 6081234567</a></td></tr></table></div>"
+  ];
+  fhir:MedicationRequest.status [ fhir:value "draft"];
+  fhir:MedicationRequest.intent [ fhir:value "proposal"];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://example.org/ndc11/placeholder" ];
+       fhir:Coding.code [ fhir:value "00777310402" ];
+       fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
+     ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
+  ];
+  fhir:MedicationRequest.requester [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03>;
+     fhir:Reference.reference [ fhir:value "Practitioner/rtpbc-practitioner-03" ]
+  ];
+  fhir:MedicationRequest.dispenseRequest [
+     fhir:MedicationRequest.dispenseRequest.quantity [
+       fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "EA" ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.expectedSupplyDuration [
+       fhir:Quantity.value [ fhir:value "30"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "days" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ];
+       fhir:Quantity.code [ fhir:value "d" ]
+     ];
+     fhir:MedicationRequest.dispenseRequest.performer [
+       fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03>;
+       fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03.ttl> .
+
+# -------------------------------------------------------------------------------------
+

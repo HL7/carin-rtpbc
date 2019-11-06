@@ -1,0 +1,195 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "carin-rtpbc-Coverage",
+	"meta": {
+		"versionId": "38",
+		"lastUpdated": "2019-10-31T16:39:31.000-04:00"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\">This profile constrains the Coverage resource for carrying the pharmacy \nbenefit information required in the consumer real-time pharmacy benefit \ncheck process\n            </div></div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers",
+	"version": "0.0.1",
+	"name": "CarinRtpbcRequestCoverageIdentifiers",
+	"title": "CARIN RTPBC Request Coverage Identifiers",
+	"status": "draft",
+	"date": "2019-10-15",
+	"publisher": "CARIN Alliance",
+	"description": "This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Coverage",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Coverage",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Coverage",
+				"path": "Coverage"
+			},
+			{
+				"id": "Coverage.subscriberId",
+				"path": "Coverage.subscriberId",
+				"label": "Health Plan Cardholder ID",
+				"short": "Health Plan Cardholder ID",
+				"comment": "Either *PBM Member ID* (.class.type = 'rxid') or *Subscriber ID* must be populated",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.payor",
+				"path": "Coverage.payor",
+				"label": "Payer ID or Ref (TBD)",
+				"short": "Payer ID or Ref (TBD)",
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class",
+				"path": "Coverage.class",
+				"label": "Pharmacy coverage identifiers",
+				"slicing": {
+					"discriminator": [
+						{
+							"type": "value",
+							"path": "type"
+						}
+					],
+					"description": "The value of the .type element indicates the type of coverage identifier  (rxbin=IIN (BIN), rxpcn=PCN, group=Group ID, rxid=PBM Member ID)",
+					"ordered": false,
+					"rules": "closed"
+				},
+				"short": "Pharmacy coverage identifiers",
+				"definition": "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID",
+				"comment": "Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners",
+				"min": 0,
+				"max": "4",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class:bin",
+				"path": "Coverage.class",
+				"sliceName": "bin",
+				"label": "IIN (BIN) number",
+				"short": "IIN (BIN) number",
+				"comment": "Populate as agreed between trading partners",
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class:bin.type",
+				"path": "Coverage.class.type",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+							"code": "rxbin"
+						}
+					]
+				}
+			},
+			{
+				"id": "Coverage.class:pcn",
+				"path": "Coverage.class",
+				"sliceName": "pcn",
+				"label": "Processor Control Number (PCN)",
+				"short": "Processor Control Number (PCN)",
+				"comment": "Populate as agreed between trading partners",
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class:pcn.type",
+				"path": "Coverage.class.type",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+							"code": "rxpcn"
+						}
+					]
+				}
+			},
+			{
+				"id": "Coverage.class:group-id",
+				"path": "Coverage.class",
+				"sliceName": "group-id",
+				"label": "Pharmacy Benefit Group ID",
+				"short": "Pharmacy Benefit Group ID",
+				"definition": "The patient's Group ID associated with their pharmacy benefit",
+				"comment": "Populate as agreed between trading partners",
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class:group-id.type",
+				"path": "Coverage.class.type",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+							"code": "group"
+						}
+					]
+				}
+			},
+			{
+				"id": "Coverage.class:pbm-member-id",
+				"path": "Coverage.class",
+				"sliceName": "pbm-member-id",
+				"label": "PBM Member ID",
+				"short": "PBM Member ID",
+				"definition": "The patient's pharmacy benefit member ID (which may differ from their overall health insurance ID)",
+				"comment": "Populate as agreed between trading partners",
+				"min": 0,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.class:pbm-member-id.type",
+				"path": "Coverage.class.type",
+				"min": 1,
+				"max": "1",
+				"patternCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+							"code": "rxid"
+						}
+					]
+				}
+			},
+			{
+				"id": "Coverage.payor.identifier",
+				"path": "Coverage.payor.identifier",
+				"label": "Payer ID",
+				"short": "Payer ID",
+				"definition": "Payer ID as defined in the participants' environment. E.g., an identifier defined in an eligibility service to represent the payer.",
+				"mustSupport": true
+			},
+			{
+				"id": "Coverage.payor.identifier.system",
+				"path": "Coverage.payor.identifier.system",
+				"label": "Payer ID System (TBD)",
+				"short": "Payer ID System (TBD)",
+				"mustSupport": false
+			},
+			{
+				"id": "Coverage.payor.identifier.value",
+				"path": "Coverage.payor.identifier.value",
+				"label": "Payer ID Value",
+				"short": "Payer ID Value",
+				"min": 1,
+				"mustSupport": true
+			}
+		]
+	}
+}

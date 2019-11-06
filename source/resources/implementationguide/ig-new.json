@@ -2,8 +2,8 @@
   "resourceType" : "ImplementationGuide",
   "id" : "CARIN-RTPBC",
   "meta" : {
-    "versionId" : "168",
-    "lastUpdated" : "2019-11-04T18:37:55.000-06:00"
+    "versionId" : "189",
+    "lastUpdated" : "2019-11-06T03:07:25.000-06:00"
   },
   "text" : {
     "status" : "additional",
@@ -11,18 +11,18 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc13\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc33\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc13\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc33\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc13\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc33\\source\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/CARIN-RTPBC",
-  "version" : "0.1.02",
+  "version" : "0.1.03",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",
@@ -169,18 +169,98 @@
     },
     {
       "reference" : {
-        "reference" : "Claim/carin-rtpbc-claim-example-001",
-        "display" : "carin-rtpbc-claim-example-001"
+        "reference" : "Coverage/rtpbc-coverage-03",
+        "display" : "rtpbc-coverage-03"
       },
-      "name" : "carin-rtpbc-claim-example-001",
+      "name" : "rtpbc-coverage-03",
       "exampleBoolean" : true
     },
     {
       "reference" : {
-        "reference" : "ClaimResponse/carin-rtpbc-claimresponse-example-001",
-        "display" : "carin-rtpbc-claimresponse-example-001"
+        "reference" : "MedicationRequest/rtpbc-medicationrequest-03",
+        "display" : "rtpbc-medicationrequest-03"
       },
-      "name" : "carin-rtpbc-claimresponse-example-001",
+      "name" : "rtpbc-medicationrequest-03",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Claim/rtpbc-claim-03",
+        "display" : "rtpbc-claim-03"
+      },
+      "name" : "rtpbc-claim-03",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Patient/rtpbc-patient-03",
+        "display" : "Patient Jane Doe"
+      },
+      "name" : "Patient Jane Doe",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Organization/rtpbc-organization-03",
+        "display" : "Hometown Drug"
+      },
+      "name" : "Hometown Drug",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Practitioner/rtpbc-practitioner-03",
+        "display" : "Practitioner Johnson"
+      },
+      "name" : "Practitioner Johnson",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/rtpbc-bundle-request-03",
+        "display" : "rtpbc-bundle-request-03"
+      },
+      "name" : "rtpbc-bundle-request-03",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Claim/rtpbc-claim-with-contained-003",
+        "display" : "rtpbc-claim-with-contained-003"
+      },
+      "name" : "rtpbc-claim-with-contained-003",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "ClaimResponse/rtpbc-claim-response-with-contained-03",
+        "display" : "rtpbc-claim-response-with-contained-03"
+      },
+      "name" : "rtpbc-claim-response-with-contained-03",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Organization/rtpbc-organization-03m",
+        "display" : "My Mail Service Pharmacy"
+      },
+      "name" : "My Mail Service Pharmacy",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "Bundle/rtpbc-bundle-response-03",
+        "display" : "rtpbc-bundle-response-03"
+      },
+      "name" : "rtpbc-bundle-response-03",
+      "exampleBoolean" : true
+    },
+    {
+      "reference" : {
+        "reference" : "ClaimResponse/rtpbc-claim-response-03",
+        "display" : "rtpbc-claim-response-03"
+      },
+      "name" : "rtpbc-claim-response-03",
       "exampleBoolean" : true
     }],
     "page" : {
@@ -195,6 +275,11 @@
       {
         "nameUrl" : "Information_content_and_FHIR_resources.html",
         "title" : "Information content and FHIR resources",
+        "generation" : "markdown"
+      },
+      {
+        "nameUrl" : "Submit_operation.html",
+        "title" : "Submit operation",
         "generation" : "markdown"
       },
       {

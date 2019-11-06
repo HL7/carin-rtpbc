@@ -1,0 +1,193 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03> a fhir:ClaimResponse;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "rtpbc-claim-response-03"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T03:53:37.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>meta</b>: </p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03m.html\">Generated Summary: id: rtpbc-organization-03m; 5515515515; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>"
+  ];
+  fhir:ClaimResponse.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "rtpbc-03-response" ]
+  ];
+  fhir:ClaimResponse.status [ fhir:value "active"];
+  fhir:ClaimResponse.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ];
+       fhir:Coding.code [ fhir:value "pharmacy" ];
+       fhir:Coding.display [ fhir:value "Pharmacy" ]
+     ]
+  ];
+  fhir:ClaimResponse.use [ fhir:value "predetermination"];
+  fhir:ClaimResponse.patient [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
+  ];
+  fhir:ClaimResponse.created [ fhir:value "2019-11-01T11:20:59-05:00"^^xsd:dateTime];
+  fhir:ClaimResponse.insurer [
+     fhir:Reference.identifier [
+       fhir:Identifier.value [ fhir:value "Pharmacy Plans US" ]
+     ]
+  ];
+  fhir:ClaimResponse.request [
+     fhir:Reference.identifier [
+       fhir:Identifier.value [ fhir:value "rtpbc-03" ]
+     ]
+  ];
+  fhir:ClaimResponse.outcome [ fhir:value "complete"];
+  fhir:ClaimResponse.disposition [ fhir:value "Processed successfully"];
+  fhir:ClaimResponse.item [
+     fhir:index 0;
+     fhir:ClaimResponse.item.itemSequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ClaimResponse.item.noteNumber [
+       fhir:value "1"^^xsd:positiveInteger;
+       fhir:index 0
+     ];
+     fhir:ClaimResponse.item.adjudication [
+       fhir:index 0;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "copay" ];
+           fhir:Coding.display [ fhir:value "Copay" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "10"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "coinsurance" ];
+           fhir:Coding.display [ fhir:value "Per prescription coinsurance" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "15"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "total" ];
+           fhir:Coding.display [ fhir:value "Total patient responsibility" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "25"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ]
+  ];
+  fhir:ClaimResponse.addItem [
+     fhir:index 0;
+     fhir:ClaimResponse.addItem.itemSequence [
+       fhir:value "1"^^xsd:positiveInteger;
+       fhir:index 0
+     ];
+     fhir:ClaimResponse.addItem.provider [
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03m>;
+       fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03m" ]
+     ];
+     fhir:ClaimResponse.addItem.productOrService [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/ndc11/placeholder" ];
+         fhir:Coding.code [ fhir:value "00777310402" ];
+         fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
+       ]
+     ];
+     fhir:ClaimResponse.addItem.quantity [
+       fhir:Quantity.value [ fhir:value "180"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "EA" ]
+     ];
+     fhir:ClaimResponse.addItem.noteNumber [
+       fhir:value "2"^^xsd:positiveInteger;
+       fhir:index 0
+     ];
+     fhir:ClaimResponse.addItem.adjudication [
+       fhir:index 0;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "copay" ];
+           fhir:Coding.display [ fhir:value "Copay" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "20"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "coinsurance" ];
+           fhir:Coding.display [ fhir:value "Per prescription coinsurance" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "30"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ClaimResponse.item.adjudication.category [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category" ];
+           fhir:Coding.code [ fhir:value "total" ];
+           fhir:Coding.display [ fhir:value "Total patient responsibility" ]
+         ]
+       ];
+       fhir:ClaimResponse.item.adjudication.amount [
+         fhir:Money.value [ fhir:value "50"^^xsd:decimal ];
+         fhir:Money.currency [ fhir:value "USD" ]
+       ]
+     ]
+  ];
+  fhir:ClaimResponse.processNote [
+     fhir:index 0;
+     fhir:ClaimResponse.processNote.number [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:ClaimResponse.processNote.text [ fhir:value "Covered" ]
+  ], [
+     fhir:index 1;
+     fhir:ClaimResponse.processNote.number [ fhir:value "2"^^xsd:positiveInteger ];
+     fhir:ClaimResponse.processNote.text [ fhir:value "Covered" ]
+  ] .
+
+<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03m> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ClaimResponse/rtpbc-claim-response-03.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -4,7 +4,7 @@ layout: default
 active: Consumer vs provider RTPBC
 ---
 
-[Previous Page](Information_content_and_FHIR_resources.html)
+[Previous Page](Submit_operation.html)
 
 The table below summarizes the structure and content of the NCPDP real-time pharmacy benefit check transactions, on which consumer RTPBC is based, and which of those are pertinent in the consumer version.
 

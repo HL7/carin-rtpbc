@@ -14,10 +14,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines coverage levels that may apply to a prescription product.   \n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines coverage levels that may apply to a prescription product.   </div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"];
-  fhir:CodeSystem.version [ fhir:value "0.1.02"];
+  fhir:CodeSystem.version [ fhir:value "0.1.03"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcCoverageDeterminationCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Coverage Determination Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];

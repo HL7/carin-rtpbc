@@ -14,10 +14,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains coverage levels that may apply to a prescription product.\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains coverage levels that may apply to a prescription product.</div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-determination"];
-  fhir:ValueSet.version [ fhir:value "0.1.02"];
+  fhir:ValueSet.version [ fhir:value "0.1.03"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcCoverageDeterminationValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Coverage Determination Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];

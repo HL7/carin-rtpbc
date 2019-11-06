@@ -1,0 +1,33 @@
+{
+  "resourceType": "Patient",
+  "id": "rtpbc-patient-03",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-05T22:52:23.000-05:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jane <b>DOE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>100 Oak Court </span><br/><span>Madison </span><span>WI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>05 December 1975</span></td></tr></tbody></table></div>"
+  },
+  "name": [
+    {
+      "family": "Doe",
+      "given": [
+        "Jane"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1975-12-05",
+  "address": [
+    {
+      "line": [
+        "100 Oak Court"
+      ],
+      "city": "Madison",
+      "state": "WI",
+      "postalCode": "53510",
+      "country": "US"
+    }
+  ]
+}

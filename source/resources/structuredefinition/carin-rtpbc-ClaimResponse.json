@@ -1,0 +1,553 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "carin-rtpbc-ClaimResponse",
+	"meta": {
+		"versionId": "50",
+		"lastUpdated": "2019-11-04T19:32:36.000-05:00"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><div><div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's \"predetermination\" processing mode   \n                    \n                    </div></div></div></div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
+	"version": "0.0.1",
+	"name": "CarinRtpbcResponse",
+	"title": "CARIN RTPBC Response using ClaimResponse",
+	"status": "draft",
+	"date": "2019-10-03",
+	"publisher": "CARIN Alliance",
+	"description": "This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's \"predetermination\" processing mode",
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "ClaimResponse",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/ClaimResponse",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "ClaimResponse",
+				"path": "ClaimResponse"
+			},
+			{
+				"id": "ClaimResponse.id",
+				"path": "ClaimResponse.id",
+				"label": "Unique ClaimResponse Resource Identifier",
+				"short": "Unique ClaimResponse Resource Identifier",
+				"definition": "Unique ClaimResponse Resource Identifier assigned by the responding payer/PBM",
+				"min": 0,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.identifier",
+				"path": "ClaimResponse.identifier",
+				"label": "RTPBC Response Identifier",
+				"short": "RTPBC Response Identifier",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.status",
+				"path": "ClaimResponse.status",
+				"label": "Response status",
+				"short": "Response status",
+				"definition": "The status of this response (active)",
+				"comment": "Value is always 'active'",
+				"min": 1,
+				"fixedCode": "active",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.type",
+				"path": "ClaimResponse.type",
+				"label": "Requested Service Type",
+				"short": "Requested Service Type",
+				"definition": "The type of service for which pricing and coverage predetermination is being requested",
+				"comment": "Value is always 'pharmacy'",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/claim-type",
+							"code": "pharmacy",
+							"display": "Pharmacy"
+						}
+					]
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.use",
+				"path": "ClaimResponse.use",
+				"label": "Processing Mode",
+				"short": "Processing Mode",
+				"definition": "The mode of processing being performed by the payer/PBM",
+				"comment": "Value is always 'predetermination'",
+				"fixedCode": "predetermination",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.patient",
+				"path": "ClaimResponse.patient",
+				"label": "Response Patient Information",
+				"short": "Response Patient Information",
+				"definition": "Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process",
+				"comment": "Echo the Patient resource received in the request",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.insurer",
+				"path": "ClaimResponse.insurer"
+			},
+			{
+				"id": "ClaimResponse.insurer.identifier",
+				"path": "ClaimResponse.insurer.identifier"
+			},
+			{
+				"id": "ClaimResponse.insurer.identifier.value",
+				"path": "ClaimResponse.insurer.identifier.value",
+				"label": "Payer ID",
+				"short": "Payer ID",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.type.coding",
+				"path": "ClaimResponse.type.coding",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.type.coding.system",
+				"path": "ClaimResponse.type.coding.system",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.type.coding.code",
+				"path": "ClaimResponse.type.coding.code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.request",
+				"path": "ClaimResponse.request",
+				"label": "Submitter's RTPBC Request ID",
+				"short": "Submitter's RTPBC Request ID",
+				"definition": "The RTPBC Request ID contained in the associated request",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.outcome",
+				"path": "ClaimResponse.outcome",
+				"label": "Processing Outcome",
+				"short": "Processing Outcome",
+				"definition": "The outcome of processing. Either 'complete' (finished without errors) or 'error' (processing could not complete). The outcome is 'processed' if processing completes with a coverage determination, including when it is determined that the requested product is not covered. Otherwise, the outcome = 'error'. \n\n**Note: If a system or communication error occurs, an OperationOutcome is returned instead of a ClaimResponse**",
+				"comment": "If the outcome = 'error', the .error composite must be populated.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.disposition",
+				"path": "ClaimResponse.disposition",
+				"label": "Completed Note",
+				"short": "Completed Note",
+				"definition": "Note providing clarifying information and/or support contact information. Available for both 'completed' and 'error' outcomes.",
+				"comment": "The responding payer/PBM determines when and how to populate.Recommended that a patient help desk phone number be included.",
+				"requirements": "Corresponds to the Help Desk Support elements in the NCPDP RTPBC response message.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item",
+				"path": "ClaimResponse.item",
+				"label": "Requested Product and Pharmacy",
+				"short": "Requested Product and Pharmacy",
+				"definition": "Composite containing cost and coverage for the requested product and pharmacy.",
+				"comment": "SHALL be populated when the .outcome = 'complete'.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem",
+				"path": "ClaimResponse.addItem"
+			},
+			{
+				"id": "ClaimResponse.addItem.itemSequence",
+				"path": "ClaimResponse.addItem.itemSequence",
+				"label": "Associated request Item Sequence",
+				"short": "Associated request Item Sequence",
+				"definition": "Indicates that the information in this .item composite is an alternative to the requested product and pharmacy.",
+				"comment": "Because a maximum of one product is submitted per request, this value is always '1'.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.provider",
+				"path": "ClaimResponse.addItem.provider",
+				"label": "Priced Pharmacy",
+				"short": "Priced Pharmacy",
+				"definition": "Reference to an Organization resource representing the priced pharmacy",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.provider.reference",
+				"path": "ClaimResponse.addItem.provider.reference",
+				"label": "Reference to Priced Pharmacy",
+				"short": "Reference to Priced Pharmacy",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.productOrService",
+				"path": "ClaimResponse.addItem.productOrService",
+				"label": "Product",
+				"short": "Product",
+				"definition": "A product identifier for the medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "CARIN RTPBC prescribable product codes (NDC and RxNorm)"
+				}
+			},
+			{
+				"id": "ClaimResponse.addItem.quantity",
+				"path": "ClaimResponse.addItem.quantity",
+				"label": "Priced Quantity",
+				"short": "Priced Quantity",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.quantity.value",
+				"path": "ClaimResponse.addItem.quantity.value",
+				"label": "Quantity in Billing Units",
+				"short": "Quantity in Billing Units",
+				"definition": "The prescribed quantity in terms of the applicable billing unit of measure.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.quantity.unit",
+				"path": "ClaimResponse.addItem.quantity.unit",
+				"label": "Billing unit of measure",
+				"short": "Billing unit of measure",
+				"definition": "Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Billing quantity unity of measure"
+				}
+			},
+			{
+				"id": "ClaimResponse.addItem.productOrService.coding",
+				"path": "ClaimResponse.addItem.productOrService.coding",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.productOrService.coding.system",
+				"path": "ClaimResponse.addItem.productOrService.coding.system",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.productOrService.coding.code",
+				"path": "ClaimResponse.addItem.productOrService.coding.code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.productOrService.coding.display",
+				"path": "ClaimResponse.addItem.productOrService.coding.display",
+				"label": "Product Description",
+				"short": "Product Description",
+				"definition": "The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.noteNumber",
+				"path": "ClaimResponse.addItem.noteNumber",
+				"label": "Determination Note Number",
+				"short": "Determination Note Number",
+				"definition": "Number referencing a Determination Note (.processNote) explaining the coverage status for this product + pharmacy combination.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.adjudication",
+				"path": "ClaimResponse.addItem.adjudication",
+				"label": "Alternative Product and Pharmacy Determination",
+				"short": "Alternative Product and Pharmacy Determination",
+				"definition": "Patient cost and coverage details for an alternative product and pharmacy combination.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.adjudication.category",
+				"path": "ClaimResponse.addItem.adjudication.category",
+				"label": "Patient Pay Component",
+				"short": "Patient Pay Component",
+				"definition": "Identifies a component of the patient's financial responsibility for the product cost.",
+				"comment": "At least one .adjudication must contain a .category with the .code value 'total', representing the patient's total financial responsibility for the product",
+				"requirements": "Corresponds to NCPDP C95-KQ Patient Pay Component Qualifier.",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "RTPBC Patient Pay Categories",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"
+				}
+			},
+			{
+				"id": "ClaimResponse.addItem.adjudication.amount",
+				"path": "ClaimResponse.addItem.adjudication.amount",
+				"label": "Patient Pay Component Amount",
+				"short": "Patient Pay Component Amount",
+				"definition": "The amount associated with the Patient Pay Component (.adjudication.category).",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.adjudication.amount.value",
+				"path": "ClaimResponse.addItem.adjudication.amount.value",
+				"label": "Patient Pay Amount Value",
+				"short": "Patient Pay Amount Value",
+				"definition": "The patient pay component amount in terms of the specified currency.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.addItem.adjudication.amount.currency",
+				"path": "ClaimResponse.addItem.adjudication.amount.currency",
+				"label": "Patient Pay Amount Currency",
+				"short": "Patient Pay Amount Currency",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Currencies"
+				}
+			},
+			{
+				"id": "ClaimResponse.processNote",
+				"path": "ClaimResponse.processNote",
+				"label": "Determination Note",
+				"short": "Determination Note",
+				"definition": "Coverage determination for a product / pharmacy combination, in human-readable form. E.g., 'Covered', 'Covered with restriction: PA required', 'Not covered'",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.insurance",
+				"path": "ClaimResponse.insurance",
+				"min": 0,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.insurance.sequence",
+				"path": "ClaimResponse.insurance.sequence",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.insurance.focal",
+				"path": "ClaimResponse.insurance.focal",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.insurance.coverage",
+				"path": "ClaimResponse.insurance.coverage",
+				"label": "Pharmacy Coverage Reference",
+				"short": "Pharmacy Coverage Reference",
+				"definition": "Reference to a Coverage resource containing identification of the patient's pharmacy coverage.",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.processNote.number",
+				"path": "ClaimResponse.processNote.number",
+				"label": "Determination Note Number",
+				"short": "Determination Note Number",
+				"comment": "Links to the .noteNumber elements in .item and .addItem",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.processNote.text",
+				"path": "ClaimResponse.processNote.text",
+				"label": "Determination Note Text",
+				"short": "Determination Note Text",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.itemSequence",
+				"path": "ClaimResponse.item.itemSequence",
+				"definition": "Indicates that the information in this .item composite relates to the requested product and pharmacy.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.noteNumber",
+				"path": "ClaimResponse.item.noteNumber",
+				"label": "Determination Note Number",
+				"short": "Determination Note Number",
+				"definition": "Number referencing a Determination Note (.processNote) explaining the coverage status for this product + pharmacy combination.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.adjudication",
+				"path": "ClaimResponse.item.adjudication",
+				"label": "Requested Product and Pharmacy Determination",
+				"short": "Requested Product and Pharmacy Determination",
+				"definition": "Patient cost and coverage details for the requested product and pharmacy.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.adjudication.category",
+				"path": "ClaimResponse.item.adjudication.category",
+				"label": "Patient Pay Component",
+				"short": "Patient Pay Component",
+				"definition": "Identifies a component of the patient's financial responsibility for the product cost.",
+				"comment": "At least one .adjudication must contain a .category with the .code value 'total', representing the patient's total financial responsibility for the product",
+				"requirements": "Corresponds to NCPDP C95-KQ Patient Pay Component Qualifier.",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "RTPBC Patient Pay Categories",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"
+				}
+			},
+			{
+				"id": "ClaimResponse.item.adjudication.amount",
+				"path": "ClaimResponse.item.adjudication.amount",
+				"label": "Patient Pay Component Amount",
+				"short": "Patient Pay Component Amount",
+				"definition": "The amount associated with the Patient Pay Component (.adjudication.category).",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.adjudication.amount.value",
+				"path": "ClaimResponse.item.adjudication.amount.value",
+				"label": "Patient Pay Amount Value",
+				"short": "Patient Pay Amount Value",
+				"definition": "The patient pay component amount in terms of the specified currency.",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.item.adjudication.amount.currency",
+				"path": "ClaimResponse.item.adjudication.amount.currency",
+				"label": "Patient Pay Amount Currency",
+				"short": "Patient Pay Amount Currency",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Currencies"
+				}
+			},
+			{
+				"id": "ClaimResponse.error",
+				"path": "ClaimResponse.error",
+				"label": "Error Information",
+				"short": "Error Information",
+				"comment": "Must be populated when .outcome = 'error'",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.error.code",
+				"path": "ClaimResponse.error.code",
+				"label": "Reject Reason",
+				"short": "Reject Reason",
+				"definition": "A code identifying the reason that processing could not be completed.",
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)"
+				}
+			},
+			{
+				"id": "ClaimResponse.error.code.coding",
+				"path": "ClaimResponse.error.code.coding",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.error.code.text",
+				"path": "ClaimResponse.error.code.text",
+				"label": "Reject Message",
+				"short": "Reject Message",
+				"definition": "Clarification of the reject cause.",
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.error.code.coding.system",
+				"path": "ClaimResponse.error.code.coding.system",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.error.code.coding.code",
+				"path": "ClaimResponse.error.code.coding.code",
+				"label": "Reject Code",
+				"short": "Reject Code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.error.code.coding.display",
+				"path": "ClaimResponse.error.code.coding.display",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.request.identifier",
+				"path": "ClaimResponse.request.identifier",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.request.identifier.value",
+				"path": "ClaimResponse.request.identifier.value",
+				"label": "RTPBC Request ID",
+				"short": "RTPBC Request ID",
+				"definition": "The RTPBC Request ID contained in the associated request",
+				"comment": "Populate with the Claim.identifier.value from the associated request",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "ClaimResponse.identifier.value",
+				"path": "ClaimResponse.identifier.value",
+				"label": "Unique RTPBC response ID",
+				"short": "Unique RTPBC response ID",
+				"definition": "An identifier for each RTPBC response that is assigned by and unique to the reponder",
+				"min": 1,
+				"mustSupport": true
+			}
+		]
+	}
+}

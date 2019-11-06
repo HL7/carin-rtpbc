@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="rtpbc-organization-03m"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-06T03:23:37.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>meta</b>: </p><p><b>identifier</b>: 5515515515</p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>
+  </text>
+  <identifier>
+    <system value="http://hl7.org/fhir/sid/us-npi"/>
+    <value value="5515515515"/>
+  </identifier>
+  <name value="My Mail Service Pharmacy"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="5551234567"/>
+  </telecom>
+  <address>
+    <line value="10001 Oakland Road"/>
+    <city value="Milwaukee"/>
+    <state value="WI"/>
+    <postalCode value="54444"/>
+    <country value="US"/>
+  </address>
+</Organization>

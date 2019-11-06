@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="CARIN-RTPBC"/>
     <meta>
-        <versionId value="168"/>
-        <lastUpdated value="2019-11-04T19:37:55.000-05:00"/>
+        <versionId value="189"/>
+        <lastUpdated value="2019-11-06T04:07:25.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -15,7 +15,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/CARIN-RTPBC"/>
-    <version value="0.1.02"/>
+    <version value="0.1.03"/>
     <name value="CarinRtpbc"/>
     <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
     <status value="draft"/>
@@ -160,18 +160,98 @@
         </resource>
         <resource>
             <reference>
-                <reference value="Claim/carin-rtpbc-claim-example-001"/>
-                <display value="carin-rtpbc-claim-example-001"/>
+                <reference value="Coverage/rtpbc-coverage-03"/>
+                <display value="rtpbc-coverage-03"/>
             </reference>
-            <name value="carin-rtpbc-claim-example-001"/>
+            <name value="rtpbc-coverage-03"/>
             <exampleBoolean value="true"/>
         </resource>
         <resource>
             <reference>
-                <reference value="ClaimResponse/carin-rtpbc-claimresponse-example-001"/>
-                <display value="carin-rtpbc-claimresponse-example-001"/>
+                <reference value="MedicationRequest/rtpbc-medicationrequest-03"/>
+                <display value="rtpbc-medicationrequest-03"/>
             </reference>
-            <name value="carin-rtpbc-claimresponse-example-001"/>
+            <name value="rtpbc-medicationrequest-03"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Claim/rtpbc-claim-03"/>
+                <display value="rtpbc-claim-03"/>
+            </reference>
+            <name value="rtpbc-claim-03"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Patient/rtpbc-patient-03"/>
+                <display value="Patient Jane Doe"/>
+            </reference>
+            <name value="Patient Jane Doe"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/rtpbc-organization-03"/>
+                <display value="Hometown Drug"/>
+            </reference>
+            <name value="Hometown Drug"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Practitioner/rtpbc-practitioner-03"/>
+                <display value="Practitioner Johnson"/>
+            </reference>
+            <name value="Practitioner Johnson"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/rtpbc-bundle-request-03"/>
+                <display value="rtpbc-bundle-request-03"/>
+            </reference>
+            <name value="rtpbc-bundle-request-03"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Claim/rtpbc-claim-with-contained-003"/>
+                <display value="rtpbc-claim-with-contained-003"/>
+            </reference>
+            <name value="rtpbc-claim-with-contained-003"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ClaimResponse/rtpbc-claim-response-with-contained-03"/>
+                <display value="rtpbc-claim-response-with-contained-03"/>
+            </reference>
+            <name value="rtpbc-claim-response-with-contained-03"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Organization/rtpbc-organization-03m"/>
+                <display value="My Mail Service Pharmacy"/>
+            </reference>
+            <name value="My Mail Service Pharmacy"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/rtpbc-bundle-response-03"/>
+                <display value="rtpbc-bundle-response-03"/>
+            </reference>
+            <name value="rtpbc-bundle-response-03"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="ClaimResponse/rtpbc-claim-response-03"/>
+                <display value="rtpbc-claim-response-03"/>
+            </reference>
+            <name value="rtpbc-claim-response-03"/>
             <exampleBoolean value="true"/>
         </resource>
         <page>
@@ -186,6 +266,11 @@
             <page>
                 <nameUrl value="Information_content_and_FHIR_resources.html"/>
                 <title value="Information content and FHIR resources"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Submit_operation.html"/>
+                <title value="Submit operation"/>
                 <generation value="markdown"/>
             </page>
             <page>

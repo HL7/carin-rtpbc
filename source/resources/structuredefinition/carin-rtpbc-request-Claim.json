@@ -1,0 +1,447 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "carin-rtpbc-request-Claim",
+	"meta": {
+		"versionId": "72",
+		"lastUpdated": "2019-11-05T15:38:20.000-05:00"
+	},
+	"text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>This profile constrains the Claim resource so that it can serve as the                                   <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          </div></div>"
+	},
+	"extension": [],
+	"url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
+	"version": "0.0.1",
+	"name": "CarinRtpbcRequest",
+	"title": "CARIN RTPBC Request using Claim",
+	"status": "draft",
+	"date": "2019-10-03",
+	"publisher": "CARIN Alliance",
+	"description": "This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process",
+	"jurisdiction": [
+		{
+			"coding": [
+				{
+					"system": "urn:iso:std:iso:3166",
+					"code": "US",
+					"display": "United States of America"
+				}
+			]
+		}
+	],
+	"fhirVersion": "4.0.0",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Claim",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Claim",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Claim",
+				"path": "Claim"
+			},
+			{
+				"id": "Claim.id",
+				"path": "Claim.id",
+				"label": "Unique Claim Resource Identifier",
+				"short": "Unique Claim Resource Identifier",
+				"definition": "Unique Claim Resource Identifier assigned by the submitting patient application",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.identifier",
+				"path": "Claim.identifier",
+				"label": "RTPBC request identifier",
+				"short": "RTPBC request identifier",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.identifier.value",
+				"path": "Claim.identifier.value",
+				"label": "Unique RTPBC request ID",
+				"short": "Unique RTPBC request ID",
+				"definition": "An identifier for each RTPBC request that is assigned by and unique to the submitter",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.status",
+				"path": "Claim.status",
+				"label": "Request status",
+				"short": "Request status",
+				"definition": "The status of this request (active)",
+				"comment": "Value is always 'active'",
+				"fixedCode": "active",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.type",
+				"path": "Claim.type",
+				"label": "Requested Service Type",
+				"short": "Requested Service Type",
+				"definition": "The type of service for which pricing and coverage predetermination is being requested",
+				"comment": "Value is always 'pharmacy'",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/claim-type",
+							"code": "pharmacy",
+							"display": "Pharmacy"
+						}
+					]
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.type.coding",
+				"path": "Claim.type.coding",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.type.coding.system",
+				"path": "Claim.type.coding.system",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.type.coding.code",
+				"path": "Claim.type.coding.code",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.use",
+				"path": "Claim.use",
+				"label": "Processing Mode",
+				"short": "Processing Mode",
+				"definition": "The mode of processing being requested of the payer/PBM",
+				"comment": "Value is always 'predetermination'",
+				"fixedCode": "predetermination",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.patient",
+				"path": "Claim.patient",
+				"label": "Request Patient Information",
+				"short": "Request Patient Information",
+				"definition": "Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.patient.reference",
+				"path": "Claim.patient.reference",
+				"label": "Patient Reference",
+				"short": "Patient Reference",
+				"definition": "Reference to a Patient resource",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.created",
+				"path": "Claim.created",
+				"label": "Created DateTime",
+				"short": "Created DateTime",
+				"definition": "The date and time on which this RTBPC request was created",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.provider",
+				"path": "Claim.provider",
+				"label": "Preferred Pharmacy",
+				"short": "Preferred Pharmacy",
+				"definition": "The patient's preferred pharmacy to be considered during creation of the response",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.provider.reference",
+				"path": "Claim.provider.reference",
+				"label": "Reference to Pharmacy Organization",
+				"short": "Reference to Pharmacy Organization",
+				"definition": "Reference to an Organization resource representing the patient's preferred pharmacy",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.priority",
+				"path": "Claim.priority",
+				"label": "Processing priority",
+				"short": "Processing priority",
+				"definition": "The processing priority requested of the payer/PBM",
+				"comment": "All requests are responded to in real-time, without differentiated priority levels. Value is always 'normal'",
+				"fixedCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://terminology.hl7.org/CodeSystem/processpriority",
+							"code": "normal",
+							"display": "Normal"
+						}
+					]
+				},
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.prescription",
+				"path": "Claim.prescription",
+				"label": "Prescription Reference",
+				"short": "Prescription Reference",
+				"definition": "Reference to the pertinent prescription information in a MedicationRequest resource.",
+				"min": 1,
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"
+						]
+					}
+				]
+			},
+			{
+				"id": "Claim.prescription.reference",
+				"path": "Claim.prescription.reference",
+				"min": 1
+			},
+			{
+				"id": "Claim.priority.coding",
+				"path": "Claim.priority.coding",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.priority.coding.system",
+				"path": "Claim.priority.coding.system",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.priority.coding.code",
+				"path": "Claim.priority.coding.code",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.careTeam",
+				"path": "Claim.careTeam",
+				"label": "Care Team",
+				"short": "Care Team",
+				"definition": "Prescriber reference and identifier",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.careTeam.sequence",
+				"path": "Claim.careTeam.sequence",
+				"fixedInteger": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.careTeam.provider",
+				"path": "Claim.careTeam.provider",
+				"label": "Prescriber",
+				"short": "Prescriber",
+				"definition": "Prescriber of the item being submitted",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.careTeam.provider.reference",
+				"path": "Claim.careTeam.provider.reference",
+				"label": "Prescriber Reference",
+				"short": "Prescriber Reference",
+				"definition": "Reference to a Practitioner resource that represents the prescriber",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.insurance",
+				"path": "Claim.insurance",
+				"label": "Pharmacy Coverage",
+				"short": "Pharmacy Coverage",
+				"definition": "The patient's pharmacy coverage information",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item",
+				"path": "Claim.item",
+				"label": "Max 1 item per request",
+				"short": "Max 1 item per request",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.sequence",
+				"path": "Claim.item.sequence",
+				"comment": "A maximum of one product is submitted per request. Value is always '1'",
+				"fixedInteger": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.careTeamSequence",
+				"path": "Claim.item.careTeamSequence",
+				"label": "Care Team Sequence ID Reference",
+				"short": "Care Team Sequence ID Reference",
+				"definition": "A reference to the Care Team composite in this resource that reflects the prescriber",
+				"comment": "Populate with a reference to .careTeam.sequence.@id",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.productOrService",
+				"path": "Claim.item.productOrService",
+				"label": "Prescribed Product",
+				"short": "Prescribed Product",
+				"definition": "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)",
+				"comment": "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*",
+				"mustSupport": true,
+				"binding": {
+					"strength": "extensible",
+					"description": "CARIN RTPBC prescribable product codes (NDC and RxNorm)",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"
+				}
+			},
+			{
+				"id": "Claim.item.productOrService.coding",
+				"path": "Claim.item.productOrService.coding",
+				"min": 1,
+				"max": "*",
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.productOrService.coding.system",
+				"path": "Claim.item.productOrService.coding.system",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.productOrService.coding.code",
+				"path": "Claim.item.productOrService.coding.code",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.productOrService.coding.display",
+				"path": "Claim.item.productOrService.coding.display",
+				"label": "Product Description",
+				"short": "Product Description",
+				"definition": "The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.quantity",
+				"path": "Claim.item.quantity",
+				"label": "Prescribed Quantity",
+				"short": "Prescribed Quantity",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.quantity.value",
+				"path": "Claim.item.quantity.value",
+				"label": "Quantity in Billing Units",
+				"short": "Quantity in Billing Units",
+				"definition": "The prescribed quantity in terms of the applicable billing unit of measure",
+				"min": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.item.quantity.unit",
+				"path": "Claim.item.quantity.unit",
+				"label": "Billing unit of measure",
+				"short": "Billing unit of measure",
+				"definition": "Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)",
+				"min": 1,
+				"mustSupport": true,
+				"binding": {
+					"strength": "required",
+					"description": "Billing quantity unity of measure",
+					"valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
+				}
+			},
+			{
+				"id": "Claim.insurance.sequence",
+				"path": "Claim.insurance.sequence",
+				"comment": "Only one set of coverage is submitted in the request. Value is always '1'",
+				"fixedInteger": 1,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.insurance.focal",
+				"path": "Claim.insurance.focal",
+				"fixedBoolean": true,
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.insurance.coverage",
+				"path": "Claim.insurance.coverage",
+				"label": "Pharmacy Coverage Reference",
+				"short": "Pharmacy Coverage Reference",
+				"definition": "Reference to a Coverage resource containing identification of the patient's pharmacy coverage",
+				"min": 1,
+				"max": "1",
+				"type": [
+					{
+						"code": "Reference",
+						"targetProfile": [
+							"http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
+						]
+					}
+				],
+				"mustSupport": true
+			},
+			{
+				"id": "Claim.insurance.coverage.reference",
+				"path": "Claim.insurance.coverage.reference",
+				"label": "Pharmacy Coverage Reference",
+				"short": "Pharmacy Coverage Reference",
+				"definition": "Reference to a Coverage resource containing identification of the patient's pharmacy coverage",
+				"min": 1,
+				"max": "1",
+				"mustSupport": true
+			}
+		]
+	}
+}

@@ -1,0 +1,109 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-03> a fhir:Claim;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "rtpbc-claim-03"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-05T22:56:35.000-05:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+  ];
+  fhir:Claim.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "rtpbc0001" ]
+  ];
+  fhir:Claim.status [ fhir:value "active"];
+  fhir:Claim.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/claim-type" ];
+       fhir:Coding.code [ fhir:value "pharmacy" ];
+       fhir:Coding.display [ fhir:value "Pharmacy" ]
+     ]
+  ];
+  fhir:Claim.use [ fhir:value "predetermination"];
+  fhir:Claim.patient [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
+  ];
+  fhir:Claim.created [ fhir:value "2019-11-01T11:20:54-05:00"^^xsd:dateTime];
+  fhir:Claim.provider [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03>;
+     fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
+  ];
+  fhir:Claim.priority [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/processpriority" ];
+       fhir:Coding.code [ fhir:value "normal" ];
+       fhir:Coding.display [ fhir:value "Normal" ]
+     ]
+  ];
+  fhir:Claim.prescription [
+     fhir:link <http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/rtpbc-medicationrequest-03" ]
+  ];
+  fhir:Claim.careTeam [
+     fhir:index 0;
+     fhir:Claim.careTeam.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.careTeam.provider [
+       fhir:link <http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03>;
+       fhir:Reference.reference [ fhir:value "Practitioner/rtpbc-practitioner-03" ]
+     ]
+  ];
+  fhir:Claim.insurance [
+     fhir:index 0;
+     fhir:Claim.insurance.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.insurance.focal [ fhir:value "true"^^xsd:boolean ];
+     fhir:Claim.insurance.coverage [
+       fhir:link <http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03>;
+       fhir:Reference.reference [ fhir:value "Coverage/rtpbc-coverage-03" ]
+     ]
+  ];
+  fhir:Claim.item [
+     fhir:index 0;
+     fhir:Claim.item.sequence [ fhir:value "1"^^xsd:positiveInteger ];
+     fhir:Claim.item.careTeamSequence [
+       fhir:value "1"^^xsd:positiveInteger;
+       fhir:index 0
+     ];
+     fhir:Claim.item.productOrService [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://example.org/ndc11/placeholder" ];
+         fhir:Coding.code [ fhir:value "00777310402" ];
+         fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
+       ]
+     ];
+     fhir:Claim.item.quantity [
+       fhir:Quantity.value [ fhir:value "60"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "EA" ]
+     ]
+  ] .
+
+<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03> a fhir:us .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-03.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/Claim/rtpbc-claim-03.ttl> .
+
+# -------------------------------------------------------------------------------------
+

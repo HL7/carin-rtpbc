@@ -7,15 +7,12 @@
     <lastUpdated value="2019-10-28T19:32:01.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy 
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy 
 benefit 
-check response.
-            </div>
-        </div>
+check response.</div></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response"/>
-  <version value="0.1.02"/>
+  <version value="0.1.03"/>
   <name value="CarinRtpbcExceptionResponse"/>
   <title value="CARIN RTPBC Exception Response"/>
   <status value="draft"/>

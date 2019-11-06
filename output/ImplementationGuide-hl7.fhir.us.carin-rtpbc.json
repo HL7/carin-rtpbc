@@ -2,19 +2,19 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.fhir.us.carin-rtpbc",
   "meta": {
-    "versionId": "168",
-    "lastUpdated": "2019-11-04T18:37:55.000-06:00"
+    "versionId": "189",
+    "lastUpdated": "2019-11-06T03:07:25.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin-bb/ImplementationGuide/hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.02",
+  "version": "0.1.03",
   "name": "CarinRtpbc",
   "title": "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status": "draft",
-  "date": "2019-11-04T18:41:37-06:00",
+  "date": "2019-11-06T03:21:41-06:00",
   "publisher": "HL7 International - Pharmacy",
   "contact": [
     {
@@ -318,18 +318,144 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Coverage"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Coverage-rtpbc-coverage-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Coverage/rtpbc-coverage-03",
+          "display": "rtpbc-coverage-03"
+        },
+        "name": "rtpbc-coverage-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "MedicationRequest"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "MedicationRequest-rtpbc-medicationrequest-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "MedicationRequest/rtpbc-medicationrequest-03",
+          "display": "rtpbc-medicationrequest-03"
+        },
+        "name": "rtpbc-medicationrequest-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Claim"
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "Claim-carin-rtpbc-claim-example-001.html"
+            "valueUri": "Claim-rtpbc-claim-03.html"
           }
         ],
         "reference": {
-          "reference": "Claim/carin-rtpbc-claim-example-001",
-          "display": "carin-rtpbc-claim-example-001"
+          "reference": "Claim/rtpbc-claim-03",
+          "display": "rtpbc-claim-03"
         },
-        "name": "carin-rtpbc-claim-example-001",
+        "name": "rtpbc-claim-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Patient-rtpbc-patient-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/rtpbc-patient-03",
+          "display": "Patient Jane Doe"
+        },
+        "name": "Patient Jane Doe",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Organization-rtpbc-organization-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/rtpbc-organization-03",
+          "display": "Hometown Drug"
+        },
+        "name": "Hometown Drug",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Practitioner-rtpbc-practitioner-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/rtpbc-practitioner-03",
+          "display": "Practitioner Johnson"
+        },
+        "name": "Practitioner Johnson",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Bundle-rtpbc-bundle-request-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/rtpbc-bundle-request-03",
+          "display": "rtpbc-bundle-request-03"
+        },
+        "name": "rtpbc-bundle-request-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Claim"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Claim-rtpbc-claim-with-contained-003.html"
+          }
+        ],
+        "reference": {
+          "reference": "Claim/rtpbc-claim-with-contained-003",
+          "display": "rtpbc-claim-with-contained-003"
+        },
+        "name": "rtpbc-claim-with-contained-003",
         "exampleBoolean": true
       },
       {
@@ -340,14 +466,68 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ClaimResponse-carin-rtpbc-claimresponse-example-001.html"
+            "valueUri": "ClaimResponse-rtpbc-claim-response-with-contained-03.html"
           }
         ],
         "reference": {
-          "reference": "ClaimResponse/carin-rtpbc-claimresponse-example-001",
-          "display": "carin-rtpbc-claimresponse-example-001"
+          "reference": "ClaimResponse/rtpbc-claim-response-with-contained-03",
+          "display": "rtpbc-claim-response-with-contained-03"
         },
-        "name": "carin-rtpbc-claimresponse-example-001",
+        "name": "rtpbc-claim-response-with-contained-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Organization-rtpbc-organization-03m.html"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/rtpbc-organization-03m",
+          "display": "My Mail Service Pharmacy"
+        },
+        "name": "My Mail Service Pharmacy",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "Bundle-rtpbc-bundle-response-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/rtpbc-bundle-response-03",
+          "display": "rtpbc-bundle-response-03"
+        },
+        "name": "rtpbc-bundle-response-03",
+        "exampleBoolean": true
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ClaimResponse"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ClaimResponse-rtpbc-claim-response-03.html"
+          }
+        ],
+        "reference": {
+          "reference": "ClaimResponse/rtpbc-claim-response-03",
+          "display": "rtpbc-claim-response-03"
+        },
+        "name": "rtpbc-claim-response-03",
         "exampleBoolean": true
       }
     ],
@@ -364,6 +544,11 @@
         {
           "nameUrl": "Information_content_and_FHIR_resources.html",
           "title": "Information content and FHIR resources",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Submit_operation.html",
+          "title": "Submit operation",
           "generation": "markdown"
         },
         {

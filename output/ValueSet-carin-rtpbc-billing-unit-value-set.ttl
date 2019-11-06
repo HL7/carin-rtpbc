@@ -14,10 +14,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products</div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"];
-  fhir:ValueSet.version [ fhir:value "0.1.02"];
+  fhir:ValueSet.version [ fhir:value "0.1.03"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcBillingUnitValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Billing Unit Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];

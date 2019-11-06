@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Claim xmlns="http://hl7.org/fhir">
+  <id value="rtpbc-claim-03"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-05T22:56:35.000-05:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">text</div>
+  </text>
+  <identifier>
+    <value value="rtpbc0001"/>
+  </identifier>
+  <status value="active"/>
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+      <code value="pharmacy"/>
+      <display value="Pharmacy"/>
+    </coding>
+  </type>
+  <use value="predetermination"/>
+  <patient>
+    <reference value="Patient/rtpbc-patient-03"/>
+  </patient>
+  <created value="2019-11-01T11:20:54-05:00"/>
+  <provider>
+    <reference value="Organization/rtpbc-organization-03"/>
+  </provider>
+  <priority>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+      <code value="normal"/>
+      <display value="Normal"/>
+    </coding>
+  </priority>
+  <prescription>
+    <reference value="MedicationRequest/rtpbc-medicationrequest-03"/>
+  </prescription>
+  <careTeam>
+    <sequence value="1"/>
+    <provider>
+      <reference value="Practitioner/rtpbc-practitioner-03"/>
+    </provider>
+  </careTeam>
+  <insurance>
+    <sequence value="1"/>
+    <focal value="true"/>
+    <coverage>
+      <reference value="Coverage/rtpbc-coverage-03"/>
+    </coverage>
+  </insurance>
+  <item>
+    <sequence value="1"/>
+    <careTeamSequence value="1"/>
+    <productOrService>
+      <coding>
+        <system value="http://example.org/ndc11/placeholder"/>
+        <code value="00777310402"/>
+        <display value="Prozac 10mg capsule"/>
+      </coding>
+    </productOrService>
+    <quantity>
+      <value value="60"/>
+      <unit value="EA"/>
+    </quantity>
+  </item>
+</Claim>
