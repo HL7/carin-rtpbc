@@ -14,7 +14,7 @@
         "id": "rtpbc-messageheader-request-03",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
         },
         "eventCoding": {
           "code": "rtpbc-request"
@@ -37,7 +37,7 @@
         "id": "rtpbc-claim-03",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
         },
         "identifier": [
           {
@@ -121,7 +121,7 @@
         "id": "rtpbc-patient-03",
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jane <b>DOE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>100 Oak Court </span><br/><span>Madison </span><span>WI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>05 December 1975</span></td></tr></tbody></table></div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <div class=\"hapiHeaderText\">Jane \n                            <b>DOE </b>\n                        </div>\n                        <table class=\"hapiPropertyTable\">\n                            <tbody>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>\n                                        <span>100 Oak Court </span>\n                                        <br/>\n                                        <span>Madison </span>\n                                        <span>WI </span>\n                                        <span>US </span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Date of birth</td>\n                                    <td>\n                                        <span>05 December 1975</span>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
         },
         "name": [
           {

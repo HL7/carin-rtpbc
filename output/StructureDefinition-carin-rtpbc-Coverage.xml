@@ -7,10 +7,13 @@
     <lastUpdated value="2019-10-31T15:39:31.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml">This profile constrains the Coverage resource for carrying the pharmacy 
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <div>This profile constrains the Coverage resource for carrying the pharmacy 
 benefit information required in the consumer real-time pharmacy benefit 
 check process
-            </div></div>
+            
+            </div>
+        </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
   <version value="0.1.03"/>

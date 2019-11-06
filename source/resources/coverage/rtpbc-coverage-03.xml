@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Coverage
+    xmlns="http://hl7.org/fhir">
+    <id value="rtpbc-coverage-03"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2019-11-05T22:59:24.000-05:00"/>
+    </meta>
+    <status value="active"/>
+    <beneficiary>
+        <reference value="Patient/rtpbc-patient-03"/>
+    </beneficiary>
+    <payor>
+        <identifier>
+            <value value="Pharmacy Plans US"/>
+        </identifier>
+    </payor>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxbin"/>
+            </coding>
+        </type>
+        <value value="BIN001"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxpcn"/>
+            </coding>
+        </type>
+        <value value="PCN002"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="group"/>
+            </coding>
+        </type>
+        <value value="GROUP0001"/>
+    </class>
+    <class>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxid"/>
+            </coding>
+        </type>
+        <value value="MEMBER000001"/>
+    </class>
+</Coverage>

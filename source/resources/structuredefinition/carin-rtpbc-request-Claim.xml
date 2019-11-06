@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-request-Claim"/>
     <meta>
-        <versionId value="71"/>
-        <lastUpdated value="2019-11-04T19:13:28.000-05:00"/>
+        <versionId value="72"/>
+        <lastUpdated value="2019-11-05T15:38:20.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -176,6 +176,21 @@
                 </coding>
             </fixedCodeableConcept>
             <mustSupport value="true"/>
+        </element>
+        <element id="Claim.prescription">
+            <path value="Claim.prescription"/>
+            <label value="Prescription Reference"/>
+            <short value="Prescription Reference"/>
+            <definition value="Reference to the pertinent prescription information in a MedicationRequest resource."/>
+            <min value="1"/>
+            <type>
+                <code value="Reference"/>
+                <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
+            </type>
+        </element>
+        <element id="Claim.prescription.reference">
+            <path value="Claim.prescription.reference"/>
+            <min value="1"/>
         </element>
         <element id="Claim.priority.coding">
             <path value="Claim.priority.coding"/>

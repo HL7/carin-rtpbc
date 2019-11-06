@@ -7,7 +7,31 @@
     <lastUpdated value="2019-11-05T22:52:23.000-05:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><div class="hapiHeaderText">Jane <b>DOE </b></div><table class="hapiPropertyTable"><tbody><tr><td>Address</td><td><span>100 Oak Court </span><br/><span>Madison </span><span>WI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>05 December 1975</span></td></tr></tbody></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <div class="hapiHeaderText">Jane 
+                <b>DOE </b>
+            </div>
+            <table class="hapiPropertyTable">
+                <tbody>
+                    <tr>
+                        <td>Address</td>
+                        <td>
+                            <span>100 Oak Court </span>
+                            <br/>
+                            <span>Madison </span>
+                            <span>WI </span>
+                            <span>US </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth</td>
+                        <td>
+                            <span>05 December 1975</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
   </text>
   <name>
     <family value="Doe"/>

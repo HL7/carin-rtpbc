@@ -7,8 +7,14 @@
     <lastUpdated value="2019-10-31T12:31:00.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit 
-check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div></div></div></div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <div>
+                <div>
+                    <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit 
+check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>
+                </div>
+            </div>
+        </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
   <version value="0.1.03"/>

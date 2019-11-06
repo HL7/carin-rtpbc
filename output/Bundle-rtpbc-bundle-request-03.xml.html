@@ -290,7 +290,8 @@ can only resize using html  or css ;-(
         &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-messageheader-request-03&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text&lt;/div&gt;<a name="end-xhtml"></a>
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text
+                    &lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.event[x]">eventCoding</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;rtpbc-request&quot;/&gt;
@@ -312,7 +313,8 @@ can only resize using html  or css ;-(
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-claim-03&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text&lt;/div&gt;<a name="end-xhtml"></a>
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text
+                    &lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-03&quot;/&gt;
@@ -382,7 +384,31 @@ can only resize using html  or css ;-(
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-patient-03&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;div class=&quot;hapiHeaderText&quot;&gt;Jane &lt;b&gt;DOE &lt;/b&gt;&lt;/div&gt;&lt;table class=&quot;hapiPropertyTable&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Address&lt;/td&gt;&lt;td&gt;&lt;span&gt;100 Oak Court &lt;/span&gt;&lt;br/&gt;&lt;span&gt;Madison &lt;/span&gt;&lt;span&gt;WI &lt;/span&gt;&lt;span&gt;US &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Date of birth&lt;/td&gt;&lt;td&gt;&lt;span&gt;05 December 1975&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+                        &lt;div class=&quot;hapiHeaderText&quot;&gt;Jane 
+                            &lt;b&gt;DOE &lt;/b&gt;
+                        &lt;/div&gt;
+                        &lt;table class=&quot;hapiPropertyTable&quot;&gt;
+                            &lt;tbody&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Address&lt;/td&gt;
+                                    &lt;td&gt;
+                                        &lt;span&gt;100 Oak Court &lt;/span&gt;
+                                        &lt;br/&gt;
+                                        &lt;span&gt;Madison &lt;/span&gt;
+                                        &lt;span&gt;WI &lt;/span&gt;
+                                        &lt;span&gt;US &lt;/span&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                    &lt;td&gt;Date of birth&lt;/td&gt;
+                                    &lt;td&gt;
+                                        &lt;span&gt;05 December 1975&lt;/span&gt;
+                                    &lt;/td&gt;
+                                &lt;/tr&gt;
+                            &lt;/tbody&gt;
+                        &lt;/table&gt;
+                    &lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Doe&quot;/&gt;
@@ -596,7 +622,7 @@ Formats: <a href="Bundle-rtpbc-bundle-request-03.html">Narrative</a>, <a href="B
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.03  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 6, 2019 03:21-0600.
+      CarinRtpbc Version: 0.1.03  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 6, 2019 03:45-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

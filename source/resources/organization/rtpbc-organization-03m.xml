@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Organization
+    xmlns="http://hl7.org/fhir">
+    <id value="rtpbc-organization-03m"/>
+    <meta>
+        <versionId value="1"/>
+        <lastUpdated value="2019-11-06T03:23:37.000-05:00"/>
+    </meta>
+    <identifier>
+        <system value="http://hl7.org/fhir/sid/us-npi"/>
+        <value value="5515515515"/>
+    </identifier>
+    <name value="My Mail Service Pharmacy"/>
+    <telecom>
+        <system value="phone"/>
+        <value value="5551234567"/>
+    </telecom>
+    <address>
+        <line value="10001 Oakland Road"/>
+        <city value="Milwaukee"/>
+        <state value="WI"/>
+        <postalCode value="54444"/>
+        <country value="US"/>
+    </address>
+</Organization>

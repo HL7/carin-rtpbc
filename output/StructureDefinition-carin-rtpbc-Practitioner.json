@@ -7,7 +7,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\"><div xmlns=\"http://www.w3.org/1999/xhtml\">This profile constrains the Practitioner resource to convey identifying prescriber\ninformation required in the consumer real-time pharmacy benefit \ncheck (RTPBC) process.</div></div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the Practitioner resource to convey identifying prescriber\ninformation required in the consumer real-time pharmacy benefit \ncheck (RTPBC) process.\n                </div>\n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info",
   "version": "0.1.03",

@@ -7,7 +7,11 @@
     <lastUpdated value="2019-11-01T05:28:22.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml"><div><div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div></div></div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
+            <div>
+                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>
+            </div>
+        </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
   <version value="0.1.03"/>

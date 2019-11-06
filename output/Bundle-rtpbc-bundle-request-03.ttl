@@ -47,7 +47,7 @@
   fhir:Resource.id [ fhir:value "rtpbc-messageheader-request-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
   ];
   fhir:MessageHeader.eventCoding [
      fhir:Coding.code [ fhir:value "rtpbc-request" ]
@@ -68,7 +68,7 @@
   fhir:Resource.id [ fhir:value "rtpbc-claim-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text</div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
   ];
   fhir:Claim.identifier [
      fhir:index 0;
@@ -157,7 +157,7 @@
   fhir:Resource.id [ fhir:value "rtpbc-patient-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jane <b>DOE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>100 Oak Court </span><br/><span>Madison </span><span>WI </span><span>US </span></td></tr><tr><td>Date of birth</td><td><span>05 December 1975</span></td></tr></tbody></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <div class=\"hapiHeaderText\">Jane \n                            <b>DOE </b>\n                        </div>\n                        <table class=\"hapiPropertyTable\">\n                            <tbody>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>\n                                        <span>100 Oak Court </span>\n                                        <br/>\n                                        <span>Madison </span>\n                                        <span>WI </span>\n                                        <span>US </span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Date of birth</td>\n                                    <td>\n                                        <span>05 December 1975</span>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
   ];
   fhir:Patient.name [
      fhir:index 0;

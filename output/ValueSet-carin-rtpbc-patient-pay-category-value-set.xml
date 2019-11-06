@@ -7,7 +7,8 @@
     <lastUpdated value="2019-11-01T02:16:21.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;  </div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;  
+        </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
   <version value="0.1.03"/>

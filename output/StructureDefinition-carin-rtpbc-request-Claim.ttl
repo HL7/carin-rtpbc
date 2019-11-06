@@ -14,7 +14,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>This profile constrains the Claim resource so that it can serve as the                                   <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          </div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"];
   fhir:StructureDefinition.version [ fhir:value "0.1.03"];

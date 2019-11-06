@@ -14,7 +14,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines components of a patient's responsibility for a prescription product's cost.</div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines components of a patient's responsibility for a prescription product's cost.\n        </div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"];
   fhir:CodeSystem.version [ fhir:value "0.1.03"];

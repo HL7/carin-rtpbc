@@ -7,7 +7,7 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div><div><div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    </div></div></div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
   "version": "0.1.03",

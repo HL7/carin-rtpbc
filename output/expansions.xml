@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6febe8fd-872a-4903-82fc-6728086433dd"/>
+  <id value="04d67c57-9ba6-49c7-a52d-811a033b7f6f"/>
   <meta>
-    <lastUpdated value="2019-11-06T03:21:41.910-06:00"/>
+    <lastUpdated value="2019-11-06T03:45:55.717-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -73,8 +73,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
         <expansion>
-          <identifier value="urn:uuid:f6d9d545-10f5-4cbf-b953-1dece0fb3387"/>
-          <timestamp value="2019-11-06T03:21:55-06:00"/>
+          <identifier value="urn:uuid:0e691c48-5ba4-4561-b5e0-46a2b5401a59"/>
+          <timestamp value="2019-11-06T03:46:09-06:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -194,8 +194,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:3cd7dd6e-1b5f-4d00-9955-d2574364c1a0"/>
-          <timestamp value="2019-11-06T03:21:56-06:00"/>
+          <identifier value="urn:uuid:8dd639b5-e2b5-47d5-a037-19d6424a1a7c"/>
+          <timestamp value="2019-11-06T03:46:10-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -330,8 +330,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains coverage levels that may apply to a prescription product."/>
         <expansion>
-          <identifier value="urn:uuid:e2e61654-b7f9-40a9-960a-6e165a524551"/>
-          <timestamp value="2019-11-06T03:21:56-06:00"/>
+          <identifier value="urn:uuid:238f60b1-2e61-4240-99c4-08676b103d52"/>
+          <timestamp value="2019-11-06T03:46:10-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -6413,8 +6413,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:a4194b2f-4e90-45b2-9923-9620da7675d6"/>
-          <timestamp value="2019-11-06T09:21:57.610Z"/>
+          <identifier value="urn:uuid:a3c9a54d-6d90-4ee0-96f9-f5761d79ebda"/>
+          <timestamp value="2019-11-06T09:46:11.357Z"/>
           <parameter>
             <name value="expansion-source"/>
             <valueString value="ValueSet/carin-rtpbc-prescribable-product-code-value-set"/>

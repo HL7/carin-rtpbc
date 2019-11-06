@@ -7,7 +7,8 @@
     <lastUpdated value="2019-11-01T03:24:13.000-05:00"/>
   </meta>
   <text>
-    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains coverage levels that may apply to a prescription product.</div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains coverage levels that may apply to a prescription product.
+        </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-determination"/>
   <version value="0.1.03"/>
