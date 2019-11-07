@@ -13,16 +13,16 @@ active: terminology
 
 ### Value Sets
 
-- [CARIN RTPBC Billing Unit Value Set](ValueSet-carin-rtpbc-billing-unit-value-set.html)
-- [CARIN RTPBC Coverage Determination Value Set](ValueSet-carin-rtpbc-coverage-determination-value-set.html)
-- [CARIN RTPBC Patient Pay Category Value Set](ValueSet-carin-rtpbc-patient-pay-category-value-set.html)
+- [CARIN RTPBC Billing Units Value Set](ValueSet-carin-rtpbc-billing-units-value-set.html)
+- [CARIN RTPBC Coverage Summary Value Set](ValueSet-carin-rtpbc-coverage-summary-value-set.html)
+- [CARIN RTPBC Patient Pay Type Value Set](ValueSet-carin-rtpbc-patient-pay-type-value-set.html)
 - [CARIN RTPBC Prescribable Product Code Value Set](ValueSet-carin-rtpbc-prescribable-product-code-value-set.html)
 
 
 ### Code Systems
 
-- [CARIN RTPBC Billing Unit Code System](CodeSystem-carin-rtpbc-billing-unit-code-system.html)
-- [CARIN RTPBC Coverage Determination Code System](CodeSystem-carin-rtpbc-coverage-determination-code-system.html)
-- [CARIN RTPBC Patient Pay Category Code System](CodeSystem-carin-rtpbc-patient-pay-category-code-system.html)
+- [CARIN RTPBC Billing Units Code System](CodeSystem-carin-rtpbc-billing-units-code-system.html)
+- [CARIN RTPBC Coverage Summary Code System](CodeSystem-carin-rtpbc-coverage-summary-code-system.html)
+- [CARIN RTPBC Patient Pay Type Code System](CodeSystem-carin-rtpbc-patient-pay-type-code-system.html)
 
 

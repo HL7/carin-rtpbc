@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-coverage-summary-value-set"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T16:01:46.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains coverage levels that may apply to a prescription product.\n        </div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"];
+  fhir:ValueSet.version [ fhir:value "0.1.04"];
+  fhir:ValueSet.name [ fhir:value "CarinRtbpcCoverageSummaryValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Coverage Summary Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-11-06T19:26:21-06:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set contains coverage levels that may apply to a prescription product."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "covered" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Covered" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "prior-auth" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prior authorization required" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "step-therapy" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Step therapy applies" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "quantity-limit" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quantity limits apply" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "other-restriction" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other restriction applies" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "not-covered" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Not covered" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+

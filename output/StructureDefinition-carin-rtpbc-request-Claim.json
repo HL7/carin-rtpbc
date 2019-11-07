@@ -2,15 +2,15 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-request-Claim",
   "meta": {
-    "versionId": "72",
-    "lastUpdated": "2019-11-05T14:38:20.000-06:00"
+    "versionId": "73",
+    "lastUpdated": "2019-11-06T14:33:12.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-  "version": "0.1.03",
+  "version": "0.1.04",
   "name": "CarinRtpbcRequest",
   "title": "CARIN RTPBC Request using Claim",
   "status": "draft",
@@ -8236,7 +8236,7 @@
         "binding": {
           "strength": "required",
           "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
         },
         "mapping": [
           {
@@ -10194,7 +10194,7 @@
         "binding": {
           "strength": "required",
           "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
         }
       }
     ]

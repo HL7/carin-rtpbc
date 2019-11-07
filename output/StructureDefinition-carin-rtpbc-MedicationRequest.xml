@@ -3,8 +3,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-MedicationRequest"/>
   <meta>
-    <versionId value="32"/>
-    <lastUpdated value="2019-11-01T05:28:22.000-05:00"/>
+    <versionId value="33"/>
+    <lastUpdated value="2019-11-06T14:34:52.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -14,7 +14,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
-  <version value="0.1.03"/>
+  <version value="0.1.04"/>
   <name value="CarinRtpbcRequestPrescriptionInfo"/>
   <title value="CARIN RTPBC Request Prescription Information"/>
   <status value="draft"/>
@@ -3168,6 +3168,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -4266,6 +4267,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
       </binding>
     </element>
     <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">

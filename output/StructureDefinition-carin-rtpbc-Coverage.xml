@@ -16,7 +16,7 @@ check process
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
-  <version value="0.1.03"/>
+  <version value="0.1.04"/>
   <name value="CarinRtpbcRequestCoverageIdentifiers"/>
   <title value="CARIN RTPBC Request Coverage Identifiers"/>
   <status value="draft"/>

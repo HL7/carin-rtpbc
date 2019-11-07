@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="rtpbc-claim-response-03"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2019-11-06T03:53:37.000-05:00"/>
+        <versionId value="2"/>
+        <lastUpdated value="2019-11-06T17:41:00.000-05:00"/>
     </meta>
     <identifier>
         <value value="rtpbc-03-response"/>
@@ -40,7 +40,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="copay"/>
                     <display value="Copay"/>
                 </coding>
@@ -53,7 +53,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="coinsurance"/>
                     <display value="Per prescription coinsurance"/>
                 </coding>
@@ -66,7 +66,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="total"/>
                     <display value="Total patient responsibility"/>
                 </coding>
@@ -97,7 +97,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="copay"/>
                     <display value="Copay"/>
                 </coding>
@@ -110,7 +110,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="coinsurance"/>
                     <display value="Per prescription coinsurance"/>
                 </coding>
@@ -123,7 +123,7 @@
         <adjudication>
             <category>
                 <coding>
-                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
+                    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
                     <code value="total"/>
                     <display value="Total patient responsibility"/>
                 </coding>

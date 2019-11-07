@@ -1,0 +1,68 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-coverage-summary-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-coverage-summary-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T14:55:51.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Coverage Summary Code System</h2><div><p>This code system defines coverage outcomes that may apply to a prescription product.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">covered<a name=\"carin-rtpbc-coverage-summary-code-system-covered\"> </a></td><td>Covered</td><td>Covered</td></tr><tr><td style=\"white-space:nowrap\">prior-auth<a name=\"carin-rtpbc-coverage-summary-code-system-prior-auth\"> </a></td><td>Prior authorization required</td><td>Covered with restriction: Prior authorization required</td></tr><tr><td style=\"white-space:nowrap\">step-therapy<a name=\"carin-rtpbc-coverage-summary-code-system-step-therapy\"> </a></td><td>Step therapy applies</td><td>Covered with restriction: Step therapy applies</td></tr><tr><td style=\"white-space:nowrap\">quantity-limit<a name=\"carin-rtpbc-coverage-summary-code-system-quantity-limit\"> </a></td><td>Quantity limits apply</td><td>Covered with restriction: Quantity limits apply</td></tr><tr><td style=\"white-space:nowrap\">other-restriction<a name=\"carin-rtpbc-coverage-summary-code-system-other-restriction\"> </a></td><td>Other restriction applies</td><td>Covered with restriction: Other restriction applies</td></tr><tr><td style=\"white-space:nowrap\">not-covered<a name=\"carin-rtpbc-coverage-summary-code-system-not-covered\"> </a></td><td>Not covered</td><td>Not covered</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"];
+  fhir:CodeSystem.version [ fhir:value "0.1.04"];
+  fhir:CodeSystem.name [ fhir:value "CarinRtpbcCoverageSummaryCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Coverage Summary Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-11-06T19:26:21-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This code system defines coverage outcomes that may apply to a prescription product."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "covered" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Covered" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Covered" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "prior-auth" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Prior authorization required" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Covered with restriction: Prior authorization required" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "step-therapy" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Step therapy applies" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Covered with restriction: Step therapy applies" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "quantity-limit" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Quantity limits apply" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Covered with restriction: Quantity limits apply" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "other-restriction" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other restriction applies" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Covered with restriction: Other restriction applies" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "not-covered" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Not covered" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Not covered" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-coverage-summary-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/carin-rtpbc-coverage-summary-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

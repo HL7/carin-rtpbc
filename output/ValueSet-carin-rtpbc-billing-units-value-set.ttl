@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-billing-units-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-billing-units-value-set"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "2" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T14:31:34.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products\n        </div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"];
+  fhir:ValueSet.version [ fhir:value "0.1.04"];
+  fhir:ValueSet.name [ fhir:value "CarinRtbpcBillingUnitsValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Billing Units Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-11-06T19:26:21-06:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Gram" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ML" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Milliliter" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "EA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Each" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-billing-units-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-billing-units-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+

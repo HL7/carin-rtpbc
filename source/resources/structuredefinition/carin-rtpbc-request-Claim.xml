@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-request-Claim"/>
     <meta>
-        <versionId value="72"/>
-        <lastUpdated value="2019-11-05T15:38:20.000-05:00"/>
+        <versionId value="73"/>
+        <lastUpdated value="2019-11-06T15:33:12.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -341,7 +341,7 @@
             <binding>
                 <strength value="required"/>
                 <description value="Billing quantity unity of measure"/>
-                <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
+                <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
             </binding>
         </element>
         <element id="Claim.insurance.sequence">

@@ -3,8 +3,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-ClaimResponse"/>
   <meta>
-    <versionId value="50"/>
-    <lastUpdated value="2019-11-04T18:32:36.000-06:00"/>
+    <versionId value="54"/>
+    <lastUpdated value="2019-11-06T16:24:15.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -13,7 +13,11 @@
                     <div>This profile constrains the ClaimResponse resource to serve as the   
                         
                         
+                        
+                        
                         <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   
+                    
+                    
                     
                     
                     </div>
@@ -22,7 +26,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
-  <version value="0.1.03"/>
+  <version value="0.1.04"/>
   <name value="CarinRtpbcResponse"/>
   <title value="CARIN RTPBC Response using ClaimResponse"/>
   <status value="draft"/>
@@ -3099,7 +3103,7 @@
       <binding>
         <strength value="required"/>
         <description value="RTPBC Patient Pay Categories"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
       </binding>
     </element>
     <element id="ClaimResponse.item.adjudication.reason">
@@ -4248,6 +4252,7 @@
       <binding>
         <strength value="required"/>
         <description value="CARIN RTPBC prescribable product codes (NDC and RxNorm)"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.productOrService.id">
@@ -5061,6 +5066,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -5488,7 +5494,7 @@
       <binding>
         <strength value="required"/>
         <description value="RTPBC Patient Pay Categories"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.adjudication.reason">
@@ -8551,7 +8557,7 @@
       <binding>
         <strength value="required"/>
         <description value="RTPBC Patient Pay Categories"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
       </binding>
     </element>
     <element id="ClaimResponse.item.adjudication.amount">
@@ -8621,6 +8627,7 @@
       <binding>
         <strength value="required"/>
         <description value="CARIN RTPBC prescribable product codes (NDC and RxNorm)"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.productOrService.coding">
@@ -8671,6 +8678,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.noteNumber">
@@ -8699,7 +8707,7 @@
       <binding>
         <strength value="required"/>
         <description value="RTPBC Patient Pay Categories"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.adjudication.amount">

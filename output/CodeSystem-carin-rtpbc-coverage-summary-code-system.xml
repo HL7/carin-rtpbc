@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-coverage-summary-code-system"/>
+  <meta>
+    <versionId value="3"/>
+    <lastUpdated value="2019-11-06T14:55:51.000-06:00"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Coverage Summary Code System</h2><div><p>This code system defines coverage outcomes that may apply to a prescription product.</p>
+</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">covered<a name="carin-rtpbc-coverage-summary-code-system-covered"> </a></td><td>Covered</td><td>Covered</td></tr><tr><td style="white-space:nowrap">prior-auth<a name="carin-rtpbc-coverage-summary-code-system-prior-auth"> </a></td><td>Prior authorization required</td><td>Covered with restriction: Prior authorization required</td></tr><tr><td style="white-space:nowrap">step-therapy<a name="carin-rtpbc-coverage-summary-code-system-step-therapy"> </a></td><td>Step therapy applies</td><td>Covered with restriction: Step therapy applies</td></tr><tr><td style="white-space:nowrap">quantity-limit<a name="carin-rtpbc-coverage-summary-code-system-quantity-limit"> </a></td><td>Quantity limits apply</td><td>Covered with restriction: Quantity limits apply</td></tr><tr><td style="white-space:nowrap">other-restriction<a name="carin-rtpbc-coverage-summary-code-system-other-restriction"> </a></td><td>Other restriction applies</td><td>Covered with restriction: Other restriction applies</td></tr><tr><td style="white-space:nowrap">not-covered<a name="carin-rtpbc-coverage-summary-code-system-not-covered"> </a></td><td>Not covered</td><td>Not covered</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+  <version value="0.1.04"/>
+  <name value="CarinRtpbcCoverageSummaryCodeSystem"/>
+  <title value="CARIN RTPBC Coverage Summary Code System"/>
+  <status value="draft"/>
+  <date value="2019-11-06T19:26:21-06:00"/>
+  <publisher value="CARIN Alliance"/>
+  <description value="This code system defines coverage outcomes that may apply to a prescription product."/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <concept>
+    <code value="covered"/>
+    <display value="Covered"/>
+    <definition value="Covered"/>
+  </concept>
+  <concept>
+    <code value="prior-auth"/>
+    <display value="Prior authorization required"/>
+    <definition value="Covered with restriction: Prior authorization required"/>
+  </concept>
+  <concept>
+    <code value="step-therapy"/>
+    <display value="Step therapy applies"/>
+    <definition value="Covered with restriction: Step therapy applies"/>
+  </concept>
+  <concept>
+    <code value="quantity-limit"/>
+    <display value="Quantity limits apply"/>
+    <definition value="Covered with restriction: Quantity limits apply"/>
+  </concept>
+  <concept>
+    <code value="other-restriction"/>
+    <display value="Other restriction applies"/>
+    <definition value="Covered with restriction: Other restriction applies"/>
+  </concept>
+  <concept>
+    <code value="not-covered"/>
+    <display value="Not covered"/>
+    <definition value="Not covered"/>
+  </concept>
+</CodeSystem>

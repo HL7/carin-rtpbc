@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-patient-pay-type-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-patient-pay-type-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T16:13:51.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Patient Pay Type Code System</h2><div><p>This code system defines components of a patient's responsibility for a prescription product's cost.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">deductible<a name=\"carin-rtpbc-patient-pay-type-code-system-deductible\"> </a></td><td>Deductible</td><td>Amount to be collected from a patient to be applied to a periodic deductible.</td></tr><tr><td style=\"white-space:nowrap\">coinsurance<a name=\"carin-rtpbc-patient-pay-type-code-system-coinsurance\"> </a></td><td>Per prescription coinsurance</td><td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td></tr><tr><td style=\"white-space:nowrap\">copay<a name=\"carin-rtpbc-patient-pay-type-code-system-copay\"> </a></td><td>Copay</td><td>Amount to be collected from the patient to satisfy a per prescription copay.</td></tr><tr><td style=\"white-space:nowrap\">tax<a name=\"carin-rtpbc-patient-pay-type-code-system-tax\"> </a></td><td>Tax</td><td>Amount to be collected from the patient for sales tax.</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"carin-rtpbc-patient-pay-type-code-system-other\"> </a></td><td>Other</td><td>Other amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">total<a name=\"carin-rtpbc-patient-pay-type-code-system-total\"> </a></td><td>Total patient responsibility</td><td>Amount equalling the total patient responsibility for a prescription product's cost.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"];
+  fhir:CodeSystem.version [ fhir:value "0.1.04"];
+  fhir:CodeSystem.name [ fhir:value "CarinRtpbcPatientPayTypeCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Patient Pay Type Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-11-06T19:26:21-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This code system defines components of a patient's responsibility for a prescription product's cost."];
+  fhir:CodeSystem.purpose [ fhir:value "This code system defines components of a patient's responsibility for a prescription product's cost."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "deductible" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Deductible" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Amount to be collected from a patient to be applied to a periodic deductible." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "coinsurance" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Per prescription coinsurance" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Amount to be collected from a patient to satisfy a per prescription coinsurance." ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "copay" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Copay" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Amount to be collected from the patient to satisfy a per prescription copay." ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "tax" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Tax" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Amount to be collected from the patient for sales tax." ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "other" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Other" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Other amount to be collected from the patient" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "total" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Total patient responsibility" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Amount equalling the total patient responsibility for a prescription product's cost." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-patient-pay-type-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/carin-rtpbc-patient-pay-type-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

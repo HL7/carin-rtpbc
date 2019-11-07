@@ -2,15 +2,15 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-MedicationRequest",
   "meta": {
-    "versionId": "32",
-    "lastUpdated": "2019-11-01T05:28:22.000-05:00"
+    "versionId": "33",
+    "lastUpdated": "2019-11-06T14:34:52.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>\n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info",
-  "version": "0.1.03",
+  "version": "0.1.04",
   "name": "CarinRtpbcRequestPrescriptionInfo",
   "title": "CARIN RTPBC Request Prescription Information",
   "status": "draft",
@@ -3881,7 +3881,8 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure"
+          "description": "Billing quantity unity of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
         },
         "mapping": [
           {
@@ -5245,7 +5246,8 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure"
+          "description": "Billing quantity unity of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
         }
       },
       {

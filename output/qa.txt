@@ -3,80 +3,65 @@
 
 err = 0, warn = 0, info = 0
 IG Publisher Version: v0.9.92-SNAPSHOT
-Generated Wed Nov 06 03:46:59 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.03 (canonical = http://hl7.org/fhir/us/carin-bb)
+Generated Wed Nov 06 19:28:51 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.04 (canonical = http://hl7.org/fhir/us/carin-bb)
 
- Build Errors : 16 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\bundle\rtpbc-bundle-response-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claim\rtpbc-claim-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claim\rtpbc-claim-with-contained-003 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claimresponse\rtpbc-claim-response-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claimresponse\rtpbc-claim-response-with-contained-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-billing-unit-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-coverage-determination-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-patient-pay-category-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\coverage\rtpbc-coverage-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\implementationguide\CARIN-RTPBC : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\medicationrequest\rtpbc-medicationrequest-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\organization\rtpbc-organization-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\organization\rtpbc-organization-03m : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\patient\rtpbc-patient-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\practitioner\rtpbc-practitioner-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-ClaimResponse : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Coverage : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-MedicationRequest : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-OperationOutcome : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Patient : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Practitioner : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-request-Claim : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-billing-unit-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-coverage-determination-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-patient-pay-category-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set : 0 / 0
+ Build Errors : 1 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\bundle\rtpbc-bundle-response-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claim\rtpbc-claim-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claim\rtpbc-claim-with-contained-003 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claimresponse\rtpbc-claim-response-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claimresponse\rtpbc-claim-response-with-contained-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-billing-units-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\coverage\rtpbc-coverage-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\implementationguide\CARIN-RTPBC : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\medicationrequest\rtpbc-medicationrequest-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\organization\rtpbc-organization-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\organization\rtpbc-organization-03m : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\patient\rtpbc-patient-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\practitioner\rtpbc-practitioner-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-ClaimResponse : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Coverage : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-MedicationRequest : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-OperationOutcome : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Patient : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Practitioner : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-request-Claim : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-billing-units-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-coverage-summary-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set : 0 / 0
 </table>
 == n/a ==
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\Use_cases.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-billing-unit-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 665: The link 'CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-GM' for "GM" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-billing-unit-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 983: The link 'CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-ML' for "ML" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-billing-unit-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 1313: The link 'CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-EA' for "EA" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 710: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-covered' for "covered" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 1010: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-prior-auth' for "prior-auth" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 1423: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-step-therapy' for "step-therapy" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 1826: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-quantity-limit' for "quantity-limit" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 2238: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-other-restriction' for "other-restriction" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-coverage-determination-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 297, column 2658: The link 'CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-not-covered' for "not-covered" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 705: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-deductible' for "deductible" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 1090: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-coinsurance' for "coinsurance" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 1492: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-copay' for "copay" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 1853: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-tax' for "tax" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 2188: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-other' for "other" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-ERROR: Z:\fhir\CARIN2\CarinRtpbc34\output\ValueSet-carin-rtpbc-patient-pay-category-value-set.html#/html/head/link/body/div/div/div/div/div/div/div/table/tr/td/a at Line 299, column 2557: The link 'CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-total' for "total" cannot be resolved (valid targets: [page-content-wrapper, segment-header, publish-box, stripe, segment-footer, segment-post-footer, segment-navbar, project-status])
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\bundle\rtpbc-bundle-request-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\bundle\rtpbc-bundle-response-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claim\rtpbc-claim-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claim\rtpbc-claim-with-contained-003.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claimresponse\rtpbc-claim-response-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\claimresponse\rtpbc-claim-response-with-contained-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-billing-unit-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-coverage-determination-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\codesystem\carin-rtpbc-patient-pay-category-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\coverage\rtpbc-coverage-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\implementationguide\CARIN-RTPBC.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\medicationrequest\rtpbc-medicationrequest-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\organization\rtpbc-organization-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\organization\rtpbc-organization-03m.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\patient\rtpbc-patient-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\practitioner\rtpbc-practitioner-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-ClaimResponse.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Coverage.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-MedicationRequest.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-OperationOutcome.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Patient.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-Practitioner.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\structuredefinition\carin-rtpbc-request-Claim.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-billing-unit-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-coverage-determination-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-patient-pay-category-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc34\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set.xml ==
+ERROR: Z:\fhir\CARIN2\CarinRtpbc44\output\Use_cases.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\bundle\rtpbc-bundle-request-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\bundle\rtpbc-bundle-response-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claim\rtpbc-claim-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claim\rtpbc-claim-with-contained-003.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claimresponse\rtpbc-claim-response-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\claimresponse\rtpbc-claim-response-with-contained-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-billing-units-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\coverage\rtpbc-coverage-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\implementationguide\CARIN-RTPBC.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\medicationrequest\rtpbc-medicationrequest-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\organization\rtpbc-organization-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\organization\rtpbc-organization-03m.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\patient\rtpbc-patient-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\practitioner\rtpbc-practitioner-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-ClaimResponse.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Coverage.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-MedicationRequest.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-OperationOutcome.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Patient.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-Practitioner.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\structuredefinition\carin-rtpbc-request-Claim.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-billing-units-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-coverage-summary-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc44\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set.xml ==

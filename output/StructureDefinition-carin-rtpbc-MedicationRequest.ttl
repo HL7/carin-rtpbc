@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-MedicationRequest"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "32" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T05:28:22.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "33" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T14:34:52.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.03"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.04"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPrescriptionInfo"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Prescription Information"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -4069,7 +4069,11 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -5473,7 +5477,11 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+         ]
        ]
      ], [
        fhir:index 18;

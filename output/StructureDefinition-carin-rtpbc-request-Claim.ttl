@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-request-Claim"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "72" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-05T14:38:20.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "73" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T14:33:12.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.03"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.04"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequest"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request using Claim"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -8610,8 +8610,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -10670,8 +10670,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
          ]
        ]
      ]

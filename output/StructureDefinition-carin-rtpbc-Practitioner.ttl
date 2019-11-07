@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the Practitioner resource to convey identifying prescriber\ninformation required in the consumer real-time pharmacy benefit \ncheck (RTPBC) process.\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.03"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.04"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPrescriberInfo"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Prescriber Info"];
   fhir:StructureDefinition.status [ fhir:value "draft"];

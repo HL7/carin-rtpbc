@@ -1,380 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="04d67c57-9ba6-49c7-a52d-811a033b7f6f"/>
+  <id value="a0e510da-4abb-4834-9891-320e3f24cdde"/>
   <meta>
-    <lastUpdated value="2019-11-06T03:45:55.717-06:00"/>
+    <lastUpdated value="2019-11-06T19:26:21.699-06:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-billing-unit-value-set"/>
-        <meta>
-          <versionId value="6"/>
-          <lastUpdated value="2019-10-28T18:15:51.000-05:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit version 0.1.03</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html">
-                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-unit-GM"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-GM">GM</a>
-                </td>
-                <td>Gram</td>
-                <td>Quantity unit of measure for products billed as a number of grams</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-unit-ML"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-ML">ML</a>
-                </td>
-                <td>Milliliter</td>
-                <td>Quantity unit of measure for products billed as a number of milliliters</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-unit-EA"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-EA">EA</a>
-                </td>
-                <td>Each</td>
-                <td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-        <version value="0.1.03"/>
-        <name value="CarinRtbpcBillingUnitValueSet"/>
-        <title value="CARIN RTPBC Billing Unit Value Set"/>
-        <status value="draft"/>
-        <date value="2019-10-25T00:00:00-05:00"/>
-        <publisher value="CARIN Alliance"/>
-        <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
-        <expansion>
-          <identifier value="urn:uuid:0e691c48-5ba4-4561-b5e0-46a2b5401a59"/>
-          <timestamp value="2019-11-06T03:46:09-06:00"/>
-          <total value="3"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit|0.1.03"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
-            <code value="GM"/>
-            <display value="Gram"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
-            <code value="ML"/>
-            <display value="Milliliter"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"/>
-            <code value="EA"/>
-            <display value="Each"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-patient-pay-category-value-set"/>
-        <meta>
-          <versionId value="1"/>
-          <lastUpdated value="2019-11-01T02:16:21.000-05:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category version 0.1.03</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html">
-                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-deductible"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-deductible">deductible</a>
-                </td>
-                <td>Deductible</td>
-                <td>Amount to be collected from a patient to be applied to a periodic deductible.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-coinsurance"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-coinsurance">coinsurance</a>
-                </td>
-                <td>Per prescription coinsurance</td>
-                <td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-copay"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-copay">copay</a>
-                </td>
-                <td>Copay</td>
-                <td>Amount to be collected from the patient to satisfy a per prescription copay.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-tax"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-tax">tax</a>
-                </td>
-                <td>Tax</td>
-                <td>Amount to be collected from the patient for sales tax.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-other"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-other">other</a>
-                </td>
-                <td>Other</td>
-                <td>Other amount to be collected from the patient (PLACEHOLDER DURING IG DEVELOPMENT).</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-category-total"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-category-code-system.html#carin-rtpbc-patient-pay-category-code-system-total">total</a>
-                </td>
-                <td>Total patient responsibility</td>
-                <td>Amount equalling the total patient responsibility for a prescription product&#39;s cost.</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category"/>
-        <version value="0.1.03"/>
-        <name value="CarinRtbpcPatientPayCategoryValueSet"/>
-        <title value="CARIN RTPBC Patient Pay Category Value Set"/>
-        <status value="draft"/>
-        <date value="2019-10-25T00:00:00-05:00"/>
-        <publisher value="CARIN Alliance"/>
-        <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
-        <expansion>
-          <identifier value="urn:uuid:8dd639b5-e2b5-47d5-a037-19d6424a1a7c"/>
-          <timestamp value="2019-11-06T03:46:10-06:00"/>
-          <total value="6"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category|0.1.03"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="deductible"/>
-            <display value="Deductible"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="coinsurance"/>
-            <display value="Per prescription coinsurance"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="copay"/>
-            <display value="Copay"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="tax"/>
-            <display value="Tax"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="other"/>
-            <display value="Other"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-category"/>
-            <code value="total"/>
-            <display value="Total patient responsibility"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-determination"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-coverage-determination-value-set"/>
-        <meta>
-          <versionId value="2"/>
-          <lastUpdated value="2019-11-01T03:24:13.000-05:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination version 0.1.03</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html">
-                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-covered"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-covered">covered</a>
-                </td>
-                <td>Covered</td>
-                <td/>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-prior-auth"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-prior-auth">prior-auth</a>
-                </td>
-                <td>Covered with restriction: Prior authorization required</td>
-                <td>Covered with restriction: Prior authorization required</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-step-therapy"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-step-therapy">step-therapy</a>
-                </td>
-                <td>Covered with restriction: Step therapy applies</td>
-                <td>Covered with restriction: Step therapy applies</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-quantity-limit"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-quantity-limit">quantity-limit</a>
-                </td>
-                <td>Covered with restriction: Quantity limits apply</td>
-                <td>Covered with restriction: Quantity limits apply</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-other-restriction"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-other-restriction">other-restriction</a>
-                </td>
-                <td>Covered with restriction: Other restriction applies</td>
-                <td>Covered with restriction: Other restriction applies</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-determination-not-covered"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coverage-determination-code-system.html#carin-rtpbc-coverage-determination-code-system-not-covered">not-covered</a>
-                </td>
-                <td>Not covered</td>
-                <td>Not covered</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-determination"/>
-        <version value="0.1.03"/>
-        <name value="CarinRtbpcCoverageDeterminationValueSet"/>
-        <title value="CARIN RTPBC Coverage Determination Value Set"/>
-        <status value="draft"/>
-        <date value="2019-10-25T00:00:00-05:00"/>
-        <publisher value="CARIN Alliance"/>
-        <description value="This value set contains coverage levels that may apply to a prescription product."/>
-        <expansion>
-          <identifier value="urn:uuid:238f60b1-2e61-4240-99c4-08676b103d52"/>
-          <timestamp value="2019-11-06T03:46:10-06:00"/>
-          <total value="6"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination|0.1.03"/>
-          </parameter>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="covered"/>
-            <display value="Covered"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="prior-auth"/>
-            <display value="Covered with restriction: Prior authorization required"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="step-therapy"/>
-            <display value="Covered with restriction: Step therapy applies"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="quantity-limit"/>
-            <display value="Covered with restriction: Quantity limits apply"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="other-restriction"/>
-            <display value="Covered with restriction: Other restriction applies"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-determination"/>
-            <code value="not-covered"/>
-            <display value="Not covered"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
   <entry>
     <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
     <resource>
@@ -6404,7 +6035,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
-        <version value="0.1.03"/>
+        <version value="0.1.04"/>
         <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
         <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
         <status value="draft"/>
@@ -6413,8 +6044,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:a3c9a54d-6d90-4ee0-96f9-f5761d79ebda"/>
-          <timestamp value="2019-11-06T09:46:11.357Z"/>
+          <identifier value="urn:uuid:f9d3a38c-2c84-45ca-a298-dc621b2f6ab6"/>
+          <timestamp value="2019-11-07T01:26:59.718Z"/>
           <parameter>
             <name value="expansion-source"/>
             <valueString value="ValueSet/carin-rtpbc-prescribable-product-code-value-set"/>
@@ -11426,6 +11057,372 @@
             <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
             <code value="104946"/>
             <display value="Morphine Sulfate 200 MG Extended Release Oral Tablet [MST Continus]"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+    <resource>
+      <ValueSet>
+        <id value="carin-rtpbc-billing-units-value-set"/>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2019-11-06T14:31:34.000-06:00"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 3 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units version 0.1.04</p>
+            <p>All codes from system 
+              <a href="CodeSystem-carin-rtpbc-billing-units-code-system.html">
+                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-units-GM"> </a>
+                  <a href="CodeSystem-carin-rtpbc-billing-units-code-system.html#carin-rtpbc-billing-units-code-system-GM">GM</a>
+                </td>
+                <td>Gram</td>
+                <td>Quantity unit of measure for products billed as a number of grams</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-units-ML"> </a>
+                  <a href="CodeSystem-carin-rtpbc-billing-units-code-system.html#carin-rtpbc-billing-units-code-system-ML">ML</a>
+                </td>
+                <td>Milliliter</td>
+                <td>Quantity unit of measure for products billed as a number of milliliters</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-billing-units-EA"> </a>
+                  <a href="CodeSystem-carin-rtpbc-billing-units-code-system.html#carin-rtpbc-billing-units-code-system-EA">EA</a>
+                </td>
+                <td>Each</td>
+                <td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <version value="0.1.04"/>
+        <name value="CarinRtbpcBillingUnitsValueSet"/>
+        <title value="CARIN RTPBC Billing Units Value Set"/>
+        <status value="draft"/>
+        <date value="2019-11-06T19:26:21-06:00"/>
+        <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
+        <expansion>
+          <identifier value="urn:uuid:ae9ea3e1-b71f-41a7-bc3b-45beacc1704f"/>
+          <timestamp value="2019-11-06T19:27:00-06:00"/>
+          <total value="3"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units|0.1.04"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units"/>
+            <code value="GM"/>
+            <display value="Gram"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units"/>
+            <code value="ML"/>
+            <display value="Milliliter"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units"/>
+            <code value="EA"/>
+            <display value="Each"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
+    <resource>
+      <ValueSet>
+        <id value="carin-rtpbc-coverage-summary-value-set"/>
+        <meta>
+          <versionId value="3"/>
+          <lastUpdated value="2019-11-06T16:01:46.000-06:00"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 6 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary version 0.1.04</p>
+            <p>All codes from system 
+              <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html">
+                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-covered"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-covered">covered</a>
+                </td>
+                <td>Covered</td>
+                <td>Covered</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-prior-auth"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-prior-auth">prior-auth</a>
+                </td>
+                <td>Prior authorization required</td>
+                <td>Covered with restriction: Prior authorization required</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-step-therapy"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-step-therapy">step-therapy</a>
+                </td>
+                <td>Step therapy applies</td>
+                <td>Covered with restriction: Step therapy applies</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-quantity-limit"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-quantity-limit">quantity-limit</a>
+                </td>
+                <td>Quantity limits apply</td>
+                <td>Covered with restriction: Quantity limits apply</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-other-restriction"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-other-restriction">other-restriction</a>
+                </td>
+                <td>Other restriction applies</td>
+                <td>Covered with restriction: Other restriction applies</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coverage-summary-not-covered"> </a>
+                  <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-not-covered">not-covered</a>
+                </td>
+                <td>Not covered</td>
+                <td>Not covered</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
+        <version value="0.1.04"/>
+        <name value="CarinRtbpcCoverageSummaryValueSet"/>
+        <title value="CARIN RTPBC Coverage Summary Value Set"/>
+        <status value="draft"/>
+        <date value="2019-11-06T19:26:21-06:00"/>
+        <description value="This value set contains coverage levels that may apply to a prescription product."/>
+        <expansion>
+          <identifier value="urn:uuid:064f312c-8e7c-4198-a22e-d7498c4e390e"/>
+          <timestamp value="2019-11-06T19:27:01-06:00"/>
+          <total value="6"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary|0.1.04"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="covered"/>
+            <display value="Covered"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="prior-auth"/>
+            <display value="Prior authorization required"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="step-therapy"/>
+            <display value="Step therapy applies"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="quantity-limit"/>
+            <display value="Quantity limits apply"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="other-restriction"/>
+            <display value="Other restriction applies"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
+            <code value="not-covered"/>
+            <display value="Not covered"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
+    <resource>
+      <ValueSet>
+        <id value="carin-rtpbc-patient-pay-type-value-set"/>
+        <meta>
+          <versionId value="2"/>
+          <lastUpdated value="2019-11-06T16:18:10.000-06:00"/>
+        </meta>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 6 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type version 0.1.04</p>
+            <p>All codes from system 
+              <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html">
+                <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-deductible"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-deductible">deductible</a>
+                </td>
+                <td>Deductible</td>
+                <td>Amount to be collected from a patient to be applied to a periodic deductible.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-coinsurance"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-coinsurance">coinsurance</a>
+                </td>
+                <td>Per prescription coinsurance</td>
+                <td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-copay"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-copay">copay</a>
+                </td>
+                <td>Copay</td>
+                <td>Amount to be collected from the patient to satisfy a per prescription copay.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-tax"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-tax">tax</a>
+                </td>
+                <td>Tax</td>
+                <td>Amount to be collected from the patient for sales tax.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-other"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-other">other</a>
+                </td>
+                <td>Other</td>
+                <td>Other amount to be collected from the patient</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-total"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-total">total</a>
+                </td>
+                <td>Total patient responsibility</td>
+                <td>Amount equalling the total patient responsibility for a prescription product&#39;s cost.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
+        <version value="0.1.04"/>
+        <name value="CarinRtbpcPatientPayTypeValueSet"/>
+        <title value="CARIN RTPBC Patient Pay Type Value Set"/>
+        <status value="draft"/>
+        <date value="2019-11-06T19:26:21-06:00"/>
+        <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
+        <expansion>
+          <identifier value="urn:uuid:ac73f1ee-e3a8-4de0-a40d-d8622cebad33"/>
+          <timestamp value="2019-11-06T19:27:01-06:00"/>
+          <total value="6"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type|0.1.04"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="deductible"/>
+            <display value="Deductible"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="coinsurance"/>
+            <display value="Per prescription coinsurance"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="copay"/>
+            <display value="Copay"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="tax"/>
+            <display value="Tax"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="other"/>
+            <display value="Other"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="total"/>
+            <display value="Total patient responsibility"/>
           </contains>
         </expansion>
       </ValueSet>

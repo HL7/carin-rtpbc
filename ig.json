@@ -146,33 +146,33 @@
 			"base": "StructureDefinition-carin-rtpbc-MedicationRequest.html",
 			"defns": "StructureDefinition-carin-rtpbc-MedicationRequest-definitions.html"
 		},
+		"CodeSystem/carin-rtpbc-billing-units-code-system": {
+			"base": "CodeSystem-carin-rtpbc-billing-units-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-billing-units-code-system-definitions.html"
+		},
 		"StructureDefinition/carin-rtpbc-Coverage": {
 			"base": "StructureDefinition-carin-rtpbc-Coverage.html",
 			"defns": "StructureDefinition-carin-rtpbc-Coverage-definitions.html"
 		},
-		"CodeSystem/carin-rtpbc-patient-pay-category-code-system": {
-			"base": "CodeSystem-carin-rtpbc-patient-pay-category-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-patient-pay-category-code-system-definitions.html"
+		"ValueSet/carin-rtpbc-billing-units-value-set": {
+			"base": "ValueSet-carin-rtpbc-billing-units-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-billing-units-value-set-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-patient-pay-category-value-set": {
-			"base": "ValueSet-carin-rtpbc-patient-pay-category-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-patient-pay-category-value-set-definitions.html"
+		"CodeSystem/carin-rtpbc-coverage-summary-code-system": {
+			"base": "CodeSystem-carin-rtpbc-coverage-summary-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-coverage-summary-code-system-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-coverage-determination-value-set": {
-			"base": "ValueSet-carin-rtpbc-coverage-determination-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-coverage-determination-value-set-definitions.html"
+		"ValueSet/carin-rtpbc-coverage-summary-value-set": {
+			"base": "ValueSet-carin-rtpbc-coverage-summary-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-coverage-summary-value-set-definitions.html"
 		},
-		"CodeSystem/carin-rtpbc-coverage-determination-code-system": {
-			"base": "CodeSystem-carin-rtpbc-coverage-determination-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-coverage-determination-code-system-definitions.html"
+		"CodeSystem/carin-rtpbc-patient-pay-type-code-system": {
+			"base": "CodeSystem-carin-rtpbc-patient-pay-type-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-patient-pay-type-code-system-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-billing-unit-value-set": {
-			"base": "ValueSet-carin-rtpbc-billing-unit-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-billing-unit-value-set-definitions.html"
-		},
-		"CodeSystem/carin-rtpbc-billing-unit-code-system": {
-			"base": "CodeSystem-carin-rtpbc-billing-unit-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-billing-unit-code-system-definitions.html"
+		"ValueSet/carin-rtpbc-patient-pay-type-value-set": {
+			"base": "ValueSet-carin-rtpbc-patient-pay-type-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-patient-pay-type-value-set-definitions.html"
 		},
 		"StructureDefinition/carin-rtpbc-ClaimResponse": {
 			"base": "StructureDefinition-carin-rtpbc-ClaimResponse.html",
@@ -204,6 +204,6 @@
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.03",
+	"fixed-business-version": "0.1.04",
 	"dependencyList": []
 }

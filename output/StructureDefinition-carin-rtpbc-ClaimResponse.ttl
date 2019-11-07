@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-ClaimResponse"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "50" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-04T18:32:36.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "54" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T16:24:15.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.03"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.04"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -3955,8 +3955,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Patient Pay Categories" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type>
          ]
        ]
      ], [
@@ -5441,7 +5441,11 @@
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "CARIN RTPBC prescribable product codes (NDC and RxNorm)" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "CARIN RTPBC prescribable product codes (NDC and RxNorm)" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code>
+         ]
        ]
      ], [
        fhir:index 118;
@@ -6464,7 +6468,11 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -7010,8 +7018,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Patient Pay Categories" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type>
          ]
        ]
      ], [
@@ -10944,8 +10952,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Patient Pay Categories" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type>
          ]
        ]
      ], [
@@ -11028,7 +11036,11 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "CARIN RTPBC prescribable product codes (NDC and RxNorm)" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "CARIN RTPBC prescribable product codes (NDC and RxNorm)" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code>
+         ]
        ]
      ], [
        fhir:index 32;
@@ -11085,7 +11097,11 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+         ]
        ]
      ], [
        fhir:index 39;
@@ -11118,8 +11134,8 @@
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Patient Pay Categories" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-category>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type>
          ]
        ]
      ], [
