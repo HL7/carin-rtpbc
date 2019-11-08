@@ -17,7 +17,7 @@ check (RTPBC) process.
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
-  <version value="0.1.04"/>
+  <version value="0.1.06"/>
   <name value="CarinRtpbcRequestPrescriberInfo"/>
   <title value="CARIN RTPBC Request Prescriber Info"/>
   <status value="draft"/>

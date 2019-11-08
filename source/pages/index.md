@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.05 (This version):** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material
+**0.1.06 (This version):** Added the Coverage resource into the request content illustration (inadvertently left it out earlier)
+
+**0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material
 
 **0.1.04:** Addressed broken page links, made small profile adjustments in ClaimResponse.
 

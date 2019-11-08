@@ -17,7 +17,7 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
-  <version value="0.1.04"/>
+  <version value="0.1.06"/>
   <name value="CarinRtpbcRequestPatientInfo"/>
   <title value="CARIN RTPBC Request Patient Info"/>
   <status value="draft"/>

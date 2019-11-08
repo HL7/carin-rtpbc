@@ -26,7 +26,7 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
-  <version value="0.1.04"/>
+  <version value="0.1.06"/>
   <name value="CarinRtpbcResponse"/>
   <title value="CARIN RTPBC Response using ClaimResponse"/>
   <status value="draft"/>

@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit \ncheck (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.04"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.06"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPatientInfo"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Patient Info"];
   fhir:StructureDefinition.status [ fhir:value "draft"];

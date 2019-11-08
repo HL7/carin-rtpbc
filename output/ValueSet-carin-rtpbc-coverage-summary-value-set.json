@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains coverage levels that may apply to a prescription product.\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary",
-  "version": "0.1.04",
+  "version": "0.1.06",
   "name": "CarinRtbpcCoverageSummaryValueSet",
   "title": "CARIN RTPBC Coverage Summary Value Set",
   "status": "draft",
-  "date": "2019-11-08T13:49:24-06:00",
+  "date": "2019-11-08T15:28:49-06:00",
   "description": "This value set contains coverage levels that may apply to a prescription product.",
   "compose": {
     "include": [

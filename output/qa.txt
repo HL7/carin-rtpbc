@@ -3,65 +3,65 @@
 
 err = 0, warn = 0, info = 0
 IG Publisher Version: v0.9.92-SNAPSHOT
-Generated Fri Nov 08 13:50:24 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.04 (canonical = http://hl7.org/fhir/us/carin-bb)
+Generated Fri Nov 08 15:30:46 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.06 (canonical = http://hl7.org/fhir/us/carin-bb)
 
  Build Errors : 1 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\bundle\rtpbc-bundle-response-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claim\rtpbc-claim-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claim\rtpbc-claim-with-contained-003 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claimresponse\rtpbc-claim-response-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claimresponse\rtpbc-claim-response-with-contained-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-billing-units-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\coverage\rtpbc-coverage-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\implementationguide\CARIN-RTPBC : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\medicationrequest\rtpbc-medicationrequest-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\organization\rtpbc-organization-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\organization\rtpbc-organization-03m : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\patient\rtpbc-patient-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\practitioner\rtpbc-practitioner-03 : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-ClaimResponse : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Coverage : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-MedicationRequest : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-OperationOutcome : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Patient : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Practitioner : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-request-Claim : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-billing-units-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-coverage-summary-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\bundle\rtpbc-bundle-response-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claim\rtpbc-claim-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claim\rtpbc-claim-with-contained-003 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claimresponse\rtpbc-claim-response-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claimresponse\rtpbc-claim-response-with-contained-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-billing-units-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\coverage\rtpbc-coverage-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\implementationguide\CARIN-RTPBC : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\medicationrequest\rtpbc-medicationrequest-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\organization\rtpbc-organization-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\organization\rtpbc-organization-03m : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\patient\rtpbc-patient-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\practitioner\rtpbc-practitioner-03 : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-ClaimResponse : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Coverage : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-MedicationRequest : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-OperationOutcome : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Patient : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Practitioner : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-request-Claim : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-billing-units-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-coverage-summary-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set : 0 / 0
 </table>
 == n/a ==
-ERROR: Z:\fhir\CARIN2\CarinRtpbc45\output\Use_cases.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\bundle\rtpbc-bundle-request-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\bundle\rtpbc-bundle-response-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claim\rtpbc-claim-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claim\rtpbc-claim-with-contained-003.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claimresponse\rtpbc-claim-response-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\claimresponse\rtpbc-claim-response-with-contained-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-billing-units-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\coverage\rtpbc-coverage-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\implementationguide\CARIN-RTPBC.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\medicationrequest\rtpbc-medicationrequest-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\organization\rtpbc-organization-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\organization\rtpbc-organization-03m.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\patient\rtpbc-patient-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\practitioner\rtpbc-practitioner-03.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-ClaimResponse.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Coverage.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-MedicationRequest.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-OperationOutcome.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Patient.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-Practitioner.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\structuredefinition\carin-rtpbc-request-Claim.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-billing-units-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-coverage-summary-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set.xml ==
-== Z:\fhir\CARIN2\CarinRtpbc45\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set.xml ==
+ERROR: Z:\fhir\CARIN2\CarinRtpbc46\output\Use_cases.html#/html/head/link/body/div/div/div/div/div/div/p/a at Line 232, column 5: The link 'undefined' for "Previous Page" cannot be resolved
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\bundle\rtpbc-bundle-request-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\bundle\rtpbc-bundle-response-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claim\rtpbc-claim-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claim\rtpbc-claim-with-contained-003.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claimresponse\rtpbc-claim-response-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\claimresponse\rtpbc-claim-response-with-contained-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-billing-units-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-coverage-summary-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\codesystem\carin-rtpbc-patient-pay-type-code-system.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\coverage\rtpbc-coverage-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\implementationguide\CARIN-RTPBC.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\medicationrequest\rtpbc-medicationrequest-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\organization\rtpbc-organization-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\organization\rtpbc-organization-03m.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\patient\rtpbc-patient-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\practitioner\rtpbc-practitioner-03.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-ClaimResponse.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Coverage.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-MedicationRequest.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-OperationOutcome.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Patient.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-Practitioner.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-pharmacy-Organization.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\structuredefinition\carin-rtpbc-request-Claim.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-billing-units-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-coverage-summary-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set.xml ==
+== Z:\fhir\CARIN2\CarinRtpbc46\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set.xml ==
