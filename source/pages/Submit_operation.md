@@ -4,7 +4,7 @@ layout: default
 active: Submit operation
 ---
 
-[Previous Page](Information_content_and_FHIR_resources.html)
+[Previous Page](Content_illustration_-_RTPBC_response.html)
 
 ### Submitting the Real-time Pharmacy Benefit Check (RTBPC) request
 #### Operation

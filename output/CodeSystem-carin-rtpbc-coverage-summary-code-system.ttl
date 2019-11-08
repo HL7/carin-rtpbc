@@ -21,7 +21,7 @@
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcCoverageSummaryCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Coverage Summary Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-11-06T19:26:21-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-11-08T13:49:24-06:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.description [ fhir:value "This code system defines coverage outcomes that may apply to a prescription product."];
   fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];

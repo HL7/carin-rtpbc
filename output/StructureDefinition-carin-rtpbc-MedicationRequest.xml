@@ -3,8 +3,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-MedicationRequest"/>
   <meta>
-    <versionId value="33"/>
-    <lastUpdated value="2019-11-06T14:34:52.000-06:00"/>
+    <versionId value="36"/>
+    <lastUpdated value="2019-11-08T10:48:53.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
@@ -701,9 +701,10 @@
     </element>
     <element id="MedicationRequest.reported[x]">
       <path value="MedicationRequest.reported[x]"/>
-      <short value="Reported rather than primary record"/>
-      <definition value="Indicates if this record was captured as a secondary &#39;reported&#39; record rather than as an original primary source-of-truth record.  It may also indicate the source of the report."/>
-      <min value="0"/>
+      <label value="Reported by patient or other"/>
+      <short value="Reported"/>
+      <definition value="Indicates whether the prescription information has been reported by the patient or other party (.reported = true) or is the original prescription record (.reported = false)."/>
+      <min value="1"/>
       <max value="1"/>
       <base>
         <path value="MedicationRequest.reported[x]"/>
@@ -713,14 +714,6 @@
       <type>
         <code value="boolean"/>
       </type>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
-      </type>
       <constraint>
         <key value="ele-1"/>
         <severity value="error"/>
@@ -729,6 +722,7 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
+      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="true"/>
       <mapping>
@@ -4145,6 +4139,17 @@
       <definition value="Intent of the request for dispensing"/>
       <comment value="Always equals &#39;proposal&#39;"/>
       <fixedCode value="proposal"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="MedicationRequest.reported[x]">
+      <path value="MedicationRequest.reported[x]"/>
+      <label value="Reported by patient or other"/>
+      <short value="Reported"/>
+      <definition value="Indicates whether the prescription information has been reported by the patient or other party (.reported = true) or is the original prescription record (.reported = false)."/>
+      <min value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
       <mustSupport value="true"/>
     </element>
     <element id="MedicationRequest.medication[x]">

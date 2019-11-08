@@ -3,11 +3,12 @@
     xmlns="http://hl7.org/fhir">
     <id value="rtpbc-medicationrequest-03"/>
     <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2019-11-05T22:54:39.000-05:00"/>
+        <versionId value="2"/>
+        <lastUpdated value="2019-11-08T11:51:35.000-05:00"/>
     </meta>
     <status value="draft"/>
     <intent value="proposal"/>
+    <reportedBoolean value="true"/>
     <medicationCodeableConcept>
         <coding>
             <system value="http://example.org/ndc11/placeholder"/>

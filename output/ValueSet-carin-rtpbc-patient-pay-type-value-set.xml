@@ -15,7 +15,7 @@
   <name value="CarinRtbpcPatientPayTypeValueSet"/>
   <title value="CARIN RTPBC Patient Pay Type Value Set"/>
   <status value="draft"/>
-  <date value="2019-11-06T19:26:21-06:00"/>
+  <date value="2019-11-08T13:49:24-06:00"/>
   <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
   <compose>
     <include>

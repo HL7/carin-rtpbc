@@ -240,6 +240,7 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
   <li><a href="#scope-of-this-guide" id="markdown-toc-scope-of-this-guide">Scope of this guide</a></li>
   <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
   <li><a href="#change-log" id="markdown-toc-change-log">Change log</a></li>
+  <li><a href="#known-issues-and-to-dos" id="markdown-toc-known-issues-and-to-dos">Known issues and to-dos</a></li>
   <li><a href="#authors" id="markdown-toc-authors">Authors</a></li>
 </ul>
 
@@ -295,7 +296,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 
 <h3 id="change-log">Change log</h3>
 
-<p><strong>0.1.04 (This version):</strong> Addressed broken page links, made small profile adjustments in ClaimResponse.</p>
+<p><strong>0.1.05 (This version):</strong> Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material</p>
+
+<p><strong>0.1.04:</strong> Addressed broken page links, made small profile adjustments in ClaimResponse.</p>
 
 <p><strong>0.1.03:</strong> Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.</p>
 
@@ -304,6 +307,13 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 <p><strong>0.1.01:</strong> Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
 
 <p><strong>0.1.00:</strong> Initial resources and narrative content.</p>
+
+<p><br /></p>
+
+<h3 id="known-issues-and-to-dos">Known issues and to-dos</h3>
+<ul>
+  <li>The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out…</li>
+</ul>
 
 <p><br /></p>
 
@@ -358,7 +368,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.04  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 6, 2019 19:26-0600.
+      CarinRtpbc Version: 0.1.04  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 13:49-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

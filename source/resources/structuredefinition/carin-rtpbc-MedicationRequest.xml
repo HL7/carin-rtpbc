@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-MedicationRequest"/>
     <meta>
-        <versionId value="33"/>
-        <lastUpdated value="2019-11-06T15:34:52.000-05:00"/>
+        <versionId value="36"/>
+        <lastUpdated value="2019-11-08T11:48:53.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -49,6 +49,17 @@
             <definition value="Intent of the request for dispensing"/>
             <comment value="Always equals 'proposal'"/>
             <fixedCode value="proposal"/>
+            <mustSupport value="true"/>
+        </element>
+        <element id="MedicationRequest.reported[x]">
+            <path value="MedicationRequest.reported[x]"/>
+            <label value="Reported by patient or other"/>
+            <short value="Reported"/>
+            <definition value="Indicates whether the prescription information has been reported by the patient or other party (.reported = true) or is the original prescription record (.reported = false)."/>
+            <min value="1"/>
+            <type>
+                <code value="boolean"/>
+            </type>
             <mustSupport value="true"/>
         </element>
         <element id="MedicationRequest.medication[x]">

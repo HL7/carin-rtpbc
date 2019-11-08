@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="a0e510da-4abb-4834-9891-320e3f24cdde"/>
+  <id value="6fb69479-2416-4a50-8dfb-d529e131d333"/>
   <meta>
-    <lastUpdated value="2019-11-06T19:26:21.699-06:00"/>
+    <lastUpdated value="2019-11-08T13:49:24.339-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -6044,8 +6044,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:f9d3a38c-2c84-45ca-a298-dc621b2f6ab6"/>
-          <timestamp value="2019-11-07T01:26:59.718Z"/>
+          <identifier value="urn:uuid:5d43d198-27a6-4edb-abc2-7a890e93bbd7"/>
+          <timestamp value="2019-11-08T19:49:35.937Z"/>
           <parameter>
             <name value="expansion-source"/>
             <valueString value="ValueSet/carin-rtpbc-prescribable-product-code-value-set"/>
@@ -11125,11 +11125,11 @@
         <name value="CarinRtbpcBillingUnitsValueSet"/>
         <title value="CARIN RTPBC Billing Units Value Set"/>
         <status value="draft"/>
-        <date value="2019-11-06T19:26:21-06:00"/>
+        <date value="2019-11-08T13:49:24-06:00"/>
         <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
         <expansion>
-          <identifier value="urn:uuid:ae9ea3e1-b71f-41a7-bc3b-45beacc1704f"/>
-          <timestamp value="2019-11-06T19:27:00-06:00"/>
+          <identifier value="urn:uuid:11d364c5-842f-4469-828a-5a838f568f05"/>
+          <timestamp value="2019-11-08T13:49:39-06:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -11245,11 +11245,11 @@
         <name value="CarinRtbpcCoverageSummaryValueSet"/>
         <title value="CARIN RTPBC Coverage Summary Value Set"/>
         <status value="draft"/>
-        <date value="2019-11-06T19:26:21-06:00"/>
+        <date value="2019-11-08T13:49:24-06:00"/>
         <description value="This value set contains coverage levels that may apply to a prescription product."/>
         <expansion>
-          <identifier value="urn:uuid:064f312c-8e7c-4198-a22e-d7498c4e390e"/>
-          <timestamp value="2019-11-06T19:27:01-06:00"/>
+          <identifier value="urn:uuid:bfb82a3b-7eb8-4a9a-909f-30e627568bf0"/>
+          <timestamp value="2019-11-08T13:49:39-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -11380,11 +11380,11 @@
         <name value="CarinRtbpcPatientPayTypeValueSet"/>
         <title value="CARIN RTPBC Patient Pay Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-11-06T19:26:21-06:00"/>
+        <date value="2019-11-08T13:49:24-06:00"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:ac73f1ee-e3a8-4de0-a40d-d8622cebad33"/>
-          <timestamp value="2019-11-06T19:27:01-06:00"/>
+          <identifier value="urn:uuid:8c86b711-46f8-49c8-9ddf-f19357c8bca6"/>
+          <timestamp value="2019-11-08T13:49:39-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>

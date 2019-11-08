@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "a0e510da-4abb-4834-9891-320e3f24cdde",
+  "id" : "6fb69479-2416-4a50-8dfb-d529e131d333",
   "meta" : {
-    "lastUpdated" : "2019-11-06T19:26:21.699-06:00"
+    "lastUpdated" : "2019-11-08T13:49:24.339-06:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -29,8 +29,8 @@
           "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
           "valueBoolean" : true
         }],
-        "identifier" : "urn:uuid:f9d3a38c-2c84-45ca-a298-dc621b2f6ab6",
-        "timestamp" : "2019-11-07T01:26:59.718Z",
+        "identifier" : "urn:uuid:5d43d198-27a6-4edb-abc2-7a890e93bbd7",
+        "timestamp" : "2019-11-08T19:49:35.937Z",
         "parameter" : [{
           "name" : "expansion-source",
           "valueString" : "ValueSet/carin-rtpbc-prescribable-product-code-value-set"
@@ -5064,11 +5064,11 @@
       "name" : "CarinRtbpcBillingUnitsValueSet",
       "title" : "CARIN RTPBC Billing Units Value Set",
       "status" : "draft",
-      "date" : "2019-11-06T19:26:21-06:00",
+      "date" : "2019-11-08T13:49:24-06:00",
       "description" : "This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products",
       "expansion" : {
-        "identifier" : "urn:uuid:ae9ea3e1-b71f-41a7-bc3b-45beacc1704f",
-        "timestamp" : "2019-11-06T19:27:00-06:00",
+        "identifier" : "urn:uuid:11d364c5-842f-4469-828a-5a838f568f05",
+        "timestamp" : "2019-11-08T13:49:39-06:00",
         "total" : 3,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5114,11 +5114,11 @@
       "name" : "CarinRtbpcCoverageSummaryValueSet",
       "title" : "CARIN RTPBC Coverage Summary Value Set",
       "status" : "draft",
-      "date" : "2019-11-06T19:26:21-06:00",
+      "date" : "2019-11-08T13:49:24-06:00",
       "description" : "This value set contains coverage levels that may apply to a prescription product.",
       "expansion" : {
-        "identifier" : "urn:uuid:064f312c-8e7c-4198-a22e-d7498c4e390e",
-        "timestamp" : "2019-11-06T19:27:01-06:00",
+        "identifier" : "urn:uuid:bfb82a3b-7eb8-4a9a-909f-30e627568bf0",
+        "timestamp" : "2019-11-08T13:49:39-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5179,11 +5179,11 @@
       "name" : "CarinRtbpcPatientPayTypeValueSet",
       "title" : "CARIN RTPBC Patient Pay Type Value Set",
       "status" : "draft",
-      "date" : "2019-11-06T19:26:21-06:00",
+      "date" : "2019-11-08T13:49:24-06:00",
       "description" : "This value set contains components of a patient's responsibility for a prescription product's cost.",
       "expansion" : {
-        "identifier" : "urn:uuid:ac73f1ee-e3a8-4de0-a40d-d8622cebad33",
-        "timestamp" : "2019-11-06T19:27:01-06:00",
+        "identifier" : "urn:uuid:8c86b711-46f8-49c8-9ddf-f19357c8bca6",
+        "timestamp" : "2019-11-08T13:49:39-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",

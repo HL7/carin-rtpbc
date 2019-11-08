@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.04 (This version):** Addressed broken page links, made small profile adjustments in ClaimResponse.
+**0.1.05 (This version):** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material
+
+**0.1.04:** Addressed broken page links, made small profile adjustments in ClaimResponse.
 
 **0.1.03:** Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.
 
@@ -70,7 +72,13 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 **0.1.00:** Initial resources and narrative content.
 
-<br>
+<br/>
+
+### Known issues and to-dos
+* The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out...
+
+
+<br/>
 
 ### Authors
 

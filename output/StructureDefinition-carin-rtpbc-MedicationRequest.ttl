@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-MedicationRequest"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "33" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T14:34:52.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "36" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-08T10:48:53.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
@@ -898,9 +898,10 @@
        fhir:index 16;
        fhir:Element.id [ fhir:value "MedicationRequest.reported[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.reported[x]" ];
-       fhir:ElementDefinition.short [ fhir:value "Reported rather than primary record" ];
-       fhir:ElementDefinition.definition [ fhir:value "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record.  It may also indicate the source of the report." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.label [ fhir:value "Reported by patient or other" ];
+       fhir:ElementDefinition.short [ fhir:value "Reported" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates whether the prescription information has been reported by the patient or other party (.reported = true) or is the original prescription record (.reported = false)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.base [
          fhir:ElementDefinition.base.path [ fhir:value "MedicationRequest.reported[x]" ];
@@ -910,30 +911,6 @@
        fhir:ElementDefinition.type [
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Patient";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Patient>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Practitioner";
-           fhir:index 1;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Practitioner>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/PractitionerRole";
-           fhir:index 2;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/PractitionerRole>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/RelatedPerson";
-           fhir:index 3;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/RelatedPerson>
-         ], [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Organization";
-           fhir:index 4;
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Organization>
-         ]
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -947,6 +924,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -5330,6 +5308,19 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 3;
+       fhir:Element.id [ fhir:value "MedicationRequest.reported[x]" ];
+       fhir:ElementDefinition.path [ fhir:value "MedicationRequest.reported[x]" ];
+       fhir:ElementDefinition.label [ fhir:value "Reported by patient or other" ];
+       fhir:ElementDefinition.short [ fhir:value "Reported" ];
+       fhir:ElementDefinition.definition [ fhir:value "Indicates whether the prescription information has been reported by the patient or other party (.reported = true) or is the original prescription record (.reported = false)." ];
+       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "boolean" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
        fhir:Element.id [ fhir:value "MedicationRequest.medication[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.medication[x]" ];
        fhir:ElementDefinition.label [ fhir:value "Prescribed Product" ];
@@ -5352,23 +5343,23 @@
          ]
        ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "MedicationRequest.medicationCodeableConcept.coding" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.medicationCodeableConcept.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.code" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.display" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.medicationCodeableConcept.coding.display" ];
        fhir:ElementDefinition.label [ fhir:value "Product Description" ];
@@ -5376,7 +5367,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.id [ fhir:value "MedicationRequest.subject" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.subject" ];
        fhir:ElementDefinition.label [ fhir:value "Patient" ];
@@ -5393,7 +5384,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.id [ fhir:value "MedicationRequest.subject.reference" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.subject.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Reference" ];
@@ -5403,7 +5394,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "MedicationRequest.requester" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.requester" ];
        fhir:ElementDefinition.label [ fhir:value "Prescriber" ];
@@ -5421,7 +5412,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "MedicationRequest.requester.reference" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.requester.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Prescriber Reference" ];
@@ -5431,17 +5422,17 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "MedicationRequest.reasonCode" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.reasonCode" ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "MedicationRequest.reasonCode.coding" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.reasonCode.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest" ];
        fhir:ElementDefinition.label [ fhir:value "Mandatory dispense request" ];
@@ -5449,7 +5440,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.quantity" ];
        fhir:ElementDefinition.label [ fhir:value "Prescribed Quantity" ];
@@ -5458,7 +5449,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.quantity.value" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.quantity.value" ];
        fhir:ElementDefinition.label [ fhir:value "Quantity in Billing Units" ];
@@ -5467,7 +5458,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.quantity.unit" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.quantity.unit" ];
        fhir:ElementDefinition.label [ fhir:value "Billing unit of measure" ];
@@ -5484,7 +5475,7 @@
          ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.expectedSupplyDuration" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.expectedSupplyDuration" ];
        fhir:ElementDefinition.label [ fhir:value "Days Supply" ];
@@ -5492,7 +5483,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.expectedSupplyDuration.value" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.expectedSupplyDuration.value" ];
        fhir:ElementDefinition.label [ fhir:value "Days Supply Value" ];
@@ -5500,7 +5491,7 @@
        fhir:ElementDefinition.definition [ fhir:value "The number of days the requested dispense quantity is intended to last" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.performer" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.performer" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy" ];
@@ -5518,7 +5509,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.id [ fhir:value "MedicationRequest.dispenseRequest.performer.reference" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.dispenseRequest.performer.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Reference" ];
@@ -5526,7 +5517,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.id [ fhir:value "MedicationRequest.substitution" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.substitution" ];
        fhir:ElementDefinition.label [ fhir:value "Substitution" ];
@@ -5534,7 +5525,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.id [ fhir:value "MedicationRequest.substitution.allowed[x]" ];
        fhir:ElementDefinition.path [ fhir:value "MedicationRequest.substitution.allowed[x]" ];
        fhir:ElementDefinition.label [ fhir:value "Substitution Allowed" ];

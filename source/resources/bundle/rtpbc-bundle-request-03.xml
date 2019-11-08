@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="rtpbc-bundle-request-03"/>
     <meta>
-        <versionId value="4"/>
-        <lastUpdated value="2019-11-05T23:37:41.000-05:00"/>
+        <versionId value="6"/>
+        <lastUpdated value="2019-11-08T12:58:46.000-05:00"/>
     </meta>
     <type value="message"/>
     <entry>
@@ -212,6 +212,7 @@
                 <id value="rtpbc-medicationrequest-03"/>
                 <status value="draft"/>
                 <intent value="proposal"/>
+                <reportedBoolean value="true"/>
                 <medicationCodeableConcept>
                     <coding>
                         <system value="http://example.org/ndc11/placeholder"/>
