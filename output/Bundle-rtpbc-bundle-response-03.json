@@ -2,34 +2,11 @@
   "resourceType": "Bundle",
   "id": "rtpbc-bundle-response-03",
   "meta": {
-    "versionId": "4",
-    "lastUpdated": "2019-11-06T17:39:03.000-05:00"
+    "versionId": "7",
+    "lastUpdated": "2019-11-13T14:56:12.000-05:00"
   },
-  "type": "message",
+  "type": "collection",
   "entry": [
-    {
-      "fullUrl": "http://example.org/MessageHeader/rtpbc-messageheader-response-03",
-      "resource": {
-        "resourceType": "MessageHeader",
-        "id": "rtpbc-messageheader-response-03",
-        "text": {
-          "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
-        },
-        "eventCoding": {
-          "code": "rtpbc-response"
-        },
-        "source": {
-          "name": "MyPatientApp",
-          "endpoint": "http://example.org/MyPatientApp"
-        },
-        "focus": [
-          {
-            "reference": "ClaimResponse/rtpbc-claim-response-03"
-          }
-        ]
-      }
-    },
     {
       "fullUrl": "http://example.org/ClaimResponse/rtpbc-claim-response-03",
       "resource": {

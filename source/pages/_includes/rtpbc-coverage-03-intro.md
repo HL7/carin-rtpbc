@@ -1,6 +1,13 @@
----
-title: Coverage-rtpbc-coverage-03-intro
-layout: default
-active: Coverage-rtpbc-coverage-03-intro
----
+### Example RTPBC Coverage resource
 
+In this example, the patient's insurance coverage identifiers are...
+* Payer ID: Pharmacy Plans US
+* BIN: BIN001
+* PCN: PCN002
+* Group ID: GROUP0001
+
+<br/>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-coverage-03.png" alt="coverage"></div>
+
+<br/>

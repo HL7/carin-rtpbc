@@ -3,45 +3,15 @@
     xmlns="http://hl7.org/fhir">
     <id value="rtpbc-bundle-request-03"/>
     <meta>
-        <versionId value="6"/>
-        <lastUpdated value="2019-11-08T12:58:46.000-05:00"/>
+        <versionId value="11"/>
+        <lastUpdated value="2019-11-13T15:28:08.000-05:00"/>
     </meta>
-    <type value="message"/>
-    <entry>
-        <fullUrl value="http://example.org/MessageHeader/rtpbc-messageheader-request-03"/>
-        <resource>
-            <MessageHeader>
-                <id value="rtpbc-messageheader-request-03"/>
-                <text>
-                    <status value="generated"/>
-                    <div
-                        xmlns="http://www.w3.org/1999/xhtml">text
-                    </div>
-                </text>
-                <eventCoding>
-                    <code value="rtpbc-request"/>
-                </eventCoding>
-                <source>
-                    <name value="MyPatientApp"/>
-                    <endpoint value="http://example.org/MyPatientApp"/>
-                </source>
-                <focus>
-                    <reference value="Claim/rtpbc-claim-03"/>
-                </focus>
-            </MessageHeader>
-        </resource>
-    </entry>
+    <type value="collection"/>
     <entry>
         <fullUrl value="http://example.org/Claim/rtpbc-claim-03"/>
         <resource>
             <Claim>
                 <id value="rtpbc-claim-03"/>
-                <text>
-                    <status value="generated"/>
-                    <div
-                        xmlns="http://www.w3.org/1999/xhtml">text
-                    </div>
-                </text>
                 <identifier>
                     <value value="rtpbc-03"/>
                 </identifier>

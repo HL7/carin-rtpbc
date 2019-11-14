@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.06 (This version):** Added the Coverage resource into the request content illustration (inadvertently left it out earlier)
+**0.1.07 (This version):** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. 
+
+**0.1.06:** Added the Coverage resource into the request content illustration (inadvertently left it out earlier)
 
 **0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material
 

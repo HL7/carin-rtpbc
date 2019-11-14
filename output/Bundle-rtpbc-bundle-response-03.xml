@@ -3,32 +3,10 @@
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="rtpbc-bundle-response-03"/>
   <meta>
-    <versionId value="4"/>
-    <lastUpdated value="2019-11-06T17:39:03.000-05:00"/>
+    <versionId value="7"/>
+    <lastUpdated value="2019-11-13T14:56:12.000-05:00"/>
   </meta>
-  <type value="message"/>
-  <entry>
-    <fullUrl value="http://example.org/MessageHeader/rtpbc-messageheader-response-03"/>
-    <resource>
-      <MessageHeader>
-        <id value="rtpbc-messageheader-response-03"/>
-        <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">text
-                    </div>
-        </text>
-        <eventCoding>
-          <code value="rtpbc-response"/>
-        </eventCoding>
-        <source>
-          <name value="MyPatientApp"/>
-          <endpoint value="http://example.org/MyPatientApp"/>
-        </source>
-        <focus>
-          <reference value="ClaimResponse/rtpbc-claim-response-03"/>
-        </focus>
-      </MessageHeader>
-    </resource>
-  </entry>
+  <type value="collection"/>
   <entry>
     <fullUrl value="http://example.org/ClaimResponse/rtpbc-claim-response-03"/>
     <resource>

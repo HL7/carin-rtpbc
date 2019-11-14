@@ -117,7 +117,7 @@ can only resize using html  or css ;-(
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -130,11 +130,11 @@ can only resize using html  or css ;-(
 -->
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="toc.html">Guidance</a></li>
   <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
-  <li><a href="other.html">Other</a></li>
+  <li><a href="other.html">Examples</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>
 
@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.06). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -215,7 +215,7 @@ can only resize using html  or css ;-(
     
       <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
       /
-      <span class="breadcrumb-item active">Other resources defined for this Guide</span>
+      <span class="breadcrumb-item active">Examples and other resources</span>
     
     
 
@@ -225,7 +225,7 @@ can only resize using html  or css ;-(
 
   <!-- ============CONTENT CONTENT=============== -->
 
-<h1>Other resources defined for this Guide</h1>
+<h1>Examples and other resources</h1>
 
 <!--page source: other.md-->
 
@@ -238,7 +238,25 @@ can only resize using html  or css ;-(
 
 <!-- end TOC -->
 
-<h3 id="other-resources">Other Resources</h3>
+<h3 id="full-request">Full Request</h3>
+<p>Request submitted as a Bundle containing a Claim and supporting resources. 
+<br />
+Processor: Patient’s payer / PBM
+<br />
+<a href="Bundle-rtpbc-bundle-request-03.html">Bundled RTPBC request to payer/PBM</a></p>
+
+<p><br /></p>
+
+<h3 id="full-response">Full Response</h3>
+<p>Response returned as a Bundle containing a ClaimResponse and supporting resources.
+<br />
+Processor: Patient’s payer / PBM
+<br />
+<a href="Bundle-rtpbc-bundle-response-03.html">Bundled RTPBC response from payer/PBM</a></p>
+
+<p><br /></p>
+
+<h3 id="individual-resources">Individual Resources</h3>
 
 <table>
 <thead>
@@ -249,52 +267,62 @@ can only resize using html  or css ;-(
 </thead>
 <tbody>
 <tr>
-<td>Bundle</td>
-<td><a href="Bundle-rtpbc-bundle-request-03.html">rtpbc-bundle-request-03</a></td>
-</tr>
-<tr>
-<td>Bundle</td>
-<td><a href="Bundle-rtpbc-bundle-response-03.html">rtpbc-bundle-response-03</a></td>
+<td>Claim</td>
+<td><a href="Claim-rtpbc-claim-03.html">RTPBC Claim resource</a></td>
 </tr>
 <tr>
 <td>ClaimResponse</td>
-<td><a href="ClaimResponse-rtpbc-claim-response-03.html">rtpbc-claim-response-03</a></td>
-</tr>
-<tr>
-<td>ClaimResponse</td>
-<td><a href="ClaimResponse-rtpbc-claim-response-with-contained-03.html">rtpbc-claim-response-with-contained-03</a></td>
-</tr>
-<tr>
-<td>Claim</td>
-<td><a href="Claim-rtpbc-claim-03.html">rtpbc-claim-03</a></td>
-</tr>
-<tr>
-<td>Claim</td>
-<td><a href="Claim-rtpbc-claim-with-contained-003.html">rtpbc-claim-with-contained-003</a></td>
+<td><a href="ClaimResponse-rtpbc-claim-response-03.html">RTPBC ClaimResponse resource</a></td>
 </tr>
 <tr>
 <td>Coverage</td>
-<td><a href="Coverage-rtpbc-coverage-03.html">rtpbc-coverage-03</a></td>
+<td><a href="Coverage-rtpbc-coverage-03.html">RTPBC Coverage resource</a></td>
 </tr>
 <tr>
 <td>MedicationRequest</td>
-<td><a href="MedicationRequest-rtpbc-medicationrequest-03.html">rtpbc-medicationrequest-03</a></td>
+<td><a href="MedicationRequest-rtpbc-medicationrequest-03.html">RTPBC MedicationRequest resource</a></td>
 </tr>
 <tr>
 <td>Organization</td>
-<td><a href="Organization-rtpbc-organization-03.html">Hometown Drug</a></td>
+<td><a href="Organization-rtpbc-organization-03.html">RTPBC Organization resource - Hometown Drug</a></td>
 </tr>
 <tr>
 <td>Organization</td>
-<td><a href="Organization-rtpbc-organization-03m.html">My Mail Service Pharmacy</a></td>
+<td><a href="Organization-rtpbc-organization-03m.html">RTPBC Organization resource - My Mail Service Pharmacy</a></td>
 </tr>
 <tr>
 <td>Patient</td>
-<td><a href="Patient-rtpbc-patient-03.html">rtpbc-patient-03</a></td>
+<td><a href="Patient-rtpbc-patient-03.html">RTPBC Patient resource</a></td>
 </tr>
 <tr>
 <td>Practitioner</td>
-<td><a href="Practitioner-rtpbc-practitioner-03.html">rtpbc-practitioner-03</a></td>
+<td><a href="Practitioner-rtpbc-practitioner-03.html">RTPBC Practitioner (prescriber) resource</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="request--response-using-contained-resources">Request / response using contained resources</h3>
+
+<p>NOTE: This approach was proposed but discarded based on input from consulted workgroups and others.</p>
+
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claim</td>
+<td><a href="Claim-rtpbc-claim-with-contained-003.html">RTPBC Claim with contained resources</a></td>
+</tr>
+<tr>
+<td>ClaimResponse</td>
+<td><a href="ClaimResponse-rtpbc-claim-response-with-contained-03.html">RTPBC ClaimResponse with contained resources</a></td>
 </tr>
 </tbody>
 </table>
@@ -328,7 +356,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.06  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 15:28-0600.
+      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

@@ -9,7 +9,7 @@
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -21,11 +21,11 @@
 
 -->
 - [Home](index.html){: .active}
-- [Table of Contents](toc.html)
+- [Guidance](toc.html)
 - [Profiles & Extensions](profiles.html)
 - [Terminology](terminology.html)
 - [Capability Statements](capstatements.html)
-- [Other](other.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 <!-- ******* how to create a dropdown menu in md ********

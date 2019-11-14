@@ -1,6 +1,6 @@
 {
-  "version": "0.1.06",
+  "version": "0.1.07",
   "fhirVersion": "[4.0.1]",
-  "date": "20191108152831",
+  "date": "20191113181425",
   "name": "hl7.fhir.us.carin-rtpbc"
 }

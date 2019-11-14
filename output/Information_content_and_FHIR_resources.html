@@ -117,7 +117,7 @@ can only resize using html  or css ;-(
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -130,11 +130,11 @@ can only resize using html  or css ;-(
 -->
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="toc.html">Guidance</a></li>
   <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
-  <li><a href="other.html">Other</a></li>
+  <li><a href="other.html">Examples</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>
 
@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.06). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -234,44 +234,53 @@ can only resize using html  or css ;-(
 <h3 id="consumer-real-time-prescription-benefit-check-rtpbc-information-content">Consumer real-time prescription benefit check (RTPBC) information content</h3>
 <p>The RTPBC process involves a request from a consumer application used by a patient to either (a) the party that manages the pharmacy benefit portion of the patient’s health insurance or (b) a party that serves as a source for typical and discount medication pricing information.</p>
 
-<h4 id="exchange-with-the-patients-insurer">Exchange with the patient’s insurer</h4>
-<p><strong>Request content</strong>
-The patient application submits a request containing…</p>
+<p><br /></p>
+
+<h3 id="exchange-with-the-patients-insurer">Exchange with the patient’s insurer</h3>
+<h4 id="request-content"><em>Request content</em></h4>
+<p>The patient application submits a request containing…</p>
 <ul>
   <li>basic patient identifying information</li>
   <li>payer and coverage identifiers</li>
   <li>information from the prescription for which coverage and cost is desired</li>
-  <li>the patient’s preferred pharmacy
-<br /><br /></li>
+  <li>the patient’s preferred pharmacy</li>
 </ul>
 
-<p><strong>Response content</strong>
-The responder…</p>
+<p><em>Example:</em> <a href="Bundle-rtpbc-bundle-request-03.html">Bundled RTPBC request</a></p>
+
+<h4 id="response-content"><em>Response content</em></h4>
+<p>The responder…</p>
 <ul>
   <li>locates the patient’s record and coverage details</li>
   <li>determines the patient’s out of pocket cost for the requested pharmacy and potentially other pharmacy options</li>
   <li>determines if alternative medications are available and identifies coverage and cost for those</li>
-  <li>returns the gathered information to requester
-<br /><br /></li>
+  <li>returns the gathered information to requester</li>
 </ul>
 
-<h4 id="exchange-with-a-medication-pricing-source">Exchange with a medication pricing source</h4>
-<p>In this variation, the request and response information is a subset of that in the exchange with the patient’s insurer… omitting the patient identifying information on the request, and omitting the coverage information on the response. 
-<strong>Request content</strong>
-The patient application submits a request containing…</p>
+<p><em>Example:</em> <a href="Bundle-rtpbc-bundle-response-03.html">Bundled RTPBC response from payer/PBM</a></p>
+
+<p><br /></p>
+
+<h3 id="exchange-with-a-medication-pricing-source">Exchange with a medication pricing source</h3>
+<p>In this variation, the request and response information is a subset of that in the exchange with the patient’s insurer… omitting the patient identifying information on the request, and omitting the coverage information on the response.</p>
+<h4 id="request-content-1"><em>Request content</em></h4>
+<p>The patient application submits a request containing…</p>
 <ul>
   <li>information from the prescription for which pricing is desired</li>
   <li>the patient’s location and preferred pharmacy
-<br /><br /></li>
+<br /></li>
 </ul>
 
-<p><strong>Response content</strong>
-The responder…</p>
+<h4 id="response-content-1"><em>Response content</em></h4>
+<p>The responder…</p>
 <ul>
   <li>determines pricing for the requested pharmacy and potentially other nearby pharmacies</li>
-  <li>returns the gathered information to requester
-<br /><br /></li>
+  <li>returns the gathered information to requester</li>
+  <li>optionally returns coupon information when available</li>
 </ul>
+
+<p><br />
+<br /></p>
 
 <h3 id="resources-used-in-the-exchange">Resources used in the exchange</h3>
 <p>The consumer RTPBC request and response are accomplished using FHIR <strong>Claim</strong> and <strong>ClaimResponse</strong> resources in a “predetermination” (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage.</p>
@@ -283,19 +292,19 @@ The responder…</p>
 <p>Below are profiles constraining those resources for this purpose:</p>
 
 <ul>
-  <li><strong>Claim</strong> - Represents the RTPBC request. Uses the <em>predetermination</em> Claim.use mode  (CARINRTPBCClaim)</li>
+  <li><strong>Claim</strong> - Represents the RTPBC request. Uses the <em>predetermination</em> Claim.use mode</li>
   <li><strong>ClaimResponse</strong> - Represents the RTPBC response</li>
   <li><strong>Patient</strong> - Conveys the patient information needed for the exchange</li>
   <li><strong>MedicationRequest</strong> - Conveys the needed prescription information (a subset of what is present in a full prescription)</li>
   <li><strong>Practitioner</strong> - Conveys the prescriber information needed for the exchange</li>
   <li><strong>Organization <em>(Pharmacy)</em></strong> - Conveys pharmacy information needed for the exchange</li>
-  <li><strong>Coverage</strong> - Conveys the pharmacy benefit coverage IDs needed for the exchange</li>
+  <li><strong>Coverage</strong> - <em>Request:</em> Conveys the pharmacy benefit coverage IDs needed for the exchange. <em>Response:</em> Optionally contains discount drug coupon information when the request is processed by a discount pricing source</li>
   <li><strong>OperationOutcome</strong> - Communicates exception situations where a ClaimResponse cannot be returned</li>
 </ul>
 
 <p>The need for additional resource profiles may be identified as work progresses.</p>
 
-<p><a href="Content_illustration_-_RTPBC_request.html">Next Page</a></p>
+<p><a href="Submit_operation.html">Next Page</a></p>
 
 
 
@@ -326,7 +335,7 @@ The responder…</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.06  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 15:28-0600.
+      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

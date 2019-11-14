@@ -117,7 +117,7 @@ can only resize using html  or css ;-(
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -130,11 +130,11 @@ can only resize using html  or css ;-(
 -->
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="toc.html">Guidance</a></li>
   <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
-  <li><a href="other.html">Other</a></li>
+  <li><a href="other.html">Examples</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>
 
@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.06). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -263,27 +263,69 @@ can only resize using html  or css ;-(
   <!-- ============CONTENT CONTENT=============== -->
 
 
-<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+  <!--  template typically for examples -->
+<!-- ============CONTENT CONTENT=============== -->
 
-<!-- ============ CONTENT CONTENT=============== -->
-
-
-<!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
-
-  <h2>Claim: rtpbc-claim-with-contained-003</h2>
-
-  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-with-contained-003</p><p><b>meta</b>: </p><p><b>contained</b>: , , , </p><p><b>identifier</b>: rtpbc-03</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 11:20:54 AM</p><p><b>provider</b>: unknown resource contained</p><p><b>priority</b>: Normal <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})</span></p><p><b>prescription</b>: <a href="MedicationRequest-rtpbc-medicationrequest-03.html">Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; <span title="Codes: {http://example.org/ndc11/placeholder 00777310402}">Prozac 10mg capsule</span></a></p><h3>CareTeams</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td></tr><tr><td>*</td><td>1</td><td>unknown resource contained</td></tr></table><h3>Insurances</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>1</td><td>true</td><td>unknown resource contained</td></tr></table><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>CareTeamSequence</b></td><td><b>ProductOrService</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>1</td><td>1</td><td>Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></td><td>60 EA</td></tr></table></div>
-  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
-
-
-
-
-<!-- simple format links
+<!-- <h2>Claim/rtpbc-claim-with-contained-003  </h2>   -->
+  <!--<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-with-contained-003</p><p><b>meta</b>: </p><p><b>contained</b>: , , , </p><p><b>identifier</b>: rtpbc-03</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 11:20:54 AM</p><p><b>provider</b>: unknown resource contained</p><p><b>priority</b>: Normal <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})</span></p><p><b>prescription</b>: <a href="MedicationRequest-rtpbc-medicationrequest-03.html">Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; <span title="Codes: {http://example.org/ndc11/placeholder 00777310402}">Prozac 10mg capsule</span></a></p><h3>CareTeams</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td></tr><tr><td>*</td><td>1</td><td>unknown resource contained</td></tr></table><h3>Insurances</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>1</td><td>true</td><td>unknown resource contained</td></tr></table><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>CareTeamSequence</b></td><td><b>ProductOrService</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>1</td><td>1</td><td>Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></td><td>60 EA</td></tr></table></div>-->
+<!--
 <p>
-Formats: <a href="Claim-rtpbc-claim-with-contained-003.html">Narrative</a>, <a href="Claim-rtpbc-claim-with-contained-003.xml.html">XML</a>, <a href="Claim-rtpbc-claim-with-contained-003.json.html">JSON</a>, <a href="Claim-rtpbc-claim-with-contained-003.ttl.html">Turtle</a>
+Formats: <a href="Claim-rtpbc-claim-with-contained-003.xml.html">XML</a>, <a href="Claim-rtpbc-claim-with-contained-003.json.html">JSON</a>, <a href="Claim-rtpbc-claim-with-contained-003.ttl.html">Turtle</a>
 </p>
 -->
 
+<!-- introductiontext here-->
+<a name="introduction"> </a>
+
+
+<h3 id="example-rtpbc-request---using-contained-supporting-resources">Example RTPBC request - using contained supporting resources</h3>
+
+<p><br /></p>
+
+<p>NOTE: This approach was proposed but discarded based on input from consulted workgroups and others.</p>
+
+<p><br /></p>
+
+<p>In this example:</p>
+<ul>
+  <li>the client is a patient application</li>
+  <li>the server is the patient’s insurer (specifically, the party that manages the patient’s pharmacy benefit)</li>
+  <li>the request is submitted as a Claim containing supporting resources, as the single parameter to the processor’s Claim.$submit operation</li>
+</ul>
+
+<p>Content:</p>
+<ul>
+  <li>the patient’s name is Jane Doe, date of birth is 1975-12-05, and address is 100 Oak Court, Madison, WI 53510</li>
+  <li>the requested medication is Prozac 10mg capsule, 60 capsules, for a 30 day supply (reflected in the Claim and MedicationRequest resources)</li>
+  <li>the prescriber’s identifying information is captured in the Practitioner resource</li>
+  <li>the requested pharmacy is Hometown Drug (reflected in the Organization resource)</li>
+  <li>the patient’s coverage identifiers (BIN/PCN, member ID) are conveyed in a Coverage resource</li>
+</ul>
+
+<p><br /></p>
+
+<p>The supporting data (patient, coverage, prescription, etc.) consists of identifying information that the processor will use to locate the patient’s insurance record and coverage rules applying to the medication, pharmacy and prescriber.</p>
+
+<p><br /></p>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-3-claim.png" alt="claim" /></div>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-4-patient.png" alt="patient" /></div>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-5-coverage.png" alt="coverage" /></div>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-6-medication-request.png" alt="medicationrequest" /></div>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-7-practitioner.png" alt="practitioner" /></div>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-8-organization-pharmacy.png" alt="organization (pharmacy)" /></div>
+
+<p><br /></p>
+
+
+<!-- 
+<div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-with-contained-003</p><p><b>meta</b>: </p><p><b>contained</b>: , , , </p><p><b>identifier</b>: rtpbc-03</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: unknown resource contained</p><p><b>created</b>: Nov 1, 2019 11:20:54 AM</p><p><b>provider</b>: unknown resource contained</p><p><b>priority</b>: Normal <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})</span></p><p><b>prescription</b>: <a href="MedicationRequest-rtpbc-medicationrequest-03.html">Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; <span title="Codes: {http://example.org/ndc11/placeholder 00777310402}">Prozac 10mg capsule</span></a></p><h3>CareTeams</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td></tr><tr><td>*</td><td>1</td><td>unknown resource contained</td></tr></table><h3>Insurances</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>1</td><td>true</td><td>unknown resource contained</td></tr></table><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>CareTeamSequence</b></td><td><b>ProductOrService</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>1</td><td>1</td><td>Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></td><td>60 EA</td></tr></table></div>
+-->
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
@@ -317,7 +359,7 @@ Formats: <a href="Claim-rtpbc-claim-with-contained-003.html">Narrative</a>, <a h
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.06  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 15:28-0600.
+      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

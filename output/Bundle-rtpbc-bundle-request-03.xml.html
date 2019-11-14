@@ -117,7 +117,7 @@ can only resize using html  or css ;-(
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -130,11 +130,11 @@ can only resize using html  or css ;-(
 -->
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="toc.html">Guidance</a></li>
   <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
-  <li><a href="other.html">Other</a></li>
+  <li><a href="other.html">Examples</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>
 
@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.06). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -278,34 +278,10 @@ can only resize using html  or css ;-(
 &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">Bundle</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-bundle-request-03&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;6&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-11-08T12:58:46.000-05:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;11&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-11-13T15:28:08.000-05:00&quot;/&gt;
   &lt;/meta&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;message&quot;/&gt;
-  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>
-             <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/MessageHeader/rtpbc-messageheader-request-03&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">resource</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader">MessageHeader</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-messageheader-request-03&quot;/&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.text">text</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text
-                    &lt;/div&gt;<a name="end-xhtml"></a>
-        &lt;/text&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.event[x]">eventCoding</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;rtpbc-request&quot;/&gt;
-        &lt;/eventCoding&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source">source</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;MyPatientApp&quot;/&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.source.endpoint">endpoint</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;http://example.org/MyPatientApp&quot;/&gt;
-        &lt;/source&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/messageheader.html#MessageHeader.focus">focus</a>&gt;
-          &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Claim/rtpbc-claim-03&quot;/&gt;
-        &lt;/focus&gt;
-      &lt;/MessageHeader&gt;
-    &lt;/resource&gt;
-  &lt;/entry&gt;
+  &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;collection&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#uri">value</a>=&quot;http://example.org/Claim/rtpbc-claim-03&quot;/&gt;
     &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim">resource</a>&gt;
@@ -313,8 +289,7 @@ can only resize using html  or css ;-(
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-claim-03&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.text">text</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;text
-                    &lt;/div&gt;<a name="end-xhtml"></a>
+          &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: rtpbc-claim-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: rtpbc-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Pharmacy &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;use&lt;/b&gt;: predetermination&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=&quot;Patient-rtpbc-patient-03.html&quot;&gt;Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;created&lt;/b&gt;: Nov 1, 2019 11:20:54 AM&lt;/p&gt;&lt;p&gt;&lt;b&gt;provider&lt;/b&gt;: &lt;a href=&quot;Organization-rtpbc-organization-03.html&quot;&gt;Generated Summary: id: rtpbc-organization-03; 9876543210; name: Hometown Drug; ph: 6081234567&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;priority&lt;/b&gt;: Normal &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;prescription&lt;/b&gt;: &lt;a href=&quot;MedicationRequest-rtpbc-medicationrequest-03.html&quot;&gt;Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; &lt;span title=&quot;Codes: {http://example.org/ndc11/placeholder 00777310402}&quot;&gt;Prozac 10mg capsule&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;CareTeams&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Sequence&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Provider&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Practitioner-rtpbc-practitioner-03.html&quot;&gt;Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson &lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Insurances&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Sequence&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Focal&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Coverage&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td&gt;&lt;a href=&quot;Coverage-rtpbc-coverage-03.html&quot;&gt;Generated Summary: id: rtpbc-coverage-03; status: active&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Items&lt;/h3&gt;&lt;table class=&quot;grid&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Sequence&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;CareTeamSequence&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ProductOrService&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Prozac 10mg capsule &lt;span style=&quot;background: LightGoldenRodYellow&quot;&gt;(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;60 EA&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;<a name="end-xhtml"></a>
         &lt;/text&gt;
         &lt;<a href="http://hl7.org/fhir/R4/claim.html#Claim.identifier">identifier</a>&gt;
           &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-03&quot;/&gt;
@@ -623,7 +598,7 @@ Formats: <a href="Bundle-rtpbc-bundle-request-03.html">Narrative</a>, <a href="B
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.06  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 15:28-0600.
+      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

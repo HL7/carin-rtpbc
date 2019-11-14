@@ -117,7 +117,7 @@ can only resize using html  or css ;-(
 - [Search Parameters](searchparams.html)
 - [Capability Statements](capstatements.html)
 - [Security](security.html)
-- [Examples](examples.html)
+- [Examples](other.html)
 - [Downloads](downloads.html)
 
 - [General Guidance and Questions <span class="caret"></span>](#){: .dropdown-toggle data-toggle="dropdown"}
@@ -130,11 +130,11 @@ can only resize using html  or css ;-(
 -->
 <ul class="nav navbar-nav">
   <li><a href="index.html" class="active">Home</a></li>
-  <li><a href="toc.html">Table of Contents</a></li>
+  <li><a href="toc.html">Guidance</a></li>
   <li><a href="profiles.html">Profiles &amp; Extensions</a></li>
   <li><a href="terminology.html">Terminology</a></li>
   <li><a href="capstatements.html">Capability Statements</a></li>
-  <li><a href="other.html">Other</a></li>
+  <li><a href="other.html">Examples</a></li>
   <li><a href="downloads.html">Downloads</a></li>
 </ul>
 
@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.06). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -263,28 +263,43 @@ can only resize using html  or css ;-(
   <!-- ============CONTENT CONTENT=============== -->
 
 
-<!-- ig template for many conformance resource html pages  ('base' in definitions file)  can not be used for conformance resources that have more that a single base template. e.g.,  sd since there are mapping and definitions templates for it as well  they need to be split out into 3 separate templates -->
+  <!--  template typically for examples -->
+<!-- ============CONTENT CONTENT=============== -->
 
-<!-- ============ CONTENT CONTENT=============== -->
-
-
-<!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
-
-  <h2>Claim: rtpbc-claim-03</h2>
-
-  <div xmlns="http://www.w3.org/1999/xhtml">text
-        </div>
-  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
-
-
-
-
-<!-- simple format links
+<!-- <h2>Claim/rtpbc-claim-03  </h2>   -->
+  <!--<div xmlns="http://www.w3.org/1999/xhtml">text
+        </div>-->
+<!--
 <p>
-Formats: <a href="Claim-rtpbc-claim-03.html">Narrative</a>, <a href="Claim-rtpbc-claim-03.xml.html">XML</a>, <a href="Claim-rtpbc-claim-03.json.html">JSON</a>, <a href="Claim-rtpbc-claim-03.ttl.html">Turtle</a>
+Formats: <a href="Claim-rtpbc-claim-03.xml.html">XML</a>, <a href="Claim-rtpbc-claim-03.json.html">JSON</a>, <a href="Claim-rtpbc-claim-03.ttl.html">Turtle</a>
 </p>
 -->
 
+<!-- introductiontext here-->
+<a name="introduction"> </a>
+
+
+<h3 id="example-rtpbc-claim-resource-the-rtpbc-request">Example RTPBC Claim resource (the “RTPBC request”)</h3>
+<p>In this example:</p>
+<ul>
+  <li>the patient infomration is referenced to a Patient resource</li>
+  <li>the requested medication is Prozac 10mg capsule, 60 capsules (included in the Claim.item composite and referenced to a MedicationRequest resource)</li>
+  <li>the prescriber’s identifying information is referenced to a Practitioner resource</li>
+  <li>the requested pharmacy referenced to an Organization resource</li>
+  <li>the patient’s coverage identifiers are conveyed in a referenced Coverage resource</li>
+</ul>
+
+<p><br /></p>
+
+<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-claim-03.png" alt="claim" /></div>
+
+<p><br /></p>
+
+
+<!-- 
+<div xmlns="http://www.w3.org/1999/xhtml">text
+        </div>
+-->
 
   <!-- ==============END CONTENT END CONTENT=================== -->
 
@@ -318,7 +333,7 @@ Formats: <a href="Claim-rtpbc-claim-03.html">Narrative</a>, <a href="Claim-rtpbc
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.06  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 8, 2019 15:28-0600.
+      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

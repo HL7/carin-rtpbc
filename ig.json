@@ -29,13 +29,47 @@
 	"sct-edition": "http://snomed.info/sct/731000124108",
 	"canonicalBase": "http://hl7.org/fhir/us/carin-bb",
 	"defaults": {
+		"Claim": {
+			"template-base": "ex.html"
+		},
+		"ClaimResponse": {
+			"template-base": "ex.html"
+		},
+		"Bundle": {
+			"template-base": "ex.html"
+		},
+		"Patient": {
+			"template-base": "ex.html"
+		},
+		"Coverage": {
+			"template-base": "ex.html"
+		},
+		"Practitioner": {
+			"template-base": "ex.html"
+		},
+		"Organization": {
+			"template-base": "ex.html"
+		},
+		"MedicationRequest": {
+			"template-base": "ex.html"
+		},
+		"CapabilityStatement": {
+			"template-base": "base.html"
+		},
+		"CodeSystem": {
+			"template-base": "base.html"
+		},
+		"ValueSet": {
+			"template-base": "base.html"
+		},
+		"OperationDefinition": {
+			"template-base": "base.html"
+		},
+		
 		"Location": {
 			"template-base": "ex.html"
 		},
 		"ProcedureRequest": {
-			"template-base": "ex.html"
-		},
-		"Organization": {
 			"template-base": "ex.html"
 		},
 		"MedicationStatement": {
@@ -52,9 +86,6 @@
 		"Immunization": {
 			"template-base": "ex.html"
 		},
-		"Patient": {
-			"template-base": "ex.html"
-		},
 		"StructureMap": {
 			"content": false,
 			"script": false,
@@ -62,15 +93,6 @@
 			"profiles": false
 		},
 		"ConceptMap": {
-			"template-base": "base.html"
-		},
-		"Practitioner": {
-			"template-base": "ex.html"
-		},
-		"OperationDefinition": {
-			"template-base": "base.html"
-		},
-		"CodeSystem": {
 			"template-base": "base.html"
 		},
 		"Communication": {
@@ -82,12 +104,6 @@
 		},
 		"PractitionerRole": {
 			"template-base": "ex.html"
-		},
-		"ValueSet": {
-			"template-base": "base.html"
-		},
-		"CapabilityStatement": {
-			"template-base": "base.html"
 		},
 		"Observation": {
 			"template-base": "ex.html"
@@ -204,6 +220,6 @@
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.06",
+	"fixed-business-version": "0.1.07",
 	"dependencyList": []
 }

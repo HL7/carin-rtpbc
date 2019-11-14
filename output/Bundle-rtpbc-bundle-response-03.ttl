@@ -9,48 +9,23 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-bundle-response-03"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "4" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T17:39:03.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "7" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-13T14:56:12.000-05:00"^^xsd:dateTime ]
   ];
-  fhir:Bundle.type [ fhir:value "message"];
+  fhir:Bundle.type [ fhir:value "collection"];
   fhir:Bundle.entry [
      fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/MessageHeader/rtpbc-messageheader-response-03" ];
-     fhir:Bundle.entry.resource <http://example.org/MessageHeader/rtpbc-messageheader-response-03>
-  ], [
-     fhir:index 1;
      fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/ClaimResponse/rtpbc-claim-response-03" ];
      fhir:Bundle.entry.resource <http://example.org/ClaimResponse/rtpbc-claim-response-03>
   ], [
-     fhir:index 2;
+     fhir:index 1;
      fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Patient/rtpbc-patient-03" ];
      fhir:Bundle.entry.resource <http://example.org/Patient/rtpbc-patient-03>
   ], [
-     fhir:index 3;
+     fhir:index 2;
      fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Organization/rtpbc-organization-03m" ];
      fhir:Bundle.entry.resource <http://example.org/Organization/rtpbc-organization-03m>
   ] .
-
-<http://example.org/MessageHeader/rtpbc-messageheader-response-03> a fhir:MessageHeader;
-  fhir:Resource.id [ fhir:value "rtpbc-messageheader-response-03"];
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
-  ];
-  fhir:MessageHeader.eventCoding [
-     fhir:Coding.code [ fhir:value "rtpbc-response" ]
-  ];
-  fhir:MessageHeader.source [
-     fhir:MessageHeader.source.name [ fhir:value "MyPatientApp" ];
-     fhir:MessageHeader.source.endpoint [ fhir:value "http://example.org/MyPatientApp" ]
-  ];
-  fhir:MessageHeader.focus [
-     fhir:index 0;
-     fhir:link <http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03>;
-     fhir:Reference.reference [ fhir:value "ClaimResponse/rtpbc-claim-response-03" ]
-  ] .
-
-<http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03> a fhir:us .
 
 <http://example.org/ClaimResponse/rtpbc-claim-response-03> a fhir:ClaimResponse;
   fhir:Resource.id [ fhir:value "rtpbc-claim-response-03"];

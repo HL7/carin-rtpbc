@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.06"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.07"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];

@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy \nbenefit \ncheck response.\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.06"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.07"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcExceptionResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Exception Response"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
