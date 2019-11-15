@@ -18,7 +18,8 @@ Request submitted as a Bundle containing a Claim and supporting resources.
 <br/>
 Processor: Patient's payer / PBM
 <br/>
-<a href="Bundle-rtpbc-bundle-request-03.html">Bundled RTPBC request to payer/PBM</a>
+<a href="Bundle-rtpbc-bundle-request-03.html">Bundled RTPBC request to payer/PBM. Using $submit operation</a><br>
+<a href="Bundle-rtpbc-bundle-request-03-w-header.html">Bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
 <br/>
 
@@ -27,7 +28,8 @@ Response returned as a Bundle containing a ClaimResponse and supporting resource
 <br/>
 Processor: Patient's payer / PBM
 <br/>
-<a href="Bundle-rtpbc-bundle-response-03.html">Bundled RTPBC response from payer/PBM</a>
+<a href="Bundle-rtpbc-bundle-response-03.html">Bundled RTPBC response from payer/PBM. Using $submit operation</a><br>
+<a href="Bundle-rtpbc-bundle-response-03-w-header.html">Bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
 <br/>
 

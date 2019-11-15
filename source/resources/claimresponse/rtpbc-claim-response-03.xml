@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="rtpbc-claim-response-03"/>
     <meta>
-        <versionId value="2"/>
-        <lastUpdated value="2019-11-06T17:41:00.000-05:00"/>
+        <versionId value="3"/>
+        <lastUpdated value="2019-11-14T16:23:39.000-05:00"/>
     </meta>
     <identifier>
         <value value="rtpbc-03-response"/>
@@ -78,6 +78,9 @@
         </adjudication>
     </item>
     <addItem>
+        <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+            <valueBoolean value="true"/>
+        </extension>
         <itemSequence value="1"/>
         <provider>
             <reference value="Organization/rtpbc-organization-03m"/>

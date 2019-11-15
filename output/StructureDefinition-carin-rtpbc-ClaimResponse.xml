@@ -3,30 +3,22 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-ClaimResponse"/>
   <meta>
-    <versionId value="54"/>
-    <lastUpdated value="2019-11-06T16:24:15.000-06:00"/>
+    <versionId value="59"/>
+    <lastUpdated value="2019-11-14T15:19:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
             <div>
                 <div>
-                    <div>This profile constrains the ClaimResponse resource to serve as the   
-                        
-                        
-                        
-                        
-                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   
-                    
-                    
-                    
-                    
+                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          
+                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              
                     </div>
                 </div>
             </div>
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
-  <version value="0.1.07"/>
+  <version value="0.1.08"/>
   <name value="CarinRtpbcResponse"/>
   <title value="CARIN RTPBC Response using ClaimResponse"/>
   <status value="draft"/>
@@ -3819,11 +3811,16 @@
     </element>
     <element id="ClaimResponse.addItem.extension">
       <path value="ClaimResponse.addItem.extension"/>
-      <short value="Additional content defined by implementations"/>
-      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
-      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
-      <alias value="extensions"/>
-      <alias value="user content"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
       <min value="0"/>
       <max value="*"/>
       <base>
@@ -3852,10 +3849,42 @@
       </constraint>
       <isModifier value="false"/>
       <isSummary value="false"/>
-      <mapping>
-        <identity value="rim"/>
-        <map value="n/a"/>
-      </mapping>
+    </element>
+    <element id="ClaimResponse.addItem.extension:isAlternative">
+      <path value="ClaimResponse.addItem.extension"/>
+      <sliceName value="isAlternative"/>
+      <short value="Extension"/>
+      <definition value="This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service"/>
+      <comment value="Set to true in all real-time pharmacy benefit check response .addItems."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
     </element>
     <element id="ClaimResponse.addItem.modifierExtension">
       <path value="ClaimResponse.addItem.modifierExtension"/>
@@ -8589,6 +8618,25 @@
     </element>
     <element id="ClaimResponse.addItem">
       <path value="ClaimResponse.addItem"/>
+    </element>
+    <element id="ClaimResponse.addItem.extension:isAlternative">
+      <path value="ClaimResponse.addItem.extension"/>
+      <sliceName value="isAlternative"/>
+      <short value="Extension"/>
+      <definition value="This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service"/>
+      <comment value="Set to true in all real-time pharmacy benefit check response .addItems."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
     </element>
     <element id="ClaimResponse.addItem.itemSequence">
       <path value="ClaimResponse.addItem.itemSequence"/>

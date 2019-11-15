@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include codes from <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li><li>Include all codes defined in <code>http://example.org/ndc11/placeholder</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"];
-  fhir:ValueSet.version [ fhir:value "0.1.07"];
+  fhir:ValueSet.version [ fhir:value "0.1.08"];
   fhir:ValueSet.name [ fhir:value "CARINRTPBCPrescribableProductCodeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Prescribable Product Code Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];

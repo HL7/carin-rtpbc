@@ -3,8 +3,8 @@
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="rtpbc-bundle-response-03"/>
   <meta>
-    <versionId value="7"/>
-    <lastUpdated value="2019-11-13T14:56:12.000-05:00"/>
+    <versionId value="8"/>
+    <lastUpdated value="2019-11-14T17:29:04.000-05:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -87,6 +87,9 @@
           </adjudication>
         </item>
         <addItem>
+          <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+            <valueBoolean value="true"/>
+          </extension>
           <itemSequence value="1"/>
           <provider>
             <reference value="Organization/rtpbc-organization-03m"/>

@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Coverage resource for carrying the pharmacy \nbenefit information required in the consumer real-time pharmacy benefit \ncheck process\n            \n            </div>\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers",
-  "version": "0.1.07",
+  "version": "0.1.08",
   "name": "CarinRtpbcRequestCoverageIdentifiers",
   "title": "CARIN RTPBC Request Coverage Identifiers",
   "status": "draft",

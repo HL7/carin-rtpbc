@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.08). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -278,8 +278,8 @@ can only resize using html  or css ;-(
 &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">Bundle</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;rtpbc-bundle-response-03&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;7&quot;/&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-11-13T14:56:12.000-05:00&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a> <a href="http://hl7.org/fhir/R4/datatypes.html#id">value</a>=&quot;8&quot;/&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a> <a href="http://hl7.org/fhir/R4/datatypes.html#instant">value</a>=&quot;2019-11-14T17:29:04.000-05:00&quot;/&gt;
   &lt;/meta&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;collection&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>&gt;
@@ -366,6 +366,10 @@ can only resize using html  or css ;-(
           &lt;/adjudication&gt;
         &lt;/item&gt;
         &lt;<a href="http://hl7.org/fhir/R4/claimresponse.html#ClaimResponse.addItem">addItem</a>&gt;
+          &lt;<a href="http://hl7.org/fhir/R4/claimresponse.html#ClaimResponse.addItem.extension">extension</a>
+                     <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative&quot;&gt;
+            &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueBoolean</a> <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">value</a>=&quot;true&quot;/&gt;
+          &lt;/extension&gt;
           &lt;<a href="http://hl7.org/fhir/R4/claimresponse.html#ClaimResponse.addItem.itemSequence">itemSequence</a> <a href="http://hl7.org/fhir/R4/datatypes.html#positiveInt">value</a>=&quot;1&quot;/&gt;
           &lt;<a href="http://hl7.org/fhir/R4/claimresponse.html#ClaimResponse.addItem.provider">provider</a>&gt;
             &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/rtpbc-organization-03m&quot;/&gt;
@@ -558,7 +562,7 @@ Formats: <a href="Bundle-rtpbc-bundle-response-03.html">Narrative</a>, <a href="
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
+      CarinRtpbc Version: 0.1.08  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 15, 2019 10:18-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

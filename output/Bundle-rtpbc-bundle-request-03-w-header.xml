@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="rtpbc-bundle-request-03-w-header"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-15T08:52:15.000-05:00"/>
+  </meta>
+  <type value="message"/>
+  <entry>
+    <fullUrl value="http://example.org/MessageHeader/rtpbc-messageheader-request-03"/>
+    <resource>
+      <MessageHeader>
+        <id value="rtpbc-messageheader-request-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">text
+                    </div>
+        </text>
+        <eventCoding>
+          <code value="rtpbc-request"/>
+        </eventCoding>
+        <source>
+          <name value="MyPatientApp"/>
+          <endpoint value="http://example.org/MyPatientApp"/>
+        </source>
+        <focus>
+          <reference value="Claim/rtpbc-claim-03"/>
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/Claim/rtpbc-claim-03"/>
+    <resource>
+      <Claim>
+        <id value="rtpbc-claim-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">text
+                    </div>
+        </text>
+        <identifier>
+          <value value="rtpbc-03"/>
+        </identifier>
+        <status value="active"/>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+            <code value="pharmacy"/>
+            <display value="Pharmacy"/>
+          </coding>
+        </type>
+        <use value="predetermination"/>
+        <patient>
+          <reference value="Patient/rtpbc-patient-03"/>
+        </patient>
+        <created value="2019-11-01T11:20:54-05:00"/>
+        <provider>
+          <reference value="Organization/rtpbc-organization-03"/>
+        </provider>
+        <priority>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+            <code value="normal"/>
+            <display value="Normal"/>
+          </coding>
+        </priority>
+        <prescription>
+          <reference value="MedicationRequest/rtpbc-medicationrequest-03"/>
+        </prescription>
+        <careTeam>
+          <sequence value="1"/>
+          <provider>
+            <reference value="Practitioner/rtpbc-practitioner-03"/>
+          </provider>
+        </careTeam>
+        <insurance>
+          <sequence value="1"/>
+          <focal value="true"/>
+          <coverage>
+            <reference value="Coverage/rtpbc-coverage-03"/>
+          </coverage>
+        </insurance>
+        <item>
+          <sequence value="1"/>
+          <careTeamSequence value="1"/>
+          <productOrService>
+            <coding>
+              <system value="http://example.org/ndc11/placeholder"/>
+              <code value="00777310402"/>
+              <display value="Prozac 10mg capsule"/>
+            </coding>
+          </productOrService>
+          <quantity>
+            <value value="60"/>
+            <unit value="EA"/>
+          </quantity>
+        </item>
+      </Claim>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/Patient/rtpbc-patient-03"/>
+    <resource>
+      <Patient>
+        <id value="rtpbc-patient-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
+                        <div class="hapiHeaderText">Jane 
+                            <b>DOE </b>
+                        </div>
+                        <table class="hapiPropertyTable">
+                            <tbody>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>
+                                        <span>100 Oak Court </span>
+                                        <br/>
+                                        <span>Madison </span>
+                                        <span>WI </span>
+                                        <span>US </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth</td>
+                                    <td>
+                                        <span>05 December 1975</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+        </text>
+        <name>
+          <family value="Doe"/>
+          <given value="Jane"/>
+        </name>
+        <gender value="female"/>
+        <birthDate value="1975-12-05"/>
+        <address>
+          <line value="100 Oak Court"/>
+          <city value="Madison"/>
+          <state value="WI"/>
+          <postalCode value="53510"/>
+          <country value="US"/>
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/Coverage/rtpbc-coverage-03"/>
+    <resource>
+      <Coverage>
+        <id value="rtpbc-coverage-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-coverage-03</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href="Patient-rtpbc-patient-03.html">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>payor</b>: </p><blockquote><p><b>class</b></p><p><b>type</b>: RX BIN <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxbin' = 'RX BIN)</span></p><p><b>value</b>: BIN001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX PCN <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxpcn' = 'RX PCN)</span></p><p><b>value</b>: PCN002</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: Group <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'group' = 'Group)</span></p><p><b>value</b>: GROUP0001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Id <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxid' = 'RX Id)</span></p><p><b>value</b>: MEMBER000001</p></blockquote></div>
+        </text>
+        <status value="active"/>
+        <beneficiary>
+          <reference value="Patient/rtpbc-patient-03"/>
+        </beneficiary>
+        <payor>
+          <identifier>
+            <value value="Pharmacy Plans US"/>
+          </identifier>
+        </payor>
+        <class>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+              <code value="rxbin"/>
+            </coding>
+          </type>
+          <value value="BIN001"/>
+        </class>
+        <class>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+              <code value="rxpcn"/>
+            </coding>
+          </type>
+          <value value="PCN002"/>
+        </class>
+        <class>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+              <code value="group"/>
+            </coding>
+          </type>
+          <value value="GROUP0001"/>
+        </class>
+        <class>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+              <code value="rxid"/>
+            </coding>
+          </type>
+          <value value="MEMBER000001"/>
+        </class>
+      </Coverage>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/MedicationRequest/rtpbc-medicationrequest-03"/>
+    <resource>
+      <MedicationRequest>
+        <id value="rtpbc-medicationrequest-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-medicationrequest-03</p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>reported</b>: true</p><p><b>medication</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>subject</b>: <a href="Patient-rtpbc-patient-03.html">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>requester</b>: <a href="Practitioner-rtpbc-practitioner-03.html">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></p><h3>DispenseRequests</h3><table class="grid"><tr><td>-</td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>60 EA</td><td>30 days<span style="background: LightGoldenRodYellow"> (Details: UCUM code d = 'd')</span></td><td><a href="Organization-rtpbc-organization-03.html">Generated Summary: id: rtpbc-organization-03; 9876543210; name: Hometown Drug; ph: 6081234567</a></td></tr></table></div>
+        </text>
+        <status value="draft"/>
+        <intent value="proposal"/>
+        <reportedBoolean value="true"/>
+        <medicationCodeableConcept>
+          <coding>
+            <system value="http://example.org/ndc11/placeholder"/>
+            <code value="00777310402"/>
+            <display value="Prozac 10mg capsule"/>
+          </coding>
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="Patient/rtpbc-patient-03"/>
+        </subject>
+        <requester>
+          <reference value="Practitioner/rtpbc-practitioner-03"/>
+        </requester>
+        <dispenseRequest>
+          <quantity>
+            <value value="60"/>
+            <unit value="EA"/>
+          </quantity>
+          <expectedSupplyDuration>
+            <value value="30"/>
+            <unit value="days"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+          </expectedSupplyDuration>
+          <performer>
+            <reference value="Organization/rtpbc-organization-03"/>
+          </performer>
+        </dispenseRequest>
+      </MedicationRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/Practitioner/rtpbc-practitioner-03"/>
+    <resource>
+      <Practitioner>
+        <id value="rtpbc-practitioner-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-practitioner-03</p><p><b>identifier</b>: 1234567890</p><p><b>name</b>: Johnson </p></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/us-npi"/>
+          <value value="1234567890"/>
+        </identifier>
+        <name>
+          <family value="Johnson"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://example.org/Organization/rtpbc-organization-03"/>
+    <resource>
+      <Organization>
+        <id value="rtpbc-organization-03"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03</p><p><b>identifier</b>: 9876543210</p><p><b>name</b>: Hometown Drug</p><p><b>telecom</b>: ph: 6081234567</p><p><b>address</b>: 900 9th Street Madison WI 53535 US </p></div>
+        </text>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/us-npi"/>
+          <value value="9876543210"/>
+        </identifier>
+        <name value="Hometown Drug"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="6081234567"/>
+        </telecom>
+        <address>
+          <line value="900 9th Street"/>
+          <city value="Madison"/>
+          <state value="WI"/>
+          <postalCode value="53535"/>
+          <country value="US"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+</Bundle>

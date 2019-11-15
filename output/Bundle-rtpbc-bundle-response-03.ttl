@@ -9,8 +9,8 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-bundle-response-03"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "7" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-13T14:56:12.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "8" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-14T17:29:04.000-05:00"^^xsd:dateTime ]
   ];
   fhir:Bundle.type [ fhir:value "collection"];
   fhir:Bundle.entry [
@@ -117,6 +117,11 @@
   ];
   fhir:ClaimResponse.addItem [
      fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" ];
+       fhir:Extension.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+     ];
      fhir:ClaimResponse.addItem.itemSequence [
        fhir:value "1"^^xsd:positiveInteger;
        fhir:index 0

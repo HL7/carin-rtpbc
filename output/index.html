@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.07). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.08). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -296,17 +296,19 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 
 <h3 id="change-log">Change log</h3>
 
-<p><strong>0.1.07 (This version):</strong> Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach.</p>
+<p><strong>0.1.08 (This version):</strong> Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.</p>
 
-<p><strong>0.1.06:</strong> Added the Coverage resource into the request content illustration (inadvertently left it out earlier)</p>
+<p><strong>0.1.07:</strong> Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach.</p>
 
-<p><strong>0.1.05:</strong> Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material</p>
+<p><strong>0.1.06:</strong> Added the Coverage resource into the request content illustration (inadvertently left it out earlier).</p>
+
+<p><strong>0.1.05:</strong> Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material.</p>
 
 <p><strong>0.1.04:</strong> Addressed broken page links, made small profile adjustments in ClaimResponse.</p>
 
 <p><strong>0.1.03:</strong> Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.</p>
 
-<p><strong>0.1.02 :</strong> Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup</p>
+<p><strong>0.1.02 :</strong> Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup.</p>
 
 <p><strong>0.1.01:</strong> Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
 
@@ -372,7 +374,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.07  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Wed, Nov 13, 2019 18:14-0600.
+      CarinRtpbc Version: 0.1.08  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Nov 15, 2019 10:18-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

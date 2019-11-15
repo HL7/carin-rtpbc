@@ -64,5 +64,19 @@ active: profiles
 
 ### Extensions
 
-**No extensions are defined for this implementation guide**
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-extension-isAlternative.html">CarinRtpbcExtensionIsAlternative</a></td>
+<td>Whether this added line item is an alternative to the product or service specified in the associated line item in the Claim</td>
+</tr>
+</tbody>
+</table>
+
 

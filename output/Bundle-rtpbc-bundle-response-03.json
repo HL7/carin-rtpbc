@@ -2,8 +2,8 @@
   "resourceType": "Bundle",
   "id": "rtpbc-bundle-response-03",
   "meta": {
-    "versionId": "7",
-    "lastUpdated": "2019-11-13T14:56:12.000-05:00"
+    "versionId": "8",
+    "lastUpdated": "2019-11-14T17:29:04.000-05:00"
   },
   "type": "collection",
   "entry": [
@@ -105,6 +105,12 @@
         ],
         "addItem": [
           {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative",
+                "valueBoolean": true
+              }
+            ],
             "itemSequence": [
               1
             ],

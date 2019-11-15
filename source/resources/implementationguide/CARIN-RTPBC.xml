@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="CARIN-RTPBC"/>
     <meta>
-        <versionId value="217"/>
-        <lastUpdated value="2019-11-13T18:14:21.000-05:00"/>
+        <versionId value="228"/>
+        <lastUpdated value="2019-11-15T10:01:57.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -15,7 +15,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/carin-bb/ImplementationGuide/CARIN-RTPBC"/>
-    <version value="0.1.07"/>
+    <version value="0.1.08"/>
     <name value="CarinRtpbc"/>
     <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
     <status value="draft"/>
@@ -34,7 +34,7 @@
             <value value="fm@frankmckinney.com"/>
         </telecom>
     </contact>
-    <description value="This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.&#xA;&#xA;Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed. Specifically... &#xA;* how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply&#xA;* discount pricing available for the medication. &#xA;&#xA;Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.&#xA;&#xA;The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;*This guide is currently in development *&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;&#xA;### Scope of this guide&#xA;**Consumer RTPBC is intended to be used...**&#xA;* in the United States (as it reflects unique US pharmacy insurance roles and conventions)&#xA;* for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures&#xA;* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*&#xA;&#xA;***Relationship to the NCPDP provider-focused RTPBC transactions*** &lt;br/&gt;&#xA;This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort.&#xA;&#xA;***Related information flows outside of consumer RTPBC*** &lt;br/&gt;&#xA;The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Feedback&#xA;This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.&#xA;&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG&#xA;&#xA;* or send a note to fm@frankmckinney.com&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;### Change log&#xA;&#xA;**0.1.07 (This version):** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. &#xA;&#xA;**0.1.06:** Added the Coverage resource into the request content illustration (inadvertently left it out earlier)&#xA;&#xA;**0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material&#xA;&#xA;**0.1.04:** Addressed broken page links, made small profile adjustments in ClaimResponse.&#xA;&#xA;**0.1.03:** Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.&#xA;&#xA;**0.1.02 :** Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup &#xA;&#xA;**0.1.01:** Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. &#xA;&#xA;**0.1.00:** Initial resources and narrative content.&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;### Known issues and to-dos&#xA;* The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out...&#xA;&#xA;&#xA;&lt;br/&gt;"/>
+    <description value="This is a guide for implementing the **consumer-focused real-time pharmacy benefit check** (consumer RTPBC) using FHIR R4.&#xA;&#xA;Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed. Specifically... &#xA;* how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply&#xA;* discount pricing available for the medication. &#xA;&#xA;Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.&#xA;&#xA;The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;*This guide is currently in development *&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;&#xA;### Scope of this guide&#xA;**Consumer RTPBC is intended to be used...**&#xA;* in the United States (as it reflects unique US pharmacy insurance roles and conventions)&#xA;* for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures&#xA;* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*&#xA;&#xA;***Relationship to the NCPDP provider-focused RTPBC transactions*** &lt;br/&gt;&#xA;This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort.&#xA;&#xA;***Related information flows outside of consumer RTPBC*** &lt;br/&gt;&#xA;The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*&#xA;&#xA;&lt;br&gt;&#xA;&#xA;### Feedback&#xA;This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.&#xA;&#xA;Comments and suggestions are welcome on our Zulip stream...&#xA;https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG&#xA;&#xA;* or send a note to fm@frankmckinney.com&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;### Change log&#xA;&#xA;**0.1.08 (This version):** Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.&#xA;&#xA;**0.1.07:** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. &#xA;&#xA;**0.1.06:** Added the Coverage resource into the request content illustration (inadvertently left it out earlier).&#xA;&#xA;**0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material.&#xA;&#xA;**0.1.04:** Addressed broken page links, made small profile adjustments in ClaimResponse.&#xA;&#xA;**0.1.03:** Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.&#xA;&#xA;**0.1.02 :** Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup.&#xA;&#xA;**0.1.01:** Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. &#xA;&#xA;**0.1.00:** Initial resources and narrative content.&#xA;&#xA;&lt;br/&gt;&#xA;&#xA;### Known issues and to-dos&#xA;* The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out...&#xA;&#xA;&#xA;&lt;br/&gt;"/>
     <packageId value="hl7.fhir.us.carin-rtpbc"/>
     <fhirVersion value="4.0.1"/>
     <definition>
@@ -254,6 +254,30 @@
             <name value="CarinRtbpcPatientPayTypeValueSet"/>
             <exampleBoolean value="false"/>
         </resource>
+        <resource>
+            <reference>
+                <reference value="StructureDefinition/carin-rtpbc-extension-isAlternative"/>
+                <display value="CarinRtpbcExtensionIsAlternative"/>
+            </reference>
+            <name value="CarinRtpbcExtensionIsAlternative"/>
+            <exampleBoolean value="false"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/rtpbc-bundle-response-03-w-header"/>
+                <display value="rtpbc-bundle-response-03-w-header"/>
+            </reference>
+            <name value="rtpbc-bundle-response-03-w-header"/>
+            <exampleBoolean value="true"/>
+        </resource>
+        <resource>
+            <reference>
+                <reference value="Bundle/rtpbc-bundle-request-03-w-header"/>
+                <display value="rtpbc-bundle-request-03-w-header"/>
+            </reference>
+            <name value="rtpbc-bundle-request-03-w-header"/>
+            <exampleBoolean value="true"/>
+        </resource>
         <page>
             <nameUrl value="Guidance.html"/>
             <title value="Guidance"/>
@@ -269,8 +293,13 @@
                 <generation value="markdown"/>
             </page>
             <page>
-                <nameUrl value="Submit_operation.html"/>
-                <title value="Submit operation"/>
+                <nameUrl value="Submission_method.html"/>
+                <title value="Submission method"/>
+                <generation value="markdown"/>
+            </page>
+            <page>
+                <nameUrl value="Security.html"/>
+                <title value="Security"/>
                 <generation value="markdown"/>
             </page>
             <page>

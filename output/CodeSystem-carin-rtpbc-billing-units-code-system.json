@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Billing Units Code System</h2><div><p>This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">GM<a name=\"carin-rtpbc-billing-units-code-system-GM\"> </a></td><td>Gram</td><td>Quantity unit of measure for products billed as a number of grams</td></tr><tr><td style=\"white-space:nowrap\">ML<a name=\"carin-rtpbc-billing-units-code-system-ML\"> </a></td><td>Milliliter</td><td>Quantity unit of measure for products billed as a number of milliliters</td></tr><tr><td style=\"white-space:nowrap\">EA<a name=\"carin-rtpbc-billing-units-code-system-EA\"> </a></td><td>Each</td><td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-units",
-  "version": "0.1.07",
+  "version": "0.1.08",
   "name": "CarinRtpbcBillingUnitsCodeSystem",
   "title": "CARIN RTPBC Billing Units Code System",
   "status": "draft",
-  "date": "2019-11-13T18:14:34-06:00",
+  "date": "2019-11-15T10:18:36-06:00",
   "publisher": "CARIN Alliance",
   "description": "This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.",
   "caseSensitive": false,

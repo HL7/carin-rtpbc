@@ -1,4 +1,4 @@
-### Example RTPBC request scenario
+### Example RTPBC request scenario using $submit operation
 In this example:
 * the client is a patient application
 * the server is the patient's insurer (specifically, the party that manages the patient's pharmacy benefit)

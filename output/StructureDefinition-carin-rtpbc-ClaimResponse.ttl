@@ -9,15 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-ClaimResponse"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "54" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-06T16:24:15.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "59" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-14T15:19:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the   \n                        \n                        \n                        \n                        \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode   \n                    \n                    \n                    \n                    \n                    </div>\n                </div>\n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              \n                    </div>\n                </div>\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.07"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.08"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -4881,16 +4881,17 @@
        fhir:index 105;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.extension" ];
-       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
+       fhir:ElementDefinition.slicing [
+         fhir:ElementDefinition.slicing.discriminator [
+           fhir:index 0;
+           fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
+           fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "url" ]
+         ];
+         fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
+         fhir:ElementDefinition.slicing.rules [ fhir:value "open" ]
        ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "An Extension" ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "*" ];
        fhir:ElementDefinition.base [
@@ -4926,14 +4927,54 @@
          ]
        ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 106;
+       fhir:Element.id [ fhir:value "ClaimResponse.addItem.extension:isAlternative" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "isAlternative" ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service" ];
+       fhir:ElementDefinition.comment [ fhir:value "Set to true in all real-time pharmacy benefit check response .addItems." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.constraint [
+         fhir:index 0;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
+         ]
+       ], [
+         fhir:index 1;
+         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
+         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
+         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
+         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
+         fhir:ElementDefinition.constraint.source [
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
+         ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 107;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -4993,7 +5034,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 107;
+       fhir:index 108;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.itemSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.itemSequence" ];
        fhir:ElementDefinition.label [ fhir:value "Associated request Item Sequence" ];
@@ -5028,7 +5069,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 108;
+       fhir:index 109;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detailSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detailSequence" ];
        fhir:ElementDefinition.short [ fhir:value "Detail sequence number" ];
@@ -5060,7 +5101,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 109;
+       fhir:index 110;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.subdetailSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.subdetailSequence" ];
        fhir:ElementDefinition.short [ fhir:value "Subdetail sequence number" ];
@@ -5092,7 +5133,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 110;
+       fhir:index 111;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider" ];
        fhir:ElementDefinition.label [ fhir:value "Priced Pharmacy" ];
@@ -5136,7 +5177,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "FiveWs.source" ]
        ]
      ], [
-       fhir:index 111;
+       fhir:index 112;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.id" ];
        fhir:ElementDefinition.representation [
@@ -5169,7 +5210,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 112;
+       fhir:index 113;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.extension" ];
        fhir:ElementDefinition.slicing [
@@ -5233,7 +5274,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 113;
+       fhir:index 114;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.reference" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Reference to Priced Pharmacy" ];
@@ -5276,7 +5317,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 114;
+       fhir:index 115;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.type" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.type" ];
        fhir:ElementDefinition.short [ fhir:value "Type the reference refers to (e.g. \"Patient\")" ];
@@ -5326,7 +5367,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 115;
+       fhir:index 116;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.identifier" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.identifier" ];
        fhir:ElementDefinition.short [ fhir:value "Logical reference, when literal reference is not known" ];
@@ -5363,7 +5404,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value ".identifier" ]
        ]
      ], [
-       fhir:index 116;
+       fhir:index 117;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.display" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -5405,7 +5446,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 117;
+       fhir:index 118;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService" ];
        fhir:ElementDefinition.label [ fhir:value "Product" ];
@@ -5448,7 +5489,7 @@
          ]
        ]
      ], [
-       fhir:index 118;
+       fhir:index 119;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.id" ];
        fhir:ElementDefinition.representation [
@@ -5481,7 +5522,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 119;
+       fhir:index 120;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.extension" ];
        fhir:ElementDefinition.slicing [
@@ -5545,7 +5586,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 120;
+       fhir:index 121;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -5592,7 +5633,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 121;
+       fhir:index 122;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.id" ];
        fhir:ElementDefinition.representation [
@@ -5625,7 +5666,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 122;
+       fhir:index 123;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.extension" ];
        fhir:ElementDefinition.slicing [
@@ -5689,7 +5730,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 123;
+       fhir:index 124;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.system" ];
        fhir:ElementDefinition.short [ fhir:value "Identity of the terminology system" ];
@@ -5736,7 +5777,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" ]
        ]
      ], [
-       fhir:index 124;
+       fhir:index 125;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.version" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.version" ];
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ];
@@ -5781,7 +5822,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" ]
        ]
      ], [
-       fhir:index 125;
+       fhir:index 126;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.code" ];
        fhir:ElementDefinition.short [ fhir:value "Symbol in syntax defined by the system" ];
@@ -5827,7 +5868,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" ]
        ]
      ], [
-       fhir:index 126;
+       fhir:index 127;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.display" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -5879,7 +5920,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" ]
        ]
      ], [
-       fhir:index 127;
+       fhir:index 128;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.userSelected" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.userSelected" ];
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ];
@@ -5925,7 +5966,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]" ]
        ]
      ], [
-       fhir:index 128;
+       fhir:index 129;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -5976,7 +6017,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText" ]
        ]
      ], [
-       fhir:index 129;
+       fhir:index 130;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.modifier" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.modifier" ];
        fhir:ElementDefinition.short [ fhir:value "Service/Product billing modifiers" ];
@@ -6027,7 +6068,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.C, 24.D mods" ]
        ]
      ], [
-       fhir:index 130;
+       fhir:index 131;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.programCode" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.programCode" ];
        fhir:ElementDefinition.short [ fhir:value "Program the product or service is provided under" ];
@@ -6078,7 +6119,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.H" ]
        ]
      ], [
-       fhir:index 131;
+       fhir:index 132;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.serviced[x]" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.serviced[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Date or dates of service or product delivery" ];
@@ -6122,7 +6163,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.A" ]
        ]
      ], [
-       fhir:index 132;
+       fhir:index 133;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.location[x]" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.location[x]" ];
        fhir:ElementDefinition.short [ fhir:value "Place of service or where product was supplied" ];
@@ -6187,7 +6228,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.B" ]
        ]
      ], [
-       fhir:index 133;
+       fhir:index 134;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity" ];
        fhir:ElementDefinition.label [ fhir:value "Priced Quantity" ];
@@ -6231,7 +6272,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.G" ]
        ]
      ], [
-       fhir:index 134;
+       fhir:index 135;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.id" ];
        fhir:ElementDefinition.representation [
@@ -6264,7 +6305,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 135;
+       fhir:index 136;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.extension" ];
        fhir:ElementDefinition.slicing [
@@ -6328,7 +6369,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 136;
+       fhir:index 137;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.value" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.value" ];
        fhir:ElementDefinition.label [ fhir:value "Quantity in Billing Units" ];
@@ -6372,7 +6413,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PQ.value, CO.value, MO.value, IVL.high or IVL.low depending on the value" ]
        ]
      ], [
-       fhir:index 137;
+       fhir:index 138;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.comparator" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.comparator" ];
        fhir:ElementDefinition.short [ fhir:value "< | <= | >= | > - how to understand the value" ];
@@ -6428,7 +6469,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "IVL properties" ]
        ]
      ], [
-       fhir:index 138;
+       fhir:index 139;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.unit" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -6484,7 +6525,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PQ.unit" ]
        ]
      ], [
-       fhir:index 139;
+       fhir:index 140;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.system" ];
        fhir:ElementDefinition.short [ fhir:value "System that defines coded unit form" ];
@@ -6529,7 +6570,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "CO.codeSystem, PQ.translation.codeSystem" ]
        ]
      ], [
-       fhir:index 140;
+       fhir:index 141;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.code" ];
        fhir:ElementDefinition.short [ fhir:value "Coded form of the unit" ];
@@ -6571,7 +6612,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "PQ.code, MO.currency, PQ.translation.code" ]
        ]
      ], [
-       fhir:index 141;
+       fhir:index 142;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.unitPrice" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.unitPrice" ];
        fhir:ElementDefinition.short [ fhir:value "Fee, charge or cost per item" ];
@@ -6603,7 +6644,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 142;
+       fhir:index 143;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.factor" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.factor" ];
        fhir:ElementDefinition.short [ fhir:value "Price scaling factor" ];
@@ -6636,7 +6677,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 143;
+       fhir:index 144;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.net" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.net" ];
        fhir:ElementDefinition.short [ fhir:value "Total item cost" ];
@@ -6674,7 +6715,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.F" ]
        ]
      ], [
-       fhir:index 144;
+       fhir:index 145;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.bodySite" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.bodySite" ];
        fhir:ElementDefinition.short [ fhir:value "Anatomical location" ];
@@ -6720,7 +6761,7 @@
          ]
        ]
      ], [
-       fhir:index 145;
+       fhir:index 146;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.subSite" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.subSite" ];
        fhir:ElementDefinition.short [ fhir:value "Anatomical sub-location" ];
@@ -6765,7 +6806,7 @@
          ]
        ]
      ], [
-       fhir:index 146;
+       fhir:index 147;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.noteNumber" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.noteNumber" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Number" ];
@@ -6799,7 +6840,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 147;
+       fhir:index 148;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication" ];
        fhir:ElementDefinition.label [ fhir:value "Alternative Product and Pharmacy Determination" ];
@@ -6832,7 +6873,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 148;
+       fhir:index 149;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.id" ];
        fhir:ElementDefinition.representation [
@@ -6865,7 +6906,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 149;
+       fhir:index 150;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -6920,7 +6961,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 150;
+       fhir:index 151;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -6980,7 +7021,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 151;
+       fhir:index 152;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.category" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.category" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Component" ];
@@ -7023,7 +7064,7 @@
          ]
        ]
      ], [
-       fhir:index 152;
+       fhir:index 153;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.reason" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.reason" ];
        fhir:ElementDefinition.short [ fhir:value "Explanation of adjudication outcome" ];
@@ -7069,7 +7110,7 @@
          ]
        ]
      ], [
-       fhir:index 153;
+       fhir:index 154;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Component Amount" ];
@@ -7104,7 +7145,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 154;
+       fhir:index 155;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.id" ];
        fhir:ElementDefinition.representation [
@@ -7137,7 +7178,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 155;
+       fhir:index 156;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.extension" ];
        fhir:ElementDefinition.slicing [
@@ -7201,7 +7242,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 156;
+       fhir:index 157;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.value" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.value" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Amount Value" ];
@@ -7241,7 +7282,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "MO.Value" ]
        ]
      ], [
-       fhir:index 157;
+       fhir:index 158;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.currency" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.currency" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Amount Currency" ];
@@ -7284,7 +7325,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "MO.Currency" ]
        ]
      ], [
-       fhir:index 158;
+       fhir:index 159;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.value" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.value" ];
        fhir:ElementDefinition.short [ fhir:value "Non-monetary value" ];
@@ -7317,7 +7358,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 159;
+       fhir:index 160;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -7353,7 +7394,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 160;
+       fhir:index 161;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.id" ];
        fhir:ElementDefinition.representation [
@@ -7386,7 +7427,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 161;
+       fhir:index 162;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -7441,7 +7482,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 162;
+       fhir:index 163;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -7501,7 +7542,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 163;
+       fhir:index 164;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.productOrService" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.productOrService" ];
        fhir:ElementDefinition.short [ fhir:value "Billing, service, product, or drug code" ];
@@ -7547,7 +7588,7 @@
          ]
        ]
      ], [
-       fhir:index 164;
+       fhir:index 165;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.modifier" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.modifier" ];
        fhir:ElementDefinition.short [ fhir:value "Service/Product billing modifiers" ];
@@ -7598,7 +7639,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.C, 24.D mods" ]
        ]
      ], [
-       fhir:index 165;
+       fhir:index 166;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.quantity" ];
        fhir:ElementDefinition.short [ fhir:value "Count of products or services" ];
@@ -7640,7 +7681,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.G" ]
        ]
      ], [
-       fhir:index 166;
+       fhir:index 167;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.unitPrice" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.unitPrice" ];
        fhir:ElementDefinition.short [ fhir:value "Fee, charge or cost per item" ];
@@ -7672,7 +7713,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 167;
+       fhir:index 168;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.factor" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.factor" ];
        fhir:ElementDefinition.short [ fhir:value "Price scaling factor" ];
@@ -7705,7 +7746,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 168;
+       fhir:index 169;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.net" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.net" ];
        fhir:ElementDefinition.short [ fhir:value "Total item cost" ];
@@ -7743,7 +7784,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.F" ]
        ]
      ], [
-       fhir:index 169;
+       fhir:index 170;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.noteNumber" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.noteNumber" ];
        fhir:ElementDefinition.short [ fhir:value "Applicable note numbers" ];
@@ -7775,7 +7816,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 170;
+       fhir:index 171;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.adjudication" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.adjudication" ];
        fhir:ElementDefinition.short [ fhir:value "Added items detail adjudication" ];
@@ -7803,7 +7844,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 171;
+       fhir:index 172;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -7839,7 +7880,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 172;
+       fhir:index 173;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.id" ];
        fhir:ElementDefinition.representation [
@@ -7872,7 +7913,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 173;
+       fhir:index 174;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -7927,7 +7968,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 174;
+       fhir:index 175;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -7987,7 +8028,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 175;
+       fhir:index 176;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.productOrService" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.productOrService" ];
        fhir:ElementDefinition.short [ fhir:value "Billing, service, product, or drug code" ];
@@ -8033,7 +8074,7 @@
          ]
        ]
      ], [
-       fhir:index 176;
+       fhir:index 177;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.modifier" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.modifier" ];
        fhir:ElementDefinition.short [ fhir:value "Service/Product billing modifiers" ];
@@ -8084,7 +8125,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.C, 24.D mods" ]
        ]
      ], [
-       fhir:index 177;
+       fhir:index 178;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.quantity" ];
        fhir:ElementDefinition.short [ fhir:value "Count of products or services" ];
@@ -8126,7 +8167,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.G" ]
        ]
      ], [
-       fhir:index 178;
+       fhir:index 179;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.unitPrice" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.unitPrice" ];
        fhir:ElementDefinition.short [ fhir:value "Fee, charge or cost per item" ];
@@ -8158,7 +8199,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 179;
+       fhir:index 180;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.factor" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.factor" ];
        fhir:ElementDefinition.short [ fhir:value "Price scaling factor" ];
@@ -8191,7 +8232,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 180;
+       fhir:index 181;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.net" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.net" ];
        fhir:ElementDefinition.short [ fhir:value "Total item cost" ];
@@ -8229,7 +8270,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "24.F" ]
        ]
      ], [
-       fhir:index 181;
+       fhir:index 182;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.noteNumber" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.noteNumber" ];
        fhir:ElementDefinition.short [ fhir:value "Applicable note numbers" ];
@@ -8261,7 +8302,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 182;
+       fhir:index 183;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.detail.subDetail.adjudication" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.detail.subDetail.adjudication" ];
        fhir:ElementDefinition.short [ fhir:value "Added items detail adjudication" ];
@@ -8289,7 +8330,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 183;
+       fhir:index 184;
        fhir:Element.id [ fhir:value "ClaimResponse.adjudication" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.adjudication" ];
        fhir:ElementDefinition.short [ fhir:value "Header-level adjudication" ];
@@ -8318,7 +8359,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 184;
+       fhir:index 185;
        fhir:Element.id [ fhir:value "ClaimResponse.total" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -8356,7 +8397,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 185;
+       fhir:index 186;
        fhir:Element.id [ fhir:value "ClaimResponse.total.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.total.id" ];
        fhir:ElementDefinition.representation [
@@ -8389,7 +8430,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 186;
+       fhir:index 187;
        fhir:Element.id [ fhir:value "ClaimResponse.total.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.total.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -8444,7 +8485,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 187;
+       fhir:index 188;
        fhir:Element.id [ fhir:value "ClaimResponse.total.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.total.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -8504,7 +8545,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 188;
+       fhir:index 189;
        fhir:Element.id [ fhir:value "ClaimResponse.total.category" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.total.category" ];
        fhir:ElementDefinition.short [ fhir:value "Type of adjudication information" ];
@@ -8550,7 +8591,7 @@
          ]
        ]
      ], [
-       fhir:index 189;
+       fhir:index 190;
        fhir:Element.id [ fhir:value "ClaimResponse.total.amount" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.total.amount" ];
        fhir:ElementDefinition.short [ fhir:value "Financial total for the category" ];
@@ -8582,7 +8623,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 190;
+       fhir:index 191;
        fhir:Element.id [ fhir:value "ClaimResponse.payment" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -8619,7 +8660,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 191;
+       fhir:index 192;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.id" ];
        fhir:ElementDefinition.representation [
@@ -8652,7 +8693,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 192;
+       fhir:index 193;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -8707,7 +8748,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 193;
+       fhir:index 194;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -8767,7 +8808,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 194;
+       fhir:index 195;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.type" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.type" ];
        fhir:ElementDefinition.short [ fhir:value "Partial or complete payment" ];
@@ -8812,7 +8853,7 @@
          ]
        ]
      ], [
-       fhir:index 195;
+       fhir:index 196;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.adjustment" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.adjustment" ];
        fhir:ElementDefinition.short [ fhir:value "Payment adjustment for non-claim issues" ];
@@ -8845,7 +8886,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 196;
+       fhir:index 197;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.adjustmentReason" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.adjustmentReason" ];
        fhir:ElementDefinition.short [ fhir:value "Explanation for the adjustment" ];
@@ -8890,7 +8931,7 @@
          ]
        ]
      ], [
-       fhir:index 197;
+       fhir:index 198;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.date" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.date" ];
        fhir:ElementDefinition.short [ fhir:value "Expected date of payment" ];
@@ -8922,7 +8963,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 198;
+       fhir:index 199;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.amount" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.amount" ];
        fhir:ElementDefinition.short [ fhir:value "Payable amount after adjustment" ];
@@ -8954,7 +8995,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 199;
+       fhir:index 200;
        fhir:Element.id [ fhir:value "ClaimResponse.payment.identifier" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.payment.identifier" ];
        fhir:ElementDefinition.short [ fhir:value "Business identifier for the payment" ];
@@ -8987,7 +9028,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 200;
+       fhir:index 201;
        fhir:Element.id [ fhir:value "ClaimResponse.fundsReserve" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.fundsReserve" ];
        fhir:ElementDefinition.short [ fhir:value "Funds reserved status" ];
@@ -9037,7 +9078,7 @@
          ]
        ]
      ], [
-       fhir:index 201;
+       fhir:index 202;
        fhir:Element.id [ fhir:value "ClaimResponse.formCode" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.formCode" ];
        fhir:ElementDefinition.short [ fhir:value "Printed form identifier" ];
@@ -9087,7 +9128,7 @@
          ]
        ]
      ], [
-       fhir:index 202;
+       fhir:index 203;
        fhir:Element.id [ fhir:value "ClaimResponse.form" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.form" ];
        fhir:ElementDefinition.short [ fhir:value "Printed reference or actual form" ];
@@ -9120,7 +9161,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 203;
+       fhir:index 204;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -9159,7 +9200,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 204;
+       fhir:index 205;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.id" ];
        fhir:ElementDefinition.representation [
@@ -9192,7 +9233,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 205;
+       fhir:index 206;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -9247,7 +9288,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 206;
+       fhir:index 207;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -9307,7 +9348,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 207;
+       fhir:index 208;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.number" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.number" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Number" ];
@@ -9342,7 +9383,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 208;
+       fhir:index 209;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.type" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.type" ];
        fhir:ElementDefinition.short [ fhir:value "display | print | printoper" ];
@@ -9391,7 +9432,7 @@
          ]
        ]
      ], [
-       fhir:index 209;
+       fhir:index 210;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.text" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.text" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Text" ];
@@ -9425,7 +9466,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 210;
+       fhir:index 211;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.language" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.language" ];
        fhir:ElementDefinition.short [ fhir:value "Language of the text" ];
@@ -9482,7 +9523,7 @@
          ]
        ]
      ], [
-       fhir:index 211;
+       fhir:index 212;
        fhir:Element.id [ fhir:value "ClaimResponse.communicationRequest" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.communicationRequest" ];
        fhir:ElementDefinition.short [ fhir:value "Request for additional information" ];
@@ -9520,7 +9561,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 212;
+       fhir:index 213;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -9564,7 +9605,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "Coverage" ]
        ]
      ], [
-       fhir:index 213;
+       fhir:index 214;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.id" ];
        fhir:ElementDefinition.representation [
@@ -9597,7 +9638,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 214;
+       fhir:index 215;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -9652,7 +9693,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 215;
+       fhir:index 216;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -9712,7 +9753,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 216;
+       fhir:index 217;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.sequence" ];
        fhir:ElementDefinition.short [ fhir:value "Insurance instance identifier" ];
@@ -9745,7 +9786,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 217;
+       fhir:index 218;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.focal" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.focal" ];
        fhir:ElementDefinition.short [ fhir:value "Coverage to be used for adjudication" ];
@@ -9779,7 +9820,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 218;
+       fhir:index 219;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.coverage" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.coverage" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
@@ -9818,7 +9859,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 219;
+       fhir:index 220;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.businessArrangement" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.businessArrangement" ];
        fhir:ElementDefinition.short [ fhir:value "Additional provider contract number" ];
@@ -9850,7 +9891,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 220;
+       fhir:index 221;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.claimResponse" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.claimResponse" ];
        fhir:ElementDefinition.short [ fhir:value "Adjudication results" ];
@@ -9888,7 +9929,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 221;
+       fhir:index 222;
        fhir:Element.id [ fhir:value "ClaimResponse.error" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -9928,7 +9969,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 222;
+       fhir:index 223;
        fhir:Element.id [ fhir:value "ClaimResponse.error.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.id" ];
        fhir:ElementDefinition.representation [
@@ -9961,7 +10002,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 223;
+       fhir:index 224;
        fhir:Element.id [ fhir:value "ClaimResponse.error.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -10016,7 +10057,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 224;
+       fhir:index 225;
        fhir:Element.id [ fhir:value "ClaimResponse.error.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -10076,7 +10117,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 225;
+       fhir:index 226;
        fhir:Element.id [ fhir:value "ClaimResponse.error.itemSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.itemSequence" ];
        fhir:ElementDefinition.short [ fhir:value "Item sequence number" ];
@@ -10108,7 +10149,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 226;
+       fhir:index 227;
        fhir:Element.id [ fhir:value "ClaimResponse.error.detailSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.detailSequence" ];
        fhir:ElementDefinition.short [ fhir:value "Detail sequence number" ];
@@ -10140,7 +10181,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 227;
+       fhir:index 228;
        fhir:Element.id [ fhir:value "ClaimResponse.error.subDetailSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.subDetailSequence" ];
        fhir:ElementDefinition.short [ fhir:value "Subdetail sequence number" ];
@@ -10172,7 +10213,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 228;
+       fhir:index 229;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Reason" ];
@@ -10210,7 +10251,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)" ]
        ]
      ], [
-       fhir:index 229;
+       fhir:index 230;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.id" ];
        fhir:ElementDefinition.representation [
@@ -10243,7 +10284,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 230;
+       fhir:index 231;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.extension" ];
        fhir:ElementDefinition.slicing [
@@ -10307,7 +10348,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 231;
+       fhir:index 232;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.short [ fhir:value "Code defined by a terminology system" ];
@@ -10354,7 +10395,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding" ]
        ]
      ], [
-       fhir:index 232;
+       fhir:index 233;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.id" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.id" ];
        fhir:ElementDefinition.representation [
@@ -10387,7 +10428,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 233;
+       fhir:index 234;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.extension" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.extension" ];
        fhir:ElementDefinition.slicing [
@@ -10451,7 +10492,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 234;
+       fhir:index 235;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.short [ fhir:value "Identity of the terminology system" ];
@@ -10498,7 +10539,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem" ]
        ]
      ], [
-       fhir:index 235;
+       fhir:index 236;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.version" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.version" ];
        fhir:ElementDefinition.short [ fhir:value "Version of the system - if relevant" ];
@@ -10543,7 +10584,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion" ]
        ]
      ], [
-       fhir:index 236;
+       fhir:index 237;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Code" ];
@@ -10590,7 +10631,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code" ]
        ]
      ], [
-       fhir:index 237;
+       fhir:index 238;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.display" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -10641,7 +10682,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName" ]
        ]
      ], [
-       fhir:index 238;
+       fhir:index 239;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.userSelected" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.userSelected" ];
        fhir:ElementDefinition.short [ fhir:value "If this coding was chosen directly by the user" ];
@@ -10687,7 +10728,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]" ]
        ]
      ], [
-       fhir:index 239;
+       fhir:index 240;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.text" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -10992,6 +11033,27 @@
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem" ]
      ], [
        fhir:index 28;
+       fhir:Element.id [ fhir:value "ClaimResponse.addItem.extension:isAlternative" ];
+       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.extension" ];
+       fhir:ElementDefinition.sliceName [ fhir:value "isAlternative" ];
+       fhir:ElementDefinition.short [ fhir:value "Extension" ];
+       fhir:ElementDefinition.definition [ fhir:value "This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service" ];
+       fhir:ElementDefinition.comment [ fhir:value "Set to true in all real-time pharmacy benefit check response .addItems." ];
+       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+       fhir:ElementDefinition.max [ fhir:value "1" ];
+       fhir:ElementDefinition.base [
+         fhir:ElementDefinition.base.path [ fhir:value "DomainResource.extension" ];
+         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
+         fhir:ElementDefinition.base.max [ fhir:value "*" ]
+       ];
+       fhir:ElementDefinition.type [
+         fhir:index 0;
+         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+       ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 29;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.itemSequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.itemSequence" ];
        fhir:ElementDefinition.label [ fhir:value "Associated request Item Sequence" ];
@@ -11001,7 +11063,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 29;
+       fhir:index 30;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider" ];
        fhir:ElementDefinition.label [ fhir:value "Priced Pharmacy" ];
@@ -11019,7 +11081,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 30;
+       fhir:index 31;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.provider.reference" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.provider.reference" ];
        fhir:ElementDefinition.label [ fhir:value "Reference to Priced Pharmacy" ];
@@ -11027,7 +11089,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 31;
+       fhir:index 32;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService" ];
        fhir:ElementDefinition.label [ fhir:value "Product" ];
@@ -11043,25 +11105,25 @@
          ]
        ]
      ], [
-       fhir:index 32;
+       fhir:index 33;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 33;
+       fhir:index 34;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 34;
+       fhir:index 35;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.code" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 35;
+       fhir:index 36;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.productOrService.coding.display" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.productOrService.coding.display" ];
        fhir:ElementDefinition.label [ fhir:value "Product Description" ];
@@ -11070,7 +11132,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 36;
+       fhir:index 37;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity" ];
        fhir:ElementDefinition.label [ fhir:value "Priced Quantity" ];
@@ -11078,7 +11140,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 37;
+       fhir:index 38;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.value" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.value" ];
        fhir:ElementDefinition.label [ fhir:value "Quantity in Billing Units" ];
@@ -11087,7 +11149,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 38;
+       fhir:index 39;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.quantity.unit" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.quantity.unit" ];
        fhir:ElementDefinition.label [ fhir:value "Billing unit of measure" ];
@@ -11104,7 +11166,7 @@
          ]
        ]
      ], [
-       fhir:index 39;
+       fhir:index 40;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.noteNumber" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.noteNumber" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Number" ];
@@ -11113,7 +11175,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 40;
+       fhir:index 41;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication" ];
        fhir:ElementDefinition.label [ fhir:value "Alternative Product and Pharmacy Determination" ];
@@ -11121,7 +11183,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Patient cost and coverage details for an alternative product and pharmacy combination." ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 41;
+       fhir:index 42;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.category" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.category" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Component" ];
@@ -11139,7 +11201,7 @@
          ]
        ]
      ], [
-       fhir:index 42;
+       fhir:index 43;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Component Amount" ];
@@ -11148,7 +11210,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 43;
+       fhir:index 44;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.value" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.value" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Amount Value" ];
@@ -11157,7 +11219,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 44;
+       fhir:index 45;
        fhir:Element.id [ fhir:value "ClaimResponse.addItem.adjudication.amount.currency" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.addItem.adjudication.amount.currency" ];
        fhir:ElementDefinition.label [ fhir:value "Patient Pay Amount Currency" ];
@@ -11169,7 +11231,7 @@
          fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ]
        ]
      ], [
-       fhir:index 45;
+       fhir:index 46;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note" ];
@@ -11177,7 +11239,7 @@
        fhir:ElementDefinition.definition [ fhir:value "Coverage determination for a product / pharmacy combination, in human-readable form. E.g., 'Covered', 'Covered with restriction: PA required', 'Not covered'" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 46;
+       fhir:index 47;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.number" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.number" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Number" ];
@@ -11186,7 +11248,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 47;
+       fhir:index 48;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.text" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.processNote.text" ];
        fhir:ElementDefinition.label [ fhir:value "Determination Note Text" ];
@@ -11194,23 +11256,23 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 48;
+       fhir:index 49;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance" ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 49;
+       fhir:index 50;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.sequence" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 50;
+       fhir:index 51;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.focal" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.focal" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 51;
+       fhir:index 52;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.coverage" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.coverage" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
@@ -11227,7 +11289,7 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 52;
+       fhir:index 53;
        fhir:Element.id [ fhir:value "ClaimResponse.error" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error" ];
        fhir:ElementDefinition.label [ fhir:value "Error Information" ];
@@ -11235,7 +11297,7 @@
        fhir:ElementDefinition.comment [ fhir:value "Must be populated when .outcome = 'error'" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 53;
+       fhir:index 54;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Reason" ];
@@ -11247,19 +11309,19 @@
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)" ]
        ]
      ], [
-       fhir:index 54;
+       fhir:index 55;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 55;
+       fhir:index 56;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 56;
+       fhir:index 57;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Code" ];
@@ -11267,13 +11329,13 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 57;
+       fhir:index 58;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.display" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.display" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 58;
+       fhir:index 59;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.text" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.text" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Message" ];

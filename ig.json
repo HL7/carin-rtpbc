@@ -217,9 +217,21 @@
 		"ValueSet/carin-rtpbc-prescribable-product-code-value-set": {
 			"base": "ValueSet-carin-rtpbc-prescribable-product-code-value-set.html",
 			"defns": "ValueSet-carin-rtpbc-prescribable-product-code-value-set-definitions.html"
+		},
+		"StructureDefinition/carin-rtpbc-extension-isAlternative": {
+			"base": "StructureDefinition-carin-rtpbc-extension-isAlternative.html",
+			"defns": "StructureDefinition-carin-rtpbc-extension-isAlternative-definitions.html"
+		},
+		"Bundle/rtpbc-bundle-response-03-w-header": {
+			"base": "Bundle-rtpbc-bundle-response-03-w-header.html",
+			"defns": "Bundle-rtpbc-bundle-response-03-w-header-definitions.html"
+		},
+		"Bundle/rtpbc-bundle-request-03-w-header": {
+			"base": "Bundle-rtpbc-bundle-request-03-w-header.html",
+			"defns": "Bundle-rtpbc-bundle-request-03-w-header-definitions.html"
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.07",
+	"fixed-business-version": "0.1.08",
 	"dependencyList": []
 }

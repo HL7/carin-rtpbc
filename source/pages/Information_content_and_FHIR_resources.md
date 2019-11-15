@@ -61,7 +61,7 @@ The consumer RTPBC request and response are accomplished using FHIR **Claim** an
 
 Below are profiles constraining those resources for this purpose:
 
-* **Claim** - Represents the RTPBC request. Uses the *predetermination* Claim.use mode
+* **Claim** - Represents the RTPBC request. Uses the *predetermination* Claim.use mode  
 * **ClaimResponse** - Represents the RTPBC response
 * **Patient** - Conveys the patient information needed for the exchange
 * **MedicationRequest** - Conveys the needed prescription information (a subset of what is present in a full prescription)
@@ -73,4 +73,4 @@ Below are profiles constraining those resources for this purpose:
 The need for additional resource profiles may be identified as work progresses.
 
 
-[Next Page](Submit_operation.html)
+[Next Page](Submission_method.html)

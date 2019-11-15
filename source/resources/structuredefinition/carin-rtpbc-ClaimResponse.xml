@@ -3,8 +3,8 @@
     xmlns="http://hl7.org/fhir">
     <id value="carin-rtpbc-ClaimResponse"/>
     <meta>
-        <versionId value="54"/>
-        <lastUpdated value="2019-11-06T17:24:15.000-05:00"/>
+        <versionId value="59"/>
+        <lastUpdated value="2019-11-14T16:19:00.000-05:00"/>
     </meta>
     <text>
         <status value="additional"/>
@@ -12,16 +12,8 @@
             xmlns="http://www.w3.org/1999/xhtml">
             <div>
                 <div>
-                    <div>This profile constrains the ClaimResponse resource to serve as the   
-                        
-                        
-                        
-                        
-                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's "predetermination" processing mode   
-                    
-                    
-                    
-                    
+                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          
+                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's "predetermination" processing mode                                                              
                     </div>
                 </div>
             </div>
@@ -169,6 +161,25 @@
         </element>
         <element id="ClaimResponse.addItem">
             <path value="ClaimResponse.addItem"/>
+        </element>
+        <element id="ClaimResponse.addItem.extension:isAlternative">
+            <path value="ClaimResponse.addItem.extension"/>
+            <sliceName value="isAlternative"/>
+            <short value="Extension"/>
+            <definition value="This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service"/>
+            <comment value="Set to true in all real-time pharmacy benefit check response .addItems."/>
+            <min value="0"/>
+            <max value="1"/>
+            <base>
+                <path value="DomainResource.extension"/>
+                <min value="0"/>
+                <max value="*"/>
+            </base>
+            <type>
+                <code value="Extension"/>
+            </type>
+            <mustSupport value="true"/>
+            <isModifier value="false"/>
         </element>
         <element id="ClaimResponse.addItem.itemSequence">
             <path value="ClaimResponse.addItem.itemSequence"/>

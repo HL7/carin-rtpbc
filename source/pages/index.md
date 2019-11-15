@@ -60,17 +60,19 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.07 (This version):** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. 
+**0.1.08 (This version):** Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.
 
-**0.1.06:** Added the Coverage resource into the request content illustration (inadvertently left it out earlier)
+**0.1.07:** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. 
 
-**0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material
+**0.1.06:** Added the Coverage resource into the request content illustration (inadvertently left it out earlier).
+
+**0.1.05:** Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material.
 
 **0.1.04:** Addressed broken page links, made small profile adjustments in ClaimResponse.
 
 **0.1.03:** Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.
 
-**0.1.02 :** Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup 
+**0.1.02 :** Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup.
 
 **0.1.01:** Adjusted background and use case material to also reflect RTPBC communication between the patient's application and discount medication pricing sources--which augments information retrieved from the patient's insurer. In process of reorganizing content to a more intuitive arrangement. 
 

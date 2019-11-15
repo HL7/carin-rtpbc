@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Coverage resource for carrying the pharmacy \nbenefit information required in the consumer real-time pharmacy benefit \ncheck process\n            \n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.07"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.08"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestCoverageIdentifiers"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Coverage Identifiers"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
