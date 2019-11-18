@@ -17,11 +17,11 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;\n        </div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"];
-  fhir:ValueSet.version [ fhir:value "0.1.08"];
+  fhir:ValueSet.version [ fhir:value "0.1.09"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcPatientPayTypeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Patient Pay Type Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-11-15T10:18:36-06:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-11-18T12:13:41-06:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This value set contains components of a patient's responsibility for a prescription product's cost."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

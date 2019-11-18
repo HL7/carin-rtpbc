@@ -1,0 +1,39 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carin-rtpbc-error-code-system",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-17T16:00:00.000-06:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code System</h2><div><p>This code system defines the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-patient-match<a name=\"carin-rtpbc-error-code-system-no-patient-match\"> </a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td style=\"white-space:nowrap\">multiple-patient-matches<a name=\"carin-rtpbc-error-code-system-multiple-patient-matches\"> </a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td style=\"white-space:nowrap\">invalid-product-id<a name=\"carin-rtpbc-error-code-system-invalid-product-id\"> </a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code",
+  "version": "0.1.09",
+  "name": "CarinRtpbcErrorCodeSystem",
+  "title": "CARIN RTPBC Error Code System",
+  "status": "draft",
+  "date": "2019-11-17T00:00:00-06:00",
+  "publisher": "CARIN Alliance",
+  "description": "This code system defines the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.",
+  "caseSensitive": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "no-patient-match",
+      "display": "No patient match found",
+      "definition": "No patient match found"
+    },
+    {
+      "code": "multiple-patient-matches",
+      "display": "More Than One Patient Found",
+      "definition": "More Than One Patient Found"
+    },
+    {
+      "code": "invalid-product-id",
+      "display": "M/I Product/Service ID",
+      "definition": "M/I Product/Service ID"
+    }
+  ]
+}

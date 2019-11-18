@@ -80,3 +80,24 @@ active: profiles
 </table>
 
 
+
+### Message Definitions
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="MessageDefinition-carin-rtpbc-request-message-definition.html">CarinRtpbcRequestMessageDefinition</a></td>
+<td>Request for patient cost and coverage information for a prescribed medication</td>
+</tr>
+<tr>
+<td><a href="MessageDefinition-carin-rtpbc-response-message-definition.html">CarinRtpbcResponseMessageDefinition</a></td>
+<td>Response to a request for patient cost and coverage information for a prescribed medication</td>
+</tr>
+</tbody>
+</table>

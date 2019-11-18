@@ -11,11 +11,11 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
-  <version value="0.1.08"/>
+  <version value="0.1.09"/>
   <name value="CarinRtbpcBillingUnitsValueSet"/>
   <title value="CARIN RTPBC Billing Units Value Set"/>
   <status value="draft"/>
-  <date value="2019-11-15T10:18:36-06:00"/>
+  <date value="2019-11-18T12:13:41-06:00"/>
   <description value="This value set contains the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products"/>
   <compose>
     <include>

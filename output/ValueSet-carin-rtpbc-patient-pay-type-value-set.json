@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type",
-  "version": "0.1.08",
+  "version": "0.1.09",
   "name": "CarinRtbpcPatientPayTypeValueSet",
   "title": "CARIN RTPBC Patient Pay Type Value Set",
   "status": "draft",
-  "date": "2019-11-15T10:18:36-06:00",
+  "date": "2019-11-18T12:13:41-06:00",
   "description": "This value set contains components of a patient's responsibility for a prescription product's cost.",
   "compose": {
     "include": [

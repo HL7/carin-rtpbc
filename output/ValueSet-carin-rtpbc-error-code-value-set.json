@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "carin-rtpbc-error-code-value-set",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2019-11-17T14:30:00.000-06:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code Value Set</h2><div><p>This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-carin-rtpbc-error-code-system.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-no-patient-match\">no-patient-match</a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-multiple-patient-matches\">multiple-patient-matches</a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-invalid-product-id\">invalid-product-id</a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></li></ul></div>"
+  },
+  "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code",
+  "version": "0.1.09",
+  "name": "CarinRtbpcErrorCodeValueSet",
+  "title": "CARIN RTPBC Error Code Value Set",
+  "status": "draft",
+  "date": "2019-11-18T12:13:41-06:00",
+  "description": "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code",
+        "concept": [
+          {
+            "code": "no-patient-match",
+            "display": "No patient match found"
+          },
+          {
+            "code": "multiple-patient-matches",
+            "display": "More Than One Patient Found"
+          },
+          {
+            "code": "invalid-product-id",
+            "display": "M/I Product/Service ID"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -107,6 +107,9 @@
 		},
 		"Observation": {
 			"template-base": "ex.html"
+		},
+		"MessageDefinition": {
+			"template-base": "ex.html"
 		}
 	},
 	"resources": {
@@ -182,6 +185,14 @@
 			"base": "ValueSet-carin-rtpbc-coverage-summary-value-set.html",
 			"defns": "ValueSet-carin-rtpbc-coverage-summary-value-set-definitions.html"
 		},
+		"CodeSystem/carin-rtpbc-error-code-system": {
+			"base": "CodeSystem-carin-rtpbc-error-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-error-code-system-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-error-code-value-set": {
+			"base": "ValueSet-carin-rtpbc-error-code-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-error-code-value-set-definitions.html"
+		},
 		"CodeSystem/carin-rtpbc-patient-pay-type-code-system": {
 			"base": "CodeSystem-carin-rtpbc-patient-pay-type-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-patient-pay-type-code-system-definitions.html"
@@ -229,9 +240,17 @@
 		"Bundle/rtpbc-bundle-request-03-w-header": {
 			"base": "Bundle-rtpbc-bundle-request-03-w-header.html",
 			"defns": "Bundle-rtpbc-bundle-request-03-w-header-definitions.html"
+		},
+		"MessageDefinition/carin-rtpbc-request-message-definition": {
+			"base": "MessageDefinition-carin-rtpbc-request-message-definition.html",
+			"defns": "MessageDefinition-carin-rtpbc-request-message-definition-definitions.html"
+		},
+		"MessageDefinition/carin-rtpbc-response-message-definition": {
+			"base": "MessageDefinition-carin-rtpbc-response-message-definition.html",
+			"defns": "MessageDefinition-carin-rtpbc-response-message-definition-definitions.html"
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.08",
+	"fixed-business-version": "0.1.09",
 	"dependencyList": []
 }

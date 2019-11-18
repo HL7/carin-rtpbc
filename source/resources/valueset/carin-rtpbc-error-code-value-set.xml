@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-error-code-value-set" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2019-11-17T15:30:00.000-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code" />
+  <version value="1.00" />
+  <name value="CarinRtbpcErrorCodeValueSet" />
+  <title value="CARIN RTPBC Error Code Value Set" />
+  <status value="draft" />
+  <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing." />
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code" />
+      <concept>
+        <code value="no-patient-match" />
+        <display value="No patient match found" />
+      </concept>
+      <concept>
+        <code value="multiple-patient-matches" />
+        <display value="More Than One Patient Found" />
+      </concept>
+      <concept>
+        <code value="invalid-product-id" />
+        <display value="M/I Product/Service ID" />
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.08 (This version):** Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.
+**0.1.09 (This version):** Added message definitions for the request and response. Added an Error Handling section in the Guidance menu, and placeholder 'error code' CodeSystem and ValueSet resources (to be refined/replaced after stakeholder discussion). 
+
+**0.1.08:** Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.
 
 **0.1.07:** Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach. 
 

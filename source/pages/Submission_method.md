@@ -54,8 +54,10 @@ The RTPBC request is submitted using the $process-message operation on the proce
 Like the option above, the $process-message operation takes a single FHIR resource input parameter consisting of a Bundle containing the Claim resource and referenced supporting resources, and returns a Bundle containing a ClaimResponse and supporting resources.
 
 In addition, this method includes a MessageHeader resource in both the request and response.
-* In the request, the MessageHeader's *eventCoding* element is set to "rtpbc-request" and the *focus.reference* points to the Bundle's Claim resource
-* In the response, *eventCoding* is set to "rtpbc-response", and the *focus.reference* points to the Bundle's ClaimResponse
+* In the request, the MessageHeader's *focus.reference* points to the Bundle's Claim resource, per the <a href="MessageDefinition-carin-rtpbc-request-message-definition.html">CarinRtpbcRequestMessageDefinition.</a>
+* In the response, the *focus.reference* points to the Bundle's ClaimResponse, per the <a href="MessageDefinition-carin-rtpbc-response-message-definition.html">CarinRtpbcResponseMessageDefinition.</a>
+
+<br>
 
 <a href="Bundle-rtpbc-bundle-request-03-w-header.html">Example bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
