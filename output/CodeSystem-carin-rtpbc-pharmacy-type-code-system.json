@@ -3,20 +3,14 @@
   "id": "carin-rtpbc-pharmacy-type-code-system",
   "meta": {
     "versionId": "1",
-    "lastUpdated": "2019-11-26T23:00:00.000-06:00",
-    "security": [
-      {
-        "system": "https://trifolia-fhir.lantanagroup.com/security",
-        "code": "everyone^write"
-      }
-    ]
+    "lastUpdated": "2019-11-26T23:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Pharmacy Type Code System</h2><div><p>This value set contains pharmacy type categories.</p>\n</div><p>This code system http://ncpdp.org/pharmacy-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">R<a name=\"carin-rtpbc-pharmacy-type-code-system-R\"> </a></td><td>Retail</td><td>Retail pharmacy</td></tr><tr><td style=\"white-space:nowrap\">M<a name=\"carin-rtpbc-pharmacy-type-code-system-M\"> </a></td><td>Mail Order</td><td>Mail order pharmacy</td></tr><tr><td style=\"white-space:nowrap\">S<a name=\"carin-rtpbc-pharmacy-type-code-system-S\"> </a></td><td>Specialty</td><td>Specialty pharmacy</td></tr><tr><td style=\"white-space:nowrap\">L<a name=\"carin-rtpbc-pharmacy-type-code-system-L\"> </a></td><td>Long-Term Care</td><td>Long-term care pharmacy</td></tr><tr><td style=\"white-space:nowrap\">A<a name=\"carin-rtpbc-pharmacy-type-code-system-A\"> </a></td><td>Any</td><td>Pharmacy without restriction</td></tr></table></div>"
   },
   "url": "http://ncpdp.org/pharmacy-type",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "CarinRtpbcPharmacyTypeCodeSystem",
   "title": "CARIN RTPBC Pharmacy Type Code System",
   "status": "draft",

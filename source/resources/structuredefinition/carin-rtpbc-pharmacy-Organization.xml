@@ -70,9 +70,22 @@
       <min value="0" />
       <max value="1" />
       <patternIdentifier>
-        <system value="http://example.org/ncpdpid/placeholder" />
+        <system value="http://ncpdp.org/provider-id" />
       </patternIdentifier>
       <mustSupport value="true" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <label value="Pharmacy Type" />
+      <short value="Pharmacy Type" />
+      <definition value="Pharmacy type: R (Retail), M (Mail order), S (Specialty), L (Long-term care), A (Pharmacy without restriction)" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="extensible" />
+        <description value="CARIN RTPBC Pharmacy Type Value Set" />
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type" />
+      </binding>
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />

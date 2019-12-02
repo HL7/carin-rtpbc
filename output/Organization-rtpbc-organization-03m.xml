@@ -2,17 +2,20 @@
 
 <Organization xmlns="http://hl7.org/fhir">
   <id value="rtpbc-organization-03m"/>
-  <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-06T03:23:37.000-05:00"/>
-  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>meta</b>: </p><p><b>identifier</b>: 5515515515</p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 0999029</p><p><b>type</b>: Mail Order <span style="background: LightGoldenRodYellow">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'Mail Order', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>
   </text>
   <identifier>
-    <system value="http://hl7.org/fhir/sid/us-npi"/>
-    <value value="5515515515"/>
+    <system value="http://ncpdp.org/provider-id"/>
+    <value value="0999029"/>
   </identifier>
+  <type>
+    <coding>
+      <system value="http://ncpdp.org/pharmacy-type"/>
+      <code value="M"/>
+      <display value="Mail Order"/>
+    </coding>
+  </type>
   <name value="My Mail Service Pharmacy"/>
   <telecom>
     <system value="phone"/>

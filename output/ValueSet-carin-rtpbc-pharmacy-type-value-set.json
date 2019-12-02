@@ -20,7 +20,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Pharmacy Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carin-rtpbc-pharmacy-type-code-system.html\"><code>http://ncpdp.org/pharmacy-type</code></a></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "CARINRTPBCPharmacyTypeValueSet",
   "title": "CARIN RTPBC Pharmacy Type Value Set",
   "status": "draft",

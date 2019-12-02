@@ -10,19 +10,14 @@
   fhir:Resource.id [ fhir:value "carin-rtpbc-example-reject-code-system"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "1" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T23:00:00.000-06:00"^^xsd:dateTime ];
-     fhir:Meta.security [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
-       fhir:Coding.code [ fhir:value "everyone^write" ]
-     ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Example Reject Code System</h2><div><p>This code system contains example NCPDP Reject Codes (511-FB codes set) to be used by real-time pharmacy benefit check servers when encountering a data or business rule error that prevents processing from completing. This is a placeholder to be replaced prior to publishing with a formal mechanism for referencing in FHIR.</p>\n</div><p>This code system http://ncpdp.org/reject-code defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">N1<a name=\"carin-rtpbc-example-reject-code-system-N1\"> </a></td><td>No Patient Match Found</td><td>No Patient Match Found</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"carin-rtpbc-example-reject-code-system-21\"> </a></td><td>M/I Product/Service ID</td><td>Missing or Invalid Product/Service ID</td></tr><tr><td style=\"white-space:nowrap\">598<a name=\"carin-rtpbc-example-reject-code-system-598\"> </a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td style=\"white-space:nowrap\">599<a name=\"carin-rtpbc-example-reject-code-system-599\"> </a></td><td>Cardholder ID Matched But Last Name Did Not</td><td>Cardholder ID Matched But Last Name Did Not</td></tr><tr><td style=\"white-space:nowrap\">600<a name=\"carin-rtpbc-example-reject-code-system-600\"> </a></td><td>Coverage Outside Submitted Date Of Transaction</td><td>Coverage Outside Submitted Date Of Transaction</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://ncpdp.org/reject-code"];
-  fhir:CodeSystem.version [ fhir:value "0.1.10"];
+  fhir:CodeSystem.version [ fhir:value "0.1.11"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcExampleRejectCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Example Reject Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];

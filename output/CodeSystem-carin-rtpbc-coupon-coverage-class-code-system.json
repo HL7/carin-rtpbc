@@ -16,7 +16,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Coupon Coverage Class Code System</h2><div><p>This code system defines additional coverage class concepts related to medication discount coupons.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">coupon<a name=\"carin-rtpbc-coupon-coverage-class-code-system-coupon\"> </a></td><td>Coupon</td><td>Discount coupon</td></tr><tr><td style=\"white-space:nowrap\">coupon-request<a name=\"carin-rtpbc-coupon-coverage-class-code-system-coupon-request\"> </a></td><td>Coupon Request</td><td>Key that can be used to obtain a discount coupon.</td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "CarinRtpbcCouponCoverageClassCodeSystem",
   "title": "CARIN RTPBC Coupon Coverage Class Code System",
   "status": "active",

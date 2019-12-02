@@ -20,7 +20,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "CarinRtpbcExtensionIsAlternative",
   "title": "CARIN RTPBC Extension isAlternative",
   "status": "draft",

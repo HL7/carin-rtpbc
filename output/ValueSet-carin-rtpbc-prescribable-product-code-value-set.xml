@@ -10,7 +10,7 @@
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carin-rtpbc-example-ndc-11-code-system.html"><code>http://terminology.hl7.org/CodeSystem/ndc-11</code></a></li><li>Include codes from <a href="http://www.nlm.nih.gov/research/umls/rxnorm"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
-  <version value="0.1.10"/>
+  <version value="0.1.11"/>
   <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
   <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
   <status value="draft"/>

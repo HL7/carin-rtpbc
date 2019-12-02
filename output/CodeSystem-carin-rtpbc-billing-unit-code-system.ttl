@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Billing Unit Code System</h2><div><p>This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.</p>\n</div><p>This code system http://ncpdp.org/unit-of-measure defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">GM<a name=\"carin-rtpbc-billing-unit-code-system-GM\"> </a></td><td>Gram</td><td>Quantity unit of measure for products billed as a number of grams</td></tr><tr><td style=\"white-space:nowrap\">ML<a name=\"carin-rtpbc-billing-unit-code-system-ML\"> </a></td><td>Milliliter</td><td>Quantity unit of measure for products billed as a number of milliliters</td></tr><tr><td style=\"white-space:nowrap\">EA<a name=\"carin-rtpbc-billing-unit-code-system-EA\"> </a></td><td>Each</td><td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://ncpdp.org/unit-of-measure"];
-  fhir:CodeSystem.version [ fhir:value "0.1.10"];
+  fhir:CodeSystem.version [ fhir:value "0.1.11"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcBillingUnitCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Billing Unit Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];

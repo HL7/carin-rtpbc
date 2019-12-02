@@ -26,7 +26,7 @@
      fhir:Extension.valueInteger [ fhir:value "1"^^xsd:integer ]
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.10"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.11"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcExtensionIsAlternative"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Extension isAlternative"];
   fhir:StructureDefinition.status [ fhir:value "draft"];

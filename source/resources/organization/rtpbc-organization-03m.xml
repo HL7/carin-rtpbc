@@ -1,25 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Organization
-    xmlns="http://hl7.org/fhir">
-    <id value="rtpbc-organization-03m"/>
-    <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2019-11-06T03:23:37.000-05:00"/>
-    </meta>
-    <identifier>
-        <system value="http://hl7.org/fhir/sid/us-npi"/>
-        <value value="5515515515"/>
-    </identifier>
-    <name value="My Mail Service Pharmacy"/>
-    <telecom>
-        <system value="phone"/>
-        <value value="5551234567"/>
-    </telecom>
-    <address>
-        <line value="10001 Oakland Road"/>
-        <city value="Milwaukee"/>
-        <state value="WI"/>
-        <postalCode value="54444"/>
-        <country value="US"/>
-    </address>
+<?xml version="1.0" encoding="utf-8"?>
+<Organization xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-organization-03m" />
+  <identifier>
+    <system value="http://ncpdp.org/provider-id" />
+    <value value="0999029" />
+  </identifier>
+  <type>
+    <coding>
+      <system value="http://ncpdp.org/pharmacy-type" />
+      <code value="M" />
+      <display value="Mail Order" />
+    </coding>
+  </type>
+  <name value="My Mail Service Pharmacy" />
+  <telecom>
+    <system value="phone" />
+    <value value="5551234567" />
+  </telecom>
+  <address>
+    <line value="10001 Oakland Road" />
+    <city value="Milwaukee" />
+    <state value="WI" />
+    <postalCode value="54444" />
+    <country value="US" />
+  </address>
 </Organization>

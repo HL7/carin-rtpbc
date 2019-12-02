@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "name": "CarinRtpbc",
   "title": "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status": "draft",
-  "date": "2019-12-01T19:50:55-06:00",
+  "date": "2019-12-01T22:08:59-06:00",
   "publisher": "HL7 International - Pharmacy",
   "contact": [
     {

@@ -2,17 +2,20 @@
 
 <Organization xmlns="http://hl7.org/fhir">
   <id value="rtpbc-organization-03"/>
-  <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-05T22:50:27.000-05:00"/>
-  </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03</p><p><b>meta</b>: </p><p><b>identifier</b>: 9876543210</p><p><b>name</b>: Hometown Drug</p><p><b>telecom</b>: ph: 6081234567</p><p><b>address</b>: 900 9th Street Madison WI 53535 US </p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03</p><p><b>identifier</b>: 0999017</p><p><b>type</b>: Retail <span style="background: LightGoldenRodYellow">(Details : {http://ncpdp.org/pharmacy-type code 'R' = 'Retail', given as 'Retail'})</span></p><p><b>name</b>: Hometown Drug</p><p><b>telecom</b>: ph: 6081234567</p><p><b>address</b>: 900 9th Street Madison WI 53535 US </p></div>
   </text>
   <identifier>
-    <system value="http://hl7.org/fhir/sid/us-npi"/>
-    <value value="9876543210"/>
+    <system value="http://ncpdp.org/provider-id"/>
+    <value value="0999017"/>
   </identifier>
+  <type>
+    <coding>
+      <system value="http://ncpdp.org/pharmacy-type"/>
+      <code value="R"/>
+      <display value="Retail"/>
+    </coding>
+  </type>
   <name value="Hometown Drug"/>
   <telecom>
     <system value="phone"/>

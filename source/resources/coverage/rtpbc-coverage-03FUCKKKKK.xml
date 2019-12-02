@@ -3,7 +3,7 @@
   <id value="rtpbc-coverage-03" />
   <status value="active" />
   <beneficiary>
-    <reference value="Patient/rtpbc-patient-03" />
+    <reference value="/Patient/rtpbc-patient-03" />
   </beneficiary>
   <payor>
     <identifier>
@@ -46,4 +46,12 @@
     </type>
     <value value="MEMBER000001" />
   </class>
+</Coverage>  <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                <code value="rxid"/>
+            </coding>
+        </type>
+        <value value="MEMBER000001"/>
+    </class>
 </Coverage>

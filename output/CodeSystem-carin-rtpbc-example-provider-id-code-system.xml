@@ -5,17 +5,13 @@
   <meta>
     <versionId value="1"/>
     <lastUpdated value="2019-11-26T23:00:00.000-06:00"/>
-    <security>
-      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-      <code value="everyone^write"/>
-    </security>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Example Provider ID Code System</h2><div><p>This is a placeholder code system illustrating values from the proprietary National Council for Prescription Drug Programs (NCPDP) Provider ID identifier system. It will be replaced prior to publishing with a formal mechanism for referencing in FHIR.</p>
 </div><p>This code system http://ncpdp.org/provider-id defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">0999017<a name="carin-rtpbc-example-provider-id-code-system-0999017"> </a></td><td>Hometown Drug</td><td/></tr><tr><td style="white-space:nowrap">0999029<a name="carin-rtpbc-example-provider-id-code-system-0999029"> </a></td><td>My Mail Service Pharmacy</td><td/></tr><tr><td style="white-space:nowrap">0999031<a name="carin-rtpbc-example-provider-id-code-system-0999031"> </a></td><td>Acme Specialty Pharmacy</td><td/></tr><tr><td style="white-space:nowrap">0999043<a name="carin-rtpbc-example-provider-id-code-system-0999043"> </a></td><td>Local LTC Pharmacy</td><td/></tr></table></div>
   </text>
   <url value="http://ncpdp.org/provider-id"/>
-  <version value="0.1.10"/>
+  <version value="0.1.11"/>
   <name value="CarinRtpbcExampleProviderIdCodeSystem"/>
   <title value="CARIN RTPBC Example Provider ID Code System"/>
   <status value="draft"/>
