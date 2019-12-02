@@ -14,7 +14,7 @@
   "name": "CarinRtbpcPatientPayTypeValueSet",
   "title": "CARIN RTPBC Patient Pay Type Value Set",
   "status": "draft",
-  "date": "2019-12-02T10:03:37-06:00",
+  "date": "2019-12-02T10:21:04-06:00",
   "description": "This value set contains components of a patient's responsibility for a prescription product's cost.",
   "compose": {
     "include": [

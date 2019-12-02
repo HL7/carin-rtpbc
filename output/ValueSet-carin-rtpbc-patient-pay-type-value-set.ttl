@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CarinRtbpcPatientPayTypeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Patient Pay Type Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-02T10:03:37-06:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-02T10:21:04-06:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This value set contains components of a patient's responsibility for a prescription product's cost."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

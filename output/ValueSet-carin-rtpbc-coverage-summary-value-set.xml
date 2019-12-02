@@ -15,7 +15,7 @@
   <name value="CarinRtbpcCoverageSummaryValueSet"/>
   <title value="CARIN RTPBC Coverage Summary Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-02T10:03:37-06:00"/>
+  <date value="2019-12-02T10:21:04-06:00"/>
   <description value="This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
   <compose>
     <include>

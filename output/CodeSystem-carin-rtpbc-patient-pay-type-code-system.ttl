@@ -21,7 +21,7 @@
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcPatientPayTypeCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Patient Pay Type Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-12-02T10:03:37-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2019-12-02T10:21:04-06:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.description [ fhir:value "This code system defines components of a patient's responsibility for a prescription product's cost."];
   fhir:CodeSystem.purpose [ fhir:value "This code system defines components of a patient's responsibility for a prescription product's cost."];

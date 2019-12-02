@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="0be96b49-7326-42c8-a5c2-015db43d8379"/>
+  <id value="21746dcc-784a-4826-921b-083429d6b90a"/>
   <meta>
-    <lastUpdated value="2019-12-02T10:03:37.813-06:00"/>
+    <lastUpdated value="2019-12-02T10:21:04.165-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -8085,8 +8085,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:939ddfb1-941b-43a5-82a6-6fc2f65392ae"/>
-          <timestamp value="2019-12-02T10:04:08-06:00"/>
+          <identifier value="urn:uuid:31f15c78-0d77-45c9-891d-ddda37fc91cd"/>
+          <timestamp value="2019-12-02T10:21:33-06:00"/>
           <total value="1004"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13195,11 +13195,11 @@
         <name value="CarinRtbpcBillingUnitValueSet"/>
         <title value="CARIN RTPBC Billing Unit Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:03:37-06:00"/>
+        <date value="2019-12-02T10:21:04-06:00"/>
         <description value="This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products"/>
         <expansion>
-          <identifier value="urn:uuid:25ff7966-ec42-4572-8870-e42bb94fdd20"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:e4bda423-f344-4ecf-9c9e-bdd92c87b3cd"/>
+          <timestamp value="2019-12-02T10:21:35-06:00"/>
           <total value="3"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13307,11 +13307,11 @@
         <name value="CarinRtbpcErrorCodeValueSet"/>
         <title value="CARIN RTPBC Error Code Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:03:37-06:00"/>
+        <date value="2019-12-02T10:21:04-06:00"/>
         <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing."/>
         <expansion>
-          <identifier value="urn:uuid:25d0d4dc-d016-40a5-8b06-fef5692929cd"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:b837e7fd-b483-4ec4-8cc7-a3d192ca3e92"/>
+          <timestamp value="2019-12-02T10:21:35-06:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13407,8 +13407,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."/>
         <expansion>
-          <identifier value="urn:uuid:66d59f19-80d0-4f67-b9dc-c508453fcb29"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:81030697-eed1-4fb7-9e54-44ed3ba455d3"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13519,11 +13519,11 @@
         <name value="CarinRtbpcCoverageSummaryValueSet"/>
         <title value="CARIN RTPBC Coverage Summary Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:03:37-06:00"/>
+        <date value="2019-12-02T10:21:04-06:00"/>
         <description value="This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
         <expansion>
-          <identifier value="urn:uuid:e5ae3e3c-7f34-4df8-ad4c-1f265a4e0299"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:11fa765a-d607-4df9-b0ca-edc8ae195369"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13725,8 +13725,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set adds concepts to the HL7-maintained coverage class value set related to discount coupons."/>
         <expansion>
-          <identifier value="urn:uuid:d1199798-1466-4448-865a-9109520181e1"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:c9d95360-a5bf-4a07-95b5-f88108eafd32"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="13"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13896,11 +13896,11 @@
         <name value="CarinRtbpcPatientPayTypeValueSet"/>
         <title value="CARIN RTPBC Patient Pay Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:03:37-06:00"/>
+        <date value="2019-12-02T10:21:04-06:00"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:d6781a89-4898-4c8a-b896-bc7a29c83521"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:187bd866-7040-42ea-b5e8-ce0f86c9958d"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14034,8 +14034,8 @@
         <date value="2019-11-20T00:00:00-06:00"/>
         <publisher value="CARIN Alliance"/>
         <expansion>
-          <identifier value="urn:uuid:1fa87e9c-5d25-4123-953a-44c6fe37c933"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:aabd4fe8-e4fc-419c-a58c-99fe15944ccd"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="5"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14737,8 +14737,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0bbc377e-fd12-4c61-852c-66a863452655"/>
-          <timestamp value="2019-12-02T10:04:10-06:00"/>
+          <identifier value="urn:uuid:4f34f1cc-c324-4c64-92ca-d7d0cc975393"/>
+          <timestamp value="2019-12-02T10:21:36-06:00"/>
           <total value="75"/>
           <parameter>
             <name value="excludeNested"/>

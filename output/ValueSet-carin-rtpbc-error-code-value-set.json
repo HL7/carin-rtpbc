@@ -14,7 +14,7 @@
   "name": "CarinRtbpcErrorCodeValueSet",
   "title": "CARIN RTPBC Error Code Value Set",
   "status": "draft",
-  "date": "2019-12-02T10:03:37-06:00",
+  "date": "2019-12-02T10:21:04-06:00",
   "description": "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.",
   "compose": {
     "include": [
