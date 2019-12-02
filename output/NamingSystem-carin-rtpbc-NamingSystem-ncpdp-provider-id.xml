@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<NamingSystem xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-NamingSystem-ncpdp-provider-id"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-NamingSystem-ncpdp-provider-id</p><p><b>name</b>: CarinRtpbcNamingSystemNcpdpProviderId</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Nov 24, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>responsible</b>: National Council for Prescription Drug Programs (NCPDP)</p><p><b>description</b>: The NCPDP Provider Identification number (NCPDP Provider ID), formerly known as the NABP number, was developed to provide pharmacies with a unique, national identifier that would assist pharmacies in their interactions with pharmacy payers and claims processors. The NCPDP Provider ID is a seven-digit numbering system that is assigned to every licensed pharmacy and qualified Non-Pharmacy
+Dispensing Site (NPDS) in the United States.</p><p><b>jurisdiction</b>: United States of America <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>usage</b>: Used in the US to identify pharmacy sites</p><h3>UniqueIds</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>uri</td><td>http://ncpdp.org/provider-id</td></tr></table></div>
+  </text>
+  <name value="CarinRtpbcNamingSystemNcpdpProviderId"/>
+  <status value="active"/>
+  <kind value="identifier"/>
+  <date value="2019-11-24T00:00:00-06:00"/>
+  <publisher value="CARIN Alliance"/>
+  <contact>
+    <name value="CARIN Alliance"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.carinalliance.com"/>
+    </telecom>
+  </contact>
+  <responsible value="National Council for Prescription Drug Programs (NCPDP)"/>
+  <description value="The NCPDP Provider Identification number (NCPDP Provider ID), formerly known as the NABP number, was developed to provide pharmacies with a unique, national identifier that would assist pharmacies in their interactions with pharmacy payers and claims processors. The NCPDP Provider ID is a seven-digit numbering system that is assigned to every licensed pharmacy and qualified Non-Pharmacy&#xA;Dispensing Site (NPDS) in the United States."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <usage value="Used in the US to identify pharmacy sites"/>
+  <uniqueId>
+    <type value="uri"/>
+    <value value="http://ncpdp.org/provider-id"/>
+  </uniqueId>
+</NamingSystem>

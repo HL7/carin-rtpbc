@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-example-ndc-11-code-system" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-11-27T00:00:00.000-05:00" />
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security" />
+      <code value="everyone^write" />
+    </security>
+  </meta>
+  <url value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcExampleNdc11CodeSystem" />
+  <title value="CARIN RTPBC Example NDC11 Code System" />
+  <status value="active" />
+  <date value="2019-11-27" />
+  <publisher value="CARIN Alliance" />
+  <description value="This code system contains example NDC 11 drug product identifiers, used to identify requested and alternative medications in the real-time pharmacy benefit check process. This code system normalizes NDC codes by removing dashes and standardizing the length of each NDC segment. This is a placeholder to be replaced prior to publishing with an HL7/FHIR maintained URL (currently being established)." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="00777310402" />
+    <display value="Prozac 10mg capsule" />
+    <definition value="Example NDC-11 for Prozac 10mg capsule" />
+  </concept>
+  <concept>
+    <code value="50111064701" />
+    <display value="fluoxetine 10mg capsule" />
+    <definition value="Example NDC-11 for fluoxetine 10mg tablet" />
+  </concept>
+  <concept>
+    <code value="00186502031" />
+    <display value="Nexium 20mg capsule" />
+    <definition value="Example NDC-11 for Nexium 20mg capsule" />
+  </concept>
+  <concept>
+    <code value="00093645056" />
+    <display value="esomeprazole magnesium 20mg capsule" />
+    <definition value="Example NDC-11 for esomeprazole magnesium 20mg capsule" />
+  </concept>
+</CodeSystem>

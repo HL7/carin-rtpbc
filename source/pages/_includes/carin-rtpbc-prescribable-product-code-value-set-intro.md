@@ -1,6 +1,3 @@
----
-title: ValueSet-carin-rtpbc-prescribable-product-code-value-set-intro
-layout: default
-active: ValueSet-carin-rtpbc-prescribable-product-code-value-set-intro
----
+*This value set currently contains a placeholder code system for the 11-digit normalized NDC which will be replaced before publishing with an HL7/FHIR-maintained URL (being established) referencing content maintained in the NLM/RxNorm data set. placeholder code system that will be replaced before publishing with an HL7/FHIR-maintained URL (being established) referencing content maintained in the NLM/RxNorm data set. The placeholder contains only a small number of concepts, for illustration only.*
 
+<br><br>

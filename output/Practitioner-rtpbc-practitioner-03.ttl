@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03> a fhir:Practitioner;
+<http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03> a fhir:Practitioner;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-practitioner-03"];
   fhir:Resource.meta [
@@ -28,9 +28,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/Practitioner/rtpbc-practitioner-03.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03> a fhir:Coverage;
+<http://hl7.org/fhir/us/carin-rtpbc/Coverage/rtpbc-coverage-03> a fhir:Coverage;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-coverage-03"];
   fhir:Resource.meta [
@@ -18,7 +18,7 @@
   ];
   fhir:Coverage.status [ fhir:value "active"];
   fhir:Coverage.beneficiary [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:Coverage.payor [
@@ -69,13 +69,13 @@
      fhir:Coverage.class.value [ fhir:value "MEMBER000001" ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/Coverage/rtpbc-coverage-03.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/Coverage/rtpbc-coverage-03.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/Coverage/rtpbc-coverage-03.ttl> .
 
 # -------------------------------------------------------------------------------------
 

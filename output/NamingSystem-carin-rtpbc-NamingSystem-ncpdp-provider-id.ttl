@@ -1,0 +1,53 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/NamingSystem/carin-rtpbc-NamingSystem-ncpdp-provider-id> a fhir:NamingSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-NamingSystem-ncpdp-provider-id"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-NamingSystem-ncpdp-provider-id</p><p><b>name</b>: CarinRtpbcNamingSystemNcpdpProviderId</p><p><b>status</b>: active</p><p><b>kind</b>: identifier</p><p><b>date</b>: Nov 24, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>responsible</b>: National Council for Prescription Drug Programs (NCPDP)</p><p><b>description</b>: The NCPDP Provider Identification number (NCPDP Provider ID), formerly known as the NABP number, was developed to provide pharmacies with a unique, national identifier that would assist pharmacies in their interactions with pharmacy payers and claims processors. The NCPDP Provider ID is a seven-digit numbering system that is assigned to every licensed pharmacy and qualified Non-Pharmacy\nDispensing Site (NPDS) in the United States.</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>usage</b>: Used in the US to identify pharmacy sites</p><h3>UniqueIds</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>uri</td><td>http://ncpdp.org/provider-id</td></tr></table></div>"
+  ];
+  fhir:NamingSystem.name [ fhir:value "CarinRtpbcNamingSystemNcpdpProviderId"];
+  fhir:NamingSystem.status [ fhir:value "active"];
+  fhir:NamingSystem.kind [ fhir:value "identifier"];
+  fhir:NamingSystem.date [ fhir:value "2019-11-24T00:00:00-06:00"^^xsd:dateTime];
+  fhir:NamingSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:NamingSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "CARIN Alliance" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://www.carinalliance.com" ]
+     ]
+  ];
+  fhir:NamingSystem.responsible [ fhir:value "National Council for Prescription Drug Programs (NCPDP)"];
+  fhir:NamingSystem.description [ fhir:value "The NCPDP Provider Identification number (NCPDP Provider ID), formerly known as the NABP number, was developed to provide pharmacies with a unique, national identifier that would assist pharmacies in their interactions with pharmacy payers and claims processors. The NCPDP Provider ID is a seven-digit numbering system that is assigned to every licensed pharmacy and qualified Non-Pharmacy\nDispensing Site (NPDS) in the United States."];
+  fhir:NamingSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ];
+  fhir:NamingSystem.usage [ fhir:value "Used in the US to identify pharmacy sites"];
+  fhir:NamingSystem.uniqueId [
+     fhir:index 0;
+     fhir:NamingSystem.uniqueId.type [ fhir:value "uri" ];
+     fhir:NamingSystem.uniqueId.value [ fhir:value "http://ncpdp.org/provider-id" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/NamingSystem/carin-rtpbc-NamingSystem-ncpdp-provider-id.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/NamingSystem/carin-rtpbc-NamingSystem-ncpdp-provider-id.ttl> .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-coupon-coverage-class-code-system" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-11-27T00:00:00.000-05:00" />
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security" />
+      <code value="everyone^write" />
+    </security>
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcCouponCoverageClassCodeSystem" />
+  <title value="CARIN RTPBC Coupon Coverage Class Code System" />
+  <status value="active" />
+  <date value="2019-11-27" />
+  <publisher value="CARIN Alliance" />
+  <description value="This code system defines additional coverage class concepts related to medication discount coupons." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="coupon" />
+    <display value="Coupon" />
+    <definition value="Discount coupon" />
+  </concept>
+  <concept>
+    <code value="coupon-request" />
+    <display value="Coupon Request" />
+    <definition value="Key that can be used to obtain a discount coupon." />
+  </concept>
+</CodeSystem>

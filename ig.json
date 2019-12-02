@@ -27,7 +27,7 @@
 		"https://trifolia-on-fhir.lantanagroup.com"
 	],
 	"sct-edition": "http://snomed.info/sct/731000124108",
-	"canonicalBase": "http://hl7.org/fhir/us/carin-bb",
+	"canonicalBase": "http://hl7.org/fhir/us/carin-rtpbc",
 	"defaults": {
 		"Claim": {
 			"template-base": "ex.html"
@@ -57,10 +57,13 @@
 			"template-base": "base.html"
 		},
 		"CodeSystem": {
-			"template-base": "base.html"
+			"template-base": "term.html"
 		},
 		"ValueSet": {
-			"template-base": "base.html"
+			"template-base": "term.html"
+		},
+		"NamingSystem": {
+			"template-base": "term.html"
 		},
 		"OperationDefinition": {
 			"template-base": "base.html"
@@ -113,41 +116,29 @@
 		}
 	},
 	"resources": {
-		"Organization/rtpbc-organization-03": {
-			"base": "Organization-rtpbc-organization-03.html",
-			"defns": "Organization-rtpbc-organization-03-definitions.html"
+		"Bundle/rtpbc-bundle-request-03": {
+			"base": "Bundle-rtpbc-bundle-request-03.html",
+			"defns": "Bundle-rtpbc-bundle-request-03-definitions.html"
 		},
-		"Practitioner/rtpbc-practitioner-03": {
-			"base": "Practitioner-rtpbc-practitioner-03.html",
-			"defns": "Practitioner-rtpbc-practitioner-03-definitions.html"
+		"Bundle/rtpbc-bundle-response-03": {
+			"base": "Bundle-rtpbc-bundle-response-03.html",
+			"defns": "Bundle-rtpbc-bundle-response-03-definitions.html"
 		},
-		"Patient/rtpbc-patient-03": {
-			"base": "Patient-rtpbc-patient-03.html",
-			"defns": "Patient-rtpbc-patient-03-definitions.html"
+		"Bundle/rtpbc-bundle-response-03-w-header": {
+			"base": "Bundle-rtpbc-bundle-response-03-w-header.html",
+			"defns": "Bundle-rtpbc-bundle-response-03-w-header-definitions.html"
 		},
-		"MedicationRequest/rtpbc-medicationrequest-03": {
-			"base": "MedicationRequest-rtpbc-medicationrequest-03.html",
-			"defns": "MedicationRequest-rtpbc-medicationrequest-03-definitions.html"
+		"Bundle/rtpbc-bundle-request-03-w-header": {
+			"base": "Bundle-rtpbc-bundle-request-03-w-header.html",
+			"defns": "Bundle-rtpbc-bundle-request-03-w-header-definitions.html"
 		},
 		"Claim/rtpbc-claim-03": {
 			"base": "Claim-rtpbc-claim-03.html",
 			"defns": "Claim-rtpbc-claim-03-definitions.html"
 		},
-		"Coverage/rtpbc-coverage-03": {
-			"base": "Coverage-rtpbc-coverage-03.html",
-			"defns": "Coverage-rtpbc-coverage-03-definitions.html"
-		},
-		"Bundle/rtpbc-bundle-request-03": {
-			"base": "Bundle-rtpbc-bundle-request-03.html",
-			"defns": "Bundle-rtpbc-bundle-request-03-definitions.html"
-		},
 		"Claim/rtpbc-claim-with-contained-003": {
 			"base": "Claim-rtpbc-claim-with-contained-003.html",
 			"defns": "Claim-rtpbc-claim-with-contained-003-definitions.html"
-		},
-		"Organization/rtpbc-organization-03m": {
-			"base": "Organization-rtpbc-organization-03m.html",
-			"defns": "Organization-rtpbc-organization-03m-definitions.html"
 		},
 		"ClaimResponse/rtpbc-claim-response-with-contained-03": {
 			"base": "ClaimResponse-rtpbc-claim-response-with-contained-03.html",
@@ -157,49 +148,105 @@
 			"base": "ClaimResponse-rtpbc-claim-response-03.html",
 			"defns": "ClaimResponse-rtpbc-claim-response-03-definitions.html"
 		},
-		"Bundle/rtpbc-bundle-response-03": {
-			"base": "Bundle-rtpbc-bundle-response-03.html",
-			"defns": "Bundle-rtpbc-bundle-response-03-definitions.html"
+		"CodeSystem/carin-rtpbc-billing-unit-code-system": {
+			"base": "CodeSystem-carin-rtpbc-billing-unit-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-billing-unit-code-system-definitions.html"
 		},
-		"StructureDefinition/carin-rtpbc-MedicationRequest": {
-			"base": "StructureDefinition-carin-rtpbc-MedicationRequest.html",
-			"defns": "StructureDefinition-carin-rtpbc-MedicationRequest-definitions.html"
+		"CodeSystem/carin-rtpbc-canadian-province-code-system": {
+			"base": "CodeSystem-carin-rtpbc-canadian-province-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-canadian-province-code-system-definitions.html"
 		},
-		"CodeSystem/carin-rtpbc-billing-units-code-system": {
-			"base": "CodeSystem-carin-rtpbc-billing-units-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-billing-units-code-system-definitions.html"
-		},
-		"StructureDefinition/carin-rtpbc-Coverage": {
-			"base": "StructureDefinition-carin-rtpbc-Coverage.html",
-			"defns": "StructureDefinition-carin-rtpbc-Coverage-definitions.html"
-		},
-		"ValueSet/carin-rtpbc-billing-units-value-set": {
-			"base": "ValueSet-carin-rtpbc-billing-units-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-billing-units-value-set-definitions.html"
+		"CodeSystem/carin-rtpbc-coupon-coverage-class-code-system": {
+			"base": "CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-coupon-coverage-class-code-system-definitions.html"
 		},
 		"CodeSystem/carin-rtpbc-coverage-summary-code-system": {
 			"base": "CodeSystem-carin-rtpbc-coverage-summary-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-coverage-summary-code-system-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-coverage-summary-value-set": {
-			"base": "ValueSet-carin-rtpbc-coverage-summary-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-coverage-summary-value-set-definitions.html"
-		},
 		"CodeSystem/carin-rtpbc-error-code-system": {
 			"base": "CodeSystem-carin-rtpbc-error-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-error-code-system-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-error-code-value-set": {
-			"base": "ValueSet-carin-rtpbc-error-code-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-error-code-value-set-definitions.html"
+		"CodeSystem/carin-rtpbc-example-ndc-11-code-system": {
+			"base": "CodeSystem-carin-rtpbc-example-ndc-11-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-example-ndc-11-code-system-definitions.html"
+		},
+		"CodeSystem/carin-rtpbc-example-provider-id-code-system": {
+			"base": "CodeSystem-carin-rtpbc-example-provider-id-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-example-provider-id-code-system-definitions.html"
+		},
+		"CodeSystem/carin-rtpbc-example-reject-code-system": {
+			"base": "CodeSystem-carin-rtpbc-example-reject-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-example-reject-code-system-definitions.html"
 		},
 		"CodeSystem/carin-rtpbc-patient-pay-type-code-system": {
 			"base": "CodeSystem-carin-rtpbc-patient-pay-type-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-patient-pay-type-code-system-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-patient-pay-type-value-set": {
-			"base": "ValueSet-carin-rtpbc-patient-pay-type-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-patient-pay-type-value-set-definitions.html"
+		"CodeSystem/carin-rtpbc-pharmacy-type-code-system": {
+			"base": "CodeSystem-carin-rtpbc-pharmacy-type-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-pharmacy-type-code-system-definitions.html"
+		},
+		"Coverage/rtpbc-coverage-03": {
+			"base": "Coverage-rtpbc-coverage-03.html",
+			"defns": "Coverage-rtpbc-coverage-03-definitions.html"
+		},
+		"MedicationRequest/rtpbc-medicationrequest-03": {
+			"base": "MedicationRequest-rtpbc-medicationrequest-03.html",
+			"defns": "MedicationRequest-rtpbc-medicationrequest-03-definitions.html"
+		},
+		"MessageDefinition/carin-rtpbc-request-message-definition": {
+			"base": "MessageDefinition-carin-rtpbc-request-message-definition.html",
+			"defns": "MessageDefinition-carin-rtpbc-request-message-definition-definitions.html"
+		},
+		"MessageDefinition/carin-rtpbc-response-message-definition": {
+			"base": "MessageDefinition-carin-rtpbc-response-message-definition.html",
+			"defns": "MessageDefinition-carin-rtpbc-response-message-definition-definitions.html"
+		},
+		"NamingSystem/carin-rtpbc-NamingSystem-ncpdpid": {
+			"base": "NamingSystem-carin-rtpbc-NamingSystem-ncpdpid.html",
+			"defns": "NamingSysem-carin-rtpbc-NamingSystem-ncpdpid-definitions.html"
+		},
+		"NamingSystem/carin-rtpbc-NamingSystem-ncpdp-pharmacy-type": {
+			"base": "NamingSystem-carin-rtpbc-NamingSystem-ncpdp-pharmacy-type.html",
+			"defns": "NamingSysem-carin-rtpbc-NamingSystem-ncpdp-pharmacy-type-definitions.html"
+		},
+		"NamingSystem/carin-rtpbc-NamingSystem-ncpdp-reject-code": {
+			"base": "NamingSystem-carin-rtpbc-NamingSystem-ncpdp-reject-code.html",
+			"defns": "NamingSysem-carin-rtpbc-NamingSystem-ncpdp-reject-code-definitions.html"
+		},
+		"NamingSystem/carin-rtpbc-NamingSystem-ncpdp-unit-of-measure": {
+			"base": "NamingSystem-carin-rtpbc-NamingSystem-ncpdp-unit-of-measure.html",
+			"defns": "NamingSysem-carin-rtpbc-NamingSystem-ncpdp-unit-of-measure-definitions.html"
+		},
+		"NamingSystem/carin-rtpbc-NamingSystem-canada-post-province-code": {
+			"base": "NamingSystem-carin-rtpbc-NamingSystem-canada-post-province-code.html",
+			"defns": "NamingSysem-carin-rtpbc-NamingSystem-canada-post-province-code.html"
+		},
+		"Organization/rtpbc-organization-03": {
+			"base": "Organization-rtpbc-organization-03.html",
+			"defns": "Organization-rtpbc-organization-03-definitions.html"
+		},
+		"Organization/rtpbc-organization-03m": {
+			"base": "Organization-rtpbc-organization-03m.html",
+			"defns": "Organization-rtpbc-organization-03m-definitions.html"
+		},
+		"Patient/rtpbc-patient-03": {
+			"base": "Patient-rtpbc-patient-03.html",
+			"defns": "Patient-rtpbc-patient-03-definitions.html"
+		},
+		"Practitioner/rtpbc-practitioner-03": {
+			"base": "Practitioner-rtpbc-practitioner-03.html",
+			"defns": "Practitioner-rtpbc-practitioner-03-definitions.html"
+		},
+		"StructureDefinition/carin-rtpbc-MedicationRequest": {
+			"base": "StructureDefinition-carin-rtpbc-MedicationRequest.html",
+			"defns": "StructureDefinition-carin-rtpbc-MedicationRequest-definitions.html"
+		},
+		"StructureDefinition/carin-rtpbc-Coverage": {
+			"base": "StructureDefinition-carin-rtpbc-Coverage.html",
+			"defns": "StructureDefinition-carin-rtpbc-Coverage-definitions.html"
 		},
 		"StructureDefinition/carin-rtpbc-ClaimResponse": {
 			"base": "StructureDefinition-carin-rtpbc-ClaimResponse.html",
@@ -225,32 +272,48 @@
 			"base": "StructureDefinition-carin-rtpbc-pharmacy-Organization.html",
 			"defns": "StructureDefinition-carin-rtpbc-pharmacy-Organization-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-prescribable-product-code-value-set": {
-			"base": "ValueSet-carin-rtpbc-prescribable-product-code-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-prescribable-product-code-value-set-definitions.html"
-		},
 		"StructureDefinition/carin-rtpbc-extension-isAlternative": {
 			"base": "StructureDefinition-carin-rtpbc-extension-isAlternative.html",
 			"defns": "StructureDefinition-carin-rtpbc-extension-isAlternative-definitions.html"
 		},
-		"Bundle/rtpbc-bundle-response-03-w-header": {
-			"base": "Bundle-rtpbc-bundle-response-03-w-header.html",
-			"defns": "Bundle-rtpbc-bundle-response-03-w-header-definitions.html"
+		"ValueSet/carin-rtpbc-billing-unit-value-set": {
+			"base": "ValueSet-carin-rtpbc-billing-unit-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-billing-unit-value-set-definitions.html"
 		},
-		"Bundle/rtpbc-bundle-request-03-w-header": {
-			"base": "Bundle-rtpbc-bundle-request-03-w-header.html",
-			"defns": "Bundle-rtpbc-bundle-request-03-w-header-definitions.html"
+		"ValueSet/carin-rtpbc-country-code-value-set": {
+			"base": "ValueSet-carin-rtpbc-country-code-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-country-code-value-set-definitions.html"
 		},
-		"MessageDefinition/carin-rtpbc-request-message-definition": {
-			"base": "MessageDefinition-carin-rtpbc-request-message-definition.html",
-			"defns": "MessageDefinition-carin-rtpbc-request-message-definition-definitions.html"
+		"ValueSet/carin-rtpbc-coverage-summary-value-set": {
+			"base": "ValueSet-carin-rtpbc-coverage-summary-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-coverage-summary-value-set-definitions.html"
 		},
-		"MessageDefinition/carin-rtpbc-response-message-definition": {
-			"base": "MessageDefinition-carin-rtpbc-response-message-definition.html",
-			"defns": "MessageDefinition-carin-rtpbc-response-message-definition-definitions.html"
+		"ValueSet/carin-rtpbc-error-code-value-set": {
+			"base": "ValueSet-carin-rtpbc-error-code-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-error-code-value-set-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-expanded-coverage-class-value-set": {
+			"base": "ValueSet-carin-rtpbc-expanded-coverage-class-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-expanded-coverage-class-value-set-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-patient-pay-type-value-set": {
+			"base": "ValueSet-carin-rtpbc-patient-pay-type-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-patient-pay-type-value-set-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-pharmacy-type-value-set": {
+			"base": "ValueSet-carin-rtpbc-pharmacy-type-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-pharmacy-type-value-set-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-prescribable-product-code-value-set": {
+			"base": "ValueSet-carin-rtpbc-prescribable-product-code-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-prescribable-product-code-value-set-definitions.html"
+		},
+		"ValueSet/carin-rtpbc-state-and-province-code-value-set": {
+			"base": "ValueSet-carin-rtpbc-state-and-province-code-value-set.html",
+			"defns": "ValueSet-carin-rtpbc-state-and-province-code-value-set-definitions.html"
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.09",
+	"fixed-business-version": "0.1.10",
 	"dependencyList": []
 }

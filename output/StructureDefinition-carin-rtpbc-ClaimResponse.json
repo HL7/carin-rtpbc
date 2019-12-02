@@ -2,15 +2,15 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-ClaimResponse",
   "meta": {
-    "versionId": "59",
-    "lastUpdated": "2019-11-14T15:19:00.000-06:00"
+    "versionId": "61",
+    "lastUpdated": "2019-11-26T23:00:00.000-06:00"
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              \n                    </div>\n                </div>\n            </div>\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>\n          <div>This profile constrains the ClaimResponse resource to serve as the                                                                          <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              </div>\n        </div>\n      </div>\n    </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
-  "version": "0.1.09",
+  "version": "0.1.10",
   "name": "CarinRtpbcResponse",
   "title": "CARIN RTPBC Response using ClaimResponse",
   "status": "draft",
@@ -4061,7 +4061,8 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "description": "Currencies"
+          "description": "Currencies",
+          "valueSet": "http://hl7.org/fhir/ValueSet/currencies"
         },
         "mapping": [
           {
@@ -4760,7 +4761,10 @@
         },
         "type": [
           {
-            "code": "Extension"
+            "code": "Extension",
+            "_code": {
+              "id": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"
+            }
           }
         ],
         "constraint": [
@@ -6279,8 +6283,8 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
+          "description": "Billing quantity unit of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
         },
         "mapping": [
           {
@@ -7050,7 +7054,8 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "description": "Currencies"
+          "description": "Currencies",
+          "valueSet": "http://hl7.org/fhir/ValueSet/currencies"
         },
         "mapping": [
           {
@@ -9085,7 +9090,12 @@
         ],
         "mustSupport": true,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "RTPBC Coverage Summary",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"
+        }
       },
       {
         "id": "ClaimResponse.processNote.language",
@@ -9823,8 +9833,9 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "strength": "required",
-          "description": "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)"
+          "strength": "extensible",
+          "description": "RTPBC Error Codes",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"
         }
       },
       {
@@ -10595,7 +10606,8 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "description": "Currencies"
+          "description": "Currencies",
+          "valueSet": "http://hl7.org/fhir/ValueSet/currencies"
         }
       },
       {
@@ -10618,7 +10630,10 @@
         },
         "type": [
           {
-            "code": "Extension"
+            "code": "Extension",
+            "_code": {
+              "id": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"
+            }
           }
         ],
         "mustSupport": true,
@@ -10726,8 +10741,8 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
+          "description": "Billing quantity unit of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
         }
       },
       {
@@ -10789,7 +10804,8 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "description": "Currencies"
+          "description": "Currencies",
+          "valueSet": "http://hl7.org/fhir/ValueSet/currencies"
         }
       },
       {
@@ -10815,7 +10831,12 @@
         "label": "Determination Note Text",
         "short": "Determination Note Text",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "RTPBC Coverage Summary",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"
+        }
       },
       {
         "id": "ClaimResponse.insurance",
@@ -10865,8 +10886,9 @@
         "definition": "A code identifying the reason that processing could not be completed.",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
-          "description": "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)"
+          "strength": "extensible",
+          "description": "RTPBC Error Codes",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"
         }
       },
       {

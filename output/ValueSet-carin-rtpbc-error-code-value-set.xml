@@ -7,31 +7,18 @@
     <lastUpdated value="2019-11-17T14:30:00.000-06:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Error Code Value Set</h2><div><p>This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>
-</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href="CodeSystem-carin-rtpbc-error-code-system.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-no-patient-match">no-patient-match</a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td><a href="CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-multiple-patient-matches">multiple-patient-matches</a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td><a href="CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-invalid-product-id">invalid-product-id</a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></li></ul></div>
+    <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.</div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtbpcErrorCodeValueSet"/>
   <title value="CARIN RTPBC Error Code Value Set"/>
   <status value="draft"/>
-  <date value="2019-11-18T12:13:41-06:00"/>
-  <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing."/>
+  <date value="2019-12-01T19:50:55-06:00"/>
+  <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing."/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code"/>
-      <concept>
-        <code value="no-patient-match"/>
-        <display value="No patient match found"/>
-      </concept>
-      <concept>
-        <code value="multiple-patient-matches"/>
-        <display value="More Than One Patient Found"/>
-      </concept>
-      <concept>
-        <code value="invalid-product-id"/>
-        <display value="M/I Product/Service ID"/>
-      </concept>
+      <system value="http://ncpdp.org/reject-code"/>
     </include>
   </compose>
 </ValueSet>

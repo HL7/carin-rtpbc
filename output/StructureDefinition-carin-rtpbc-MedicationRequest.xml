@@ -8,13 +8,13 @@
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>
-                <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit  check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                                  </div>
-            </div>
-        </div>
+      <div>
+        <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                 </div>
+      </div>
+    </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtpbcRequestPrescriptionInfo"/>
   <title value="CARIN RTPBC Request Prescription Information"/>
   <status value="draft"/>
@@ -3162,7 +3162,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -4272,7 +4272,7 @@
       <binding>
         <strength value="required"/>
         <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
     </element>
     <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">

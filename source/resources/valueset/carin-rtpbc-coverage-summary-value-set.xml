@@ -1,50 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ValueSet
-    xmlns="http://hl7.org/fhir">
-    <id value="carin-rtpbc-coverage-summary-value-set"/>
-    <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2019-11-06T17:01:46.000-05:00"/>
-    </meta>
-    <text>
-        <status value="additional"/>
-        <div
-            xmlns="http://www.w3.org/1999/xhtml">This value set contains coverage levels that may apply to a prescription product.
-        </div>
-    </text>
-    <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
-    <version value="1.0.0"/>
-    <name value="CarinRtbpcCoverageSummaryValueSet"/>
-    <title value="CARIN RTPBC Coverage Summary Value Set"/>
-    <status value="draft"/>
-    <description value="This value set contains coverage levels that may apply to a prescription product."/>
-    <compose>
-        <include>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
-            <concept>
-                <code value="covered"/>
-                <display value="Covered"/>
-            </concept>
-            <concept>
-                <code value="prior-auth"/>
-                <display value="Prior authorization required"/>
-            </concept>
-            <concept>
-                <code value="step-therapy"/>
-                <display value="Step therapy applies"/>
-            </concept>
-            <concept>
-                <code value="quantity-limit"/>
-                <display value="Quantity limits apply"/>
-            </concept>
-            <concept>
-                <code value="other-restriction"/>
-                <display value="Other restriction applies"/>
-            </concept>
-            <concept>
-                <code value="not-covered"/>
-                <display value="Not covered"/>
-            </concept>
-        </include>
-    </compose>
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-coverage-summary-value-set" />
+  <meta>
+    <versionId value="3" />
+    <lastUpdated value="2019-11-06T17:01:46.000-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary" />
+  <version value="1.0.0" />
+  <name value="CarinRtbpcCoverageSummaryValueSet" />
+  <title value="CARIN RTPBC Coverage Summary Value Set" />
+  <status value="draft" />
+  <description value="This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process." />
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary" />
+      <concept>
+        <code value="covered" />
+        <display value="Covered" />
+      </concept>
+      <concept>
+        <code value="prior-auth" />
+        <display value="Prior authorization required" />
+      </concept>
+      <concept>
+        <code value="step-therapy" />
+        <display value="Step therapy applies" />
+      </concept>
+      <concept>
+        <code value="quantity-limit" />
+        <display value="Quantity limits apply" />
+      </concept>
+      <concept>
+        <code value="other-restriction" />
+        <display value="Other restriction applies" />
+      </concept>
+      <concept>
+        <code value="not-covered" />
+        <display value="Not covered" />
+      </concept>
+    </include>
+  </compose>
 </ValueSet>

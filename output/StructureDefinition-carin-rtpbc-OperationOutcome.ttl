@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-OperationOutcome> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-OperationOutcome> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-OperationOutcome"];
   fhir:Resource.meta [
@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy \nbenefit \ncheck response.\n            </div>\n        </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.09"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.10"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcExceptionResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Exception Response"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -970,9 +970,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-OperationOutcome.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-OperationOutcome.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/StructureDefinition/carin-rtpbc-OperationOutcome.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-OperationOutcome.ttl> .
 
 # -------------------------------------------------------------------------------------
 

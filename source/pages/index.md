@@ -41,7 +41,7 @@ The profile adapts terminology used in US pharmacy benefit processing, to minimi
 * for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*
 
 ***Relationship to the NCPDP provider-focused RTPBC transactions*** <br/>
-This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort.
+This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort. (See <a href="Consumer_vs_provider_RTPBC.html">Consumer vs provider RTPBC</a> for content comparison.)
 
 ***Related information flows outside of consumer RTPBC*** <br/>
 The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*
@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.09 (This version):** Added message definitions for the request and response. Added an Error Handling section in the Guidance menu, and placeholder 'error code' CodeSystem and ValueSet resources (to be refined/replaced after stakeholder discussion). 
+**0.1.10 (This version):** Added code system with new coupon coverage-class concepts and new value set to add them to the current HL7 coverage-class values. Added placeholder code systems for multiple NCPDP and other code/identifier systems for which HL7/FHIR URLs are not available--to be replaced with HL7-maintained URLs or NamingSystem resources within this IG (when supported by the publishing process); see Terminology page. Added state/province and constrained country value sets and related element bindings in Patient and pharmacy Organization profiles. Added currency bindings in ClaimResponse cost elements. Refined content and layout on terminology, code system, value set and naming system pages. Refined business error content in ClaimResponse and clarified related guidance in the Error Handling page. Refined content on the Consumer vs Provider RTPBC page. 
+
+**0.1.09:** Added message definitions for the request and response. Added an Error Handling section in the Guidance menu, and placeholder 'error code' CodeSystem and ValueSet resources (to be refined/replaced after stakeholder discussion). 
 
 **0.1.08:** Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.
 

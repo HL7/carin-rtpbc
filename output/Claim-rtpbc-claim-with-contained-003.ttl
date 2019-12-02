@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-with-contained-003> a fhir:Claim;
+<http://hl7.org/fhir/us/carin-rtpbc/Claim/rtpbc-claim-with-contained-003> a fhir:Claim;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-claim-with-contained-003"];
   fhir:Resource.meta [
@@ -86,7 +86,7 @@
      fhir:Resource.id [ fhir:value "rtpbc-coverage-03" ];
      fhir:Coverage.status [ fhir:value "active" ];
      fhir:Coverage.beneficiary [
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
        fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
      ];
      fhir:Coverage.payor [
@@ -167,7 +167,7 @@
      ]
   ];
   fhir:Claim.prescription [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03>;
      fhir:Reference.reference [ fhir:value "MedicationRequest/rtpbc-medicationrequest-03" ]
   ];
   fhir:Claim.careTeam [
@@ -206,15 +206,15 @@
      ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-with-contained-003.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/Claim/rtpbc-claim-with-contained-003.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/Claim/rtpbc-claim-with-contained-003.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/Claim/rtpbc-claim-with-contained-003.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.09). See the <a href="http://hl7.org/fhir/us/carin-bb/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.10). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -234,8 +234,12 @@ can only resize using html  or css ;-(
 <h3 id="real-time-pharmacy-benefit-check-rtpbc-error-handling">Real-time Pharmacy Benefit Check (RTPBC) error handling</h3>
 <p><br /></p>
 
+<h4 id="claimresponseerror-usage">ClaimResponse.error usage</h4>
+<p>In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource.
+<br /></p>
+
 <h4 id="operation-outcome-usage">Operation outcome usage</h4>
-<p>In the event of an error, RTPBC source systems (payer/PBM, discount pricing source) SHALL respond by providing an OperationOutcome resource</p>
+<p>In the event of a system or communication error, RTPBC source systems (payer/PBM, discount pricing source) SHALL respond by providing an OperationOutcome resource.</p>
 
 <p>The OperationOutcome:</p>
 
@@ -282,7 +286,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.09  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Nov 18, 2019 12:13-0600.
+      CarinRtpbc Version: 0.1.10  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Sun, Dec 1, 2019 19:50-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

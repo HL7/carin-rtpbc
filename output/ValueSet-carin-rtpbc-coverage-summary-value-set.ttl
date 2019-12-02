@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set> a fhir:ValueSet;
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-coverage-summary-value-set> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-coverage-summary-value-set"];
   fhir:Resource.meta [
@@ -13,16 +13,16 @@
      fhir:Meta.lastUpdated [ fhir:value "2019-11-06T16:01:46.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains coverage levels that may apply to a prescription product.\n        </div>"
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Coverage Summary Value Set</h2><div><p>This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-covered\">covered</a></td><td>Covered</td><td>Covered</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-prior-auth\">prior-auth</a></td><td>Prior authorization required</td><td>Covered with restriction: Prior authorization required</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-step-therapy\">step-therapy</a></td><td>Step therapy applies</td><td>Covered with restriction: Step therapy applies</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-quantity-limit\">quantity-limit</a></td><td>Quantity limits apply</td><td>Covered with restriction: Quantity limits apply</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-other-restriction\">other-restriction</a></td><td>Other restriction applies</td><td>Covered with restriction: Other restriction applies</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-coverage-summary-code-system.html#carin-rtpbc-coverage-summary-code-system-not-covered\">not-covered</a></td><td>Not covered</td><td>Not covered</td></tr></table></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"];
-  fhir:ValueSet.version [ fhir:value "0.1.09"];
+  fhir:ValueSet.version [ fhir:value "0.1.10"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcCoverageSummaryValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Coverage Summary Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-11-18T12:13:41-06:00"^^xsd:dateTime];
-  fhir:ValueSet.description [ fhir:value "This value set contains coverage levels that may apply to a prescription product."];
+  fhir:ValueSet.date [ fhir:value "2019-12-01T19:50:55-06:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
@@ -57,9 +57,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/ValueSet/carin-rtpbc-coverage-summary-value-set.ttl> .
 
 # -------------------------------------------------------------------------------------
 

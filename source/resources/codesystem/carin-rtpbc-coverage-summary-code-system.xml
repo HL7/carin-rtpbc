@@ -1,48 +1,52 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CodeSystem
-    xmlns="http://hl7.org/fhir">
-    <id value="carin-rtpbc-coverage-summary-code-system"/>
-    <meta>
-        <versionId value="3"/>
-        <lastUpdated value="2019-11-06T15:55:51.000-05:00"/>
-    </meta>
-    <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
-    <version value="1.0.0"/>
-    <name value="CarinRtpbcCoverageSummaryCodeSystem"/>
-    <title value="CARIN RTPBC Coverage Summary Code System"/>
-    <status value="draft"/>
-    <publisher value="CARIN Alliance"/>
-    <description value="This code system defines coverage outcomes that may apply to a prescription product."/>
-    <caseSensitive value="false"/>
-    <content value="complete"/>
-    <concept>
-        <code value="covered"/>
-        <display value="Covered"/>
-        <definition value="Covered"/>
-    </concept>
-    <concept>
-        <code value="prior-auth"/>
-        <display value="Prior authorization required"/>
-        <definition value="Covered with restriction: Prior authorization required"/>
-    </concept>
-    <concept>
-        <code value="step-therapy"/>
-        <display value="Step therapy applies"/>
-        <definition value="Covered with restriction: Step therapy applies"/>
-    </concept>
-    <concept>
-        <code value="quantity-limit"/>
-        <display value="Quantity limits apply"/>
-        <definition value="Covered with restriction: Quantity limits apply"/>
-    </concept>
-    <concept>
-        <code value="other-restriction"/>
-        <display value="Other restriction applies"/>
-        <definition value="Covered with restriction: Other restriction applies"/>
-    </concept>
-    <concept>
-        <code value="not-covered"/>
-        <display value="Not covered"/>
-        <definition value="Not covered"/>
-    </concept>
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-coverage-summary-code-system" />
+  <meta>
+    <versionId value="3" />
+    <lastUpdated value="2019-11-06T15:55:51.000-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcCoverageSummaryCodeSystem" />
+  <title value="CARIN RTPBC Coverage Summary Code System" />
+  <status value="draft" />
+  <publisher value="CARIN Alliance" />
+  <description value="This code system defines a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="covered" />
+    <display value="Covered" />
+    <definition value="Covered" />
+  </concept>
+  <concept>
+    <code value="prior-auth" />
+    <display value="Prior authorization required" />
+    <definition value="Covered with restriction: Prior authorization required" />
+  </concept>
+  <concept>
+    <code value="step-therapy" />
+    <display value="Step therapy applies" />
+    <definition value="Covered with restriction: Step therapy applies" />
+  </concept>
+  <concept>
+    <code value="quantity-limit" />
+    <display value="Quantity limits apply" />
+    <definition value="Covered with restriction: Quantity limits apply" />
+  </concept>
+  <concept>
+    <code value="pharmacy-restriction" />
+    <display value="Pharmacy restriction applies" />
+    <definition value="Pharmacy restriction applies" />
+  </concept>
+  <concept>
+    <code value="other-restriction" />
+    <display value="Other restriction applies" />
+    <definition value="Covered with restriction: Other restriction applies" />
+  </concept>
+  <concept>
+    <code value="not-covered" />
+    <display value="Not covered" />
+    <definition value="Not covered" />
+  </concept>
 </CodeSystem>

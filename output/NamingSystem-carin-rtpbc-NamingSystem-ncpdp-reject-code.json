@@ -1,0 +1,43 @@
+{
+  "resourceType": "NamingSystem",
+  "id": "carin-rtpbc-NamingSystem-ncpdp-reject-code",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-NamingSystem-ncpdp-reject-code</p><p><b>name</b>: CarinRtpbcNamingSystemNcpdpRejectCode</p><p><b>status</b>: active</p><p><b>kind</b>: codesystem</p><p><b>date</b>: Nov 24, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>responsible</b>: National Council for Prescription Drug Programs (NCPDP)</p><p><b>description</b>: The NCPDP Reject Code (511-FB) code set contains exception definitions for use when transaction processing cannot be completed.</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>usage</b>: Used to convey exceptions when transaction processing cannot be completed.</p><h3>UniqueIds</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>uri</td><td>http://ncpdp.org/reject-code</td></tr></table></div>"
+  },
+  "name": "CarinRtpbcNamingSystemNcpdpRejectCode",
+  "status": "active",
+  "kind": "codesystem",
+  "date": "2019-11-24T00:00:00-06:00",
+  "publisher": "CARIN Alliance",
+  "contact": [
+    {
+      "name": "CARIN Alliance",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.carinalliance.com"
+        }
+      ]
+    }
+  ],
+  "responsible": "National Council for Prescription Drug Programs (NCPDP)",
+  "description": "The NCPDP Reject Code (511-FB) code set contains exception definitions for use when transaction processing cannot be completed.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
+  "usage": "Used to convey exceptions when transaction processing cannot be completed.",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://ncpdp.org/reject-code"
+    }
+  ]
+}

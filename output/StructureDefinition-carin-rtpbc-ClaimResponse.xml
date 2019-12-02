@@ -3,22 +3,20 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-ClaimResponse"/>
   <meta>
-    <versionId value="59"/>
-    <lastUpdated value="2019-11-14T15:19:00.000-06:00"/>
+    <versionId value="61"/>
+    <lastUpdated value="2019-11-26T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>
-                <div>
-                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          
-                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              
-                    </div>
-                </div>
-            </div>
+      <div>
+        <div>
+          <div>This profile constrains the ClaimResponse resource to serve as the                                                                          <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              </div>
         </div>
+      </div>
+    </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtpbcResponse"/>
   <title value="CARIN RTPBC Response using ClaimResponse"/>
   <status value="draft"/>
@@ -3298,6 +3296,7 @@
       <binding>
         <strength value="required"/>
         <description value="Currencies"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/currencies"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -3864,7 +3863,9 @@
         <max value="*"/>
       </base>
       <type>
-        <code value="Extension"/>
+        <code value="Extension">
+          <id value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"/>
+        </code>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -5094,8 +5095,8 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <description value="Billing quantity unit of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -5726,6 +5727,7 @@
       <binding>
         <strength value="required"/>
         <description value="Currencies"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/currencies"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -7376,6 +7378,11 @@
       <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
+      <binding>
+        <strength value="extensible"/>
+        <description value="RTPBC Coverage Summary"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
+      </binding>
     </element>
     <element id="ClaimResponse.processNote.language">
       <path value="ClaimResponse.processNote.language"/>
@@ -7973,8 +7980,9 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <strength value="required"/>
-        <description value="RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)"/>
+        <strength value="extensible"/>
+        <description value="RTPBC Error Codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
       </binding>
     </element>
     <element id="ClaimResponse.error.code.id">
@@ -8614,6 +8622,7 @@
       <binding>
         <strength value="required"/>
         <description value="Currencies"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/currencies"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem">
@@ -8633,7 +8642,9 @@
         <max value="*"/>
       </base>
       <type>
-        <code value="Extension"/>
+        <code value="Extension">
+          <id value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"/>
+        </code>
       </type>
       <mustSupport value="true"/>
       <isModifier value="false"/>
@@ -8725,8 +8736,8 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <description value="Billing quantity unit of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
     </element>
     <element id="ClaimResponse.addItem.noteNumber">
@@ -8783,6 +8794,7 @@
       <binding>
         <strength value="required"/>
         <description value="Currencies"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/currencies"/>
       </binding>
     </element>
     <element id="ClaimResponse.processNote">
@@ -8806,6 +8818,11 @@
       <short value="Determination Note Text"/>
       <min value="1"/>
       <mustSupport value="true"/>
+      <binding>
+        <strength value="extensible"/>
+        <description value="RTPBC Coverage Summary"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
+      </binding>
     </element>
     <element id="ClaimResponse.insurance">
       <path value="ClaimResponse.insurance"/>
@@ -8845,8 +8862,9 @@
       <definition value="A code identifying the reason that processing could not be completed."/>
       <mustSupport value="true"/>
       <binding>
-        <strength value="required"/>
-        <description value="RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)"/>
+        <strength value="extensible"/>
+        <description value="RTPBC Error Codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
       </binding>
     </element>
     <element id="ClaimResponse.error.code.coding">

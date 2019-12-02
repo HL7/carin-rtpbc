@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-example-provider-id-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-example-provider-id-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T23:00:00.000-06:00"^^xsd:dateTime ];
+     fhir:Meta.security [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
+       fhir:Coding.code [ fhir:value "everyone^write" ]
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Example Provider ID Code System</h2><div><p>This is a placeholder code system illustrating values from the proprietary National Council for Prescription Drug Programs (NCPDP) Provider ID identifier system. It will be replaced prior to publishing with a formal mechanism for referencing in FHIR.</p>\n</div><p>This code system http://ncpdp.org/provider-id defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">0999017<a name=\"carin-rtpbc-example-provider-id-code-system-0999017\"> </a></td><td>Hometown Drug</td><td/></tr><tr><td style=\"white-space:nowrap\">0999029<a name=\"carin-rtpbc-example-provider-id-code-system-0999029\"> </a></td><td>My Mail Service Pharmacy</td><td/></tr><tr><td style=\"white-space:nowrap\">0999031<a name=\"carin-rtpbc-example-provider-id-code-system-0999031\"> </a></td><td>Acme Specialty Pharmacy</td><td/></tr><tr><td style=\"white-space:nowrap\">0999043<a name=\"carin-rtpbc-example-provider-id-code-system-0999043\"> </a></td><td>Local LTC Pharmacy</td><td/></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://ncpdp.org/provider-id"];
+  fhir:CodeSystem.version [ fhir:value "0.1.10"];
+  fhir:CodeSystem.name [ fhir:value "CarinRtpbcExampleProviderIdCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Example Provider ID Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-11-27T00:00:00-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This is a placeholder code system illustrating values from the proprietary National Council for Prescription Drug Programs (NCPDP) Provider ID identifier system. It will be replaced prior to publishing with a formal mechanism for referencing in FHIR."];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "0999017" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Hometown Drug" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "0999029" ];
+     fhir:CodeSystem.concept.display [ fhir:value "My Mail Service Pharmacy" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "0999031" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Acme Specialty Pharmacy" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "0999043" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Local LTC Pharmacy" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-example-provider-id-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CodeSystem/carin-rtpbc-example-provider-id-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

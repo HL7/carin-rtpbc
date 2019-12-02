@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03> a fhir:MedicationRequest;
+<http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03> a fhir:MedicationRequest;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-medicationrequest-03"];
   fhir:Resource.meta [
@@ -28,11 +28,11 @@
      ]
   ];
   fhir:MedicationRequest.subject [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:MedicationRequest.requester [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03>;
      fhir:Reference.reference [ fhir:value "Practitioner/rtpbc-practitioner-03" ]
   ];
   fhir:MedicationRequest.dispenseRequest [
@@ -47,22 +47,22 @@
        fhir:Quantity.code [ fhir:value "d" ]
      ];
      fhir:MedicationRequest.dispenseRequest.performer [
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03>;
        fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
      ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03.ttl> .
 
 # -------------------------------------------------------------------------------------
 

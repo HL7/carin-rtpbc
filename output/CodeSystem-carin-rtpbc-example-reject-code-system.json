@@ -1,0 +1,55 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "carin-rtpbc-example-reject-code-system",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2019-11-26T23:00:00.000-06:00",
+    "security": [
+      {
+        "system": "https://trifolia-fhir.lantanagroup.com/security",
+        "code": "everyone^write"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Example Reject Code System</h2><div><p>This code system contains example NCPDP Reject Codes (511-FB codes set) to be used by real-time pharmacy benefit check servers when encountering a data or business rule error that prevents processing from completing. This is a placeholder to be replaced prior to publishing with a formal mechanism for referencing in FHIR.</p>\n</div><p>This code system http://ncpdp.org/reject-code defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">N1<a name=\"carin-rtpbc-example-reject-code-system-N1\"> </a></td><td>No Patient Match Found</td><td>No Patient Match Found</td></tr><tr><td style=\"white-space:nowrap\">21<a name=\"carin-rtpbc-example-reject-code-system-21\"> </a></td><td>M/I Product/Service ID</td><td>Missing or Invalid Product/Service ID</td></tr><tr><td style=\"white-space:nowrap\">598<a name=\"carin-rtpbc-example-reject-code-system-598\"> </a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td style=\"white-space:nowrap\">599<a name=\"carin-rtpbc-example-reject-code-system-599\"> </a></td><td>Cardholder ID Matched But Last Name Did Not</td><td>Cardholder ID Matched But Last Name Did Not</td></tr><tr><td style=\"white-space:nowrap\">600<a name=\"carin-rtpbc-example-reject-code-system-600\"> </a></td><td>Coverage Outside Submitted Date Of Transaction</td><td>Coverage Outside Submitted Date Of Transaction</td></tr></table></div>"
+  },
+  "url": "http://ncpdp.org/reject-code",
+  "version": "0.1.10",
+  "name": "CarinRtpbcExampleRejectCodeSystem",
+  "title": "CARIN RTPBC Example Reject Code System",
+  "status": "draft",
+  "date": "2019-11-27T00:00:00-06:00",
+  "publisher": "CARIN Alliance",
+  "description": "This code system contains example NCPDP Reject Codes (511-FB codes set) to be used by real-time pharmacy benefit check servers when encountering a data or business rule error that prevents processing from completing. This is a placeholder to be replaced prior to publishing with a formal mechanism for referencing in FHIR.",
+  "caseSensitive": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "N1",
+      "display": "No Patient Match Found",
+      "definition": "No Patient Match Found"
+    },
+    {
+      "code": "21",
+      "display": "M/I Product/Service ID",
+      "definition": "Missing or Invalid Product/Service ID"
+    },
+    {
+      "code": "598",
+      "display": "More Than One Patient Found",
+      "definition": "More Than One Patient Found"
+    },
+    {
+      "code": "599",
+      "display": "Cardholder ID Matched But Last Name Did Not",
+      "definition": "Cardholder ID Matched But Last Name Did Not"
+    },
+    {
+      "code": "600",
+      "display": "Coverage Outside Submitted Date Of Transaction",
+      "definition": "Coverage Outside Submitted Date Of Transaction"
+    }
+  ]
+}

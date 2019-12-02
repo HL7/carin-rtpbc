@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-pharmacy-type-value-set"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-19T18:00:00.000-06:00"/>
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+      <code value="everyone^read"/>
+    </security>
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+      <code value="everyone^write"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Pharmacy Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html"><code>http://ncpdp.org/pharmacy-type</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"/>
+  <version value="0.1.10"/>
+  <name value="CARINRTPBCPharmacyTypeValueSet"/>
+  <title value="CARIN RTPBC Pharmacy Type Value Set"/>
+  <status value="draft"/>
+  <date value="2019-11-20T00:00:00-06:00"/>
+  <publisher value="CARIN Alliance"/>
+  <compose>
+    <include>
+      <system value="http://ncpdp.org/pharmacy-type"/>
+    </include>
+  </compose>
+</ValueSet>

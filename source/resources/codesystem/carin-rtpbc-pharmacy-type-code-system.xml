@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-pharmacy-type-code-system" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-11-27T00:00:00.000-05:00" />
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security" />
+      <code value="everyone^write" />
+    </security>
+  </meta>
+  <url value="http://ncpdp.org/pharmacy-type" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcPharmacyTypeCodeSystem" />
+  <title value="CARIN RTPBC Pharmacy Type Code System" />
+  <status value="draft" />
+  <date value="2019-11-27" />
+  <publisher value="CARIN Alliance" />
+  <description value="This value set contains pharmacy type categories." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="R" />
+    <display value="Retail" />
+    <definition value="Retail pharmacy" />
+  </concept>
+  <concept>
+    <code value="M" />
+    <display value="Mail Order" />
+    <definition value="Mail order pharmacy" />
+  </concept>
+  <concept>
+    <code value="S" />
+    <display value="Specialty" />
+    <definition value="Specialty pharmacy" />
+  </concept>
+  <concept>
+    <code value="L" />
+    <display value="Long-Term Care" />
+    <definition value="Long-term care pharmacy" />
+  </concept>
+  <concept>
+    <code value="A" />
+    <display value="Any" />
+    <definition value="Pharmacy without restriction" />
+  </concept>
+</CodeSystem>

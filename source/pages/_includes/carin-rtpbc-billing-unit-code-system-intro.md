@@ -1,7 +1,3 @@
----
-title: CodeSystem-carin-rtpbc-billing-unit-code-system-intro
-layout: default
-active: CodeSystem-carin-rtpbc-billing-unit-code-system-intro
----
+*This CodeSystem may be replaced before publishing with a NameSystem resource representing the proprietary National Council for Prescription Drug Programs (NCPDP) **Unit of Measure (600-28)** code set.
 
-This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.
+<br><br>

@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system> a fhir:CodeSystem;
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-billing-unit-code-system> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-billing-unit-code-system"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "11" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T02:13:09.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-10-28T18:12:08.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.\n        </div>"
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Billing Unit Code System</h2><div><p>This code system defines the quantity units of measure to be used when requesting predetermination of benefits for prescription-related products.</p>\n</div><p>This code system http://ncpdp.org/unit-of-measure defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">GM<a name=\"carin-rtpbc-billing-unit-code-system-GM\"> </a></td><td>Gram</td><td>Quantity unit of measure for products billed as a number of grams</td></tr><tr><td style=\"white-space:nowrap\">ML<a name=\"carin-rtpbc-billing-unit-code-system-ML\"> </a></td><td>Milliliter</td><td>Quantity unit of measure for products billed as a number of milliliters</td></tr><tr><td style=\"white-space:nowrap\">EA<a name=\"carin-rtpbc-billing-unit-code-system-EA\"> </a></td><td>Each</td><td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-billing-unit"];
-  fhir:CodeSystem.version [ fhir:value "0.1.03"];
+  fhir:CodeSystem.url [ fhir:value "http://ncpdp.org/unit-of-measure"];
+  fhir:CodeSystem.version [ fhir:value "0.1.10"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcBillingUnitCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Billing Unit Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
@@ -45,9 +45,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CodeSystem/carin-rtpbc-billing-unit-code-system.ttl> .
 
 # -------------------------------------------------------------------------------------
 

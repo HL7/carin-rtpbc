@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-example-provider-id-code-system" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-11-27T00:00:00.000-05:00" />
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security" />
+      <code value="everyone^write" />
+    </security>
+  </meta>
+  <url value="http://ncpdp.org/provider-id" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcExampleProviderIdCodeSystem" />
+  <title value="CARIN RTPBC Example Provider ID Code System" />
+  <status value="draft" />
+  <date value="2019-11-27" />
+  <publisher value="CARIN Alliance" />
+  <description value="This is a placeholder code system illustrating values from the proprietary National Council for Prescription Drug Programs (NCPDP) Provider ID identifier system. It will be replaced prior to publishing with a formal mechanism for referencing in FHIR." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="0999017" />
+    <display value="Hometown Drug" />
+  </concept>
+  <concept>
+    <code value="0999029" />
+    <display value="My Mail Service Pharmacy" />
+  </concept>
+  <concept>
+    <code value="0999031" />
+    <display value="Acme Specialty Pharmacy" />
+  </concept>
+  <concept>
+    <code value="0999043" />
+    <display value="Local LTC Pharmacy" />
+  </concept>
+</CodeSystem>

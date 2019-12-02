@@ -8,15 +8,11 @@
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>This profile constrains the Coverage resource for carrying the pharmacy 
-benefit information required in the consumer real-time pharmacy benefit 
-check process
-            
-            </div>
-        </div>
+      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process             </div>
+    </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtpbcRequestCoverageIdentifiers"/>
   <title value="CARIN RTPBC Request Coverage Identifiers"/>
   <status value="draft"/>
@@ -1437,12 +1433,12 @@ check process
           <type value="value"/>
           <path value="type"/>
         </discriminator>
-        <description value="The value of the .type element indicates the type of coverage identifier  (rxbin=IIN (BIN), rxpcn=PCN, group=Group ID, rxid=PBM Member ID)"/>
+        <description value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)."/>
         <ordered value="false"/>
         <rules value="closed"/>
       </slicing>
       <short value="Pharmacy coverage identifiers"/>
-      <definition value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID"/>
+      <definition value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)."/>
       <comment value="Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners"/>
       <requirements value="The codes provided on the health card which identify or confirm the specific policy for the insurer."/>
       <min value="0"/>
@@ -1601,12 +1597,9 @@ check process
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="CoverageClass"/>
-        </extension>
         <strength value="extensible"/>
-        <description value="The policy classifications, eg. Group, Plan, Class, etc."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/coverage-class"/>
+        <description value="Expanded Coverage Class Value Set (incl coupon concepts)"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"/>
       </binding>
     </element>
     <element id="Coverage.class.value">
@@ -2718,6 +2711,522 @@ check process
         <map value="C.31"/>
       </mapping>
     </element>
+    <element id="Coverage.class:coupon-request">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Class"/>
+      </extension>
+      <path value="Coverage.class"/>
+      <sliceName value="coupon-request"/>
+      <label value="Coupon Request"/>
+      <short value="Coupon Request"/>
+      <definition value="A suite of underwriter specific classifiers."/>
+      <comment value="A key used to request a discount coupon."/>
+      <requirements value="The codes provided on the health card which identify or confirm the specific policy for the insurer."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="Coverage.class:coupon-request.id">
+      <path value="Coverage.class.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon-request.extension">
+      <path value="Coverage.class.extension"/>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon-request.modifierExtension">
+      <path value="Coverage.class.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element&#39;s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon-request.type">
+      <path value="Coverage.class.type"/>
+      <short value="Type of class such as &#39;group&#39; or &#39;plan&#39;"/>
+      <definition value="The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan."/>
+      <requirements value="The insurer issued label for a specific health card value."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
+          <code value="coupon-request"/>
+        </coding>
+      </patternCodeableConcept>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CoverageClass"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="The policy classifications, eg. Group, Plan, Class, etc."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/coverage-class"/>
+      </binding>
+    </element>
+    <element id="Coverage.class:coupon-request.value">
+      <path value="Coverage.class.value"/>
+      <short value="Value associated with the type"/>
+      <definition value="The alphanumeric string value associated with the insurer issued label."/>
+      <comment value="For example, the Group or Plan number."/>
+      <requirements value="The insurer issued label and value are necessary to identify the specific policy."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="C11 (Division,Section)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="IN1-8"/>
+      </mapping>
+      <mapping>
+        <identity value="cpha3pharm"/>
+        <map value="C.31"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon-request.name">
+      <path value="Coverage.class.name"/>
+      <short value="Human readable description of the type and value"/>
+      <definition value="A short description for the class."/>
+      <requirements value="Used to provide a meaningful description in correspondence to the patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.name"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="C11 (Division,Section)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="IN1-8"/>
+      </mapping>
+      <mapping>
+        <identity value="cpha3pharm"/>
+        <map value="C.31"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Class"/>
+      </extension>
+      <path value="Coverage.class"/>
+      <sliceName value="coupon"/>
+      <label value="Coupon"/>
+      <short value="Coupon"/>
+      <definition value="A suite of underwriter specific classifiers."/>
+      <comment value="A discount coupon."/>
+      <requirements value="The codes provided on the health card which identify or confirm the specific policy for the insurer."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="Coverage.class:coupon.id">
+      <path value="Coverage.class.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon.extension">
+      <path value="Coverage.class.extension"/>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon.modifierExtension">
+      <path value="Coverage.class.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element&#39;s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon.type">
+      <path value="Coverage.class.type"/>
+      <short value="Type of class such as &#39;group&#39; or &#39;plan&#39;"/>
+      <definition value="The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan."/>
+      <requirements value="The insurer issued label for a specific health card value."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.type"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
+          <code value="coupon"/>
+        </coding>
+      </patternCodeableConcept>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="CoverageClass"/>
+        </extension>
+        <strength value="extensible"/>
+        <description value="The policy classifications, eg. Group, Plan, Class, etc."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/coverage-class"/>
+      </binding>
+    </element>
+    <element id="Coverage.class:coupon.value">
+      <path value="Coverage.class.value"/>
+      <short value="Value associated with the type"/>
+      <definition value="The alphanumeric string value associated with the insurer issued label."/>
+      <comment value="For example, the Group or Plan number."/>
+      <requirements value="The insurer issued label and value are necessary to identify the specific policy."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.value"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="C11 (Division,Section)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="IN1-8"/>
+      </mapping>
+      <mapping>
+        <identity value="cpha3pharm"/>
+        <map value="C.31"/>
+      </mapping>
+    </element>
+    <element id="Coverage.class:coupon.name">
+      <path value="Coverage.class.name"/>
+      <short value="Human readable description of the type and value"/>
+      <definition value="A short description for the class."/>
+      <requirements value="Used to provide a meaningful description in correspondence to the patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Coverage.class.name"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="cdanetv4"/>
+        <map value="C11 (Division,Section)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="IN1-8"/>
+      </mapping>
+      <mapping>
+        <identity value="cpha3pharm"/>
+        <map value="C.31"/>
+      </mapping>
+    </element>
     <element id="Coverage.order">
       <path value="Coverage.order"/>
       <short value="Relative order of the coverage"/>
@@ -3311,16 +3820,24 @@ check process
           <type value="value"/>
           <path value="type"/>
         </discriminator>
-        <description value="The value of the .type element indicates the type of coverage identifier  (rxbin=IIN (BIN), rxpcn=PCN, group=Group ID, rxid=PBM Member ID)"/>
+        <description value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)."/>
         <ordered value="false"/>
         <rules value="closed"/>
       </slicing>
       <short value="Pharmacy coverage identifiers"/>
-      <definition value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID"/>
+      <definition value="Identifiers used by the payer/PBM to located the patient&#39;s coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient&#39;s PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)."/>
       <comment value="Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners"/>
       <min value="0"/>
       <max value="4"/>
       <mustSupport value="true"/>
+    </element>
+    <element id="Coverage.class.type">
+      <path value="Coverage.class.type"/>
+      <binding>
+        <strength value="extensible"/>
+        <description value="Expanded Coverage Class Value Set (incl coupon concepts)"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"/>
+      </binding>
     </element>
     <element id="Coverage.class:bin">
       <path value="Coverage.class"/>
@@ -3402,6 +3919,46 @@ check process
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
           <code value="rxid"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:coupon-request">
+      <path value="Coverage.class"/>
+      <sliceName value="coupon-request"/>
+      <label value="Coupon Request"/>
+      <short value="Coupon Request"/>
+      <comment value="A key used to request a discount coupon."/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Coverage.class:coupon-request.type">
+      <path value="Coverage.class.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
+          <code value="coupon-request"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:coupon">
+      <path value="Coverage.class"/>
+      <sliceName value="coupon"/>
+      <label value="Coupon"/>
+      <short value="Coupon"/>
+      <comment value="A discount coupon."/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+    </element>
+    <element id="Coverage.class:coupon.type">
+      <path value="Coverage.class.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
+          <code value="coupon"/>
         </coding>
       </patternCodeableConcept>
     </element>

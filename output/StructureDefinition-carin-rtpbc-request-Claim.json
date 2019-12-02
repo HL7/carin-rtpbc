@@ -7,10 +7,10 @@
   },
   "text": {
     "status": "additional",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>\n    </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-  "version": "0.1.09",
+  "version": "0.1.10",
   "name": "CarinRtpbcRequest",
   "title": "CARIN RTPBC Request using Claim",
   "status": "draft",
@@ -7222,7 +7222,7 @@
         "label": "Prescribed Product",
         "short": "Prescribed Product",
         "definition": "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)",
-        "comment": "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*",
+        "comment": "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*",
         "requirements": "Necessary to state what was provided or done.",
         "alias": [
           "Drug Code",
@@ -8235,8 +8235,8 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
+          "description": "Billing quantity unit of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
         },
         "mapping": [
           {
@@ -10130,7 +10130,7 @@
         "label": "Prescribed Product",
         "short": "Prescribed Product",
         "definition": "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)",
-        "comment": "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*",
+        "comment": "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*",
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
@@ -10193,8 +10193,8 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "description": "Billing quantity unity of measure",
-          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"
+          "description": "Billing quantity unit of measure",
+          "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"
         }
       }
     ]

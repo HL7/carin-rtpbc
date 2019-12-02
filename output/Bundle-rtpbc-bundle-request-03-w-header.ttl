@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Bundle/rtpbc-bundle-request-03-w-header> a fhir:Bundle;
+<http://hl7.org/fhir/us/carin-rtpbc/Bundle/rtpbc-bundle-request-03-w-header> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-bundle-request-03-w-header"];
   fhir:Resource.meta [
@@ -58,11 +58,11 @@
   ];
   fhir:MessageHeader.focus [
      fhir:index 0;
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Claim/rtpbc-claim-03>;
      fhir:Reference.reference [ fhir:value "Claim/rtpbc-claim-03" ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Claim/rtpbc-claim-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Claim/rtpbc-claim-03> a fhir:us .
 
 <http://example.org/Claim/rtpbc-claim-03> a fhir:Claim;
   fhir:Resource.id [ fhir:value "rtpbc-claim-03"];
@@ -85,12 +85,12 @@
   ];
   fhir:Claim.use [ fhir:value "predetermination"];
   fhir:Claim.patient [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:Claim.created [ fhir:value "2019-11-01T11:20:54-05:00"^^xsd:dateTime];
   fhir:Claim.provider [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03>;
      fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
   ];
   fhir:Claim.priority [
@@ -102,14 +102,14 @@
      ]
   ];
   fhir:Claim.prescription [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03>;
      fhir:Reference.reference [ fhir:value "MedicationRequest/rtpbc-medicationrequest-03" ]
   ];
   fhir:Claim.careTeam [
      fhir:index 0;
      fhir:Claim.careTeam.sequence [ fhir:value "1"^^xsd:positiveInteger ];
      fhir:Claim.careTeam.provider [
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03>;
        fhir:Reference.reference [ fhir:value "Practitioner/rtpbc-practitioner-03" ]
      ]
   ];
@@ -118,7 +118,7 @@
      fhir:Claim.insurance.sequence [ fhir:value "1"^^xsd:positiveInteger ];
      fhir:Claim.insurance.focal [ fhir:value "true"^^xsd:boolean ];
      fhir:Claim.insurance.coverage [
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Coverage/rtpbc-coverage-03>;
        fhir:Reference.reference [ fhir:value "Coverage/rtpbc-coverage-03" ]
      ]
   ];
@@ -143,15 +143,15 @@
      ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/MedicationRequest/rtpbc-medicationrequest-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/MedicationRequest/rtpbc-medicationrequest-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Coverage/rtpbc-coverage-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Coverage/rtpbc-coverage-03> a fhir:us .
 
 <http://example.org/Patient/rtpbc-patient-03> a fhir:Patient;
   fhir:Resource.id [ fhir:value "rtpbc-patient-03"];
@@ -189,7 +189,7 @@
   ];
   fhir:Coverage.status [ fhir:value "active"];
   fhir:Coverage.beneficiary [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:Coverage.payor [
@@ -258,11 +258,11 @@
      ]
   ];
   fhir:MedicationRequest.subject [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:MedicationRequest.requester [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Practitioner/rtpbc-practitioner-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Practitioner/rtpbc-practitioner-03>;
      fhir:Reference.reference [ fhir:value "Practitioner/rtpbc-practitioner-03" ]
   ];
   fhir:MedicationRequest.dispenseRequest [
@@ -277,7 +277,7 @@
        fhir:Quantity.code [ fhir:value "d" ]
      ];
      fhir:MedicationRequest.dispenseRequest.performer [
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03>;
        fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
      ]
   ] .
@@ -329,9 +329,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/Bundle/rtpbc-bundle-request-03-w-header.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/Bundle/rtpbc-bundle-request-03-w-header.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/Bundle/rtpbc-bundle-request-03-w-header.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/Bundle/rtpbc-bundle-request-03-w-header.ttl> .
 
 # -------------------------------------------------------------------------------------
 

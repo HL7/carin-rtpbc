@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="carin-rtpbc-coupon-coverage-class-code-system"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2019-11-26T23:00:00.000-06:00"/>
+    <security>
+      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
+      <code value="everyone^write"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Coupon Coverage Class Code System</h2><div><p>This code system defines additional coverage class concepts related to medication discount coupons.</p>
+</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">coupon<a name="carin-rtpbc-coupon-coverage-class-code-system-coupon"> </a></td><td>Coupon</td><td>Discount coupon</td></tr><tr><td style="white-space:nowrap">coupon-request<a name="carin-rtpbc-coupon-coverage-class-code-system-coupon-request"> </a></td><td>Coupon Request</td><td>Key that can be used to obtain a discount coupon.</td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
+  <version value="0.1.10"/>
+  <name value="CarinRtpbcCouponCoverageClassCodeSystem"/>
+  <title value="CARIN RTPBC Coupon Coverage Class Code System"/>
+  <status value="active"/>
+  <date value="2019-11-27T00:00:00-06:00"/>
+  <publisher value="CARIN Alliance"/>
+  <description value="This code system defines additional coverage class concepts related to medication discount coupons."/>
+  <caseSensitive value="false"/>
+  <content value="complete"/>
+  <concept>
+    <code value="coupon"/>
+    <display value="Coupon"/>
+    <definition value="Discount coupon"/>
+  </concept>
+  <concept>
+    <code value="coupon-request"/>
+    <display value="Coupon Request"/>
+    <definition value="Key that can be used to obtain a discount coupon."/>
+  </concept>
+</CodeSystem>

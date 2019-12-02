@@ -6,9 +6,6 @@ active: Submission method
 
 [Previous Page](Information_content_and_FHIR_resources.html)
 
-### Submitting the Real-time Pharmacy Benefit Check (RTBPC) request
-<br>
-
 *Note: The method for submitting the RTPBC request ($submit operation versus FHIR messaging using $process-message) is being decided by stakeholders. The section below describes both.*
 
 <br>
@@ -50,6 +47,8 @@ The operation has a single FHIR resource input parameter consisting of a **Bundl
 The RTPBC request is submitted using the $process-message operation on the processor's claim server...
 * URL: [base]/$process-message
 
+<br>
+
 #### Process-message parameter and response
 Like the option above, the $process-message operation takes a single FHIR resource input parameter consisting of a Bundle containing the Claim resource and referenced supporting resources, and returns a Bundle containing a ClaimResponse and supporting resources.
 
@@ -64,6 +63,6 @@ In addition, this method includes a MessageHeader resource in both the request a
 <a href="Bundle-rtpbc-bundle-response-03-w-header.html">Example bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
 
-
+<br><br>
 
 [Next Page](Security.html)

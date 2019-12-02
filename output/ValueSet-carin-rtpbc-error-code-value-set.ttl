@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-error-code-value-set> a fhir:ValueSet;
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-error-code-value-set> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-error-code-value-set"];
   fhir:Resource.meta [
@@ -13,41 +13,28 @@
      fhir:Meta.lastUpdated [ fhir:value "2019-11-17T14:30:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code Value Set</h2><div><p>This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-carin-rtpbc-error-code-system.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-no-patient-match\">no-patient-match</a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-multiple-patient-matches\">multiple-patient-matches</a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-error-code-system.html#carin-rtpbc-error-code-system-invalid-product-id\">invalid-product-id</a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></li></ul></div>"
+     fhir:Narrative.status [ fhir:value "additional" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.</div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"];
-  fhir:ValueSet.version [ fhir:value "0.1.09"];
+  fhir:ValueSet.version [ fhir:value "0.1.10"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcErrorCodeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Error Code Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-11-18T12:13:41-06:00"^^xsd:dateTime];
-  fhir:ValueSet.description [ fhir:value "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing."];
+  fhir:ValueSet.date [ fhir:value "2019-12-01T19:50:55-06:00"^^xsd:dateTime];
+  fhir:ValueSet.description [ fhir:value "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code" ];
-       fhir:ValueSet.compose.include.concept [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "no-patient-match" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "No patient match found" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "multiple-patient-matches" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "More Than One Patient Found" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "invalid-product-id" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "M/I Product/Service ID" ]
-       ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ncpdp.org/reject-code" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ValueSet/carin-rtpbc-error-code-value-set.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-error-code-value-set.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/ValueSet/carin-rtpbc-error-code-value-set.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/ValueSet/carin-rtpbc-error-code-value-set.ttl> .
 
 # -------------------------------------------------------------------------------------
 

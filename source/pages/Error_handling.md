@@ -9,8 +9,12 @@ active: Error handling
 ### Real-time Pharmacy Benefit Check (RTPBC) error handling
 <br>
 
+#### ClaimResponse.error usage
+In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource.
+<br>
+
 #### Operation outcome usage
-In the event of an error, RTPBC source systems (payer/PBM, discount pricing source) SHALL respond by providing an OperationOutcome resource
+In the event of a system or communication error, RTPBC source systems (payer/PBM, discount pricing source) SHALL respond by providing an OperationOutcome resource.
 
 The OperationOutcome:
 

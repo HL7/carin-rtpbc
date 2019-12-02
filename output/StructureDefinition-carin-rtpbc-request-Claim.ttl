@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-request-Claim> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-Claim> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-request-Claim"];
   fhir:Resource.meta [
@@ -14,10 +14,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>This profile constrains the Claim resource so that it can serve as the                                   \n                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          \n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>\n    </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.09"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.10"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequest"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request using Claim"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -7564,7 +7564,7 @@
        fhir:ElementDefinition.label [ fhir:value "Prescribed Product" ];
        fhir:ElementDefinition.short [ fhir:value "Prescribed Product" ];
        fhir:ElementDefinition.definition [ fhir:value "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)" ];
-       fhir:ElementDefinition.comment [ fhir:value "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*" ];
+       fhir:ElementDefinition.comment [ fhir:value "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*" ];
        fhir:ElementDefinition.requirements [ fhir:value "Necessary to state what was provided or done." ];
        fhir:ElementDefinition.alias [
          fhir:value "Drug Code";
@@ -8608,10 +8608,10 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unit of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -10602,7 +10602,7 @@
        fhir:ElementDefinition.label [ fhir:value "Prescribed Product" ];
        fhir:ElementDefinition.short [ fhir:value "Prescribed Product" ];
        fhir:ElementDefinition.definition [ fhir:value "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)" ];
-       fhir:ElementDefinition.comment [ fhir:value "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*" ];
+       fhir:ElementDefinition.comment [ fhir:value "Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
@@ -10668,10 +10668,10 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unit of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
          ]
        ]
      ]
@@ -10679,9 +10679,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-request-Claim.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-Claim.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/StructureDefinition/carin-rtpbc-request-Claim.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-Claim.ttl> .
 
 # -------------------------------------------------------------------------------------
 

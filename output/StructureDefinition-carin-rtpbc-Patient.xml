@@ -3,27 +3,26 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-Patient"/>
   <meta>
-    <versionId value="21"/>
-    <lastUpdated value="2019-10-31T12:31:00.000-05:00"/>
+    <versionId value="22"/>
+    <lastUpdated value="2019-11-20T17:30:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>
-                <div>
-                    <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit 
-check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>
-                </div>
-            </div>
+      <div>
+        <div>
+          <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>
         </div>
+      </div>
+    </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtpbcRequestPatientInfo"/>
   <title value="CARIN RTPBC Request Patient Info"/>
   <status value="draft"/>
   <date value="2019-10-03T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>
-  <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient&#39;s insurance information. From there, pricing and coverage information is determined based on the patient&#39;s member and coverage information maintained by the payer. "/>
+  <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient&#39;s insurance information. From there, pricing and coverage information is determined based on the patient&#39;s member and coverage information maintained by the payer."/>
   <fhirVersion value="4.0.1"/>
   <mapping>
     <identity value="rim"/>
@@ -927,6 +926,7 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <binding>
         <strength value="required"/>
         <description value="Administrative gender"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -1450,7 +1450,8 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <isSummary value="true"/>
       <binding>
         <strength value="extensible"/>
-        <description value="Two Letter USPS alphabetic codes"/>
+        <description value="CARIN RTPBC Two Letter State and Province Codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -1543,8 +1544,9 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <isModifier value="false"/>
       <isSummary value="true"/>
       <binding>
-        <strength value="required"/>
+        <strength value="extensible"/>
         <description value="ISO 3166 2-character country codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -2754,6 +2756,7 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <binding>
         <strength value="required"/>
         <description value="Administrative gender"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender"/>
       </binding>
     </element>
     <element id="Patient.birthDate">
@@ -2791,7 +2794,8 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
-        <description value="Two Letter USPS alphabetic codes"/>
+        <description value="CARIN RTPBC Two Letter State and Province Codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code"/>
       </binding>
     </element>
     <element id="Patient.address.postalCode">
@@ -2806,8 +2810,9 @@ check (RTPBC) process. In RTPBC, the sole purpose of patient information is to e
       <min value="0"/>
       <mustSupport value="true"/>
       <binding>
-        <strength value="required"/>
+        <strength value="extensible"/>
         <description value="ISO 3166 2-character country codes"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
       </binding>
     </element>
   </differential>

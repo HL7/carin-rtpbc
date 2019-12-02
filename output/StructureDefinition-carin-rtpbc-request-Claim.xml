@@ -8,13 +8,11 @@
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>This profile constrains the Claim resource so that it can serve as the                                   
-                <i>RTPBC Request</i> in the consumer real-time pharmacy benefit  check process                          
-            </div>
-        </div>
+      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>
+    </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"/>
-  <version value="0.1.09"/>
+  <version value="0.1.10"/>
   <name value="CarinRtpbcRequest"/>
   <title value="CARIN RTPBC Request using Claim"/>
   <status value="draft"/>
@@ -5814,7 +5812,7 @@
       <label value="Prescribed Product"/>
       <short value="Prescribed Product"/>
       <definition value="A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"/>
-      <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*"/>
+      <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*"/>
       <requirements value="Necessary to state what was provided or done."/>
       <alias value="Drug Code"/>
       <alias value="Bill Code"/>
@@ -6636,8 +6634,8 @@
       <isSummary value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <description value="Billing quantity unit of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
       <mapping>
         <identity value="v2"/>
@@ -8179,7 +8177,7 @@
       <label value="Prescribed Product"/>
       <short value="Prescribed Product"/>
       <definition value="A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"/>
-      <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm   and the code system for NDC11 is * TBD*"/>
+      <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*"/>
       <mustSupport value="true"/>
       <binding>
         <strength value="extensible"/>
@@ -8235,8 +8233,8 @@
       <mustSupport value="true"/>
       <binding>
         <strength value="required"/>
-        <description value="Billing quantity unity of measure"/>
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units"/>
+        <description value="Billing quantity unit of measure"/>
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
       </binding>
     </element>
   </differential>

@@ -1,0 +1,359 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-state-and-province-code-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-state-and-province-code-value-set"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Two Letter State and Province Code Value Set</h2><div><p>This value set contains two letter USPS state codes and Canada Post province codes.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>https://www.usps.com/</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>AK</td><td>Alaska</td><td/></tr><tr><td>AL</td><td>Alabama</td><td/></tr><tr><td>AR</td><td>Arkansas</td><td/></tr><tr><td>AS</td><td>American Samoa</td><td/></tr><tr><td>AZ</td><td>Arizona</td><td/></tr><tr><td>CA</td><td>California</td><td/></tr><tr><td>CO</td><td>Colorado</td><td/></tr><tr><td>CT</td><td>Connecticut</td><td/></tr><tr><td>DC</td><td>District of Columbia</td><td/></tr><tr><td>DE</td><td>Delaware</td><td/></tr><tr><td>FL</td><td>Florida</td><td/></tr><tr><td>FM</td><td>Federated States of Micronesia</td><td/></tr><tr><td>GA</td><td>Georgia</td><td/></tr><tr><td>GU</td><td>Guam</td><td/></tr><tr><td>HI</td><td>Hawaii</td><td/></tr><tr><td>IA</td><td>Iowa</td><td/></tr><tr><td>ID</td><td>Idaho</td><td/></tr><tr><td>IL</td><td>Illinois</td><td/></tr><tr><td>IN</td><td>Indiana</td><td/></tr><tr><td>KS</td><td>Kansas</td><td/></tr><tr><td>KY</td><td>Kentucky</td><td/></tr><tr><td>LA</td><td>Louisiana</td><td/></tr><tr><td>MA</td><td>Massachusetts</td><td/></tr><tr><td>MD</td><td>Maryland</td><td/></tr><tr><td>ME</td><td>Maine</td><td/></tr><tr><td>MH</td><td>Marshall Islands</td><td/></tr><tr><td>MI</td><td>Michigan</td><td/></tr><tr><td>MN</td><td>Minnesota</td><td/></tr><tr><td>MO</td><td>Missouri</td><td/></tr><tr><td>MP</td><td>Northern Mariana Islands</td><td/></tr><tr><td>MS</td><td>Mississippi</td><td/></tr><tr><td>MT</td><td>Montana</td><td/></tr><tr><td>NC</td><td>North Carolina</td><td/></tr><tr><td>ND</td><td>North Dakota</td><td/></tr><tr><td>NE</td><td>Nebraska</td><td/></tr><tr><td>NH</td><td>New Hampshire</td><td/></tr><tr><td>NJ</td><td>New Jersey</td><td/></tr><tr><td>NM</td><td>New Mexico</td><td/></tr><tr><td>NV</td><td>Nevada</td><td/></tr><tr><td>NY</td><td>New York</td><td/></tr><tr><td>OH</td><td>Ohio</td><td/></tr><tr><td>OK</td><td>Oklahoma</td><td/></tr><tr><td>OR</td><td>Oregon</td><td/></tr><tr><td>PA</td><td>Pennsylvania</td><td/></tr><tr><td>PR</td><td>Puerto Rico</td><td/></tr><tr><td>PW</td><td>Palau</td><td/></tr><tr><td>RI</td><td>Rhode Island</td><td/></tr><tr><td>SC</td><td>South Carolina</td><td/></tr><tr><td>SD</td><td>South Dakota</td><td/></tr><tr><td>TN</td><td>Tennessee</td><td/></tr><tr><td>TX</td><td>Texas</td><td/></tr><tr><td>UT</td><td>Utah</td><td/></tr><tr><td>VA</td><td>Virginia</td><td/></tr><tr><td>VI</td><td>Virgin Islands of the U.S.</td><td/></tr><tr><td>VT</td><td>Vermont</td><td/></tr><tr><td>WA</td><td>Washington</td><td/></tr><tr><td>WI</td><td>Wisconsin</td><td/></tr><tr><td>WV</td><td>West Virginia</td><td/></tr><tr><td>WY</td><td>Wyoming</td><td/></tr><tr><td>AA</td><td>Armed Forces Americas</td><td/></tr><tr><td>AE</td><td>Armed Forces Europe</td><td/></tr><tr><td>AP</td><td>Armed Forces Pacific</td><td/></tr></table></li><li>Include these codes as defined in <a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html\"><code>http://canadapost.ca</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-AB\">AB</a></td><td>Alberta</td><td>Alberta</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-BC\">BC</a></td><td>British Columbia</td><td>British Columbia</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-MB\">MB</a></td><td>Manitoba</td><td>Manitoba</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NB\">NB</a></td><td>New Brunswick</td><td>New Brunswick</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NL\">NL</a></td><td>Newfoundland and Labrador</td><td>Newfoundland and Labrador</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NS\">NS</a></td><td>Nova Scotia</td><td>Nova Scotia</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NT\">NT</a></td><td>Northwest Territories</td><td>Northwest Territories</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NU\">NU</a></td><td>Nunavut</td><td>Nunavut</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-ON\">ON</a></td><td>Ontario</td><td>Ontario</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-PE\">PE</a></td><td>Prince Edward Island</td><td>Prince Edward Island</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-QC\">QC</a></td><td>Quebec</td><td>Quebec</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-SK\">SK</a></td><td>Saskatchewan</td><td>Saskatchewan</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-YT\">YT</a></td><td>Yukon</td><td>Yukon</td></tr></table></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code"];
+  fhir:ValueSet.version [ fhir:value "0.1.10"];
+  fhir:ValueSet.name [ fhir:value "CarinRtpbcStateAndProvinceCodeValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Two Letter State and Province Code Value Set"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2019-11-19T18:00:00-06:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fm@frankmckinney.com" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "This value set contains two letter USPS state codes and Canada Post province codes."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://www.usps.com/" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AK" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alaska" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alabama" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arkansas" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AS" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "American Samoa" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AZ" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Arizona" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "California" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CO" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Colorado" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "CT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Connecticut" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DC" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "District of Columbia" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "DE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Delaware" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Florida" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "FM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federated States of Micronesia" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Georgia" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "GU" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Guam" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "HI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Hawaii" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Iowa" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ID" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Idaho" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Illinois" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "IN" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Indiana" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "KS" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kansas" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "KY" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Kentucky" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "LA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Louisiana" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Massachusetts" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MD" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Maryland" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ME" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Maine" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MH" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Marshall Islands" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Michigan" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MN" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Minnesota" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MO" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Missouri" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MP" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Northern Mariana Islands" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MS" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Mississippi" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Montana" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NC" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "North Carolina" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ND" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "North Dakota" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nebraska" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NH" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "New Hampshire" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NJ" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "New Jersey" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NM" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "New Mexico" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NV" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nevada" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NY" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "New York" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OH" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ohio" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OK" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oklahoma" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "OR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Oregon" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Pennsylvania" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PR" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Puerto Rico" ]
+       ], [
+         fhir:index 45;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PW" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Palau" ]
+       ], [
+         fhir:index 46;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "RI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Rhode Island" ]
+       ], [
+         fhir:index 47;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SC" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "South Carolina" ]
+       ], [
+         fhir:index 48;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SD" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "South Dakota" ]
+       ], [
+         fhir:index 49;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "TN" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tennessee" ]
+       ], [
+         fhir:index 50;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "TX" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Texas" ]
+       ], [
+         fhir:index 51;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "UT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Utah" ]
+       ], [
+         fhir:index 52;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Virginia" ]
+       ], [
+         fhir:index 53;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Virgin Islands of the U.S." ]
+       ], [
+         fhir:index 54;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "VT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vermont" ]
+       ], [
+         fhir:index 55;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "WA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Washington" ]
+       ], [
+         fhir:index 56;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "WI" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Wisconsin" ]
+       ], [
+         fhir:index 57;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "WV" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "West Virginia" ]
+       ], [
+         fhir:index 58;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "WY" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Wyoming" ]
+       ], [
+         fhir:index 59;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AA" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Armed Forces Americas" ]
+       ], [
+         fhir:index 60;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Armed Forces Europe" ]
+       ], [
+         fhir:index 61;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AP" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Armed Forces Pacific" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://canadapost.ca" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "AB" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Alberta" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "BC" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "British Columbia" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "MB" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Manitoba" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NB" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "New Brunswick" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NL" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Newfoundland and Labrador" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NS" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nova Scotia" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Northwest Territories" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "NU" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Nunavut" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "ON" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Ontario" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "PE" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Prince Edward Island" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "QC" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Quebec" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "SK" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Saskatchewan" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "YT" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Yukon" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-state-and-province-code-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/ValueSet/carin-rtpbc-state-and-province-code-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+

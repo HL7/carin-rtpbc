@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-error-code-system> a fhir:CodeSystem;
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-error-code-system> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-error-code-system"];
   fhir:Resource.meta [
@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code System</h2><div><p>This code system defines the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-patient-match<a name=\"carin-rtpbc-error-code-system-no-patient-match\"> </a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td style=\"white-space:nowrap\">multiple-patient-matches<a name=\"carin-rtpbc-error-code-system-multiple-patient-matches\"> </a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td style=\"white-space:nowrap\">invalid-product-id<a name=\"carin-rtpbc-error-code-system-invalid-product-id\"> </a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code"];
-  fhir:CodeSystem.version [ fhir:value "0.1.09"];
+  fhir:CodeSystem.version [ fhir:value "0.1.10"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcErrorCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Error Code System"];
   fhir:CodeSystem.status [ fhir:value "draft"];
@@ -45,9 +45,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/CodeSystem/carin-rtpbc-error-code-system.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-error-code-system.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/CodeSystem/carin-rtpbc-error-code-system.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CodeSystem/carin-rtpbc-error-code-system.ttl> .
 
 # -------------------------------------------------------------------------------------
 

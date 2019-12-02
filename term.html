@@ -1,0 +1,72 @@
+---
+# jekyll header
+level: 2
+template: base
+active: format
+layout: fhir-artifact
+type: {{[type]}}
+id: {{[id]}}
+---
+
+<!-- ig template for code systems and value sets -->
+
+<h2>{{[id]}}</h2>
+<br>
+
+
+<!-- introductiontext here
+<a name="introduction"> </a>
+-->
+
+<!-- ============ CONTENT CONTENT=============== -->
+
+{% case '{{[type]}}' %} <!-- content depends on type -->
+{% when 'ValueSet' %}
+<!-- ============VAlUESET CONTENT CONTENT=============== -->
+
+  {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+  <br><br>
+
+  {% capture my-include %}{% include {{[id]}}-intro.md id="{{[id]}}" %}{% endcapture %}
+  {{ my-include | markdownify }}
+
+  <h3>Used in...</h3>
+  {% include {{[type]}}-{{[id]}}-xref.xhtml %}
+
+<!--  {% include {{[type]}}-{{[id]}}-cld.xhtml %}  -->
+
+  <br>
+  <h3>Expansion</h3>
+
+  {% include {{[type]}}-{{[id]}}-expansion.xhtml %}
+
+{% when 'NamingSystem' %}
+<!-- ============NAMING SYSTEM CONTENT CONTENT=============== -->
+
+  {% capture my-include %}{% include {{[id]}}-intro.md id="{{[id]}}" %}{% endcapture %}
+  {{ my-include | markdownify }}
+
+  <br><br>
+
+  {% include {{[type]}}-{{[name]}}.xhtml %}
+
+
+{% else %}
+<!-- CodeSystem -->
+
+  {% include {{[type]}}-{{[name]}}.xhtml %}
+  <br>
+
+  {% include {{[type]}}-{{[id]}}-summary.xhtml %}
+  <br>
+
+  {% capture my-include %}{% include {{[id]}}-intro.md id="{{[id]}}" %}{% endcapture %}
+  {{ my-include | markdownify }}
+
+
+
+{% endcase %}
+
+
+
+  <!-- ==============END CONTENT END CONTENT=================== -->

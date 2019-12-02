@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03> a fhir:ClaimResponse;
+<http://hl7.org/fhir/us/carin-rtpbc/ClaimResponse/rtpbc-claim-response-03> a fhir:ClaimResponse;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-claim-response-03"];
   fhir:Resource.meta [
@@ -31,7 +31,7 @@
   ];
   fhir:ClaimResponse.use [ fhir:value "predetermination"];
   fhir:ClaimResponse.patient [
-     fhir:link <http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03>;
+     fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03>;
      fhir:Reference.reference [ fhir:value "Patient/rtpbc-patient-03" ]
   ];
   fhir:ClaimResponse.created [ fhir:value "2019-11-01T11:20:59-05:00"^^xsd:dateTime];
@@ -111,7 +111,7 @@
      ];
      fhir:ClaimResponse.addItem.provider [
        fhir:index 0;
-       fhir:link <http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03m>;
+       fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03m>;
        fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03m" ]
      ];
      fhir:ClaimResponse.addItem.productOrService [
@@ -184,15 +184,15 @@
      fhir:ClaimResponse.processNote.text [ fhir:value "Covered" ]
   ] .
 
-<http://hl7.org/fhir/us/carin-bb/Patient/rtpbc-patient-03> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-bb/Organization/rtpbc-organization-03m> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03m> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/ClaimResponse/rtpbc-claim-response-03.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/ClaimResponse/rtpbc-claim-response-03.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/ClaimResponse/rtpbc-claim-response-03.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/ClaimResponse/rtpbc-claim-response-03.ttl> .
 
 # -------------------------------------------------------------------------------------
 

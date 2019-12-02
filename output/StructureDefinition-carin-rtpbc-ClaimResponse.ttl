@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-ClaimResponse> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-ClaimResponse> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-ClaimResponse"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "59" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-14T15:19:00.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.versionId [ fhir:value "61" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>\n                    <div>This profile constrains the ClaimResponse resource to serve as the                                                                          \n                        <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              \n                    </div>\n                </div>\n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>\n          <div>This profile constrains the ClaimResponse resource to serve as the                                                                          <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              </div>\n        </div>\n      </div>\n    </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.09"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.10"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -4213,7 +4213,11 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/currencies";
+           fhir:link <http://hl7.org/fhir/ValueSet/currencies>
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -4945,7 +4949,10 @@
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+         fhir:ElementDefinition.type.code [
+           fhir:value "Extension";
+           fhir:Element.id [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" ]
+         ]
        ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
@@ -6509,10 +6516,10 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unit of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
          ]
        ];
        fhir:ElementDefinition.mapping [
@@ -7317,7 +7324,11 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/currencies";
+           fhir:link <http://hl7.org/fhir/ValueSet/currencies>
+         ]
        ];
        fhir:ElementDefinition.mapping [
          fhir:index 0;
@@ -9464,7 +9475,15 @@
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
+       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Coverage Summary" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary>
+         ]
+       ]
      ], [
        fhir:index 211;
        fhir:Element.id [ fhir:value "ClaimResponse.processNote.language" ];
@@ -10247,8 +10266,12 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)" ]
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Error Codes" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code>
+         ]
        ]
      ], [
        fhir:index 230;
@@ -11025,7 +11048,11 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/currencies";
+           fhir:link <http://hl7.org/fhir/ValueSet/currencies>
+         ]
        ]
      ], [
        fhir:index 27;
@@ -11048,7 +11075,10 @@
        ];
        fhir:ElementDefinition.type [
          fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
+         fhir:ElementDefinition.type.code [
+           fhir:value "Extension";
+           fhir:Element.id [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" ]
+         ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ]
@@ -11159,10 +11189,10 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unity of measure" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Billing quantity unit of measure" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-units>
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit>
          ]
        ]
      ], [
@@ -11228,7 +11258,11 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ]
+         fhir:ElementDefinition.binding.description [ fhir:value "Currencies" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/ValueSet/currencies";
+           fhir:link <http://hl7.org/fhir/ValueSet/currencies>
+         ]
        ]
      ], [
        fhir:index 46;
@@ -11254,7 +11288,15 @@
        fhir:ElementDefinition.label [ fhir:value "Determination Note Text" ];
        fhir:ElementDefinition.short [ fhir:value "Determination Note Text" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.binding [
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Coverage Summary" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary>
+         ]
+       ]
      ], [
        fhir:index 49;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance" ];
@@ -11305,8 +11347,12 @@
        fhir:ElementDefinition.definition [ fhir:value "A code identifying the reason that processing could not be completed." ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "required" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Reject Codes (to be determined. Correspond to NCPDP 511-FB)" ]
+         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Error Codes" ];
+         fhir:ElementDefinition.binding.valueSet [
+           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code";
+           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code>
+         ]
        ]
      ], [
        fhir:index 55;
@@ -11347,9 +11393,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-bb/StructureDefinition/carin-rtpbc-ClaimResponse.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-ClaimResponse.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-bb/StructureDefinition/carin-rtpbc-ClaimResponse.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-ClaimResponse.ttl> .
 
 # -------------------------------------------------------------------------------------
 

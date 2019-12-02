@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-pharmacy-type-value-set> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-pharmacy-type-value-set"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-19T18:00:00.000-06:00"^^xsd:dateTime ];
+     fhir:Meta.security [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
+       fhir:Coding.code [ fhir:value "everyone^read" ]
+     ], [
+       fhir:index 1;
+       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
+       fhir:Coding.code [ fhir:value "everyone^write" ]
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Pharmacy Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carin-rtpbc-pharmacy-type-code-system.html\"><code>http://ncpdp.org/pharmacy-type</code></a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"];
+  fhir:ValueSet.version [ fhir:value "0.1.10"];
+  fhir:ValueSet.name [ fhir:value "CARINRTPBCPharmacyTypeValueSet"];
+  fhir:ValueSet.title [ fhir:value "CARIN RTPBC Pharmacy Type Value Set"];
+  fhir:ValueSet.status [ fhir:value "draft"];
+  fhir:ValueSet.date [ fhir:value "2019-11-20T00:00:00-06:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://ncpdp.org/pharmacy-type" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-pharmacy-type-value-set.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/ValueSet/carin-rtpbc-pharmacy-type-value-set.ttl> .
+
+# -------------------------------------------------------------------------------------
+
