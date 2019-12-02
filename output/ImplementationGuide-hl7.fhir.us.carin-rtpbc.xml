@@ -13,11 +13,11 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc"/>
-  <version value="0.1.11"/>
+  <version value="0.1.12"/>
   <name value="CarinRtpbc"/>
   <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>
-  <date value="2019-12-01T22:08:59-06:00"/>
+  <date value="2019-12-02T10:03:37-06:00"/>
   <publisher value="HL7 International - Pharmacy"/>
   <contact>
     <name value="HL7 Pharmacy Workgroup"/>

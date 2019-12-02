@@ -11,7 +11,7 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html"><code>http://terminology.hl7.org/CodeSystem/coverage-class</code></a></li><li>Include all codes defined in <a href="CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class</code></a></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"/>
-  <version value="0.1.11"/>
+  <version value="0.1.12"/>
   <name value="CARINRTPBCExpandedCoverageClassValueSet"/>
   <title value="CARIN RTPBC Expanded Coverage Class Value Set"/>
   <status value="draft"/>

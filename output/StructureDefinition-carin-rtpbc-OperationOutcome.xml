@@ -15,7 +15,7 @@ check response.
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response"/>
-  <version value="0.1.11"/>
+  <version value="0.1.12"/>
   <name value="CarinRtpbcExceptionResponse"/>
   <title value="CARIN RTPBC Exception Response"/>
   <status value="draft"/>

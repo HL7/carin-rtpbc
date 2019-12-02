@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "fhirVersion": "4.0.1",
   "extensions": [
     {

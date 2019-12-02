@@ -10,11 +10,11 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Billing Unit Value Set</h2><div><p>This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <a href=\"CodeSystem-carin-rtpbc-billing-unit-code-system.html\"><code>http://ncpdp.org/unit-of-measure</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-GM\">GM</a></td><td>Gram</td><td>Quantity unit of measure for products billed as a number of grams</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-ML\">ML</a></td><td>Milliliter</td><td>Quantity unit of measure for products billed as a number of milliliters</td></tr><tr><td><a href=\"CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-EA\">EA</a></td><td>Each</td><td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td></tr></table></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "name": "CarinRtbpcBillingUnitValueSet",
   "title": "CARIN RTPBC Billing Unit Value Set",
   "status": "draft",
-  "date": "2019-12-01T22:08:59-06:00",
+  "date": "2019-12-02T10:03:37-06:00",
   "description": "This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products",
   "compose": {
     "include": [

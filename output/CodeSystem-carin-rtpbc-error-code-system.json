@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code System</h2><div><p>This code system defines the error codes to be used by real-time pharmacy benefit check servers when encountering an error that prevents processing from completing.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">no-patient-match<a name=\"carin-rtpbc-error-code-system-no-patient-match\"> </a></td><td>No patient match found</td><td>No patient match found</td></tr><tr><td style=\"white-space:nowrap\">multiple-patient-matches<a name=\"carin-rtpbc-error-code-system-multiple-patient-matches\"> </a></td><td>More Than One Patient Found</td><td>More Than One Patient Found</td></tr><tr><td style=\"white-space:nowrap\">invalid-product-id<a name=\"carin-rtpbc-error-code-system-invalid-product-id\"> </a></td><td>M/I Product/Service ID</td><td>M/I Product/Service ID</td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-error-code",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "name": "CarinRtpbcErrorCodeSystem",
   "title": "CARIN RTPBC Error Code System",
   "status": "draft",

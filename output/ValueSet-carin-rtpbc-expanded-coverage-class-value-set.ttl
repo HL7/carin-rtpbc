@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Expanded Coverage Class Value Set</h2><div><p>This value set adds concepts to the HL7-maintained coverage class value set related to discount coupons.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"http://hl7.org/fhir/R4/codesystem-coverage-class.html\"><code>http://terminology.hl7.org/CodeSystem/coverage-class</code></a></li><li>Include all codes defined in <a href=\"CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class</code></a></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"];
-  fhir:ValueSet.version [ fhir:value "0.1.11"];
+  fhir:ValueSet.version [ fhir:value "0.1.12"];
   fhir:ValueSet.name [ fhir:value "CARINRTPBCExpandedCoverageClassValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Expanded Coverage Class Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];

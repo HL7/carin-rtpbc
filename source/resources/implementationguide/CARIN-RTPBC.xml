@@ -15,7 +15,7 @@
         </div>
     </text>
     <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
-    <version value="0.1.11"/>
+    <version value="0.1.12"/>
     <name value="CarinRtpbc"/>
     <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
     <status value="draft"/>

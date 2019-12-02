@@ -74,7 +74,7 @@ active: profiles
 <tbody>
 <tr>
 <td><a href="StructureDefinition-carin-rtpbc-extension-isAlternative.html">CarinRtpbcExtensionIsAlternative</a></td>
-<td>Whether this added line item is an alternative to the product or service specified in the associated line item in the Claim</td>
+<td>This extension indicates that an added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service.</td>
 </tr>
 </tbody>
 </table>

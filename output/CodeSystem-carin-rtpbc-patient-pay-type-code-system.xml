@@ -11,11 +11,11 @@
 </div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">deductible<a name="carin-rtpbc-patient-pay-type-code-system-deductible"> </a></td><td>Deductible</td><td>Amount to be collected from a patient to be applied to a periodic deductible.</td></tr><tr><td style="white-space:nowrap">coinsurance<a name="carin-rtpbc-patient-pay-type-code-system-coinsurance"> </a></td><td>Per prescription coinsurance</td><td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td></tr><tr><td style="white-space:nowrap">copay<a name="carin-rtpbc-patient-pay-type-code-system-copay"> </a></td><td>Copay</td><td>Amount to be collected from the patient to satisfy a per prescription copay.</td></tr><tr><td style="white-space:nowrap">tax<a name="carin-rtpbc-patient-pay-type-code-system-tax"> </a></td><td>Tax</td><td>Amount to be collected from the patient for sales tax.</td></tr><tr><td style="white-space:nowrap">other<a name="carin-rtpbc-patient-pay-type-code-system-other"> </a></td><td>Other</td><td>Other amount to be collected from the patient</td></tr><tr><td style="white-space:nowrap">total<a name="carin-rtpbc-patient-pay-type-code-system-total"> </a></td><td>Total patient responsibility</td><td>Amount equalling the total patient responsibility for a prescription product's cost.</td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-  <version value="0.1.11"/>
+  <version value="0.1.12"/>
   <name value="CarinRtpbcPatientPayTypeCodeSystem"/>
   <title value="CARIN RTPBC Patient Pay Type Code System"/>
   <status value="draft"/>
-  <date value="2019-12-01T22:08:59-06:00"/>
+  <date value="2019-12-02T10:03:37-06:00"/>
   <publisher value="CARIN Alliance"/>
   <description value="This code system defines components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
   <purpose value="This code system defines components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
