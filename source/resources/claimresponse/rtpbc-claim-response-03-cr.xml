@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-claim-response-03-cr" />
+  <identifier>
+    <value value="rtpbc-03-response-cr" />
+  </identifier>
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+      <code value="pharmacy" />
+      <display value="Pharmacy" />
+    </coding>
+  </type>
+  <use value="predetermination" />
+  <patient>
+    <reference value="Patient/rtpbc-patient-03" />
+  </patient>
+  <created value="2019-11-01T11:20:59-05:00" />
+  <insurer>
+    <identifier>
+      <value value="GoodRx" />
+    </identifier>
+  </insurer>
+  <request>
+    <identifier>
+      <value value="rtpbc-03" />
+    </identifier>
+  </request>
+  <outcome value="complete" />
+  <disposition value="Processed successfully" />
+  <item>
+    <itemSequence value="1" />
+    <noteNumber value="1" />
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <code value="total" />
+          <display value="Total patient responsibility" />
+        </coding>
+      </category>
+      <amount>
+        <value value="75" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <code value="coinsurance" />
+          <display value="Per prescription coinsurance" />
+        </coding>
+      </category>
+      <amount>
+        <value value="15" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <code value="total" />
+          <display value="Total patient responsibility" />
+        </coding>
+      </category>
+      <amount>
+        <value value="25" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+  </item>
+  <addItem>
+    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+      <valueBoolean value="true" />
+    </extension>
+    <itemSequence value="1" />
+    <provider>
+      <reference value="Organization/rtpbc-organization-03m" />
+    </provider>
+    <productOrService>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+        <code value="00777310402" />
+        <display value="Prozac 10mg capsule" />
+      </coding>
+    </productOrService>
+    <quantity>
+      <value value="60" />
+      <unit value="EA" />
+    </quantity>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <code value="cash-price" />
+          <display value="Full product cash price" />
+        </coding>
+      </category>
+      <amount>
+        <value value="50.00" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <code value="coupon-discount" />
+          <display value="Coupon discount amount" />
+        </coding>
+      </category>
+      <amount>
+        <value value="-10.00" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+    <adjudication>
+      <category>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <code value="total" />
+          <display value="Total patient responsibility" />
+        </coding>
+      </category>
+      <amount>
+        <value value="40.00" />
+        <currency value="USD" />
+      </amount>
+    </adjudication>
+  </addItem>
+  <insurance>
+    <sequence value="1" />
+    <focal value="true" />
+    <coverage>
+      <reference value="Coverage/rtpbc-coverage-03-cr" />
+    </coverage>
+  </insurance>
+</ClaimResponse>

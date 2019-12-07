@@ -10,7 +10,7 @@
   fhir:Resource.id [ fhir:value "rtpbc-organization-03m"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 0999029</p><p><b>type</b>: Mail Order <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'Mail Order', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 0999029</p><p><b>type</b>: Mail Order <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'M', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
   ];
   fhir:Organization.identifier [
      fhir:index 0;

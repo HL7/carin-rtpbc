@@ -6,7 +6,7 @@ active: Submission method
 
 [Previous Page](Information_content_and_FHIR_resources.html)
 
-*Note: The method for submitting the RTPBC request ($submit operation versus FHIR messaging using $process-message) is being decided by stakeholders. The section below describes both.*
+*Note: The guide describes two methods for submitting the RTPBC request ($submit operation and FHIR messaging using $process-message), with the intent to elicit comments from potential implementers.*
 
 <br>
 
@@ -31,7 +31,6 @@ The operation has a single FHIR resource input parameter consisting of a **Bundl
 #### Response bundle
 * ClaimResponse - The main RTPBC response--containing pricing and coverage info
 * Patient - Patient-identifying information echoed back from the request
-* Coverage - When the processor is a discount pricing source, a "key" to coupon information may be returned in a Coverage resource reference by the Claim.insurance element
 * Organization - Identifying information for alternative pharmacies priced in the response. (0 or more)
 
 *Note: The Coverage, MedicationRequest, Practitioner and submitted pharmacy Organization resources are not echoed back in the response.*

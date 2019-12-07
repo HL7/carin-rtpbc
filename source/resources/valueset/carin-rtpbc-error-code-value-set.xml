@@ -14,7 +14,7 @@
   <name value="CarinRtbpcErrorCodeValueSet" />
   <title value="CARIN RTPBC Error Code Value Set" />
   <status value="draft" />
-  <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing." />
+  <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. Values are defined in the NCPDP-maintained Reject Code (511-FB) code set." />
   <compose>
     <include>
       <system value="http://ncpdp.org/reject-code" />

@@ -3,7 +3,7 @@
   "id" : "CARIN-RTPBC",
   "meta" : {
     "versionId" : "228",
-    "lastUpdated" : "2019-11-15T09:01:57.000-06:00"
+    "lastUpdated" : "2019-12-05T09:01:57.000-06:00"
   },
   "text" : {
     "status" : "additional",
@@ -11,18 +11,22 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc55\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc55\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc55\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\pages"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
-  "version" : "0.1.12",
+  "version" : "0.1.13",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",
@@ -177,22 +181,6 @@
     },
     {
       "reference" : {
-        "reference" : "Claim/rtpbc-claim-with-contained-003",
-        "display" : "rtpbc-claim-with-contained-003"
-      },
-      "name" : "rtpbc-claim-with-contained-003",
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
-        "reference" : "ClaimResponse/rtpbc-claim-response-with-contained-03",
-        "display" : "rtpbc-claim-response-with-contained-03"
-      },
-      "name" : "rtpbc-claim-response-with-contained-03",
-      "exampleBoolean" : true
-    },
-    {
-      "reference" : {
         "reference" : "Organization/rtpbc-organization-03m",
         "display" : "My Mail Service Pharmacy"
       },
@@ -217,42 +205,10 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-billing-unit-code-system",
-        "display" : "CarinRtpbcBillingUnitCodeSystem"
-      },
-      "name" : "CarinRtpbcBillingUnitCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-canadian-province-code-system",
-        "display" : "CarinRtpbcCanadianProvinceCodeSystem"
-      },
-      "name" : "CarinRtpbcCanadianProvinceCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-coupon-coverage-class-code-system",
-        "display" : "CarinRtpbcCouponCoverageClassCodeSystem"
-      },
-      "name" : "CarinRtpbcCouponCoverageClassCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "CodeSystem/carin-rtpbc-coverage-summary-code-system",
         "display" : "CarinRtpbcCoverageSummaryCodeSystem"
       },
       "name" : "CarinRtpbcCoverageSummaryCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-error-code-system",
-        "display" : "CarinRtpbcErrorCodeSystem"
-      },
-      "name" : "CarinRtpbcErrorCodeSystem",
       "exampleBoolean" : false
     },
     {
@@ -273,34 +229,18 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-example-provider-id-code-system",
-        "display" : "CarinRtpbcExampleProviderIdCodeSystem"
-      },
-      "name" : "CarinRtpbcExampleProviderIdCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-example-reject-code-system",
-        "display" : "CarinRtpbcExampleRejectCodeSystem"
-      },
-      "name" : "CarinRtpbcExampleRejectCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-pharmacy-type-code-system",
-        "display" : "CarinRtpbcPharmacyTypeCodeSystem"
-      },
-      "name" : "CarinRtpbcPharmacyTypeCodeSystem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
         "reference" : "NamingSystem/carin-rtpbc-NamingSystem-canada-post-province-code",
         "display" : "CarinRtpbcNamingSystemCanadaPostProvinceCode"
       },
       "name" : "CarinRtpbcNamingSystemCanadaPostProvinceCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/carin-rtpbc-canadian-province-code-system",
+        "display" : "CarinRtpbcCanadianProvinceCodeSystem"
+      },
+      "name" : "CarinRtpbcCanadianProvinceCodeSystem",
       "exampleBoolean" : false
     },
     {
@@ -365,14 +305,6 @@
         "display" : "CarinRtbpcCoverageSummaryValueSet"
       },
       "name" : "CarinRtbpcCoverageSummaryValueSet",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/carin-rtpbc-expanded-coverage-class-value-set",
-        "display" : "CarinRtbpcExpandedCoverageClassValueSet"
-      },
-      "name" : "CarinRtbpcExpandedCoverageClassValueSet",
       "exampleBoolean" : false
     },
     {

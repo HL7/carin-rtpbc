@@ -25,7 +25,7 @@ id: {{[id]}}
 <!-- ============VAlUESET CONTENT CONTENT=============== -->
 
   {% include {{[type]}}-{{[id]}}-summary.xhtml %}
-  <br><br>
+  <br>
 
   {% capture my-include %}{% include {{[id]}}-intro.md id="{{[id]}}" %}{% endcapture %}
   {{ my-include | markdownify }}
@@ -65,8 +65,19 @@ id: {{[id]}}
 
 
 
+
 {% endcase %}
 
+{% capture footer_name %}{{[id]}}-footer.md{% endcapture %}
+{% capture footer_path %}extras/{{[id]}}-footer.md{% endcapture %}
+
+{% for the_file in site.static_files %}
+     {% if the_file.name == footer_name %}
+	<br>
+	{% capture my-footer %}{% include_relative {{ footer_path }} id="{{[id]}}" %}{% endcapture %}
+  	{{ my-footer | markdownify }}
+     {% endif %}
+  {% endfor %}
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->

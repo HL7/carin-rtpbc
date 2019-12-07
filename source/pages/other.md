@@ -80,26 +80,3 @@ Processor: Patient's payer / PBM
 </table>
 
 <br/>
-
-### Request / response using contained resources
-
-NOTE: This approach was proposed but discarded based on input from consulted workgroups and others.
-
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Claim</td>
-<td><a href="Claim-rtpbc-claim-with-contained-003.html">RTPBC Claim with contained resources</a></td>
-</tr>
-<tr>
-<td>ClaimResponse</td>
-<td><a href="ClaimResponse-rtpbc-claim-response-with-contained-03.html">RTPBC ClaimResponse with contained resources</a></td>
-</tr>
-</tbody>
-</table>

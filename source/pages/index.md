@@ -60,7 +60,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.12 (This version):** Refined description wording for the isAlternative extension (within the resource and on the Profiles & Extensions page). 
+**0.1.13 (This version):** Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.  
+
+**0.1.12:** Refined description wording for the isAlternative extension (within the resource and on the Profiles & Extensions page). 
 
 **0.1.11:** Added pharmacy type value set referencing NCPDP Pharmacy Type, bound to to Organization.type in the pharmacy organization profile. 
 
@@ -89,7 +91,8 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 <br/>
 
 ### Known issues and to-dos
-* The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out...
+* Capability statement to be added
+* Additional examples to be added
 
 
 <br/>

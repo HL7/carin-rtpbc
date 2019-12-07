@@ -21,30 +21,6 @@
     <compose>
         <include>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-            <concept>
-                <code value="deductible"/>
-                <display value="Deductible"/>
-            </concept>
-            <concept>
-                <code value="coinsurance"/>
-                <display value="Per prescription coinsurance"/>
-            </concept>
-            <concept>
-                <code value="copay"/>
-                <display value="Copay"/>
-            </concept>
-            <concept>
-                <code value="tax"/>
-                <display value="Tax"/>
-            </concept>
-            <concept>
-                <code value="other"/>
-                <display value="Other"/>
-            </concept>
-            <concept>
-                <code value="total"/>
-                <display value="Total patient responsibility"/>
-            </concept>
         </include>
     </compose>
 </ValueSet>

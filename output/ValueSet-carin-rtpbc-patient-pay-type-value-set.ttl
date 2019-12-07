@@ -17,41 +17,16 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;\n        </div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"];
-  fhir:ValueSet.version [ fhir:value "0.1.12"];
+  fhir:ValueSet.version [ fhir:value "0.1.13"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcPatientPayTypeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Patient Pay Type Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-02T10:21:04-06:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-06T18:17:52-06:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This value set contains components of a patient's responsibility for a prescription product's cost."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" ];
-       fhir:ValueSet.compose.include.concept [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "deductible" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Deductible" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "coinsurance" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Per prescription coinsurance" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "copay" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Copay" ]
-       ], [
-         fhir:index 3;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "tax" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Tax" ]
-       ], [
-         fhir:index 4;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "other" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other" ]
-       ], [
-         fhir:index 5;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "total" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "Total patient responsibility" ]
-       ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" ]
      ]
   ] .
 

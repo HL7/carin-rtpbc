@@ -11,7 +11,8 @@
 		"specification": "http://hl7.org/fhir/R4/",
 		"pages": [
 			"framework",
-			"source/pages"
+			"source/pages",
+			"source/pages/extras"
 		],
 		"resources": [
 			"source/resources"
@@ -136,37 +137,17 @@
 			"base": "Claim-rtpbc-claim-03.html",
 			"defns": "Claim-rtpbc-claim-03-definitions.html"
 		},
-		"Claim/rtpbc-claim-with-contained-003": {
-			"base": "Claim-rtpbc-claim-with-contained-003.html",
-			"defns": "Claim-rtpbc-claim-with-contained-003-definitions.html"
-		},
-		"ClaimResponse/rtpbc-claim-response-with-contained-03": {
-			"base": "ClaimResponse-rtpbc-claim-response-with-contained-03.html",
-			"defns": "ClaimResponse-rtpbc-claim-response-with-contained-03-definitions.html"
-		},
 		"ClaimResponse/rtpbc-claim-response-03": {
 			"base": "ClaimResponse-rtpbc-claim-response-03.html",
 			"defns": "ClaimResponse-rtpbc-claim-response-03-definitions.html"
 		},
-		"CodeSystem/carin-rtpbc-billing-unit-code-system": {
-			"base": "CodeSystem-carin-rtpbc-billing-unit-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-billing-unit-code-system-definitions.html"
-		},
-		"CodeSystem/carin-rtpbc-canadian-province-code-system": {
-			"base": "CodeSystem-carin-rtpbc-canadian-province-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-canadian-province-code-system-definitions.html"
-		},
-		"CodeSystem/carin-rtpbc-coupon-coverage-class-code-system": {
-			"base": "CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-coupon-coverage-class-code-system-definitions.html"
+		"ClaimResponse/rtpbc-claim-response-03-cr": {
+			"base": "ClaimResponse-rtpbc-claim-response-03-cr.html",
+			"defns": "ClaimResponse-rtpbc-claim-response-03-cr-definitions.html"
 		},
 		"CodeSystem/carin-rtpbc-coverage-summary-code-system": {
 			"base": "CodeSystem-carin-rtpbc-coverage-summary-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-coverage-summary-code-system-definitions.html"
-		},
-		"CodeSystem/carin-rtpbc-error-code-system": {
-			"base": "CodeSystem-carin-rtpbc-error-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-error-code-system-definitions.html"
 		},
 		"CodeSystem/carin-rtpbc-example-ndc-11-code-system": {
 			"base": "CodeSystem-carin-rtpbc-example-ndc-11-code-system.html",
@@ -176,17 +157,9 @@
 			"base": "CodeSystem-carin-rtpbc-example-provider-id-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-example-provider-id-code-system-definitions.html"
 		},
-		"CodeSystem/carin-rtpbc-example-reject-code-system": {
-			"base": "CodeSystem-carin-rtpbc-example-reject-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-example-reject-code-system-definitions.html"
-		},
 		"CodeSystem/carin-rtpbc-patient-pay-type-code-system": {
 			"base": "CodeSystem-carin-rtpbc-patient-pay-type-code-system.html",
 			"defns": "CodeSystem-carin-rtpbc-patient-pay-type-code-system-definitions.html"
-		},
-		"CodeSystem/carin-rtpbc-pharmacy-type-code-system": {
-			"base": "CodeSystem-carin-rtpbc-pharmacy-type-code-system.html",
-			"defns": "CodeSystem-carin-rtpbc-pharmacy-type-code-system-definitions.html"
 		},
 		"Coverage/rtpbc-coverage-03": {
 			"base": "Coverage-rtpbc-coverage-03.html",
@@ -223,6 +196,10 @@
 		"NamingSystem/carin-rtpbc-NamingSystem-canada-post-province-code": {
 			"base": "NamingSystem-carin-rtpbc-NamingSystem-canada-post-province-code.html",
 			"defns": "NamingSysem-carin-rtpbc-NamingSystem-canada-post-province-code.html"
+		},
+		"CodeSystem/carin-rtpbc-canadian-province-code-system": {
+			"base": "CodeSystem-carin-rtpbc-canadian-province-code-system.html",
+			"defns": "CodeSystem-carin-rtpbc-canadian-province-code-system-definitions.html"
 		},
 		"Organization/rtpbc-organization-03": {
 			"base": "Organization-rtpbc-organization-03.html",
@@ -292,10 +269,6 @@
 			"base": "ValueSet-carin-rtpbc-error-code-value-set.html",
 			"defns": "ValueSet-carin-rtpbc-error-code-value-set-definitions.html"
 		},
-		"ValueSet/carin-rtpbc-expanded-coverage-class-value-set": {
-			"base": "ValueSet-carin-rtpbc-expanded-coverage-class-value-set.html",
-			"defns": "ValueSet-carin-rtpbc-expanded-coverage-class-value-set-definitions.html"
-		},
 		"ValueSet/carin-rtpbc-patient-pay-type-value-set": {
 			"base": "ValueSet-carin-rtpbc-patient-pay-type-value-set.html",
 			"defns": "ValueSet-carin-rtpbc-patient-pay-type-value-set-definitions.html"
@@ -314,6 +287,6 @@
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.12",
+	"fixed-business-version": "0.1.13",
 	"dependencyList": []
 }

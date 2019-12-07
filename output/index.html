@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.12). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.13). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -296,7 +296,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 
 <h3 id="change-log">Change log</h3>
 
-<p><strong>0.1.12 (This version):</strong> Refined description wording for the isAlternative extension (within the resource and on the Profiles &amp; Extensions page).</p>
+<p><strong>0.1.13 (This version):</strong> Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.</p>
+
+<p><strong>0.1.12:</strong> Refined description wording for the isAlternative extension (within the resource and on the Profiles &amp; Extensions page).</p>
 
 <p><strong>0.1.11:</strong> Added pharmacy type value set referencing NCPDP Pharmacy Type, bound to to Organization.type in the pharmacy organization profile.</p>
 
@@ -326,7 +328,8 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 
 <h3 id="known-issues-and-to-dos">Known issues and to-dos</h3>
 <ul>
-  <li>The example, rtpbc-claim-with-contained-03, omits the MedicationRequest; it is being lost when importing the resource to Trifolia. Trying to figure out…</li>
+  <li>Capability statement to be added</li>
+  <li>Additional examples to be added</li>
 </ul>
 
 <p><br /></p>
@@ -382,7 +385,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.12  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 2, 2019 10:21-0600.
+      CarinRtpbc Version: 0.1.13  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 6, 2019 18:17-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

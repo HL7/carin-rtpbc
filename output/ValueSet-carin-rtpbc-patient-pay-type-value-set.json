@@ -10,42 +10,16 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains components of a patient's responsibility for a prescription product's cost.&quot;\n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtbpcPatientPayTypeValueSet",
   "title": "CARIN RTPBC Patient Pay Type Value Set",
   "status": "draft",
-  "date": "2019-12-02T10:21:04-06:00",
+  "date": "2019-12-06T18:17:52-06:00",
   "description": "This value set contains components of a patient's responsibility for a prescription product's cost.",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type",
-        "concept": [
-          {
-            "code": "deductible",
-            "display": "Deductible"
-          },
-          {
-            "code": "coinsurance",
-            "display": "Per prescription coinsurance"
-          },
-          {
-            "code": "copay",
-            "display": "Copay"
-          },
-          {
-            "code": "tax",
-            "display": "Tax"
-          },
-          {
-            "code": "other",
-            "display": "Other"
-          },
-          {
-            "code": "total",
-            "display": "Total patient responsibility"
-          }
-        ]
+        "system": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"
       }
     ]
   }

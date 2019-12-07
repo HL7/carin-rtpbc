@@ -16,7 +16,7 @@
     <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative"/>
-  <version value="0.1.12"/>
+  <version value="0.1.13"/>
   <name value="CarinRtpbcExtensionIsAlternative"/>
   <title value="CARIN RTPBC Extension isAlternative"/>
   <status value="draft"/>

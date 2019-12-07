@@ -3,18 +3,18 @@
   "id": "hl7.fhir.us.carin-rtpbc",
   "meta": {
     "versionId": "228",
-    "lastUpdated": "2019-11-15T09:01:57.000-06:00"
+    "lastUpdated": "2019-12-05T09:01:57.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtpbc",
   "title": "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status": "draft",
-  "date": "2019-12-02T10:21:04-06:00",
+  "date": "2019-12-06T18:17:52-06:00",
   "publisher": "HL7 International - Pharmacy",
   "contact": [
     {
@@ -336,42 +336,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Claim"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "Claim-rtpbc-claim-with-contained-003.html"
-          }
-        ],
-        "reference": {
-          "reference": "Claim/rtpbc-claim-with-contained-003",
-          "display": "rtpbc-claim-with-contained-003"
-        },
-        "name": "rtpbc-claim-with-contained-003",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ClaimResponse"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ClaimResponse-rtpbc-claim-response-with-contained-03.html"
-          }
-        ],
-        "reference": {
-          "reference": "ClaimResponse/rtpbc-claim-response-with-contained-03",
-          "display": "rtpbc-claim-response-with-contained-03"
-        },
-        "name": "rtpbc-claim-response-with-contained-03",
-        "exampleBoolean": true
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Organization"
           },
           {
@@ -430,60 +394,6 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-billing-unit-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-billing-unit-code-system",
-          "display": "CarinRtpbcBillingUnitCodeSystem"
-        },
-        "name": "CarinRtpbcBillingUnitCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-canadian-province-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-canadian-province-code-system",
-          "display": "CarinRtpbcCanadianProvinceCodeSystem"
-        },
-        "name": "CarinRtpbcCanadianProvinceCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-coupon-coverage-class-code-system",
-          "display": "CarinRtpbcCouponCoverageClassCodeSystem"
-        },
-        "name": "CarinRtpbcCouponCoverageClassCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
             "valueUri": "CodeSystem-carin-rtpbc-coverage-summary-code-system.html"
           }
         ],
@@ -492,24 +402,6 @@
           "display": "CarinRtpbcCoverageSummaryCodeSystem"
         },
         "name": "CarinRtpbcCoverageSummaryCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-error-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-error-code-system",
-          "display": "CarinRtpbcErrorCodeSystem"
-        },
-        "name": "CarinRtpbcErrorCodeSystem",
         "exampleBoolean": false
       },
       {
@@ -552,60 +444,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-example-provider-id-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-example-provider-id-code-system",
-          "display": "CarinRtpbcExampleProviderIdCodeSystem"
-        },
-        "name": "CarinRtpbcExampleProviderIdCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-example-reject-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-example-reject-code-system",
-          "display": "CarinRtpbcExampleRejectCodeSystem"
-        },
-        "name": "CarinRtpbcExampleRejectCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "CodeSystem"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-pharmacy-type-code-system.html"
-          }
-        ],
-        "reference": {
-          "reference": "CodeSystem/carin-rtpbc-pharmacy-type-code-system",
-          "display": "CarinRtpbcPharmacyTypeCodeSystem"
-        },
-        "name": "CarinRtpbcPharmacyTypeCodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "NamingSystem"
           },
           {
@@ -618,6 +456,24 @@
           "display": "CarinRtpbcNamingSystemCanadaPostProvinceCode"
         },
         "name": "CarinRtpbcNamingSystemCanadaPostProvinceCode",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-carin-rtpbc-canadian-province-code-system.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/carin-rtpbc-canadian-province-code-system",
+          "display": "CarinRtpbcCanadianProvinceCodeSystem"
+        },
+        "name": "CarinRtpbcCanadianProvinceCodeSystem",
         "exampleBoolean": false
       },
       {
@@ -762,24 +618,6 @@
           "display": "CarinRtbpcCoverageSummaryValueSet"
         },
         "name": "CarinRtbpcCoverageSummaryValueSet",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "ValueSet-carin-rtpbc-expanded-coverage-class-value-set.html"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/carin-rtpbc-expanded-coverage-class-value-set",
-          "display": "CarinRtbpcExpandedCoverageClassValueSet"
-        },
-        "name": "CarinRtbpcExpandedCoverageClassValueSet",
         "exampleBoolean": false
       },
       {

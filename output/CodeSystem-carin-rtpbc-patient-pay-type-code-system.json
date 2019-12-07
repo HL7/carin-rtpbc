@@ -2,22 +2,21 @@
   "resourceType": "CodeSystem",
   "id": "carin-rtpbc-patient-pay-type-code-system",
   "meta": {
-    "versionId": "3",
-    "lastUpdated": "2019-11-06T16:13:51.000-06:00"
+    "versionId": "5",
+    "lastUpdated": "2019-12-02T19:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Patient Pay Type Code System</h2><div><p>This code system defines components of a patient's responsibility for a prescription product's cost.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">deductible<a name=\"carin-rtpbc-patient-pay-type-code-system-deductible\"> </a></td><td>Deductible</td><td>Amount to be collected from a patient to be applied to a periodic deductible.</td></tr><tr><td style=\"white-space:nowrap\">coinsurance<a name=\"carin-rtpbc-patient-pay-type-code-system-coinsurance\"> </a></td><td>Per prescription coinsurance</td><td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td></tr><tr><td style=\"white-space:nowrap\">copay<a name=\"carin-rtpbc-patient-pay-type-code-system-copay\"> </a></td><td>Copay</td><td>Amount to be collected from the patient to satisfy a per prescription copay.</td></tr><tr><td style=\"white-space:nowrap\">tax<a name=\"carin-rtpbc-patient-pay-type-code-system-tax\"> </a></td><td>Tax</td><td>Amount to be collected from the patient for sales tax.</td></tr><tr><td style=\"white-space:nowrap\">other<a name=\"carin-rtpbc-patient-pay-type-code-system-other\"> </a></td><td>Other</td><td>Other amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">total<a name=\"carin-rtpbc-patient-pay-type-code-system-total\"> </a></td><td>Total patient responsibility</td><td>Amount equalling the total patient responsibility for a prescription product's cost.</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Patient Pay Type Code System</h2><div><p>This code system defines components of a patient's responsibility for a prescription product's cost.</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">deductible<a name=\"carin-rtpbc-patient-pay-type-code-system-deductible\"> </a></td><td>Deductible</td><td>Amount to be collected from a patient to be applied to a periodic deductible.</td></tr><tr><td style=\"white-space:nowrap\">coinsurance<a name=\"carin-rtpbc-patient-pay-type-code-system-coinsurance\"> </a></td><td>Per prescription coinsurance</td><td>Amount to be collected from a patient to satisfy a per prescription coinsurance.</td></tr><tr><td style=\"white-space:nowrap\">copay<a name=\"carin-rtpbc-patient-pay-type-code-system-copay\"> </a></td><td>Copay</td><td>Amount to be collected from the patient to satisfy a per prescription copay.</td></tr><tr><td style=\"white-space:nowrap\">tax<a name=\"carin-rtpbc-patient-pay-type-code-system-tax\"> </a></td><td>Tax</td><td>Amount to be collected from the patient for sales tax.</td></tr><tr><td style=\"white-space:nowrap\">cash-price<a name=\"carin-rtpbc-patient-pay-type-code-system-cash-price\"> </a></td><td>Full product cash price</td><td>Full product cash price before discounts or coupons</td></tr><tr><td style=\"white-space:nowrap\">coupon-discount<a name=\"carin-rtpbc-patient-pay-type-code-system-coupon-discount\"> </a></td><td>Coupon discount amount</td><td>Coupon discount reducing the amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">member-discount<a name=\"carin-rtpbc-patient-pay-type-code-system-member-discount\"> </a></td><td>Member discount amount</td><td>Member discount reducing the amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">other-discount<a name=\"carin-rtpbc-patient-pay-type-code-system-other-discount\"> </a></td><td>Other discount amount</td><td>Other discount reducing the amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">other-cost<a name=\"carin-rtpbc-patient-pay-type-code-system-other-cost\"> </a></td><td>Other cost</td><td>Other amount to be collected from the patient</td></tr><tr><td style=\"white-space:nowrap\">total<a name=\"carin-rtpbc-patient-pay-type-code-system-total\"> </a></td><td>Total patient responsibility</td><td>Amount equalling the total patient responsibility for a prescription product's cost.</td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtpbcPatientPayTypeCodeSystem",
   "title": "CARIN RTPBC Patient Pay Type Code System",
   "status": "draft",
-  "date": "2019-12-02T10:21:04-06:00",
+  "date": "2019-10-31T00:00:00-05:00",
   "publisher": "CARIN Alliance",
   "description": "This code system defines components of a patient's responsibility for a prescription product's cost.",
-  "purpose": "This code system defines components of a patient's responsibility for a prescription product's cost.",
   "caseSensitive": false,
   "content": "complete",
   "concept": [
@@ -42,8 +41,28 @@
       "definition": "Amount to be collected from the patient for sales tax."
     },
     {
-      "code": "other",
-      "display": "Other",
+      "code": "cash-price",
+      "display": "Full product cash price",
+      "definition": "Full product cash price before discounts or coupons"
+    },
+    {
+      "code": "coupon-discount",
+      "display": "Coupon discount amount",
+      "definition": "Coupon discount reducing the amount to be collected from the patient"
+    },
+    {
+      "code": "member-discount",
+      "display": "Member discount amount",
+      "definition": "Member discount reducing the amount to be collected from the patient"
+    },
+    {
+      "code": "other-discount",
+      "display": "Other discount amount",
+      "definition": "Other discount reducing the amount to be collected from the patient"
+    },
+    {
+      "code": "other-cost",
+      "display": "Other cost",
       "definition": "Other amount to be collected from the patient"
     },
     {

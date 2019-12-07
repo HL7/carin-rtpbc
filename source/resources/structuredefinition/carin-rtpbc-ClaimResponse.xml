@@ -332,30 +332,6 @@
       <definition value="Coverage determination for a product / pharmacy combination, in human-readable form. E.g., 'Covered', 'Covered with restriction: PA required', 'Not covered'" />
       <mustSupport value="true" />
     </element>
-    <element id="ClaimResponse.insurance">
-      <path value="ClaimResponse.insurance" />
-      <min value="0" />
-      <mustSupport value="true" />
-    </element>
-    <element id="ClaimResponse.insurance.sequence">
-      <path value="ClaimResponse.insurance.sequence" />
-      <mustSupport value="true" />
-    </element>
-    <element id="ClaimResponse.insurance.focal">
-      <path value="ClaimResponse.insurance.focal" />
-      <mustSupport value="true" />
-    </element>
-    <element id="ClaimResponse.insurance.coverage">
-      <path value="ClaimResponse.insurance.coverage" />
-      <label value="Pharmacy Coverage Reference" />
-      <short value="Pharmacy Coverage Reference" />
-      <definition value="Reference to a Coverage resource containing identification of the patient's pharmacy coverage." />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="ClaimResponse.processNote.number">
       <path value="ClaimResponse.processNote.number" />
       <label value="Determination Note Number" />
@@ -452,7 +428,7 @@
       <definition value="A code identifying the reason that processing could not be completed." />
       <mustSupport value="true" />
       <binding>
-        <strength value="extensible" />
+        <strength value="preferred" />
         <description value="RTPBC Error Codes" />
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code" />
       </binding>

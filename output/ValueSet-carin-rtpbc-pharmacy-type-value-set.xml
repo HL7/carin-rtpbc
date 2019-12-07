@@ -15,10 +15,10 @@
     </security>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Pharmacy Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html"><code>http://ncpdp.org/pharmacy-type</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Pharmacy Type Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://ncpdp.org/pharmacy-type</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"/>
-  <version value="0.1.12"/>
+  <version value="0.1.13"/>
   <name value="CARINRTPBCPharmacyTypeValueSet"/>
   <title value="CARIN RTPBC Pharmacy Type Value Set"/>
   <status value="draft"/>

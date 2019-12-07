@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.12). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.13). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -272,16 +272,15 @@ can only resize using html  or css ;-(
 <h4 id="response-content-1"><em>Response content</em></h4>
 <p>The responder…</p>
 <ul>
-  <li>determines pricing for the requested pharmacy and potentially other nearby pharmacies</li>
+  <li>determines pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships</li>
   <li>returns the gathered information to requester</li>
-  <li>optionally returns coupon information when available</li>
 </ul>
 
 <p><br />
 <br /></p>
 
 <h3 id="resources-used-in-the-exchange">Resources used in the exchange</h3>
-<p>The consumer RTPBC request and response are accomplished using FHIR <strong>Claim</strong> and <strong>ClaimResponse</strong> resources in a “predetermination” (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage.</p>
+<p>The consumer RTPBC request and response are accomplished using FHIR <strong>Claim</strong> and <strong>ClaimResponse</strong> resources in a “predetermination” (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage. An OperationOutcome communicates exception situations where a ClaimResponse cannot be returned</p>
 
 <div><img src="https://www.frankmckinney.com/carin-rtpbc/high-level-rtpbc-fhir-resource-mapping.png" alt="related information flows" /></div>
 
@@ -296,11 +295,8 @@ can only resize using html  or css ;-(
   <li><strong>MedicationRequest</strong> - Conveys the needed prescription information (a subset of what is present in a full prescription)</li>
   <li><strong>Practitioner</strong> - Conveys the prescriber information needed for the exchange</li>
   <li><strong>Organization <em>(Pharmacy)</em></strong> - Conveys pharmacy information needed for the exchange</li>
-  <li><strong>Coverage</strong> - <em>Request:</em> Conveys the pharmacy benefit coverage IDs needed for the exchange. <em>Response:</em> Optionally contains discount drug coupon information when the request is processed by a discount pricing source</li>
-  <li><strong>OperationOutcome</strong> - Communicates exception situations where a ClaimResponse cannot be returned</li>
+  <li><strong>Coverage</strong> - Conveys the patient’s pharmacy benefit coverage IDs</li>
 </ul>
-
-<p>The need for additional resource profiles may be identified as work progresses.</p>
 
 <p><a href="Submission_method.html">Next Page</a></p>
 
@@ -333,7 +329,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.12  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 2, 2019 10:21-0600.
+      CarinRtpbc Version: 0.1.13  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 6, 2019 18:17-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

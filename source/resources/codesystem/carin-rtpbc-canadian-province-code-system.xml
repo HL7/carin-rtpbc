@@ -9,7 +9,7 @@
       <code value="everyone^write" />
     </security>
   </meta>
-  <url value="http://canadapost.ca" />
+  <url value="http://placeholder-for-canadapost.ca" />
   <version value="1.0.0" />
   <name value="CarinRtpbcCanadianProvinceCodeSystem" />
   <title value="CARIN RTPBC Canadian Province Code System" />

@@ -14,10 +14,10 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process             </div>\n    </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process      </div>\n    </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.12"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestCoverageIdentifiers"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Coverage Identifiers"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -1067,8 +1067,8 @@
        fhir:index 19;
        fhir:Element.id [ fhir:value "Coverage.payor" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.payor" ];
-       fhir:ElementDefinition.label [ fhir:value "Payer ID or Ref (TBD)" ];
-       fhir:ElementDefinition.short [ fhir:value "Payer ID or Ref (TBD)" ];
+       fhir:ElementDefinition.label [ fhir:value "Payer ID" ];
+       fhir:ElementDefinition.short [ fhir:value "Payer ID" ];
        fhir:ElementDefinition.definition [ fhir:value "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements." ];
        fhir:ElementDefinition.comment [ fhir:value "May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).\nFor selfpay it may provide multiple paying persons and/or organizations." ];
        fhir:ElementDefinition.requirements [ fhir:value "Need to identify the issuer to target for claim processing and for coordination of benefit processing." ];
@@ -1571,8 +1571,7 @@
        fhir:index 29;
        fhir:Element.id [ fhir:value "Coverage.payor.identifier.system" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.payor.identifier.system" ];
-       fhir:ElementDefinition.label [ fhir:value "Payer ID System (TBD)" ];
-       fhir:ElementDefinition.short [ fhir:value "Payer ID System (TBD)" ];
+       fhir:ElementDefinition.short [ fhir:value "The namespace for the identifier value" ];
        fhir:ElementDefinition.definition [ fhir:value "Establishes the namespace for the value - that is, a URL that describes a set values that are unique." ];
        fhir:ElementDefinition.comment [ fhir:value "Identifier.system is always case sensitive." ];
        fhir:ElementDefinition.requirements [ fhir:value "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers." ];
@@ -1604,7 +1603,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -1824,12 +1822,12 @@
            fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
            fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "type" ]
          ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." ];
+         fhir:ElementDefinition.slicing.description [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." ];
          fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
          fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
        ];
        fhir:ElementDefinition.short [ fhir:value "Pharmacy coverage identifiers" ];
-       fhir:ElementDefinition.definition [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." ];
        fhir:ElementDefinition.comment [ fhir:value "Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners" ];
        fhir:ElementDefinition.requirements [ fhir:value "The codes provided on the health card which identify or confirm the specific policy for the insurer." ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
@@ -2040,10 +2038,10 @@
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Expanded Coverage Class Value Set (incl coupon concepts)" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Coverage Class Codes" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class>
+           fhir:value "http://hl7.org/fhir/ValueSet/coverage-class";
+           fhir:link <http://hl7.org/fhir/ValueSet/coverage-class>
          ]
        ]
      ], [
@@ -3467,670 +3465,6 @@
        ]
      ], [
        fhir:index 69;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
-         fhir:Extension.valueString [ fhir:value "Class" ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "coupon-request" ];
-       fhir:ElementDefinition.label [ fhir:value "Coupon Request" ];
-       fhir:ElementDefinition.short [ fhir:value "Coupon Request" ];
-       fhir:ElementDefinition.definition [ fhir:value "A suite of underwriter specific classifiers." ];
-       fhir:ElementDefinition.comment [ fhir:value "A key used to request a discount coupon." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The codes provided on the health card which identify or confirm the specific policy for the insurer." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 70;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.id" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.id" ];
-       fhir:ElementDefinition.representation [
-         fhir:value "xmlAttr";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Unique id for inter-element referencing" ];
-       fhir:ElementDefinition.definition [ fhir:value "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ];
-           fhir:Extension.valueUrl [ fhir:value "string" ]
-         ];
-         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 71;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.extension" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.extension" ];
-       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 72;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.modifierExtension" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.modifierExtension" ];
-       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ], [
-         fhir:value "modifiers";
-         fhir:index 2
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
-       ]
-     ], [
-       fhir:index 73;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.type" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
-       fhir:ElementDefinition.short [ fhir:value "Type of class such as 'group' or 'plan'" ];
-       fhir:ElementDefinition.definition [ fhir:value "The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The insurer issued label for a specific health card value." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.type" ];
-         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.patternCodeableConcept [
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" ];
-           fhir:Coding.code [ fhir:value "coupon-request" ]
-         ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CoverageClass" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The policy classifications, eg. Group, Plan, Class, etc." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/coverage-class";
-           fhir:link <http://hl7.org/fhir/ValueSet/coverage-class>
-         ]
-       ]
-     ], [
-       fhir:index 74;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.value" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.value" ];
-       fhir:ElementDefinition.short [ fhir:value "Value associated with the type" ];
-       fhir:ElementDefinition.definition [ fhir:value "The alphanumeric string value associated with the insurer issued label." ];
-       fhir:ElementDefinition.comment [ fhir:value "For example, the Group or Plan number." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The insurer issued label and value are necessary to identify the specific policy." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.value" ];
-         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C11 (Division,Section)" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "IN1-8" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cpha3pharm" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C.31" ]
-       ]
-     ], [
-       fhir:index 75;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.name" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.name" ];
-       fhir:ElementDefinition.short [ fhir:value "Human readable description of the type and value" ];
-       fhir:ElementDefinition.definition [ fhir:value "A short description for the class." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Used to provide a meaningful description in correspondence to the patient." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.name" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C11 (Division,Section)" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "IN1-8" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cpha3pharm" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C.31" ]
-       ]
-     ], [
-       fhir:index 76;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon" ];
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name" ];
-         fhir:Extension.valueString [ fhir:value "Class" ]
-       ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "coupon" ];
-       fhir:ElementDefinition.label [ fhir:value "Coupon" ];
-       fhir:ElementDefinition.short [ fhir:value "Coupon" ];
-       fhir:ElementDefinition.definition [ fhir:value "A suite of underwriter specific classifiers." ];
-       fhir:ElementDefinition.comment [ fhir:value "A discount coupon." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The codes provided on the health card which identify or confirm the specific policy for the insurer." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "BackboneElement" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 77;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.id" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.id" ];
-       fhir:ElementDefinition.representation [
-         fhir:value "xmlAttr";
-         fhir:index 0
-       ];
-       fhir:ElementDefinition.short [ fhir:value "Unique id for inter-element referencing" ];
-       fhir:ElementDefinition.definition [ fhir:value "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.id" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type" ];
-           fhir:Extension.valueUrl [ fhir:value "string" ]
-         ];
-         fhir:ElementDefinition.type.code [ fhir:value "http://hl7.org/fhirpath/System.String" ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 78;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.extension" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.extension" ];
-       fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Element.extension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
-       ]
-     ], [
-       fhir:index 79;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.modifierExtension" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.modifierExtension" ];
-       fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
-       fhir:ElementDefinition.definition [ fhir:value "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)." ];
-       fhir:ElementDefinition.comment [ fhir:value "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)." ];
-       fhir:ElementDefinition.alias [
-         fhir:value "extensions";
-         fhir:index 0
-       ], [
-         fhir:value "user content";
-         fhir:index 1
-       ], [
-         fhir:value "modifiers";
-         fhir:index 2
-       ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "*" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "BackboneElement.modifierExtension" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "*" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Extension" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ext-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "Must have either extensions or value[x], not both" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.exists() != value.exists()" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Extension";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Extension>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.isModifierReason [ fhir:value "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them" ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "rim" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
-       ]
-     ], [
-       fhir:index 80;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.type" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
-       fhir:ElementDefinition.short [ fhir:value "Type of class such as 'group' or 'plan'" ];
-       fhir:ElementDefinition.definition [ fhir:value "The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The insurer issued label for a specific health card value." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.type" ];
-         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "CodeableConcept" ]
-       ];
-       fhir:ElementDefinition.patternCodeableConcept [
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" ];
-           fhir:Coding.code [ fhir:value "coupon" ]
-         ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.binding [
-         fhir:Element.extension [
-           fhir:index 0;
-           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
-           fhir:Extension.valueString [ fhir:value "CoverageClass" ]
-         ];
-         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "The policy classifications, eg. Group, Plan, Class, etc." ];
-         fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/ValueSet/coverage-class";
-           fhir:link <http://hl7.org/fhir/ValueSet/coverage-class>
-         ]
-       ]
-     ], [
-       fhir:index 81;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.value" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.value" ];
-       fhir:ElementDefinition.short [ fhir:value "Value associated with the type" ];
-       fhir:ElementDefinition.definition [ fhir:value "The alphanumeric string value associated with the insurer issued label." ];
-       fhir:ElementDefinition.comment [ fhir:value "For example, the Group or Plan number." ];
-       fhir:ElementDefinition.requirements [ fhir:value "The insurer issued label and value are necessary to identify the specific policy." ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.value" ];
-         fhir:ElementDefinition.base.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C11 (Division,Section)" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "IN1-8" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cpha3pharm" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C.31" ]
-       ]
-     ], [
-       fhir:index 82;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.name" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.name" ];
-       fhir:ElementDefinition.short [ fhir:value "Human readable description of the type and value" ];
-       fhir:ElementDefinition.definition [ fhir:value "A short description for the class." ];
-       fhir:ElementDefinition.requirements [ fhir:value "Used to provide a meaningful description in correspondence to the patient." ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.base [
-         fhir:ElementDefinition.base.path [ fhir:value "Coverage.class.name" ];
-         fhir:ElementDefinition.base.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-         fhir:ElementDefinition.base.max [ fhir:value "1" ]
-       ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "string" ]
-       ];
-       fhir:ElementDefinition.constraint [
-         fhir:index 0;
-         fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
-         fhir:ElementDefinition.constraint.severity [ fhir:value "error" ];
-         fhir:ElementDefinition.constraint.human [ fhir:value "All FHIR elements must have a @value or children" ];
-         fhir:ElementDefinition.constraint.expression [ fhir:value "hasValue() or (children().count() > id.count())" ];
-         fhir:ElementDefinition.constraint.xpath [ fhir:value "@value|f:*|h:div" ];
-         fhir:ElementDefinition.constraint.source [
-           fhir:value "http://hl7.org/fhir/StructureDefinition/Element";
-           fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
-         ]
-       ];
-       fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
-       fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
-       fhir:ElementDefinition.mapping [
-         fhir:index 0;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cdanetv4" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C11 (Division,Section)" ]
-       ], [
-         fhir:index 1;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "v2" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "IN1-8" ]
-       ], [
-         fhir:index 2;
-         fhir:ElementDefinition.mapping.identity [ fhir:value "cpha3pharm" ];
-         fhir:ElementDefinition.mapping.map [ fhir:value "C.31" ]
-       ]
-     ], [
-       fhir:index 83;
        fhir:Element.id [ fhir:value "Coverage.order" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.order" ];
        fhir:ElementDefinition.short [ fhir:value "Relative order of the coverage" ];
@@ -4167,7 +3501,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "- No exact HL7 v2 equivalent concept seems to exist;" ]
        ]
      ], [
-       fhir:index 84;
+       fhir:index 70;
        fhir:Element.id [ fhir:value "Coverage.network" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.network" ];
        fhir:ElementDefinition.short [ fhir:value "Insurer network" ];
@@ -4204,7 +3538,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "D10" ]
        ]
      ], [
-       fhir:index 85;
+       fhir:index 71;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -4252,7 +3586,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 86;
+       fhir:index 72;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.id" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.id" ];
        fhir:ElementDefinition.representation [
@@ -4285,7 +3619,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 87;
+       fhir:index 73;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.extension" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -4340,7 +3674,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 88;
+       fhir:index 74;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -4400,7 +3734,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 89;
+       fhir:index 75;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.type" ];
        fhir:ElementDefinition.short [ fhir:value "Cost category" ];
@@ -4446,7 +3780,7 @@
          ]
        ]
      ], [
-       fhir:index 90;
+       fhir:index 76;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.value[x]" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.value[x]" ];
        fhir:ElementDefinition.short [ fhir:value "The amount or percentage due from the beneficiary" ];
@@ -4500,7 +3834,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "C.31" ]
        ]
      ], [
-       fhir:index 91;
+       fhir:index 77;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception" ];
        fhir:Element.extension [
          fhir:index 0;
@@ -4537,7 +3871,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 92;
+       fhir:index 78;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception.id" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.exception.id" ];
        fhir:ElementDefinition.representation [
@@ -4570,7 +3904,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 93;
+       fhir:index 79;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception.extension" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.exception.extension" ];
        fhir:ElementDefinition.short [ fhir:value "Additional content defined by implementations" ];
@@ -4625,7 +3959,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "n/a" ]
        ]
      ], [
-       fhir:index 94;
+       fhir:index 80;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception.modifierExtension" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.exception.modifierExtension" ];
        fhir:ElementDefinition.short [ fhir:value "Extensions that cannot be ignored even if unrecognized" ];
@@ -4685,7 +4019,7 @@
          fhir:ElementDefinition.mapping.map [ fhir:value "N/A" ]
        ]
      ], [
-       fhir:index 95;
+       fhir:index 81;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.exception.type" ];
        fhir:ElementDefinition.short [ fhir:value "Exception category" ];
@@ -4730,7 +4064,7 @@
          ]
        ]
      ], [
-       fhir:index 96;
+       fhir:index 82;
        fhir:Element.id [ fhir:value "Coverage.costToBeneficiary.exception.period" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.costToBeneficiary.exception.period" ];
        fhir:ElementDefinition.short [ fhir:value "The effective period of the exception" ];
@@ -4762,7 +4096,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 97;
+       fhir:index 83;
        fhir:Element.id [ fhir:value "Coverage.subrogation" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.subrogation" ];
        fhir:ElementDefinition.short [ fhir:value "Reimbursement to insurer" ];
@@ -4795,7 +4129,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 98;
+       fhir:index 84;
        fhir:Element.id [ fhir:value "Coverage.contract" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.contract" ];
        fhir:ElementDefinition.short [ fhir:value "Contract details" ];
@@ -4867,8 +4201,8 @@
        fhir:index 2;
        fhir:Element.id [ fhir:value "Coverage.payor" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.payor" ];
-       fhir:ElementDefinition.label [ fhir:value "Payer ID or Ref (TBD)" ];
-       fhir:ElementDefinition.short [ fhir:value "Payer ID or Ref (TBD)" ];
+       fhir:ElementDefinition.label [ fhir:value "Payer ID" ];
+       fhir:ElementDefinition.short [ fhir:value "Payer ID" ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
@@ -4881,13 +4215,6 @@
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 4;
-       fhir:Element.id [ fhir:value "Coverage.payor.identifier.system" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.payor.identifier.system" ];
-       fhir:ElementDefinition.label [ fhir:value "Payer ID System (TBD)" ];
-       fhir:ElementDefinition.short [ fhir:value "Payer ID System (TBD)" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 5;
        fhir:Element.id [ fhir:value "Coverage.payor.identifier.value" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.payor.identifier.value" ];
        fhir:ElementDefinition.label [ fhir:value "Payer ID Value" ];
@@ -4895,7 +4222,7 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 5;
        fhir:Element.id [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.label [ fhir:value "Pharmacy coverage identifiers" ];
@@ -4905,30 +4232,30 @@
            fhir:ElementDefinition.slicing.discriminator.type [ fhir:value "value" ];
            fhir:ElementDefinition.slicing.discriminator.path [ fhir:value "type" ]
          ];
-         fhir:ElementDefinition.slicing.description [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." ];
+         fhir:ElementDefinition.slicing.description [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." ];
          fhir:ElementDefinition.slicing.ordered [ fhir:value "false"^^xsd:boolean ];
          fhir:ElementDefinition.slicing.rules [ fhir:value "closed" ]
        ];
        fhir:ElementDefinition.short [ fhir:value "Pharmacy coverage identifiers" ];
-       fhir:ElementDefinition.definition [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." ];
+       fhir:ElementDefinition.definition [ fhir:value "Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." ];
        fhir:ElementDefinition.comment [ fhir:value "Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners" ];
        fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "4" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 6;
        fhir:Element.id [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.binding [
          fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
-         fhir:ElementDefinition.binding.description [ fhir:value "Expanded Coverage Class Value Set (incl coupon concepts)" ];
+         fhir:ElementDefinition.binding.description [ fhir:value "Coverage Class Codes" ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class";
-           fhir:link <http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class>
+           fhir:value "http://hl7.org/fhir/ValueSet/coverage-class";
+           fhir:link <http://hl7.org/fhir/ValueSet/coverage-class>
          ]
        ]
      ], [
-       fhir:index 8;
+       fhir:index 7;
        fhir:Element.id [ fhir:value "Coverage.class:bin" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.sliceName [ fhir:value "bin" ];
@@ -4938,7 +4265,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 8;
        fhir:Element.id [ fhir:value "Coverage.class:bin.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -4951,7 +4278,7 @@
          ]
        ]
      ], [
-       fhir:index 10;
+       fhir:index 9;
        fhir:Element.id [ fhir:value "Coverage.class:pcn" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.sliceName [ fhir:value "pcn" ];
@@ -4961,7 +4288,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:Element.id [ fhir:value "Coverage.class:pcn.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -4974,7 +4301,7 @@
          ]
        ]
      ], [
-       fhir:index 12;
+       fhir:index 11;
        fhir:Element.id [ fhir:value "Coverage.class:group-id" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.sliceName [ fhir:value "group-id" ];
@@ -4985,7 +4312,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 12;
        fhir:Element.id [ fhir:value "Coverage.class:group-id.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -4998,7 +4325,7 @@
          ]
        ]
      ], [
-       fhir:index 14;
+       fhir:index 13;
        fhir:Element.id [ fhir:value "Coverage.class:pbm-member-id" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
        fhir:ElementDefinition.sliceName [ fhir:value "pbm-member-id" ];
@@ -5010,7 +4337,7 @@
        fhir:ElementDefinition.max [ fhir:value "1" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 14;
        fhir:Element.id [ fhir:value "Coverage.class:pbm-member-id.type" ];
        fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
@@ -5020,52 +4347,6 @@
            fhir:index 0;
            fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/coverage-class" ];
            fhir:Coding.code [ fhir:value "rxid" ]
-         ]
-       ]
-     ], [
-       fhir:index 16;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "coupon-request" ];
-       fhir:ElementDefinition.label [ fhir:value "Coupon Request" ];
-       fhir:ElementDefinition.short [ fhir:value "Coupon Request" ];
-       fhir:ElementDefinition.comment [ fhir:value "A key used to request a discount coupon." ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 17;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon-request.type" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.patternCodeableConcept [
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" ];
-           fhir:Coding.code [ fhir:value "coupon-request" ]
-         ]
-       ]
-     ], [
-       fhir:index 18;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class" ];
-       fhir:ElementDefinition.sliceName [ fhir:value "coupon" ];
-       fhir:ElementDefinition.label [ fhir:value "Coupon" ];
-       fhir:ElementDefinition.short [ fhir:value "Coupon" ];
-       fhir:ElementDefinition.comment [ fhir:value "A discount coupon." ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 19;
-       fhir:Element.id [ fhir:value "Coverage.class:coupon.type" ];
-       fhir:ElementDefinition.path [ fhir:value "Coverage.class.type" ];
-       fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.max [ fhir:value "1" ];
-       fhir:ElementDefinition.patternCodeableConcept [
-         fhir:CodeableConcept.coding [
-           fhir:index 0;
-           fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" ];
-           fhir:Coding.code [ fhir:value "coupon" ]
          ]
        ]
      ]

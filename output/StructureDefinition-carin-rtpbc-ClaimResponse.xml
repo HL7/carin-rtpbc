@@ -16,7 +16,7 @@
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
-  <version value="0.1.12"/>
+  <version value="0.1.13"/>
   <name value="CarinRtpbcResponse"/>
   <title value="CARIN RTPBC Response using ClaimResponse"/>
   <status value="draft"/>
@@ -7480,7 +7480,6 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -7619,7 +7618,6 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
@@ -7647,15 +7645,13 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
     <element id="ClaimResponse.insurance.coverage">
       <path value="ClaimResponse.insurance.coverage"/>
-      <label value="Pharmacy Coverage Reference"/>
-      <short value="Pharmacy Coverage Reference"/>
-      <definition value="Reference to a Coverage resource containing identification of the patient&#39;s pharmacy coverage."/>
+      <short value="Insurance information"/>
+      <definition value="Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient&#39;s actual coverage within the insurer&#39;s information system."/>
       <requirements value="Required to allow the adjudicator to locate the correct policy and history within their information system."/>
       <min value="1"/>
       <max value="1"/>
@@ -7666,7 +7662,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -7676,7 +7672,6 @@
         <xpath value="@value|f:*|h:div"/>
         <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
       </constraint>
-      <mustSupport value="true"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
     </element>
@@ -7980,7 +7975,7 @@
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <strength value="extensible"/>
+        <strength value="preferred"/>
         <description value="RTPBC Error Codes"/>
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
       </binding>
@@ -8824,30 +8819,6 @@
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
       </binding>
     </element>
-    <element id="ClaimResponse.insurance">
-      <path value="ClaimResponse.insurance"/>
-      <min value="0"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="ClaimResponse.insurance.sequence">
-      <path value="ClaimResponse.insurance.sequence"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="ClaimResponse.insurance.focal">
-      <path value="ClaimResponse.insurance.focal"/>
-      <mustSupport value="true"/>
-    </element>
-    <element id="ClaimResponse.insurance.coverage">
-      <path value="ClaimResponse.insurance.coverage"/>
-      <label value="Pharmacy Coverage Reference"/>
-      <short value="Pharmacy Coverage Reference"/>
-      <definition value="Reference to a Coverage resource containing identification of the patient&#39;s pharmacy coverage."/>
-      <type>
-        <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
-      </type>
-      <mustSupport value="true"/>
-    </element>
     <element id="ClaimResponse.error">
       <path value="ClaimResponse.error"/>
       <label value="Error Information"/>
@@ -8862,7 +8833,7 @@
       <definition value="A code identifying the reason that processing could not be completed."/>
       <mustSupport value="true"/>
       <binding>
-        <strength value="extensible"/>
+        <strength value="preferred"/>
         <description value="RTPBC Error Codes"/>
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
       </binding>

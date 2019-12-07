@@ -3,7 +3,7 @@
   "id": "rtpbc-organization-03",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03</p><p><b>identifier</b>: 0999017</p><p><b>type</b>: Retail <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'R' = 'Retail', given as 'Retail'})</span></p><p><b>name</b>: Hometown Drug</p><p><b>telecom</b>: ph: 6081234567</p><p><b>address</b>: 900 9th Street Madison WI 53535 US </p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03</p><p><b>identifier</b>: 0999017</p><p><b>type</b>: Retail <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'R' = 'R', given as 'Retail'})</span></p><p><b>name</b>: Hometown Drug</p><p><b>telecom</b>: ph: 6081234567</p><p><b>address</b>: 900 9th Street Madison WI 53535 US </p></div>"
   },
   "identifier": [
     {

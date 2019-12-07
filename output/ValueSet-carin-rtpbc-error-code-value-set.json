@@ -10,12 +10,12 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.</div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtbpcErrorCodeValueSet",
   "title": "CARIN RTPBC Error Code Value Set",
   "status": "draft",
-  "date": "2019-12-02T10:21:04-06:00",
-  "description": "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.",
+  "date": "2019-12-06T18:17:52-06:00",
+  "description": "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. Values are defined in the NCPDP-maintained Reject Code (511-FB) code set.",
   "compose": {
     "include": [
       {

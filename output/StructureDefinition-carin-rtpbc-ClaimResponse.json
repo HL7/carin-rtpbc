@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>\n          <div>This profile constrains the ClaimResponse resource to serve as the                                                                          <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              </div>\n        </div>\n      </div>\n    </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtpbcResponse",
   "title": "CARIN RTPBC Response using ClaimResponse",
   "status": "draft",
@@ -9218,7 +9218,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -9392,7 +9391,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -9425,16 +9423,14 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
       {
         "id": "ClaimResponse.insurance.coverage",
         "path": "ClaimResponse.insurance.coverage",
-        "label": "Pharmacy Coverage Reference",
-        "short": "Pharmacy Coverage Reference",
-        "definition": "Reference to a Coverage resource containing identification of the patient's pharmacy coverage.",
+        "short": "Insurance information",
+        "definition": "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system.",
         "requirements": "Required to allow the adjudicator to locate the correct policy and history within their information system.",
         "min": 1,
         "max": "1",
@@ -9447,7 +9443,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
+              "http://hl7.org/fhir/StructureDefinition/Coverage"
             ]
           }
         ],
@@ -9461,7 +9457,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": false
       },
@@ -9833,7 +9828,7 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "strength": "extensible",
+          "strength": "preferred",
           "description": "RTPBC Error Codes",
           "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"
         }
@@ -10839,38 +10834,6 @@
         }
       },
       {
-        "id": "ClaimResponse.insurance",
-        "path": "ClaimResponse.insurance",
-        "min": 0,
-        "mustSupport": true
-      },
-      {
-        "id": "ClaimResponse.insurance.sequence",
-        "path": "ClaimResponse.insurance.sequence",
-        "mustSupport": true
-      },
-      {
-        "id": "ClaimResponse.insurance.focal",
-        "path": "ClaimResponse.insurance.focal",
-        "mustSupport": true
-      },
-      {
-        "id": "ClaimResponse.insurance.coverage",
-        "path": "ClaimResponse.insurance.coverage",
-        "label": "Pharmacy Coverage Reference",
-        "short": "Pharmacy Coverage Reference",
-        "definition": "Reference to a Coverage resource containing identification of the patient's pharmacy coverage.",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "ClaimResponse.error",
         "path": "ClaimResponse.error",
         "label": "Error Information",
@@ -10886,7 +10849,7 @@
         "definition": "A code identifying the reason that processing could not be completed.",
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
+          "strength": "preferred",
           "description": "RTPBC Error Codes",
           "valueSet": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"
         }

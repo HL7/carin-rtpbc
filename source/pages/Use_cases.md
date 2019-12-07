@@ -32,7 +32,7 @@ At a high level, the process looks like this...
 
 ***The discount pricing provider...***
 *  determines the price for the requested medication and pharmacy combination and other medication/pharmacy options
-*  determines whether a discount coupon is available for each option
+*  identifies discounts that apply, related to coupons or memberships
 
 ***The patient's app...***
 *  interprets and presents the information in an understandable way, possibly presenting insurance coverage alongside cash or discount pricing gathered from other sources

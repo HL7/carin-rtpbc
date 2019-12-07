@@ -41,16 +41,15 @@ The patient application submits a request containing...
 
 #### *Response content*
 The responder... 
-* determines pricing for the requested pharmacy and potentially other nearby pharmacies
+* determines pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships
 * returns the gathered information to requester
-* optionally returns coupon information when available
 
 <br>
 <br>
 
 
 ### Resources used in the exchange
-The consumer RTPBC request and response are accomplished using FHIR **Claim** and **ClaimResponse** resources in a "predetermination" (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage.
+The consumer RTPBC request and response are accomplished using FHIR **Claim** and **ClaimResponse** resources in a "predetermination" (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage. An OperationOutcome communicates exception situations where a ClaimResponse cannot be returned
 
 
 <div><img src="https://www.frankmckinney.com/carin-rtpbc/high-level-rtpbc-fhir-resource-mapping.png" alt="related information flows"></div>
@@ -65,10 +64,8 @@ Below are profiles constraining those resources for this purpose:
 * **MedicationRequest** - Conveys the needed prescription information (a subset of what is present in a full prescription)
 * **Practitioner** - Conveys the prescriber information needed for the exchange
 * **Organization *(Pharmacy)*** - Conveys pharmacy information needed for the exchange 
-* **Coverage** - *Request:* Conveys the pharmacy benefit coverage IDs needed for the exchange. *Response:* Optionally contains discount drug coupon information when the request is processed by a discount pricing source 
-* **OperationOutcome** - Communicates exception situations where a ClaimResponse cannot be returned 
+* **Coverage** - Conveys the patient's pharmacy benefit coverage IDs 
 
-The need for additional resource profiles may be identified as work progresses.
 
 
 [Next Page](Submission_method.html)

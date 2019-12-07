@@ -1,6 +1,3 @@
----
-title: StructureDefinition-carin-rtpbc-pharmacy-Organization-intro
-layout: default
-active: StructureDefinition-carin-rtpbc-pharmacy-Organization-intro
----
+This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process.
 
+<br><br>

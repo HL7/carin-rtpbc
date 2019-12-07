@@ -32,16 +32,24 @@ active: profiles
 </tr>
 <tr>
 <td><a href="StructureDefinition-carin-rtpbc-pharmacy-Organization.html">CarinRtpbcPharmacy</a></td>
-<td></td>
+<td>This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process.</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-carin-rtpbc-request-Claim.html">CarinRtpbcRequest</a></td>
-<td>This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process</td>
+<td>This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process.</td>
 </tr>
 <tr>
 <td><a href="StructureDefinition-carin-rtpbc-Coverage.html">CarinRtpbcRequestCoverageIdentifiers</a></td>
-<td>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process</td>
+<td>This profile constrains the Coverage resource for conveying the patient's pharmacy benefit information in an RTPBC request to an insurer.</td>
 </tr>
+
+<!-- Excluding coupon detail content from intial IG --------------------------------------
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-coupon-Coverage.html">CarinRtpbcCouponCoverage</a></td>
+<td>This profile constrains the Coverage resource for conveying information about a discount coupon that a patient can apply against the cost of a medication product. It can represent either an issued coupon or a key that can be used to obtain a coupon.</td>
+</tr>
+----------------------------------------------------------------------------------- -->
+
 <tr>
 <td><a href="StructureDefinition-carin-rtpbc-Patient.html">CarinRtpbcRequestPatientInfo</a></td>
 <td>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </td>

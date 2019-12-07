@@ -4,7 +4,7 @@
   <id value="CARIN-RTPBC"/>
   <meta>
     <versionId value="228"/>
-    <lastUpdated value="2019-11-15T09:01:57.000-06:00"/>
+    <lastUpdated value="2019-12-05T09:01:57.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/>
@@ -14,16 +14,19 @@
         </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc55\source\resources"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc55\framework"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc55\source\pages"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\pages"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\pages\extras"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
-  <version value="0.1.12"/>
+  <version value="0.1.13"/>
   <name value="CarinRtpbc"/>
   <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>
@@ -178,22 +181,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Claim/rtpbc-claim-with-contained-003"/>
-        <display value="rtpbc-claim-with-contained-003"/>
-      </reference>
-      <name value="rtpbc-claim-with-contained-003"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ClaimResponse/rtpbc-claim-response-with-contained-03"/>
-        <display value="rtpbc-claim-response-with-contained-03"/>
-      </reference>
-      <name value="rtpbc-claim-response-with-contained-03"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="Organization/rtpbc-organization-03m"/>
         <display value="My Mail Service Pharmacy"/>
       </reference>
@@ -218,42 +205,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-billing-unit-code-system"/>
-        <display value="CarinRtpbcBillingUnitCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcBillingUnitCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/carin-rtpbc-canadian-province-code-system"/>
-        <display value="CarinRtpbcCanadianProvinceCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcCanadianProvinceCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/carin-rtpbc-coupon-coverage-class-code-system"/>
-        <display value="CarinRtpbcCouponCoverageClassCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcCouponCoverageClassCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/carin-rtpbc-coverage-summary-code-system"/>
         <display value="CarinRtpbcCoverageSummaryCodeSystem"/>
       </reference>
       <name value="CarinRtpbcCoverageSummaryCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/carin-rtpbc-error-code-system"/>
-        <display value="CarinRtpbcErrorCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcErrorCodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -274,34 +229,18 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-example-provider-id-code-system"/>
-        <display value="CarinRtpbcExampleProviderIdCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcExampleProviderIdCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/carin-rtpbc-example-reject-code-system"/>
-        <display value="CarinRtpbcExampleRejectCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcExampleRejectCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/carin-rtpbc-pharmacy-type-code-system"/>
-        <display value="CarinRtpbcPharmacyTypeCodeSystem"/>
-      </reference>
-      <name value="CarinRtpbcPharmacyTypeCodeSystem"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="NamingSystem/carin-rtpbc-NamingSystem-canada-post-province-code"/>
         <display value="CarinRtpbcNamingSystemCanadaPostProvinceCode"/>
       </reference>
       <name value="CarinRtpbcNamingSystemCanadaPostProvinceCode"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/carin-rtpbc-canadian-province-code-system"/>
+        <display value="CarinRtpbcCanadianProvinceCodeSystem"/>
+      </reference>
+      <name value="CarinRtpbcCanadianProvinceCodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -366,14 +305,6 @@
         <display value="CarinRtbpcCoverageSummaryValueSet"/>
       </reference>
       <name value="CarinRtbpcCoverageSummaryValueSet"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/carin-rtpbc-expanded-coverage-class-value-set"/>
-        <display value="CarinRtbpcExpandedCoverageClassValueSet"/>
-      </reference>
-      <name value="CarinRtbpcExpandedCoverageClassValueSet"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

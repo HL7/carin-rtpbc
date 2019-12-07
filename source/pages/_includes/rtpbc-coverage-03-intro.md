@@ -5,6 +5,7 @@ In this example, the patient's insurance coverage identifiers are...
 * BIN: BIN001
 * PCN: PCN002
 * Group ID: GROUP0001
+* PBM Member ID: MEMBER000001
 
 <br/>
 

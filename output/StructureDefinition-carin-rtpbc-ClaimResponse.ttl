@@ -17,7 +17,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>\n          <div>This profile constrains the ClaimResponse resource to serve as the                                                                          <i>RTPBC Response</i> in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode                                                              </div>\n        </div>\n      </div>\n    </div>"
   ];
   fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.12"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponse"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response using ClaimResponse"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
@@ -9615,7 +9615,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -9801,7 +9800,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -9835,16 +9833,14 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 219;
        fhir:Element.id [ fhir:value "ClaimResponse.insurance.coverage" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.coverage" ];
-       fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
-       fhir:ElementDefinition.short [ fhir:value "Pharmacy Coverage Reference" ];
-       fhir:ElementDefinition.definition [ fhir:value "Reference to a Coverage resource containing identification of the patient's pharmacy coverage." ];
+       fhir:ElementDefinition.short [ fhir:value "Insurance information" ];
+       fhir:ElementDefinition.definition [ fhir:value "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient's actual coverage within the insurer's information system." ];
        fhir:ElementDefinition.requirements [ fhir:value "Required to allow the adjudicator to locate the correct policy and history within their information system." ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.max [ fhir:value "1" ];
@@ -9857,9 +9853,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers";
+           fhir:value "http://hl7.org/fhir/StructureDefinition/Coverage";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers>
+           fhir:link <http://hl7.org/fhir/StructureDefinition/Coverage>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -9874,7 +9870,6 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -10266,7 +10261,7 @@
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Error Codes" ];
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code";
@@ -11299,39 +11294,6 @@
        ]
      ], [
        fhir:index 49;
-       fhir:Element.id [ fhir:value "ClaimResponse.insurance" ];
-       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance" ];
-       fhir:ElementDefinition.min [ fhir:value "0"^^xsd:nonNegativeInteger ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 50;
-       fhir:Element.id [ fhir:value "ClaimResponse.insurance.sequence" ];
-       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.sequence" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 51;
-       fhir:Element.id [ fhir:value "ClaimResponse.insurance.focal" ];
-       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.focal" ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 52;
-       fhir:Element.id [ fhir:value "ClaimResponse.insurance.coverage" ];
-       fhir:ElementDefinition.path [ fhir:value "ClaimResponse.insurance.coverage" ];
-       fhir:ElementDefinition.label [ fhir:value "Pharmacy Coverage Reference" ];
-       fhir:ElementDefinition.short [ fhir:value "Pharmacy Coverage Reference" ];
-       fhir:ElementDefinition.definition [ fhir:value "Reference to a Coverage resource containing identification of the patient's pharmacy coverage." ];
-       fhir:ElementDefinition.type [
-         fhir:index 0;
-         fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
-         fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers";
-           fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers>
-         ]
-       ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
-     ], [
-       fhir:index 53;
        fhir:Element.id [ fhir:value "ClaimResponse.error" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error" ];
        fhir:ElementDefinition.label [ fhir:value "Error Information" ];
@@ -11339,7 +11301,7 @@
        fhir:ElementDefinition.comment [ fhir:value "Must be populated when .outcome = 'error'" ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 54;
+       fhir:index 50;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Reason" ];
@@ -11347,7 +11309,7 @@
        fhir:ElementDefinition.definition [ fhir:value "A code identifying the reason that processing could not be completed." ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "preferred" ];
          fhir:ElementDefinition.binding.description [ fhir:value "RTPBC Error Codes" ];
          fhir:ElementDefinition.binding.valueSet [
            fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code";
@@ -11355,19 +11317,19 @@
          ]
        ]
      ], [
-       fhir:index 55;
+       fhir:index 51;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 56;
+       fhir:index 52;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.system" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 57;
+       fhir:index 53;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.code" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Code" ];
@@ -11375,13 +11337,13 @@
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 58;
+       fhir:index 54;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.coding.display" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.coding.display" ];
        fhir:ElementDefinition.min [ fhir:value "1"^^xsd:nonNegativeInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 59;
+       fhir:index 55;
        fhir:Element.id [ fhir:value "ClaimResponse.error.code.text" ];
        fhir:ElementDefinition.path [ fhir:value "ClaimResponse.error.code.text" ];
        fhir:ElementDefinition.label [ fhir:value "Reject Message" ];

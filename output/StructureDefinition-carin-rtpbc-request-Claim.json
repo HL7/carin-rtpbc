@@ -10,7 +10,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>\n    </div>"
   },
   "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "name": "CarinRtpbcRequest",
   "title": "CARIN RTPBC Request using Claim",
   "status": "draft",

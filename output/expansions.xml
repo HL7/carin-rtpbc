@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="21746dcc-784a-4826-921b-083429d6b90a"/>
+  <id value="9ce26b63-da66-45e5-a708-e4a46e8a998d"/>
   <meta>
-    <lastUpdated value="2019-12-02T10:21:04.165-06:00"/>
+    <lastUpdated value="2019-12-06T18:17:52.044-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -19,7 +19,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has &gt;1000 codes in it. In order to keep the publication size manageable, only a selection (1000 codes) of the whole set of codes is shown</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on RxNorm version ??, http://terminology.hl7.org/CodeSystem/ndc-11 version 0.1.12</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on RxNorm version ??, http://terminology.hl7.org/CodeSystem/ndc-11 version 0.1.13</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -8075,7 +8075,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
-        <version value="0.1.12"/>
+        <version value="0.1.13"/>
         <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
         <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
         <status value="draft"/>
@@ -8085,8 +8085,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:31f15c78-0d77-45c9-891d-ddda37fc91cd"/>
-          <timestamp value="2019-12-02T10:21:33-06:00"/>
+          <identifier value="urn:uuid:bf06bb88-b27f-417b-9cef-4a77403578d2"/>
+          <timestamp value="2019-12-06T18:18:19-06:00"/>
           <total value="1004"/>
           <parameter>
             <name value="excludeNested"/>
@@ -8094,7 +8094,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://terminology.hl7.org/CodeSystem/ndc-11|0.1.12"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/ndc-11|0.1.13"/>
           </parameter>
           <parameter>
             <name value="limitedExpansion"/>
@@ -13133,224 +13133,6 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-billing-unit-value-set"/>
-        <meta>
-          <versionId value="2"/>
-          <lastUpdated value="2019-11-06T14:31:34.000-06:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 3 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ncpdp.org/unit-of-measure version 0.1.12</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html">
-                <code>http://ncpdp.org/unit-of-measure</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-unit-of-measure-GM"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-GM">GM</a>
-                </td>
-                <td>Gram</td>
-                <td>Quantity unit of measure for products billed as a number of grams</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-unit-of-measure-ML"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-ML">ML</a>
-                </td>
-                <td>Milliliter</td>
-                <td>Quantity unit of measure for products billed as a number of milliliters</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-unit-of-measure-EA"> </a>
-                  <a href="CodeSystem-carin-rtpbc-billing-unit-code-system.html#carin-rtpbc-billing-unit-code-system-EA">EA</a>
-                </td>
-                <td>Each</td>
-                <td>Quantity unit of measure for products billed as individual items (e.g., tablets)</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-        <version value="0.1.12"/>
-        <name value="CarinRtbpcBillingUnitValueSet"/>
-        <title value="CARIN RTPBC Billing Unit Value Set"/>
-        <status value="draft"/>
-        <date value="2019-12-02T10:21:04-06:00"/>
-        <description value="This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products"/>
-        <expansion>
-          <identifier value="urn:uuid:e4bda423-f344-4ecf-9c9e-bdd92c87b3cd"/>
-          <timestamp value="2019-12-02T10:21:35-06:00"/>
-          <total value="3"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://ncpdp.org/unit-of-measure|0.1.12"/>
-          </parameter>
-          <contains>
-            <system value="http://ncpdp.org/unit-of-measure"/>
-            <code value="GM"/>
-            <display value="Gram"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/unit-of-measure"/>
-            <code value="ML"/>
-            <display value="Milliliter"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/unit-of-measure"/>
-            <code value="EA"/>
-            <display value="Each"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-error-code-value-set"/>
-        <meta>
-          <versionId value="2"/>
-          <lastUpdated value="2019-11-17T14:30:00.000-06:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 5 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ncpdp.org/reject-code version 0.1.12</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html">
-                <code>http://ncpdp.org/reject-code</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-reject-code-N1"> </a>
-                  <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html#carin-rtpbc-example-reject-code-system-N1">N1</a>
-                </td>
-                <td>No Patient Match Found</td>
-                <td>No Patient Match Found</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-reject-code-21"> </a>
-                  <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html#carin-rtpbc-example-reject-code-system-21">21</a>
-                </td>
-                <td>M/I Product/Service ID</td>
-                <td>Missing or Invalid Product/Service ID</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-reject-code-598"> </a>
-                  <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html#carin-rtpbc-example-reject-code-system-598">598</a>
-                </td>
-                <td>More Than One Patient Found</td>
-                <td>More Than One Patient Found</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-reject-code-599"> </a>
-                  <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html#carin-rtpbc-example-reject-code-system-599">599</a>
-                </td>
-                <td>Cardholder ID Matched But Last Name Did Not</td>
-                <td>Cardholder ID Matched But Last Name Did Not</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-reject-code-600"> </a>
-                  <a href="CodeSystem-carin-rtpbc-example-reject-code-system.html#carin-rtpbc-example-reject-code-system-600">600</a>
-                </td>
-                <td>Coverage Outside Submitted Date Of Transaction</td>
-                <td>Coverage Outside Submitted Date Of Transaction</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
-        <version value="0.1.12"/>
-        <name value="CarinRtbpcErrorCodeValueSet"/>
-        <title value="CARIN RTPBC Error Code Value Set"/>
-        <status value="draft"/>
-        <date value="2019-12-02T10:21:04-06:00"/>
-        <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing."/>
-        <expansion>
-          <identifier value="urn:uuid:b837e7fd-b483-4ec4-8cc7-a3d192ca3e92"/>
-          <timestamp value="2019-12-02T10:21:35-06:00"/>
-          <total value="5"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://ncpdp.org/reject-code|0.1.12"/>
-          </parameter>
-          <contains>
-            <system value="http://ncpdp.org/reject-code"/>
-            <code value="N1"/>
-            <display value="No Patient Match Found"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/reject-code"/>
-            <code value="21"/>
-            <display value="M/I Product/Service ID"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/reject-code"/>
-            <code value="598"/>
-            <display value="More Than One Patient Found"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/reject-code"/>
-            <code value="599"/>
-            <display value="Cardholder ID Matched But Last Name Did Not"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/reject-code"/>
-            <code value="600"/>
-            <display value="Coverage Outside Submitted Date Of Transaction"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
     <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
     <resource>
       <ValueSet>
@@ -13399,7 +13181,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
-        <version value="0.1.12"/>
+        <version value="0.1.13"/>
         <name value="CarinRtpbcCountryCodeValueSet"/>
         <title value="CARIN RTPBC Pharmacy Type Value Setf"/>
         <status value="draft"/>
@@ -13407,8 +13189,8 @@
         <publisher value="CARIN Alliance"/>
         <description value="This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."/>
         <expansion>
-          <identifier value="urn:uuid:81030697-eed1-4fb7-9e54-44ed3ba455d3"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
+          <identifier value="urn:uuid:5fc854ba-4ec7-4757-a795-5d8f4919f878"/>
+          <timestamp value="2019-12-06T18:18:21-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13445,7 +13227,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary version 0.1.12</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary version 0.1.13</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary</code>
@@ -13515,15 +13297,15 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
-        <version value="0.1.12"/>
+        <version value="0.1.13"/>
         <name value="CarinRtbpcCoverageSummaryValueSet"/>
         <title value="CARIN RTPBC Coverage Summary Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:21:04-06:00"/>
+        <date value="2019-12-06T18:17:52-06:00"/>
         <description value="This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
         <expansion>
-          <identifier value="urn:uuid:11fa765a-d607-4df9-b0ca-edc8ae195369"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
+          <identifier value="urn:uuid:fd3405a7-f64b-4e1e-8513-f7b53205ca27"/>
+          <timestamp value="2019-12-06T18:18:21-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13531,7 +13313,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary|0.1.12"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary|0.1.13"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
@@ -13568,248 +13350,6 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-expanded-coverage-class-value-set"/>
-        <meta>
-          <versionId value="1"/>
-          <lastUpdated value="2019-10-29T21:40:15.000-05:00"/>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 13 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class version 0.1.12, http://terminology.hl7.org/CodeSystem/coverage-class version 4.0.1</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-group"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-group">group</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>Group</td>
-                <td>An employee group</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-subgroup"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-subgroup">subgroup</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>SubGroup</td>
-                <td>A sub-group of an employee group</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-plan"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-plan">plan</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>Plan</td>
-                <td>A specific suite of benefits.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-subplan"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-subplan">subplan</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>SubPlan</td>
-                <td>A subset of a specific suite of benefits.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-class"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-class">class</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>Class</td>
-                <td>A class of benefits.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-subclass"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-subclass">subclass</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>SubClass</td>
-                <td>A subset of a class of benefits.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-sequence"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-sequence">sequence</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>Sequence</td>
-                <td>A sequence number associated with a short-term continuance of the coverage.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-rxbin"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-rxbin">rxbin</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>RX BIN</td>
-                <td>Pharmacy benefit manager&#39;s Business Identification Number.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-rxpcn"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-rxpcn">rxpcn</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>RX PCN</td>
-                <td>A Pharmacy Benefit Manager specified Processor Control Number.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-rxid"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-rxid">rxid</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>RX Id</td>
-                <td>A Pharmacy Benefit Manager specified Member ID.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---terminology.hl7.org-CodeSystem-coverage-class-rxgroup"> </a>
-                  <a href="http://hl7.org/fhir/R4/codesystem-coverage-class.html#coverage-class-rxgroup">rxgroup</a>
-                </td>
-                <td>http://terminology.hl7.org/CodeSystem/coverage-class</td>
-                <td>RX Group</td>
-                <td>A Pharmacy Benefit Manager specified Group number.</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coupon-coverage-class-coupon"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html#carin-rtpbc-coupon-coverage-class-code-system-coupon">coupon</a>
-                </td>
-                <td>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class</td>
-                <td>Coupon</td>
-                <td>Discount coupon</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-coupon-coverage-class-coupon-request"> </a>
-                  <a href="CodeSystem-carin-rtpbc-coupon-coverage-class-code-system.html#carin-rtpbc-coupon-coverage-class-code-system-coupon-request">coupon-request</a>
-                </td>
-                <td>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class</td>
-                <td>Coupon Request</td>
-                <td>Key that can be used to obtain a discount coupon.</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class"/>
-        <version value="0.1.12"/>
-        <name value="CARINRTPBCExpandedCoverageClassValueSet"/>
-        <title value="CARIN RTPBC Expanded Coverage Class Value Set"/>
-        <status value="draft"/>
-        <date value="2019-10-29T00:00:00-05:00"/>
-        <publisher value="CARIN Alliance"/>
-        <description value="This value set adds concepts to the HL7-maintained coverage class value set related to discount coupons."/>
-        <expansion>
-          <identifier value="urn:uuid:c9d95360-a5bf-4a07-95b5-f88108eafd32"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
-          <total value="13"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://terminology.hl7.org/CodeSystem/coverage-class|4.0.1"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class|0.1.12"/>
-          </parameter>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="group"/>
-            <display value="Group"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="subgroup"/>
-            <display value="SubGroup"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="plan"/>
-            <display value="Plan"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="subplan"/>
-            <display value="SubPlan"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="class"/>
-            <display value="Class"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="subclass"/>
-            <display value="SubClass"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="sequence"/>
-            <display value="Sequence"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="rxbin"/>
-            <display value="RX BIN"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="rxpcn"/>
-            <display value="RX PCN"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="rxid"/>
-            <display value="RX Id"/>
-          </contains>
-          <contains>
-            <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
-            <code value="rxgroup"/>
-            <display value="RX Group"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
-            <code value="coupon"/>
-            <display value="Coupon"/>
-          </contains>
-          <contains>
-            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class"/>
-            <code value="coupon-request"/>
-            <display value="Coupon Request"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
     <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
     <resource>
       <ValueSet>
@@ -13821,8 +13361,8 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type version 0.1.12</p>
+            <p>This value set contains 10 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type version 0.1.13</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type</code>
@@ -13874,10 +13414,42 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-other"> </a>
-                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-other">other</a>
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-cash-price"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-cash-price">cash-price</a>
                 </td>
-                <td>Other</td>
+                <td>Full product cash price</td>
+                <td>Full product cash price before discounts or coupons</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-coupon-discount"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-coupon-discount">coupon-discount</a>
+                </td>
+                <td>Coupon discount amount</td>
+                <td>Coupon discount reducing the amount to be collected from the patient</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-member-discount"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-member-discount">member-discount</a>
+                </td>
+                <td>Member discount amount</td>
+                <td>Member discount reducing the amount to be collected from the patient</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-other-discount"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-other-discount">other-discount</a>
+                </td>
+                <td>Other discount amount</td>
+                <td>Other discount reducing the amount to be collected from the patient</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7.org-fhir-us-carin-CodeSystem-rtpbc-patient-pay-type-other-cost"> </a>
+                  <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html#carin-rtpbc-patient-pay-type-code-system-other-cost">other-cost</a>
+                </td>
+                <td>Other cost</td>
                 <td>Other amount to be collected from the patient</td>
               </tr>
               <tr>
@@ -13892,23 +13464,23 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
-        <version value="0.1.12"/>
+        <version value="0.1.13"/>
         <name value="CarinRtbpcPatientPayTypeValueSet"/>
         <title value="CARIN RTPBC Patient Pay Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-02T10:21:04-06:00"/>
+        <date value="2019-12-06T18:17:52-06:00"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:187bd866-7040-42ea-b5e8-ce0f86c9958d"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
-          <total value="6"/>
+          <identifier value="urn:uuid:f54ac506-8767-42a9-b7f8-5a201201c273"/>
+          <timestamp value="2019-12-06T18:18:21-06:00"/>
+          <total value="10"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type|0.1.12"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type|0.1.13"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
@@ -13932,143 +13504,33 @@
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-            <code value="other"/>
-            <display value="Other"/>
+            <code value="cash-price"/>
+            <display value="Full product cash price"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="coupon-discount"/>
+            <display value="Coupon discount amount"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="member-discount"/>
+            <display value="Member discount amount"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="other-discount"/>
+            <display value="Other discount amount"/>
+          </contains>
+          <contains>
+            <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
+            <code value="other-cost"/>
+            <display value="Other cost"/>
           </contains>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
             <code value="total"/>
             <display value="Total patient responsibility"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"/>
-    <resource>
-      <ValueSet>
-        <id value="carin-rtpbc-pharmacy-type-value-set"/>
-        <meta>
-          <versionId value="1"/>
-          <lastUpdated value="2019-11-19T18:00:00.000-06:00"/>
-          <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-          </security>
-          <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-          </security>
-        </meta>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 5 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://ncpdp.org/pharmacy-type version 0.1.12</p>
-            <p>All codes from system 
-              <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html">
-                <code>http://ncpdp.org/pharmacy-type</code>
-              </a>
-            </p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-                <td>
-                  <b>Definition</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-pharmacy-type-R"> </a>
-                  <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html#carin-rtpbc-pharmacy-type-code-system-R">R</a>
-                </td>
-                <td>Retail</td>
-                <td>Retail pharmacy</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-pharmacy-type-M"> </a>
-                  <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html#carin-rtpbc-pharmacy-type-code-system-M">M</a>
-                </td>
-                <td>Mail Order</td>
-                <td>Mail order pharmacy</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-pharmacy-type-S"> </a>
-                  <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html#carin-rtpbc-pharmacy-type-code-system-S">S</a>
-                </td>
-                <td>Specialty</td>
-                <td>Specialty pharmacy</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-pharmacy-type-L"> </a>
-                  <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html#carin-rtpbc-pharmacy-type-code-system-L">L</a>
-                </td>
-                <td>Long-Term Care</td>
-                <td>Long-term care pharmacy</td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---ncpdp.org-pharmacy-type-A"> </a>
-                  <a href="CodeSystem-carin-rtpbc-pharmacy-type-code-system.html#carin-rtpbc-pharmacy-type-code-system-A">A</a>
-                </td>
-                <td>Any</td>
-                <td>Pharmacy without restriction</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"/>
-        <version value="0.1.12"/>
-        <name value="CARINRTPBCPharmacyTypeValueSet"/>
-        <title value="CARIN RTPBC Pharmacy Type Value Set"/>
-        <status value="draft"/>
-        <date value="2019-11-20T00:00:00-06:00"/>
-        <publisher value="CARIN Alliance"/>
-        <expansion>
-          <identifier value="urn:uuid:aabd4fe8-e4fc-419c-a58c-99fe15944ccd"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
-          <total value="5"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://ncpdp.org/pharmacy-type|0.1.12"/>
-          </parameter>
-          <contains>
-            <system value="http://ncpdp.org/pharmacy-type"/>
-            <code value="R"/>
-            <display value="Retail"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/pharmacy-type"/>
-            <code value="M"/>
-            <display value="Mail Order"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/pharmacy-type"/>
-            <code value="S"/>
-            <display value="Specialty"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/pharmacy-type"/>
-            <code value="L"/>
-            <display value="Long-Term Care"/>
-          </contains>
-          <contains>
-            <system value="http://ncpdp.org/pharmacy-type"/>
-            <code value="A"/>
-            <display value="Any"/>
           </contains>
         </expansion>
       </ValueSet>
@@ -14083,7 +13545,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 75 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://canadapost.ca version 0.1.12</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://placeholder-for-canadapost.ca version 0.1.13</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -14597,118 +14059,118 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-AB"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-AB"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-AB">AB</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Alberta</td>
                 <td>Alberta</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-BC"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-BC"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-BC">BC</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>British Columbia</td>
                 <td>British Columbia</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-MB"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-MB"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-MB">MB</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Manitoba</td>
                 <td>Manitoba</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-NB"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-NB"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NB">NB</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>New Brunswick</td>
                 <td>New Brunswick</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-NL"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-NL"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NL">NL</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Newfoundland and Labrador</td>
                 <td>Newfoundland and Labrador</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-NS"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-NS"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NS">NS</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Nova Scotia</td>
                 <td>Nova Scotia</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-NT"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-NT"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NT">NT</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Northwest Territories</td>
                 <td>Northwest Territories</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-NU"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-NU"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-NU">NU</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Nunavut</td>
                 <td>Nunavut</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-ON"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-ON"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-ON">ON</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Ontario</td>
                 <td>Ontario</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-PE"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-PE"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-PE">PE</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Prince Edward Island</td>
                 <td>Prince Edward Island</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-QC"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-QC"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-QC">QC</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Quebec</td>
                 <td>Quebec</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-SK"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-SK"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-SK">SK</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Saskatchewan</td>
                 <td>Saskatchewan</td>
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---canadapost.ca-YT"> </a>
+                  <a name="http---placeholder-for-canadapost.ca-YT"> </a>
                   <a href="CodeSystem-carin-rtpbc-canadian-province-code-system.html#carin-rtpbc-canadian-province-code-system-YT">YT</a>
                 </td>
-                <td>http://canadapost.ca</td>
+                <td>http://placeholder-for-canadapost.ca</td>
                 <td>Yukon</td>
                 <td>Yukon</td>
               </tr>
@@ -14716,7 +14178,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code"/>
-        <version value="0.1.12"/>
+        <version value="0.1.13"/>
         <name value="CarinRtpbcStateAndProvinceCodeValueSet"/>
         <title value="CARIN RTPBC Two Letter State and Province Code Value Set"/>
         <status value="active"/>
@@ -14737,8 +14199,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:4f34f1cc-c324-4c64-92ca-d7d0cc975393"/>
-          <timestamp value="2019-12-02T10:21:36-06:00"/>
+          <identifier value="urn:uuid:ca157b2a-2028-426f-9064-dc8d4dd06187"/>
+          <timestamp value="2019-12-06T18:18:22-06:00"/>
           <total value="75"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14750,7 +14212,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://canadapost.ca|0.1.12"/>
+            <valueUri value="http://placeholder-for-canadapost.ca|0.1.13"/>
           </parameter>
           <contains>
             <system value="https://www.usps.com/"/>
@@ -15063,67 +14525,67 @@
             <display value="Armed Forces Pacific"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="AB"/>
             <display value="Alberta"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="BC"/>
             <display value="British Columbia"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="MB"/>
             <display value="Manitoba"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="NB"/>
             <display value="New Brunswick"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="NL"/>
             <display value="Newfoundland and Labrador"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="NS"/>
             <display value="Nova Scotia"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="NT"/>
             <display value="Northwest Territories"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="NU"/>
             <display value="Nunavut"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="ON"/>
             <display value="Ontario"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="PE"/>
             <display value="Prince Edward Island"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="QC"/>
             <display value="Quebec"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="SK"/>
             <display value="Saskatchewan"/>
           </contains>
           <contains>
-            <system value="http://canadapost.ca"/>
+            <system value="http://placeholder-for-canadapost.ca"/>
             <code value="YT"/>
             <display value="Yukon"/>
           </contains>

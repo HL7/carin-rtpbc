@@ -8,7 +8,7 @@
   <text>
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">
-      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process             </div>
+      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process      </div>
     </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers" />
@@ -38,8 +38,8 @@
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
-      <label value="Payer ID or Ref (TBD)" />
-      <short value="Payer ID or Ref (TBD)" />
+      <label value="Payer ID" />
+      <short value="Payer ID" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -51,12 +51,12 @@
           <type value="value" />
           <path value="type" />
         </discriminator>
-        <description value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." />
+        <description value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
         <ordered value="false" />
         <rules value="closed" />
       </slicing>
       <short value="Pharmacy coverage identifiers" />
-      <definition value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID. When returned by a discount pricing source, used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." />
+      <definition value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
       <comment value="Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners" />
       <min value="0" />
       <max value="4" />
@@ -66,8 +66,8 @@
       <path value="Coverage.class.type" />
       <binding>
         <strength value="extensible" />
-        <description value="Expanded Coverage Class Value Set (incl coupon concepts)" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class" />
+        <description value="Coverage Class Codes" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/coverage-class" />
       </binding>
     </element>
     <element id="Coverage.class:bin">
@@ -153,58 +153,12 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Coverage.class:coupon-request">
-      <path value="Coverage.class" />
-      <sliceName value="coupon-request" />
-      <label value="Coupon Request" />
-      <short value="Coupon Request" />
-      <comment value="A key used to request a discount coupon." />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.class:coupon-request.type">
-      <path value="Coverage.class.type" />
-      <min value="1" />
-      <max value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
-          <code value="coupon-request" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Coverage.class:coupon">
-      <path value="Coverage.class" />
-      <sliceName value="coupon" />
-      <label value="Coupon" />
-      <short value="Coupon" />
-      <comment value="A discount coupon." />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.class:coupon.type">
-      <path value="Coverage.class.type" />
-      <min value="1" />
-      <max value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
-          <code value="coupon" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
     <element id="Coverage.payor.identifier">
       <path value="Coverage.payor.identifier" />
       <label value="Payer ID" />
       <short value="Payer ID" />
       <definition value="Payer ID as defined in the participants' environment. E.g., an identifier defined in an eligibility service to represent the payer." />
       <mustSupport value="true" />
-    </element>
-    <element id="Coverage.payor.identifier.system">
-      <path value="Coverage.payor.identifier.system" />
-      <label value="Payer ID System (TBD)" />
-      <short value="Payer ID System (TBD)" />
-      <mustSupport value="false" />
     </element>
     <element id="Coverage.payor.identifier.value">
       <path value="Coverage.payor.identifier.value" />

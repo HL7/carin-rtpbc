@@ -275,7 +275,7 @@
       </concept>
     </include>
     <include>
-      <system value="http://canadapost.ca" />
+      <system value="http://placeholder-for-canadapost.ca" />
       <concept>
         <code value="AB" />
         <display value="Alberta" />
