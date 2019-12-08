@@ -21,7 +21,7 @@
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcPharmacy"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC PharmacyOrganization"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-08T00:58:11-06:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-08T01:19:02-06:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.description [ fhir:value "This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process."];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];

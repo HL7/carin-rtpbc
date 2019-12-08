@@ -14,7 +14,7 @@
   <name value="CarinRtbpcEventTypeValueSet"/>
   <title value="CARIN RTPBC Event Type Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-08T00:58:11-06:00"/>
+  <date value="2019-12-08T01:19:02-06:00"/>
   <description value="This value set contains event types used in RTPBC message headers."/>
   <compose>
     <include>
