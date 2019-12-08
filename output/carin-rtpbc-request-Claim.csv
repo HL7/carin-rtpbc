@@ -112,7 +112,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.use","","","Processing Mode",1,1,"Y","","Y","code {[]} {[]}
 ","Processing Mode","The mode of processing being requested of the payer/PBM","Value is always 'predetermination'","This element is required to understand the nature of the request for adjudication.","","","<valueCode xmlns=""http://hl7.org/fhir"" value=""predetermination""/>","","","","",,"required","The purpose of the Claim: predetermination, preauthorization, claim.","http://hl7.org/fhir/ValueSet/claim-use|4.0.1","",,,,"Claim.use",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.class"
-"Claim.patient","","","Request Patient Information",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info]]}
+"Claim.patient","","","Request Patient Information",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient]]}
 ","Request Patient Information","Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process","","The patient must be supplied to the insurer so that confirmation of coverage and service history may be considered as part of the authorization and/or adjudiction.","","","","","","","",,,,,"",,,,"Claim.patient",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.subject","FiveWs.subject[x]","FiveWs.subject"
 "Claim.patient.id","","","",0,1,"","","","string {[]} {[]}
@@ -258,7 +258,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.related.reference","","","",0,1,"","","","Identifier {[]} {[]}
 ","File or case reference","An alternate organizational reference to the case or file to which this particular claim pertains.","For example, Property/Casualty insurer claim # or Workers Compensation case # .","In cases where an event-triggered claim is being submitted to an insurer which requires a reference number to be specified on all exchanges.","","","","","","","",,,,,"",,,,"Claim.related.reference",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.prescription","","","Prescription Reference",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info]]}
+"Claim.prescription","","","Prescription Reference",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest]]}
 ","Prescription Reference","Reference to the pertinent prescription information in a MedicationRequest resource.","","Required to authorize the dispensing of controlled substances and devices.","","","","","","","",,,,,"",,,,"Claim.prescription",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.prescription.id","","","",0,1,"","","","string {[]} {[]}
@@ -337,7 +337,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.careTeam.sequence","","","",1,1,"Y","","","positiveInt {[]} {[]}
 ","Order of care team","A number to uniquely identify care team entries.","","Necessary to maintain the order of the care team and provide a mechanism to link individuals to claim details.","","","<valueInteger xmlns=""http://hl7.org/fhir"" value=""1""/>","","","","",,,,,"",,,,"Claim.careTeam.sequence",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
-"Claim.careTeam.provider","","","Prescriber",1,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info]]}
+"Claim.careTeam.provider","","","Prescriber",1,1,"Y","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner]]}
 ","Prescriber","Prescriber of the item being submitted","","Often a regulatory requirement to specify the responsible provider.","","","","","","","",,,,,"",,,,"Claim.careTeam.provider",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","FiveWs.actor"
 "Claim.careTeam.provider.id","","","",0,1,"","","","string {[]} {[]}
@@ -498,7 +498,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Claim.insurance.identifier","","","",0,1,"","","","Identifier {[]} {[]}
 ","Pre-assigned Claim number","The business identifier to be used when the claim is sent for adjudication against this insurance policy.","Only required in jurisdictions where insurers, rather than the provider, are required to send claims to  insurers that appear after them in the list. This element is not required when 'subrogation=true'.","This will be the claim number should it be necessary to create this claim in the future. This is provided so that payors may forward claims to other payors in the Coordination of Benefit for adjudication rather than the provider being required to initiate each adjudication.","","","","","","","",,,,,"",,,,"Claim.insurance.identifier",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.identifier","FiveWs.identifier"
-"Claim.insurance.coverage","","","Pharmacy Coverage Reference",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers]]}
+"Claim.insurance.coverage","","","Pharmacy Coverage Reference",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage]]}
 ","Pharmacy Coverage Reference","Reference to a Coverage resource containing identification of the patient's pharmacy coverage","","Required to allow the adjudicator to locate the correct policy and history within their information system.","","","","","","","",,,,,"",,,,"Claim.insurance.coverage",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Claim.insurance.coverage.id","","","",0,1,"","","","string {[]} {[]}

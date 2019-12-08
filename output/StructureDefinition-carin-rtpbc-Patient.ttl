@@ -5,9 +5,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Patient> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-patient> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "carin-rtpbc-Patient"];
+  fhir:Resource.id [ fhir:value "carin-rtpbc-patient"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "22" ];
      fhir:Meta.lastUpdated [ fhir:value "2019-11-20T17:30:00.000-06:00"^^xsd:dateTime ]
@@ -16,10 +16,10 @@
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>\n          <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>\n        </div>\n      </div>\n    </div>"
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
-  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPatientInfo"];
-  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Patient Info"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.14"];
+  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcPatient"];
+  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Patient"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2019-10-03T00:00:00-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
@@ -3561,9 +3561,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Patient.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-patient.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Patient.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-patient.ttl> .
 
 # -------------------------------------------------------------------------------------
 

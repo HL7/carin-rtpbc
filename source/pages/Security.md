@@ -6,15 +6,7 @@ active: Security
 
 [Previous Page](Submission_method.html)
 
-### Authentication between client and server applications
-*Note: This section will be fleshed out based on input from stakeholders*
+Refer to the [US Core Implementation Guide’s General Security Considerations page](http://hl7.org/fhir/us/core/security.html) for a discussion of security conformance requirements.
 
-<br>
-
-This implementation guide does not describe the specifics of authentication methods used by parties performing real-time pharmacy benefit checks.
-
-Preliminarily:
-* Stakeholders have indicated an intent to base authentication on [SMART on FHIR](http://hl7.org/fhir/smart-app-launch/)
-* It is expected that stakeholders will establish client ID/credentials w/each discount card provider
-
+<br><br>
 [Next Page](Consumer_vs_provider_RTPBC.html)

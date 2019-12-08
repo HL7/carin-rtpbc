@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="carin-rtpbc-request-Claim"/>
+  <id value="carin-rtpbc-request-claim"/>
   <meta>
     <versionId value="73"/>
     <lastUpdated value="2019-11-06T14:33:12.000-06:00"/>
@@ -11,14 +11,14 @@
       <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request"/>
-  <version value="0.1.13"/>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request"/>
+  <version value="0.1.14"/>
   <name value="CarinRtpbcRequest"/>
-  <title value="CARIN RTPBC Request using Claim"/>
+  <title value="CARIN RTPBC Request Using Claim"/>
   <status value="draft"/>
   <date value="2019-10-03T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>
-  <description value="This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process"/>
+  <description value="This profile constrains the Claim resource so that it can serve as the RTPBC Request in the consumer real-time pharmacy benefit check process"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>
@@ -1355,7 +1355,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -2720,7 +2720,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -3420,7 +3420,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -4933,7 +4933,7 @@
       </base>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"/>
       </type>
       <constraint>
         <key value="ele-1"/>
@@ -7982,7 +7982,7 @@
       <definition value="Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -8063,7 +8063,7 @@
       <min value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"/>
       </type>
     </element>
     <element id="Claim.prescription.reference">
@@ -8093,7 +8093,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"/>
       </type>
       <mustSupport value="true"/>
     </element>
@@ -8135,7 +8135,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"/>
       </type>
       <mustSupport value="true"/>
     </element>

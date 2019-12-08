@@ -4,7 +4,7 @@
   <id value="hl7.fhir.us.carin-rtpbc"/>
   <meta>
     <versionId value="228"/>
-    <lastUpdated value="2019-12-05T09:01:57.000-06:00"/>
+    <lastUpdated value="2019-12-06T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.
@@ -13,11 +13,11 @@
         </div>
   </text>
   <url value="http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc"/>
-  <version value="0.1.13"/>
+  <version value="0.1.14"/>
   <name value="CarinRtpbc"/>
   <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>
-  <date value="2019-12-06T18:17:52-06:00"/>
+  <date value="2019-12-08T00:58:11-06:00"/>
   <publisher value="HL7 International - Pharmacy"/>
   <contact>
     <name value="HL7 Pharmacy Workgroup"/>
@@ -43,10 +43,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-ClaimResponse.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-response-claimresponse.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-ClaimResponse"/>
+        <reference value="StructureDefinition/carin-rtpbc-response-claimresponse"/>
         <display value="CarinRtpbcResponse"/>
       </reference>
       <name value="CarinRtpbcResponse"/>
@@ -57,13 +57,13 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-Patient.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-patient.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Patient"/>
-        <display value="CarinRtpbcRequestPatientInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-patient"/>
+        <display value="CarinRtpbcPatient"/>
       </reference>
-      <name value="CarinRtpbcRequestPatientInfo"/>
+      <name value="CarinRtpbcPatient"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -71,13 +71,13 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-Practitioner.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-practitioner.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Practitioner"/>
-        <display value="CarinRtpbcRequestPrescriberInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-practitioner"/>
+        <display value="CarinRtpbcPractitioner"/>
       </reference>
-      <name value="CarinRtpbcRequestPrescriberInfo"/>
+      <name value="CarinRtpbcPractitioner"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -85,13 +85,13 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-OperationOutcome.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-medicationrequest.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-OperationOutcome"/>
-        <display value="CarinRtpbcExceptionResponse"/>
+        <reference value="StructureDefinition/carin-rtpbc-medicationrequest"/>
+        <display value="CarinRtpbcMedicationRequest"/>
       </reference>
-      <name value="CarinRtpbcExceptionResponse"/>
+      <name value="CarinRtpbcMedicationRequest"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -99,13 +99,13 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-MedicationRequest.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-coverage.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-MedicationRequest"/>
-        <display value="CarinRtpbcRequestPrescriptionInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-coverage"/>
+        <display value="CarinRtpbcCoverage"/>
       </reference>
-      <name value="CarinRtpbcRequestPrescriptionInfo"/>
+      <name value="CarinRtpbcCoverage"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -113,24 +113,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-Coverage.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-request-claim.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Coverage"/>
-        <display value="CarinRtpbcRequestCoverageIdentifiers"/>
-      </reference>
-      <name value="CarinRtpbcRequestCoverageIdentifiers"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-request-Claim.html"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/carin-rtpbc-request-Claim"/>
+        <reference value="StructureDefinition/carin-rtpbc-request-claim"/>
         <display value="CarinRtpbcRequest"/>
       </reference>
       <name value="CarinRtpbcRequest"/>
@@ -141,10 +127,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="StructureDefinition-carin-rtpbc-pharmacy-Organization.html"/>
+        <valueUri value="StructureDefinition-carin-rtpbc-pharmacy-organization.html"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-pharmacy-Organization"/>
+        <reference value="StructureDefinition/carin-rtpbc-pharmacy-organization"/>
         <display value="CarinRtpbcPharmacy"/>
       </reference>
       <name value="CarinRtpbcPharmacy"/>
@@ -323,13 +309,27 @@
         <valueString value="CodeSystem"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CodeSystem-carin-rtpbc-example-ndc-11-code-system.html"/>
+        <valueUri value="CodeSystem-carin-rtpbc-event-type-code-system.html"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-example-ndc-11-code-system"/>
-        <display value="CarinRtpbcExampleNdc11CodeSystem"/>
+        <reference value="CodeSystem/carin-rtpbc-event-type-code-system"/>
+        <display value="CarinRtpbcEventTypeCodeSystem"/>
       </reference>
-      <name value="CarinRtpbcExampleNdc11CodeSystem"/>
+      <name value="CarinRtpbcEventTypeCodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CodeSystem-placeholder-ndc-11-code-system.html"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/placeholder-ndc-11-code-system"/>
+        <display value="PlaceholderNdc11CodeSystem"/>
+      </reference>
+      <name value="PlaceholderNdc11CodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -365,13 +365,13 @@
         <valueString value="CodeSystem"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-        <valueUri value="CodeSystem-carin-rtpbc-canadian-province-code-system.html"/>
+        <valueUri value="CodeSystem-placeholder-canadian-province-code-system.html"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-canadian-province-code-system"/>
-        <display value="CarinRtpbcCanadianProvinceCodeSystem"/>
+        <reference value="CodeSystem/placeholder-canadian-province-code-system"/>
+        <display value="PlaceholderCanadianProvinceCodeSystem"/>
       </reference>
-      <name value="CarinRtpbcCanadianProvinceCodeSystem"/>
+      <name value="PlaceholderCanadianProvinceCodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -456,6 +456,20 @@
         <display value="CarinRtpbcErrorCodeValueSet"/>
       </reference>
       <name value="CarinRtpbcErrorCodeValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="ValueSet-carin-rtpbc-event-type-value-set.html"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-event-type-value-set"/>
+        <display value="CarinRtbpcEventTypeValueSet"/>
+      </reference>
+      <name value="CarinRtbpcEventTypeValueSet"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -586,6 +600,20 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="CapabilityStatement-carin-rtpbc-responder-capabilitystatement.html"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/carin-rtpbc-responder-capabilitystatement"/>
+        <display value="CarinRtpbcResponderCapabilityStatement"/>
+      </reference>
+      <name value="CarinRtpbcResponderCapabilityStatement"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="MessageDefinition"/>
       </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -596,6 +624,62 @@
         <display value="CarinRtpbcResponseMessageDefinition"/>
       </reference>
       <name value="CarinRtpbcResponseMessageDefinition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-carin-rtpbc-request-messageheader.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-request-messageheader"/>
+        <display value="CarinRtpbcRequestMessageHeader"/>
+      </reference>
+      <name value="CarinRtpbcRequestMessageHeader"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-carin-rtpbc-response-messageheader.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-response-messageheader"/>
+        <display value="CarinRtpbcResponseMessageHeader"/>
+      </reference>
+      <name value="CarinRtpbcResponseMessageHeader"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-carin-rtpbc-request-bundle.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-request-bundle"/>
+        <display value="CarinRtpbcRequestBundle"/>
+      </reference>
+      <name value="CarinRtpbcRequestBundle"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+        <valueUri value="StructureDefinition-carin-rtpbc-response-bundle.html"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-response-bundle"/>
+        <display value="CarinRtpbcResponseBundle"/>
+      </reference>
+      <name value="CarinRtpbcResponseBundle"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

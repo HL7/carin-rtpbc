@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="carin-rtpbc-MedicationRequest" />
+  <id value="carin-rtpbc-medicationrequest" />
   <meta>
     <versionId value="36" />
     <lastUpdated value="2019-11-08T11:48:53.000-05:00" />
@@ -13,10 +13,10 @@
       </div>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info" />
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
   <version value="0.0.1" />
-  <name value="CarinRtpbcRequestPrescriptionInfo" />
-  <title value="CARIN RTPBC Request Prescription Information" />
+  <name value="CarinRtpbcMedicationRequest" />
+  <title value="CARIN RTPBC Medication Request" />
   <status value="draft" />
   <date value="2019-10-15" />
   <publisher value="CARIN Alliance" />
@@ -105,7 +105,7 @@
       <definition value="The patient for whom this medication is being requested" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info" />
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -126,7 +126,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info" />
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner" />
       </type>
       <mustSupport value="true" />
     </element>

@@ -11,11 +11,11 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>http://ncpdp.org/unit-of-measure</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>GM</td><td>Gram</td><td/></tr><tr><td>ML</td><td>Milliliter</td><td/></tr><tr><td>EA</td><td>Each</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit"/>
-  <version value="0.1.13"/>
+  <version value="0.1.14"/>
   <name value="CarinRtbpcBillingUnitValueSet"/>
   <title value="CARIN RTPBC Billing Unit Value Set"/>
   <status value="draft"/>
-  <date value="2019-12-06T18:17:52-06:00"/>
+  <date value="2019-12-08T00:58:11-06:00"/>
   <description value="This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products"/>
   <compose>
     <include>

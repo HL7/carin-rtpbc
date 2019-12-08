@@ -3,7 +3,7 @@
   "id" : "CARIN-RTPBC",
   "meta" : {
     "versionId" : "228",
-    "lastUpdated" : "2019-12-05T09:01:57.000-06:00"
+    "lastUpdated" : "2019-12-06T23:00:00.000-06:00"
   },
   "text" : {
     "status" : "additional",
@@ -11,22 +11,22 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc57\\source\\pages\\extras"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
-  "version" : "0.1.13",
+  "version" : "0.1.14",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",
@@ -53,7 +53,7 @@
   "definition" : {
     "resource" : [{
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-ClaimResponse",
+        "reference" : "StructureDefinition/carin-rtpbc-response-claimresponse",
         "display" : "CarinRtpbcResponse"
       },
       "name" : "CarinRtpbcResponse",
@@ -61,47 +61,39 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-Patient",
-        "display" : "CarinRtpbcRequestPatientInfo"
+        "reference" : "StructureDefinition/carin-rtpbc-patient",
+        "display" : "CarinRtpbcPatient"
       },
-      "name" : "CarinRtpbcRequestPatientInfo",
+      "name" : "CarinRtpbcPatient",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-Practitioner",
-        "display" : "CarinRtpbcRequestPrescriberInfo"
+        "reference" : "StructureDefinition/carin-rtpbc-practitioner",
+        "display" : "CarinRtpbcPractitioner"
       },
-      "name" : "CarinRtpbcRequestPrescriberInfo",
+      "name" : "CarinRtpbcPractitioner",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-OperationOutcome",
-        "display" : "CarinRtpbcExceptionResponse"
+        "reference" : "StructureDefinition/carin-rtpbc-medicationrequest",
+        "display" : "CarinRtpbcMedicationRequest"
       },
-      "name" : "CarinRtpbcExceptionResponse",
+      "name" : "CarinRtpbcMedicationRequest",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-MedicationRequest",
-        "display" : "CarinRtpbcRequestPrescriptionInfo"
+        "reference" : "StructureDefinition/carin-rtpbc-coverage",
+        "display" : "CarinRtpbcCoverage"
       },
-      "name" : "CarinRtpbcRequestPrescriptionInfo",
+      "name" : "CarinRtpbcCoverage",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-Coverage",
-        "display" : "CarinRtpbcRequestCoverageIdentifiers"
-      },
-      "name" : "CarinRtpbcRequestCoverageIdentifiers",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-request-Claim",
+        "reference" : "StructureDefinition/carin-rtpbc-request-claim",
         "display" : "CarinRtpbcRequest"
       },
       "name" : "CarinRtpbcRequest",
@@ -109,7 +101,7 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/carin-rtpbc-pharmacy-Organization",
+        "reference" : "StructureDefinition/carin-rtpbc-pharmacy-organization",
         "display" : "CarinRtpbcPharmacy"
       },
       "name" : "CarinRtpbcPharmacy",
@@ -213,10 +205,18 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-example-ndc-11-code-system",
-        "display" : "CarinRtpbcExampleNdc11CodeSystem"
+        "reference" : "CodeSystem/carin-rtpbc-event-type-code-system",
+        "display" : "CarinRtpbcEventTypeCodeSystem"
       },
-      "name" : "CarinRtpbcExampleNdc11CodeSystem",
+      "name" : "CarinRtpbcEventTypeCodeSystem",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/placeholder-ndc-11-code-system",
+        "display" : "PlaceholderNdc11CodeSystem"
+      },
+      "name" : "PlaceholderNdc11CodeSystem",
       "exampleBoolean" : false
     },
     {
@@ -237,10 +237,10 @@
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/carin-rtpbc-canadian-province-code-system",
-        "display" : "CarinRtpbcCanadianProvinceCodeSystem"
+        "reference" : "CodeSystem/placeholder-canadian-province-code-system",
+        "display" : "PlaceholderCanadianProvinceCodeSystem"
       },
-      "name" : "CarinRtpbcCanadianProvinceCodeSystem",
+      "name" : "PlaceholderCanadianProvinceCodeSystem",
       "exampleBoolean" : false
     },
     {
@@ -289,6 +289,14 @@
         "display" : "CarinRtpbcErrorCodeValueSet"
       },
       "name" : "CarinRtpbcErrorCodeValueSet",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/carin-rtpbc-event-type-value-set",
+        "display" : "CarinRtbpcEventTypeValueSet"
+      },
+      "name" : "CarinRtbpcEventTypeValueSet",
       "exampleBoolean" : false
     },
     {
@@ -365,10 +373,50 @@
     },
     {
       "reference" : {
+        "reference" : "CapabilityStatement/carin-rtpbc-responder-capabilitystatement",
+        "display" : "CarinRtpbcResponderCapabilityStatement"
+      },
+      "name" : "CarinRtpbcResponderCapabilityStatement",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
         "reference" : "MessageDefinition/carin-rtpbc-response-message-definition",
         "display" : "CarinRtpbcResponseMessageDefinition"
       },
       "name" : "CarinRtpbcResponseMessageDefinition",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/carin-rtpbc-request-messageheader",
+        "display" : "CarinRtpbcRequestMessageHeader"
+      },
+      "name" : "CarinRtpbcRequestMessageHeader",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/carin-rtpbc-response-messageheader",
+        "display" : "CarinRtpbcResponseMessageHeader"
+      },
+      "name" : "CarinRtpbcResponseMessageHeader",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/carin-rtpbc-request-bundle",
+        "display" : "CarinRtpbcRequestBundle"
+      },
+      "name" : "CarinRtpbcRequestBundle",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/carin-rtpbc-response-bundle",
+        "display" : "CarinRtpbcResponseBundle"
+      },
+      "name" : "CarinRtpbcResponseBundle",
       "exampleBoolean" : false
     }],
     "page" : {

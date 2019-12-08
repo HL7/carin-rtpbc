@@ -31,7 +31,7 @@
   <category value="notification" />
   <focus>
     <code value="Claim" />
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request" />
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
     <min value="1" />
     <max value="1" />
   </focus>

@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "carin-rtpbc-MedicationRequest",
+  "id": "carin-rtpbc-medicationrequest",
   "meta": {
     "versionId": "36",
     "lastUpdated": "2019-11-08T10:48:53.000-06:00"
@@ -9,10 +9,10 @@
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                 </div>\n      </div>\n    </div>"
   },
-  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info",
-  "version": "0.1.13",
-  "name": "CarinRtpbcRequestPrescriptionInfo",
-  "title": "CARIN RTPBC Request Prescription Information",
+  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest",
+  "version": "0.1.14",
+  "name": "CarinRtpbcMedicationRequest",
+  "title": "CARIN RTPBC Medication Request",
   "status": "draft",
   "date": "2019-10-15T00:00:00-05:00",
   "publisher": "CARIN Alliance",
@@ -1469,7 +1469,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"
             ]
           }
         ],
@@ -1949,7 +1949,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"
             ]
           }
         ],
@@ -5163,7 +5163,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"
             ]
           }
         ],
@@ -5190,7 +5190,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"
             ]
           }
         ],

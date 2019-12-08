@@ -1,0 +1,48 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-event-type-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-event-type-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "5" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-02T19:00:00.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Event Type Code System</h2><div><p>This code system defines event types used in RTPBC message headers</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">rtpbc-request<a name=\"carin-rtpbc-event-type-code-system-rtpbc-request\"> </a></td><td>RTPBC Request</td><td>Real-time Pharmacy Benefit Check (RTPBC) request</td></tr><tr><td style=\"white-space:nowrap\">rtpbc-response<a name=\"carin-rtpbc-event-type-code-system-rtpbc-response\"> </a></td><td>RTPBC Response</td><td>Real-time Pharmacy Benefit Check (RTPBC) response</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type"];
+  fhir:CodeSystem.version [ fhir:value "0.1.14"];
+  fhir:CodeSystem.name [ fhir:value "CarinRtpbcEventTypeCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Event Type Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-10-31T00:00:00-05:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This code system defines event types used in RTPBC message headers"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "rtpbc-request" ];
+     fhir:CodeSystem.concept.display [ fhir:value "RTPBC Request" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Real-time Pharmacy Benefit Check (RTPBC) request" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "rtpbc-response" ];
+     fhir:CodeSystem.concept.display [ fhir:value "RTPBC Response" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Real-time Pharmacy Benefit Check (RTPBC) response" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-event-type-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CodeSystem/carin-rtpbc-event-type-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

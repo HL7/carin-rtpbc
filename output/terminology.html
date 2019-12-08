@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.13). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.14). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -244,6 +244,7 @@ can only resize using html  or css ;-(
   <li><a href="ValueSet-carin-rtpbc-country-code-value-set.html">CARIN RTPBC Country Code Value Set</a></li>
   <li><a href="ValueSet-carin-rtpbc-coverage-summary-value-set.html">CARIN RTPBC Coverage Summary Value Set</a></li>
   <li><a href="ValueSet-carin-rtpbc-error-code-value-set.html">CARIN RTPBC Error Code Value Set</a></li>
+  <li><a href="ValueSet-carin-rtpbc-event-type-value-set.html">CARIN RTPBC Event Type Value Set</a></li>
   <li><a href="ValueSet-carin-rtpbc-patient-pay-type-value-set.html">CARIN RTPBC Patient Pay Type Value Set</a></li>
   <li><a href="ValueSet-carin-rtpbc-pharmacy-type-value-set.html">CARIN RTPBC Pharmacy Type Value Set</a></li>
   <li><a href="ValueSet-carin-rtpbc-prescribable-product-code-value-set.html">CARIN RTPBC Prescribable Product Code Value Set</a></li>
@@ -261,7 +262,15 @@ can only resize using html  or css ;-(
 <p>The following code systems define consumer-friendly insurance coverage concepts for use in RTPBC responses:</p>
 <ul>
   <li><a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html">CARIN RTPBC Coverage Summary Code System</a></li>
+  <li><a href="CodeSystem-carin-rtpbc-event-type-code-system.html">CARIN RTPBC Event Type Code System</a></li>
   <li><a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html">CARIN RTPBC Patient Pay Type Code System</a></li>
+</ul>
+
+<h5 id="placeholder-code-systems"><strong>Placeholder code systems</strong></h5>
+<p>The CodeSystem resources below are intended to serve as temporary placeholders in this guide for proposed HL7/FHIR code system URLs.</p>
+<ul>
+  <li><a href="CodeSystem-placeholder-ndc-11-code-system.html">Placeholder NDC-11 Code System</a> <em>HL7/FHIR URL is in process of being established. Preliminary: http://terminology.hl7.org/CodeSystem/ndc-11</em></li>
+  <li><a href="CodeSystem-placeholder-canadian-province-code-system.html">Placeholder Canadian Province Code System</a> <em>proposed</em></li>
 </ul>
 
 <!--  Coupon-related content is excluded from the initial IG --------------------
@@ -270,15 +279,14 @@ can only resize using html  or css ;-(
 
 <p><br /></p>
 
-<h5 id="existing-code-and-identifier-systems-maintained-by-other-entities-which-lack-hl7fhir-system-uris"><strong>Existing code and identifier systems maintained by other entities… which lack HL7/FHIR system URIs</strong></h5>
-<p><em>Note: The NDC-11 CodeSystem resource below is intended to serve as a temporary placeholder in this guide for an HL7/FHIR code system URL that is in the process of being established.</em></p>
+<h3 id="naming-systems">Naming Systems</h3>
 
+<h5 id="licensed-code-and-identifier-systems-maintained-by-the-national-council-for-prescription-drug-programs-ncpdp"><strong>Licensed code and identifier systems maintained by the National Council for Prescription Drug Programs (NCPDP)</strong></h5>
 <ul>
-  <li><a href="CodeSystem-carin-rtpbc-example-ndc-11-code-system.html">CARIN RTPBC Placeholder NDC-11 Code System</a> <em>HL7/FHIR URL is in process of being established. Preliminary: http://terminology.hl7.org/CodeSystem/ndc-11</em></li>
-  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-provider-id.html">NCPDP Provider ID (NamingSystem)</a></li>
-  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-reject-code.html">NCPDP Reject Code (511-FB) (NamingSystem)</a></li>
-  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-unit-of-measure.html">NCPDP Unit of Measure (600-28) (NamingSystem)</a></li>
-  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-pharmacy-type.html">NCPDP Pharmacy Type (955-HR) (NamingSystem)</a></li>
+  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-provider-id.html">NCPDP Provider ID</a></li>
+  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-reject-code.html">NCPDP Reject Code (511-FB)</a></li>
+  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-unit-of-measure.html">NCPDP Unit of Measure (600-28)</a></li>
+  <li><a href="NamingSystem-carin-rtpbc-NamingSystem-ncpdp-pharmacy-type.html">NCPDP Pharmacy Type (955-HR)</a></li>
 </ul>
 
 <p><br /><br /></p>
@@ -313,7 +321,7 @@ can only resize using html  or css ;-(
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.13  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 6, 2019 18:17-0600.
+      CarinRtpbc Version: 0.1.14  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Sun, Dec 8, 2019 00:58-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

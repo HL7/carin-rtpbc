@@ -6,8 +6,8 @@ active: Use cases
 
 
 The goal of the consumer-focused real-time pharmacy benefit check (consumer RTPBC) is to inform a patient of the cost and insurance coverage related to medications they've been prescribed. This involves two key aspects:
-* Enable the patient to find out how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
-* Help the patient discover discount pricing available for the medication. 
+* **Use case 1:** Enable the patient to find out how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
+* **Use case 2:** Help the patient discover discount pricing available for the medication. 
 
 <br>
 

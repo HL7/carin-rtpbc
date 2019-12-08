@@ -3,15 +3,15 @@
 <MessageDefinition xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-response-message-definition"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-response-message-definition</p><p><b>url</b>: <a href="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response">http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response</a></p><p><b>version</b>: 0.1.13</p><p><b>name</b>: RtpbcResponse</p><p><b>title</b>: Real-time pharmacy benefit check response</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: Nov 17, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>description</b>: Response to a request for patient cost and coverage information for a prescribed medication</p><p><b>jurisdiction</b>: United States of America (the) <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America (the)'})</span></p><p><b>purpose</b>: Returns patient cost and coverage information for a prescribed medication</p><p><b>event</b>: rtpbc-request (Details: http://example.org/fhir/message-events code rtpbc-request = 'rtpbc-request', stated as 'null')</p><p><b>category</b>: notification</p><h3>Focus</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Profile</b></td><td><b>Min</b></td><td><b>Max</b></td></tr><tr><td>*</td><td>ClaimResponse</td><td><a href="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response">http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response</a></td><td>1</td><td>1</td></tr></table></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-response-message-definition</p><p><b>url</b>: <a href="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response">http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response</a></p><p><b>version</b>: 0.1.14</p><p><b>name</b>: RtpbcResponse</p><p><b>title</b>: Real-time pharmacy benefit check response</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: Oct 17, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>description</b>: Response to a request for patient cost and coverage information for a prescribed medication</p><p><b>jurisdiction</b>: United States of America (the) <span style="background: LightGoldenRodYellow">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United States of America (the)'})</span></p><p><b>purpose</b>: Returns patient cost and coverage information for a prescribed medication</p><p><b>event</b>: rtpbc-request (Details: http://example.org/fhir/message-events code rtpbc-request = 'rtpbc-request', stated as 'null')</p><p><b>category</b>: notification</p><h3>Focus</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Profile</b></td><td><b>Min</b></td><td><b>Max</b></td></tr><tr><td>*</td><td>ClaimResponse</td><td><a href="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response">http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response</a></td><td>1</td><td>1</td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response"/>
-  <version value="0.1.13"/>
+  <version value="0.1.14"/>
   <name value="RtpbcResponse"/>
   <title value="Real-time pharmacy benefit check response"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2019-11-17T00:00:00-06:00"/>
+  <date value="2019-10-17T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>
   <contact>
     <telecom>
@@ -35,7 +35,7 @@
   <category value="notification"/>
   <focus>
     <code value="ClaimResponse"/>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response"/>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
     <min value="1"/>
     <max value="1"/>
   </focus>

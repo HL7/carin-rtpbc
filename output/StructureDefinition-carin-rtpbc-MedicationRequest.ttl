@@ -5,9 +5,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-MedicationRequest> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-medicationrequest> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "carin-rtpbc-MedicationRequest"];
+  fhir:Resource.id [ fhir:value "carin-rtpbc-medicationrequest"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "36" ];
      fhir:Meta.lastUpdated [ fhir:value "2019-11-08T10:48:53.000-06:00"^^xsd:dateTime ]
@@ -16,10 +16,10 @@
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy                 </div>\n      </div>\n    </div>"
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
-  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPrescriptionInfo"];
-  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Prescription Information"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.14"];
+  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcMedicationRequest"];
+  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Medication Request"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2019-10-15T00:00:00-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
@@ -1538,9 +1538,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info";
+           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info>
+           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -2029,9 +2029,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info";
+           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info>
+           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner>
          ]
        ];
        fhir:ElementDefinition.constraint [
@@ -5377,9 +5377,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info";
+           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info>
+           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient>
          ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
@@ -5405,9 +5405,9 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "Reference" ];
          fhir:ElementDefinition.type.targetProfile [
-           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info";
+           fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner";
            fhir:index 0;
-           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info>
+           fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner>
          ]
        ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
@@ -5541,9 +5541,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-MedicationRequest.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-medicationrequest.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-MedicationRequest.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-medicationrequest.ttl> .
 
 # -------------------------------------------------------------------------------------
 

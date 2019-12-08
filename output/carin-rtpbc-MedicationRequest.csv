@@ -92,7 +92,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "MedicationRequest.medication[x].text","","","",0,1,"","","Y","string {[]} {[]}
 ","Plain text representation of the concept","A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.","Very often the text is the same as a displayName of one of the codings.","The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.","","","","","","","",,,,,"",,,,"CodeableConcept.text",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","./originalText[mediaType/code=""text/plain""]/data","C*E.9. But note many systems use C*E.2 for this"
-"MedicationRequest.subject","","","Patient",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info]]}
+"MedicationRequest.subject","","","Patient",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient]]}
 ","Patient","The patient for whom this medication is being requested","The subject on a medication request is mandatory.  For the secondary use case where the actual subject is not provided, there still must be an anonymized subject specified.","","","","","","","","",,,,,"",,,,"MedicationRequest.subject",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.subject","Message/Body/NewRx/Patient(need detail to link to specific patient … Patient.Identification in SCRIPT)",".participation[typeCode=AUT].role","FiveWs.subject[x]","FiveWs.subject","PID-3-Patient ID List"
 "MedicationRequest.subject.id","","","",0,1,"","","","string {[]} {[]}
@@ -132,7 +132,7 @@ Reference is intended to point to a structure that can potentially be expressed 
 "MedicationRequest.authoredOn","","","",0,1,"","","Y","dateTime {[]} {[]}
 ","When request was initially authored","The date (and perhaps time) when the prescription was initially written or authored on.","","","","","","","","","",,,,,"",,,,"MedicationRequest.authoredOn",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.authoredOn","Message/Body/NewRx/MedicationPrescribed/WrittenDate","author.time","FiveWs.recorded","RXE-32-Original Order Date/Time / ORC-9-Date/Time of Transaction"
-"MedicationRequest.requester","","","Prescriber",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info]]}
+"MedicationRequest.requester","","","Prescriber",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner]]}
 ","Prescriber","The prescriber of the medication being requested","","","","","","","","","",,,,,"",,,,"MedicationRequest.requester",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.requester",".participation[typeCode=AUT].role","FiveWs.author"
 "MedicationRequest.requester.id","","","",0,1,"","","","string {[]} {[]}

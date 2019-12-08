@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="carin-rtpbc-Patient"/>
+  <id value="carin-rtpbc-patient"/>
   <meta>
     <versionId value="22"/>
     <lastUpdated value="2019-11-20T17:30:00.000-06:00"/>
@@ -15,10 +15,10 @@
       </div>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"/>
-  <version value="0.1.13"/>
-  <name value="CarinRtpbcRequestPatientInfo"/>
-  <title value="CARIN RTPBC Request Patient Info"/>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
+  <version value="0.1.14"/>
+  <name value="CarinRtpbcPatient"/>
+  <title value="CARIN RTPBC Patient"/>
   <status value="draft"/>
   <date value="2019-10-03T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>

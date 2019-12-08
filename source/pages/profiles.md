@@ -19,6 +19,10 @@ active: profiles
 ### Profiles
 
 <table>
+<colgroup>
+  <col width="300">
+  <col>
+</colgroup>
 <thead>
 <tr>
 <th>Name</th>
@@ -27,21 +31,58 @@ active: profiles
 </thead>
 <tbody>
 <tr>
-<td><a href="StructureDefinition-carin-rtpbc-OperationOutcome.html">CarinRtpbcExceptionResponse</a></td>
-<td>This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy benefit check response.</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-pharmacy-Organization.html">CarinRtpbcPharmacy</a></td>
-<td>This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process.</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-request-Claim.html">CarinRtpbcRequest</a></td>
+<td><a href="StructureDefinition-carin-rtpbc-request-claim.html">RTPBC Request Profile (Claim)</a></td>
 <td>This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process.</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-carin-rtpbc-Coverage.html">CarinRtpbcRequestCoverageIdentifiers</a></td>
+<td><a href="StructureDefinition-carin-rtpbc-response-claimresponse.html">RTPBC Response Profile (ClaimResponse)</a></td>
+<td>This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's "predetermination" processing mode</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-patient.html">RTPBC Patient Profile</a></td>
+<td>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-medicationrequest.html">RTPBC Medication Request Profile</a></td>
+<td>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-practitioner.html">RTPBC Practitioner Profile</a></td>
+<td>This profile constrains the Practitioner resource to convey identifying prescriber information required in the consumer real-time pharmacy benefit check (RTPBC) process.</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-pharmacy-organization.html">RTPBC Pharmacy Profile (Organization)</a></td>
+<td>This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process.</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-coverage.html">RTPBC Coverage Profile</a></td>
 <td>This profile constrains the Coverage resource for conveying the patient's pharmacy benefit information in an RTPBC request to an insurer.</td>
 </tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-request-messageheader.html">RTPBC Request Message Header Profile</a></td>
+<td>This profile constrains a MessageHeader resource for use in a Real-time Pharmacy Benefit Check (RTPBC) request bundle.</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-response-messageheader.html">RTPBC Response Message Header Profile</a></td>
+<td>This profile constrains a MessageHeader resource for use in a Real-time Pharmacy Benefit Check (RTPBC) response bundle.</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-request-bundle.html">RTPBC Request Bundle Profile</a></td>
+<td>This profile constrains a Bundle resource for use as the request in a Real-time Pharmacy Benefit Check (RTPBC) process.</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-response-bundle.html">RTPBC Response Bundle Profile</a></td>
+<td>This profile constrains a Bundle resource for use as the response in a Real-time Pharmacy Benefit Check (RTPBC) process.</td>
+</tr>
+</tbody>
+</table>
+
+<!-- ---------------- Excluding operation outcom    
+<tr>
+<td><a href="StructureDefinition-carin-rtpbc-OperationOutcome.html">CarinRtpbcExceptionResponse</a></td>
+<td>This profile constrains the OperationOutcome resource for communicating situations when an exception prevents an insurer from returning a consumer real-time pharmacy benefit check response.</td>
+</tr>
+---------------- -->
 
 <!-- Excluding coupon detail content from intial IG --------------------------------------
 <tr>
@@ -50,29 +91,16 @@ active: profiles
 </tr>
 ----------------------------------------------------------------------------------- -->
 
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-Patient.html">CarinRtpbcRequestPatientInfo</a></td>
-<td>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-Practitioner.html">CarinRtpbcRequestPrescriberInfo</a></td>
-<td>This profile constrains the Practitioner resource to convey identifying prescriber information required in the consumer real-time pharmacy benefit check (RTPBC) process.</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-MedicationRequest.html">CarinRtpbcRequestPrescriptionInfo</a></td>
-<td>This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy</td>
-</tr>
-<tr>
-<td><a href="StructureDefinition-carin-rtpbc-ClaimResponse.html">CarinRtpbcResponse</a></td>
-<td>This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's "predetermination" processing mode</td>
-</tr>
-</tbody>
-</table>
+
 
 
 ### Extensions
 
 <table>
+<colgroup>
+  <col width="300">
+  <col>
+</colgroup>
 <thead>
 <tr>
 <th>Name</th>
@@ -92,6 +120,10 @@ active: profiles
 ### Message Definitions
 
 <table>
+<colgroup>
+  <col width="300">
+  <col>
+</colgroup>
 <thead>
 <tr>
 <th>Name</th>

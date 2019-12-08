@@ -27,12 +27,6 @@ Consumer RTPBC leverages the predetermination process supported by the Claim and
 
 The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.
 
-<br/>
-
-*This guide is currently in development *
-
-<br/>
-
 
 ### Scope of this guide
 **Consumer RTPBC is intended to be used...**
@@ -60,7 +54,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.13 (This version):** Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.  
+**0.1.14 (This version):** Refined Profile and Terminology page wording. Adjusted certain resource names to increase consistency. Added responder CapabilityStatement, request and response MessageHeader and Bundle definitions. 
+
+**0.1.13:** Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.  
 
 **0.1.12:** Refined description wording for the isAlternative extension (within the resource and on the Profiles & Extensions page). 
 
@@ -91,7 +87,6 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 <br/>
 
 ### Known issues and to-dos
-* Capability statement to be added
 * Additional examples to be added
 
 

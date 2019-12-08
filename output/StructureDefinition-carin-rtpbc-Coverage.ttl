@@ -5,9 +5,9 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Coverage> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-coverage> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "carin-rtpbc-Coverage"];
+  fhir:Resource.id [ fhir:value "carin-rtpbc-coverage"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "38" ];
      fhir:Meta.lastUpdated [ fhir:value "2019-10-31T15:39:31.000-05:00"^^xsd:dateTime ]
@@ -16,10 +16,10 @@
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process      </div>\n    </div>"
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
-  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestCoverageIdentifiers"];
-  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Coverage Identifiers"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.14"];
+  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcCoverage"];
+  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Coverage"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2019-10-15T00:00:00-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
@@ -4354,9 +4354,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Coverage.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-coverage.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Coverage.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-coverage.ttl> .
 
 # -------------------------------------------------------------------------------------
 

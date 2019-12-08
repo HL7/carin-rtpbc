@@ -4,7 +4,7 @@
   <id value="CARIN-RTPBC"/>
   <meta>
     <versionId value="228"/>
-    <lastUpdated value="2019-12-05T09:01:57.000-06:00"/>
+    <lastUpdated value="2019-12-06T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/>
@@ -14,19 +14,19 @@
         </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\resources"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\framework"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\pages"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\pages"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\CARIN2\CarinRtpbc57\source\pages\extras"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\pages\extras"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
-  <version value="0.1.13"/>
+  <version value="0.1.14"/>
   <name value="CarinRtpbc"/>
   <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>
@@ -53,7 +53,7 @@
   <definition>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-ClaimResponse"/>
+        <reference value="StructureDefinition/carin-rtpbc-response-claimresponse"/>
         <display value="CarinRtpbcResponse"/>
       </reference>
       <name value="CarinRtpbcResponse"/>
@@ -61,47 +61,39 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Patient"/>
-        <display value="CarinRtpbcRequestPatientInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-patient"/>
+        <display value="CarinRtpbcPatient"/>
       </reference>
-      <name value="CarinRtpbcRequestPatientInfo"/>
+      <name value="CarinRtpbcPatient"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Practitioner"/>
-        <display value="CarinRtpbcRequestPrescriberInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-practitioner"/>
+        <display value="CarinRtpbcPractitioner"/>
       </reference>
-      <name value="CarinRtpbcRequestPrescriberInfo"/>
+      <name value="CarinRtpbcPractitioner"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-OperationOutcome"/>
-        <display value="CarinRtpbcExceptionResponse"/>
+        <reference value="StructureDefinition/carin-rtpbc-medicationrequest"/>
+        <display value="CarinRtpbcMedicationRequest"/>
       </reference>
-      <name value="CarinRtpbcExceptionResponse"/>
+      <name value="CarinRtpbcMedicationRequest"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-MedicationRequest"/>
-        <display value="CarinRtpbcRequestPrescriptionInfo"/>
+        <reference value="StructureDefinition/carin-rtpbc-coverage"/>
+        <display value="CarinRtpbcCoverage"/>
       </reference>
-      <name value="CarinRtpbcRequestPrescriptionInfo"/>
+      <name value="CarinRtpbcCoverage"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-Coverage"/>
-        <display value="CarinRtpbcRequestCoverageIdentifiers"/>
-      </reference>
-      <name value="CarinRtpbcRequestCoverageIdentifiers"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/carin-rtpbc-request-Claim"/>
+        <reference value="StructureDefinition/carin-rtpbc-request-claim"/>
         <display value="CarinRtpbcRequest"/>
       </reference>
       <name value="CarinRtpbcRequest"/>
@@ -109,7 +101,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/carin-rtpbc-pharmacy-Organization"/>
+        <reference value="StructureDefinition/carin-rtpbc-pharmacy-organization"/>
         <display value="CarinRtpbcPharmacy"/>
       </reference>
       <name value="CarinRtpbcPharmacy"/>
@@ -213,10 +205,18 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-example-ndc-11-code-system"/>
-        <display value="CarinRtpbcExampleNdc11CodeSystem"/>
+        <reference value="CodeSystem/carin-rtpbc-event-type-code-system"/>
+        <display value="CarinRtpbcEventTypeCodeSystem"/>
       </reference>
-      <name value="CarinRtpbcExampleNdc11CodeSystem"/>
+      <name value="CarinRtpbcEventTypeCodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/placeholder-ndc-11-code-system"/>
+        <display value="PlaceholderNdc11CodeSystem"/>
+      </reference>
+      <name value="PlaceholderNdc11CodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -237,10 +237,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/carin-rtpbc-canadian-province-code-system"/>
-        <display value="CarinRtpbcCanadianProvinceCodeSystem"/>
+        <reference value="CodeSystem/placeholder-canadian-province-code-system"/>
+        <display value="PlaceholderCanadianProvinceCodeSystem"/>
       </reference>
-      <name value="CarinRtpbcCanadianProvinceCodeSystem"/>
+      <name value="PlaceholderCanadianProvinceCodeSystem"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -289,6 +289,14 @@
         <display value="CarinRtpbcErrorCodeValueSet"/>
       </reference>
       <name value="CarinRtpbcErrorCodeValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/carin-rtpbc-event-type-value-set"/>
+        <display value="CarinRtbpcEventTypeValueSet"/>
+      </reference>
+      <name value="CarinRtbpcEventTypeValueSet"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -365,10 +373,50 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CapabilityStatement/carin-rtpbc-responder-capabilitystatement"/>
+        <display value="CarinRtpbcResponderCapabilityStatement"/>
+      </reference>
+      <name value="CarinRtpbcResponderCapabilityStatement"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="MessageDefinition/carin-rtpbc-response-message-definition"/>
         <display value="CarinRtpbcResponseMessageDefinition"/>
       </reference>
       <name value="CarinRtpbcResponseMessageDefinition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-request-messageheader"/>
+        <display value="CarinRtpbcRequestMessageHeader"/>
+      </reference>
+      <name value="CarinRtpbcRequestMessageHeader"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-response-messageheader"/>
+        <display value="CarinRtpbcResponseMessageHeader"/>
+      </reference>
+      <name value="CarinRtpbcResponseMessageHeader"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-request-bundle"/>
+        <display value="CarinRtpbcRequestBundle"/>
+      </reference>
+      <name value="CarinRtpbcRequestBundle"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/carin-rtpbc-response-bundle"/>
+        <display value="CarinRtpbcResponseBundle"/>
+      </reference>
+      <name value="CarinRtpbcResponseBundle"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

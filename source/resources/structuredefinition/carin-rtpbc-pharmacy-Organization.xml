@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="carin-rtpbc-pharmacy-Organization" />
+  <id value="carin-rtpbc-pharmacy-organization" />
   <meta>
     <versionId value="30" />
     <lastUpdated value="2019-11-20T18:30:30.000-05:00" />
@@ -8,7 +8,7 @@
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy" />
   <version value="0.0.1" />
   <name value="CarinRtpbcPharmacy" />
-  <title value="CARIN RTPBC Pharmacy" />
+  <title value="CARIN RTPBC PharmacyOrganization" />
   <status value="draft" />
   <publisher value="CARIN Alliance" />
   <description value="This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process." />

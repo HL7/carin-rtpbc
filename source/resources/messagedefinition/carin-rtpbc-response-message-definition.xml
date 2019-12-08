@@ -7,7 +7,7 @@
   <title value="Real-time pharmacy benefit check response" />
   <status value="draft" />
   <experimental value="false" />
-  <date value="2019-11-17" />
+  <date value="2019-10-17" />
   <publisher value="CARIN Alliance" />
   <contact>
     <telecom>
@@ -31,7 +31,7 @@
   <category value="notification" />
   <focus>
     <code value="ClaimResponse" />
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response" />
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
     <min value="1" />
     <max value="1" />
   </focus>

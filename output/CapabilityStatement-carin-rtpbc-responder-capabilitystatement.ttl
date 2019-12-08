@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CapabilityStatement/carin-rtpbc-responder-capabilitystatement> a fhir:CapabilityStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "carin-rtpbc-responder-capabilitystatement"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CarinRtpbcResponderCapabilityStatement</h2><div><p>This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a CARIN Real-time Pharmacy Benefit Check (RTPBC) request transacted with the <code>$process-message</code> operation.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td>CARIN RTPBC Responder **SHALL**:   1. Support at least one use case defined in this Guide and listed in the [Use Cases](Use_cases.html) Section. 1. Implement the RESTful behavior according to the FHIR specification. 1. Support the json source format. 1. Declare a CapabilityStatement identifying the profiles supported.   CARIN RTPBC Responder **SHOULD**:   1. Support the xml source format. 1. Identify the CARIN RTPBC profiles supported as part of the FHIR `meta.profile` attribute for each instance.</td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr></table></div>"
+  ];
+  fhir:CapabilityStatement.url [ fhir:value "http://hl7.org/fhir/us/carin/CapabilityStatement/rtpbc-responder"];
+  fhir:CapabilityStatement.version [ fhir:value "0.1.14"];
+  fhir:CapabilityStatement.name [ fhir:value "CarinRtpbcResponderCapabilityStatement"];
+  fhir:CapabilityStatement.title [ fhir:value "CARIN RTPBC Responder Capability Statement"];
+  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CapabilityStatement.date [ fhir:value "2019-12-06T18:00:00-06:00"^^xsd:dateTime];
+  fhir:CapabilityStatement.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CapabilityStatement.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "fm@frankmckinney.com" ]
+     ]
+  ];
+  fhir:CapabilityStatement.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a CARIN Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation."];
+  fhir:CapabilityStatement.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
+  fhir:CapabilityStatement.kind [ fhir:value "requirements"];
+  fhir:CapabilityStatement.fhirVersion [ fhir:value "4.0.0"];
+  fhir:CapabilityStatement.format [
+     fhir:value "xml";
+     fhir:index 0
+  ], [
+     fhir:value "json";
+     fhir:index 1
+  ];
+  fhir:CapabilityStatement.patchFormat [
+     fhir:value "application/json-patch+json";
+     fhir:index 0
+  ];
+  fhir:CapabilityStatement.implementationGuide [
+     fhir:value "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc";
+     fhir:index 0;
+     fhir:link <http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc>
+  ];
+  fhir:CapabilityStatement.rest [
+     fhir:index 0;
+     fhir:CapabilityStatement.rest.mode [ fhir:value "server" ];
+     fhir:CapabilityStatement.rest.documentation [ fhir:value "CARIN RTPBC Responder **SHALL**:   1. Support at least one use case defined in this Guide and listed in the [Use Cases](Use_cases.html) Section. 1. Implement the RESTful behavior according to the FHIR specification. 1. Support the json source format. 1. Declare a CapabilityStatement identifying the profiles supported.   CARIN RTPBC Responder **SHOULD**:   1. Support the xml source format. 1. Identify the CARIN RTPBC profiles supported as part of the FHIR `meta.profile` attribute for each instance." ];
+     fhir:CapabilityStatement.rest.security [
+       fhir:CapabilityStatement.rest.security.description [ fhir:value "1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). 1. For security considerations specific to this guide refer to the [US Core Implementation Guide’s General Security Considerations page](http://hl7.org/fhir/us/core/security.html) for requirements and recommendations. 1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." ]
+     ];
+     fhir:CapabilityStatement.rest.operation [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
+         fhir:Extension.valueCode [ fhir:value "SHALL" ]
+       ];
+       fhir:CapabilityStatement.rest.resource.operation.name [ fhir:value "process-message" ];
+       fhir:CapabilityStatement.rest.resource.operation.definition [
+         fhir:value "http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message";
+         fhir:link <http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message>
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CapabilityStatement/carin-rtpbc-responder-capabilitystatement.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CapabilityStatement/carin-rtpbc-responder-capabilitystatement.ttl> .
+
+# -------------------------------------------------------------------------------------
+

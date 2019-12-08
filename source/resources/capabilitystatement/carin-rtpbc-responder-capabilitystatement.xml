@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-responder-capabilitystatement" />
+  <url value="http://hl7.org/fhir/us/carin/CapabilityStatement/rtpbc-responder" />
+  <version value="1" />
+  <name value="CarinRtpbcResponderCapabilityStatement" />
+  <title value="CARIN RTPBC Responder Capability Statement" />
+  <status value="draft" />
+  <experimental value="false" />
+  <date value="2019-12-07T00:00:00+00:00" />
+  <publisher value="CARIN Alliance" />
+  <contact>
+    <telecom>
+      <system value="email" />
+      <value value="fm@frankmckinney.com" />
+    </telecom>
+  </contact>
+  <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a CARIN Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <kind value="requirements" />
+  <fhirVersion value="4.0.0" />
+  <format value="xml" />
+  <format value="json" />
+  <patchFormat value="application/json-patch+json" />
+  <implementationGuide value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc" />
+  <rest>
+    <mode value="server" />
+    <documentation value="CARIN RTPBC Responder **SHALL**:   1. Support at least one use case defined in this Guide and listed in the [Use Cases](Use_cases.html) Section. 1. Implement the RESTful behavior according to the FHIR specification. 1. Support the json source format. 1. Declare a CapabilityStatement identifying the profiles supported.   CARIN RTPBC Responder **SHOULD**:   1. Support the xml source format. 1. Identify the CARIN RTPBC profiles supported as part of the FHIR `meta.profile` attribute for each instance." />
+    <security>
+      <description value="1. For general security consideration refer to the [Security and Privacy Considerations](http://build.fhir.org/secpriv-module.html). 1. For security considerations specific to this guide refer to the [US Core Implementation Guide’s General Security Considerations page](http://hl7.org/fhir/us/core/security.html) for requirements and recommendations. 1. A server **SHALL** reject any unauthorized requests by returning an `HTTP 401` unauthorized response code." />
+    </security>
+    <operation>
+      <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+        <valueCode value="SHALL" />
+      </extension>
+      <name value="process-message" />
+      <definition value="http://hl7.org/fhir/OperationDefinition/MessageHeader-process-message" />
+    </operation>
+  </rest>
+</CapabilityStatement>

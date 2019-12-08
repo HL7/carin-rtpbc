@@ -10,18 +10,18 @@
   fhir:Resource.id [ fhir:value "hl7.fhir.us.carin-rtpbc"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "228" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-05T09:01:57.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-06T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc"];
-  fhir:ImplementationGuide.version [ fhir:value "0.1.13"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.14"];
   fhir:ImplementationGuide.name [ fhir:value "CarinRtpbc"];
   fhir:ImplementationGuide.title [ fhir:value "CARIN Consumer Realtime Pharmacy Benefit Check"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2019-12-06T18:17:52-06:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2019-12-08T00:58:11-06:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International - Pharmacy"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -57,11 +57,11 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-ClaimResponse.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-response-claimresponse.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-ClaimResponse>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-ClaimResponse" ];
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-claimresponse>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-response-claimresponse" ];
          fhir:Reference.display [ fhir:value "CarinRtpbcResponse" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcResponse" ];
@@ -75,14 +75,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-Patient.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-patient.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Patient>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-Patient" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcRequestPatientInfo" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-patient" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcPatient" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestPatientInfo" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcPatient" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;
@@ -93,14 +93,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-Practitioner.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-practitioner.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Practitioner>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-Practitioner" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcRequestPrescriberInfo" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-practitioner>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-practitioner" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcPractitioner" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestPrescriberInfo" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcPractitioner" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 3;
@@ -111,14 +111,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-OperationOutcome.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-medicationrequest.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-OperationOutcome>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-OperationOutcome" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcExceptionResponse" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-medicationrequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-medicationrequest" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcMedicationRequest" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcExceptionResponse" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcMedicationRequest" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 4;
@@ -129,14 +129,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-MedicationRequest.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-coverage.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-MedicationRequest>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-MedicationRequest" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcRequestPrescriptionInfo" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-coverage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-coverage" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcCoverage" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestPrescriptionInfo" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcCoverage" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 5;
@@ -147,14 +147,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-Coverage.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-request-claim.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Coverage>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-Coverage" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcRequestCoverageIdentifiers" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-claim>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-request-claim" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcRequest" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestCoverageIdentifiers" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequest" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 6;
@@ -165,35 +165,17 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-request-Claim.html" ]
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-pharmacy-organization.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-Claim>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-request-Claim" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcRequest" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequest" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ], [
-         fhir:index 1;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-pharmacy-Organization.html" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-pharmacy-Organization>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-pharmacy-Organization" ];
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-pharmacy-organization>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-pharmacy-organization" ];
          fhir:Reference.display [ fhir:value "CarinRtpbcPharmacy" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcPharmacy" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -211,7 +193,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CARINRTPBCPrescribableProductCodeValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -229,7 +211,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-coverage-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 10;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -247,7 +229,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-medicationrequest-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -265,7 +247,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-claim-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 12;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -283,7 +265,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient Jane Doe" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 13;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -301,7 +283,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hometown Drug" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 14;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -319,7 +301,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Practitioner Johnson" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 15;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -337,7 +319,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-bundle-request-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 16;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -355,7 +337,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "My Mail Service Pharmacy" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 17;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -373,7 +355,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-bundle-response-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 18;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -391,7 +373,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-claim-response-03" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 19;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -409,6 +391,24 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcCoverageSummaryCodeSystem" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-carin-rtpbc-event-type-code-system.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-event-type-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/carin-rtpbc-event-type-code-system" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcEventTypeCodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcEventTypeCodeSystem" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
        fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
@@ -417,14 +417,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "CodeSystem-carin-rtpbc-example-ndc-11-code-system.html" ]
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-placeholder-ndc-11-code-system.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-example-ndc-11-code-system>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carin-rtpbc-example-ndc-11-code-system" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcExampleNdc11CodeSystem" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-ndc-11-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/placeholder-ndc-11-code-system" ];
+         fhir:Reference.display [ fhir:value "PlaceholderNdc11CodeSystem" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcExampleNdc11CodeSystem" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PlaceholderNdc11CodeSystem" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 21;
@@ -471,14 +471,14 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
-         fhir:Extension.valueUri [ fhir:value "CodeSystem-carin-rtpbc-canadian-province-code-system.html" ]
+         fhir:Extension.valueUri [ fhir:value "CodeSystem-placeholder-canadian-province-code-system.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-canadian-province-code-system>;
-         fhir:Reference.reference [ fhir:value "CodeSystem/carin-rtpbc-canadian-province-code-system" ];
-         fhir:Reference.display [ fhir:value "CarinRtpbcCanadianProvinceCodeSystem" ]
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-canadian-province-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/placeholder-canadian-province-code-system" ];
+         fhir:Reference.display [ fhir:value "PlaceholderCanadianProvinceCodeSystem" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcCanadianProvinceCodeSystem" ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "PlaceholderCanadianProvinceCodeSystem" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 24;
@@ -597,6 +597,24 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "ValueSet-carin-rtpbc-event-type-value-set.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-event-type-value-set>;
+         fhir:Reference.reference [ fhir:value "ValueSet/carin-rtpbc-event-type-value-set" ];
+         fhir:Reference.display [ fhir:value "CarinRtbpcEventTypeValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtbpcEventTypeValueSet" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
          fhir:Extension.valueUri [ fhir:value "ValueSet-carin-rtpbc-country-code-value-set.html" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -607,7 +625,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcCountryCodeValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 31;
+       fhir:index 32;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -625,7 +643,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtbpcCoverageSummaryValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 32;
+       fhir:index 33;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -643,7 +661,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtbpcPatientPayTypeValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 33;
+       fhir:index 34;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -661,7 +679,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtbpcPharmacyTypeValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 34;
+       fhir:index 35;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -679,7 +697,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtbpcStateAndProvinceCodeValueSet" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 35;
+       fhir:index 36;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -697,7 +715,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcExtensionIsAlternative" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 36;
+       fhir:index 37;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -715,7 +733,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-bundle-request-03-w-header" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 37;
+       fhir:index 38;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -733,7 +751,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "rtpbc-bundle-response-03-w-header" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 38;
+       fhir:index 39;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -751,7 +769,25 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestMessageDefinition" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 39;
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "CapabilityStatement-carin-rtpbc-responder-capabilitystatement.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/CapabilityStatement/carin-rtpbc-responder-capabilitystatement>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/carin-rtpbc-responder-capabilitystatement" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcResponderCapabilityStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcResponderCapabilityStatement" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 41;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -767,6 +803,78 @@
          fhir:Reference.display [ fhir:value "CarinRtpbcResponseMessageDefinition" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcResponseMessageDefinition" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-request-messageheader.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-messageheader>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-request-messageheader" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcRequestMessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestMessageHeader" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-response-messageheader.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-messageheader>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-response-messageheader" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcResponseMessageHeader" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcResponseMessageHeader" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-request-bundle.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-request-bundle" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcRequestBundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcRequestBundle" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-carin-rtpbc-response-bundle.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-bundle>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/carin-rtpbc-response-bundle" ];
+         fhir:Reference.display [ fhir:value "CarinRtpbcResponseBundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CarinRtpbcResponseBundle" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
@@ -802,21 +910,19 @@
      ]
   ] .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-ClaimResponse> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-claimresponse> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Patient> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-patient> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Practitioner> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-practitioner> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-OperationOutcome> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-medicationrequest> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-MedicationRequest> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-coverage> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Coverage> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-claim> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-Claim> a fhir:us .
-
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-pharmacy-Organization> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-pharmacy-organization> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-prescribable-product-code-value-set> a fhir:us .
 
@@ -842,13 +948,15 @@
 
 <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-coverage-summary-code-system> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-example-ndc-11-code-system> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-event-type-code-system> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-ndc-11-code-system> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-patient-pay-type-code-system> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/NamingSystem/carin-rtpbc-NamingSystem-canada-post-province-code> a fhir:us .
 
-<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/carin-rtpbc-canadian-province-code-system> a fhir:us .
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-canadian-province-code-system> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/NamingSystem/carin-rtpbc-NamingSystem-ncpdp-pharmacy-type> a fhir:us .
 
@@ -861,6 +969,8 @@
 <http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-billing-unit-value-set> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-error-code-value-set> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-event-type-value-set> a fhir:us .
 
 <http://hl7.org/fhir/us/carin-rtpbc/ValueSet/carin-rtpbc-country-code-value-set> a fhir:us .
 
@@ -880,7 +990,17 @@
 
 <http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/carin-rtpbc-request-message-definition> a fhir:us .
 
+<http://hl7.org/fhir/us/carin-rtpbc/CapabilityStatement/carin-rtpbc-responder-capabilitystatement> a fhir:us .
+
 <http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/carin-rtpbc-response-message-definition> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-messageheader> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-messageheader> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-request-bundle> a fhir:us .
+
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-response-bundle> a fhir:us .
 
 # - ontology header ------------------------------------------------------------
 

@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="carin-rtpbc-Practitioner"/>
+  <id value="carin-rtpbc-practitioner"/>
   <meta>
     <versionId value="10"/>
     <lastUpdated value="2019-10-31T16:28:36.000-05:00"/>
   </meta>
   <text>
     <status value="additional"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div>
-                <div>This profile constrains the Practitioner resource to convey identifying prescriber
-information required in the consumer real-time pharmacy benefit 
-check (RTPBC) process.
-                </div>
-            </div>
-        </div>
+      <div>
+        <div>This profile constrains the Practitioner resource to convey identifying prescriber information required in the consumer real-time pharmacy benefit check (RTPBC) process.         </div>
+      </div>
+    </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"/>
-  <version value="0.1.13"/>
-  <name value="CarinRtpbcRequestPrescriberInfo"/>
-  <title value="CARIN RTPBC Request Prescriber Info"/>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"/>
+  <version value="0.1.14"/>
+  <name value="CarinRtpbcPractitioner"/>
+  <title value="CARIN RTPBC Practitioner"/>
   <status value="draft"/>
   <date value="2019-10-03T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>

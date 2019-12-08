@@ -5,21 +5,21 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Practitioner> a fhir:StructureDefinition;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-practitioner> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "carin-rtpbc-Practitioner"];
+  fhir:Resource.id [ fhir:value "carin-rtpbc-practitioner"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "10" ];
      fhir:Meta.lastUpdated [ fhir:value "2019-10-31T16:28:36.000-05:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n            <div>\n                <div>This profile constrains the Practitioner resource to convey identifying prescriber\ninformation required in the consumer real-time pharmacy benefit \ncheck (RTPBC) process.\n                </div>\n            </div>\n        </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>\n        <div>This profile constrains the Practitioner resource to convey identifying prescriber information required in the consumer real-time pharmacy benefit check (RTPBC) process.         </div>\n      </div>\n    </div>"
   ];
-  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"];
-  fhir:StructureDefinition.version [ fhir:value "0.1.13"];
-  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcRequestPrescriberInfo"];
-  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Request Prescriber Info"];
+  fhir:StructureDefinition.url [ fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"];
+  fhir:StructureDefinition.version [ fhir:value "0.1.14"];
+  fhir:StructureDefinition.name [ fhir:value "CarinRtpbcPractitioner"];
+  fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Practitioner"];
   fhir:StructureDefinition.status [ fhir:value "draft"];
   fhir:StructureDefinition.date [ fhir:value "2019-10-03T00:00:00-05:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
@@ -2203,9 +2203,9 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Practitioner.ttl> a owl:Ontology;
+<http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/carin-rtpbc-practitioner.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl;
-  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-Practitioner.ttl> .
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/StructureDefinition/carin-rtpbc-practitioner.ttl> .
 
 # -------------------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="carin-rtpbc-Coverage"/>
+  <id value="carin-rtpbc-coverage"/>
   <meta>
     <versionId value="38"/>
     <lastUpdated value="2019-10-31T15:39:31.000-05:00"/>
@@ -11,10 +11,10 @@
       <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process      </div>
     </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"/>
-  <version value="0.1.13"/>
-  <name value="CarinRtpbcRequestCoverageIdentifiers"/>
-  <title value="CARIN RTPBC Request Coverage Identifiers"/>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"/>
+  <version value="0.1.14"/>
+  <name value="CarinRtpbcCoverage"/>
+  <title value="CARIN RTPBC Coverage"/>
   <status value="draft"/>
   <date value="2019-10-15T00:00:00-05:00"/>
   <publisher value="CARIN Alliance"/>

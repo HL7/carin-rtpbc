@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-canadian-province-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "placeholder-canadian-province-code-system"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-27T16:00:00.000-06:00"^^xsd:dateTime ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Placeholder Canadian Province Code System</h2><div><p>This code system defines two letter Canadian province codes. It is intended as a placeholder to be replaced by a NamingSystem to canadapost.ca once IG tooling supports</p>\n</div><p>This code system http://placeholder-for-canadapost.ca defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">AB<a name=\"placeholder-canadian-province-code-system-AB\"> </a></td><td>Alberta</td><td>Alberta</td></tr><tr><td style=\"white-space:nowrap\">BC<a name=\"placeholder-canadian-province-code-system-BC\"> </a></td><td>British Columbia</td><td>British Columbia</td></tr><tr><td style=\"white-space:nowrap\">MB<a name=\"placeholder-canadian-province-code-system-MB\"> </a></td><td>Manitoba</td><td>Manitoba</td></tr><tr><td style=\"white-space:nowrap\">NB<a name=\"placeholder-canadian-province-code-system-NB\"> </a></td><td>New Brunswick</td><td>New Brunswick</td></tr><tr><td style=\"white-space:nowrap\">NL<a name=\"placeholder-canadian-province-code-system-NL\"> </a></td><td>Newfoundland and Labrador</td><td>Newfoundland and Labrador</td></tr><tr><td style=\"white-space:nowrap\">NS<a name=\"placeholder-canadian-province-code-system-NS\"> </a></td><td>Nova Scotia</td><td>Nova Scotia</td></tr><tr><td style=\"white-space:nowrap\">NT<a name=\"placeholder-canadian-province-code-system-NT\"> </a></td><td>Northwest Territories</td><td>Northwest Territories</td></tr><tr><td style=\"white-space:nowrap\">NU<a name=\"placeholder-canadian-province-code-system-NU\"> </a></td><td>Nunavut</td><td>Nunavut</td></tr><tr><td style=\"white-space:nowrap\">ON<a name=\"placeholder-canadian-province-code-system-ON\"> </a></td><td>Ontario</td><td>Ontario</td></tr><tr><td style=\"white-space:nowrap\">PE<a name=\"placeholder-canadian-province-code-system-PE\"> </a></td><td>Prince Edward Island</td><td>Prince Edward Island</td></tr><tr><td style=\"white-space:nowrap\">QC<a name=\"placeholder-canadian-province-code-system-QC\"> </a></td><td>Quebec</td><td>Quebec</td></tr><tr><td style=\"white-space:nowrap\">SK<a name=\"placeholder-canadian-province-code-system-SK\"> </a></td><td>Saskatchewan</td><td>Saskatchewan</td></tr><tr><td style=\"white-space:nowrap\">YT<a name=\"placeholder-canadian-province-code-system-YT\"> </a></td><td>Yukon</td><td>Yukon</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://placeholder-for-canadapost.ca"];
+  fhir:CodeSystem.version [ fhir:value "0.1.14"];
+  fhir:CodeSystem.name [ fhir:value "PlaceholderCanadianProvinceCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "Placeholder Canadian Province Code System"];
+  fhir:CodeSystem.status [ fhir:value "draft"];
+  fhir:CodeSystem.date [ fhir:value "2019-11-27T00:00:00-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
+  fhir:CodeSystem.description [ fhir:value "This code system defines two letter Canadian province codes. It is intended as a placeholder to be replaced by a NamingSystem to canadapost.ca once IG tooling supports"];
+  fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "AB" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Alberta" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Alberta" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "BC" ];
+     fhir:CodeSystem.concept.display [ fhir:value "British Columbia" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "British Columbia" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "MB" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Manitoba" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Manitoba" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "NB" ];
+     fhir:CodeSystem.concept.display [ fhir:value "New Brunswick" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "New Brunswick" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "NL" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Newfoundland and Labrador" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Newfoundland and Labrador" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "NS" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Nova Scotia" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Nova Scotia" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "NT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Northwest Territories" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Northwest Territories" ]
+  ], [
+     fhir:index 7;
+     fhir:CodeSystem.concept.code [ fhir:value "NU" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Nunavut" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Nunavut" ]
+  ], [
+     fhir:index 8;
+     fhir:CodeSystem.concept.code [ fhir:value "ON" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Ontario" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Ontario" ]
+  ], [
+     fhir:index 9;
+     fhir:CodeSystem.concept.code [ fhir:value "PE" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Prince Edward Island" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Prince Edward Island" ]
+  ], [
+     fhir:index 10;
+     fhir:CodeSystem.concept.code [ fhir:value "QC" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Quebec" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Quebec" ]
+  ], [
+     fhir:index 11;
+     fhir:CodeSystem.concept.code [ fhir:value "SK" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Saskatchewan" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Saskatchewan" ]
+  ], [
+     fhir:index 12;
+     fhir:CodeSystem.concept.code [ fhir:value "YT" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Yukon" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Yukon" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/placeholder-canadian-province-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl;
+  owl:versionIRI <http://build.fhir.org/us/carin-rtpbc/CodeSystem/placeholder-canadian-province-code-system.ttl> .
+
+# -------------------------------------------------------------------------------------
+

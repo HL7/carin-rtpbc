@@ -3,18 +3,18 @@
   "id": "hl7.fhir.us.carin-rtpbc",
   "meta": {
     "versionId": "228",
-    "lastUpdated": "2019-12-05T09:01:57.000-06:00"
+    "lastUpdated": "2019-12-06T23:00:00.000-06:00"
   },
   "text": {
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   },
   "url": "http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "name": "CarinRtpbc",
   "title": "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status": "draft",
-  "date": "2019-12-06T18:17:52-06:00",
+  "date": "2019-12-08T00:58:11-06:00",
   "publisher": "HL7 International - Pharmacy",
   "contact": [
     {
@@ -52,11 +52,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-ClaimResponse.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-response-claimresponse.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-ClaimResponse",
+          "reference": "StructureDefinition/carin-rtpbc-response-claimresponse",
           "display": "CarinRtpbcResponse"
         },
         "name": "CarinRtpbcResponse",
@@ -70,14 +70,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-Patient.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-patient.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-Patient",
-          "display": "CarinRtpbcRequestPatientInfo"
+          "reference": "StructureDefinition/carin-rtpbc-patient",
+          "display": "CarinRtpbcPatient"
         },
-        "name": "CarinRtpbcRequestPatientInfo",
+        "name": "CarinRtpbcPatient",
         "exampleBoolean": false
       },
       {
@@ -88,14 +88,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-Practitioner.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-practitioner.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-Practitioner",
-          "display": "CarinRtpbcRequestPrescriberInfo"
+          "reference": "StructureDefinition/carin-rtpbc-practitioner",
+          "display": "CarinRtpbcPractitioner"
         },
-        "name": "CarinRtpbcRequestPrescriberInfo",
+        "name": "CarinRtpbcPractitioner",
         "exampleBoolean": false
       },
       {
@@ -106,14 +106,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-OperationOutcome.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-medicationrequest.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-OperationOutcome",
-          "display": "CarinRtpbcExceptionResponse"
+          "reference": "StructureDefinition/carin-rtpbc-medicationrequest",
+          "display": "CarinRtpbcMedicationRequest"
         },
-        "name": "CarinRtpbcExceptionResponse",
+        "name": "CarinRtpbcMedicationRequest",
         "exampleBoolean": false
       },
       {
@@ -124,14 +124,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-MedicationRequest.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-coverage.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-MedicationRequest",
-          "display": "CarinRtpbcRequestPrescriptionInfo"
+          "reference": "StructureDefinition/carin-rtpbc-coverage",
+          "display": "CarinRtpbcCoverage"
         },
-        "name": "CarinRtpbcRequestPrescriptionInfo",
+        "name": "CarinRtpbcCoverage",
         "exampleBoolean": false
       },
       {
@@ -142,29 +142,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-Coverage.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-request-claim.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-Coverage",
-          "display": "CarinRtpbcRequestCoverageIdentifiers"
-        },
-        "name": "CarinRtpbcRequestCoverageIdentifiers",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          },
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-request-Claim.html"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-request-Claim",
+          "reference": "StructureDefinition/carin-rtpbc-request-claim",
           "display": "CarinRtpbcRequest"
         },
         "name": "CarinRtpbcRequest",
@@ -178,11 +160,11 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "StructureDefinition-carin-rtpbc-pharmacy-Organization.html"
+            "valueUri": "StructureDefinition-carin-rtpbc-pharmacy-organization.html"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/carin-rtpbc-pharmacy-Organization",
+          "reference": "StructureDefinition/carin-rtpbc-pharmacy-organization",
           "display": "CarinRtpbcPharmacy"
         },
         "name": "CarinRtpbcPharmacy",
@@ -412,14 +394,32 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-example-ndc-11-code-system.html"
+            "valueUri": "CodeSystem-carin-rtpbc-event-type-code-system.html"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/carin-rtpbc-example-ndc-11-code-system",
-          "display": "CarinRtpbcExampleNdc11CodeSystem"
+          "reference": "CodeSystem/carin-rtpbc-event-type-code-system",
+          "display": "CarinRtpbcEventTypeCodeSystem"
         },
-        "name": "CarinRtpbcExampleNdc11CodeSystem",
+        "name": "CarinRtpbcEventTypeCodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CodeSystem-placeholder-ndc-11-code-system.html"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/placeholder-ndc-11-code-system",
+          "display": "PlaceholderNdc11CodeSystem"
+        },
+        "name": "PlaceholderNdc11CodeSystem",
         "exampleBoolean": false
       },
       {
@@ -466,14 +466,14 @@
           },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
-            "valueUri": "CodeSystem-carin-rtpbc-canadian-province-code-system.html"
+            "valueUri": "CodeSystem-placeholder-canadian-province-code-system.html"
           }
         ],
         "reference": {
-          "reference": "CodeSystem/carin-rtpbc-canadian-province-code-system",
-          "display": "CarinRtpbcCanadianProvinceCodeSystem"
+          "reference": "CodeSystem/placeholder-canadian-province-code-system",
+          "display": "PlaceholderCanadianProvinceCodeSystem"
         },
-        "name": "CarinRtpbcCanadianProvinceCodeSystem",
+        "name": "PlaceholderCanadianProvinceCodeSystem",
         "exampleBoolean": false
       },
       {
@@ -582,6 +582,24 @@
           "display": "CarinRtpbcErrorCodeValueSet"
         },
         "name": "CarinRtpbcErrorCodeValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "ValueSet-carin-rtpbc-event-type-value-set.html"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/carin-rtpbc-event-type-value-set",
+          "display": "CarinRtbpcEventTypeValueSet"
+        },
+        "name": "CarinRtbpcEventTypeValueSet",
         "exampleBoolean": false
       },
       {
@@ -750,6 +768,24 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CapabilityStatement"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "CapabilityStatement-carin-rtpbc-responder-capabilitystatement.html"
+          }
+        ],
+        "reference": {
+          "reference": "CapabilityStatement/carin-rtpbc-responder-capabilitystatement",
+          "display": "CarinRtpbcResponderCapabilityStatement"
+        },
+        "name": "CarinRtpbcResponderCapabilityStatement",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "MessageDefinition"
           },
           {
@@ -762,6 +798,78 @@
           "display": "CarinRtpbcResponseMessageDefinition"
         },
         "name": "CarinRtpbcResponseMessageDefinition",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-carin-rtpbc-request-messageheader.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/carin-rtpbc-request-messageheader",
+          "display": "CarinRtpbcRequestMessageHeader"
+        },
+        "name": "CarinRtpbcRequestMessageHeader",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-carin-rtpbc-response-messageheader.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/carin-rtpbc-response-messageheader",
+          "display": "CarinRtpbcResponseMessageHeader"
+        },
+        "name": "CarinRtpbcResponseMessageHeader",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-carin-rtpbc-request-bundle.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/carin-rtpbc-request-bundle",
+          "display": "CarinRtpbcRequestBundle"
+        },
+        "name": "CarinRtpbcRequestBundle",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-carin-rtpbc-response-bundle.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/carin-rtpbc-response-bundle",
+          "display": "CarinRtpbcResponseBundle"
+        },
+        "name": "CarinRtpbcResponseBundle",
         "exampleBoolean": false
       }
     ],

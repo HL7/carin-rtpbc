@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "carin-rtpbc-Coverage",
+  "id": "carin-rtpbc-coverage",
   "meta": {
     "versionId": "38",
     "lastUpdated": "2019-10-31T15:39:31.000-05:00"
@@ -9,10 +9,10 @@
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process      </div>\n    </div>"
   },
-  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers",
-  "version": "0.1.13",
-  "name": "CarinRtpbcRequestCoverageIdentifiers",
-  "title": "CARIN RTPBC Request Coverage Identifiers",
+  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage",
+  "version": "0.1.14",
+  "name": "CarinRtpbcCoverage",
+  "title": "CARIN RTPBC Coverage",
   "status": "draft",
   "date": "2019-10-15T00:00:00-05:00",
   "publisher": "CARIN Alliance",

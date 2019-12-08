@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "carin-rtpbc-request-Claim",
+  "id": "carin-rtpbc-request-claim",
   "meta": {
     "versionId": "73",
     "lastUpdated": "2019-11-06T14:33:12.000-06:00"
@@ -9,14 +9,14 @@
     "status": "additional",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>\n    </div>"
   },
-  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-  "version": "0.1.13",
+  "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request",
+  "version": "0.1.14",
   "name": "CarinRtpbcRequest",
-  "title": "CARIN RTPBC Request using Claim",
+  "title": "CARIN RTPBC Request Using Claim",
   "status": "draft",
   "date": "2019-10-03T00:00:00-05:00",
   "publisher": "CARIN Alliance",
-  "description": "This profile constrains the Claim resource so that it can serve as the *RTPBC Request* in the consumer real-time pharmacy benefit check process",
+  "description": "This profile constrains the Claim resource so that it can serve as the RTPBC Request in the consumer real-time pharmacy benefit check process",
   "jurisdiction": [
     {
       "coding": [
@@ -1658,7 +1658,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"
             ]
           }
         ],
@@ -3365,7 +3365,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"
             ]
           }
         ],
@@ -4247,7 +4247,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"
             ]
           }
         ],
@@ -6131,7 +6131,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"
             ]
           }
         ],
@@ -9892,7 +9892,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"
             ]
           }
         ],
@@ -9992,7 +9992,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"
             ]
           }
         ]
@@ -10030,7 +10030,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"
             ]
           }
         ],
@@ -10081,7 +10081,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers"
+              "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"
             ]
           }
         ],

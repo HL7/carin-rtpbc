@@ -1,6 +1,6 @@
 {
   "package": "hl7.fhir.us.carin-rtpbc",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "fhirVersion": "4.0.1",
   "extensions": [
     {
@@ -12,56 +12,65 @@
     }
   ],
   "profiles": {
-    "Claim": [
+    "Coverage": [
       {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-request",
-        "title": "CARIN RTPBC Request using Claim"
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage",
+        "title": "CARIN RTPBC Coverage"
       }
     ],
-    "ClaimResponse": [
+    "MedicationRequest": [
       {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/carin-rtpbc-response",
-        "title": "CARIN RTPBC Response using ClaimResponse"
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest",
+        "title": "CARIN RTPBC Medication Request"
       }
     ],
-    "OperationOutcome": [
+    "Patient": [
       {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-exception-response",
-        "title": "CARIN RTPBC Exception Response"
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient",
+        "title": "CARIN RTPBC Patient"
       }
     ],
     "Organization": [
       {
         "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy",
-        "title": "CARIN RTPBC Pharmacy"
-      }
-    ],
-    "Coverage": [
-      {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-coverage-identifiers",
-        "title": "CARIN RTPBC Request Coverage Identifiers"
-      }
-    ],
-    "Patient": [
-      {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-patient-info",
-        "title": "CARIN RTPBC Request Patient Info"
+        "title": "CARIN RTPBC PharmacyOrganization"
       }
     ],
     "Practitioner": [
       {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescriber-info",
-        "title": "CARIN RTPBC Request Prescriber Info"
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner",
+        "title": "CARIN RTPBC Practitioner"
       }
     ],
-    "MedicationRequest": [
+    "Claim": [
       {
-        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-prescription-info",
-        "title": "CARIN RTPBC Request Prescription Information"
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request",
+        "title": "CARIN RTPBC Request Using Claim"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle",
+        "title": "CARIN RTPBC Response Bundle"
+      }
+    ],
+    "MessageHeader": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader",
+        "title": "CARIN RTPBC Response MessageHeader"
+      }
+    ],
+    "ClaimResponse": [
+      {
+        "url": "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response",
+        "title": "CARIN RTPBC Response Using ClaimResponse"
       }
     ]
   },
   "usage": {
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.operation"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
