@@ -14,16 +14,16 @@
         </div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="Z:\fhir\igs\repos\build.fhir.carin-rtpbc\carin-rtpbc\source\resources"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\igs\repos\build.fhir.carin-rtpbc\carin-rtpbc\framework"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\framework"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\igs\repos\build.fhir.carin-rtpbc\carin-rtpbc\source\pages"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\pages"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="Z:\fhir\igs\repos\build.fhir.carin-rtpbc\carin-rtpbc\source\pages\extras"/>
+    <valueString value="Z:\fhir\CARIN2\CarinRtpbc58\source\pages\extras"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
   <version value="0.1.14"/>

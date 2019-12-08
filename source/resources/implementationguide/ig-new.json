@@ -11,19 +11,19 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\igs\\repos\\build.fhir.carin-rtpbc\\carin-rtpbc\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\igs\\repos\\build.fhir.carin-rtpbc\\carin-rtpbc\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\igs\\repos\\build.fhir.carin-rtpbc\\carin-rtpbc\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\igs\\repos\\build.fhir.carin-rtpbc\\carin-rtpbc\\source\\pages\\extras"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
   "version" : "0.1.14",

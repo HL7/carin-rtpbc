@@ -21,7 +21,7 @@
   fhir:ValueSet.name [ fhir:value "CarinRtbpcCoverageSummaryValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Coverage Summary Value Set"];
   fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-08T01:19:02-06:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2019-12-08T01:17:27-06:00"^^xsd:dateTime];
   fhir:ValueSet.description [ fhir:value "This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [

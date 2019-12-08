@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="6e150686-ff80-4e8c-b87f-7a6a233531ce"/>
+  <id value="78a05ac9-0efd-4da3-9605-b7d80de398c3"/>
   <meta>
-    <lastUpdated value="2019-12-08T01:19:02.638-06:00"/>
+    <lastUpdated value="2019-12-08T01:17:27.220-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -8085,8 +8085,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:d316fde6-902f-441d-b961-34a98fdcb847"/>
-          <timestamp value="2019-12-08T01:19:36-06:00"/>
+          <identifier value="urn:uuid:ea31ad0f-fda9-4f96-ba43-f3bea6edca9f"/>
+          <timestamp value="2019-12-08T01:17:45-06:00"/>
           <total value="1004"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13187,11 +13187,11 @@
         <name value="CarinRtbpcEventTypeValueSet"/>
         <title value="CARIN RTPBC Event Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-08T01:19:02-06:00"/>
+        <date value="2019-12-08T01:17:27-06:00"/>
         <description value="This value set contains event types used in RTPBC message headers."/>
         <expansion>
-          <identifier value="urn:uuid:cc11d8ee-c52c-4bd9-aba5-f0a960977eac"/>
-          <timestamp value="2019-12-08T01:19:44-06:00"/>
+          <identifier value="urn:uuid:cae3c4ec-0133-4021-ace0-4bb7cc468719"/>
+          <timestamp value="2019-12-08T01:17:45-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13216,22 +13216,8 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
     <resource>
       <ValueSet>
-        <id value="carin-rtpbc-country-code-value-set"/>
-        <meta>
-          <versionId value="1"/>
-          <lastUpdated value="2019-11-26T18:00:00.000-06:00"/>
-          <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^read"/>
-          </security>
-          <security>
-            <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-            <code value="everyone^write"/>
-          </security>
-        </meta>
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
@@ -13263,22 +13249,9 @@
             </table>
           </div>
         </text>
-        <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
-        <version value="0.1.14"/>
-        <name value="CarinRtpbcCountryCodeValueSet"/>
-        <title value="CARIN RTPBC Pharmacy Type Value Setf"/>
-        <status value="draft"/>
-        <date value="2019-11-20T00:00:00-06:00"/>
-        <publisher value="CARIN Alliance"/>
-        <description value="This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."/>
         <expansion>
-          <identifier value="urn:uuid:2691111c-6f99-4758-8931-6cde165b9564"/>
-          <timestamp value="2019-12-08T01:19:44-06:00"/>
-          <total value="2"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
+          <identifier value="urn:uuid:d7b9fe6f-cbbd-4547-a959-dea0e042bc1a"/>
+          <timestamp value="2019-12-08T06:58:29.798Z"/>
           <parameter>
             <name value="limitedExpansion"/>
             <valueString value="-1"/>
@@ -13384,11 +13357,11 @@
         <name value="CarinRtbpcCoverageSummaryValueSet"/>
         <title value="CARIN RTPBC Coverage Summary Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-08T01:19:02-06:00"/>
+        <date value="2019-12-08T01:17:27-06:00"/>
         <description value="This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
         <expansion>
-          <identifier value="urn:uuid:1873f2f2-b5f2-4866-85fb-a22a172e35fc"/>
-          <timestamp value="2019-12-08T01:19:45-06:00"/>
+          <identifier value="urn:uuid:d10c904b-36c2-482c-af13-93a5c92530d9"/>
+          <timestamp value="2019-12-08T01:17:45-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13551,11 +13524,11 @@
         <name value="CarinRtbpcPatientPayTypeValueSet"/>
         <title value="CARIN RTPBC Patient Pay Type Value Set"/>
         <status value="draft"/>
-        <date value="2019-12-08T01:19:02-06:00"/>
+        <date value="2019-12-08T01:17:27-06:00"/>
         <description value="This value set contains components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
         <expansion>
-          <identifier value="urn:uuid:2b0ffb97-b84f-4eee-be00-71db0e720999"/>
-          <timestamp value="2019-12-08T01:19:45-06:00"/>
+          <identifier value="urn:uuid:d2747554-65f9-4dae-ae87-88185b85b2e1"/>
+          <timestamp value="2019-12-08T01:17:45-06:00"/>
           <total value="10"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14282,8 +14255,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:c5a8116b-9459-4bff-a8d6-9ea0288d1cc5"/>
-          <timestamp value="2019-12-08T01:19:48-06:00"/>
+          <identifier value="urn:uuid:5e553bbb-dd89-424e-95e2-8b780262e55c"/>
+          <timestamp value="2019-12-08T01:17:45-06:00"/>
           <total value="75"/>
           <parameter>
             <name value="excludeNested"/>
