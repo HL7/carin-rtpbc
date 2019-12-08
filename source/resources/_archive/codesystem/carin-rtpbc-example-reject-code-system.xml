@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-example-reject-code-system" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-11-27T00:00:00.000-05:00" />
+  </meta>
+  <url value="http://ncpdp.org/reject-code" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcExampleRejectCodeSystem" />
+  <title value="CARIN RTPBC Example Reject Code System" />
+  <status value="draft" />
+  <date value="2019-11-27" />
+  <publisher value="CARIN Alliance" />
+  <description value="This code system contains example NCPDP Reject Codes (511-FB codes set) to be used by real-time pharmacy benefit check servers when encountering a data or business rule error that prevents processing from completing. This is a placeholder to be replaced prior to publishing with a formal mechanism for referencing in FHIR." />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="N1" />
+    <display value="No Patient Match Found" />
+    <definition value="No Patient Match Found" />
+  </concept>
+  <concept>
+    <code value="21" />
+    <display value="M/I Product/Service ID" />
+    <definition value="Missing or Invalid Product/Service ID" />
+  </concept>
+  <concept>
+    <code value="598" />
+    <display value="More Than One Patient Found" />
+    <definition value="More Than One Patient Found" />
+  </concept>
+  <concept>
+    <code value="599" />
+    <display value="Cardholder ID Matched But Last Name Did Not" />
+    <definition value="Cardholder ID Matched But Last Name Did Not" />
+  </concept>
+  <concept>
+    <code value="600" />
+    <display value="Coverage Outside Submitted Date Of Transaction" />
+    <definition value="Coverage Outside Submitted Date Of Transaction" />
+  </concept>
+</CodeSystem>

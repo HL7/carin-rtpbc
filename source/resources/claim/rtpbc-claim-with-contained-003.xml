@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Claim
+    xmlns="http://hl7.org/fhir">
+    <id value="rtpbc-claim-with-contained-003"/>
+    <meta>
+        <versionId value="5"/>
+        <lastUpdated value="2019-11-08T12:13:42.000-05:00"/>
+    </meta>
+    <contained>
+        <Patient>
+            <id value="rtpbc-patient-03"/>
+            <name>
+                <family value="Doe"/>
+                <given value="Jane"/>
+            </name>
+            <gender value="female"/>
+            <birthDate value="1975-12-05"/>
+            <address>
+                <line value="100 Oak Court"/>
+                <city value="Madison"/>
+                <state value="WI"/>
+                <postalCode value="53510"/>
+                <country value="US"/>
+            </address>
+        </Patient>
+    </contained>
+    <contained>
+        <Organization>
+            <id value="rtpbc-organization-03"/>
+            <identifier>
+                <system value="http://hl7.org/fhir/sid/us-npi"/>
+                <value value="9876543210"/>
+            </identifier>
+            <name value="Hometown Drug"/>
+            <telecom>
+                <system value="phone"/>
+                <value value="6081234567"/>
+            </telecom>
+            <address>
+                <line value="900 9th Street"/>
+                <city value="Madison"/>
+                <state value="WI"/>
+                <postalCode value="53535"/>
+                <country value="US"/>
+            </address>
+        </Organization>
+    </contained>
+    <contained>
+        <Practitioner>
+            <id value="rtpbc-practitioner-03"/>
+            <identifier>
+                <system value="http://hl7.org/fhir/sid/us-npi"/>
+                <value value="1234567890"/>
+            </identifier>
+            <name>
+                <family value="Johnson"/>
+            </name>
+        </Practitioner>
+    </contained>
+    <contained>
+        <Coverage>
+            <id value="rtpbc-coverage-03"/>
+            <status value="active"/>
+            <beneficiary>
+                <reference value="Patient/rtpbc-patient-03"/>
+            </beneficiary>
+            <payor>
+                <identifier>
+                    <value value="Pharmacy Plans US"/>
+                </identifier>
+            </payor>
+            <class>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                        <code value="rxbin"/>
+                    </coding>
+                </type>
+                <value value="BIN001"/>
+            </class>
+            <class>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                        <code value="rxpcn"/>
+                    </coding>
+                </type>
+                <value value="PCN002"/>
+            </class>
+            <class>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                        <code value="group"/>
+                    </coding>
+                </type>
+                <value value="GROUP0001"/>
+            </class>
+            <class>
+                <type>
+                    <coding>
+                        <system value="http://terminology.hl7.org/CodeSystem/coverage-class"/>
+                        <code value="rxid"/>
+                    </coding>
+                </type>
+                <value value="MEMBER000001"/>
+            </class>
+        </Coverage>
+    </contained>
+    <identifier>
+        <value value="rtpbc-03"/>
+    </identifier>
+    <status value="active"/>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
+            <code value="pharmacy"/>
+            <display value="Pharmacy"/>
+        </coding>
+    </type>
+    <use value="predetermination"/>
+    <patient>
+        <reference value="#rtpbc-patient-03"/>
+    </patient>
+    <created value="2019-11-01T11:20:54-05:00"/>
+    <provider>
+        <reference value="#rtpbc-organization-03"/>
+    </provider>
+    <priority>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/processpriority"/>
+            <code value="normal"/>
+            <display value="Normal"/>
+        </coding>
+    </priority>
+    <prescription>
+        <reference value="MedicationRequest/rtpbc-medicationrequest-03"/>
+    </prescription>
+    <careTeam>
+        <sequence value="1"/>
+        <provider>
+            <reference value="#rtpbc-practitioner-03"/>
+        </provider>
+    </careTeam>
+    <insurance>
+        <sequence value="1"/>
+        <focal value="true"/>
+        <coverage>
+            <reference value="#rtpbc-coverage-03"/>
+        </coverage>
+    </insurance>
+    <item>
+        <sequence value="1"/>
+        <careTeamSequence value="1"/>
+        <productOrService>
+            <coding>
+                <system value="http://example.org/ndc11/placeholder"/>
+                <code value="00777310402"/>
+                <display value="Prozac 10mg capsule"/>
+            </coding>
+        </productOrService>
+        <quantity>
+            <value value="60"/>
+            <unit value="EA"/>
+        </quantity>
+    </item>
+</Claim>

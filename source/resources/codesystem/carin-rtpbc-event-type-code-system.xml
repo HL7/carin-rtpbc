@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-event-type-code-system" />
+  <meta>
+    <versionId value="5" />
+    <lastUpdated value="2019-12-02T20:00:00.000-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+  <version value="1.0.0" />
+  <name value="CarinRtpbcEventTypeCodeSystem" />
+  <title value="CARIN RTPBC Event Type Code System" />
+  <status value="draft" />
+  <date value="2019-10-31" />
+  <publisher value="CARIN Alliance" />
+  <description value="This code system defines event types used in RTPBC message headers" />
+  <caseSensitive value="false" />
+  <content value="complete" />
+  <concept>
+    <code value="rtpbc-request" />
+    <display value="RTPBC Request" />
+    <definition value="Real-time Pharmacy Benefit Check (RTPBC) request" />
+  </concept>
+  <concept>
+    <code value="rtpbc-response" />
+    <display value="RTPBC Response" />
+    <definition value="Real-time Pharmacy Benefit Check (RTPBC) response" />
+  </concept>
+</CodeSystem>

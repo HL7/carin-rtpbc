@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-coverage-03-c" />
+  <status value="active" />
+  <type>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/coverage-selfpay" />
+      <code value="pay" />
+      <display value="Pay" />
+    </coding>
+  </type>
+  <beneficiary>
+    <reference value="Patient/rtpbc-patient-03" />
+  </beneficiary>
+  <relationship>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/subscriber-relationship" />
+      <code value="self" />
+      <display value="Self" />
+    </coding>
+  </relationship>
+  <period>
+    <start value="2019-11-12T06:21:15-05:00" />
+    <end value="2019-11-13T06:21:15-05:00" />
+  </period>
+  <payor>
+    <identifier>
+      <value value="Rx Price Source" />
+    </identifier>
+  </payor>
+  <class>
+    <type>
+      <coding>
+        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
+        <code value="coupon" />
+        <display value="Coupon" />
+      </coding>
+    </type>
+    <value value="COUPON98765" />
+  </class>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+        <code value="rxbin" />
+      </coding>
+    </type>
+    <value value="COUPONBIN001" />
+  </class>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+        <code value="rxpcn" />
+      </coding>
+    </type>
+    <value value="COUPONPCN002" />
+  </class>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+        <code value="group" />
+      </coding>
+    </type>
+    <value value="COUPONGROUP0001" />
+  </class>
+  <class>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
+        <code value="rxid" />
+      </coding>
+    </type>
+    <value value="COUPONMEMBER000001" />
+  </class>
+</Coverage>

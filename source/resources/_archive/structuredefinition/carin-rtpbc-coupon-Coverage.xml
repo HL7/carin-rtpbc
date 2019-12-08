@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-coupon-Coverage" />
+  <meta>
+    <versionId value="1" />
+    <lastUpdated value="2019-12-03T00:00:00.000-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coupon-coverage" />
+  <version value="0.0.1" />
+  <name value="CarinRtpbcCouponCoverage" />
+  <title value="CARIN RTPBC Coupon Coverage" />
+  <status value="draft" />
+  <date value="2019-12-03" />
+  <publisher value="CARIN Alliance" />
+  <description value="This profile constrains the Coverage resource for conveying information about a discount coupon that a patient can apply against the cost of a medication product. It can represent either an issued coupon or a key that can be used to obtain a coupon." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Coverage" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Coverage">
+      <path value="Coverage" />
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <label value="Coupon Source" />
+      <short value="Coupon Source" />
+      <comment value="The party issuing the coupon (discount pricing source or other)" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class">
+      <path value="Coverage.class" />
+      <label value="Coupon identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <description value="Identifier used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." />
+        <ordered value="false" />
+        <rules value="closed" />
+      </slicing>
+      <short value="Coupon identifier" />
+      <definition value="Identifier used to convey coupon information (either an issued discount coupon or a key that can be used to request a discount coupon)." />
+      <comment value="An issued discount coupon identifier is conveyed using the coupon class.type. A key that can be used to request a discount coupon is conveyed using the coupon-request class-type." />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class.type">
+      <path value="Coverage.class.type" />
+      <binding>
+        <strength value="extensible" />
+        <description value="Expanded Coverage Class Value Set (incl coupon concepts)" />
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-expanded-coverage-class" />
+      </binding>
+    </element>
+    <element id="Coverage.class:coupon-request">
+      <path value="Coverage.class" />
+      <sliceName value="coupon-request" />
+      <label value="Coupon Request" />
+      <short value="Coupon Request" />
+      <comment value="A key used to request a discount coupon." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:coupon-request.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
+          <code value="coupon-request" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.class:coupon">
+      <path value="Coverage.class" />
+      <sliceName value="coupon" />
+      <label value="Coupon" />
+      <short value="Coupon" />
+      <comment value="A discount coupon." />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class:coupon.type">
+      <path value="Coverage.class.type" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coupon-coverage-class" />
+          <code value="coupon" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Coverage.payor.identifier">
+      <path value="Coverage.payor.identifier" />
+      <label value="Coupon Source" />
+      <short value="Coupon Source" />
+      <definition value="The party issuing the coupon (discount pricing source or other)" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.identifier.value">
+      <path value="Coverage.payor.identifier.value" />
+      <label value="Coupon Source ID Value" />
+      <short value="Copuon Source ID Value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

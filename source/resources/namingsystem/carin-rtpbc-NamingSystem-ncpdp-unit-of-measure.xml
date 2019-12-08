@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="carin-rtpbc-NamingSystem-ncpdp-unit-of-measure" />
+  <name value="CarinRtpbcNamingSystemNcpdpUnitOfMeasure" />
+  <status value="active" />
+  <kind value="codesystem" />
+  <date value="2019-11-24" />
+  <publisher value="CARIN Alliance" />
+  <contact>
+    <name value="CARIN Alliance" />
+    <telecom>
+      <system value="url" />
+      <value value="http://www.carinalliance.com" />
+    </telecom>
+  </contact>
+  <responsible value="National Council for Prescription Drug Programs (NCPDP)" />
+  <description value="The NCPDP Unit of Measure (600-28) code set defines quantity units of measure for use in billing transactions." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+    </coding>
+  </jurisdiction>
+  <usage value="Used in the US to specify product quantities in billing transactions" />
+  <uniqueId>
+    <type value="uri" />
+    <value value="http://ncpdp.org/billing-unit-of-measure" />
+  </uniqueId>
+</NamingSystem>
