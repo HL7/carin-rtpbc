@@ -10,7 +10,7 @@
 </div><p>This code system http://terminology.hl7.org/CodeSystem/ndc-11 defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">00777310402<a name="placeholder-ndc-11-code-system-00777310402"> </a></td><td>Prozac 10mg capsule</td><td>Example NDC-11 for Prozac 10mg capsule</td></tr><tr><td style="white-space:nowrap">50111064701<a name="placeholder-ndc-11-code-system-50111064701"> </a></td><td>fluoxetine 10mg capsule</td><td>Example NDC-11 for fluoxetine 10mg tablet</td></tr><tr><td style="white-space:nowrap">00186502031<a name="placeholder-ndc-11-code-system-00186502031"> </a></td><td>Nexium 20mg capsule</td><td>Example NDC-11 for Nexium 20mg capsule</td></tr><tr><td style="white-space:nowrap">00093645056<a name="placeholder-ndc-11-code-system-00093645056"> </a></td><td>esomeprazole magnesium 20mg capsule</td><td>Example NDC-11 for esomeprazole magnesium 20mg capsule</td></tr></table></div>
   </text>
   <url value="http://terminology.hl7.org/CodeSystem/ndc-11"/>
-  <version value="0.1.14"/>
+  <version value="0.1.15"/>
   <name value="PlaceholderNdc11CodeSystem"/>
   <title value="Placeholder NDC11 Code System"/>
   <status value="active"/>

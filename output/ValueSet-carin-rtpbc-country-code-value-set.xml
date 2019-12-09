@@ -10,7 +10,7 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include these codes as defined in <code>urn:iso:std:iso:3166</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>US</td><td>United States of America</td><td/></tr><tr><td>CA</td><td>Canada</td><td/></tr></table></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
-  <version value="0.1.14"/>
+  <version value="0.1.15"/>
   <name value="CarinRtpbcCountryCodeValueSet"/>
   <title value="CARIN RTPBC Pharmacy Type Value Setf"/>
   <status value="active"/>

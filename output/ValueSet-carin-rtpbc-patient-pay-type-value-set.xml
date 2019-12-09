@@ -10,7 +10,7 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type</code></a></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
-  <version value="0.1.14"/>
+  <version value="0.1.15"/>
   <name value="CarinRtbpcPatientPayTypeValueSet"/>
   <title value="CARIN RTPBC Patient Pay Type Value Set"/>
   <status value="active"/>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="c4a2a0a3-4dae-485d-b66c-dc66ea9d10b9"/>
+  <id value="ce223a07-050a-4e4a-a975-6f3d371f1c96"/>
   <meta>
-    <lastUpdated value="2019-12-09T05:36:44.248-06:00"/>
+    <lastUpdated value="2019-12-09T05:55:20.821-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -18,7 +18,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has &gt;1000 codes in it. In order to keep the publication size manageable, only a selection (1000 codes) of the whole set of codes is shown</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on RxNorm version ??, http://terminology.hl7.org/CodeSystem/ndc-11 version 0.1.14</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on RxNorm version ??, http://terminology.hl7.org/CodeSystem/ndc-11 version 0.1.15</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -8074,7 +8074,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
         <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
         <status value="active"/>
@@ -8093,8 +8093,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:f94870a4-86bb-494c-9afe-aea6e9b5a2f0"/>
-          <timestamp value="2019-12-09T05:37:00-06:00"/>
+          <identifier value="urn:uuid:be6a9ff8-e5f6-4b9f-b6bb-2f0175a22c2d"/>
+          <timestamp value="2019-12-09T05:55:50-06:00"/>
           <total value="1004"/>
           <parameter>
             <name value="excludeNested"/>
@@ -8102,7 +8102,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://terminology.hl7.org/CodeSystem/ndc-11|0.1.14"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/ndc-11|0.1.15"/>
           </parameter>
           <parameter>
             <name value="limitedExpansion"/>
@@ -13152,7 +13152,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 2 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type version 0.1.14</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type version 0.1.15</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-event-type-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type</code>
@@ -13190,7 +13190,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-event-type"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CarinRtbpcEventTypeValueSet"/>
         <title value="CARIN RTPBC Event Type Value Set"/>
         <status value="active"/>
@@ -13206,8 +13206,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8a74a52c-a91a-4cb2-adb4-ba63011ea017"/>
-          <timestamp value="2019-12-09T05:37:02-06:00"/>
+          <identifier value="urn:uuid:2889f95c-f545-49f7-a8b9-1d9c346a1031"/>
+          <timestamp value="2019-12-09T05:55:54-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13215,7 +13215,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type|0.1.14"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type|0.1.15"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type"/>
@@ -13271,7 +13271,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CarinRtpbcCountryCodeValueSet"/>
         <title value="CARIN RTPBC Pharmacy Type Value Setf"/>
         <status value="active"/>
@@ -13287,8 +13287,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0a236131-145d-4d36-a59b-c6e30a47a465"/>
-          <timestamp value="2019-12-09T05:37:02-06:00"/>
+          <identifier value="urn:uuid:962c2ba1-8316-4c4c-8449-ba63cd5035d0"/>
+          <timestamp value="2019-12-09T05:55:54-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13324,7 +13324,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 6 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary version 0.1.14</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary version 0.1.15</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-coverage-summary-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary</code>
@@ -13394,7 +13394,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-coverage-summary"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CarinRtbpcCoverageSummaryValueSet"/>
         <title value="CARIN RTPBC Coverage Summary Value Set"/>
         <status value="active"/>
@@ -13409,8 +13409,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:0e1dcbcd-bd26-4c1b-ae2b-2b12378a5e75"/>
-          <timestamp value="2019-12-09T05:37:02-06:00"/>
+          <identifier value="urn:uuid:baa4ae16-ec02-4141-bd34-0d953d08abcb"/>
+          <timestamp value="2019-12-09T05:55:54-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13418,7 +13418,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary|0.1.14"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary|0.1.15"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary"/>
@@ -13466,7 +13466,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 10 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type version 0.1.14</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type version 0.1.15</p>
             <p>All codes from system 
               <a href="CodeSystem-carin-rtpbc-patient-pay-type-code-system.html">
                 <code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type</code>
@@ -13568,7 +13568,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CarinRtbpcPatientPayTypeValueSet"/>
         <title value="CARIN RTPBC Patient Pay Type Value Set"/>
         <status value="active"/>
@@ -13584,8 +13584,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:efd7916a-7ddf-48bf-b7c1-ca4380773532"/>
-          <timestamp value="2019-12-09T05:37:02-06:00"/>
+          <identifier value="urn:uuid:5e4b2f67-246f-44e0-948c-a44d91d51d45"/>
+          <timestamp value="2019-12-09T05:55:54-06:00"/>
           <total value="10"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13593,7 +13593,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type|0.1.14"/>
+            <valueUri value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type|0.1.15"/>
           </parameter>
           <contains>
             <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
@@ -13658,7 +13658,7 @@
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 75 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://placeholder-for-canadapost.ca version 0.1.14</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px">Expansion based on http://placeholder-for-canadapost.ca version 0.1.15</p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
@@ -14291,7 +14291,7 @@
           </div>
         </text>
         <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code"/>
-        <version value="0.1.14"/>
+        <version value="0.1.15"/>
         <name value="CarinRtpbcStateAndProvinceCodeValueSet"/>
         <title value="CARIN RTPBC Two Letter State and Province Code Value Set"/>
         <status value="active"/>
@@ -14307,8 +14307,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:fd49ad74-dfda-498c-a0c4-76ab23908ff2"/>
-          <timestamp value="2019-12-09T05:37:03-06:00"/>
+          <identifier value="urn:uuid:8f77b9d9-59eb-4f15-9e2b-d7e24cd4e730"/>
+          <timestamp value="2019-12-09T05:55:55-06:00"/>
           <total value="75"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14320,7 +14320,7 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://placeholder-for-canadapost.ca|0.1.14"/>
+            <valueUri value="http://placeholder-for-canadapost.ca|0.1.15"/>
           </parameter>
           <contains>
             <system value="https://www.usps.com/"/>

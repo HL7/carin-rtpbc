@@ -26,7 +26,7 @@
     "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
-  "version" : "0.1.14",
+  "version" : "0.1.15",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",

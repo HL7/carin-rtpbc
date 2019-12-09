@@ -10,7 +10,7 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://ncpdp.org/pharmacy-type</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-pharmacy-type"/>
-  <version value="0.1.14"/>
+  <version value="0.1.15"/>
   <name value="CARINRTPBCPharmacyTypeValueSet"/>
   <title value="CARIN RTPBC Pharmacy Type Value Set"/>
   <status value="active"/>

@@ -10,7 +10,7 @@
 </div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">rtpbc-request<a name="carin-rtpbc-event-type-code-system-rtpbc-request"> </a></td><td>RTPBC Request</td><td>Real-time Pharmacy Benefit Check (RTPBC) request</td></tr><tr><td style="white-space:nowrap">rtpbc-response<a name="carin-rtpbc-event-type-code-system-rtpbc-response"> </a></td><td>RTPBC Response</td><td>Real-time Pharmacy Benefit Check (RTPBC) response</td></tr></table></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type"/>
-  <version value="0.1.14"/>
+  <version value="0.1.15"/>
   <name value="CarinRtpbcEventTypeCodeSystem"/>
   <title value="CARIN RTPBC Event Type Code System"/>
   <status value="active"/>
