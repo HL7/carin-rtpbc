@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="ce223a07-050a-4e4a-a975-6f3d371f1c96"/>
+  <id value="c17259c3-a041-48aa-99cb-1fa3b49b7abe"/>
   <meta>
-    <lastUpdated value="2019-12-09T05:55:20.821-06:00"/>
+    <lastUpdated value="2019-12-09T08:09:38.554-06:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -8093,8 +8093,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:be6a9ff8-e5f6-4b9f-b6bb-2f0175a22c2d"/>
-          <timestamp value="2019-12-09T05:55:50-06:00"/>
+          <identifier value="urn:uuid:ceadb1a6-54b7-493e-bd0c-66861436da3b"/>
+          <timestamp value="2019-12-09T08:10:05-06:00"/>
           <total value="1004"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13206,8 +13206,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:2889f95c-f545-49f7-a8b9-1d9c346a1031"/>
-          <timestamp value="2019-12-09T05:55:54-06:00"/>
+          <identifier value="urn:uuid:ec6c1ead-8e9f-4232-b05d-4e1706cf804b"/>
+          <timestamp value="2019-12-09T08:10:07-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13287,8 +13287,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:962c2ba1-8316-4c4c-8449-ba63cd5035d0"/>
-          <timestamp value="2019-12-09T05:55:54-06:00"/>
+          <identifier value="urn:uuid:0fbe287f-2c5c-4e63-8dab-0646e2b075d1"/>
+          <timestamp value="2019-12-09T08:10:07-06:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13409,8 +13409,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:baa4ae16-ec02-4141-bd34-0d953d08abcb"/>
-          <timestamp value="2019-12-09T05:55:54-06:00"/>
+          <identifier value="urn:uuid:90af84e1-5d05-4efe-81f8-59e050ae6514"/>
+          <timestamp value="2019-12-09T08:10:07-06:00"/>
           <total value="6"/>
           <parameter>
             <name value="excludeNested"/>
@@ -13584,8 +13584,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:5e4b2f67-246f-44e0-948c-a44d91d51d45"/>
-          <timestamp value="2019-12-09T05:55:54-06:00"/>
+          <identifier value="urn:uuid:8cb6e7c9-945c-466d-a7ae-2d703041813a"/>
+          <timestamp value="2019-12-09T08:10:07-06:00"/>
           <total value="10"/>
           <parameter>
             <name value="excludeNested"/>
@@ -14307,8 +14307,8 @@
           </coding>
         </jurisdiction>
         <expansion>
-          <identifier value="urn:uuid:8f77b9d9-59eb-4f15-9e2b-d7e24cd4e730"/>
-          <timestamp value="2019-12-09T05:55:55-06:00"/>
+          <identifier value="urn:uuid:e2a6e24e-f30d-453b-a6f4-1a820f39b875"/>
+          <timestamp value="2019-12-09T08:10:08-06:00"/>
           <total value="75"/>
           <parameter>
             <name value="excludeNested"/>
