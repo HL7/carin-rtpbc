@@ -2,19 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-request-bundle" />
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle" />
-  <version value="0.1.0" />
   <name value="CarinRtpbcRequestBundle" />
   <title value="CARIN RTPBC Request Bundle" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
-  <date value="2019-12-07T00:00:00+00:00" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
-  <contact>
-    <telecom>
-      <system value="email" />
-      <value value="fm@frankmckinney.com" />
-    </telecom>
-  </contact>
   <description value="This profile constrains a Bundle resource for use as the request in a Real-time Pharmacy Benefit Check (RTPBC) process" />
   <jurisdiction>
     <coding>

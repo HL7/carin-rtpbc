@@ -5,6 +5,6 @@ In this example, the Coverage resource is used to describe an authorization key 
 
 <br/>
 
-<!-- <div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-coverage-03.png" alt="coverage"></div> -->
+<!-- <div><img src="images/rtpbc-coverage-03.png" alt="coverage"></div> -->
 
 <br/>

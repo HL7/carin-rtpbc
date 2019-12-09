@@ -3,8 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-patient-pay-type-code-system"/>
   <meta>
-    <versionId value="5"/>
-    <lastUpdated value="2019-12-02T19:00:00.000-06:00"/>
+    <lastUpdated value="2019-12-07T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Patient Pay Type Code System</h2><div><p>This code system defines components of a patient's responsibility for a prescription product's cost.</p>
@@ -14,10 +13,18 @@
   <version value="0.1.14"/>
   <name value="CarinRtpbcPatientPayTypeCodeSystem"/>
   <title value="CARIN RTPBC Patient Pay Type Code System"/>
-  <status value="draft"/>
-  <date value="2019-10-31T00:00:00-05:00"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
   <description value="This code system defines components of a patient&#39;s responsibility for a prescription product&#39;s cost."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <concept>

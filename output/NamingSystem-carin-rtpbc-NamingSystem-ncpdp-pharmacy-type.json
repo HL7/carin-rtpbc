@@ -3,12 +3,12 @@
   "id": "carin-rtpbc-NamingSystem-ncpdp-pharmacy-type",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-NamingSystem-ncpdp-pharmacy-type</p><p><b>name</b>: CarinRtpbcNamingSystemNcpdpPharmacyType</p><p><b>status</b>: active</p><p><b>kind</b>: codesystem</p><p><b>date</b>: Nov 24, 2019 12:00:00 AM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>responsible</b>: National Council for Prescription Drug Programs (NCPDP)</p><p><b>description</b>: The NCPDP Pharmacy Type (955-HR) code set defines a set of pharmacy type categories.</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>usage</b>: Used to indicate a pharmacy's type.</p><h3>UniqueIds</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>uri</td><td>http://ncpdp.org/pharmacy-type</td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: carin-rtpbc-NamingSystem-ncpdp-pharmacy-type</p><p><b>name</b>: CarinRtpbcNamingSystemNcpdpPharmacyType</p><p><b>status</b>: active</p><p><b>kind</b>: codesystem</p><p><b>date</b>: Dec 7, 2019 11:00:00 PM</p><p><b>publisher</b>: CARIN Alliance</p><p><b>contact</b>: </p><p><b>responsible</b>: National Council for Prescription Drug Programs (NCPDP)</p><p><b>description</b>: The NCPDP Pharmacy Type (955-HR) code set defines a set of pharmacy type categories.</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow\">(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America)</span></p><p><b>usage</b>: Used to indicate a pharmacy's type.</p><h3>UniqueIds</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value</b></td></tr><tr><td>*</td><td>uri</td><td>http://ncpdp.org/pharmacy-type</td></tr></table></div>"
   },
   "name": "CarinRtpbcNamingSystemNcpdpPharmacyType",
   "status": "active",
   "kind": "codesystem",
-  "date": "2019-11-24T00:00:00-06:00",
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "contact": [
     {

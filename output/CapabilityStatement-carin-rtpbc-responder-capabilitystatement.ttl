@@ -16,18 +16,10 @@
   fhir:CapabilityStatement.version [ fhir:value "0.1.14"];
   fhir:CapabilityStatement.name [ fhir:value "CarinRtpbcResponderCapabilityStatement"];
   fhir:CapabilityStatement.title [ fhir:value "CARIN RTPBC Responder Capability Statement"];
-  fhir:CapabilityStatement.status [ fhir:value "draft"];
+  fhir:CapabilityStatement.status [ fhir:value "active"];
   fhir:CapabilityStatement.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:CapabilityStatement.date [ fhir:value "2019-12-06T18:00:00-06:00"^^xsd:dateTime];
+  fhir:CapabilityStatement.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:CapabilityStatement.publisher [ fhir:value "CARIN Alliance"];
-  fhir:CapabilityStatement.contact [
-     fhir:index 0;
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "fm@frankmckinney.com" ]
-     ]
-  ];
   fhir:CapabilityStatement.description [ fhir:value "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a CARIN Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation."];
   fhir:CapabilityStatement.jurisdiction [
      fhir:index 0;

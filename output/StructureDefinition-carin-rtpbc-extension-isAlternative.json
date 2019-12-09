@@ -19,8 +19,9 @@
   "version": "0.1.14",
   "name": "CarinRtpbcExtensionIsAlternative",
   "title": "CARIN RTPBC Extension isAlternative",
-  "status": "draft",
-  "date": "2019-11-13T00:00:00-06:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "contact": [
     {
@@ -41,6 +42,17 @@
     }
   ],
   "description": "This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

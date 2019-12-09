@@ -3,19 +3,28 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-prescribable-product-code-value-set"/>
   <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-10-29T21:40:15.000-05:00"/>
+    <lastUpdated value="2019-12-07T23:00:00.000-06:00"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-placeholder-ndc-11-code-system.html"><code>http://terminology.hl7.org/CodeSystem/ndc-11</code></a></li><li>Include codes from <a href="http://www.nlm.nih.gov/research/umls/rxnorm"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><div><p>This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products).</p>
+</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href="CodeSystem-placeholder-ndc-11-code-system.html"><code>http://terminology.hl7.org/CodeSystem/ndc-11</code></a></li><li>Include codes from <a href="http://www.nlm.nih.gov/research/umls/rxnorm"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code"/>
   <version value="0.1.14"/>
   <name value="CARINRTPBCPrescribableProductCodeValueSet"/>
   <title value="CARIN RTPBC Prescribable Product Code Value Set"/>
-  <status value="draft"/>
-  <date value="2019-10-29T00:00:00-05:00"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
+  <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
   <compose>
     <include>
       <system value="http://terminology.hl7.org/CodeSystem/ndc-11"/>

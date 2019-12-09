@@ -3,8 +3,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
   <id value="placeholder-ndc-11-code-system"/>
   <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-26T23:00:00.000-06:00"/>
+    <lastUpdated value="2019-12-07T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Placeholder NDC11 Code System</h2><div><p>This code system contains example NDC 11 drug product identifiers, used to identify requested and alternative medications in the real-time pharmacy benefit check process. This code system normalizes NDC codes by removing dashes and standardizing the length of each NDC segment. This is a placeholder to be replaced prior to publishing with an HL7/FHIR maintained URL (currently being established).</p>
@@ -15,9 +14,17 @@
   <name value="PlaceholderNdc11CodeSystem"/>
   <title value="Placeholder NDC11 Code System"/>
   <status value="active"/>
-  <date value="2019-11-27T00:00:00-06:00"/>
+  <experimental value="false"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
   <description value="This code system contains example NDC 11 drug product identifiers, used to identify requested and alternative medications in the real-time pharmacy benefit check process. This code system normalizes NDC codes by removing dashes and standardizing the length of each NDC segment. This is a placeholder to be replaced prior to publishing with an HL7/FHIR maintained URL (currently being established)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
   <caseSensitive value="false"/>
   <content value="complete"/>
   <concept>

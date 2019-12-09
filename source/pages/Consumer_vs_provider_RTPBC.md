@@ -17,6 +17,6 @@ The table below summarizes the structure and content of the NCPDP real-time phar
 
 <br>
  
-![RTPBC high-level content structure](https://www.frankmckinney.com/carin-rtpbc/high-level-content-view-table.png)
+![RTPBC high-level content structure](images/high-level-content-view-table.png)
 
 <br><br>

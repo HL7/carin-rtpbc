@@ -9,20 +9,30 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-error-code-value-set"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "2" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-17T14:30:00.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-07T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "additional" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing.</div>"
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Error Code Value Set</h2><div><p>This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. Values are defined in the NCPDP-maintained Reject Code (511-FB) code set.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://ncpdp.org/reject-code</code></li></ul></div>"
   ];
   fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"];
   fhir:ValueSet.version [ fhir:value "0.1.14"];
   fhir:ValueSet.name [ fhir:value "CarinRtbpcErrorCodeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Error Code Value Set"];
-  fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-12-08T01:17:27-06:00"^^xsd:dateTime];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
   fhir:ValueSet.description [ fhir:value "This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. Values are defined in the NCPDP-maintained Reject Code (511-FB) code set."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;

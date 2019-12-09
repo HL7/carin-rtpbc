@@ -20,10 +20,20 @@
   fhir:CodeSystem.version [ fhir:value "0.1.14"];
   fhir:CodeSystem.name [ fhir:value "PlaceholderCanadianProvinceCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Placeholder Canadian Province Code System"];
-  fhir:CodeSystem.status [ fhir:value "draft"];
-  fhir:CodeSystem.date [ fhir:value "2019-11-27T00:00:00-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.description [ fhir:value "This code system defines two letter Canadian province codes. It is intended as a placeholder to be replaced by a NamingSystem to canadapost.ca once IG tooling supports"];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [

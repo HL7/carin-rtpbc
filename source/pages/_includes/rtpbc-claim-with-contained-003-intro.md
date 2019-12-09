@@ -24,16 +24,16 @@ The supporting data (patient, coverage, prescription, etc.) consists of identify
 
 <br/>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-3-claim.png" alt="claim"></div>
+<div><img src="images/rtpbc-bundle-request-03-3-claim.png" alt="claim"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-4-patient.png" alt="patient"></div>
+<div><img src="images/rtpbc-bundle-request-03-4-patient.png" alt="patient"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-5-coverage.png" alt="coverage"></div>
+<div><img src="images/rtpbc-bundle-request-03-5-coverage.png" alt="coverage"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-6-medication-request.png" alt="medicationrequest"></div>
+<div><img src="images/rtpbc-bundle-request-03-6-medication-request.png" alt="medicationrequest"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-7-practitioner.png" alt="practitioner"></div>
+<div><img src="images/rtpbc-bundle-request-03-7-practitioner.png" alt="practitioner"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-request-03-8-organization-pharmacy.png" alt="organization (pharmacy)"></div>
+<div><img src="images/rtpbc-bundle-request-03-8-organization-pharmacy.png" alt="organization (pharmacy)"></div>
 
 <br/>

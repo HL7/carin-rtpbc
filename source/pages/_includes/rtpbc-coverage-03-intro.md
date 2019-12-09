@@ -9,6 +9,6 @@ In this example, the patient's insurance coverage identifiers are...
 
 <br/>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-coverage-03.png" alt="coverage"></div>
+<div><img src="images/rtpbc-coverage-03.png" alt="coverage"></div>
 
 <br/>

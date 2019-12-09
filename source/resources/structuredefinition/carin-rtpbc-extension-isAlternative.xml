@@ -8,11 +8,12 @@
     <valueInteger value="1" />
   </extension>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" />
-  <version value="4.0.0" />
+  <version value="1" />
   <name value="CarinRtpbcExtensionIsAlternative" />
   <title value="CARIN RTPBC Extension isAlternative" />
-  <status value="draft" />
-  <date value="2019-11-13" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
   <contact>
     <telecom>
@@ -27,6 +28,13 @@
     </telecom>
   </contact>
   <description value="This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
   <fhirVersion value="4.0.0" />
   <kind value="primitive-type" />
   <abstract value="false" />

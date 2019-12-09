@@ -3,35 +3,10 @@
 <Patient xmlns="http://hl7.org/fhir">
   <id value="rtpbc-patient-03"/>
   <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-05T22:52:23.000-05:00"/>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-            <div class="hapiHeaderText">Jane 
-                <b>DOE </b>
-            </div>
-            <table class="hapiPropertyTable">
-                <tbody>
-                    <tr>
-                        <td>Address</td>
-                        <td>
-                            <span>100 Oak Court </span>
-                            <br/>
-                            <span>Madison </span>
-                            <span>WI </span>
-                            <span>US </span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Date of birth</td>
-                        <td>
-                            <span>05 December 1975</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-patient-03</p><p><b>meta</b>: </p><p><b>name</b>: Jane Doe </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1975-12-05</p><p><b>address</b>: 100 Oak Court Madison WI 53510 US </p></div>
   </text>
   <name>
     <family value="Doe"/>

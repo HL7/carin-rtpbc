@@ -25,8 +25,9 @@
   fhir:StructureDefinition.version [ fhir:value "0.1.14"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcExtensionIsAlternative"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Extension isAlternative"];
-  fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.date [ fhir:value "2019-11-13T00:00:00-06:00"^^xsd:dateTime];
+  fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -44,6 +45,15 @@
      ]
   ];
   fhir:StructureDefinition.description [ fhir:value "This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service."];
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

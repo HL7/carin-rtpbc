@@ -2,18 +2,7 @@
   "resourceType": "ValueSet",
   "id": "carin-rtpbc-country-code-value-set",
   "meta": {
-    "versionId": "1",
-    "lastUpdated": "2019-11-26T18:00:00.000-06:00",
-    "security": [
-      {
-        "system": "https://trifolia-fhir.lantanagroup.com/security",
-        "code": "everyone^read"
-      },
-      {
-        "system": "https://trifolia-fhir.lantanagroup.com/security",
-        "code": "everyone^write"
-      }
-    ]
+    "lastUpdated": "2019-12-07T23:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
@@ -23,10 +12,22 @@
   "version": "0.1.14",
   "name": "CarinRtpbcCountryCodeValueSet",
   "title": "CARIN RTPBC Pharmacy Type Value Setf",
-  "status": "draft",
-  "date": "2019-11-20T00:00:00-06:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "description": "This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA).",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

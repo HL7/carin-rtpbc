@@ -14,12 +14,12 @@ Content:
 <br/>
 
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-response-03-1-bundle.png" alt="bundle"></div>
+<div><img src="images/rtpbc-bundle-response-03-1-bundle.png" alt="bundle"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-response-03-3-claim-response.png" alt="claimresponse"></div>
+<div><img src="images/rtpbc-bundle-response-03-3-claim-response.png" alt="claimresponse"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-response-03-4-patient.png" alt="patient"></div>
+<div><img src="images/rtpbc-bundle-response-03-4-patient.png" alt="patient"></div>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-bundle-response-03-5-organization-pharmacy.png" alt="organization-pharmacy"></div>
+<div><img src="images/rtpbc-bundle-response-03-5-organization-pharmacy.png" alt="organization-pharmacy"></div>
 
 <br/>

@@ -2,30 +2,26 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-billing-unit-value-set" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2019-11-06T15:31:34.000-05:00" />
+    <lastUpdated value="2019-12-08T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit" />
   <version value="1.02" />
   <name value="CarinRtbpcBillingUnitValueSet" />
   <title value="CARIN RTPBC Billing Unit Value Set" />
-  <status value="draft" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <description value="This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
   <compose>
     <include>
       <system value="http://ncpdp.org/unit-of-measure" />
-      <concept>
-        <code value="GM" />
-        <display value="Gram" />
-      </concept>
-      <concept>
-        <code value="ML" />
-        <display value="Milliliter" />
-      </concept>
-      <concept>
-        <code value="EA" />
-        <display value="Each" />
-      </concept>
     </include>
   </compose>
 </ValueSet>

@@ -3,16 +3,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="carin-rtpbc-country-code-value-set"/>
   <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-26T18:00:00.000-06:00"/>
-    <security>
-      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-      <code value="everyone^read"/>
-    </security>
-    <security>
-      <system value="https://trifolia-fhir.lantanagroup.com/security"/>
-      <code value="everyone^write"/>
-    </security>
+    <lastUpdated value="2019-12-07T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>CARIN RTPBC Pharmacy Type Value Setf</h2><div><p>This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA).</p>
@@ -22,10 +13,18 @@
   <version value="0.1.14"/>
   <name value="CarinRtpbcCountryCodeValueSet"/>
   <title value="CARIN RTPBC Pharmacy Type Value Setf"/>
-  <status value="draft"/>
-  <date value="2019-11-20T00:00:00-06:00"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
   <description value="This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+      <display value="United States of America"/>
+    </coding>
+  </jurisdiction>
   <compose>
     <include>
       <system value="urn:iso:std:iso:3166"/>

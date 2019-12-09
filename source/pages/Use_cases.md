@@ -13,7 +13,7 @@ The goal of the consumer-focused real-time pharmacy benefit check (consumer RTPB
 
 At a high level, the process looks like this...
  
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/basic-info-flow.png" alt="basic information flow"></div><br>
+<div><img src="images/basic-info-flow.png" alt="basic information flow"></div><br>
 
 ***The stakeholders...***
 * the **patient,** who wishes to understand how their medication is covered by their insurance: their out of pocket cost, restrictions, and pharmacy options
@@ -47,7 +47,7 @@ At a high level, the process looks like this...
 The patient's app might gather related information (e.g., medication information or insurance eligibility) before submitting the consumer RTPBC request. 
 *These exchanges are outside the scope of this guide.*
 <br>
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/related-info-flows.png" alt="related information flows"></div>
+<div><img src="images/related-info-flows.png" alt="related information flows"></div>
 
 <br><br>
 

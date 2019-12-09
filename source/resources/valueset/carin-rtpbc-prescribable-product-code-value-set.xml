@@ -2,16 +2,24 @@
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-prescribable-product-code-value-set" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2019-10-29T22:40:15.000-04:00" />
+    <lastUpdated value="2019-12-08T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code" />
   <version value="1.0.0" />
   <name value="CARINRTPBCPrescribableProductCodeValueSet" />
   <title value="CARIN RTPBC Prescribable Product Code Value Set" />
-  <status value="draft" />
-  <date value="2019-10-29" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
+  <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
   <compose>
     <include>
       <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />

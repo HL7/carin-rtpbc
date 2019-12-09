@@ -12,6 +12,6 @@ In this example:
 
 <br/>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-patient-03.png" alt="patient"></div>
+<div><img src="images/rtpbc-patient-03.png" alt="patient"></div>
 
 <br/>

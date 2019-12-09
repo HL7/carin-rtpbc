@@ -9,6 +9,6 @@ In this example:
 
 <br/>
 
-<!-- <div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-claim-response-03.png" alt="claimresponse"></div> -->
+<!-- <div><img src="images/rtpbc-claim-response-03.png" alt="claimresponse"></div> -->
 
 <br/>

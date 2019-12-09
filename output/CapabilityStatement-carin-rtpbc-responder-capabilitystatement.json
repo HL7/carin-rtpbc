@@ -9,20 +9,10 @@
   "version": "0.1.14",
   "name": "CarinRtpbcResponderCapabilityStatement",
   "title": "CARIN RTPBC Responder Capability Statement",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2019-12-06T18:00:00-06:00",
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "email",
-          "value": "fm@frankmckinney.com"
-        }
-      ]
-    }
-  ],
   "description": "This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a CARIN Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation.",
   "jurisdiction": [
     {

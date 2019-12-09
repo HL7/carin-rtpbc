@@ -1,255 +1,244 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Bundle
-    xmlns="http://hl7.org/fhir">
-    <id value="rtpbc-bundle-response-03-w-header"/>
-    <meta>
-        <versionId value="1"/>
-        <lastUpdated value="2019-11-15T08:51:24.000-05:00"/>
-    </meta>
-    <type value="message"/>
-    <entry>
-        <fullUrl value="http://example.org/MessageHeader/rtpbc-messageheader-response-03"/>
-        <resource>
-            <MessageHeader>
-                <id value="rtpbc-messageheader-response-03"/>
-                <text>
-                    <status value="generated"/>
-                    <div
-                        xmlns="http://www.w3.org/1999/xhtml">text
-                    </div>
-                </text>
-                <eventCoding>
-                    <code value="rtpbc-response"/>
-                </eventCoding>
-                <source>
-                    <name value="MyPatientApp"/>
-                    <endpoint value="http://example.org/MyPatientApp"/>
-                </source>
-                <focus>
-                    <reference value="ClaimResponse/rtpbc-claim-response-03"/>
-                </focus>
-            </MessageHeader>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://example.org/ClaimResponse/rtpbc-claim-response-03"/>
-        <resource>
-            <ClaimResponse>
-                <id value="rtpbc-claim-response-03"/>
-                <identifier>
-                    <value value="rtpbc-03-response"/>
-                </identifier>
-                <status value="active"/>
-                <type>
-                    <coding>
-                        <system value="http://terminology.hl7.org/CodeSystem/claim-type"/>
-                        <code value="pharmacy"/>
-                        <display value="Pharmacy"/>
-                    </coding>
-                </type>
-                <use value="predetermination"/>
-                <patient>
-                    <reference value="Patient/rtpbc-patient-03"/>
-                </patient>
-                <created value="2019-11-01T11:20:59-05:00"/>
-                <insurer>
-                    <identifier>
-                        <value value="Pharmacy Plans US"/>
-                    </identifier>
-                </insurer>
-                <request>
-                    <identifier>
-                        <value value="rtpbc-03"/>
-                    </identifier>
-                </request>
-                <outcome value="complete"/>
-                <disposition value="Processed successfully"/>
-                <item>
-                    <itemSequence value="1"/>
-                    <noteNumber value="1"/>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="copay"/>
-                                <display value="Copay"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="10"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="coinsurance"/>
-                                <display value="Per prescription coinsurance"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="15"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="total"/>
-                                <display value="Total patient responsibility"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="25"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                </item>
-                <addItem>
-                    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
-                        <valueBoolean value="true"/>
-                    </extension>
-                    <itemSequence value="1"/>
-                    <provider>
-                        <reference value="Organization/rtpbc-organization-03m"/>
-                    </provider>
-                    <productOrService>
-                        <coding>
-                            <system value="http://example.org/ndc11/placeholder"/>
-                            <code value="00777310402"/>
-                            <display value="Prozac 10mg capsule"/>
-                        </coding>
-                    </productOrService>
-                    <quantity>
-                        <value value="180"/>
-                        <unit value="EA"/>
-                    </quantity>
-                    <noteNumber value="2"/>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="copay"/>
-                                <display value="Copay"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="20"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="coinsurance"/>
-                                <display value="Per prescription coinsurance"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="30"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                    <adjudication>
-                        <category>
-                            <coding>
-                                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type"/>
-                                <code value="total"/>
-                                <display value="Total patient responsibility"/>
-                            </coding>
-                        </category>
-                        <amount>
-                            <value value="50"/>
-                            <currency value="USD"/>
-                        </amount>
-                    </adjudication>
-                </addItem>
-                <processNote>
-                    <number value="1"/>
-                    <text value="Covered"/>
-                </processNote>
-                <processNote>
-                    <number value="2"/>
-                    <text value="Covered"/>
-                </processNote>
-            </ClaimResponse>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://example.org/Patient/rtpbc-patient-03"/>
-        <resource>
-            <Patient>
-                <id value="rtpbc-patient-03"/>
-                <text>
-                    <status value="generated"/>
-                    <div
-                        xmlns="http://www.w3.org/1999/xhtml">
-                        <div class="hapiHeaderText">Jane 
-                            <b>DOE </b>
-                        </div>
-                        <table class="hapiPropertyTable">
-                            <tbody>
-                                <tr>
-                                    <td>Address</td>
-                                    <td>
-                                        <span>100 Oak Court </span>
-                                        <br/>
-                                        <span>Madison </span>
-                                        <span>WI </span>
-                                        <span>US </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Date of birth</td>
-                                    <td>
-                                        <span>05 December 1975</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </text>
-                <name>
-                    <family value="Doe"/>
-                    <given value="Jane"/>
-                </name>
-                <gender value="female"/>
-                <birthDate value="1975-12-05"/>
-                <address>
-                    <line value="100 Oak Court"/>
-                    <city value="Madison"/>
-                    <state value="WI"/>
-                    <postalCode value="53510"/>
-                    <country value="US"/>
-                </address>
-            </Patient>
-        </resource>
-    </entry>
-    <entry>
-        <fullUrl value="http://example.org/Organization/rtpbc-organization-03m"/>
-        <resource>
-            <Organization>
-                <id value="rtpbc-organization-03m"/>
-                <identifier>
-                    <system value="http://hl7.org/fhir/sid/us-npi"/>
-                    <value value="5515515515"/>
-                </identifier>
-                <name value="My Mail Service Pharmacy"/>
-                <telecom>
-                    <system value="phone"/>
-                    <value value="5551234567"/>
-                </telecom>
-                <address>
-                    <line value="10001 Oakland Road"/>
-                    <city value="Milwaukee"/>
-                    <state value="WI"/>
-                    <postalCode value="54444"/>
-                    <country value="US"/>
-                </address>
-            </Organization>
-        </resource>
-    </entry>
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-bundle-response-03-w-header" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle" />
+  </meta>
+  <type value="message" />
+  <timestamp value="2019-11-15T13:10:15-05:00" />
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a" />
+    <resource>
+      <MessageHeader>
+        <id value="rtpbc-messageheader-response-03" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader" />
+        </meta>
+        <eventCoding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+          <code value="rtpbc-response" />
+          <display value="RTPBC Response" />
+        </eventCoding>
+        <source>
+          <name value="PharmacyBenefitsCompany" />
+          <endpoint value="http://example.org/PharmacyBenefitsCo/fhir" />
+        </source>
+        <response>
+          <identifier value="rtpbc-messageheader-request-03" />
+          <code value="ok" />
+        </response>
+        <focus>
+          <reference value="ClaimResponse/rtpbc-claim-response-03" />
+        </focus>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
+    <resource>
+      <ClaimResponse>
+        <id value="rtpbc-claim-response-03" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
+        </meta>
+        <identifier>
+          <value value="rtpbc-03-response" />
+        </identifier>
+        <status value="active" />
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/claim-type" />
+            <code value="pharmacy" />
+            <display value="Pharmacy" />
+          </coding>
+        </type>
+        <use value="predetermination" />
+        <patient>
+          <reference value="Patient/rtpbc-patient-03" />
+        </patient>
+        <created value="2019-11-01T11:20:59-05:00" />
+        <insurer>
+          <identifier>
+            <value value="Pharmacy Plans US" />
+          </identifier>
+        </insurer>
+        <request>
+          <identifier>
+            <value value="rtpbc-03" />
+          </identifier>
+        </request>
+        <outcome value="complete" />
+        <disposition value="Processed successfully" />
+        <item>
+          <itemSequence value="1" />
+          <noteNumber value="1" />
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="copay" />
+                <display value="Copay" />
+              </coding>
+            </category>
+            <amount>
+              <value value="10" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="coinsurance" />
+                <display value="Per prescription coinsurance" />
+              </coding>
+            </category>
+            <amount>
+              <value value="15" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="total" />
+                <display value="Total patient responsibility" />
+              </coding>
+            </category>
+            <amount>
+              <value value="25" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+        </item>
+        <addItem>
+          <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+            <valueBoolean value="true" />
+          </extension>
+          <itemSequence value="1" />
+          <provider>
+            <reference value="Organization/rtpbc-organization-03m" />
+          </provider>
+          <productOrService>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+              <code value="00777310402" />
+              <display value="Prozac 10mg capsule" />
+            </coding>
+          </productOrService>
+          <quantity>
+            <value value="180" />
+            <unit value="EA" />
+          </quantity>
+          <noteNumber value="2" />
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="copay" />
+                <display value="Copay" />
+              </coding>
+            </category>
+            <amount>
+              <value value="20" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="coinsurance" />
+                <display value="Per prescription coinsurance" />
+              </coding>
+            </category>
+            <amount>
+              <value value="30" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+          <adjudication>
+            <category>
+              <coding>
+                <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+                <code value="total" />
+                <display value="Total patient responsibility" />
+              </coding>
+            </category>
+            <amount>
+              <value value="50" />
+              <currency value="USD" />
+            </amount>
+          </adjudication>
+        </addItem>
+        <processNote>
+          <number value="1" />
+          <text value="Covered" />
+        </processNote>
+        <processNote>
+          <number value="2" />
+          <text value="Covered" />
+        </processNote>
+      </ClaimResponse>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" />
+    <resource>
+      <Patient>
+        <id value="rtpbc-patient-03" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+        </meta>
+        <name>
+          <family value="Doe" />
+          <given value="Jane" />
+        </name>
+        <gender value="female" />
+        <birthDate value="1975-12-05" />
+        <address>
+          <line value="100 Oak Court" />
+          <city value="Madison" />
+          <state value="WI" />
+          <postalCode value="53510" />
+          <country value="US" />
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" />
+    <resource>
+      <Organization>
+        <id value="rtpbc-organization-03m" />
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy" />
+        </meta>
+        <identifier>
+          <system value="http://hl7.org/fhir/sid/us-npi" />
+          <value value="5515515515" />
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://ncpdp.org/pharmacy-type" />
+            <code value="M" />
+            <display value="Mail Order" />
+          </coding>
+        </type>
+        <name value="My Mail Service Pharmacy" />
+        <telecom>
+          <system value="phone" />
+          <value value="5551234567" />
+        </telecom>
+        <address>
+          <line value="10001 Oakland Road" />
+          <city value="Milwaukee" />
+          <state value="WI" />
+          <postalCode value="54444" />
+          <country value="US" />
+        </address>
+      </Organization>
+    </resource>
+  </entry>
 </Bundle>

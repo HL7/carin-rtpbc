@@ -239,25 +239,22 @@ can only resize using html  or css ;-(
   	<li><a
       href="MedicationRequest-rtpbc-medicationrequest-03.html">Content</a></li>
   
-    
 
 
 
-
- 
   <!-- XML -->
   
     <li><a
       href="MedicationRequest-rtpbc-medicationrequest-03.xml.html">XML</a></li>
   
-    
+
     <!-- JSON -->
   
     <li class="active"><a href="#"
       >JSON</a></li>
   
- 
- 
+
+
 </ul>
 
     <h2> JSON Format: MedicationRequest-rtpbc-medicationrequest-03</h2>
@@ -280,12 +277,13 @@ can only resize using html  or css ;-(
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest">resourceType</a>" : "MedicationRequest",
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.id">id</a>" : "rtpbc-medicationrequest-03",
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.meta">meta</a>" : {
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "2",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2019-11-08T11:51:35.000-05:00"
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"
+    ]
   },
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.text">text</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
-    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: rtpbc-medicationrequest-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: draft&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: proposal&lt;/p&gt;&lt;p&gt;&lt;b&gt;reported&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: Prozac 10mg capsule &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-rtpbc-patient-03.html\&quot;&gt;Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Practitioner-rtpbc-practitioner-03.html\&quot;&gt;Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson &lt;/a&gt;&lt;/p&gt;&lt;h3&gt;DispenseRequests&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ExpectedSupplyDuration&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Performer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;60 EA&lt;/td&gt;&lt;td&gt;30 days&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code d = 'd')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-rtpbc-organization-03.html\&quot;&gt;Generated Summary: id: rtpbc-organization-03; 0999017; &lt;span title=\&quot;Codes: {http://ncpdp.org/pharmacy-type R}\&quot;&gt;Retail&lt;/span&gt;; name: Hometown Drug; ph: 6081234567&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative with Details&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;id&lt;/b&gt;: rtpbc-medicationrequest-03&lt;/p&gt;&lt;p&gt;&lt;b&gt;meta&lt;/b&gt;: &lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: draft&lt;/p&gt;&lt;p&gt;&lt;b&gt;intent&lt;/b&gt;: proposal&lt;/p&gt;&lt;p&gt;&lt;b&gt;reported&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;medication&lt;/b&gt;: Prozac 10mg capsule &lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt;(Details : {http://terminology.hl7.org/CodeSystem/ndc-11 code '00777310402' = 'Prozac 10mg capsule', given as 'Prozac 10mg capsule'})&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-rtpbc-patient-03.html\&quot;&gt;Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;requester&lt;/b&gt;: &lt;a href=\&quot;Practitioner-rtpbc-practitioner-03.html\&quot;&gt;Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson &lt;/a&gt;&lt;/p&gt;&lt;h3&gt;DispenseRequests&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;ExpectedSupplyDuration&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Performer&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;60 EA&lt;/td&gt;&lt;td&gt;30 days&lt;span style=\&quot;background: LightGoldenRodYellow\&quot;&gt; (Details: UCUM code d = 'd')&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-rtpbc-organization-03.html\&quot;&gt;Generated Summary: id: rtpbc-organization-03; 0999017; &lt;span title=\&quot;Codes: {http://ncpdp.org/pharmacy-type R}\&quot;&gt;Retail&lt;/span&gt;; name: Hometown Drug; ph: 6081234567&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Substitutions&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Allowed[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
   },
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.status">status</a>" : "draft",
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.intent">intent</a>" : "proposal",
@@ -293,7 +291,7 @@ can only resize using html  or css ;-(
   "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.medication[x]">medicationCodeableConcept</a>" : {
     "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
       {
-        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://example.org/ndc11/placeholder",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/ndc-11",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "00777310402",
         "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Prozac 10mg capsule"
       }
@@ -319,6 +317,9 @@ can only resize using html  or css ;-(
     "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.dispenseRequest.performer">performer</a>" : {
       "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/rtpbc-organization-03"
     }
+  },
+  "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.substitution">substitution</a>" : {
+    "<a href="http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest.substitution.allowed[x]">allowedBoolean</a>" : false
   }
 }</pre>
 
@@ -365,7 +366,7 @@ Formats: <a href="MedicationRequest-rtpbc-medicationrequest-03.html">Narrative</
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.14  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Sun, Dec 8, 2019 01:17-0600.
+      CarinRtpbc Version: 0.1.14  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 9, 2019 05:36-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

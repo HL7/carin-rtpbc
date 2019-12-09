@@ -59,11 +59,21 @@ id: {{[id]}}
 
 {% else %}
 <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+  <h2>{{[id]}}</h2>
+  <br>
 
-  <h2>{{[type]}}: {{[id]}}</h2>
-
+  <!-- -------------------------------
+  <h2>{{[type]}}: {{[id]}}</h2>  
   {% include {{[type]}}-{{[name]}}.xhtml %}
-  <!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
+  ----------------------------    -->
+
+  {% capture my-include %}{% include {{[id]}}-intro.md id="{{[id]}}" %}{% endcapture %}
+  {{ my-include | markdownify }}
+
+  
+
+
+<!-- ============CodeSystem ConceptMap CapabilityStatement CONTENT CONTENT=============== -->
 
 {% endcase %}
 

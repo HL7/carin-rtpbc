@@ -399,7 +399,6 @@
     <sch:title>f:MedicationRequest/f:dispenseRequest</sch:title>
     <sch:rule context="f:MedicationRequest/f:dispenseRequest">
       <sch:assert test="count(f:quantity) &gt;= 1">quantity: minimum cardinality of 'quantity' is 1</sch:assert>
-      <sch:assert test="count(f:expectedSupplyDuration) &gt;= 1">expectedSupplyDuration: minimum cardinality of 'expectedSupplyDuration' is 1</sch:assert>
       <sch:assert test="count(f:performer) &gt;= 1">performer: minimum cardinality of 'performer' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>

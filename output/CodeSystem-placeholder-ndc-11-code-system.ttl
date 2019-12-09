@@ -9,8 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "placeholder-ndc-11-code-system"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "1" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T23:00:00.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-07T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -21,9 +20,19 @@
   fhir:CodeSystem.name [ fhir:value "PlaceholderNdc11CodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Placeholder NDC11 Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2019-11-27T00:00:00-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:CodeSystem.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "CARIN Alliance"];
   fhir:CodeSystem.description [ fhir:value "This code system contains example NDC 11 drug product identifiers, used to identify requested and alternative medications in the real-time pharmacy benefit check process. This code system normalizes NDC codes by removing dashes and standardizing the length of each NDC segment. This is a placeholder to be replaced prior to publishing with an HL7/FHIR maintained URL (currently being established)."];
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:CodeSystem.caseSensitive [ fhir:value "false"^^xsd:boolean];
   fhir:CodeSystem.content [ fhir:value "complete"];
   fhir:CodeSystem.concept [

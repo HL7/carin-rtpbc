@@ -14,7 +14,7 @@ active: profiles
 <!-- end TOC -->
 
 ---
-<br />
+<br>
 
 ### Profiles
 
@@ -91,7 +91,7 @@ active: profiles
 </tr>
 ----------------------------------------------------------------------------------- -->
 
-
+<br>
 
 
 ### Extensions
@@ -115,6 +115,7 @@ active: profiles
 </tbody>
 </table>
 
+<br>
 
 
 ### Message Definitions

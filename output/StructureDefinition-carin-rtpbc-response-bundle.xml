@@ -25,16 +25,10 @@
   <version value="0.1.14"/>
   <name value="CarinRtpbcResponseBundle"/>
   <title value="CARIN RTPBC Response Bundle"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
-  <date value="2019-12-06T18:00:00-06:00"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
-  <contact>
-    <telecom>
-      <system value="email"/>
-      <value value="fm@frankmckinney.com"/>
-    </telecom>
-  </contact>
   <description value="This profile constrains a Bundle resource for use as the response in a Real-time Pharmacy Benefit Check (RTPBC) process"/>
   <jurisdiction>
     <coding>

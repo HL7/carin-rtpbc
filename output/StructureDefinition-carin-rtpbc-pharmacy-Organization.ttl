@@ -9,8 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-pharmacy-organization"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "30" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-20T17:30:30.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-07T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -20,10 +19,20 @@
   fhir:StructureDefinition.version [ fhir:value "0.1.14"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcPharmacy"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC PharmacyOrganization"];
-  fhir:StructureDefinition.status [ fhir:value "draft"];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-08T01:17:27-06:00"^^xsd:dateTime];
+  fhir:StructureDefinition.status [ fhir:value "active"];
+  fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
   fhir:StructureDefinition.description [ fhir:value "This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process."];
+  fhir:StructureDefinition.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:StructureDefinition.fhirVersion [ fhir:value "4.0.1"];
   fhir:StructureDefinition.mapping [
      fhir:index 0;

@@ -1,9 +1,9 @@
 ﻿CarinRtpbc : Validation Results
 =========================================
 
-err = 6, warn = 8, info = 0
-IG Publisher Version: v1.0.15-SNAPSHOT
-Generated Sun Dec 08 01:18:58 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.14 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
+err = 6, warn = 0, info = 0
+IG Publisher Version: v1.0.7-SNAPSHOT Out of date - current version is v1.0.16-SNAPSHOT
+Generated Mon Dec 09 05:38:05 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.14 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
 
  Build Errors : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
@@ -45,12 +45,12 @@ Generated Sun Dec 08 01:18:58 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\structuredefinition\carin-rtpbc-response-claimresponse : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\structuredefinition\carin-rtpbc-response-messageheader : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-billing-unit-value-set : 1 / 0
- Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-country-code-value-set : 0 / 2
+ Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-country-code-value-set : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-coverage-summary-value-set : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-error-code-value-set : 1 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-event-type-value-set : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-pharmacy-type-value-set : 1 / 2
+ Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-pharmacy-type-value-set : 1 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-state-and-province-code-value-set : 0 / 0
 </table>
@@ -96,16 +96,12 @@ Generated Sun Dec 08 01:18:58 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-billing-unit-value-set.xml ==
 ERROR: carin-rtpbc-billing-unit-value-set: Error from server: Unable to provide support for code system http://ncpdp.org/unit-of-measure
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-country-code-value-set.xml ==
-WARNING: ValueSet/carin-rtpbc-country-code-value-set: ValueSet.meta.security[0]: The Coding provided is not in the value set http://hl7.org/fhir/ValueSet/security-labels (http://hl7.org/fhir/ValueSet/security-labels, and a code should come from this value set unless it has no suitable code) (error message = Unknown code system)
-WARNING: ValueSet/carin-rtpbc-country-code-value-set: ValueSet.meta.security[1]: The Coding provided is not in the value set http://hl7.org/fhir/ValueSet/security-labels (http://hl7.org/fhir/ValueSet/security-labels, and a code should come from this value set unless it has no suitable code) (error message = Unknown code system)
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-coverage-summary-value-set.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-error-code-value-set.xml ==
 ERROR: carin-rtpbc-error-code-value-set: Error from server: Unable to provide support for code system http://ncpdp.org/reject-code
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-event-type-value-set.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-patient-pay-type-value-set.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-pharmacy-type-value-set.xml ==
-WARNING: ValueSet/carin-rtpbc-pharmacy-type-value-set: ValueSet.meta.security[0]: The Coding provided is not in the value set http://hl7.org/fhir/ValueSet/security-labels (http://hl7.org/fhir/ValueSet/security-labels, and a code should come from this value set unless it has no suitable code) (error message = Unknown code system)
-WARNING: ValueSet/carin-rtpbc-pharmacy-type-value-set: ValueSet.meta.security[1]: The Coding provided is not in the value set http://hl7.org/fhir/ValueSet/security-labels (http://hl7.org/fhir/ValueSet/security-labels, and a code should come from this value set unless it has no suitable code) (error message = Unknown code system)
 ERROR: carin-rtpbc-pharmacy-type-value-set: Error from server: Unable to provide support for code system http://ncpdp.org/pharmacy-type
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-prescribable-product-code-value-set.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc58\source\resources\valueset\carin-rtpbc-state-and-province-code-value-set.xml ==

@@ -2,19 +2,12 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-response-messageheader" />
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader" />
-  <version value="0.1.0" />
   <name value="CarinRtpbcResponseMessageHeader" />
   <title value="CARIN RTPBC Response MessageHeader" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
-  <date value="2019-12-07T00:00:00+00:00" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
-  <contact>
-    <telecom>
-      <system value="email" />
-      <value value="fm@frankmckinney.com" />
-    </telecom>
-  </contact>
   <description value="This profile constrains a MessageHeader resource for use in a Real-time Pharmacy Benefit Check (RTPBC) response bundle" />
   <jurisdiction>
     <coding>
@@ -45,19 +38,6 @@
         <code value="rtpbc-response" />
         <display value="RTPBC Response" />
       </patternCoding>
-      <mustSupport value="true" />
-    </element>
-    <element id="MessageHeader.focus">
-      <path value="MessageHeader.focus" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="MessageHeader.focus:rtpbc-response">

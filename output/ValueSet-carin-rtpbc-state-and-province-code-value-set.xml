@@ -11,14 +11,9 @@
   <name value="CarinRtpbcStateAndProvinceCodeValueSet"/>
   <title value="CARIN RTPBC Two Letter State and Province Code Value Set"/>
   <status value="active"/>
-  <date value="2019-11-19T18:00:00-06:00"/>
+  <experimental value="false"/>
+  <date value="2019-12-07T23:00:00-06:00"/>
   <publisher value="CARIN Alliance"/>
-  <contact>
-    <telecom>
-      <system value="email"/>
-      <value value="fm@frankmckinney.com"/>
-    </telecom>
-  </contact>
   <description value="This value set contains two letter USPS state codes and Canada Post province codes."/>
   <jurisdiction>
     <coding>

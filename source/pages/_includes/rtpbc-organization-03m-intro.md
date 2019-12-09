@@ -5,6 +5,6 @@ In this example:
 
 <br/>
 
-<div><img src="https://www.frankmckinney.com/carin-rtpbc/rtpbc-organization-03m.png" alt="organization-pharmacy"></div>
+<div><img src="images/rtpbc-organization-03m.png" alt="organization-pharmacy"></div>
 
 <br/>

@@ -2,8 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "carin-rtpbc-pharmacy-organization",
   "meta": {
-    "versionId": "30",
-    "lastUpdated": "2019-11-20T17:30:30.000-06:00"
+    "lastUpdated": "2019-12-07T23:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
@@ -13,10 +12,22 @@
   "version": "0.1.14",
   "name": "CarinRtpbcPharmacy",
   "title": "CARIN RTPBC PharmacyOrganization",
-  "status": "draft",
-  "date": "2019-12-08T01:17:27-06:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "description": "This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "mapping": [
     {

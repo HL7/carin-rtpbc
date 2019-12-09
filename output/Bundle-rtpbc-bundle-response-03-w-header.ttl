@@ -9,40 +9,57 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-bundle-response-03-w-header"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "1" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-15T08:51:24.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle>
+     ]
   ];
   fhir:Bundle.type [ fhir:value "message"];
+  fhir:Bundle.timestamp [ fhir:value "2019-11-15T13:10:15-05:00"^^xsd:dateTime];
   fhir:Bundle.entry [
      fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/MessageHeader/rtpbc-messageheader-response-03" ];
-     fhir:Bundle.entry.resource <http://example.org/MessageHeader/rtpbc-messageheader-response-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a>
   ], [
      fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/ClaimResponse/rtpbc-claim-response-03" ];
-     fhir:Bundle.entry.resource <http://example.org/ClaimResponse/rtpbc-claim-response-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b>
   ], [
      fhir:index 2;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Patient/rtpbc-patient-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Patient/rtpbc-patient-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c>
   ], [
      fhir:index 3;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Organization/rtpbc-organization-03m" ];
-     fhir:Bundle.entry.resource <http://example.org/Organization/rtpbc-organization-03m>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d>
   ] .
 
-<http://example.org/MessageHeader/rtpbc-messageheader-response-03> a fhir:MessageHeader;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a> a fhir:MessageHeader;
   fhir:Resource.id [ fhir:value "rtpbc-messageheader-response-03"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">text\n                    </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-messageheader-response-03</p><p><b>meta</b>: </p><p><b>event</b>: RTPBC Response (Details: http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type code rtpbc-response = 'RTPBC Response', stated as 'RTPBC Response')</p><h3>Sources</h3><table class=\"grid\"><tr><td>-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>PharmacyBenefitsCompany</td><td><a href=\"http://example.org/PharmacyBenefitsCo/fhir\">http://example.org/PharmacyBenefitsCo/fhir</a></td></tr></table><h3>Responses</h3><table class=\"grid\"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>rtpbc-messageheader-request-03</td><td>ok</td></tr></table><p><b>focus</b>: <a href=\"ClaimResponse-rtpbc-claim-response-03.html\">Generated Summary: id: rtpbc-claim-response-03; rtpbc-03-response; status: active; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/claim-type pharmacy}\">Pharmacy</span>; use: predetermination; created: Nov 1, 2019 11:20:59 AM; outcome: complete; disposition: Processed successfully</a></p></div>"
   ];
   fhir:MessageHeader.eventCoding [
-     fhir:Coding.code [ fhir:value "rtpbc-response" ]
+     fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" ];
+     fhir:Coding.code [ fhir:value "rtpbc-response" ];
+     fhir:Coding.display [ fhir:value "RTPBC Response" ]
   ];
   fhir:MessageHeader.source [
-     fhir:MessageHeader.source.name [ fhir:value "MyPatientApp" ];
-     fhir:MessageHeader.source.endpoint [ fhir:value "http://example.org/MyPatientApp" ]
+     fhir:MessageHeader.source.name [ fhir:value "PharmacyBenefitsCompany" ];
+     fhir:MessageHeader.source.endpoint [ fhir:value "http://example.org/PharmacyBenefitsCo/fhir" ]
+  ];
+  fhir:MessageHeader.response [
+     fhir:MessageHeader.response.identifier [ fhir:value "rtpbc-messageheader-request-03" ];
+     fhir:MessageHeader.response.code [ fhir:value "ok" ]
   ];
   fhir:MessageHeader.focus [
      fhir:index 0;
@@ -52,11 +69,18 @@
 
 <http://hl7.org/fhir/us/carin-rtpbc/ClaimResponse/rtpbc-claim-response-03> a fhir:us .
 
-<http://example.org/ClaimResponse/rtpbc-claim-response-03> a fhir:ClaimResponse;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b> a fhir:ClaimResponse;
   fhir:Resource.id [ fhir:value "rtpbc-claim-response-03"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03m.html\">Generated Summary: id: rtpbc-organization-03m; 0999029; <span title=\"Codes: {http://ncpdp.org/pharmacy-type M}\">Mail Order</span>; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>meta</b>: </p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style=\"background: LightGoldenRodYellow\">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03m.html\">Generated Summary: id: rtpbc-organization-03m; 0999029; <span title=\"Codes: {http://ncpdp.org/pharmacy-type M}\">Mail Order</span>; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/ndc-11 code '00777310402' = 'Prozac 10mg capsule', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class=\"grid\"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>"
   ];
   fhir:ClaimResponse.identifier [
      fhir:index 0;
@@ -159,7 +183,7 @@
      fhir:ClaimResponse.addItem.productOrService [
        fhir:CodeableConcept.coding [
          fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://example.org/ndc11/placeholder" ];
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ndc-11" ];
          fhir:Coding.code [ fhir:value "00777310402" ];
          fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
        ]
@@ -230,11 +254,18 @@
 
 <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03m> a fhir:us .
 
-<http://example.org/Patient/rtpbc-patient-03> a fhir:Patient;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c> a fhir:Patient;
   fhir:Resource.id [ fhir:value "rtpbc-patient-03"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <div class=\"hapiHeaderText\">Jane \n                            <b>DOE </b>\n                        </div>\n                        <table class=\"hapiPropertyTable\">\n                            <tbody>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>\n                                        <span>100 Oak Court </span>\n                                        <br/>\n                                        <span>Madison </span>\n                                        <span>WI </span>\n                                        <span>US </span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Date of birth</td>\n                                    <td>\n                                        <span>05 December 1975</span>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-patient-03</p><p><b>meta</b>: </p><p><b>name</b>: Jane Doe </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1975-12-05</p><p><b>address</b>: 100 Oak Court Madison WI 53510 US </p></div>"
   ];
   fhir:Patient.name [
      fhir:index 0;
@@ -258,16 +289,32 @@
      fhir:Address.country [ fhir:value "US" ]
   ] .
 
-<http://example.org/Organization/rtpbc-organization-03m> a fhir:Organization;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d> a fhir:Organization;
   fhir:Resource.id [ fhir:value "rtpbc-organization-03m"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy>
+     ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 5515515515</p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>meta</b>: </p><p><b>identifier</b>: 5515515515</p><p><b>type</b>: Mail Order <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'M', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
   ];
   fhir:Organization.identifier [
      fhir:index 0;
      fhir:Identifier.system [ fhir:value "http://hl7.org/fhir/sid/us-npi" ];
      fhir:Identifier.value [ fhir:value "5515515515" ]
+  ];
+  fhir:Organization.type [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://ncpdp.org/pharmacy-type" ];
+       fhir:Coding.code [ fhir:value "M" ];
+       fhir:Coding.display [ fhir:value "Mail Order" ]
+     ]
   ];
   fhir:Organization.name [ fhir:value "My Mail Service Pharmacy"];
   fhir:Organization.telecom [

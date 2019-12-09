@@ -16,18 +16,10 @@
   fhir:StructureDefinition.version [ fhir:value "0.1.14"];
   fhir:StructureDefinition.name [ fhir:value "CarinRtpbcResponseBundle"];
   fhir:StructureDefinition.title [ fhir:value "CARIN RTPBC Response Bundle"];
-  fhir:StructureDefinition.status [ fhir:value "draft"];
+  fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];
-  fhir:StructureDefinition.date [ fhir:value "2019-12-06T18:00:00-06:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "CARIN Alliance"];
-  fhir:StructureDefinition.contact [
-     fhir:index 0;
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "fm@frankmckinney.com" ]
-     ]
-  ];
   fhir:StructureDefinition.description [ fhir:value "This profile constrains a Bundle resource for use as the response in a Real-time Pharmacy Benefit Check (RTPBC) process"];
   fhir:StructureDefinition.jurisdiction [
      fhir:index 0;

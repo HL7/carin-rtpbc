@@ -678,6 +678,8 @@
   <sch:pattern>
     <sch:title>f:ClaimResponse/f:addItem</sch:title>
     <sch:rule context="f:ClaimResponse/f:addItem">
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative']) &gt;= 1">extension with URL = 'http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:itemSequence) &gt;= 1">itemSequence: minimum cardinality of 'itemSequence' is 1</sch:assert>
       <sch:assert test="count(f:provider) &gt;= 1">provider: minimum cardinality of 'provider' is 1</sch:assert>
       <sch:assert test="count(f:quantity) &gt;= 1">quantity: minimum cardinality of 'quantity' is 1</sch:assert>
@@ -693,10 +695,10 @@
   <sch:pattern>
     <sch:title>ClaimResponse.addItem.extension</sch:title>
     <sch:rule context="f:ClaimResponse/f:addItem/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
       <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both (inherited)</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

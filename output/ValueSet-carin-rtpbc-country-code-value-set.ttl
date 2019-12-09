@@ -9,17 +9,7 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "carin-rtpbc-country-code-value-set"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "1" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-26T18:00:00.000-06:00"^^xsd:dateTime ];
-     fhir:Meta.security [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
-       fhir:Coding.code [ fhir:value "everyone^read" ]
-     ], [
-       fhir:index 1;
-       fhir:Coding.system [ fhir:value "https://trifolia-fhir.lantanagroup.com/security" ];
-       fhir:Coding.code [ fhir:value "everyone^write" ]
-     ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-07T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -29,10 +19,20 @@
   fhir:ValueSet.version [ fhir:value "0.1.14"];
   fhir:ValueSet.name [ fhir:value "CarinRtpbcCountryCodeValueSet"];
   fhir:ValueSet.title [ fhir:value "CARIN RTPBC Pharmacy Type Value Setf"];
-  fhir:ValueSet.status [ fhir:value "draft"];
-  fhir:ValueSet.date [ fhir:value "2019-11-20T00:00:00-06:00"^^xsd:dateTime];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ValueSet.date [ fhir:value "2019-12-07T23:00:00-06:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "CARIN Alliance"];
   fhir:ValueSet.description [ fhir:value "This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."];
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ];
+       fhir:Coding.display [ fhir:value "United States of America" ]
+     ]
+  ];
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;

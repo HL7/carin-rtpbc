@@ -9,12 +9,15 @@
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-medicationrequest-03"];
   fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "2" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-08T11:51:35.000-05:00"^^xsd:dateTime ]
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest>
+     ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-medicationrequest-03</p><p><b>meta</b>: </p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>reported</b>: true</p><p><b>medication</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>subject</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>requester</b>: <a href=\"Practitioner-rtpbc-practitioner-03.html\">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></p><h3>DispenseRequests</h3><table class=\"grid\"><tr><td>-</td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>60 EA</td><td>30 days<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code d = 'd')</span></td><td><a href=\"Organization-rtpbc-organization-03.html\">Generated Summary: id: rtpbc-organization-03; 0999017; <span title=\"Codes: {http://ncpdp.org/pharmacy-type R}\">Retail</span>; name: Hometown Drug; ph: 6081234567</a></td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-medicationrequest-03</p><p><b>meta</b>: </p><p><b>status</b>: draft</p><p><b>intent</b>: proposal</p><p><b>reported</b>: true</p><p><b>medication</b>: Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/ndc-11 code '00777310402' = 'Prozac 10mg capsule', given as 'Prozac 10mg capsule'})</span></p><p><b>subject</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>requester</b>: <a href=\"Practitioner-rtpbc-practitioner-03.html\">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></p><h3>DispenseRequests</h3><table class=\"grid\"><tr><td>-</td><td><b>Quantity</b></td><td><b>ExpectedSupplyDuration</b></td><td><b>Performer</b></td></tr><tr><td>*</td><td>60 EA</td><td>30 days<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code d = 'd')</span></td><td><a href=\"Organization-rtpbc-organization-03.html\">Generated Summary: id: rtpbc-organization-03; 0999017; <span title=\"Codes: {http://ncpdp.org/pharmacy-type R}\">Retail</span>; name: Hometown Drug; ph: 6081234567</a></td></tr></table><h3>Substitutions</h3><table class=\"grid\"><tr><td>-</td><td><b>Allowed[x]</b></td></tr><tr><td>*</td><td>false</td></tr></table></div>"
   ];
   fhir:MedicationRequest.status [ fhir:value "draft"];
   fhir:MedicationRequest.intent [ fhir:value "proposal"];
@@ -22,7 +25,7 @@
   fhir:MedicationRequest.medicationCodeableConcept [
      fhir:CodeableConcept.coding [
        fhir:index 0;
-       fhir:Coding.system [ fhir:value "http://example.org/ndc11/placeholder" ];
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/ndc-11" ];
        fhir:Coding.code [ fhir:value "00777310402" ];
        fhir:Coding.display [ fhir:value "Prozac 10mg capsule" ]
      ]
@@ -50,6 +53,9 @@
        fhir:link <http://hl7.org/fhir/us/carin-rtpbc/Organization/rtpbc-organization-03>;
        fhir:Reference.reference [ fhir:value "Organization/rtpbc-organization-03" ]
      ]
+  ];
+  fhir:MedicationRequest.substitution [
+     fhir:MedicationRequest.substitution.allowedBoolean [ fhir:value "false"^^xsd:boolean ]
   ] .
 
 <http://hl7.org/fhir/us/carin-rtpbc/Patient/rtpbc-patient-03> a fhir:us .

@@ -4,7 +4,7 @@
   <name value="CarinRtpbcNamingSystemNcpdpUnitOfMeasure" />
   <status value="active" />
   <kind value="codesystem" />
-  <date value="2019-11-24" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
   <contact>
     <name value="CARIN Alliance" />
@@ -19,11 +19,12 @@
     <coding>
       <system value="urn:iso:std:iso:3166" />
       <code value="US" />
+      <display value="United States of America" />
     </coding>
   </jurisdiction>
   <usage value="Used in the US to specify product quantities in billing transactions" />
   <uniqueId>
     <type value="uri" />
-    <value value="http://ncpdp.org/billing-unit-of-measure" />
+    <value value="http://ncpdp.org/unit-of-measure" />
   </uniqueId>
 </NamingSystem>

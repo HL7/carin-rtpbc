@@ -2,16 +2,24 @@
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-coverage-summary-code-system" />
   <meta>
-    <versionId value="3" />
-    <lastUpdated value="2019-11-06T15:55:51.000-05:00" />
+    <lastUpdated value="2019-12-08T00:00:00-05:00" />
   </meta>
   <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-coverage-summary" />
   <version value="1.0.0" />
   <name value="CarinRtpbcCoverageSummaryCodeSystem" />
   <title value="CARIN RTPBC Coverage Summary Code System" />
-  <status value="draft" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
   <description value="This code system defines a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
   <caseSensitive value="false" />
   <content value="complete" />
   <concept>

@@ -2,19 +2,12 @@
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-response-message-definition" />
   <url value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response" />
-  <version value="1" />
   <name value="RtpbcResponse" />
   <title value="Real-time pharmacy benefit check response" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="false" />
-  <date value="2019-10-17" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
-  <contact>
-    <telecom>
-      <system value="email" />
-      <value value="fm@frankmckinney.com" />
-    </telecom>
-  </contact>
   <description value="Response to a request for patient cost and coverage information for a prescribed medication" />
   <jurisdiction>
     <coding>

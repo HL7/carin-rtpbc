@@ -2,8 +2,9 @@
   "resourceType": "Practitioner",
   "id": "rtpbc-practitioner-03",
   "meta": {
-    "versionId": "1",
-    "lastUpdated": "2019-11-05T22:51:22.000-05:00"
+    "profile": [
+      "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-practitioner"
+    ]
   },
   "text": {
     "status": "generated",

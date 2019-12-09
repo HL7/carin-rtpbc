@@ -13,10 +13,22 @@
   "version": "0.1.14",
   "name": "PlaceholderCanadianProvinceCodeSystem",
   "title": "Placeholder Canadian Province Code System",
-  "status": "draft",
-  "date": "2019-11-27T00:00:00-06:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "description": "This code system defines two letter Canadian province codes. It is intended as a placeholder to be replaced by a NamingSystem to canadapost.ca once IG tooling supports",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "caseSensitive": false,
   "content": "complete",
   "concept": [

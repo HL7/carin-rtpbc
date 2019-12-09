@@ -2,27 +2,24 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-patient" />
   <meta>
-    <versionId value="22" />
-    <lastUpdated value="2019-11-20T18:30:00.000-05:00" />
+    <lastUpdated value="2019-12-08T00:00:00-05:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <div>
-        <div>
-          <div>This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer. </div>
-        </div>
-      </div>
-    </div>
-  </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
   <version value="0.0.1" />
   <name value="CarinRtpbcPatient" />
   <title value="CARIN RTPBC Patient" />
-  <status value="draft" />
-  <date value="2019-10-03" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
   <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
   <fhirVersion value="4.0.0" />
   <kind value="resource" />
   <abstract value="false" />
@@ -71,19 +68,19 @@
     </element>
     <element id="Patient.address.line">
       <path value="Patient.address.line" />
-      <min value="1" />
+      <min value="0" />
       <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address.city">
       <path value="Patient.address.city" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.address.state">
       <path value="Patient.address.state" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
       <binding>
@@ -94,7 +91,7 @@
     </element>
     <element id="Patient.address.postalCode">
       <path value="Patient.address.postalCode" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

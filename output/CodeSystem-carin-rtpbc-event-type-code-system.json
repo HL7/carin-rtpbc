@@ -2,8 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "carin-rtpbc-event-type-code-system",
   "meta": {
-    "versionId": "5",
-    "lastUpdated": "2019-12-02T19:00:00.000-06:00"
+    "lastUpdated": "2019-12-07T23:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
@@ -13,10 +12,22 @@
   "version": "0.1.14",
   "name": "CarinRtpbcEventTypeCodeSystem",
   "title": "CARIN RTPBC Event Type Code System",
-  "status": "draft",
-  "date": "2019-10-31T00:00:00-05:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "publisher": "CARIN Alliance",
   "description": "This code system defines event types used in RTPBC message headers",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "caseSensitive": false,
   "content": "complete",
   "concept": [

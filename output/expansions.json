@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "78a05ac9-0efd-4da3-9605-b7d80de398c3",
+  "id" : "c4a2a0a3-4dae-485d-b66c-dc66ea9d10b9",
   "meta" : {
-    "lastUpdated" : "2019-12-08T01:17:27.220-06:00"
+    "lastUpdated" : "2019-12-09T05:36:44.248-06:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -11,8 +11,7 @@
       "resourceType" : "ValueSet",
       "id" : "carin-rtpbc-prescribable-product-code-value-set",
       "meta" : {
-        "versionId" : "1",
-        "lastUpdated" : "2019-10-29T21:40:15.000-05:00"
+        "lastUpdated" : "2019-12-07T23:00:00.000-06:00"
       },
       "text" : {
         "status" : "generated",
@@ -22,16 +21,25 @@
       "version" : "0.1.14",
       "name" : "CARINRTPBCPrescribableProductCodeValueSet",
       "title" : "CARIN RTPBC Prescribable Product Code Value Set",
-      "status" : "draft",
-      "date" : "2019-10-29T00:00:00-05:00",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
       "publisher" : "CARIN Alliance",
+      "description" : "This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products).",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }]
+      }],
       "expansion" : {
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
           "valueBoolean" : true
         }],
-        "identifier" : "urn:uuid:ea31ad0f-fda9-4f96-ba43-f3bea6edca9f",
-        "timestamp" : "2019-12-08T01:17:45-06:00",
+        "identifier" : "urn:uuid:f94870a4-86bb-494c-9afe-aea6e9b5a2f0",
+        "timestamp" : "2019-12-09T05:37:00-06:00",
         "total" : 1004,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5082,8 +5090,7 @@
       "resourceType" : "ValueSet",
       "id" : "carin-rtpbc-event-type-value-set",
       "meta" : {
-        "versionId" : "2",
-        "lastUpdated" : "2019-11-06T16:18:10.000-06:00"
+        "lastUpdated" : "2019-12-07T23:00:00.000-06:00"
       },
       "text" : {
         "status" : "generated",
@@ -5093,12 +5100,21 @@
       "version" : "0.1.14",
       "name" : "CarinRtbpcEventTypeValueSet",
       "title" : "CARIN RTPBC Event Type Value Set",
-      "status" : "draft",
-      "date" : "2019-12-08T01:17:27-06:00",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
+      "publisher" : "CARIN Alliance",
       "description" : "This value set contains event types used in RTPBC message headers.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }]
+      }],
       "expansion" : {
-        "identifier" : "urn:uuid:cae3c4ec-0133-4021-ace0-4bb7cc468719",
-        "timestamp" : "2019-12-08T01:17:45-06:00",
+        "identifier" : "urn:uuid:8a74a52c-a91a-4cb2-adb4-ba63011ea017",
+        "timestamp" : "2019-12-09T05:37:02-06:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5122,16 +5138,42 @@
     }
   },
   {
+    "fullUrl" : "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code",
     "resource" : {
       "resourceType" : "ValueSet",
+      "id" : "carin-rtpbc-country-code-value-set",
+      "meta" : {
+        "lastUpdated" : "2019-12-07T23:00:00.000-06:00"
+      },
       "text" : {
         "status" : "generated",
         "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p>All codes from system <code>urn:iso:std:iso:3166</code></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"urn-iso-std-iso-3166-US\"> </a>US</td><td>United States of America</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"urn-iso-std-iso-3166-CA\"> </a>CA</td><td>Canada</td></tr></table></div>"
       },
+      "url" : "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code",
+      "version" : "0.1.14",
+      "name" : "CarinRtpbcCountryCodeValueSet",
+      "title" : "CARIN RTPBC Pharmacy Type Value Setf",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
+      "publisher" : "CARIN Alliance",
+      "description" : "This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA).",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }]
+      }],
       "expansion" : {
-        "identifier" : "urn:uuid:d7b9fe6f-cbbd-4547-a959-dea0e042bc1a",
-        "timestamp" : "2019-12-08T06:58:29.798Z",
+        "identifier" : "urn:uuid:0a236131-145d-4d36-a59b-c6e30a47a465",
+        "timestamp" : "2019-12-09T05:37:02-06:00",
+        "total" : 2,
         "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
           "name" : "limitedExpansion",
           "valueString" : "-1"
         }],
@@ -5154,8 +5196,7 @@
       "resourceType" : "ValueSet",
       "id" : "carin-rtpbc-coverage-summary-value-set",
       "meta" : {
-        "versionId" : "3",
-        "lastUpdated" : "2019-11-06T16:01:46.000-06:00"
+        "lastUpdated" : "2019-12-07T23:00:00.000-06:00"
       },
       "text" : {
         "status" : "generated",
@@ -5165,12 +5206,20 @@
       "version" : "0.1.14",
       "name" : "CarinRtbpcCoverageSummaryValueSet",
       "title" : "CARIN RTPBC Coverage Summary Value Set",
-      "status" : "draft",
-      "date" : "2019-12-08T01:17:27-06:00",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
       "description" : "This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }]
+      }],
       "expansion" : {
-        "identifier" : "urn:uuid:d10c904b-36c2-482c-af13-93a5c92530d9",
-        "timestamp" : "2019-12-08T01:17:45-06:00",
+        "identifier" : "urn:uuid:0e1dcbcd-bd26-4c1b-ae2b-2b12378a5e75",
+        "timestamp" : "2019-12-09T05:37:02-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5219,8 +5268,7 @@
       "resourceType" : "ValueSet",
       "id" : "carin-rtpbc-patient-pay-type-value-set",
       "meta" : {
-        "versionId" : "2",
-        "lastUpdated" : "2019-11-06T16:18:10.000-06:00"
+        "lastUpdated" : "2019-12-07T23:00:00.000-06:00"
       },
       "text" : {
         "status" : "generated",
@@ -5230,12 +5278,21 @@
       "version" : "0.1.14",
       "name" : "CarinRtbpcPatientPayTypeValueSet",
       "title" : "CARIN RTPBC Patient Pay Type Value Set",
-      "status" : "draft",
-      "date" : "2019-12-08T01:17:27-06:00",
+      "status" : "active",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
+      "publisher" : "CARIN Alliance",
       "description" : "This value set contains components of a patient's responsibility for a prescription product's cost.",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "US",
+          "display" : "United States of America"
+        }]
+      }],
       "expansion" : {
-        "identifier" : "urn:uuid:d2747554-65f9-4dae-ae87-88185b85b2e1",
-        "timestamp" : "2019-12-08T01:17:45-06:00",
+        "identifier" : "urn:uuid:efd7916a-7ddf-48bf-b7c1-ca4380773532",
+        "timestamp" : "2019-12-09T05:37:02-06:00",
         "total" : 10,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5312,14 +5369,9 @@
       "name" : "CarinRtpbcStateAndProvinceCodeValueSet",
       "title" : "CARIN RTPBC Two Letter State and Province Code Value Set",
       "status" : "active",
-      "date" : "2019-11-19T18:00:00-06:00",
+      "experimental" : false,
+      "date" : "2019-12-07T23:00:00-06:00",
       "publisher" : "CARIN Alliance",
-      "contact" : [{
-        "telecom" : [{
-          "system" : "email",
-          "value" : "fm@frankmckinney.com"
-        }]
-      }],
       "description" : "This value set contains two letter USPS state codes and Canada Post province codes.",
       "jurisdiction" : [{
         "coding" : [{
@@ -5329,8 +5381,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5e553bbb-dd89-424e-95e2-8b780262e55c",
-        "timestamp" : "2019-12-08T01:17:45-06:00",
+        "identifier" : "urn:uuid:fd49ad74-dfda-498c-a0c4-76ab23908ff2",
+        "timestamp" : "2019-12-09T05:37:03-06:00",
         "total" : 75,
         "parameter" : [{
           "name" : "excludeNested",

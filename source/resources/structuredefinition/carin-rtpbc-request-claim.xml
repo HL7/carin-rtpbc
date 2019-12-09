@@ -2,21 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="carin-rtpbc-request-claim" />
   <meta>
-    <versionId value="73" />
-    <lastUpdated value="2019-11-06T15:33:12.000-05:00" />
+    <lastUpdated value="2019-12-08T00:00:00-05:00" />
   </meta>
-  <text>
-    <status value="additional" />
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <div>This profile constrains the Claim resource so that it can serve as the                          <i>RTPBC Request</i> in the consumer real-time pharmacy benefit check process                   </div>
-    </div>
-  </text>
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
   <version value="0.0.1" />
   <name value="CarinRtpbcRequest" />
   <title value="CARIN RTPBC Request Using Claim" />
-  <status value="draft" />
-  <date value="2019-10-03" />
+  <status value="active" />
+  <date value="2019-12-08T00:00:00-05:00" />
   <publisher value="CARIN Alliance" />
   <description value="This profile constrains the Claim resource so that it can serve as the RTPBC Request in the consumer real-time pharmacy benefit check process" />
   <jurisdiction>
@@ -335,7 +328,7 @@
       <min value="1" />
       <mustSupport value="true" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="Billing quantity unit of measure" />
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit" />
       </binding>

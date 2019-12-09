@@ -2,8 +2,7 @@
   "resourceType": "ValueSet",
   "id": "carin-rtpbc-coverage-summary-value-set",
   "meta": {
-    "versionId": "3",
-    "lastUpdated": "2019-11-06T16:01:46.000-06:00"
+    "lastUpdated": "2019-12-07T23:00:00.000-06:00"
   },
   "text": {
     "status": "generated",
@@ -13,9 +12,21 @@
   "version": "0.1.14",
   "name": "CarinRtbpcCoverageSummaryValueSet",
   "title": "CARIN RTPBC Coverage Summary Value Set",
-  "status": "draft",
-  "date": "2019-12-08T01:17:27-06:00",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-12-07T23:00:00-06:00",
   "description": "This value set contains a set of coverage outcomes that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

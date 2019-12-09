@@ -3,26 +3,34 @@
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="rtpbc-bundle-response-03-w-header"/>
   <meta>
-    <versionId value="1"/>
-    <lastUpdated value="2019-11-15T08:51:24.000-05:00"/>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
   </meta>
   <type value="message"/>
+  <timestamp value="2019-11-15T13:10:15-05:00"/>
   <entry>
-    <fullUrl value="http://example.org/MessageHeader/rtpbc-messageheader-response-03"/>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a"/>
     <resource>
       <MessageHeader>
         <id value="rtpbc-messageheader-response-03"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">text
-                    </div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-messageheader-response-03</p><p><b>meta</b>: </p><p><b>event</b>: RTPBC Response (Details: http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type code rtpbc-response = 'RTPBC Response', stated as 'RTPBC Response')</p><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Endpoint</b></td></tr><tr><td>*</td><td>PharmacyBenefitsCompany</td><td><a href="http://example.org/PharmacyBenefitsCo/fhir">http://example.org/PharmacyBenefitsCo/fhir</a></td></tr></table><h3>Responses</h3><table class="grid"><tr><td>-</td><td><b>Identifier</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>rtpbc-messageheader-request-03</td><td>ok</td></tr></table><p><b>focus</b>: <a href="ClaimResponse-rtpbc-claim-response-03.html">Generated Summary: id: rtpbc-claim-response-03; rtpbc-03-response; status: active; <span title="Codes: {http://terminology.hl7.org/CodeSystem/claim-type pharmacy}">Pharmacy</span>; use: predetermination; created: Nov 1, 2019 11:20:59 AM; outcome: complete; disposition: Processed successfully</a></p></div>
         </text>
         <eventCoding>
+          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type"/>
           <code value="rtpbc-response"/>
+          <display value="RTPBC Response"/>
         </eventCoding>
         <source>
-          <name value="MyPatientApp"/>
-          <endpoint value="http://example.org/MyPatientApp"/>
+          <name value="PharmacyBenefitsCompany"/>
+          <endpoint value="http://example.org/PharmacyBenefitsCo/fhir"/>
         </source>
+        <response>
+          <identifier value="rtpbc-messageheader-request-03"/>
+          <code value="ok"/>
+        </response>
         <focus>
           <reference value="ClaimResponse/rtpbc-claim-response-03"/>
         </focus>
@@ -30,12 +38,15 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://example.org/ClaimResponse/rtpbc-claim-response-03"/>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b"/>
     <resource>
       <ClaimResponse>
         <id value="rtpbc-claim-response-03"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href="Patient-rtpbc-patient-03.html">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href="Organization-rtpbc-organization-03m.html">Generated Summary: id: rtpbc-organization-03m; 0999029; <span title="Codes: {http://ncpdp.org/pharmacy-type M}">Mail Order</span>; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-response-03</p><p><b>meta</b>: </p><p><b>identifier</b>: rtpbc-03-response</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href="Patient-rtpbc-patient-03.html">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:59 AM</p><p><b>insurer</b>: </p><p><b>request</b>: </p><p><b>outcome</b>: complete</p><p><b>disposition</b>: Processed successfully</p><blockquote><p><b>item</b></p><p><b>itemSequence</b>: 1</p><p><b>noteNumber</b>: 1</p><blockquote><p><b>adjudication</b></p><p><b>category</b>: Copay <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'copay' = 'Copay', given as 'Copay'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Per prescription coinsurance <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'coinsurance' = 'Per prescription coinsurance', given as 'Per prescription coinsurance'})</span></p><p><b>amount</b>: </p></blockquote><blockquote><p><b>adjudication</b></p><p><b>category</b>: Total patient responsibility <span style="background: LightGoldenRodYellow">(Details : {http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type code 'total' = 'Total patient responsibility', given as 'Total patient responsibility'})</span></p><p><b>amount</b>: </p></blockquote></blockquote><blockquote><p><b>addItem</b></p><p><b>itemSequence</b>: 1</p><p><b>provider</b>: <a href="Organization-rtpbc-organization-03m.html">Generated Summary: id: rtpbc-organization-03m; 0999029; <span title="Codes: {http://ncpdp.org/pharmacy-type M}">Mail Order</span>; name: My Mail Service Pharmacy; ph: 5551234567</a></p><p><b>productOrService</b>: Prozac 10mg capsule <span style="background: LightGoldenRodYellow">(Details : {http://terminology.hl7.org/CodeSystem/ndc-11 code '00777310402' = 'Prozac 10mg capsule', given as 'Prozac 10mg capsule'})</span></p><p><b>quantity</b>: 180 EA</p><p><b>noteNumber</b>: 2</p><h3>Adjudications</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 1</p><p><b>text</b>: Covered</p></blockquote><blockquote><p><b>processNote</b></p><p><b>number</b>: 2</p><p><b>text</b>: Covered</p></blockquote></div>
         </text>
         <identifier>
           <value value="rtpbc-03-response"/>
@@ -118,7 +129,7 @@
           </provider>
           <productOrService>
             <coding>
-              <system value="http://example.org/ndc11/placeholder"/>
+              <system value="http://terminology.hl7.org/CodeSystem/ndc-11"/>
               <code value="00777310402"/>
               <display value="Prozac 10mg capsule"/>
             </coding>
@@ -180,36 +191,15 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://example.org/Patient/rtpbc-patient-03"/>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c"/>
     <resource>
       <Patient>
         <id value="rtpbc-patient-03"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">
-                        <div class="hapiHeaderText">Jane 
-                            <b>DOE </b>
-                        </div>
-                        <table class="hapiPropertyTable">
-                            <tbody>
-                                <tr>
-                                    <td>Address</td>
-                                    <td>
-                                        <span>100 Oak Court </span>
-                                        <br/>
-                                        <span>Madison </span>
-                                        <span>WI </span>
-                                        <span>US </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Date of birth</td>
-                                    <td>
-                                        <span>05 December 1975</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-patient-03</p><p><b>meta</b>: </p><p><b>name</b>: Jane Doe </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1975-12-05</p><p><b>address</b>: 100 Oak Court Madison WI 53510 US </p></div>
         </text>
         <name>
           <family value="Doe"/>
@@ -228,17 +218,27 @@
     </resource>
   </entry>
   <entry>
-    <fullUrl value="http://example.org/Organization/rtpbc-organization-03m"/>
+    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d"/>
     <resource>
       <Organization>
         <id value="rtpbc-organization-03m"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"/>
+        </meta>
         <text>
-          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 5515515515</p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>meta</b>: </p><p><b>identifier</b>: 5515515515</p><p><b>type</b>: Mail Order <span style="background: LightGoldenRodYellow">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'M', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>
         </text>
         <identifier>
           <system value="http://hl7.org/fhir/sid/us-npi"/>
           <value value="5515515515"/>
         </identifier>
+        <type>
+          <coding>
+            <system value="http://ncpdp.org/pharmacy-type"/>
+            <code value="M"/>
+            <display value="Mail Order"/>
+          </coding>
+        </type>
         <name value="My Mail Service Pharmacy"/>
         <telecom>
           <system value="phone"/>

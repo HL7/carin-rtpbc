@@ -1,9 +1,14 @@
 {
   "resourceType": "Organization",
   "id": "rtpbc-organization-03m",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy"
+    ]
+  },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>identifier</b>: 0999029</p><p><b>type</b>: Mail Order <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'M', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-organization-03m</p><p><b>meta</b>: </p><p><b>identifier</b>: 0999029</p><p><b>type</b>: Mail Order <span style=\"background: LightGoldenRodYellow\">(Details : {http://ncpdp.org/pharmacy-type code 'M' = 'M', given as 'Mail Order'})</span></p><p><b>name</b>: My Mail Service Pharmacy</p><p><b>telecom</b>: ph: 5551234567</p><p><b>address</b>: 10001 Oakland Road Milwaukee WI 54444 US </p></div>"
   },
   "identifier": [
     {

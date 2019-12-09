@@ -54,7 +54,9 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG
 
 ### Change log
 
-**0.1.14 (This version):** Refined Profile and Terminology page wording. Adjusted certain resource names to increase consistency. Added responder CapabilityStatement, request and response MessageHeader and Bundle definitions. 
+**0.1.15 (This version):** Additional narrative content and guidance including Must Support characterization and other Profile description. Typo and formatting corrections. **NOTE: Building with the newest IG Publisher released late on the 8th introduced a lot of broken links (versus none when building the same source using the previous publisher). The broken links are limited to .id and .extension elements in the StructureDefinition tree view...** 
+
+**0.1.14:** Refined Profile and Terminology page wording. Adjusted certain resource names to increase consistency. Added responder CapabilityStatement, request and response MessageHeader and Bundle definitions. 
 
 **0.1.13:** Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.  
 
