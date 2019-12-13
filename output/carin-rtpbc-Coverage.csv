@@ -116,9 +116,9 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Coverage.payor.display","","","",0,1,"","","Y","string {[]} {[]}
 ","Text alternative for the resource","Plain text narrative that identifies the resource in addition to the resource reference.","This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.","","","","","","","","",,,,,"",,,,"Reference.display",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","N/A"
-"Coverage.class","","","Pharmacy coverage identifiers",0,4,"Y","","","BackboneElement {[]} {[]}
+"Coverage.class","","","Pharmacy coverage identifiers",0,*,"Y","","","BackboneElement {[]} {[]}
 ","Pharmacy coverage identifiers","Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID.","Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners","The codes provided on the health card which identify or confirm the specific policy for the insurer.","","","","","","","",,,,,"","value:type}
-","Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID.",,"closed","Coverage.class",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+","Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID.",,"open","Coverage.class",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Coverage.class.id","","","",0,1,"","","","string {[]} {[]}
 ","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"","","n/a"
@@ -199,7 +199,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "Coverage.class.name","","","",0,1,"","","Y","string {[]} {[]}
 ","Human readable description of the type and value","A short description for the class.","","Used to provide a meaningful description in correspondence to the patient.","","","","","","","",,,,,"",,,,"Coverage.class.name",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","C11 (Division,Section)","IN1-8","C.31"
-"Coverage.class","group-id","","Pharmacy Benefit Group ID",0,1,"Y","","","BackboneElement {[]} {[]}
+"Coverage.class","rxgroup-id","","Pharmacy Benefit Group ID",0,1,"Y","","","BackboneElement {[]} {[]}
 ","Pharmacy Benefit Group ID","The patient's Group ID associated with their pharmacy benefit","Populate as agreed between trading partners","The codes provided on the health card which identify or confirm the specific policy for the insurer.","","","","","","","",,,,,"",,,,"Coverage.class",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "
 "Coverage.class.id","","","",0,1,"","","","string {[]} {[]}
@@ -218,7 +218,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Type of class such as 'group' or 'plan'","The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan.","","The insurer issued label for a specific health card value.","","","","<valueCodeableConcept xmlns=""http://hl7.org/fhir"">
   <coding>
     <system value=""http://terminology.hl7.org/CodeSystem/coverage-class""/>
-    <code value=""group""/>
+    <code value=""rxgroup""/>
   </coding>
 </valueCodeableConcept>","","","",,"extensible","The policy classifications, eg. Group, Plan, Class, etc.","http://hl7.org/fhir/ValueSet/coverage-class","",,,,"Coverage.class.type",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 "

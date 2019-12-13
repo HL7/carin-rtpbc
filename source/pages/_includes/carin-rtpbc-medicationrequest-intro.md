@@ -17,6 +17,7 @@ All of the elements identified above are marked Must Support...
 
 **Client and Responding systems** <br>
 * days supply (.expectedSupplyDuration) can impact cost and coverage for a medication; however, patient's may not be able to reliably provide it. Implementing partners MUST determine how or whether the element is to be used.
+
 **Responding systems**
 * MUST make use of all pertinent MedicationRequest information when determining pricing and coverage
 

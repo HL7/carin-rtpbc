@@ -204,7 +204,7 @@ can only resize using html  or css ;-(
       <div class="row">  <!-- row -->
        <div class="inner-wrapper"> <!-- inner-wrapper -->
          <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.15). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.16). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
            <!-- content of page -->
 
 
@@ -239,8 +239,6 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
   <li><a href="#description" id="markdown-toc-description">Description</a></li>
   <li><a href="#scope-of-this-guide" id="markdown-toc-scope-of-this-guide">Scope of this guide</a></li>
   <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
-  <li><a href="#change-log" id="markdown-toc-change-log">Change log</a></li>
-  <li><a href="#known-issues-and-to-dos" id="markdown-toc-known-issues-and-to-dos">Known issues and to-dos</a></li>
   <li><a href="#authors" id="markdown-toc-authors">Authors</a></li>
 </ul>
 
@@ -248,7 +246,7 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 
 <h3 id="description">Description</h3>
 
-<p>This is a guide for implementing the <strong>consumer-focused real-time pharmacy benefit check</strong> (consumer RTPBC) using FHIR R4.</p>
+<p>This is a guide for implementing a <em>consumer-focused real-time pharmacy benefit check</em> (RTPBC) process using FHIR R4.</p>
 
 <p>Using RTPBC, a patient can learn the cost and insurance coverage related to medications they’ve been prescribed. Specifically…</p>
 <ul>
@@ -258,7 +256,8 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 
 <p>Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.</p>
 
-<p>The profile adapts terminology used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.</p>
+<p>Where possible, the profile leverages terminology currently used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.
+<br /></p>
 
 <h3 id="scope-of-this-guide">Scope of this guide</h3>
 <p><strong>Consumer RTPBC is intended to be used…</strong></p>
@@ -272,64 +271,14 @@ This is the Continuous Integration Build of the CarinRtpbc Implementation Guide,
 This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that’s the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort. (See <a href="Consumer_vs_provider_RTPBC.html">Consumer vs provider RTPBC</a> for content comparison.)</p>
 
 <p><strong><em>Related information flows outside of consumer RTPBC</em></strong> <br />
-The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. <em>These exchanges are outside the scope of this guide.</em></p>
-
-<p><br /></p>
+The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. <em>These exchanges are outside the scope of this guide.</em>
+<br /></p>
 
 <h3 id="feedback">Feedback</h3>
 <p>This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.</p>
 
-<p>Comments and suggestions are welcome on our Zulip stream…
-https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
-
-<ul>
-  <li>or send a note to fm@frankmckinney.com</li>
-</ul>
-
-<p><br /></p>
-
-<h3 id="change-log">Change log</h3>
-
-<p><strong>0.1.15 (This version):</strong> Additional narrative content and guidance including Must Support characterization and other Profile description. Typo and formatting corrections. <strong>NOTE: Building with the newest IG Publisher released late on the 8th introduced a lot of broken links (versus none when building the same source using the previous publisher). The broken links are limited to .id and .extension elements in the StructureDefinition tree view…</strong></p>
-
-<p><strong>0.1.14:</strong> Refined Profile and Terminology page wording. Adjusted certain resource names to increase consistency. Added responder CapabilityStatement, request and response MessageHeader and Bundle definitions.</p>
-
-<p><strong>0.1.13:</strong> Reworked terminology artifacts related to NCPDP licensed code systems (specifying NamingSystem resources as the means to reference them in this guide, and removing placeholder CodeSystem resources). Added example NCPDP code set concepts sourced form the AHRQ United States Health Information Knowledgebase (USHIK), a publicly-available source. Removed preliminary content related to discount coupons.</p>
-
-<p><strong>0.1.12:</strong> Refined description wording for the isAlternative extension (within the resource and on the Profiles &amp; Extensions page).</p>
-
-<p><strong>0.1.11:</strong> Added pharmacy type value set referencing NCPDP Pharmacy Type, bound to to Organization.type in the pharmacy organization profile.</p>
-
-<p><strong>0.1.10:</strong> Added code system with new coupon coverage-class concepts and new value set to add them to the current HL7 coverage-class values. Added placeholder code systems for multiple NCPDP and other code/identifier systems for which HL7/FHIR URLs are not available–to be replaced with HL7-maintained URLs or NamingSystem resources within this IG (when supported by the publishing process); see Terminology page. Added state/province and constrained country value sets and related element bindings in Patient and pharmacy Organization profiles. Added currency bindings in ClaimResponse cost elements. Refined content and layout on terminology, code system, value set and naming system pages. Refined business error content in ClaimResponse and clarified related guidance in the Error Handling page. Refined content on the Consumer vs Provider RTPBC page.</p>
-
-<p><strong>0.1.09:</strong> Added message definitions for the request and response. Added an Error Handling section in the Guidance menu, and placeholder ‘error code’ CodeSystem and ValueSet resources (to be refined/replaced after stakeholder discussion).</p>
-
-<p><strong>0.1.08:</strong> Added discussion of submission/response using FHIR messaging to the Submission Method page (renamed from Submit Operation). Added examples of submission / response using messaging. Added an extension (isAlternative) to characterize ClaimResponse.addItem composites as independent alternative fulfillment options (based on feedback from the FM WG). Added a Security page under Guidance, to be further fleshed out through stakeholder discussion.</p>
-
-<p><strong>0.1.07:</strong> Moved content illustration content to Examples section. (Changed name of Other menu item to Examples). Adjusted Submit Operation to remove the MessageHeader resource from the submitted Bundle, based on discussion with Financial Mgmt WG. Likewise adjusted the Bundle examples and illustrations. Clarified the high-level resource map illustration to match current approach.</p>
-
-<p><strong>0.1.06:</strong> Added the Coverage resource into the request content illustration (inadvertently left it out earlier).</p>
-
-<p><strong>0.1.05:</strong> Added MedicationRequest.reported as a Must Support element to indicate whether the prescription information is being reported by the patient or other source (versus being the actual original prescription resource). Added content illustrations to provide business-level discussion material.</p>
-
-<p><strong>0.1.04:</strong> Addressed broken page links, made small profile adjustments in ClaimResponse.</p>
-
-<p><strong>0.1.03:</strong> Added submit operation and parameter details. Added bundled version of request and response. Corrected version using Claim w/contained resources (for discussion). Added separate Patient, Coverage, MedicationRequest, Organization, MessageHeader example resources.</p>
-
-<p><strong>0.1.02 :</strong> Loosened element cardinality restrictions in the Claim profile based on input from reviewers. General narrative cleanup.</p>
-
-<p><strong>0.1.01:</strong> Adjusted background and use case material to also reflect RTPBC communication between the patient’s application and discount medication pricing sources–which augments information retrieved from the patient’s insurer. In process of reorganizing content to a more intuitive arrangement.</p>
-
-<p><strong>0.1.00:</strong> Initial resources and narrative content.</p>
-
-<p><br /></p>
-
-<h3 id="known-issues-and-to-dos">Known issues and to-dos</h3>
-<ul>
-  <li>Additional examples to be added</li>
-</ul>
-
-<p><br /></p>
+<p>Comments and suggestions are welcome on our <a href="https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG">Zulip stream</a> or send a note to <a href="mailto:fm@frankmckinney.com">the author</a>
+<br /></p>
 
 <h3 id="authors">Authors</h3>
 
@@ -337,12 +286,16 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
 <thead>
 <tr>
 <th>Name</th>
-<th>Email</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>HL7 Pharmacy Workgroup</td>
+<td></td>
+</tr>
+<tr>
+<td>HL7 Financial Management Workgroup</td>
 <td></td>
 </tr>
 <tr>
@@ -382,7 +335,7 @@ https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG</p>
   <div class="container">  <!-- container -->
    <div class="inner-wrapper">
     <p>
-      CarinRtpbc Version: 0.1.15  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Mon, Dec 9, 2019 08:09-0600.
+      CarinRtpbc Version: 0.1.16  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 13, 2019 13:29-0600.
       | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </span>

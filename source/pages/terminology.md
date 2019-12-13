@@ -9,9 +9,6 @@ active: terminology
 {:toc} -->
 <!-- end TOC -->
 
-<br>
-
-
 
 ### Value Sets
 

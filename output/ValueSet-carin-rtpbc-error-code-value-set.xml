@@ -10,7 +10,7 @@
 </div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://ncpdp.org/reject-code</code></li></ul></div>
   </text>
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code"/>
-  <version value="0.1.15"/>
+  <version value="0.1.16"/>
   <name value="CarinRtbpcErrorCodeValueSet"/>
   <title value="CARIN RTPBC Error Code Value Set"/>
   <status value="active"/>

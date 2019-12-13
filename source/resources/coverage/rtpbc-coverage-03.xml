@@ -35,7 +35,7 @@
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-        <code value="group" />
+        <code value="rxgroup" />
       </coding>
     </type>
     <value value="GROUP0001" />

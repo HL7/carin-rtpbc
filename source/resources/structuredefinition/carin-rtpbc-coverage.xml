@@ -54,13 +54,13 @@
         </discriminator>
         <description value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
         <ordered value="false" />
-        <rules value="closed" />
+        <rules value="open" />
       </slicing>
       <short value="Pharmacy coverage identifiers" />
       <definition value="Identifiers used by the payer/PBM to located the patient's coverage. IIN (BIN) number, Processor Control Number (PCN), pharmacy benefit Group ID and patient's PBM Member ID." />
       <comment value="Populate with identifiers retrieved from an eligibility service or other source agreed between trading partners" />
       <min value="0" />
-      <max value="4" />
+      <max value="*" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.class.type">
@@ -111,9 +111,9 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Coverage.class:group-id">
+    <element id="Coverage.class:rxgroup-id">
       <path value="Coverage.class" />
-      <sliceName value="group-id" />
+      <sliceName value="rxgroup-id" />
       <label value="Pharmacy Benefit Group ID" />
       <short value="Pharmacy Benefit Group ID" />
       <definition value="The patient's Group ID associated with their pharmacy benefit" />
@@ -121,14 +121,14 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Coverage.class:group-id.type">
+    <element id="Coverage.class:rxgroup-id.type">
       <path value="Coverage.class.type" />
       <min value="1" />
       <max value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-          <code value="group" />
+          <code value="rxgroup" />
         </coding>
       </patternCodeableConcept>
     </element>
@@ -139,7 +139,6 @@
       <short value="PBM Member ID" />
       <definition value="The patient's pharmacy benefit member ID (which may differ from their overall health insurance ID)" />
       <comment value="Populate as agreed between trading partners" />
-      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

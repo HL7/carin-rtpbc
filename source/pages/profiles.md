@@ -1,5 +1,5 @@
 ---
-title: Profiles defined as part of this Guide
+title: Profiles, extensions and message definitions defined as part of this Guide
 layout: default
 active: profiles
 ---
@@ -14,7 +14,6 @@ active: profiles
 <!-- end TOC -->
 
 ---
-<br>
 
 ### Profiles
 

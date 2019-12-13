@@ -36,7 +36,8 @@ At a high level, the process looks like this...
 
 ***The patient's app...***
 *  interprets and presents the information in an understandable way, possibly presenting insurance coverage alongside cash or discount pricing gathered from other sources
-*  ***using the gathered information,*** the patient can learn whether the drug is covered, compare insurance out of pocket costs between pharmacies--and can also compare to cash prices and discount options gathered by their app.
+
+***Using the gathered information,*** the patient can learn whether the drug is covered, compare insurance out of pocket costs between pharmacies--and can also compare to cash prices and discount options gathered by their app.
 
 ***If the insurer or discount provider cannot complete processing of the request...***
 *  it returns information about the exception that occurred. *See <a href="Error_handling.html">the Error Handling page</a>*

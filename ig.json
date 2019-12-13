@@ -311,6 +311,6 @@
 		}
 	},
 	"version": "4.0.1",
-	"fixed-business-version": "0.1.15",
+	"fixed-business-version": "0.1.16",
 	"dependencyList": []
 }

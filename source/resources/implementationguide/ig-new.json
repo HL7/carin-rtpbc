@@ -11,22 +11,22 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\pages"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc58\\source\\pages\\extras"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
-  "version" : "0.1.15",
+  "version" : "0.1.16",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",

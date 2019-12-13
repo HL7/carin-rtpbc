@@ -8,7 +8,7 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-coverage-03</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>payor</b>: </p><blockquote><p><b>class</b></p><p><b>type</b>: RX BIN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxbin' = 'RX BIN)</span></p><p><b>value</b>: BIN001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX PCN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxpcn' = 'RX PCN)</span></p><p><b>value</b>: PCN002</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: Group <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'group' = 'Group)</span></p><p><b>value</b>: GROUP0001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Id <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxid' = 'RX Id)</span></p><p><b>value</b>: MEMBER000001</p></blockquote></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-coverage-03</p><p><b>meta</b>: </p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>payor</b>: </p><blockquote><p><b>class</b></p><p><b>type</b>: RX BIN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxbin' = 'RX BIN)</span></p><p><b>value</b>: BIN001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX PCN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxpcn' = 'RX PCN)</span></p><p><b>value</b>: PCN002</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Group <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxgroup' = 'RX Group)</span></p><p><b>value</b>: GROUP0001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Id <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxid' = 'RX Id)</span></p><p><b>value</b>: MEMBER000001</p></blockquote></div>"
   },
   "status": "active",
   "beneficiary": {
@@ -49,7 +49,7 @@
         "coding": [
           {
             "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
-            "code": "group"
+            "code": "rxgroup"
           }
         ]
       },

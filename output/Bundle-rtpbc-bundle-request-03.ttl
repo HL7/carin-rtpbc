@@ -8,42 +8,43 @@
 <http://hl7.org/fhir/us/carin-rtpbc/Bundle/rtpbc-bundle-request-03> a fhir:Bundle;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "rtpbc-bundle-request-03"];
-  fhir:Resource.meta [
-     fhir:Meta.versionId [ fhir:value "11" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-11-13T15:28:08.000-05:00"^^xsd:dateTime ]
-  ];
   fhir:Bundle.type [ fhir:value "collection"];
+  fhir:Bundle.timestamp [ fhir:value "2019-11-15T13:10:13-05:00"^^xsd:dateTime];
   fhir:Bundle.entry [
      fhir:index 0;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Claim/rtpbc-claim-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Claim/rtpbc-claim-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a>
   ], [
      fhir:index 1;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Patient/rtpbc-patient-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Patient/rtpbc-patient-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b>
   ], [
      fhir:index 2;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Coverage/rtpbc-coverage-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Coverage/rtpbc-coverage-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c>
   ], [
      fhir:index 3;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/MedicationRequest/rtpbc-medicationrequest-03" ];
-     fhir:Bundle.entry.resource <http://example.org/MedicationRequest/rtpbc-medicationrequest-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d>
   ], [
      fhir:index 4;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Practitioner/rtpbc-practitioner-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Practitioner/rtpbc-practitioner-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e>
   ], [
      fhir:index 5;
-     fhir:Bundle.entry.fullUrl [ fhir:value "http://example.org/Organization/rtpbc-organization-03" ];
-     fhir:Bundle.entry.resource <http://example.org/Organization/rtpbc-organization-03>
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f" ];
+     fhir:Bundle.entry.resource <urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f>
   ] .
 
-<http://example.org/Claim/rtpbc-claim-03> a fhir:Claim;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0a> a fhir:Claim;
   fhir:Resource.id [ fhir:value "rtpbc-claim-03"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "4" ];
+     fhir:Meta.lastUpdated [ fhir:value "2019-11-01T15:51:52.000-04:00"^^xsd:dateTime ]
+  ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-03</p><p><b>identifier</b>: rtpbc-03</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:54 AM</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03.html\">Generated Summary: id: rtpbc-organization-03; 0999017; <span title=\"Codes: {http://ncpdp.org/pharmacy-type R}\">Retail</span>; name: Hometown Drug; ph: 6081234567</a></p><p><b>priority</b>: Normal <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})</span></p><p><b>prescription</b>: <a href=\"MedicationRequest-rtpbc-medicationrequest-03.html\">Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/ndc-11 00777310402}\">Prozac 10mg capsule</span></a></p><h3>CareTeams</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td></tr><tr><td>*</td><td>1</td><td><a href=\"Practitioner-rtpbc-practitioner-03.html\">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>1</td><td>true</td><td><a href=\"Coverage-rtpbc-coverage-03.html\">Generated Summary: id: rtpbc-coverage-03; status: active</a></td></tr></table><h3>Items</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>CareTeamSequence</b></td><td><b>ProductOrService</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>1</td><td>1</td><td>Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></td><td>60 EA</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-claim-03</p><p><b>meta</b>: </p><p><b>identifier</b>: rtpbc-03</p><p><b>status</b>: active</p><p><b>type</b>: Pharmacy <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/claim-type code 'pharmacy' = 'Pharmacy', given as 'Pharmacy'})</span></p><p><b>use</b>: predetermination</p><p><b>patient</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>created</b>: Nov 1, 2019 11:20:54 AM</p><p><b>provider</b>: <a href=\"Organization-rtpbc-organization-03.html\">Generated Summary: id: rtpbc-organization-03; 0999017; <span title=\"Codes: {http://ncpdp.org/pharmacy-type R}\">Retail</span>; name: Hometown Drug; ph: 6081234567</a></p><p><b>priority</b>: Normal <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/processpriority code 'normal' = 'Normal', given as 'Normal'})</span></p><p><b>prescription</b>: <a href=\"MedicationRequest-rtpbc-medicationrequest-03.html\">Generated Summary: id: rtpbc-medicationrequest-03; status: draft; intent: proposal; reported; <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/ndc-11 00777310402}\">Prozac 10mg capsule</span></a></p><h3>CareTeams</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Provider</b></td></tr><tr><td>*</td><td>1</td><td><a href=\"Practitioner-rtpbc-practitioner-03.html\">Generated Summary: id: rtpbc-practitioner-03; 1234567890; Johnson </a></td></tr></table><h3>Insurances</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>Focal</b></td><td><b>Coverage</b></td></tr><tr><td>*</td><td>1</td><td>true</td><td><a href=\"Coverage-rtpbc-coverage-03.html\">Generated Summary: id: rtpbc-coverage-03; status: active</a></td></tr></table><h3>Items</h3><table class=\"grid\"><tr><td>-</td><td><b>Sequence</b></td><td><b>CareTeamSequence</b></td><td><b>ProductOrService</b></td><td><b>Quantity</b></td></tr><tr><td>*</td><td>1</td><td>1</td><td>Prozac 10mg capsule <span style=\"background: LightGoldenRodYellow\">(Details : {http://example.org/ndc11/placeholder code '00777310402' = '00777310402', given as 'Prozac 10mg capsule'})</span></td><td>60 EA</td></tr></table></div>"
   ];
   fhir:Claim.identifier [
      fhir:index 0;
@@ -128,11 +129,11 @@
 
 <http://hl7.org/fhir/us/carin-rtpbc/Coverage/rtpbc-coverage-03> a fhir:us .
 
-<http://example.org/Patient/rtpbc-patient-03> a fhir:Patient;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b> a fhir:Patient;
   fhir:Resource.id [ fhir:value "rtpbc-patient-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n                        <div class=\"hapiHeaderText\">Jane \n                            <b>DOE </b>\n                        </div>\n                        <table class=\"hapiPropertyTable\">\n                            <tbody>\n                                <tr>\n                                    <td>Address</td>\n                                    <td>\n                                        <span>100 Oak Court </span>\n                                        <br/>\n                                        <span>Madison </span>\n                                        <span>WI </span>\n                                        <span>US </span>\n                                    </td>\n                                </tr>\n                                <tr>\n                                    <td>Date of birth</td>\n                                    <td>\n                                        <span>05 December 1975</span>\n                                    </td>\n                                </tr>\n                            </tbody>\n                        </table>\n                    </div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-patient-03</p><p><b>name</b>: Jane Doe </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1975-12-05</p><p><b>address</b>: 100 Oak Court Madison WI 53510 US </p></div>"
   ];
   fhir:Patient.name [
      fhir:index 0;
@@ -156,11 +157,11 @@
      fhir:Address.country [ fhir:value "US" ]
   ] .
 
-<http://example.org/Coverage/rtpbc-coverage-03> a fhir:Coverage;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0c> a fhir:Coverage;
   fhir:Resource.id [ fhir:value "rtpbc-coverage-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-coverage-03</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>payor</b>: </p><blockquote><p><b>class</b></p><p><b>type</b>: RX BIN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxbin' = 'RX BIN)</span></p><p><b>value</b>: BIN001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX PCN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxpcn' = 'RX PCN)</span></p><p><b>value</b>: PCN002</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: Group <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'group' = 'Group)</span></p><p><b>value</b>: GROUP0001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Id <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxid' = 'RX Id)</span></p><p><b>value</b>: MEMBER000001</p></blockquote></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: rtpbc-coverage-03</p><p><b>status</b>: active</p><p><b>beneficiary</b>: <a href=\"Patient-rtpbc-patient-03.html\">Generated Summary: id: rtpbc-patient-03; Jane Doe ; gender: female; birthDate: 1975-12-05</a></p><p><b>payor</b>: </p><blockquote><p><b>class</b></p><p><b>type</b>: RX BIN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxbin' = 'RX BIN)</span></p><p><b>value</b>: BIN001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX PCN <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxpcn' = 'RX PCN)</span></p><p><b>value</b>: PCN002</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Group <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxgroup' = 'RX Group)</span></p><p><b>value</b>: GROUP0001</p></blockquote><blockquote><p><b>class</b></p><p><b>type</b>: RX Id <span style=\"background: LightGoldenRodYellow\">(Details : {http://terminology.hl7.org/CodeSystem/coverage-class code 'rxid' = 'RX Id)</span></p><p><b>value</b>: MEMBER000001</p></blockquote></div>"
   ];
   fhir:Coverage.status [ fhir:value "active"];
   fhir:Coverage.beneficiary [
@@ -199,7 +200,7 @@
        fhir:CodeableConcept.coding [
          fhir:index 0;
          fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/coverage-class" ];
-         fhir:Coding.code [ fhir:value "group" ]
+         fhir:Coding.code [ fhir:value "rxgroup" ]
        ]
      ];
      fhir:Coverage.class.value [ fhir:value "GROUP0001" ]
@@ -215,7 +216,7 @@
      fhir:Coverage.class.value [ fhir:value "MEMBER000001" ]
   ] .
 
-<http://example.org/MedicationRequest/rtpbc-medicationrequest-03> a fhir:MedicationRequest;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d> a fhir:MedicationRequest;
   fhir:Resource.id [ fhir:value "rtpbc-medicationrequest-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -257,7 +258,7 @@
      ]
   ] .
 
-<http://example.org/Practitioner/rtpbc-practitioner-03> a fhir:Practitioner;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0e> a fhir:Practitioner;
   fhir:Resource.id [ fhir:value "rtpbc-practitioner-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
@@ -273,7 +274,7 @@
      fhir:HumanName.family [ fhir:value "Johnson" ]
   ] .
 
-<http://example.org/Organization/rtpbc-organization-03> a fhir:Organization;
+<urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0f> a fhir:Organization;
   fhir:Resource.id [ fhir:value "rtpbc-organization-03"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];

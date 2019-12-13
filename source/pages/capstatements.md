@@ -13,8 +13,7 @@ active: capstatements
 
 <!-- end TOC -->
 
-### CapabilityStatements
-
+<br>
 <table>
 <thead>
 <tr>
@@ -29,3 +28,4 @@ active: capstatements
 </tr>
 </tbody>
 </table>
+<br>
