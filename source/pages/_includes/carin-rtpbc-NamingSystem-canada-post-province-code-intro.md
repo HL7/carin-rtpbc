@@ -22,6 +22,3 @@ Below are the concepts contained in this code system.
 </table>
 
 <br>
-*Note: NamingSystem functionality is not yet fully supported by the FHIR implementation guide publishing process.*
-
-<br>

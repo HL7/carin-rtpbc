@@ -12,8 +12,5 @@ However, a past version of the code set is publicly available in the AHRQ United
 <tr><td>ML</td><td>Milliliter</td></tr>
 </table>
 
-<br> 
-*Note: NamingSystem functionality is not yet fully supported by the FHIR implementation guide publishing process.*
-
 <br>
 

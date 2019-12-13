@@ -6,7 +6,7 @@ active: Submission method
 
 [Previous Page](Information_content_and_FHIR_resources.html)
 
-*Note: The guide describes two methods for submitting the RTPBC request ($submit operation and FHIR messaging using $process-message), with the intent to elicit comments from potential implementers.*
+*Note: The guide describes two methods for submitting the RTPBC request ($submit operation and FHIR&reg; messaging using $process-message), with the intent to elicit comments from potential implementers.*
 
 <br>
 
@@ -15,7 +15,7 @@ The RTPBC request is submitted using the $submit operation on the processor's cl
 * URL: [base]/Claim/$submit
 
 #### Submit parameter
-The operation has a single FHIR resource input parameter consisting of a **Bundle** containing the Claim resource and referenced supporting resources.
+The operation has a single FHIR&reg; resource input parameter consisting of a **Bundle** containing the Claim resource and referenced supporting resources.
 
 #### Request parameter bundle
 * Claim - The main RTPBC request
@@ -49,7 +49,7 @@ The RTPBC request is submitted using the $process-message operation on the proce
 <br>
 
 #### Process-message parameter and response
-Like the option above, the $process-message operation takes a single FHIR resource input parameter consisting of a Bundle containing the Claim resource and referenced supporting resources, and returns a Bundle containing a ClaimResponse and supporting resources.
+Like the option above, the $process-message operation takes a single FHIR&reg; resource input parameter consisting of a Bundle containing the Claim resource and referenced supporting resources, and returns a Bundle containing a ClaimResponse and supporting resources.
 
 In addition, this method includes a MessageHeader resource in both the request and response.
 * In the request, the MessageHeader's *focus.reference* points to the Bundle's Claim resource, per the <a href="MessageDefinition-carin-rtpbc-request-message-definition.html">CarinRtpbcRequestMessageDefinition.</a>

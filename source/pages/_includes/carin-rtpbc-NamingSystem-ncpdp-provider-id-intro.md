@@ -11,6 +11,3 @@ Below are fictional identifiers that reflect the NCPDP Provider ID structure, fo
 </table>
 
 <br>
-*Note: NamingSystem functionality is not yet fully supported by the FHIR implementation guide publishing process.*
-
-<br>

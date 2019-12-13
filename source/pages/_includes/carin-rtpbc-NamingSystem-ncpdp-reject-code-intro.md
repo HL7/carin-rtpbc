@@ -40,7 +40,4 @@ However, a past version of the code set is publicly available in the AHRQ United
 <tr><td>10</td><td>M/I Patient Gender Code</td></tr>
 </table>
 
-<br> 
-*Note: NamingSystem functionality is not yet fully supported by the FHIR implementation guide publishing process.*
-
 <br>

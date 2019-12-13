@@ -24,7 +24,7 @@ At a high level, the process looks like this...
 ***In the request...***
 *  the patient's app gathers information about the prescription... entered by the patient or imported from another source
 *  the patient provides coverage information from their insurance card, or the app retrieves it using an eligibility service (outside the scope of this guide)
-*  the app packages up the patient, coverage, prescription and preferred pharmacy information in FHIR resources and submits them to the patient's insurer
+*  the app packages up the patient, coverage, prescription and preferred pharmacy information in HL7 FHIR&reg; resources and submits them to the patient's insurer
 
 ***The insurer...***
 *  determines the patient cost and coverage details for the requested pharmacy and potentially for other pharmacy options--such as a mail service pharmacy
@@ -44,7 +44,7 @@ At a high level, the process looks like this...
 
 <br>
 
-#### Related information flows outside of consumer RTPBC
+### Related information flows outside of consumer RTPBC
 The patient's app might gather related information (e.g., medication information or insurance eligibility) before submitting the consumer RTPBC request. 
 *These exchanges are outside the scope of this guide.*
 <br>

@@ -1,5 +1,5 @@
 ---
-title: Examples and other resources
+title: Examples
 layout: default
 active: other
 ---

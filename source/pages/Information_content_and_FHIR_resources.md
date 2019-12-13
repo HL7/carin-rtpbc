@@ -49,7 +49,7 @@ The responder...
 
 
 ### Resources used in the exchange
-The consumer RTPBC request and response are accomplished using FHIR **Claim** and **ClaimResponse** resources in a "predetermination" (what-if) mode. Other FHIR resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage. An OperationOutcome communicates exception situations where a ClaimResponse cannot be returned
+The consumer RTPBC request and response are accomplished using FHIR&reg; **Claim** and **ClaimResponse** resources in a "predetermination" (what-if) mode. Other FHIR&reg; resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage. An OperationOutcome communicates exception situations where a ClaimResponse cannot be returned
 
 
 <div><img src="images/high-level-rtpbc-fhir-resource-mapping.png" alt="related information flows"></div>
@@ -66,6 +66,6 @@ Below are profiles constraining those resources for this purpose:
 * **Organization *(Pharmacy)*** - Conveys pharmacy information needed for the exchange 
 * **Coverage** - Conveys the patient's pharmacy benefit coverage IDs 
 
-
+<br>
 
 [Next Page](Submission_method.html)
