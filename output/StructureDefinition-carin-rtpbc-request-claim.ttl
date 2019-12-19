@@ -4394,7 +4394,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "positiveInt" ]
        ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -6305,7 +6305,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "positiveInt" ]
        ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -7318,7 +7318,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "positiveInt" ]
        ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.constraint [
          fhir:index 0;
          fhir:ElementDefinition.constraint.key [ fhir:value "ele-1" ];
@@ -10484,7 +10484,7 @@
        fhir:index 22;
        fhir:Element.id [ fhir:value "Claim.careTeam.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.careTeam.sequence" ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 23;
@@ -10530,7 +10530,7 @@
        fhir:Element.id [ fhir:value "Claim.insurance.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.insurance.sequence" ];
        fhir:ElementDefinition.comment [ fhir:value "Only one set of coverage is submitted in the request. Value is always '1'" ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 27;
@@ -10581,7 +10581,7 @@
        fhir:Element.id [ fhir:value "Claim.item.sequence" ];
        fhir:ElementDefinition.path [ fhir:value "Claim.item.sequence" ];
        fhir:ElementDefinition.comment [ fhir:value "A maximum of one product is submitted per request. Value is always '1'" ];
-       fhir:ElementDefinition.fixedInteger [ fhir:value "1"^^xsd:integer ];
+       fhir:ElementDefinition.fixedPositiveInt [ fhir:value "1"^^xsd:positiveInteger ];
        fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 32;
