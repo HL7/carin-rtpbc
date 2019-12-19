@@ -16,7 +16,7 @@
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Event Type Code System</h2><div><p>This code system defines event types used in RTPBC message headers</p>\n</div><p>This code system http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">rtpbc-request<a name=\"carin-rtpbc-event-type-code-system-rtpbc-request\"> </a></td><td>RTPBC Request</td><td>Real-time Pharmacy Benefit Check (RTPBC) request</td></tr><tr><td style=\"white-space:nowrap\">rtpbc-response<a name=\"carin-rtpbc-event-type-code-system-rtpbc-response\"> </a></td><td>RTPBC Response</td><td>Real-time Pharmacy Benefit Check (RTPBC) response</td></tr></table></div>"
   ];
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type"];
-  fhir:CodeSystem.version [ fhir:value "0.1.16"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
   fhir:CodeSystem.name [ fhir:value "CarinRtpbcEventTypeCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "CARIN RTPBC Event Type Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];

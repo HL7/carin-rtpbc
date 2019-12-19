@@ -4,7 +4,7 @@
   <id value="CARIN-RTPBC"/>
   <meta>
     <versionId value="228"/>
-    <lastUpdated value="2019-12-06T23:00:00.000-06:00"/>
+    <lastUpdated value="2019-12-17T23:00:00.000-06:00"/>
   </meta>
   <text>
     <status value="additional"/>
@@ -26,7 +26,7 @@
     <valueString value="Z:\fhir\CARIN2\CarinRtpbc59QA\source\pages\extras"/>
   </extension>
   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
-  <version value="0.1.16"/>
+  <version value="0.1.0"/>
   <name value="CarinRtpbc"/>
   <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>

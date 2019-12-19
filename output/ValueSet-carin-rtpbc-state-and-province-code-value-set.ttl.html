@@ -38,48 +38,33 @@
 <body markdown="1">
 <?xml version="1.0" encoding="UTF-8"?>
 <div id="segment-header" class="segment">
-  <!-- segment-header -->
-  <div class="container"><!-- container -->
+   <div class="container" style="background:white">
+        <div id="hl7-nav" style="line-height:50px; float:left; margin-top:16px; color:#808080;">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/R4/" style="float:left; margin-left:6px;">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="fhir-nav" style="line-height: 50px;float:right; margin-top:16px; color:#808080;">
+          <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir" style="float: right; margin-left: 6px;">
+		<img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search" style="line-height: 50px; float: right; margin-top: 16px; color: maroon;">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
 
-    <!-- hl7 logo -->
-    <a no-external="true" href="http://hl7.org/fhir">
-      <img alt="FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png"/>
-    </a>
-    <!-- end hl7 logo -->
+	<div id="ig-status" style="color:maroon; height:86px; text-align:center; padding-top:25px">
+          <p>
+		<span style="font-size:12pt;font-weight:bold">
+			CARIN Consumer Realtime Pharmacy Benefit Check
+		</span>
+		<br>
+		
+		- CI Build
+	        	
+	  </p>
+        </div>
+   </div>
 
-
-    <!-- org logo -->
-    <!--
-<a id="your-logo" no-external="true" href="http://www.hl7.org">
-<img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
-</a>
-
-your logo here
-
-[![visit our website](assets/images/org_logo.png)](your web site.html)
-{: .img-responsive #org_logo}
-
-can only resize using html  or css ;-(
-
--->
-
-
-<a no-external="true" href="http://www.hl7.org">
-<img alt="visit our website" class="img-responsive project-logo" src="assets/images/hl7-logo.png"/>
-</a>
-
-    <!-- end org logo -->
-
-
-    <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>CARIN Consumer Realtime Pharmacy Benefit Check Implementation Guide CI Build</strong>
-      
-
-    </div><!-- end ig title text -->
-
-  </div><!-- end container -->
   <div class="container">
     <!-- container -->
   </div>
@@ -194,21 +179,9 @@ can only resize using html  or css ;-(
 <!-- /segment-navbar -->
 
 
-</div>  <!-- /container -->
-</div>  <!-- /segment-breadcrumb -->
-
-
-<div id="page-content-wrapper">  <!-- page content wrapper -->
-  <div class="page-content">  <!--page content -->
-    <div class="container">  <!-- container -->
-      <div class="row">  <!-- row -->
-       <div class="inner-wrapper"> <!-- inner-wrapper -->
-         <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.16). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-           <!-- content of page -->
-
-
 <!-- ============BreadCrumb=============== -->
+
+<div class="container">
 
 <nav class="breadcrumb">
   
@@ -217,7 +190,7 @@ can only resize using html  or css ;-(
       
       
       
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
+        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">Table of Contents</a><a class="breadcrumb-item" href="index.html">Home</a>
         /
         <a class="breadcrumb-item" href="terminology.html">Terminology</a>
         /
@@ -227,10 +200,20 @@ can only resize using html  or css ;-(
       
       
     
-
-
 </nav>
+</div>  <!-- /container -->
 
+
+
+
+<div id="page-content-wrapper">  <!-- page content wrapper -->
+  <div class="page-content">  <!--page content -->
+    <div class="container">  <!-- container -->
+      <div class="row">  <!-- row -->
+       <div class="inner-wrapper"> <!-- inner-wrapper -->
+         <div class="col-12">  <!--col -->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!-- content of page -->
 
 
 <!-- ============nav-tabs=============== -->
@@ -293,7 +276,7 @@ can only resize using html  or css ;-(
      fhir:Narrative.div &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;h2&gt;CARIN RTPBC Two Letter State and Province Code Value Set&lt;/h2&gt;&lt;div&gt;&lt;p&gt;This value set contains two letter USPS state codes and Canada Post province codes.&lt;/p&gt;\n&lt;/div&gt;&lt;p&gt;This value set includes codes from the following code systems:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;https://www.usps.com/&lt;/code&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AK&lt;/td&gt;&lt;td&gt;Alaska&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AL&lt;/td&gt;&lt;td&gt;Alabama&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AR&lt;/td&gt;&lt;td&gt;Arkansas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AS&lt;/td&gt;&lt;td&gt;American Samoa&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AZ&lt;/td&gt;&lt;td&gt;Arizona&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CA&lt;/td&gt;&lt;td&gt;California&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CO&lt;/td&gt;&lt;td&gt;Colorado&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;CT&lt;/td&gt;&lt;td&gt;Connecticut&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DC&lt;/td&gt;&lt;td&gt;District of Columbia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;DE&lt;/td&gt;&lt;td&gt;Delaware&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FL&lt;/td&gt;&lt;td&gt;Florida&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;FM&lt;/td&gt;&lt;td&gt;Federated States of Micronesia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;GA&lt;/td&gt;&lt;td&gt;Georgia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;GU&lt;/td&gt;&lt;td&gt;Guam&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;HI&lt;/td&gt;&lt;td&gt;Hawaii&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IA&lt;/td&gt;&lt;td&gt;Iowa&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ID&lt;/td&gt;&lt;td&gt;Idaho&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IL&lt;/td&gt;&lt;td&gt;Illinois&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;IN&lt;/td&gt;&lt;td&gt;Indiana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;KS&lt;/td&gt;&lt;td&gt;Kansas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;KY&lt;/td&gt;&lt;td&gt;Kentucky&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;LA&lt;/td&gt;&lt;td&gt;Louisiana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MA&lt;/td&gt;&lt;td&gt;Massachusetts&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MD&lt;/td&gt;&lt;td&gt;Maryland&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ME&lt;/td&gt;&lt;td&gt;Maine&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MH&lt;/td&gt;&lt;td&gt;Marshall Islands&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MI&lt;/td&gt;&lt;td&gt;Michigan&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MN&lt;/td&gt;&lt;td&gt;Minnesota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MO&lt;/td&gt;&lt;td&gt;Missouri&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MP&lt;/td&gt;&lt;td&gt;Northern Mariana Islands&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MS&lt;/td&gt;&lt;td&gt;Mississippi&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;MT&lt;/td&gt;&lt;td&gt;Montana&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NC&lt;/td&gt;&lt;td&gt;North Carolina&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;ND&lt;/td&gt;&lt;td&gt;North Dakota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NE&lt;/td&gt;&lt;td&gt;Nebraska&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NH&lt;/td&gt;&lt;td&gt;New Hampshire&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NJ&lt;/td&gt;&lt;td&gt;New Jersey&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NM&lt;/td&gt;&lt;td&gt;New Mexico&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NV&lt;/td&gt;&lt;td&gt;Nevada&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;NY&lt;/td&gt;&lt;td&gt;New York&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OH&lt;/td&gt;&lt;td&gt;Ohio&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OK&lt;/td&gt;&lt;td&gt;Oklahoma&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;OR&lt;/td&gt;&lt;td&gt;Oregon&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PA&lt;/td&gt;&lt;td&gt;Pennsylvania&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PR&lt;/td&gt;&lt;td&gt;Puerto Rico&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;PW&lt;/td&gt;&lt;td&gt;Palau&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;RI&lt;/td&gt;&lt;td&gt;Rhode Island&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SC&lt;/td&gt;&lt;td&gt;South Carolina&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;SD&lt;/td&gt;&lt;td&gt;South Dakota&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TN&lt;/td&gt;&lt;td&gt;Tennessee&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TX&lt;/td&gt;&lt;td&gt;Texas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;UT&lt;/td&gt;&lt;td&gt;Utah&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VA&lt;/td&gt;&lt;td&gt;Virginia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VI&lt;/td&gt;&lt;td&gt;Virgin Islands of the U.S.&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;VT&lt;/td&gt;&lt;td&gt;Vermont&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WA&lt;/td&gt;&lt;td&gt;Washington&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WI&lt;/td&gt;&lt;td&gt;Wisconsin&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WV&lt;/td&gt;&lt;td&gt;West Virginia&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;WY&lt;/td&gt;&lt;td&gt;Wyoming&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AA&lt;/td&gt;&lt;td&gt;Armed Forces Americas&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AE&lt;/td&gt;&lt;td&gt;Armed Forces Europe&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;AP&lt;/td&gt;&lt;td&gt;Armed Forces Pacific&lt;/td&gt;&lt;td/&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;li&gt;Include these codes as defined in &lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html\&quot;&gt;&lt;code&gt;http://placeholder-for-canadapost.ca&lt;/code&gt;&lt;/a&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-AB\&quot;&gt;AB&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Alberta&lt;/td&gt;&lt;td&gt;Alberta&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-BC\&quot;&gt;BC&lt;/a&gt;&lt;/td&gt;&lt;td&gt;British Columbia&lt;/td&gt;&lt;td&gt;British Columbia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-MB\&quot;&gt;MB&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Manitoba&lt;/td&gt;&lt;td&gt;Manitoba&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-NB\&quot;&gt;NB&lt;/a&gt;&lt;/td&gt;&lt;td&gt;New Brunswick&lt;/td&gt;&lt;td&gt;New Brunswick&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-NL\&quot;&gt;NL&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Newfoundland and Labrador&lt;/td&gt;&lt;td&gt;Newfoundland and Labrador&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-NS\&quot;&gt;NS&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nova Scotia&lt;/td&gt;&lt;td&gt;Nova Scotia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-NT\&quot;&gt;NT&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Northwest Territories&lt;/td&gt;&lt;td&gt;Northwest Territories&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-NU\&quot;&gt;NU&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Nunavut&lt;/td&gt;&lt;td&gt;Nunavut&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-ON\&quot;&gt;ON&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Ontario&lt;/td&gt;&lt;td&gt;Ontario&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-PE\&quot;&gt;PE&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Prince Edward Island&lt;/td&gt;&lt;td&gt;Prince Edward Island&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-QC\&quot;&gt;QC&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Quebec&lt;/td&gt;&lt;td&gt;Quebec&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-SK\&quot;&gt;SK&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Saskatchewan&lt;/td&gt;&lt;td&gt;Saskatchewan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=\&quot;CodeSystem-placeholder-canadian-province-code-system.html#placeholder-canadian-province-code-system-YT\&quot;&gt;YT&lt;/a&gt;&lt;/td&gt;&lt;td&gt;Yukon&lt;/td&gt;&lt;td&gt;Yukon&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&quot;
   ];
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">fhir:ValueSet.url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:value</a> &quot;http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-state-and-province-code&quot;];
-  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.16&quot;];
+  <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">fhir:ValueSet.version</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;0.1.0&quot;];
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">fhir:ValueSet.name</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CarinRtpbcStateAndProvinceCodeValueSet&quot;];
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">fhir:ValueSet.title</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:value</a> &quot;CARIN RTPBC Two Letter State and Province Code Value Set&quot;];
   <a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">fhir:ValueSet.status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:value</a> &quot;active&quot;];
@@ -580,27 +563,26 @@ Formats: <a href="ValueSet-carin-rtpbc-state-and-province-code-value-set.html">N
 
 
 
-
 </div>
-
-    </div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
-
-    </div>  <!-- /segment-content -->
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
 
 <!--status-bar-->
 
 <div id="segment-footer" class="segment" igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
-   <div class="inner-wrapper">
-    <p>
-      CarinRtpbc Version: 0.1.16  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 13, 2019 13:29-0600.
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
-        </p>
-   </div>  <!-- /inner-wrapper -->
+	<div class="inner-wrapper" style="font-size:12px">
+	    <p>
+	     &copy; 2019 <a href="http://www.hl7.org/Special/committees/medication/index.cfm">HL7 International - Pharmacy Work Group</a>. Package hl7.fhir.us.carin-rtpbc#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/index.html">FHIR 4.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wed, Dec 18, 2019 16:56-0600">2019-12-18</span>. <br>
+	      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+	      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+	      | <a style="color: #81BEF7" href="http://www.hl7.org/fhir/us/carin-rtpbc/history.cfml">Version History</a>
+	      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"></a>
+	      | <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
+	    </p>
+	</div>
   </div>  <!-- /container -->
  </div>  <!-- /segment-footer -->
   <!-- disqus thread -->

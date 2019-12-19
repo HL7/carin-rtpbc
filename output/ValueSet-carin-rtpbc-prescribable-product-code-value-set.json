@@ -9,7 +9,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Prescribable Product Code Value Set</h2><div><p>This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products).</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-placeholder-ndc-11-code-system.html\"><code>http://terminology.hl7.org/CodeSystem/ndc-11</code></a></li><li>Include codes from <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a> where TTY  in  SCD,SBD,GPCK,BPCK</li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-prescribable-product-code",
-  "version": "0.1.16",
+  "version": "0.1.0",
   "name": "CARINRTPBCPrescribableProductCodeValueSet",
   "title": "CARIN RTPBC Prescribable Product Code Value Set",
   "status": "active",

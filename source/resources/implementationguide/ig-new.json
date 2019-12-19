@@ -3,7 +3,7 @@
   "id" : "CARIN-RTPBC",
   "meta" : {
     "versionId" : "228",
-    "lastUpdated" : "2019-12-06T23:00:00.000-06:00"
+    "lastUpdated" : "2019-12-17T23:00:00.000-06:00"
   },
   "text" : {
     "status" : "additional",
@@ -26,7 +26,7 @@
     "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
-  "version" : "0.1.16",
+  "version" : "0.1.0",
   "name" : "CarinRtpbc",
   "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
   "status" : "draft",

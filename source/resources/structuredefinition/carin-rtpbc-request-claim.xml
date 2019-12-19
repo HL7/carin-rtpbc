@@ -210,7 +210,7 @@
     </element>
     <element id="Claim.careTeam.sequence">
       <path value="Claim.careTeam.sequence" />
-      <fixedInteger value="1" />
+      <fixedPositiveInt value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.careTeam.provider">
@@ -255,7 +255,7 @@
     <element id="Claim.item.sequence">
       <path value="Claim.item.sequence" />
       <comment value="A maximum of one product is submitted per request. Value is always '1'" />
-      <fixedInteger value="1" />
+      <fixedPositiveInt value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.item.careTeamSequence">
@@ -336,7 +336,7 @@
     <element id="Claim.insurance.sequence">
       <path value="Claim.insurance.sequence" />
       <comment value="Only one set of coverage is submitted in the request. Value is always '1'" />
-      <fixedInteger value="1" />
+      <fixedPositiveInt value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.insurance.focal">

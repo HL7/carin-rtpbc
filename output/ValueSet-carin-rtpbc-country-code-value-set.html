@@ -38,48 +38,33 @@
 <body markdown="1">
 <?xml version="1.0" encoding="UTF-8"?>
 <div id="segment-header" class="segment">
-  <!-- segment-header -->
-  <div class="container"><!-- container -->
+   <div class="container" style="background:white">
+        <div id="hl7-nav" style="line-height:50px; float:left; margin-top:16px; color:#808080;">
+          <a id="hl7-logo" no-external="true" href="http://hl7.org/fhir/R4/" style="float:left; margin-left:6px;">
+            <img height="50" alt="Visit the HL7 website" src="assets/images/hl7-logo-header.png"/>
+          </a>
+        </div>
+        <div id="fhir-nav" style="line-height: 50px;float:right; margin-top:16px; color:#808080;">
+          <a id="fhir-logo" no-external="true" href="http://hl7.org/fhir" style="float: right; margin-left: 6px;">
+		<img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+        </div>
+        <div id="hl7-search" style="line-height: 50px; float: right; margin-top: 16px; color: maroon;">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
 
-    <!-- hl7 logo -->
-    <a no-external="true" href="http://hl7.org/fhir">
-      <img alt="FHIR Homepage" class="img-responsive logo" src="assets/images/fhir-logo-www.png"/>
-    </a>
-    <!-- end hl7 logo -->
+	<div id="ig-status" style="color:maroon; height:86px; text-align:center; padding-top:25px">
+          <p>
+		<span style="font-size:12pt;font-weight:bold">
+			CARIN Consumer Realtime Pharmacy Benefit Check
+		</span>
+		<br>
+		
+		- CI Build
+	        	
+	  </p>
+        </div>
+   </div>
 
-
-    <!-- org logo -->
-    <!--
-<a id="your-logo" no-external="true" href="http://www.hl7.org">
-<img height="50" alt="visit the hl7 website" width="42" src="assets/images/hl7-logo.png"/>
-</a>
-
-your logo here
-
-[![visit our website](assets/images/org_logo.png)](your web site.html)
-{: .img-responsive #org_logo}
-
-can only resize using html  or css ;-(
-
--->
-
-
-<a no-external="true" href="http://www.hl7.org">
-<img alt="visit our website" class="img-responsive project-logo" src="assets/images/hl7-logo.png"/>
-</a>
-
-    <!-- end org logo -->
-
-
-    <div id="project-status" class="project-status"> <!-- ig title text -->
-
-      
-      <strong>CARIN Consumer Realtime Pharmacy Benefit Check Implementation Guide CI Build</strong>
-      
-
-    </div><!-- end ig title text -->
-
-  </div><!-- end container -->
   <div class="container">
     <!-- container -->
   </div>
@@ -194,21 +179,9 @@ can only resize using html  or css ;-(
 <!-- /segment-navbar -->
 
 
-</div>  <!-- /container -->
-</div>  <!-- /segment-breadcrumb -->
-
-
-<div id="page-content-wrapper">  <!-- page content wrapper -->
-  <div class="page-content">  <!--page content -->
-    <div class="container">  <!-- container -->
-      <div class="row">  <!-- row -->
-       <div class="inner-wrapper"> <!-- inner-wrapper -->
-         <div class="col-12">  <!--col -->
-           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.16). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-           <!-- content of page -->
-
-
 <!-- ============BreadCrumb=============== -->
+
+<div class="container">
 
 <nav class="breadcrumb">
   
@@ -217,7 +190,7 @@ can only resize using html  or css ;-(
       
       
       
-        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">TOC</a><a class="breadcrumb-item" href="index.html">Home</a>
+        <a class="breadcrumb-item btn btn-link btn-sm" href="toc.html">Table of Contents</a><a class="breadcrumb-item" href="index.html">Home</a>
         /
         <a class="breadcrumb-item" href="terminology.html">Terminology</a>
         /
@@ -227,10 +200,20 @@ can only resize using html  or css ;-(
       
       
     
-
-
 </nav>
+</div>  <!-- /container -->
 
+
+
+
+<div id="page-content-wrapper">  <!-- page content wrapper -->
+  <div class="page-content">  <!--page content -->
+    <div class="container">  <!-- container -->
+      <div class="row">  <!-- row -->
+       <div class="inner-wrapper"> <!-- inner-wrapper -->
+         <div class="col-12">  <!--col -->
+           <!--ReleaseHeader--><p id="publish-box">CARIN Consumer Realtime Pharmacy Benefit Check - Local Development build (v0.1.0). See the <a href="http://hl7.org/fhir/us/carin-rtpbc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+           <!-- content of page -->
 
 
 <!-- ============nav-tabs=============== -->
@@ -283,7 +266,7 @@ can only resize using html  or css ;-(
 
   <table class="grid">
  <tbody><tr><td>Defining URL:</td><td>http://hl7.org/fhir/us/carin/ValueSet/carin-rtpbc-country-code</td></tr>
- <tr><td>Version:</td><td>0.1.16</td></tr>
+ <tr><td>Version:</td><td>0.1.0</td></tr>
  <tr><td>Name:</td><td>CarinRtpbcCountryCodeValueSet</td></tr>
  <tr><td>Status:</td><td>Active</td></tr>
  <tr><td>Title:</td><td>CARIN RTPBC Pharmacy Type Value Setf</td></tr>
@@ -1549,6 +1532,54 @@ can only resize using html  or css ;-(
   
      
   
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
+     
+  
 
 
   <!-- ==============END CONTENT END CONTENT=================== -->
@@ -1568,27 +1599,26 @@ can only resize using html  or css ;-(
 
 
 
-
 </div>
-
-    </div>  <!-- /inner-wrapper -->
-            </div>  <!-- /row -->
-        </div>  <!-- /container -->
-
-    </div>  <!-- /segment-content -->
+</div>  <!-- /inner-wrapper -->
+</div>  <!-- /row -->
+</div>  <!-- /container -->
+</div>  <!-- /segment-content -->
 
 <!--status-bar-->
 
 <div id="segment-footer" class="segment" igtool="footer">  <!-- segment-footer -->
   <div class="container">  <!-- container -->
-   <div class="inner-wrapper">
-    <p>
-      CarinRtpbc Version: 0.1.16  &reg;&copy; <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR Version: 4.0.1</a> (IG Publisher v4.0.1-a53ec6ee1b) generated on Fri, Dec 13, 2019 13:29-0600.
-      | <a style="color: #81BEF7" href="https://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
-        <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
-        </span>
-        </p>
-   </div>  <!-- /inner-wrapper -->
+	<div class="inner-wrapper" style="font-size:12px">
+	    <p>
+	     &copy; 2019 <a href="http://www.hl7.org/Special/committees/medication/index.cfm">HL7 International - Pharmacy Work Group</a>. Package hl7.fhir.us.carin-rtpbc#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/index.html">FHIR 4.0.1</a> created <span href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Wed, Dec 18, 2019 16:56-0600">2019-12-18</span>. <br>
+	      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a>
+	      | <a style="color: #81BEF7" href="qa.html">QA Report</a>
+	      | <a style="color: #81BEF7" href="http://www.hl7.org/fhir/us/carin-rtpbc/history.cfml">Version History</a>
+	      | <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"></a>
+	      | <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
+	    </p>
+	</div>
   </div>  <!-- /container -->
  </div>  <!-- /segment-footer -->
   <!-- disqus thread -->

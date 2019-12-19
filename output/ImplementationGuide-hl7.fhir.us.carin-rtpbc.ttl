@@ -10,18 +10,18 @@
   fhir:Resource.id [ fhir:value "hl7.fhir.us.carin-rtpbc"];
   fhir:Resource.meta [
      fhir:Meta.versionId [ fhir:value "228" ];
-     fhir:Meta.lastUpdated [ fhir:value "2019-12-06T23:00:00.000-06:00"^^xsd:dateTime ]
+     fhir:Meta.lastUpdated [ fhir:value "2019-12-17T23:00:00.000-06:00"^^xsd:dateTime ]
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "additional" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.\n        \n        \n        </div>"
   ];
   fhir:ImplementationGuide.url [ fhir:value "http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/hl7.fhir.us.carin-rtpbc"];
-  fhir:ImplementationGuide.version [ fhir:value "0.1.16"];
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
   fhir:ImplementationGuide.name [ fhir:value "CarinRtpbc"];
   fhir:ImplementationGuide.title [ fhir:value "CARIN Consumer Realtime Pharmacy Benefit Check"];
   fhir:ImplementationGuide.status [ fhir:value "draft"];
-  fhir:ImplementationGuide.date [ fhir:value "2019-12-13T13:29:09-06:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2019-12-18T22:27:38-06:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "HL7 International - Pharmacy"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;

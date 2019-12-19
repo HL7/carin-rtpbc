@@ -9,7 +9,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Billing Unit Value Set</h2><div><p>This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <code>http://ncpdp.org/unit-of-measure</code></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit",
-  "version": "0.1.16",
+  "version": "0.1.0",
   "name": "CarinRtbpcBillingUnitValueSet",
   "title": "CARIN RTPBC Billing Unit Value Set",
   "status": "active",

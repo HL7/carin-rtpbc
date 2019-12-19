@@ -1,9 +1,9 @@
 ﻿CarinRtpbc : Validation Results
 =========================================
 
-err = 6, warn = 0, info = 0
-IG Publisher Version: v1.0.19-SNAPSHOT
-Generated Fri Dec 13 13:30:42 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.16 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
+err = 12, warn = 0, info = 0
+IG Publisher Version: v1.0.27-SNAPSHOT
+Generated Wed Dec 18 22:29:14 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.0 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
 
  Build Errors : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 0
@@ -39,7 +39,7 @@ Generated Fri Dec 13 13:30:42 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-pharmacy-organization : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-practitioner : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-bundle : 0 / 0
- Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-claim : 0 / 0
+ Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-claim : 3 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-messageheader : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-response-bundle : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-response-claimresponse : 0 / 0
@@ -89,6 +89,9 @@ Generated Fri Dec 13 13:30:42 CST 2019. FHIR version 4.0.1 for hl7.fhir.us.carin
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-practitioner.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-bundle.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-claim.xml ==
+ERROR: Claim.careTeam.sequence: The fixed value has type 'integer' which is not valid (valid type: [positiveInt])
+ERROR: Claim.insurance.sequence: The fixed value has type 'integer' which is not valid (valid type: [positiveInt])
+ERROR: Claim.item.sequence: The fixed value has type 'integer' which is not valid (valid type: [positiveInt])
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-request-messageheader.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-response-bundle.xml ==
 == Z:\fhir\CARIN2\CarinRtpbc59QA\source\resources\structuredefinition\carin-rtpbc-response-claimresponse.xml ==

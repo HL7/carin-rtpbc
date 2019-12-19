@@ -9,7 +9,7 @@
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CARIN RTPBC Patient Pay Type Value Set</h2><div><p>This value set contains components of a patient's responsibility for a prescription product's cost.</p>\n</div><p>This value set includes codes from the following code systems:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-carin-rtpbc-patient-pay-type-code-system.html\"><code>http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type</code></a></li></ul></div>"
   },
   "url": "http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type",
-  "version": "0.1.16",
+  "version": "0.1.0",
   "name": "CarinRtbpcPatientPayTypeValueSet",
   "title": "CARIN RTPBC Patient Pay Type Value Set",
   "status": "active",
