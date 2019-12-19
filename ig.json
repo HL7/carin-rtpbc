@@ -4,6 +4,7 @@
 	"npm-name": "hl7.fhir.us.carin-rtpbc",
 	"license": "CC0-1.0",
 	"paths": {
+		"history": "http://hl7.org/fhir/us/carin-rtpbc/history.cfml",
 		"qa": "generated_output/qa",
 		"temp": "generated_output/temp",
 		"output": "output",
