@@ -52,12 +52,6 @@ Comments and suggestions are welcome on our <a href="https://chat.fhir.org/#narr
 ### Authors
 
 <table>
-<thead>
-<tr>
-<th>Name</th>
-<th></th>
-</tr>
-</thead>
 <tbody>
 <tr>
 <td>HL7 Pharmacy Workgroup</td>

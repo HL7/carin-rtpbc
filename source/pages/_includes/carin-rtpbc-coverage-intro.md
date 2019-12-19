@@ -3,7 +3,7 @@
 The function of the Coverage resource in this exchange is to enable the insurer to locate the patient's specific plan coverage rules. Depending on the implementation partners' conditions, this information may include...
 * BIN (IIN)
 * PCN 
-* pharamcy benefit Group ID
+* pharmacy benefit Group ID
 * pharmacy benefit Member ID
 * cardholder (subscriber) ID
 * or potentially a subset of the above and/or combination of the above with patient identifying information

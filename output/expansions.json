@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "e51ca693-2115-4411-99ae-b5f0ccac0ee7",
+  "id" : "e32b17c3-1768-46f2-97c6-5aafd47b5c2a",
   "meta" : {
-    "lastUpdated" : "2019-12-19T10:03:12.916-06:00"
+    "lastUpdated" : "2019-12-19T11:00:23.548-06:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -38,8 +38,8 @@
           "url" : "http://hl7.org/fhir/StructureDefinition/valueset-toocostly",
           "valueBoolean" : true
         }],
-        "identifier" : "urn:uuid:bc7b3404-4a79-4b0f-a593-43f542e457d9",
-        "timestamp" : "2019-12-19T10:03:39-06:00",
+        "identifier" : "urn:uuid:fad4046f-705f-4f18-9d5d-f1f665dc3faa",
+        "timestamp" : "2019-12-19T11:00:51-06:00",
         "total" : 1004,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5113,8 +5113,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:e6ad0c00-0a25-45bc-bc57-02794e4906aa",
-        "timestamp" : "2019-12-19T10:03:42-06:00",
+        "identifier" : "urn:uuid:eb92e2db-24a2-42b3-9919-d30646654f93",
+        "timestamp" : "2019-12-19T11:00:53-06:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5166,8 +5166,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:5433adca-4a1e-4aba-b314-c0d3e4643908",
-        "timestamp" : "2019-12-19T10:03:42-06:00",
+        "identifier" : "urn:uuid:e5975c89-864a-4820-81a9-5dafd1153cb5",
+        "timestamp" : "2019-12-19T11:00:53-06:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5218,8 +5218,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:c74c0ecb-1821-42ec-a231-82d73672989b",
-        "timestamp" : "2019-12-19T10:03:43-06:00",
+        "identifier" : "urn:uuid:fbc8c7e8-cc9e-4def-8dce-5d32343a1a04",
+        "timestamp" : "2019-12-19T11:00:54-06:00",
         "total" : 6,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5291,8 +5291,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:35eda55a-8a38-4913-9330-1954edc5c080",
-        "timestamp" : "2019-12-19T10:03:43-06:00",
+        "identifier" : "urn:uuid:97fe19e7-64dd-44c3-92bf-a3f66864c35b",
+        "timestamp" : "2019-12-19T11:00:54-06:00",
         "total" : 10,
         "parameter" : [{
           "name" : "excludeNested",
@@ -5381,8 +5381,8 @@
         }]
       }],
       "expansion" : {
-        "identifier" : "urn:uuid:75be302f-fbff-4b50-b8f3-0a4866591cb3",
-        "timestamp" : "2019-12-19T10:03:44-06:00",
+        "identifier" : "urn:uuid:ab536b9f-4e7e-4167-8108-571785b8d7cb",
+        "timestamp" : "2019-12-19T11:00:55-06:00",
         "total" : 75,
         "parameter" : [{
           "name" : "excludeNested",

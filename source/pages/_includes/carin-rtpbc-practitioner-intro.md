@@ -7,7 +7,7 @@ The function of the Practitioner resource in this exchange is to simply identify
 
 ### Must Support elements in this profile 
 **Client systems**<br>
-Both of the elements above MUST be populated with correct information in order for the processor to deterime reliable cost and coverage information.
+Both of the elements above MUST be populated with correct information in order for the processor to reliably determine cost and coverage information.
 
 **Responding systems**<br>
 * MUST make use of prescriber information if it impacts pricing or coverage

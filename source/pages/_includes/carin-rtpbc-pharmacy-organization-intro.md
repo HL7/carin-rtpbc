@@ -3,12 +3,12 @@ This profile represents a pharmacy as used in the real-time pharmacy benefit che
 <br>
 The function of the Pharmacy resource in this exchange is to identify a pharmacy as either...
 * the patient's preferred pharmacy, in the RTPBC request
-* or an alternative pharmacy for which infomration is being returned in the RTPBC response
+* or an alternative pharmacy for which information is being returned in the RTPBC response
 
 The set of conveyed pharmacy information consists of...
 * identification of the pharmacy. The [NCPDP Provider ID](NamingSystem-carin-rtpbc-NamingSystem-ncpdp-provider-id.html) is the preferred identifier for this purpose because it specifies the individual pharmacy location. Alternatively, an organizational NPI may be used
 * the pharmacy name
-* the pharmcy phone number
+* the  phone number
 * the pharmacy address
 <br><br>
 
