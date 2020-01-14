@@ -3,7 +3,7 @@
 
 err = 6, warn = 0, info = 18
 IG Publisher Version: v1.0.40-SNAPSHOT
-Generated Tue Jan 14 12:36:11 CST 2020. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.0 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
+Generated Tue Jan 14 14:11:12 CST 2020. FHIR version 4.0.1 for hl7.fhir.us.carin-rtpbc#0.1.0 (canonical = http://hl7.org/fhir/us/carin-rtpbc)
 
  Build Errors : 0 / 0
  Z:\fhir\CARIN2\CarinRtpbc60BALLOT\source\resources\bundle\rtpbc-bundle-request-03 : 0 / 2

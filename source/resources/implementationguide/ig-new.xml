@@ -28,7 +28,7 @@
   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc"/>
   <version value="0.1.0"/>
   <name value="CarinRtpbc"/>
-  <title value="Consumer-Focused Real-Time Pharmacy Benefit Check"/>
+  <title value="CARIN Consumer Realtime Pharmacy Benefit Check"/>
   <status value="draft"/>
   <publisher value="HL7 International - Pharmacy"/>
   <contact>
