@@ -1,7 +1,7 @@
 This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. 
 <br><br>
 Data population is similar to a typical *predetermination* ClaimResponse request (where the corresponding Claim.use was set to "predetermination"), with the following key differences:
-* in addition to cost and coverage for the requested medication and pharmacy, the responder may also return information about *alternative" medication + pharmacy combinations. These alternatives are conveyed in one or more ClaimResponse.addItem composites, characterized as independent options using an extension defined in this guide ([isAlternative](StructureDefinition-carin-rtpbc-extension-isAlternative.html) 
+* in addition to cost and coverage for the requested medication and pharmacy, the responder may also return information about *alternative" medication + pharmacy combinations. These alternatives are conveyed in one or more ClaimResponse.addItem composites, characterized as independent options using an extension defined in this guide ([isAlternative](StructureDefinition-carin-rtpbc-extension-isAlternative.html)) 
 * the processNote element is used to communicate the level at which the requested drug and pharmacy are covered, as well as alternative drug/pharmacy combinations (using high-level, pre-defined [coverage statements](ValueSet-carin-rtpbc-coverage-summary-value-set.html) tailored to the patient's perspective
 * alternative pharmacies are communicated using referenced Organization resources
 * certain other elements are fixed to values reflecting a medication-related request...

@@ -11,24 +11,24 @@
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\resources"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc60BALLOT\\source\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\framework"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc60BALLOT\\framework"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\pages"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc60BALLOT\\source\\pages"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc59QA\\source\\pages\\extras"
+    "valueString" : "Z:\\fhir\\CARIN2\\CarinRtpbc60BALLOT\\source\\pages\\extras"
   }],
   "url" : "http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc",
   "version" : "0.1.0",
   "name" : "CarinRtpbc",
-  "title" : "CARIN Consumer Realtime Pharmacy Benefit Check",
+  "title" : "Consumer-Focused Real-Time Pharmacy Benefit Check",
   "status" : "draft",
   "publisher" : "HL7 International - Pharmacy",
   "contact" : [{

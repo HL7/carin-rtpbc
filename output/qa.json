@@ -3,10 +3,10 @@
   "name": "CarinRtpbc",
   "package-id": "hl7.fhir.us.carin-rtpbc",
   "ig-ver": "0.1.0",
-  "date": "Thu, 19 Dec, 2019 15:45:42 -0600",
+  "date": "Tue, 14 Jan, 2020 12:32:00 -0600",
   "errs": 6,
   "warnings": 0,
-  "hints": 0,
+  "hints": 18,
   "version": "4.0.1",
-  "tool": "4.1.0 (3)"
+  "tool": "4.2.0 (3)"
 }

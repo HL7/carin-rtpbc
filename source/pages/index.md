@@ -43,12 +43,6 @@ This initial release of the consumer RTPBC profile seeks to include the coverage
 The patient application might gather related information before submitting the consumer RTPBC request, such as prescription information or insurance eligibility. *These exchanges are outside the scope of this guide.*
 <br>
 
-### Feedback
-This implementation guide is the result of work sponsored by the CARIN Alliance, whose goal is to advance the ability for consumers and their authorized caregivers to easily get, use, and share their digital health information when, where, and how they want to achieve their goals.
-
-Comments and suggestions are welcome on our <a href="https://chat.fhir.org/#narrow/stream/208660-CARIN-Benefit.20Check.20IG">Zulip stream</a> or send a note to <a href="mailto:fm@frankmckinney.com">the author</a>
-<br>
-
 ### Authors
 
 <table>
