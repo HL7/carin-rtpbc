@@ -1,0 +1,12 @@
+{
+  "name": "rtpbc-template-additions",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "Adds a footer to the ValueSet layout - to present example values from proprietary code systems brought in using NamingSystems",
+  "author": "http://hl7.org/fhir",
+  "canonical": "http://fhir.org/templates/hl7.fhir.template",
+  "base": "hl7.fhir.template",
+    "dependencies": {
+    "hl7.fhir.template": "current"
+  }
+}

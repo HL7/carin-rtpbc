@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NamingSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-NamingSystem-ncpdp-pharmacy-type" />
+  <name value="RtpbcNamingSystemNcpdpPharmacyType" />
+  <status value="active" />
+  <kind value="codesystem" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <contact>
+    <name value="CARIN Alliance" />
+    <telecom>
+      <system value="url" />
+      <value value="http://www.carinalliance.com" />
+    </telecom>
+  </contact>
+  <responsible value="National Council for Prescription Drug Programs (NCPDP)" />
+  <description value="The NCPDP Pharmacy Type (955-HR) code set defines a set of pharmacy type categories." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+    </coding>
+  </jurisdiction>
+  <usage value="Used to indicate a pharmacy's type." />
+  <uniqueId>
+    <type value="uri" />
+    <value value="http://ncpdp.org/pharmacy-type" />
+  </uniqueId>
+</NamingSystem>

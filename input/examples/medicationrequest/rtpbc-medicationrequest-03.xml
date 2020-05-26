@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MedicationRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-medicationrequest-03" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
+  </meta>
+  <status value="draft" />
+  <intent value="proposal" />
+  <reportedBoolean value="true" />
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+      <code value="00777310402" />
+      <display value="Prozac 10mg capsule" />
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/rtpbc-patient-03" />
+  </subject>
+  <requester>
+    <reference value="Practitioner/rtpbc-practitioner-03" />
+  </requester>
+  <dispenseRequest>
+    <quantity>
+      <value value="60" />
+      <unit value="{each}" />
+    </quantity>
+    <expectedSupplyDuration>
+      <value value="30" />
+      <unit value="days" />
+      <system value="http://unitsofmeasure.org" />
+      <code value="d" />
+    </expectedSupplyDuration>
+    <performer>
+      <reference value="Organization/rtpbc-organization-03" />
+    </performer>
+  </dispenseRequest>
+  <substitution>
+    <allowedBoolean value="false" />
+  </substitution>
+</MedicationRequest>

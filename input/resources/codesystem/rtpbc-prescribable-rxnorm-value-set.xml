@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-prescribable-rxnorm-value-set" />
+  <meta>
+    <lastUpdated value="2020-05-23T00:00:00-05:00" />
+  </meta>
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-rxnorm" />
+  <version value="1.0.0" />
+  <name value="RTPBCPrescribableRxNormValueSet" />
+  <title value="RTPBC Prescribable RxNorm Value Set" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <description value="This value set includes RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types)" />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <filter>
+        <property value="TTY" />
+        <op value="in" />
+        <value value="SCD,SBD,GPCK,BPCK" />
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

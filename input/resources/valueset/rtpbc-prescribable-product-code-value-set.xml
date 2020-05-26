@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-prescribable-product-code-value-set" />
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
+  <version value="1.0.0" />
+  <name value="RTPBCPrescribableProductCodeValueSet" />
+  <title value="RTPBC Prescribable Product Code Value Set" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
+    </include>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <filter>
+        <property value="TTY" />
+        <op value="in" />
+        <value value="SCD,SBD,GPCK,BPCK" />
+      </filter>
+      <valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes" />
+    </include>
+  </compose>
+</ValueSet>

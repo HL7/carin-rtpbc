@@ -1,0 +1,58 @@
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li><a href="index.html">IG Home</a></li>
+  <!--  <li><a href="toc.html">Table of Contents</a></li>  -->
+  <li><a href="Use_cases.html">Use Cases</a></li>
+  <li><a href="Information_content_and_FHIR_resources.html">Information content</a></li>
+  <li><a href="Implementation_guidance.html">Guidance</a></li>
+  <li><a href="Submission_method.html">Submission</a></li>
+  <li><a href="Error_handling.html">Error Handling</a></li>
+  <li><a href="Security.html">Security</a></li>
+  
+  <!--
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="Use_cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="Information_content_and_FHIR_resources.html">Information Content</a>
+      </li>
+   	  <li>
+        <a href="Submission_method.html">Submission Method</a>
+      </li>
+   	  <li>
+        <a href="Error_handling.html">Error Handling</a>
+      </li>
+   	  <li>
+        <a href="Security.html">Security</a>
+      </li>
+   	  <li>
+        <a href="Consumer_vs_provider_RTPBC.html">Consumer vs Provider RTPBC</a>
+      </li>
+	</ul>
+  </li>
+  -->
+  <li><a href="artifacts.html">FHIR Artifacts</a></li>
+  <!--
+  <li><a href="profiles.html">Profiles and Extensions</a></li>
+  <li><a href="terminology.html">Terminology</a></li>
+  <li><a href="capstatements.html">Capability Statements</a></li>  
+  -->
+  <li><a href="other.html">Examples</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a target="_blank" href="{{site.data.fhir.path}}index.html">FHIR Spec <img src="external.png" style="text-align: baseline"/></a>
+      </li>
+      <li>
+        <a href="downloads.html">Downloads</a>
+      </li>
+    </ul>
+  </li>
+</ul>      

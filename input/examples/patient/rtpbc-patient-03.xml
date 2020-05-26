@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patient xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-patient-03" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+  </meta>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+        <code value="CAAI" />
+        <display value="Consumer Application Account Identifier" />
+      </coding>
+      <text value="Consumer Application Account Identifier" />
+    </type>
+    <system value="http://example.org/MyPatientApp" />
+    <value value="30455" />
+  </identifier>
+  <name>
+    <family value="Doe" />
+    <given value="Jane" />
+  </name>
+  <gender value="female" />
+  <birthDate value="1975-12-05" />
+  <address>
+    <line value="100 Oak Court" />
+    <city value="Madison" />
+    <state value="WI" />
+    <postalCode value="53510" />
+    <country value="US" />
+  </address>
+</Patient>

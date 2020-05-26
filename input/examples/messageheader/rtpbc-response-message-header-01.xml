@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-response-message-header-01" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader" />
+  </meta>
+  <eventCoding>
+    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+    <code value="rtpbc-response" />
+    <display value="RTPBC Response" />
+  </eventCoding>
+  <source>
+    <name value="PharmacyBenefitsCompany" />
+    <endpoint value="http://example.org/PharmacyBenefitsCo/fhir" />
+  </source>
+  <focus>
+    <type value="ClaimResponse"/>
+    <identifier>
+    	<value value="rtpbc-claim-response-03"/>
+    </identifier>
+  </focus>
+</MessageHeader>

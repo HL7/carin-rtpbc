@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-patient" />
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+  <version value="0.0.1" />
+  <name value="RtpbcPatient" />
+  <title value="RTPBC Patient" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. &#xA;&#xA;The profile differs from the US Core Patient profile in certain respects. It does not contain the us-core-race, us-core-ethnicity or us-core-birthsex extensions, and the Patient.communication.language and Patient.telecom elements are not set to Must Support; these variances reflects that clients in the exchange will typically be mobile consumer applications that do not posess this information, and that the information is not pertinent to this use case. &#xA;&#xA;The RTPBC profile further constrains certain US Core and base elements in a manner that is compatible with the the US Core profile (e.g., tightening element cardinality and further limiting allowed terminology)." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient">
+      <path value="Patient" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="uri" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier.value">
+      <path value="Patient.identifier.value" />
+      <short value="The value that is unique within the system." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <label value="Patient family name" />
+      <short value="Patient family name" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <label value="Patient given name(s)" />
+      <short value="Patient given name(s)" />
+      <definition value="One or more given names of the patient" />
+      <alias value="first name, middle name" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <label value="Patient gender" />
+      <short value="Patient gender" />
+      <definition value="The patient's administrative gender (male, female, other, unknown)" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <description value="Administrative gender" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/administrative-gender" />
+      </binding>
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <label value="Patient birth date" />
+      <short value="Patient birth date" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <label value="Patient address" />
+      <short value="Patient address" />
+      <definition value="The patient's home address" />
+      <comment value="Address may be used by the payer to identify the patient's insurance records" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <min value="0" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.state">
+      <path value="Patient.address.state" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="RTPBC Two Letter State and Province Codes" />
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-state-and-province-code" />
+      </binding>
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <comment value="Populate when not a US address" />
+      <min value="0" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <description value="ISO 3166 2-character country codes" />
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-country-code" />
+      </binding>
+    </element>
+    <element id="Patient.address.period">
+      <path value="Patient.address.period" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <min value="0" />
+      <max value="*" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language">
+      <path value="Patient.communication.language" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org/fhir/us/core/ValueSet/simple-language" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

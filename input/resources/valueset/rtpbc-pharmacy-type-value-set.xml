@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-pharmacy-type-value-set" />
+  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-pharmacy-type" />
+  <version value="1.0.0" />
+  <name value="RtpbcPharmacyTypeValueSet" />
+  <title value="RTPBC Pharmacy Type Value Set" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <description value="This value set contains pharmacy type categories defined in the NCPDP Pharmacy Type (955-HR) code system." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://ncpdp.org/pharmacy-type" />
+    </include>
+  </compose>
+</ValueSet>
