@@ -1,4 +1,4 @@
-[Previous Page](Information_content_and_FHIR_resources.html)
+[Previous Page](business_rules.html)
 
 ### Operation: $process-message
 The RTPBC request is submitted using the $process-message operation on the processor's claim server...
@@ -15,7 +15,7 @@ In addition, this method includes a MessageHeader resource in both the request a
 
 The response in the RTPBC exchange is expected to be synchronous, with real-time response times to support use in interactive patient-facing applications.
 
-<br>
+### Examples
 
 <a href="Bundle-rtpbc-bundle-request-03-w-header.html">Example bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
@@ -24,4 +24,4 @@ The response in the RTPBC exchange is expected to be synchronous, with real-time
 
 <br><br>
 
-[Next Page](Security.html)
+[Next Page](error_handling.html)

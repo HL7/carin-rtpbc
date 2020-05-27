@@ -42,7 +42,7 @@
   <dependsOn>
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core" />
     <packageId value="hl7.fhir.us.core" />
-    <version value="current" />
+    <version value="3.1.0"/>
   </dependsOn>
   <definition>
     <resource>
@@ -188,7 +188,7 @@
         <display value="RtpbcNamingSystemCanadaPostProvinceCode" />
       </reference>
       <name value="RtpbcNamingSystemCanadaPostProvinceCode" />
-      <description value="Canadian Post province codes" />
+      <description value="Canada Post province codes" />
       <exampleBoolean value="false" />
     </resource>
     <!--
@@ -364,11 +364,29 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Claim/rtpbc-claim-03-price-source" />
+        <display value="rtpbc-claim-03-price-source" />
+      </reference>
+      <name value="RTPBC Request to a Pricing Source" />
+      <description value="Example of a consumer RTPBC Claim resource submitted to a pricing source." />      
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ClaimResponse/rtpbc-claim-response-03" />
         <display value="rtpbc-claim-response-03" />
       </reference>
       <name value="Example RTPBC Response (ClaimResponse)" />
       <description value="Example of a consumer RTPBC ClaimResponse resource." />
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ClaimResponse/rtpbc-claim-response-03-price-source" />
+        <display value="rtpbc-claim-response-03-price-source" />
+      </reference>
+      <name value="RTPBC Response from a pricing source" />
+      <description value="Example of a consumer RTPBC ClaimResponse resource from a pricing source." />
       <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
     </resource>
     <resource>
@@ -453,11 +471,29 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Bundle/rtpbc-bundle-request-03-price-source" />
+        <display value="rtpbc-bundle-request-03-price-source" />
+      </reference>
+      <name value="RTPBC Request Bundle submitted to a pricing source" />
+      <description value="Example of a consumer RTPBC request Bundle resource submitted to a pricing source." />      
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Bundle/rtpbc-bundle-response-03-w-header" />
         <display value="rtpbc-bundle-response-03-w-header" />
       </reference>
       <name value="Example RTPBC Response Bundle" />
       <description value="Example of a consumer RTPBC response Bundle resource." />      
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Bundle/rtpbc-bundle-response-03-price-source" />
+        <display value="rtpbc-bundle-response-03-price-source" />
+      </reference>
+      <name value="RTPBC Response Bundle returned by a pricing source" />
+      <description value="Example of a consumer RTPBC response Bundle resource returned by a pricing source." />      
       <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
     </resource>
     <page>
@@ -470,33 +506,43 @@
         <generation value="markdown"/>
 	  </page>
       <page>
-        <nameUrl value="Use_cases.html" />
-        <title value="Use cases" />
+        <nameUrl value="use_cases.html" />
+        <title value="Use Cases" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="Information_content_and_FHIR_resources.html" />
-        <title value="Information content and FHIR resources" />
+        <nameUrl value="information_content_and_fhir_resources.html" />
+        <title value="Information Content and FHIR Resources" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="Implementation_guidance.html" />
-        <title value="Implementation guidance" />
+        <nameUrl value="business_rules.html" />
+        <title value="Business Rules" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="Submission_method.html" />
-        <title value="Submission method" />
+        <nameUrl value="submission_method.html" />
+        <title value="Submission Method" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="Error_handling.html" />
+        <nameUrl value="error_handling.html" />
         <title value="Error Handling" />
         <generation value="markdown" />
       </page>
       <page>
-        <nameUrl value="Security.html" />
+        <nameUrl value="security.html" />
         <title value="Security" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="consumer_vs_provider_rtpbc.html" />
+        <title value="Consumer vs Provider RTPBC" />
+        <generation value="markdown" />
+      </page>
+      <page>
+        <nameUrl value="profiles.html" />
+        <title value="Profiles and Extensions" />
         <generation value="markdown" />
       </page>
       <page>

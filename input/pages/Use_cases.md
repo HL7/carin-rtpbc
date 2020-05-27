@@ -44,7 +44,7 @@ At a high level, the process looks like this...
 *  determines the price for the requested medication and pharmacy combination and other medication/pharmacy options
 *  identifies discounts that apply, related to coupons or memberships
 
-*If the insurer or medication pricing source cannot complete processing of the request, it returns information about the exception that occurred. See <a href="Error_handling.html">the Error Handling page</a>*
+*If the insurer or medication pricing source cannot complete processing of the request, it returns information about the exception that occurred. See <a href="error_handling.html">the Error Handling page</a>*
 
 ### Related information flows outside of consumer RTPBC
 The patient's app might gather related information (e.g., medication information or insurance eligibility) before submitting the consumer RTPBC request. 
@@ -60,4 +60,4 @@ The patient's app might gather related information (e.g., medication information
 
 
 
-[Next Page](Information_content_and_FHIR_resources.html)
+[Next Page](information_content_and_fhir_resources.html)

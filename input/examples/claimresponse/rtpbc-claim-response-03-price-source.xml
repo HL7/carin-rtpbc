@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="rtpbc-claim-response-03" />
-  <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
-  </meta>
+  <id value="rtpbc-claim-response-03-price-source" />
   <identifier>
-    <value value="rtpbc-03-response" />
+    <value value="rtpbc-03-response-price-source" />
   </identifier>
   <status value="active" />
   <type>
@@ -22,7 +19,7 @@
   <created value="2019-11-01T11:20:59-05:00" />
   <insurer>
     <identifier>
-      <value value="Pharmacy Plans US" />
+      <value value="GoodPricing" />
     </identifier>
   </insurer>
   <request>
@@ -33,24 +30,18 @@
   <outcome value="complete" />
   <disposition value="Processed successfully" />
   <item>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
-      <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
-        <code value="prior-auth" />
-        <display value="Prior authorization required" />
-      </valueCoding>
-    </extension>
     <itemSequence value="1" />
+    <noteNumber value="1" />
     <adjudication>
       <category>
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
-          <code value="copay" />
-          <display value="Copay" />
+          <code value="cash-price" />
+          <display value="Full product cash price" />
         </coding>
       </category>
       <amount>
-        <value value="40" />
+        <value value="105.00" />
         <currency value="USD" />
       </amount>
     </adjudication>
@@ -58,12 +49,12 @@
       <category>
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
-          <code value="coinsurance" />
-          <display value="Per prescription coinsurance" />
+          <code value="coupon-discount" />
+          <display value="Coupon discount amount" />
         </coding>
       </category>
       <amount>
-        <value value="30" />
+        <value value="-20.00" />
         <currency value="USD" />
       </amount>
     </adjudication>
@@ -76,7 +67,7 @@
         </coding>
       </category>
       <amount>
-        <value value="70" />
+        <value value="85.00" />
         <currency value="USD" />
       </amount>
     </adjudication>
@@ -84,13 +75,6 @@
   <addItem>
     <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
       <valueBoolean value="true" />
-    </extension>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
-      <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
-        <code value="covered" />
-        <display value="Covered" />
-      </valueCoding>
     </extension>
     <itemSequence value="1" />
     <provider>
@@ -104,19 +88,19 @@
       </coding>
     </productOrService>
     <quantity>
-      <value value="180" />
+      <value value="60" />
       <unit value="{Each}" />
     </quantity>
     <adjudication>
       <category>
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
-          <code value="copay" />
-          <display value="Copay" />
+          <code value="cash-price" />
+          <display value="Full product cash price" />
         </coding>
       </category>
       <amount>
-        <value value="20" />
+        <value value="50.00" />
         <currency value="USD" />
       </amount>
     </adjudication>
@@ -124,12 +108,12 @@
       <category>
         <coding>
           <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
-          <code value="coinsurance" />
-          <display value="Per prescription coinsurance" />
+          <code value="coupon-discount" />
+          <display value="Coupon discount amount" />
         </coding>
       </category>
       <amount>
-        <value value="30" />
+        <value value="-10.00" />
         <currency value="USD" />
       </amount>
     </adjudication>
@@ -142,7 +126,7 @@
         </coding>
       </category>
       <amount>
-        <value value="50" />
+        <value value="40.00" />
         <currency value="USD" />
       </amount>
     </adjudication>

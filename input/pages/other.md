@@ -1,18 +1,29 @@
 ### Full Request
 Request submitted as a Bundle containing a Claim and supporting resources. 
 <br/>
-Processor: Patient's payer / PBM
+**Processor: Patient's insurer**
 <br/>
-<a href="Bundle-rtpbc-bundle-request-03-w-header.html">Bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeader)</a>
+<a href="Bundle-rtpbc-bundle-request-03-w-header.html">Bundled RTPBC request to an insurer</a>
+
+<br/>
+
+**Processor: Medication Pricing Source**
+<br/>
+<a href="Bundle-rtpbc-bundle-request-03-price-source.html">Bundled RTPBC request to a medication pricing source</a>
 
 <br/>
 
 ### Full Response
 Response returned as a Bundle containing a ClaimResponse and supporting resources.
 <br/>
-Processor: Patient's payer / PBM
+**Processor: Patient's insurer**
 <br/>
-<a href="Bundle-rtpbc-bundle-response-03-w-header.html">Bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeader)</a>
+<a href="Bundle-rtpbc-bundle-response-03-w-header.html">Bundled RTPBC response from an insurer</a>
+
+<br/>
+
+**Processor: Medication Pricing Source**
+<a href="Bundle-rtpbc-bundle-response-03-price-source.html">Bundled RTPBC response from a medication pricing source</a>
 
 <br/>
 
@@ -28,11 +39,19 @@ Processor: Patient's payer / PBM
 <tbody>
 <tr>
 <td>Claim</td>
-<td><a href="Claim-rtpbc-claim-03.html">RTPBC Claim resource</a></td>
+<td><a href="Claim-rtpbc-claim-03.html">RTPBC Claim resource submitted to an insurer</a></td>
+</tr>
+<tr>
+<td>Claim</td>
+<td><a href="Claim-rtpbc-claim-03-price-source.html">RTPBC Claim resource submitted to a pricing source</a></td>
 </tr>
 <tr>
 <td>ClaimResponse</td>
-<td><a href="ClaimResponse-rtpbc-claim-response-03.html">RTPBC ClaimResponse resource</a></td>
+<td><a href="ClaimResponse-rtpbc-claim-response-03.html">RTPBC ClaimResponse resource returned by an insurer</a></td>
+</tr>
+<tr>
+<td>ClaimResponse</td>
+<td><a href="ClaimResponse-rtpbc-claim-response-03-price-source.html">RTPBC ClaimResponse resource returned by a pricing source</a></td>
 </tr>
 <tr>
 <td>Coverage</td>
@@ -66,6 +85,7 @@ Processor: Patient's payer / PBM
 <td>Practitioner</td>
 <td><a href="Practitioner-rtpbc-practitioner-03.html">US Core Practitioner (prescriber) resource</a></td>
 </tr>
+
 
 
 

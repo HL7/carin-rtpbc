@@ -20,7 +20,7 @@ Where possible, the profile leverages terminology currently used in US pharmacy 
 
 **Relationship to the NCPDP provider-focused RTPBC transactions**
 
-This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort. (See <a href="Information_content_and_FHIR_resources.html#consumer-vs-provider-rtpbc-content">Consumer vs provider RTPBC</a> for content comparison.)
+This initial release of the consumer RTPBC profile seeks to include the coverage and cost information that's the most useful and meaningful to patients. As a result, certain content in the provider-centric NCPDP RTPBC standard is not included here. Additional content could potentially be added in a later effort. (See <a href="consumer_vs_provider_rtpbc.html">Consumer vs provider RTPBC</a> for content comparison.)
 
 **Related information flows outside of consumer RTPBC**
 

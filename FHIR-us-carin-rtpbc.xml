@@ -110,9 +110,15 @@
    <artifact name="Example RTPBC Request (Claim)"
              key="Claim-rtpbc-claim-03"
              id="Claim/rtpbc-claim-03"/>
+   <artifact name="RTPBC Request to a Pricing Source"
+             key="Claim-rtpbc-claim-03-price-source"
+             id="Claim/rtpbc-claim-03-price-source"/>
    <artifact name="Example RTPBC Response (ClaimResponse)"
              key="ClaimResponse-rtpbc-claim-response-03"
              id="ClaimResponse/rtpbc-claim-response-03"/>
+   <artifact name="RTPBC Response from a pricing source"
+             key="ClaimResponse-rtpbc-claim-response-03-price-source"
+             id="ClaimResponse/rtpbc-claim-response-03-price-source"/>
    <artifact name="Example RTPBC Patient"
              key="Patient-rtpbc-patient-03"
              id="Patient/rtpbc-patient-03"/>
@@ -140,9 +146,15 @@
    <artifact name="Example RTPBC Request Bundle"
              key="Bundle-rtpbc-bundle-request-03-w-header"
              id="Bundle/rtpbc-bundle-request-03-w-header"/>
+   <artifact name="RTPBC Request Bundle submitted to a pricing source"
+             key="Bundle-rtpbc-bundle-request-03-price-source"
+             id="Bundle/rtpbc-bundle-request-03-price-source"/>
    <artifact name="Example RTPBC Response Bundle"
              key="Bundle-rtpbc-bundle-response-03-w-header"
              id="Bundle/rtpbc-bundle-response-03-w-header"/>
+   <artifact name="RTPBC Response Bundle returned by a pricing source"
+             key="Bundle-rtpbc-bundle-response-03-price-source"
+             id="Bundle/rtpbc-bundle-response-03-price-source"/>
    <artifact name="RTPBC Request Profile (Claim)"
              key="StructureDefinition-carin-rtpbc-request-claim"
              id="StructureDefinition/carin-rtpbc-request-claim"
@@ -203,14 +215,15 @@
    <page name="(many)" key="many"/>
    <page name="Table of Contents" key="toc" url="toc"/>
    <page name="IG Home Page" key="index"/>
-   <page name="Use cases" key="use_cases" url="usecases"/>
-   <page name="Information content and FHIR resources"
-         key="information"
-         url="Information_content_and_FHIR_resources"/>
-   <page name="Implementation guidance" key="Implementation_guidance"/>
-   <page name="Submission method" key="submission" url="Submission_method"/>
-   <page name="Error Handling" key="Error_handling"/>
+   <page name="Use Cases" key="use_cases"/>
+   <page name="Information Content and FHIR Resources"
+         key="information_content_and_fhir_resources"/>
+   <page name="Business Rules" key="business_rules"/>
+   <page name="Submission Method" key="submission_method"/>
+   <page name="Error Handling" key="error_handling"/>
    <page name="Security" key="security" url="Security"/>
+   <page name="Consumer vs Provider RTPBC" key="consumer_vs_provider_rtpbc"/>
+   <page name="Profiles and Extensions" key="profiles"/>
    <page name="Terminology" key="terminology" url="terminology"/>
    <page name="Capability Statements"
          key="capstatements"
@@ -218,6 +231,14 @@
    <page name="Examples" key="examples" url="examples"/>
    <page name="Downloads" key="downloads" url="downloads"/>
    <page name="Artifacts Summary" key="artifacts"/>
+   <page name="Information content and FHIR resources"
+         key="information"
+         url="Information_content_and_FHIR_resources"
+         deprecated="true"/>
+   <page name="Submission method"
+         key="submission"
+         url="Submission_method"
+         deprecated="true"/>
    <page name="Error handling"
          key="error"
          url="Error_handing"
@@ -225,9 +246,5 @@
    <page name="Consumer vs provider RTPBC"
          key="cosumer-vs-provider"
          url="Consumer_vs_provider_RTPBC"
-         deprecated="true"/>
-   <page name="Profiles &amp; Extensions"
-         key="profiles"
-         url="profiles"
          deprecated="true"/>
 </specification>

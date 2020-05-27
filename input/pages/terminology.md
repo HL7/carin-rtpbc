@@ -28,6 +28,7 @@ The following code systems define consumer-friendly insurance coverage concepts 
 - [NCPDP Provider ID](NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html)
 - [NCPDP Reject Code (511-FB)](NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html)
 - [NCPDP Pharmacy Type (955-HR)](NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html)
+- [Canada Post Province Code](NamingSystem-rtpbc-NamingSystem-canada-post-province-code.html)
 
 
 <br><br>

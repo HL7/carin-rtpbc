@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="rtpbc-bundle-request-03-w-header" />
+  <id value="rtpbc-bundle-request-03-price-source" />
   <meta>
     <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle" />
   </meta>
@@ -76,7 +76,9 @@
           <sequence value="1" />
           <focal value="true" />
           <coverage>
-            <reference value="Coverage/rtpbc-coverage-03" />
+            <identifier>
+              <value value="GOODPRICING" />
+            </identifier>
           </coverage>
         </insurance>
         <item>
@@ -131,62 +133,6 @@
           <country value="US" />
         </address>
       </Patient>
-    </resource>
-  </entry>
-  <entry>
-    <fullUrl value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0d" />
-    <resource>
-      <Coverage>
-        <id value="rtpbc-coverage-03" />
-        <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage" />
-        </meta>
-        <status value="active" />
-        <beneficiary>
-          <reference value="Patient/rtpbc-patient-03" />
-        </beneficiary>
-        <payor>
-          <identifier>
-            <value value="Pharmacy Plans US" />
-          </identifier>
-        </payor>
-        <class>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-              <code value="rxbin" />
-            </coding>
-          </type>
-          <value value="BIN001" />
-        </class>
-        <class>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-              <code value="rxpcn" />
-            </coding>
-          </type>
-          <value value="PCN002" />
-        </class>
-        <class>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-              <code value="rxgroup" />
-            </coding>
-          </type>
-          <value value="GROUP0001" />
-        </class>
-        <class>
-          <type>
-            <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/coverage-class" />
-              <code value="rxid" />
-            </coding>
-          </type>
-          <value value="MEMBER000001" />
-        </class>
-      </Coverage>
     </resource>
   </entry>
   <entry>

@@ -5,6 +5,6 @@
 <li>the .item contains patient costs for the requested drug and pharmacy combination</li>
 <li>the .addItem composite holds an alternative fulfillment (the requested drug at a different pharmacy). Adjudication is returned in the ClaimResponse.addItem composite</li>
 <li>a referenced pharmacy Organization resource describes the alternative pharmacy option identified by the processor</li>
-<li>summary coverage information (e.g., Covered, Covered but requiring PA) is returned in the .processNote element - linked to the particular item using the processNote.number field</li>
+<li>benefit restriction information (e.g., Covered, Covered but requiring PA) is returned in the .benefitRestriction extensions in the .item and .addItem composites</li>
 </ul>
 <div><img src="rtpbc-claim-response-03.png" alt="claimresponse"></div>
