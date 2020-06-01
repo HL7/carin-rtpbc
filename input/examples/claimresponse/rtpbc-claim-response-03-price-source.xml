@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-claim-response-03-price-source" />
+  <meta>
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+  </meta>
   <identifier>
     <value value="rtpbc-03-response-price-source" />
   </identifier>
@@ -82,9 +85,9 @@
     </provider>
     <productOrService>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-        <code value="00777310402" />
-        <display value="Prozac 10mg capsule" />
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+          <code value="205535" />
+          <display value="PROzac 10 MG Oral Capsule" />
       </coding>
     </productOrService>
     <quantity>

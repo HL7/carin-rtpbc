@@ -39,7 +39,7 @@
       <ClaimResponse>
         <id value="rtpbc-claim-response-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
         </meta>
         <identifier>
           <value value="rtpbc-03-response" />
@@ -72,7 +72,7 @@
         <item>
           <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
             <valueCoding>
-              <system value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
+              <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
               <code value="prior-auth" />
               <display value="Prior authorization required" />
             </valueCoding>
@@ -124,7 +124,7 @@
           </extension>
           <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
             <valueCoding>
-              <system value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
+              <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
               <code value="covered" />
               <display value="Covered" />
             </valueCoding>
@@ -135,9 +135,9 @@
           </provider>
           <productOrService>
             <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-              <code value="00777310402" />
-              <display value="Prozac 10mg capsule" />
+              <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+              <code value="205535" />
+              <display value="PROzac 10 MG Oral Capsule" />
             </coding>
           </productOrService>
           <quantity>
@@ -199,10 +199,10 @@
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-              <code value="CAAI" />
-              <display value="Consumer Application Account Identifier" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
             </coding>
-            <text value="Consumer Application Account Identifier" />
+            <text value="Patient internal identifier" />
           </type>
           <system value="http://example.org/MyPatientApp" />
           <value value="30455" />
@@ -235,6 +235,7 @@
           <system value="http://hl7.org/fhir/sid/us-npi" />
           <value value="5515515515" />
         </identifier>
+        <active value="true" />
         <type>
           <coding>
             <system value="http://ncpdp.org/pharmacy-type" />

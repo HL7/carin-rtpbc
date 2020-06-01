@@ -8,8 +8,8 @@ The RTPBC request is submitted using the $process-message operation on the proce
 Like the option above, the $process-message operation takes a single FHIR&reg; resource input parameter consisting of a Bundle containing the Claim resource and referenced supporting resources, and returns a Bundle containing a ClaimResponse and supporting resources.
 
 In addition, this method includes a MessageHeader resource in both the request and response.
-* In the request, the MessageHeader's *focus.reference* points to the Bundle's Claim resource, per the <a href="MessageDefinition-rtpbc-request-message-definition.html">RtpbcRequestMessageDefinition.</a>
-* In the response, the *focus.reference* points to the Bundle's ClaimResponse, per the <a href="MessageDefinition-rtpbc-response-message-definition.html">RtpbcResponseMessageDefinition.</a>
+* In the request, the MessageHeader's *focus.reference* points to the Bundle's Claim resource, per the <a href="MessageDefinition-rtpbc-request.html">RtpbcRequestMessageDefinition.</a>
+* In the response, the *focus.reference* points to the Bundle's ClaimResponse, per the <a href="MessageDefinition-rtpbc-response.html">RtpbcResponseMessageDefinition.</a>
 
 ### Synchronous response
 

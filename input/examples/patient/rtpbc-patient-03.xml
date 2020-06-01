@@ -8,10 +8,10 @@
     <type>
       <coding>
         <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-        <code value="CAAI" />
-        <display value="Consumer Application Account Identifier" />
+        <code value="PI" />
+        <display value="Patient internal identifier" />
       </coding>
-      <text value="Consumer Application Account Identifier" />
+      <text value="Patient internal identifier" />
     </type>
     <system value="http://example.org/MyPatientApp" />
     <value value="30455" />

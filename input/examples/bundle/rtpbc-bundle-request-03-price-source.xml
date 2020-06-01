@@ -35,7 +35,7 @@
       <Claim>
         <id value="rtpbc-claim-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
+          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
         </meta>
         <identifier>
           <value value="rtpbc-03" />
@@ -86,9 +86,9 @@
           <careTeamSequence value="1" />
           <productOrService>
             <coding>
-              <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-              <code value="00777310402" />
-              <display value="Prozac 10mg capsule" />
+              <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+              <code value="205535" />
+              <display value="PROzac 10 MG Oral Capsule" />
             </coding>
           </productOrService>
           <quantity>
@@ -111,10 +111,10 @@
           <type>
             <coding>
               <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
-              <code value="CAAI" />
-              <display value="Consumer Application Account Identifier" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
             </coding>
-            <text value="Consumer Application Account Identifier" />
+            <text value="Patient internal identifier" />
           </type>
           <system value="http://example.org/MyPatientApp" />
           <value value="30455" />
@@ -148,14 +148,15 @@
         <reportedBoolean value="true" />
         <medicationCodeableConcept>
           <coding>
-            <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-            <code value="00777310402" />
-            <display value="Prozac 10mg capsule" />
+		      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+		      <code value="205535" />
+		      <display value="PROzac 10 MG Oral Capsule" />
           </coding>
         </medicationCodeableConcept>
         <subject>
           <reference value="Patient/rtpbc-patient-03" />
         </subject>
+        <authoredOn value="2019-11-01" />
         <requester>
           <reference value="Practitioner/rtpbc-practitioner-03" />
         </requester>
@@ -210,6 +211,7 @@
           <system value="http://hl7.org/fhir/sid/us-npi" />
           <value value="9876543210" />
         </identifier>
+		<active value="true" />
         <type>
           <coding>
             <system value="http://ncpdp.org/pharmacy-type" />

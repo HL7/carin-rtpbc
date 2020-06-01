@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-request-claim" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
   <version value="1.0" />
-  <name value="RtpbcRequest" />
+  <name value="RtpbcRequestClaim" />
   <title value="RTPBC Request Using Claim" />
   <status value="active" />
   <date value="2020-05-23T00:00:00-05:00" />
@@ -84,7 +84,7 @@
       <path value="Claim.type.coding.code" />
       <min value="1" />
       <max value="1" />
-      <fixedCode value="true" />
+      <fixedCode value="pharmacy" />
       <mustSupport value="true" />
     </element>
     <element id="Claim.type.coding.display">
@@ -137,7 +137,7 @@
       <definition value="The patient's preferred pharmacy to be considered during creation of the response" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy" />
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
       </type>
       <mustSupport value="true" />
     </element>

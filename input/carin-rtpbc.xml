@@ -48,18 +48,18 @@
     <resource>
       <reference>
         <reference value="StructureDefinition/rtpbc-request-claim" />
-        <display value="RtpbcRequest" />
+        <display value="RtpbcRequestClaim" />
       </reference>
-      <name value="RtpbcRequest" />
+      <name value="RtpbcRequestClaim" />
       <description value="This profile constrains the Claim resource so that it can serve as the request in the consumer Real-time Pharmacy Benefit Check (RTPBC) process." />
       <exampleBoolean value="false" />
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/rtpbc-response-claimresponse" />
-        <display value="RtpbcResponse" />
+        <display value="RtpbcResponseClaimResponse" />
       </reference>
-      <name value="RtpbcResponse" />
+      <name value="RtpbcResponseClaimResponse" />
       <description value="This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &quot;predetermination&quot; processing mode" />
       <exampleBoolean value="false" />
     </resource>
@@ -137,16 +137,36 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-prescribable-product-code-value-set" />
-        <display value="RTPBCPrescribableProductCodeValueSet" />
+        <reference value="ValueSet/rtpbc-prescribable-product-code" />
+        <display value="RtpbcPrescribableProductCodeValueSet" />
       </reference>
-      <name value="RTPBCPrescribableProductCodeValueSet" />
+      <name value="RtpbcPrescribableProductCodeValueSet" />
       <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)." />
+      <exampleBoolean value="false" />
+    </resource>
+    <!--
+    <resource>
+      <reference>
+        <reference value="ValueSet/rtpbc-prescribable-rxnorm" />
+        <display value="RtpbcPrescribableRxNormValueSet" />
+      </reference>
+      <name value="RtpbcPrescribableRxNormValueSet" />
+      <description value="This value set constrains the US Core us-core-medication-codes value set to codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types)." />
       <exampleBoolean value="false" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/rtpbc-benefit-restriction-code-system" />
+        <reference value="ValueSet/rtpbc-ndc-11" />
+        <display value="RtpbcNdc11ValueSet" />
+      </reference>
+      <name value="RtpbcNdc11ValueSet" />
+      <description value="This value set includes the normalized 11-digit form of all NDC codes (which represent specific commercially available medication products available in the US)." />
+      <exampleBoolean value="false" />
+    </resource>
+    -->
+    <resource>
+      <reference>
+        <reference value="CodeSystem/rtpbc-benefit-restriction" />
         <display value="RtpbcBenefitRestrictionCodeSystem" />
       </reference>
       <name value="RtpbcBenefitRestrictionCodeSystem" />
@@ -155,7 +175,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/rtpbc-event-type-code-system" />
+        <reference value="CodeSystem/rtpbc-event-type" />
         <display value="RtpbcEventTypeCodeSystem" />
       </reference>
       <name value="RtpbcEventTypeCodeSystem" />
@@ -175,7 +195,7 @@
     -->
     <resource>
       <reference>
-        <reference value="CodeSystem/rtpbc-patient-pay-type-code-system" />
+        <reference value="CodeSystem/rtpbc-patient-pay-type" />
         <display value="RtpbcPatientPayTypeCodeSystem" />
       </reference>
       <name value="RtpbcPatientPayTypeCodeSystem" />
@@ -229,7 +249,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-billing-unit-value-set" />
+        <reference value="ValueSet/rtpbc-billing-unit" />
         <display value="RtbpcBillingUnitValueSet" />
       </reference>
       <name value="RtbpcBillingUnitValueSet" />
@@ -238,7 +258,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-error-code-value-set" />
+        <reference value="ValueSet/rtpbc-error-code" />
         <display value="RtpbcErrorCodeValueSet" />
       </reference>
       <name value="RtpbcErrorCodeValueSet" />
@@ -247,7 +267,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-event-type-value-set" />
+        <reference value="ValueSet/rtpbc-event-type" />
         <display value="RtbpcEventTypeValueSet" />
       </reference>
       <name value="RtbpcEventTypeValueSet" />
@@ -256,7 +276,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-country-code-value-set" />
+        <reference value="ValueSet/rtpbc-country-code" />
         <display value="RtpbcCountryCodeValueSet" />
       </reference>
       <name value="RtpbcCountryCodeValueSet" />
@@ -265,7 +285,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-benefit-restriction-value-set" />
+        <reference value="ValueSet/rtpbc-benefit-restriction" />
         <display value="RtbpcBenefitRestrictionValueSet" />
       </reference>
       <name value="RtbpcBenefitRestrictionValueSet" />
@@ -274,7 +294,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-patient-pay-type-value-set" />
+        <reference value="ValueSet/rtpbc-patient-pay-type" />
         <display value="RtbpcPatientPayTypeValueSet" />
       </reference>
       <name value="RtbpcPatientPayTypeValueSet" />
@@ -283,7 +303,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-pharmacy-type-value-set" />
+        <reference value="ValueSet/rtpbc-pharmacy-type" />
         <display value="RtbpcPharmacyTypeValueSet" />
       </reference>
       <name value="RtbpcPharmacyTypeValueSet" />
@@ -292,7 +312,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/rtpbc-state-and-province-code-value-set" />
+        <reference value="ValueSet/rtpbc-state-and-province-code" />
         <display value="RtbpcStateAndProvinceCodeValueSet" />
       </reference>
       <name value="RtbpcStateAndProvinceCodeValueSet" />
@@ -301,7 +321,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/rtpbc-isAlternative-extension" />
+        <reference value="StructureDefinition/rtpbc-isAlternative" />
         <display value="RtpbcIsAlternativeExtension" />
       </reference>
       <name value="RtpbcIsAlternativeExtension" />
@@ -310,7 +330,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/rtpbc-benefitRestriction-extension" />
+        <reference value="StructureDefinition/rtpbc-benefitRestriction" />
         <display value="RtpbcBenefitRestrictionExtension" />
       </reference>
       <name value="RtpbcBenefitRestrictionExtension" />
@@ -319,7 +339,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MessageDefinition/rtpbc-request-message-definition" />
+        <reference value="MessageDefinition/rtpbc-request" />
         <display value="RtpbcRequestMessageDefinition" />
       </reference>
       <name value="RtpbcRequestMessageDefinition" />
@@ -328,7 +348,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="MessageDefinition/rtpbc-response-message-definition" />
+        <reference value="MessageDefinition/rtpbc-response" />
         <display value="RtpbcResponseMessageDefinition" />
       </reference>
       <name value="RtpbcResponseMessageDefinition" />
@@ -337,7 +357,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/rtpbc-requester-capabilitystatement" />
+        <reference value="CapabilityStatement/rtpbc-requester" />
         <display value="RtpbcRequesterCapabilityStatement" />
       </reference>
       <name value="RtpbcRequesterCapabilityStatement" />
@@ -346,7 +366,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CapabilityStatement/rtpbc-responder-capabilitystatement" />
+        <reference value="CapabilityStatement/rtpbc-responder" />
         <display value="RtpbcResponderCapabilityStatement" />
       </reference>
       <name value="RtpbcResponderCapabilityStatement" />
@@ -360,7 +380,7 @@
       </reference>
       <name value="Example RTPBC Request (Claim)" />
       <description value="Example of a consumer RTPBC Claim resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
     </resource>
     <resource>
       <reference>
@@ -369,7 +389,7 @@
       </reference>
       <name value="RTPBC Request to a Pricing Source" />
       <description value="Example of a consumer RTPBC Claim resource submitted to a pricing source." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
     </resource>
     <resource>
       <reference>
@@ -378,7 +398,7 @@
       </reference>
       <name value="Example RTPBC Response (ClaimResponse)" />
       <description value="Example of a consumer RTPBC ClaimResponse resource." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>
       <reference>
@@ -387,7 +407,7 @@
       </reference>
       <name value="RTPBC Response from a pricing source" />
       <description value="Example of a consumer RTPBC ClaimResponse resource from a pricing source." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>
       <reference>

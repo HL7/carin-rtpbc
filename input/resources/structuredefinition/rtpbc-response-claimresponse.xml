@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-response-claimresponse" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
   <version value="1.0" />
-  <name value="RtpbcResponse" />
+  <name value="RtpbcResponseClaimResponse" />
   <title value="RTPBC Response Using ClaimResponse" />
   <status value="active" />
   <date value="2020-05-23T00:00:00-05:00" />
@@ -184,12 +184,7 @@
       <short value="Benefit Restriction (Extension)" />
       <definition value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination." />
       <min value="0" />
-      <max value="*" />
-      <base>
-        <path value="DomainResource.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
@@ -270,11 +265,6 @@
       <comment value="Set to true in all real-time pharmacy benefit check response .addItems." />
       <min value="1" />
       <max value="1" />
-      <base>
-        <path value="DomainResource.extension" />
-        <min value="0" />
-        <max value="*" />
-      </base>
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" />
@@ -288,7 +278,7 @@
       <short value="Benefit Restriction (Extension)" />
       <definition value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination." />
       <min value="0" />
-      <max value="*" />
+      <max value="1" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
@@ -318,7 +308,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy" />
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -336,7 +326,7 @@
       <definition value="A product identifier for the medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)" />
       <mustSupport value="true" />
       <binding>
-        <strength value="required" />
+        <strength value="extensible" />
         <description value="RTPBC prescribable product codes (NDC and RxNorm)" />
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
       </binding>
@@ -397,7 +387,6 @@
       <label value="Determination Note Number" />
       <short value="Determination Note Number" />
       <definition value="Number referencing a Determination Note (.processNote) explaining the coverage status for this product + pharmacy combination." />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="ClaimResponse.addItem.adjudication">

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <id value="rtpbc-benefitRestriction" />
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="phx" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1" />
+  </extension>
+  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+  <version value="1" />
+  <name value="RtpbcExtensionBenefitRestriction" />
+  <title value="RTPBC Benefit Restriction Extension" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-05-23T00:00:00-05:00" />
+  <publisher value="CARIN Alliance" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://confluence.hl7.org/display/PHAR/Pharmacy" />
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="email" />
+      <value value="fm@frankmckinney.com" />
+    </telecom>
+  </contact>
+  <description value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="US" />
+      <display value="United States of America" />
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="4.0.1" />
+  <kind value="primitive-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="ClaimResponse.item" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="ClaimResponse.addItem" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <short value="Benefit restriction." />
+      <definition value="Benefit restrictions that may apply to a prescription product and pharmacy combination." />
+      <min value="0" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <max value="0" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Coding" />
+      </type>
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

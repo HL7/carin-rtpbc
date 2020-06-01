@@ -2,7 +2,7 @@
 
 ### ClaimResponse.error usage
 
-In the event that the RTPBC source system (payer/PBM, discount pricing source) is **unable to fully process a request because of data or business rule issue,** that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the [RTPBC Error Code Value Set](ValueSet-rtpbc-error-code-value-set.html). 
+In the event that the RTPBC source system (payer/PBM, discount pricing source) is **unable to fully process a request because of data or business rule issue,** that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the [RTPBC Error Code Value Set](ValueSet-rtpbc-error-code.html). 
 <br>
 
 ### Operation outcome usage

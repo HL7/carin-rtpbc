@@ -1,8 +1,8 @@
 <br><br>
 Data population is similar to a typical *predetermination* ClaimResponse request (where the corresponding Claim.use was set to "predetermination"), with the following key differences:
 
-* in addition to cost and coverage for the requested medication and pharmacy, the responder may also return information about *alternative" medication + pharmacy combinations. These alternatives are conveyed in one or more ClaimResponse.addItem composites, characterized as independent options using an extension defined in this guide ([isAlternative](StructureDefinition-rtpbc-isAlternative-extension.html)) 
-* the benefitRestriction extension is used to communicate the level at which the requested drug and pharmacy are covered, as well as alternative drug/pharmacy combinations (using high-level, pre-defined [benefit statements](ValueSet-rtpbc-benefit-restriction-value-set.html) tailored to the patient's perspective)
+* in addition to cost and coverage for the requested medication and pharmacy, the responder may also return information about *alternative" medication + pharmacy combinations. These alternatives are conveyed in one or more ClaimResponse.addItem composites, characterized as independent options using an extension defined in this guide ([isAlternative](StructureDefinition-rtpbc-isAlternative.html)) 
+* the benefitRestriction extension is used to communicate the level at which the requested drug and pharmacy are covered, as well as alternative drug/pharmacy combinations (using high-level, pre-defined [benefit statements](ValueSet-rtpbc-benefit-restriction.html) tailored to the patient's perspective)
 * the processNote element is used to communicate additional information related to the cost or coverage of the requested medication, pharmacy or alternative
 * alternative pharmacies are communicated using referenced Organization resources
 * certain other elements are fixed to values reflecting a medication-related request...

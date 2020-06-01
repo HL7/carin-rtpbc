@@ -1,14 +1,14 @@
 ### Value Sets
 
-- [RTPBC Billing Unit Value Set](ValueSet-rtpbc-billing-unit-value-set.html)
-- [RTPBC Country Code Value Set](ValueSet-rtpbc-country-code-value-set.html)
-- [RTPBC Benefit Restriction Value Set](ValueSet-rtpbc-benefit-restriction-value-set.html)
-- [RTPBC Error Code Value Set](ValueSet-rtpbc-error-code-value-set.html)
-- [RTPBC Event Type Value Set](ValueSet-rtpbc-event-type-value-set.html)
-- [RTPBC Patient Pay Type Value Set](ValueSet-rtpbc-patient-pay-type-value-set.html)
-- [RTPBC Pharmacy Type Value Set](ValueSet-rtpbc-pharmacy-type-value-set.html)
-- [RTPBC Prescribable Product Code Value Set](ValueSet-rtpbc-prescribable-product-code-value-set.html)
-- [RTPBC State and Province Code Value Set](ValueSet-rtpbc-state-and-province-code-value-set.html)
+- [RTPBC Billing Unit](ValueSet-rtpbc-billing-unit.html)
+- [RTPBC Country Code](ValueSet-rtpbc-country-code.html)
+- [RTPBC Benefit Restriction](ValueSet-rtpbc-benefit-restriction.html)
+- [RTPBC Error Code](ValueSet-rtpbc-error-code.html)
+- [RTPBC Event Type](ValueSet-rtpbc-event-type.html)
+- [RTPBC Patient Pay Type](ValueSet-rtpbc-patient-pay-type.html)
+- [RTPBC Pharmacy Type](ValueSet-rtpbc-pharmacy-type.html)
+- [RTPBC Prescribable Product Code](ValueSet-rtpbc-prescribable-product-code.html)
+- [RTPBC State and Province Code](ValueSet-rtpbc-state-and-province-code.html)
 
 <br>
 
@@ -16,9 +16,9 @@
 
 ##### **Code systems defined for use in the consumer Real-time Prescription Benefit Check (RTPBC) process**
 The following code systems define consumer-friendly insurance coverage concepts for use in RTPBC responses: 
-- [RTPBC Benefit Restriction Code System](CodeSystem-rtpbc-benefit-restriction-code-system.html)
-- [RTPBC Event Type Code System](CodeSystem-rtpbc-event-type-code-system.html)
-- [RTPBC Patient Pay Type Code System](CodeSystem-rtpbc-patient-pay-type-code-system.html)
+- [RTPBC Benefit Restriction](CodeSystem-rtpbc-benefit-restriction.html)
+- [RTPBC Event Type](CodeSystem-rtpbc-event-type.html)
+- [RTPBC Patient Pay Type](CodeSystem-rtpbc-patient-pay-type.html)
 
 <br>
 

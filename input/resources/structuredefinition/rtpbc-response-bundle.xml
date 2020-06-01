@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="ClaimResponse" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response" />
+        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
       </type>
       <mustSupport value="true" />
     </element>

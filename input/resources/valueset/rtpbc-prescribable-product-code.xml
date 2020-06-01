@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="rtpbc-prescribable-product-code-value-set" />
+  <id value="rtpbc-prescribable-product-code" />
   <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
   <version value="1.0.0" />
   <name value="RTPBCPrescribableProductCodeValueSet" />
@@ -28,7 +28,6 @@
         <op value="in" />
         <value value="SCD,SBD,GPCK,BPCK" />
       </filter>
-      <valueSet value="http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes" />
     </include>
   </compose>
 </ValueSet>

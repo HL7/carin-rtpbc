@@ -47,7 +47,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
+        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />

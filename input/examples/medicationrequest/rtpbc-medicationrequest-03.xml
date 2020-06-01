@@ -9,14 +9,15 @@
   <reportedBoolean value="true" />
   <medicationCodeableConcept>
     <coding>
-      <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-      <code value="00777310402" />
-      <display value="Prozac 10mg capsule" />
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+      <code value="205535" />
+      <display value="PROzac 10 MG Oral Capsule" />
     </coding>
   </medicationCodeableConcept>
   <subject>
     <reference value="Patient/rtpbc-patient-03" />
   </subject>
+  <authoredOn value="2019-11-01" />
   <requester>
     <reference value="Practitioner/rtpbc-practitioner-03" />
   </requester>

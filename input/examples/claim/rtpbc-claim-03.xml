@@ -4,7 +4,7 @@
   <meta>
     <versionId value="4" />
     <lastUpdated value="2019-11-01T15:51:52.000-04:00" />
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request" />
+    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
   </meta>
   <identifier>
     <value value="rtpbc0001" />
@@ -53,9 +53,9 @@
     <careTeamSequence value="1" />
     <productOrService>
       <coding>
-        <system value="http://terminology.hl7.org/CodeSystem/ndc-11" />
-        <code value="00777310402" />
-        <display value="Prozac 10mg capsule" />
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />
+          <code value="205535" />
+          <display value="PROzac 10 MG Oral Capsule" />
       </coding>
     </productOrService>
     <quantity>

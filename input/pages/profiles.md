@@ -77,11 +77,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="StructureDefinition-rtpbc-isAlternative-extension.html">RTPBC IsAlternative Extension</a></td>
+<td><a href="StructureDefinition-rtpbc-isAlternative.html">RTPBC IsAlternative Extension</a></td>
 <td>This extension indicates that an added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service.</td>
 </tr>
 <tr>
-<td><a href="StructureDefinition-rtpbc-benefitRestriction-extension.html">RTPBC BenefitRestriction Extension</a></td>
+<td><a href="StructureDefinition-rtpbc-benefitRestriction.html">RTPBC BenefitRestriction Extension</a></td>
 <td>This extension conveys benefit restrictions that apply to a prescription product and pharmacy combination.</td>
 </tr>
 </tbody>
@@ -105,11 +105,11 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="MessageDefinition-rtpbc-request-message-definition.html">RTPBC Request MessageDefinition</a></td>
+<td><a href="MessageDefinition-rtpbc-request.html">RTPBC Request MessageDefinition</a></td>
 <td>Request for patient cost and coverage information for a prescribed medication</td>
 </tr>
 <tr>
-<td><a href="MessageDefinition-rtpbc-response-message-definition.html">RTPBC Response MessageDefinition</a></td>
+<td><a href="MessageDefinition-rtpbc-response.html">RTPBC Response MessageDefinition</a></td>
 <td>Response to a request for patient cost and coverage information for a prescribed medication</td>
 </tr>
 </tbody>
