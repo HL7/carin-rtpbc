@@ -24,7 +24,7 @@ The following code systems define consumer-friendly insurance coverage concepts 
 
 ### Naming Systems
 
-##### **Licensed code and identifier systems maintained by the National Council for Prescription Drug Programs (NCPDP)**
+##### **Licensed code and identifier systems maintained by other organizations
 - [NCPDP Provider ID](NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html)
 - [NCPDP Reject Code (511-FB)](NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html)
 - [NCPDP Pharmacy Type (955-HR)](NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html)
