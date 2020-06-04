@@ -1,0 +1,1306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <id value="hl7.fhir.us.carin-rtpbc"/>
+   <meta>
+      <versionId value="1.0"/>
+      <lastUpdated value="2020-05-17T14:54:04.509-05:00"/>
+   </meta>
+   <text>
+      <status value="additional"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.    </div>
+   </text>
+   <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/hl7.fhir.us.carin-rtpbc"/>
+   <version value="0.1.0"/>
+   <name value="CarinRtpbc"/>
+   <title value="Consumer Realtime Pharmacy Benefit Check"/>
+   <status value="draft"/>
+   <date value="2020-06-03T21:07:13-05:00"/>
+   <publisher value="HL7 International - Pharmacy"/>
+   <contact>
+      <name value="HL7 International - Pharmacy"/>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.hl7.org/Special/committees/medication"/>
+      </telecom>
+   </contact>
+   <contact>
+      <name value="Frank McKinney"/>
+      <telecom>
+         <system value="email"/>
+         <value value="fm@frankmckinney.com"/>
+      </telecom>
+   </contact>
+   <description value="This is a guide for implementing the Consumer-Focused Real-Time Pharmacy Benefit Check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed. Specifically: how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply, discount pricing available for the medication. Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization)."/>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="US"/>
+         <display value="United States of America"/>
+      </coding>
+   </jurisdiction>
+   <packageId value="hl7.fhir.us.carin-rtpbc"/>
+   <license value="CC0-1.0"/>
+   <fhirVersion value="4.0.1"/>
+   <dependsOn>
+      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+      <packageId value="hl7.fhir.us.core"/>
+      <version value="3.1.0"/>
+   </dependsOn>
+   <definition>
+      <grouping id="_dyn_capabilitystatement">
+         <name value="Behavior: Capability Statements"/>
+         <description value="The following artifacts define the specific capabilities that different types of systems are expected to have in order to comply with this implementation guide.  Systems complying with the implementation guide are expected to declare conformance to one or more of the following capability statements."/>
+      </grouping>
+
+      <grouping id="_dyn_messagedefinition">
+         <name value="Behavior: Message Definitions"/>
+         <description value="These define the types of messages that can be sent and/or received by systems complying with this implementation guide"/>
+      </grouping>
+
+
+
+
+      <grouping id="_str_profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources that need to be complied with by conformant implementations"/>
+      </grouping>
+
+      <grouping id="_str_extension">
+         <name value="Structures: Extension Definitions"/>
+         <description value="These define constraints on FHIR data types that need to be complied with by conformant implementations"/>
+      </grouping>
+      <grouping id="_term_valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming with this implementation guide"/>
+      </grouping>
+      <grouping id="_term_codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming with this implementation guide"/>
+      </grouping>
+      <grouping id="_term_namingsystem">
+         <name value="Terminology: Naming Systems"/>
+         <description value="These define identifier and/or code system identities used by systems conforming with this implementation guide"/>
+      </grouping>
+
+
+
+      <grouping id="_ex_example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
+      </grouping>
+      <grouping id="_other">
+         <name value="Other"/>
+         <description value="These are resources that are used within this implementation guide that don't fit into one of the other categories"/>
+      </grouping>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-request-claim.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-request-claim"/>
+            <display value="RtpbcRequestClaim"/>
+         </reference>
+         <name value="RtpbcRequestClaim"/>
+         <description value="This profile constrains the Claim resource so that it can serve as the request in the consumer Real-time Pharmacy Benefit Check (RTPBC) process."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-response-claimresponse.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-response-claimresponse"/>
+            <display value="RtpbcResponseClaimResponse"/>
+         </reference>
+         <name value="RtpbcResponseClaimResponse"/>
+         <description value="This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's &#34;predetermination&#34; processing mode"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-patient.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-patient"/>
+            <display value="RtpbcPatient"/>
+         </reference>
+         <name value="RtpbcPatient"/>
+         <description value="This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. In RTPBC, the sole purpose of patient information is to enable the responding payer/PBM to locate the patient's insurance information. From there, pricing and coverage information is determined based on the patient's member and coverage information maintained by the payer."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-coverage.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-coverage"/>
+            <display value="RtpbcCoverage"/>
+         </reference>
+         <name value="RtpbcCoverage"/>
+         <description value="This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-medicationrequest.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-medicationrequest"/>
+            <display value="RtpbcMedicationRequest"/>
+         </reference>
+         <name value="RtpbcMedicationRequest"/>
+         <description value="This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patients' preferred pharmacy"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-pharmacy-organization.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-pharmacy-organization"/>
+            <display value="RtpbcPharmacy"/>
+         </reference>
+         <name value="RtpbcPharmacy"/>
+         <description value="This profile represents a pharmacy as used in the real-time pharmacy benefit check (RTPBC) process."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-request-messageheader.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-request-messageheader"/>
+            <display value="RtpbcRequestMessageHeader"/>
+         </reference>
+         <name value="RtpbcRequestMessageHeader"/>
+         <description value="This profile constrains a MessageHeader resource for use in a Real-time Pharmacy Benefit Check (RTPBC) request bundle"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-response-messageheader.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-response-messageheader"/>
+            <display value="RtpbcResponseMessageHeader"/>
+         </reference>
+         <name value="RtpbcResponseMessageHeader"/>
+         <description value="This profile constrains a MessageHeader resource for use in a Real-time Pharmacy Benefit Check (RTPBC) response bundle"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-request-bundle.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-request-bundle"/>
+            <display value="RtpbcRequestBundle"/>
+         </reference>
+         <name value="RtpbcRequestBundle"/>
+         <description value="This profile constrains a Bundle resource for use as the request in a Real-time Pharmacy Benefit Check (RTPBC) process"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-response-bundle.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-response-bundle"/>
+            <display value="RtpbcResponseBundle"/>
+         </reference>
+         <name value="RtpbcResponseBundle"/>
+         <description value="This profile constrains a Bundle resource for use as the response in a Real-time Pharmacy Benefit Check (RTPBC) process"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-prescribable-product-code.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-prescribable-product-code"/>
+            <display value="RtpbcPrescribableProductCodeValueSet"/>
+         </reference>
+         <name value="RtpbcPrescribableProductCodeValueSet"/>
+         <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-rtpbc-benefit-restriction.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/rtpbc-benefit-restriction"/>
+            <display value="RtpbcBenefitRestrictionCodeSystem"/>
+         </reference>
+         <name value="RtpbcBenefitRestrictionCodeSystem"/>
+         <description value="This code system defines a set of benefit restrictions that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-rtpbc-event-type.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/rtpbc-event-type"/>
+            <display value="RtpbcEventTypeCodeSystem"/>
+         </reference>
+         <name value="RtpbcEventTypeCodeSystem"/>
+         <description value="This code system defines event types used in RTPBC message headers"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-rtpbc-patient-pay-type.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/rtpbc-patient-pay-type"/>
+            <display value="RtpbcPatientPayTypeCodeSystem"/>
+         </reference>
+         <name value="RtpbcPatientPayTypeCodeSystem"/>
+         <description value="This code system defines components of a patient's responsibility for a prescription product's cost."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="NamingSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="NamingSystem-rtpbc-NamingSystem-canada-post-province-code.html"/>
+         </extension>
+         <reference>
+            <reference value="NamingSystem/rtpbc-NamingSystem-canada-post-province-code"/>
+            <display value="RtpbcNamingSystemCanadaPostProvinceCode"/>
+         </reference>
+         <name value="RtpbcNamingSystemCanadaPostProvinceCode"/>
+         <description value="Canada Post province codes"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_namingsystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="NamingSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html"/>
+         </extension>
+         <reference>
+            <reference value="NamingSystem/rtpbc-NamingSystem-ncpdp-pharmacy-type"/>
+            <display value="RtpbcNamingSystemNcpdpPharmacyType"/>
+         </reference>
+         <name value="RtpbcNamingSystemNcpdpPharmacyType"/>
+         <description value="The NCPDP Pharmacy Type (955-HR) code set defines a set of pharmacy type categories."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_namingsystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="NamingSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html"/>
+         </extension>
+         <reference>
+            <reference value="NamingSystem/rtpbc-NamingSystem-ncpdp-provider-id"/>
+            <display value="RtpbcNamingSystemNcpdpId"/>
+         </reference>
+         <name value="RtpbcNamingSystemNcpdpId"/>
+         <description value="The NCPDP Pharmacy Type (955-HR) code set defines a set of pharmacy type categories."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_namingsystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="NamingSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html"/>
+         </extension>
+         <reference>
+            <reference value="NamingSystem/rtpbc-NamingSystem-ncpdp-reject-code"/>
+            <display value="RtpbcNamingSystemNcpdpRejectCode"/>
+         </reference>
+         <name value="RtpbcNamingSystemNcpdpRejectCode"/>
+         <description value="The NCPDP Reject Code (511-FB) code set contains exception definitions for use when transaction processing cannot be completed."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_namingsystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-billing-unit.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-billing-unit"/>
+            <display value="RtbpcBillingUnitValueSet"/>
+         </reference>
+         <name value="RtbpcBillingUnitValueSet"/>
+         <description value="This value set contains the quantity unit of measure to be used when requesting predetermination of benefits for prescription-related products"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-error-code.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-error-code"/>
+            <display value="RtpbcErrorCodeValueSet"/>
+         </reference>
+         <name value="RtpbcErrorCodeValueSet"/>
+         <description value="This value set contains the error codes to be used by real-time pharmacy benefit check servers when encountering a data or business condition that prevents processing from completing. Values are defined in the NCPDP-maintained Reject Code (511-FB) code set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-event-type.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-event-type"/>
+            <display value="RtbpcEventTypeValueSet"/>
+         </reference>
+         <name value="RtbpcEventTypeValueSet"/>
+         <description value="This value set contains event types used in RTPBC message headers."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-country-code.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-country-code"/>
+            <display value="RtpbcCountryCodeValueSet"/>
+         </reference>
+         <name value="RtpbcCountryCodeValueSet"/>
+         <description value="This value set contains a subset of two-letter ISO 3166-1-2 country codes for the countries in which this profile is intended to be used (US and CA)."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-benefit-restriction.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-benefit-restriction"/>
+            <display value="RtbpcBenefitRestrictionValueSet"/>
+         </reference>
+         <name value="RtbpcBenefitRestrictionValueSet"/>
+         <description value="This value set contains a set of benefit restrictions that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-patient-pay-type.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-patient-pay-type"/>
+            <display value="RtbpcPatientPayTypeValueSet"/>
+         </reference>
+         <name value="RtbpcPatientPayTypeValueSet"/>
+         <description value="This value set contains components of a patient's responsibility for a prescription product's cost."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-pharmacy-type.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-pharmacy-type"/>
+            <display value="RtbpcPharmacyTypeValueSet"/>
+         </reference>
+         <name value="RtbpcPharmacyTypeValueSet"/>
+         <description value="This value set contains pharmacy type categories defined in the NCPDP Pharmacy Type (955-HR) code system."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-rtpbc-state-and-province-code.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/rtpbc-state-and-province-code"/>
+            <display value="RtbpcStateAndProvinceCodeValueSet"/>
+         </reference>
+         <name value="RtbpcStateAndProvinceCodeValueSet"/>
+         <description value="This value set contains two letter USPS state codes and Canada Post province codes."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-isAlternative.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-isAlternative"/>
+            <display value="RtpbcIsAlternativeExtension"/>
+         </reference>
+         <name value="RtpbcIsAlternativeExtension"/>
+         <description value="This extension indicates that this added line item is to be interpreted as one of possibly multiple alternatives to the requested product or service. When isAlternative is true, the added line item is to be considered independently from any other added line items associated with the requested product or service."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-rtpbc-benefitRestriction.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/rtpbc-benefitRestriction"/>
+            <display value="RtpbcBenefitRestrictionExtension"/>
+         </reference>
+         <name value="RtpbcBenefitRestrictionExtension"/>
+         <description value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_extension"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MessageDefinition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MessageDefinition-rtpbc-request.html"/>
+         </extension>
+         <reference>
+            <reference value="MessageDefinition/rtpbc-request"/>
+            <display value="RtpbcRequestMessageDefinition"/>
+         </reference>
+         <name value="RtpbcRequestMessageDefinition"/>
+         <description value="Request for patient cost and coverage information for a prescribed medication"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_dyn_messagedefinition"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MessageDefinition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MessageDefinition-rtpbc-response.html"/>
+         </extension>
+         <reference>
+            <reference value="MessageDefinition/rtpbc-response"/>
+            <display value="RtpbcResponseMessageDefinition"/>
+         </reference>
+         <name value="RtpbcResponseMessageDefinition"/>
+         <description value="Response to a request for patient cost and coverage information for a prescribed medication"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_dyn_messagedefinition"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CapabilityStatement"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CapabilityStatement-rtpbc-requester.html"/>
+         </extension>
+         <reference>
+            <reference value="CapabilityStatement/rtpbc-requester"/>
+            <display value="RtpbcRequesterCapabilityStatement"/>
+         </reference>
+         <name value="RtpbcRequesterCapabilityStatement"/>
+         <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_dyn_capabilitystatement"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CapabilityStatement"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CapabilityStatement-rtpbc-responder.html"/>
+         </extension>
+         <reference>
+            <reference value="CapabilityStatement/rtpbc-responder"/>
+            <display value="RtpbcResponderCapabilityStatement"/>
+         </reference>
+         <name value="RtpbcResponderCapabilityStatement"/>
+         <description value="This CapabilityStatement describes the expected capabilities of a server that is capable of responding to a Real-time Pharmacy Benefit Check (RTPBC) request transacted with the `$process-message` operation."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_dyn_capabilitystatement"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Claim"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Claim-rtpbc-claim-03.html"/>
+         </extension>
+         <reference>
+            <reference value="Claim/rtpbc-claim-03"/>
+            <display value="rtpbc-claim-03"/>
+         </reference>
+         <name value="Example RTPBC Request (Claim)"/>
+         <description value="Example of a consumer RTPBC Claim resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Claim"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Claim-rtpbc-claim-03-price-source.html"/>
+         </extension>
+         <reference>
+            <reference value="Claim/rtpbc-claim-03-price-source"/>
+            <display value="rtpbc-claim-03-price-source"/>
+         </reference>
+         <name value="RTPBC Request to a Pricing Source"/>
+         <description value="Example of a consumer RTPBC Claim resource submitted to a pricing source."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ClaimResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ClaimResponse-rtpbc-claim-response-03.html"/>
+         </extension>
+         <reference>
+            <reference value="ClaimResponse/rtpbc-claim-response-03"/>
+            <display value="rtpbc-claim-response-03"/>
+         </reference>
+         <name value="Example RTPBC Response (ClaimResponse)"/>
+         <description value="Example of a consumer RTPBC ClaimResponse resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ClaimResponse"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ClaimResponse-rtpbc-claim-response-03-price-source.html"/>
+         </extension>
+         <reference>
+            <reference value="ClaimResponse/rtpbc-claim-response-03-price-source"/>
+            <display value="rtpbc-claim-response-03-price-source"/>
+         </reference>
+         <name value="RTPBC Response from a pricing source"/>
+         <description value="Example of a consumer RTPBC ClaimResponse resource from a pricing source."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-rtpbc-patient-03.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/rtpbc-patient-03"/>
+            <display value="rtpbc-patient-03"/>
+         </reference>
+         <name value="Example RTPBC Patient"/>
+         <description value="Example of a consumer RTPBC Patient resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Coverage"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Coverage-rtpbc-coverage-03.html"/>
+         </extension>
+         <reference>
+            <reference value="Coverage/rtpbc-coverage-03"/>
+            <display value="rtpbc-coverage-03"/>
+         </reference>
+         <name value="Example RTPBC Coverage"/>
+         <description value="Example of a consumer RTPBC Coverage resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-rtpbc-medicationrequest-03.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/rtpbc-medicationrequest-03"/>
+            <display value="rtpbc-medicationrequest-03"/>
+         </reference>
+         <name value="Example RTPBC MedicationRequest"/>
+         <description value="Example of a consumer RTPBC MedicationRequest resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-rtpbc-organization-03.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/rtpbc-organization-03"/>
+            <display value="rtpbc-organization-03"/>
+         </reference>
+         <name value="Example RTPBC Pharmacy Organization - Hometown Drug"/>
+         <description value="Example of a consumer RTPBC pharmacy Organization resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-rtpbc-organization-03m.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/rtpbc-organization-03m"/>
+            <display value="rtpbc-organization-03m"/>
+         </reference>
+         <name value="Example RTPBC Pharmacy Organization - My Mail Service Pharmacy"/>
+         <description value="Example of a consumer RTPBC pharmacy Organization resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-rtpbc-practitioner-03.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/rtpbc-practitioner-03"/>
+            <display value="rtpbc-practitioner-03"/>
+         </reference>
+         <name value="Example US Core Practitioner as used in RTPBC"/>
+         <description value="Example of a US Core Practitioner resource representing a prescriber in the RTPBC exchange."/>
+         <groupingId value="_other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MessageHeader"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MessageHeader-rtpbc-request-message-header-01.html"/>
+         </extension>
+         <reference>
+            <reference value="MessageHeader/rtpbc-request-message-header-01"/>
+            <display value="rtpbc-request-message-header-01"/>
+         </reference>
+         <name value="Example RTPBC Request MessageHeader"/>
+         <description value="Example of a consumer RTPBC request MessageHeader resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MessageHeader"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MessageHeader-rtpbc-response-message-header-01.html"/>
+         </extension>
+         <reference>
+            <reference value="MessageHeader/rtpbc-response-message-header-01"/>
+            <display value="rtpbc-response-message-header-01"/>
+         </reference>
+         <name value="Example RTPBC Response MessageHeader"/>
+         <description value="Example of a consumer RTPBC response MessageHeader resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-rtpbc-bundle-request-03-w-header.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/rtpbc-bundle-request-03-w-header"/>
+            <display value="rtpbc-bundle-request-03-w-header"/>
+         </reference>
+         <name value="Example RTPBC Request Bundle"/>
+         <description value="Example of a consumer RTPBC request Bundle resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-rtpbc-bundle-request-03-price-source.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/rtpbc-bundle-request-03-price-source"/>
+            <display value="rtpbc-bundle-request-03-price-source"/>
+         </reference>
+         <name value="RTPBC Request Bundle submitted to a pricing source"/>
+         <description value="Example of a consumer RTPBC request Bundle resource submitted to a pricing source."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-rtpbc-bundle-response-03-w-header.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/rtpbc-bundle-response-03-w-header"/>
+            <display value="rtpbc-bundle-response-03-w-header"/>
+         </reference>
+         <name value="Example RTPBC Response Bundle"/>
+         <description value="Example of a consumer RTPBC response Bundle resource."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-rtpbc-bundle-response-03-price-source.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/rtpbc-bundle-response-03-price-source"/>
+            <display value="rtpbc-bundle-response-03-price-source"/>
+         </reference>
+         <name value="RTPBC Response Bundle returned by a pricing source"/>
+         <description value="Example of a consumer RTPBC response Bundle resource returned by a pricing source."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
+         <groupingId value="_ex_example"/>
+      </resource>
+      <page>
+         <nameUrl value="toc.html"/>
+         <title value="Table of Contents"/>
+         <generation value="html"/>
+         <page>
+            <nameUrl value="index.html"/>
+            <title value="IG Home Page"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="use_cases.html"/>
+            <title value="Use Cases"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="information_content_and_fhir_resources.html"/>
+            <title value="Information Content and FHIR Resources"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="business_rules.html"/>
+            <title value="Business Rules"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="submission_method.html"/>
+            <title value="Submission Method"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="error_handling.html"/>
+            <title value="Error Handling"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="security.html"/>
+            <title value="Security"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="consumer_vs_provider_rtpbc.html"/>
+            <title value="Consumer vs Provider RTPBC"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="profiles.html"/>
+            <title value="Profiles and Extensions"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="terminology.html"/>
+            <title value="Terminology"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="capstatements.html"/>
+            <title value="Capability Statements"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="other.html"/>
+            <title value="Examples"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="downloads.html"/>
+            <title value="Downloads"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="artifacts.html"/>
+            <title value="Artifacts Summary"/>
+            <generation value="html"/>
+            <page>
+               <nameUrl value="CapabilityStatement-rtpbc-requester.html"/>
+               <title value="RtpbcRequesterCapabilityStatement"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CapabilityStatement-rtpbc-responder.html"/>
+               <title value="RtpbcResponderCapabilityStatement"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MessageDefinition-rtpbc-request.html"/>
+               <title value="RtpbcRequestMessageDefinition"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MessageDefinition-rtpbc-response.html"/>
+               <title value="RtpbcResponseMessageDefinition"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-request-claim.html"/>
+               <title value="RtpbcRequestClaim"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-response-claimresponse.html"/>
+               <title value="RtpbcResponseClaimResponse"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-patient.html"/>
+               <title value="RtpbcPatient"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-coverage.html"/>
+               <title value="RtpbcCoverage"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-medicationrequest.html"/>
+               <title value="RtpbcMedicationRequest"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-pharmacy-organization.html"/>
+               <title value="RtpbcPharmacy"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-request-messageheader.html"/>
+               <title value="RtpbcRequestMessageHeader"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-response-messageheader.html"/>
+               <title value="RtpbcResponseMessageHeader"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-request-bundle.html"/>
+               <title value="RtpbcRequestBundle"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-response-bundle.html"/>
+               <title value="RtpbcResponseBundle"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-isAlternative.html"/>
+               <title value="RtpbcIsAlternativeExtension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-rtpbc-benefitRestriction.html"/>
+               <title value="RtpbcBenefitRestrictionExtension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-prescribable-product-code.html"/>
+               <title value="RtpbcPrescribableProductCodeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-billing-unit.html"/>
+               <title value="RtbpcBillingUnitValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-error-code.html"/>
+               <title value="RtpbcErrorCodeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-event-type.html"/>
+               <title value="RtbpcEventTypeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-country-code.html"/>
+               <title value="RtpbcCountryCodeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-benefit-restriction.html"/>
+               <title value="RtbpcBenefitRestrictionValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-patient-pay-type.html"/>
+               <title value="RtbpcPatientPayTypeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-pharmacy-type.html"/>
+               <title value="RtbpcPharmacyTypeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-rtpbc-state-and-province-code.html"/>
+               <title value="RtbpcStateAndProvinceCodeValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-rtpbc-benefit-restriction.html"/>
+               <title value="RtpbcBenefitRestrictionCodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-rtpbc-event-type.html"/>
+               <title value="RtpbcEventTypeCodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-rtpbc-patient-pay-type.html"/>
+               <title value="RtpbcPatientPayTypeCodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="NamingSystem-rtpbc-NamingSystem-canada-post-province-code.html"/>
+               <title value="RtpbcNamingSystemCanadaPostProvinceCode"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html"/>
+               <title value="RtpbcNamingSystemNcpdpPharmacyType"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html"/>
+               <title value="RtpbcNamingSystemNcpdpId"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html"/>
+               <title value="RtpbcNamingSystemNcpdpRejectCode"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Claim-rtpbc-claim-03.html"/>
+               <title value="Example RTPBC Request (Claim)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Claim-rtpbc-claim-03-price-source.html"/>
+               <title value="RTPBC Request to a Pricing Source"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ClaimResponse-rtpbc-claim-response-03.html"/>
+               <title value="Example RTPBC Response (ClaimResponse)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ClaimResponse-rtpbc-claim-response-03-price-source.html"/>
+               <title value="RTPBC Response from a pricing source"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-rtpbc-patient-03.html"/>
+               <title value="Example RTPBC Patient"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Coverage-rtpbc-coverage-03.html"/>
+               <title value="Example RTPBC Coverage"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationRequest-rtpbc-medicationrequest-03.html"/>
+               <title value="Example RTPBC MedicationRequest"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-rtpbc-organization-03.html"/>
+               <title value="Example RTPBC Pharmacy Organization - Hometown Drug"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-rtpbc-organization-03m.html"/>
+               <title value="Example RTPBC Pharmacy Organization - My Mail Service Pharmacy"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MessageHeader-rtpbc-request-message-header-01.html"/>
+               <title value="Example RTPBC Request MessageHeader"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MessageHeader-rtpbc-response-message-header-01.html"/>
+               <title value="Example RTPBC Response MessageHeader"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-rtpbc-bundle-request-03-w-header.html"/>
+               <title value="Example RTPBC Request Bundle"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-rtpbc-bundle-request-03-price-source.html"/>
+               <title value="RTPBC Request Bundle submitted to a pricing source"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-rtpbc-bundle-response-03-w-header.html"/>
+               <title value="Example RTPBC Response Bundle"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-rtpbc-bundle-response-03-price-source.html"/>
+               <title value="RTPBC Response Bundle returned by a pricing source"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-rtpbc-practitioner-03.html"/>
+               <title value="Example US Core Practitioner as used in RTPBC"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+      </page>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2020+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="CI Build"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/capabilities"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/examples"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/extensions"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/models"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/operations"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/profiles"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/vocabulary"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/maps"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="template/config"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/images"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="template/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="input/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-qa"/>
+         <value value="temp/qa"/>
+      </parameter>
+      <parameter>
+         <code value="path-temp"/>
+         <value value="temp/pages"/>
+      </parameter>
+      <parameter>
+         <code value="path-output"/>
+         <value value="output"/>
+      </parameter>
+      <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="path-suppressed-warnings"/>
+         <value value="input/ignoreWarnings.txt"/>
+      </parameter>
+      <parameter>
+         <code value="path-history"/>
+         <value value="http://hl7.org/fhir/us/carin/history.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-html"/>
+         <value value="template-page.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-md"/>
+         <value value="template-page-md.html"/>
+      </parameter>
+      <parameter>
+         <code value="apply-contact"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-context"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-license"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-publisher"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+   </definition>
+</ImplementationGuide>

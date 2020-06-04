@@ -14,7 +14,8 @@
 
 ### Code Systems
 
-##### **Code systems defined for use in the consumer Real-time Prescription Benefit Check (RTPBC) process**
+**Code systems defined for use in the consumer Real-time Prescription Benefit Check (RTPBC) process**
+
 The following code systems define consumer-friendly insurance coverage concepts for use in RTPBC responses: 
 - [RTPBC Benefit Restriction](CodeSystem-rtpbc-benefit-restriction.html)
 - [RTPBC Event Type](CodeSystem-rtpbc-event-type.html)
@@ -24,7 +25,8 @@ The following code systems define consumer-friendly insurance coverage concepts 
 
 ### Naming Systems
 
-##### Code and identifier systems maintained by other organizations
+**Code and identifier systems maintained by other organizations**
+
 - [NCPDP Provider ID](NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html)
 - [NCPDP Reject Code (511-FB)](NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html)
 - [NCPDP Pharmacy Type (955-HR)](NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html)

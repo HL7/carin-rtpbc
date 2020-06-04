@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package-list>
+   <package version="current"
+            path="http://build.fhir.org/ig/HL7/carin-rtpbc"
+            status="ci-build"/>
+   <package version="0.1.0"
+            path="http://hl7.org/fhir/us/carin-rtpbc/2020Feb"
+            status="ballot"/>
+</package-list>

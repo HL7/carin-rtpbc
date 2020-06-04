@@ -1,0 +1,25 @@
+<json>﻿{
+   "package-id": "hl7.fhir.us.carin-rtpbc",
+   "title": "Consumer Real-time Pharmacy Benefit Check",
+   "canonical": "http://hl7.org/fhir/us/carin",
+   "introduction": "Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.",
+   "list": [
+      {
+         "version": "current",
+         "descmd": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "path": "http://build.fhir.org/ig/HL7/carin-rtpbc",
+         "status": "ci-build",
+         "current": true
+      },
+      {
+         "version": "0.1.0",
+         "date": "2019-12-22",
+         "descmd": "STU1 Ballot",
+         "changes": "",
+         "path": "http://hl7.org/fhir/us/carin-rtpbc/2020Feb",
+         "status": "ballot",
+         "sequence": "STU1",
+         "fhirversion" : "4.0.1"
+      }
+   ]
+}</json>
