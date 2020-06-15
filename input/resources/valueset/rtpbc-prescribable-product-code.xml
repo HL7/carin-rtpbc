@@ -18,15 +18,8 @@
     </coding>
   </jurisdiction>
   <compose>
-    <inactive value="false"/>
     <include>
       <system value="http://hl7.org/fhir/sid/ndc" />
-     <!--
-      <concept>
-        <code value="58160-0810-52"/>
-        <display value="INFANRIX"/>
- 	  </concept>
-	-->
    </include>
     <include>
       <system value="http://www.nlm.nih.gov/research/umls/rxnorm" />

@@ -113,6 +113,10 @@
       <path value="MedicationRequest.reasonCode" />
       <label value="Diagnosis" />
     </element>
+    <element id="MedicationRequest.dosageInstruction">
+      <path value="MedicationRequest.dosageInstruction" />
+      <mustSupport value="true" />
+    </element>
     <element id="MedicationRequest.dispenseRequest">
       <path value="MedicationRequest.dispenseRequest" />
       <min value="1" />

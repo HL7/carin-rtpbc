@@ -44,6 +44,12 @@
    <artifact name="RtpbcPrescribableProductCodeValueSet"
              key="ValueSet-rtpbc-prescribable-product-code"
              id="ValueSet/rtpbc-prescribable-product-code"/>
+   <artifact name="RtpbcNdc11ValueSet"
+             key="ValueSet-rtpbc-ndc-11"
+             id="ValueSet/rtpbc-ndc-11"/>
+   <artifact name="RtpbcNdc11ValueSetOneCode"
+             key="ValueSet-rtpbc-ndc-11-one-code"
+             id="ValueSet/rtpbc-ndc-11-one-code"/>
    <artifact name="RtpbcBenefitRestrictionCodeSystem"
              key="CodeSystem-rtpbc-benefit-restriction"
              id="CodeSystem/rtpbc-benefit-restriction"/>

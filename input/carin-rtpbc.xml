@@ -154,6 +154,7 @@
       <description value="This value set constrains the US Core us-core-medication-codes value set to codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types)." />
       <exampleBoolean value="false" />
     </resource>
+    -->
     <resource>
       <reference>
         <reference value="ValueSet/rtpbc-ndc-11" />
@@ -163,7 +164,16 @@
       <description value="This value set includes the normalized 11-digit form of all NDC codes (which represent specific commercially available medication products available in the US)." />
       <exampleBoolean value="false" />
     </resource>
-    -->
+    <resource>
+      <reference>
+        <reference value="ValueSet/rtpbc-ndc-11-one-code" />
+        <display value="RtpbcNdc11ValueSetOneCode" />
+      </reference>
+      <name value="RtpbcNdc11ValueSetOneCode" />
+      <description value="This value set includes the normalized 11-digit form of all NDC codes (Contains only one code - for troubleshooting)." />
+      <exampleBoolean value="false" />
+    </resource>
+
     <resource>
       <reference>
         <reference value="CodeSystem/rtpbc-benefit-restriction" />
