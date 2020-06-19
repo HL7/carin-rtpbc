@@ -3,7 +3,7 @@
   <id value="rtpbc-request" />
   <url value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-request" />
   <name value="RtpbcRequest" />
-  <title value="Real-time pharmacy benefit check request" />
+  <title value="RTPBC Request Message Definition" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-05-23T00:00:00-05:00" />

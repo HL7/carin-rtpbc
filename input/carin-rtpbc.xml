@@ -144,36 +144,6 @@
       <description value="This value set includes codes used to specify prescribed medications in the US: RxNorm codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types) and NDC-11 codes (which represent specific packaged products)." />
       <exampleBoolean value="false" />
     </resource>
-    <!--
-    <resource>
-      <reference>
-        <reference value="ValueSet/rtpbc-prescribable-rxnorm" />
-        <display value="RtpbcPrescribableRxNormValueSet" />
-      </reference>
-      <name value="RtpbcPrescribableRxNormValueSet" />
-      <description value="This value set constrains the US Core us-core-medication-codes value set to codes that specify drug name, strength and dose form (SBD, SCD, BPCK and GPCK term types)." />
-      <exampleBoolean value="false" />
-    </resource>
-    -->
-    <resource>
-      <reference>
-        <reference value="ValueSet/rtpbc-ndc-11" />
-        <display value="RtpbcNdc11ValueSet" />
-      </reference>
-      <name value="RtpbcNdc11ValueSet" />
-      <description value="This value set includes the normalized 11-digit form of all NDC codes (which represent specific commercially available medication products available in the US)." />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/rtpbc-ndc-11-one-code" />
-        <display value="RtpbcNdc11ValueSetOneCode" />
-      </reference>
-      <name value="RtpbcNdc11ValueSetOneCode" />
-      <description value="This value set includes the normalized 11-digit form of all NDC codes (Contains only one code - for troubleshooting)." />
-      <exampleBoolean value="false" />
-    </resource>
-
     <resource>
       <reference>
         <reference value="CodeSystem/rtpbc-benefit-restriction" />
@@ -192,17 +162,6 @@
       <description value="This code system defines event types used in RTPBC message headers" />
       <exampleBoolean value="false" />
     </resource>
-    <!--
-    <resource>
-      <reference>
-        <reference value="CodeSystem/placeholder-ndc-11-code-system" />
-        <display value="PlaceholderNdc11CodeSystem" />
-      </reference>
-      <name value="PlaceholderNdc11CodeSystem" />
-      <description value="This code system contains example NDC 11 drug product identifiers, used to identify requested and alternative medications in the real-time pharmacy benefit check process. This code system normalizes NDC codes by removing dashes and standardizing the length of each NDC segment. This is a placeholder to be replaced prior to publishing with an HL7/FHIR maintained URL (currently being established)." />
-      <exampleBoolean value="false" />
-    </resource>
-    -->
     <resource>
       <reference>
         <reference value="CodeSystem/rtpbc-patient-pay-type" />
@@ -221,16 +180,6 @@
       <description value="Canada Post province codes" />
       <exampleBoolean value="false" />
     </resource>
-    <!--
-    <resource>
-      <reference>
-        <reference value="CodeSystem/placeholder-canadian-province-code-system" />
-        <display value="PlaceholderCanadianProvinceCodeSystem" />
-      </reference>
-      <description value="This code system defines two letter Canadian province codes. It is intended as a placeholder to be replaced by a NamingSystem to canadapost.ca once IG tooling supports" />
-      <exampleBoolean value="false" />
-    </resource>
-    -->
     <resource>
       <reference>
         <reference value="NamingSystem/rtpbc-NamingSystem-ncpdp-pharmacy-type" />

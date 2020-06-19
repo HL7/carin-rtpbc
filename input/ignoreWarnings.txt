@@ -1,5 +1,14 @@
 == Suppressed Messages ==
 
-# No suppressed messages
-# {{message}}
-# {{message}}
+# The terminology server throws this error when expanding value sets containing the NDC code system. Investigated by Grahame G and will be addressed in upcoming terminology server update
+Error from server: Access violation at address 0000000000E97189 in module 'FHIRServer.exe'. Read of address 000000000000001C
+
+# The following code systems are external and not supported by terminology server
+Code System URI "http://ncpdp.org/pharmacy-type" is unknown so the code cannot be validated
+Error from server: Unable to provide support for code system http://ncpdp.org/pharmacy-type
+Error from server: Unable to provide support for code system http://ncpdp.org/reject-code
+Error from server: Unable to provide support for code system https://www.canadapost.ca
+
+# US Realm SC and Cross Group Projects WG approved use of non-US Core MedicationRequest and Patient profiles
+US FHIR Usage rules require that all profiles on MedicationRequest derive from the core US profile
+US FHIR Usage rules require that all profiles on Patient derive from the core US profile

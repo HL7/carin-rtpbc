@@ -10,7 +10,7 @@
   <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
   <version value="1" />
   <name value="RtpbcExtensionBenefitRestriction" />
-  <title value="RTPBC Benefit Restriction Extension" />
+  <title value="RTPBC benefitRestriction Extension" />
   <status value="active" />
   <experimental value="false" />
   <date value="2020-05-23T00:00:00-05:00" />
