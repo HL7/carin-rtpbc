@@ -6,7 +6,7 @@
    "list": [
       {
          "version": "current",
-         "descmd": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
          "path": "http://build.fhir.org/ig/HL7/carin-rtpbc",
          "status": "ci-build",
          "current": true
@@ -14,7 +14,7 @@
       {
          "version": "0.1.0",
          "date": "2019-12-22",
-         "descmd": "STU1 Ballot",
+         "desc": "STU1 Ballot",
          "changes": "",
          "path": "http://hl7.org/fhir/us/carin-rtpbc/2020Feb",
          "status": "ballot",

@@ -1,5 +1,5 @@
 <br><br>
-Data population is similar to a typical *predetermination* ClaimResponse request (where the corresponding Claim.use was set to "predetermination"), with the following key differences:
+Data population is similar to a typical *predetermination* ClaimResponse (where the corresponding Claim.use was set to "predetermination"), with the following key differences:
 
 * in addition to cost and coverage for the requested medication and pharmacy, the responder may also return information about alternative medication + pharmacy combinations. These alternatives are conveyed in one or more ClaimResponse.addItem composites, characterized as independent options using an extension defined in this guide ([isAlternative](StructureDefinition-rtpbc-isAlternative.html)) 
 * the [benefitRestriction](StructureDefinition-rtpbc-benefitRestriction.html) extension is used to communicate the level at which the requested drug and pharmacy are covered, as well as alternative drug/pharmacy combinations (using high-level, pre-defined [benefit restrictions](ValueSet-rtpbc-benefit-restriction.html) tailored to the patient's perspective)

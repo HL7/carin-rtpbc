@@ -53,7 +53,7 @@ The consumer RTPBC request and response are accomplished using FHIR **Claim** an
 
 **[MedicationRequest](StructureDefinition-rtpbc-medicationrequest.html)** - Conveys the needed prescription information (a subset of what is present in a full prescription)
 
-**[Organization (Pharmacy)](StructureDefinition-rtpbc-pharmacy-organization.html) ** - Conveys pharmacy information needed for the exchange (based on the US Core Organization profile)
+**[Organization (Pharmacy)](StructureDefinition-rtpbc-pharmacy-organization.html)** - Conveys pharmacy information needed for the exchange (based on the US Core Organization profile)
 
 **Practitioner** - Prescriber information is conveyed using the US Core Practitioner profile.
 
