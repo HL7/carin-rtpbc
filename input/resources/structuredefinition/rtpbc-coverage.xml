@@ -37,6 +37,10 @@
       <comment value="Either *PBM Member ID* (.class.type = 'rxid') or *Subscriber ID* must be populated" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.beneficiary">
+      <path value="Coverage.beneficiary" />
+      <mustSupport value="true" />
+    </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
       <label value="Payer ID" />

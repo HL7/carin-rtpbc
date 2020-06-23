@@ -2,8 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="CARIN-RTPBC" />
   <meta>
-    <versionId value="1.0.0" />
-    <lastUpdated value="2020-06-19T00:00:00.000-05:00" />
+    <lastUpdated value="2020-06-22T00:00:00.000-05:00" />
   </meta>
   <text>
     <status value="additional" />
