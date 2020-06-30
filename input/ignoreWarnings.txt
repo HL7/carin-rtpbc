@@ -1,13 +1,26 @@
 == Suppressed Messages ==
 
-# The terminology server throws this error when expanding value sets containing the NDC code system. Investigated by Grahame G and will be addressed in upcoming terminology server update
+# The terminology server throws these errors when expanding value sets containing the NDC code system. Investigated by Grahame G and will be addressed in upcoming terminology server update
 Error from server: Access violation at address 0000000000E97189 in module 'FHIRServer.exe'. Read of address 000000000000001C
+Error from server: Not done yet @ Not done yet
 
 # The following code systems are external and not supported by terminology server
 Code System URI "http://ncpdp.org/pharmacy-type" is unknown so the code cannot be validated
 Error from server: Unable to provide support for code system http://ncpdp.org/pharmacy-type
 Error from server: Unable to provide support for code system http://ncpdp.org/reject-code
 Error from server: Unable to provide support for code system https://www.canadapost.ca
+Unknown System specified, so Concepts and Filters can't be checked
+
+# These US territory and Armed Forces codes are part of the USPS 2-letter state code system, but aren't present in the IG Publisher's terminology server. https://pe.usps.com/text/pub28/28apb.htm	
+The code AA is not valid in the system https://www.usps.com/
+The code AE is not valid in the system https://www.usps.com/
+The code AP is not valid in the system https://www.usps.com/
+The code AS is not valid in the system https://www.usps.com/
+The code FM is not valid in the system https://www.usps.com/
+The code GU is not valid in the system https://www.usps.com/
+The code MH is not valid in the system https://www.usps.com/
+The code MP is not valid in the system https://www.usps.com/
+The code PW is not valid in the system https://www.usps.com/
 
 # US Realm SC and Cross Group Projects WG approved use of non-US Core MedicationRequest and Patient profiles
 US FHIR Usage rules require that all profiles on MedicationRequest derive from the core US profile

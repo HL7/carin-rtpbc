@@ -6,10 +6,20 @@
    "list": [
       {
          "version": "current",
-         "desc": "Continuous Integration Build for FHIR STU1 (latest in version control)",
+         "desc": "Consumer Real-time Pharmacy Benefit Check Implementation Guide CI Build",
          "path": "http://build.fhir.org/ig/HL7/carin-rtpbc",
          "status": "ci-build",
          "current": true
+      },
+      {
+         "version": "1.0.0",
+         "date": "2020-06-22",
+         "desc": "Consumer Real-time Pharmacy Benefit Check Implementation Guide STU1",
+         "changes": "",
+         "path": "http://hl7.org/fhir/us/carin-rtpbc/STU1",
+         "status": "trial-use",
+         "sequence": "STU1",
+         "fhirversion" : "4.0.1"
       },
       {
          "version": "0.1.0",

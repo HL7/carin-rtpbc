@@ -223,9 +223,6 @@
         <code value="WY" />
         <display value="Wyoming" />
       </concept>
-    </include>
-    <include>
-      <system value="urn:iso:std:iso:3166:-2" />
       <concept>
         <code value="AA" />
         <display value="Armed Forces Americas" />
@@ -238,7 +235,7 @@
         <code value="AP" />
         <display value="Armed Forces Pacific" />
       </concept>
-	  <concept>
+      <concept>
         <code value="AS" />
         <display value="American Samoa" />
       </concept>
@@ -265,10 +262,6 @@
       <concept>
         <code value="PW" />
         <display value="Palau" />
-      </concept>
-      <concept>
-        <code value="UM" />
-        <display value="U.S. Minor Outlying Islands" />
       </concept>
       <concept>
         <code value="VI" />
