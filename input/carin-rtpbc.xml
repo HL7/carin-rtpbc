@@ -354,8 +354,17 @@
         <reference value="ClaimResponse/rtpbc-claim-response-03" />
         <display value="rtpbc-claim-response-03" />
       </reference>
-      <name value="Example RTPBC Response (ClaimResponse)" />
+      <name value="Example RTPBC Response" />
       <description value="Example of a consumer RTPBC ClaimResponse resource." />
+      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ClaimResponse/rtpbc-claim-response-not-covered" />
+        <display value="rtpbc-claim-response-not-covered" />
+      </reference>
+      <name value="Example RTPBC Response - not covered" />
+      <description value="Example of a consumer RTPBC ClaimResponse resource when the requested drug is not covered." />
       <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>

@@ -55,7 +55,7 @@
       <short value="Benefit restriction." />
       <definition value="Benefit restrictions that may apply to a prescription product and pharmacy combination." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
     </element>
     <element id="Extension.extension">
       <path value="Extension.extension" />

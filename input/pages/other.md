@@ -54,6 +54,10 @@ Response returned as a Bundle containing a ClaimResponse and supporting resource
 <td><a href="ClaimResponse-rtpbc-claim-response-03-price-source.html">RTPBC ClaimResponse resource returned by a pricing source</a></td>
 </tr>
 <tr>
+<td>ClaimResponse</td>
+<td><a href="ClaimResponse-rtpbc-claim-response-not-covered.html">RTPBC ClaimResponse resource - drug is not covered</a></td>
+</tr>
+<tr>
 <td>Coverage</td>
 <td><a href="Coverage-rtpbc-coverage-03.html">RTPBC Coverage resource</a></td>
 </tr>

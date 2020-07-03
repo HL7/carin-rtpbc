@@ -36,8 +36,8 @@
   </concept>
   <concept>
     <code value="quantity-limit" />
-    <display value="Quantity limits apply" />
-    <definition value="Covered with restriction: Quantity limits apply" />
+    <display value="Quantity limit applies" />
+    <definition value="Covered with restriction: Quantity limit applies" />
   </concept>
   <concept>
     <code value="pharmacy-restriction" />

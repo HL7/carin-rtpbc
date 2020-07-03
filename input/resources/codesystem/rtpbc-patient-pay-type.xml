@@ -25,22 +25,22 @@
   <concept>
     <code value="deductible" />
     <display value="Deductible" />
-    <definition value="Amount to be collected from a patient to be applied to a periodic deductible." />
+    <definition value="Amount to be collected from a patient to be applied to a periodic deductible" />
   </concept>
   <concept>
     <code value="coinsurance" />
     <display value="Per prescription coinsurance" />
-    <definition value="Amount to be collected from a patient to satisfy a per prescription coinsurance." />
+    <definition value="Amount to be collected from a patient to satisfy a per prescription coinsurance" />
   </concept>
   <concept>
     <code value="copay" />
     <display value="Copay" />
-    <definition value="Amount to be collected from the patient to satisfy a per prescription copay." />
+    <definition value="Amount to be collected from the patient to satisfy a per prescription copay" />
   </concept>
   <concept>
     <code value="tax" />
     <display value="Tax" />
-    <definition value="Amount to be collected from the patient for sales tax." />
+    <definition value="Amount to be collected from the patient for sales tax" />
   </concept>
   <concept>
     <code value="cash-price" />
@@ -68,8 +68,13 @@
     <definition value="Other amount to be collected from the patient" />
   </concept>
   <concept>
+    <code value="eligible" />
+    <display value="Eligible amount" />
+    <definition value="Amount that is considered for adjudication" />
+  </concept>
+  <concept>
     <code value="total" />
     <display value="Total patient responsibility" />
-    <definition value="Amount equalling the total patient responsibility for a prescription product's cost." />
+    <definition value="Amount equalling the total patient responsibility for a prescription product's cost" />
   </concept>
 </CodeSystem>

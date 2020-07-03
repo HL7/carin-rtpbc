@@ -184,7 +184,7 @@
       <short value="Benefit Restriction (Extension)" />
       <definition value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
@@ -278,7 +278,7 @@
       <short value="Benefit Restriction (Extension)" />
       <definition value="This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <base>
         <path value="DomainResource.extension" />
         <min value="0" />
