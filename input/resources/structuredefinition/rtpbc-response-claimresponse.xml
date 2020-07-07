@@ -324,6 +324,7 @@
       <label value="Product" />
       <short value="Product" />
       <definition value="A product identifier for the medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)" />
+      <comment value="The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
