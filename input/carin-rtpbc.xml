@@ -25,7 +25,7 @@
     <name value="Frank McKinney" />
     <telecom>
       <system value="email" />
-      <value value="fm@frankmckinney.com" />
+      <value value="frank.mckinney@pocp.com" />
     </telecom>
   </contact>
   <description value="This is a guide for implementing the Consumer-Focused Real-Time Pharmacy Benefit Check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn the cost and insurance coverage related to medications they've been prescribed. Specifically: how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply, discount pricing available for the medication. Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization)." />

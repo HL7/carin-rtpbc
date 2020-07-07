@@ -327,7 +327,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <description value="RTPBC prescribable product codes (NDC and RxNorm)" />
+        <description value="RTPBC prescribable product codes (NDC11 and RxNorm)" />
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
       </binding>
     </element>

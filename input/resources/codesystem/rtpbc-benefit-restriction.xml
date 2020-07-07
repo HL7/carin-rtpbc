@@ -42,7 +42,7 @@
   <concept>
     <code value="pharmacy-restriction" />
     <display value="Pharmacy restriction applies" />
-    <definition value="Pharmacy restriction applies" />
+    <definition value="Covered with restriction: Pharmacy restriction applies" />
   </concept>
   <concept>
     <code value="other-restriction" />

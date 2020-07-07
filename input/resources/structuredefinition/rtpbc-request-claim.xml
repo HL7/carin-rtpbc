@@ -311,11 +311,10 @@
       <label value="Prescribed Product" />
       <short value="Prescribed Product" />
       <definition value="A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)" />
-      <comment value="Code system for RxNorm ishttp://www.nlm.nih.gov/research/umls/rxnorm and the code system for NDC11 is * TBD*" />
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <description value="RTPBC prescribable product codes (NDC and RxNorm)" />
+        <description value="RTPBC prescribable product codes (NDC11 and RxNorm)" />
         <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
       </binding>
     </element>

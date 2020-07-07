@@ -4,8 +4,7 @@ The goal of the consumer-focused real-time pharmacy benefit check (consumer RTPB
 
 * **Use case 1:** Enable the patient to find out how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
 * **Use case 2:** Help the patient discover discount pricing available for the medication. 
-
-<br/>
+  <br/>
 
 ### Usage context
  The real-time pharmacy benefit check is designed to provide accurate cost information based on the specifics of a patient prescription. Details such as the specific drug name, dose form, strength and quantity must match the prescription exactly in order to receive reliable results.
@@ -44,7 +43,7 @@ At a high level, the process looks like this...
 *  determines the price for the requested medication and pharmacy combination and other medication/pharmacy options
 *  identifies discounts that apply, related to coupons or memberships
 
-*If the insurer or medication pricing source cannot complete processing of the request, it returns information about the exception that occurred. See <a href="error_handling.html">the Error Handling page</a>*
+If the insurer or medication pricing source cannot complete processing of the request, it returns information about the exception that occurred. See <a href="error_handling.html">the Error Handling page</a>
 
 ### Related information flows outside of consumer RTPBC
 The patient's app might gather related information (e.g., medication information or insurance eligibility) before submitting the consumer RTPBC request. 

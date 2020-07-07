@@ -1,31 +1,32 @@
 ### Full Request
 Request submitted as a Bundle containing a Claim and supporting resources. 
 <br/>
+
 **Processor: Patient's insurer**
 <br/>
+
 <a href="Bundle-rtpbc-bundle-request-03-w-header.html">Bundled RTPBC request to an insurer</a>
 
-<br/>
+
 
 **Processor: Medication Pricing Source**
 <br/>
-<a href="Bundle-rtpbc-bundle-request-03-price-source.html">Bundled RTPBC request to a medication pricing source</a>
 
-<br/>
+<a href="Bundle-rtpbc-bundle-request-03-price-source.html">Bundled RTPBC request to a medication pricing source</a>
 
 ### Full Response
 Response returned as a Bundle containing a ClaimResponse and supporting resources.
 <br/>
 **Processor: Patient's insurer**
 <br/>
+
 <a href="Bundle-rtpbc-bundle-response-03-w-header.html">Bundled RTPBC response from an insurer</a>
 
-<br/>
 
-**Processor: Medication Pricing Source**
-<a href="Bundle-rtpbc-bundle-response-03-price-source.html">Bundled RTPBC response from a medication pricing source</a>
 
-<br/>
+**Processor: Medication Pricing Source**<br/><a href="Bundle-rtpbc-bundle-response-03-price-source.html">Bundled RTPBC response from a medication pricing source</a>
+
+
 
 ### Individual Resources
 

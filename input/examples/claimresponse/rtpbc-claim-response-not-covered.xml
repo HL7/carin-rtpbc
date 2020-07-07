@@ -36,19 +36,11 @@
     <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
       <valueCoding>
         <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
-        <code value="prior-auth" />
-        <display value="Prior authorization required" />
-      </valueCoding>
-    </extension>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
-      <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
         <code value="not-covered" />
         <display value="Not covered" />
       </valueCoding>
     </extension>
     <itemSequence value="1" />
-    <noteNumber value="1" />
     <adjudication>
       <category>
         <coding>
@@ -96,6 +88,7 @@
       <value value="28" />
       <unit value="{Each}" />
     </quantity>
+    <noteNumber value="1" />
     <adjudication>
       <category>
         <coding>
