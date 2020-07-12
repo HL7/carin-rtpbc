@@ -29,7 +29,7 @@
     <max value="1" />
   </focus>
   <allowedResponse>
-    <message value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+    <message value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response" />
     <situation value="Returned when processing completes without encountering a system error" />
   </allowedResponse>
 </MessageDefinition>

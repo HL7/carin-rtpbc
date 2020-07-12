@@ -11,17 +11,6 @@ Error from server: Unable to provide support for code system http://ncpdp.org/re
 Error from server: Unable to provide support for code system https://www.canadapost.ca
 Unknown System specified, so Concepts and Filters can't be checked
 
-# These US territory and Armed Forces codes are part of the USPS 2-letter state code system, but aren't present in the IG Publisher's terminology server. https://pe.usps.com/text/pub28/28apb.htm	
-The code AA is not valid in the system https://www.usps.com/
-The code AE is not valid in the system https://www.usps.com/
-The code AP is not valid in the system https://www.usps.com/
-The code AS is not valid in the system https://www.usps.com/
-The code FM is not valid in the system https://www.usps.com/
-The code GU is not valid in the system https://www.usps.com/
-The code MH is not valid in the system https://www.usps.com/
-The code MP is not valid in the system https://www.usps.com/
-The code PW is not valid in the system https://www.usps.com/
-
 # US Realm SC and Cross Group Projects WG approved use of non-US Core MedicationRequest and Patient profiles
 US FHIR Usage rules require that all profiles on MedicationRequest derive from the core US profile
 US FHIR Usage rules require that all profiles on Patient derive from the core US profile

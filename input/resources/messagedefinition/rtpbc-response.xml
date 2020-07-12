@@ -19,7 +19,7 @@
   <purpose value="Returns patient cost and coverage information for a prescribed medication" />
   <eventCoding>
     <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
-    <code value="rtpbc-request" />
+    <code value="rtpbc-response" />
   </eventCoding>
   <category value="notification" />
   <focus>

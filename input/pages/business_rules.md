@@ -7,7 +7,7 @@ This implementation guide enables clients to identify the patient's medication u
 - it consists of 11 digits and no dashes or spaces
 - it is selected by the submitting system to accurately represent the desired medication's product name, strength and dose form.
 
-Details on determining an appropriate representative NDC 11 are available in the [SCRIPT Implementation Recommendations](https://www.ncpdp.org/Resources/ePrescribing) document, located on the public ePrescribing site of the National Council for Prescription Drug Programs (NCPDP). 
+Details on determining an appropriate representative NDC 11 are available in the [SCRIPT Implementation Recommendations](https://www.ncpdp.org/NCPDP/media/pdf/SCRIPT-Implementation-Recommendations.pdf) document, located on the public ePrescribing site of the National Council for Prescription Drug Programs (NCPDP). 
 
 ### RTPBC response information is "point in time"
 The information contained in the RTPBC response must reflect patient cost and coverage as of the date and time the request is received. The implementation guide expects that all responses are calculated using the patient's current insurance coverage and current cost information; it doesn't enable requests for information related to future or past events.

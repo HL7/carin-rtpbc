@@ -52,5 +52,12 @@
       </type>
       <mustSupport value="true" />
     </element>
+        <element id="MessageHeader.definition">
+      <path value="MessageHeader.definition" />
+      <min value="1" />
+      <fixedCanonical value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-request" />
+      <mustSupport value="true" />
+    </element>
+
   </differential>
 </StructureDefinition>
