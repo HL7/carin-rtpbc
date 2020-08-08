@@ -2,7 +2,7 @@
 <Bundle xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-bundle-request-03-w-header" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle" />
   </meta>
   <type value="message" />
   <timestamp value="2019-11-15T13:10:13-05:00" />
@@ -12,10 +12,10 @@
       <MessageHeader>
         <id value="rtpbc-messageheader-request-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader" />
         </meta>
         <eventCoding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type" />
           <code value="rtpbc-request" />
           <display value="RTPBC Request" />
         </eventCoding>
@@ -26,7 +26,7 @@
         <focus>
           <reference value="urn:uuid:61ebe359-bfdc-4613-8bf2-c5e300945f0b" />
         </focus>
-        <definition value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-request" />
+        <definition value="http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/rtpbc-request" />
       </MessageHeader>
     </resource>
   </entry>
@@ -36,7 +36,7 @@
       <Claim>
         <id value="rtpbc-claim-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim" />
         </meta>
         <identifier>
           <value value="rtpbc-03" />
@@ -104,7 +104,7 @@
       <Patient>
         <id value="rtpbc-patient-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient" />
         </meta>
         <identifier>
           <type>
@@ -140,7 +140,7 @@
       <Coverage>
         <id value="rtpbc-coverage-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage" />
         </meta>
         <status value="active" />
         <beneficiary>
@@ -196,7 +196,7 @@
       <MedicationRequest>
         <id value="rtpbc-medicationrequest-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest" />
         </meta>
         <status value="draft" />
         <intent value="proposal" />
@@ -263,7 +263,7 @@
       <Organization>
         <id value="rtpbc-organization-03" />
         <meta>
-          <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
+          <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization" />
         </meta>
         <identifier>
           <system value="http://hl7.org/fhir/sid/us-npi" />

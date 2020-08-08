@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-patient" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient" />
   <version value="0.0.1" />
   <name value="RtpbcPatient" />
   <title value="RTPBC Patient" />
@@ -128,7 +128,7 @@
       <binding>
         <strength value="extensible" />
         <description value="RTPBC Two Letter State and Province Codes" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-state-and-province-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-state-and-province-code" />
       </binding>
     </element>
     <element id="Patient.address.postalCode">
@@ -145,7 +145,7 @@
       <binding>
         <strength value="extensible" />
         <description value="ISO 3166 2-character country codes" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-country-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code" />
       </binding>
     </element>
     <element id="Patient.address.period">

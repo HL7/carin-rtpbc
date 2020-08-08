@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-pharmacy-type" />
-  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-pharmacy-type" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-pharmacy-type" />
   <version value="1.0.0" />
   <name value="RtpbcPharmacyTypeValueSet" />
   <title value="RTPBC Pharmacy Type Value Set" />

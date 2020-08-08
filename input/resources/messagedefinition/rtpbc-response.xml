@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MessageDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-response" />
-  <url value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/rtpbc-response" />
   <name value="RtpbcResponse" />
   <title value="RTPBC Response Message Definition" />
   <status value="active" />
@@ -18,13 +18,13 @@
   </jurisdiction>
   <purpose value="Returns patient cost and coverage information for a prescribed medication" />
   <eventCoding>
-    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+    <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type" />
     <code value="rtpbc-response" />
   </eventCoding>
   <category value="notification" />
   <focus>
     <code value="ClaimResponse" />
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse" />
     <min value="1" />
     <max value="1" />
   </focus>

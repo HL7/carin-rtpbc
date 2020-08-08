@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-response-claimresponse" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse" />
   <version value="1.0" />
   <name value="RtpbcResponseClaimResponse" />
   <title value="RTPBC Response Using ClaimResponse" />
@@ -111,7 +111,7 @@
       <comment value="Echo the Patient resource received in the request" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+        <targetProfile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -187,7 +187,7 @@
       <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -222,7 +222,7 @@
       <binding>
         <strength value="required" />
         <description value="RTPBC Patient Pay Categories" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-patient-pay-type" />
       </binding>
     </element>
     <element id="ClaimResponse.item.adjudication.amount">
@@ -267,7 +267,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -286,7 +286,7 @@
       </base>
       <type>
         <code value="Extension" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction" />
       </type>
       <mustSupport value="true" />
       <isModifier value="false" />
@@ -308,7 +308,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
+        <targetProfile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -329,7 +329,7 @@
       <binding>
         <strength value="extensible" />
         <description value="RTPBC prescribable product codes (NDC11 and RxNorm)" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-prescribable-product-code" />
       </binding>
     </element>
     <element id="ClaimResponse.addItem.productOrService.coding">
@@ -380,7 +380,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Billing quantity unit of measure" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-billing-unit" />
       </binding>
     </element>
     <element id="ClaimResponse.addItem.noteNumber">
@@ -408,7 +408,7 @@
       <binding>
         <strength value="required" />
         <description value="RTPBC Patient Pay Categories" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-patient-pay-type" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-patient-pay-type" />
       </binding>
     </element>
     <element id="ClaimResponse.addItem.adjudication.amount">
@@ -477,7 +477,7 @@
       <binding>
         <strength value="preferred" />
         <description value="RTPBC Error Codes" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-error-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-error-code" />
       </binding>
     </element>
     <element id="ClaimResponse.error.code.coding">

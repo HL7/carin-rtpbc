@@ -4,7 +4,7 @@
   <meta>
     <versionId value="4" />
     <lastUpdated value="2019-11-01T15:51:52.000-04:00" />
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim" />
   </meta>
   <identifier>
     <value value="rtpbc0001" />

@@ -2,7 +2,7 @@
 <ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-claim-response-not-covered" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse" />
   </meta>
   <identifier>
     <value value="rtpbc-03-response-c-r" />
@@ -33,9 +33,9 @@
   <outcome value="complete" />
   <disposition value="Processed successfully" />
   <item>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
+    <extension url="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction">
       <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
+        <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction" />
         <code value="not-covered" />
         <display value="Not covered" />
       </valueCoding>
@@ -44,7 +44,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="eligible" />
           <display value="Eligible amount" />
         </coding>
@@ -56,19 +56,19 @@
     </adjudication>
   </item>
   <addItem>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+    <extension url="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative">
       <valueBoolean value="true" />
     </extension>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
+    <extension url="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction">
       <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
+        <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction" />
         <code value="prior-auth" />
         <display value="Prior authorization required" />
       </valueCoding>
     </extension>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction">
+    <extension url="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction">
       <valueCoding>
-        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
+        <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction" />
         <code value="quantity-limit" />
         <display value="Quantity limit applies" />
       </valueCoding>
@@ -92,7 +92,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="copay" />
           <display value="Copay" />
         </coding>
@@ -105,7 +105,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="coinsurance" />
           <display value="Per prescription coinsurance" />
         </coding>
@@ -118,7 +118,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="total" />
           <display value="Total patient responsibility" />
         </coding>

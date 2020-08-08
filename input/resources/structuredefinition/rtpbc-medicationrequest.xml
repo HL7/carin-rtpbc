@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-medicationrequest" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest" />
   <version value="0.0.1" />
   <name value="RtpbcMedicationRequest" />
   <title value="RTPBC Medication Request" />
@@ -74,7 +74,7 @@
       <binding>
         <strength value="extensible" />
         <description value="RTPBC prescribable product codes (NDC11 and RxNorm)" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-prescribable-product-code" />
       </binding>
     </element>
     <element id="MedicationRequest.subject">
@@ -86,7 +86,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+        <targetProfile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -149,7 +149,7 @@
       <binding>
         <strength value="extensible" />
         <description value="Billing quantity unity of measure" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-billing-unit" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-billing-unit" />
       </binding>
     </element>
     <element id="MedicationRequest.dispenseRequest.expectedSupplyDuration">
@@ -173,7 +173,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
+        <targetProfile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization" />
       </type>
       <mustSupport value="true" />
     </element>

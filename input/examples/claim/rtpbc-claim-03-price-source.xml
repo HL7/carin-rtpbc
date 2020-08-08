@@ -2,7 +2,7 @@
 <Claim xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-claim-03-price-source" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim" />
   </meta>
   <identifier>
     <value value="rtpbc-03" />

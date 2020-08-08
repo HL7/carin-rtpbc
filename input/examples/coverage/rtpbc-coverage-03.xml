@@ -2,7 +2,7 @@
 <Coverage xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-coverage-03" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage" />
   </meta>
   <status value="active" />
   <beneficiary>

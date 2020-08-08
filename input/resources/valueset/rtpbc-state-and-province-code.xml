@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-state-and-province-code" />
-  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-state-and-province-code" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-state-and-province-code" />
   <name value="RtpbcStateAndProvinceCodeValueSet" />
   <title value="RTPBC Two Letter State and Province Code Value Set" />
   <status value="active" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-prescribable-product-code" />
-  <url value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-prescribable-product-code" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-prescribable-product-code" />
   <version value="1.0.0" />
   <name value="RTPBCPrescribableProductCodeValueSet" />
   <title value="RTPBC Prescribable Product Code Value Set" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-responder" />
-  <url value="http://hl7.org/fhir/us/carin/CapabilityStatement/rtpbc-responder" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/CapabilityStatement/rtpbc-responder" />
   <name value="RtpbcResponderCapabilityStatement" />
   <title value="RTPBC Responder Capability Statement" />
   <status value="active" />
@@ -21,7 +21,7 @@
   <format value="xml" />
   <format value="json" />
   <patchFormat value="application/json-patch+json" />
-  <implementationGuide value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc" />
+  <implementationGuide value="http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/carin-rtpbc" />
   <rest>
     <mode value="server" />
     <documentation value="RTPBC Responder **SHALL**: 1. Support the $process-message operation. 2. Support at least one use case defined in this IG and listed in the Use Cases section. 3. Implement the RESTful behavior according to the FHIR specification. 4. Support the JSON source format. 5. Provide on the server a CapabilityStatement identifying the profiles supported. RTPBC Responder **SHOULD**: 1. Support the XML source format. 2. Identify the RTPBC profiles supported as part of the FHIR `meta.profile` attribute for each instance." />

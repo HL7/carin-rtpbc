@@ -2,10 +2,10 @@
 <MessageHeader xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-response-message-header-01" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-messageheader" />
   </meta>
   <eventCoding>
-    <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+    <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type" />
     <code value="rtpbc-response" />
     <display value="RTPBC Response" />
   </eventCoding>
@@ -19,5 +19,5 @@
     	<value value="rtpbc-claim-response-03"/>
     </identifier>
   </focus>
-  <definition value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-response" />
+  <definition value="http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/rtpbc-response" />
 </MessageHeader>

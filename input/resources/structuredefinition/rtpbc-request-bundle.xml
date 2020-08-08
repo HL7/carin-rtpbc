@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-request-bundle" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle" />
   <name value="RtpbcRequestBundle" />
   <title value="RTPBC Request Bundle" />
   <status value="active" />
@@ -84,7 +84,7 @@
       <max value="1" />
       <type>
         <code value="MessageHeader" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -101,7 +101,7 @@
       <max value="1" />
       <type>
         <code value="Claim" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -118,7 +118,7 @@
       <max value="1" />
       <type>
         <code value="Patient" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -135,7 +135,7 @@
       <max value="1" />
       <type>
         <code value="MedicationRequest" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -152,7 +152,7 @@
       <max value="1" />
       <type>
         <code value="Organization" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -186,7 +186,7 @@
       <max value="1" />
       <type>
         <code value="Coverage" />
-        <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage" />
+        <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage" />
       </type>
       <mustSupport value="true" />
     </element>

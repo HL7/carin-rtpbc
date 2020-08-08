@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <id value="CARIN-RTPBC" />
+  <id value="hl7.fhir.us.carin-rtpbc" />
   <meta>
     <lastUpdated value="2020-06-22T00:00:00.000-05:00" />
   </meta>
@@ -8,7 +8,7 @@
     <status value="additional" />
     <div xmlns="http://www.w3.org/1999/xhtml">This is a guide for implementing the consumer-focused real-time pharmacy benefit check (consumer RTPBC) using FHIR R4. Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.    </div>
   </text>
-  <url value="http://hl7.org/fhir/us/carin/ImplementationGuide/carin-rtpbc" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/ImplementationGuide/carin-rtpbc" />
   <version value="1.0.0" />
   <name value="CarinRtpbc" />
   <title value="Consumer Real-Time Pharmacy Benefit Check" />
@@ -338,7 +338,7 @@
       </reference>
       <name value="Example RTPBC Request (Claim)" />
       <description value="Example of a consumer RTPBC Claim resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim"/>
     </resource>
     <resource>
       <reference>
@@ -347,7 +347,7 @@
       </reference>
       <name value="RTPBC Request to a Pricing Source" />
       <description value="Example of a consumer RTPBC Claim resource submitted to a pricing source." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim"/>
     </resource>
     <resource>
       <reference>
@@ -356,7 +356,7 @@
       </reference>
       <name value="Example RTPBC Response" />
       <description value="Example of a consumer RTPBC ClaimResponse resource." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>
       <reference>
@@ -365,7 +365,7 @@
       </reference>
       <name value="Example RTPBC Response - not covered" />
       <description value="Example of a consumer RTPBC ClaimResponse resource when the requested drug is not covered." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>
       <reference>
@@ -374,7 +374,7 @@
       </reference>
       <name value="RTPBC Response from a pricing source" />
       <description value="Example of a consumer RTPBC ClaimResponse resource from a pricing source." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse"/>
     </resource>
     <resource>
       <reference>
@@ -383,7 +383,7 @@
       </reference>
       <name value="Example RTPBC Patient" />
       <description value="Example of a consumer RTPBC Patient resource." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-patient"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient"/>
     </resource>
     <resource>
       <reference>
@@ -392,7 +392,7 @@
       </reference>
       <name value="Example RTPBC Coverage" />
       <description value="Example of a consumer RTPBC Coverage resource." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-coverage"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage"/>
     </resource>
     <resource>
       <reference>
@@ -401,7 +401,7 @@
       </reference>
       <name value="Example RTPBC MedicationRequest" />
       <description value="Example of a consumer RTPBC MedicationRequest resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest"/>
     </resource>
     <resource>
       <reference>
@@ -410,7 +410,7 @@
       </reference>
       <name value="Example RTPBC Pharmacy Organization - Hometown Drug" />
       <description value="Example of a consumer RTPBC pharmacy Organization resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization"/>
     </resource>
     <resource>
       <reference>
@@ -419,7 +419,7 @@
       </reference>
       <name value="Example RTPBC Pharmacy Organization - My Mail Service Pharmacy" />
       <description value="Example of a consumer RTPBC pharmacy Organization resource." />
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization"/>
     </resource>
     <resource>
       <reference>
@@ -436,7 +436,7 @@
       </reference>
       <name value="Example RTPBC Request MessageHeader" />
       <description value="Example of a consumer RTPBC request MessageHeader resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader"/>
     </resource>
     <resource>
       <reference>
@@ -445,7 +445,7 @@
       </reference>
       <name value="Example RTPBC Response MessageHeader" />
       <description value="Example of a consumer RTPBC response MessageHeader resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-messageheader"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-messageheader"/>
     </resource>
     <resource>
       <reference>
@@ -454,7 +454,7 @@
       </reference>
       <name value="Example RTPBC Request Bundle" />
       <description value="Example of a consumer RTPBC request Bundle resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle"/>
     </resource>
     <resource>
       <reference>
@@ -463,7 +463,7 @@
       </reference>
       <name value="RTPBC Request Bundle submitted to a pricing source" />
       <description value="Example of a consumer RTPBC request Bundle resource submitted to a pricing source." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-bundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle"/>
     </resource>
     <resource>
       <reference>
@@ -472,7 +472,7 @@
       </reference>
       <name value="Example RTPBC Response Bundle" />
       <description value="Example of a consumer RTPBC response Bundle resource." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-bundle"/>
     </resource>
     <resource>
       <reference>
@@ -481,7 +481,7 @@
       </reference>
       <name value="RTPBC Response Bundle returned by a pricing source" />
       <description value="Example of a consumer RTPBC response Bundle resource returned by a pricing source." />      
-      <exampleCanonical value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-bundle"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-bundle"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

@@ -2,7 +2,7 @@
 <ClaimResponse xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-claim-response-03-price-source" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-response-claimresponse" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse" />
   </meta>
   <identifier>
     <value value="rtpbc-03-response-price-source" />
@@ -38,7 +38,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="cash-price" />
           <display value="Full product cash price" />
         </coding>
@@ -51,7 +51,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="coupon-discount" />
           <display value="Coupon discount amount" />
         </coding>
@@ -64,7 +64,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="total" />
           <display value="Total patient responsibility" />
         </coding>
@@ -76,7 +76,7 @@
     </adjudication>
   </item>
   <addItem>
-    <extension url="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-isAlternative">
+    <extension url="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative">
       <valueBoolean value="true" />
     </extension>
     <itemSequence value="1" />
@@ -97,7 +97,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="cash-price" />
           <display value="Full product cash price" />
         </coding>
@@ -110,7 +110,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="coupon-discount" />
           <display value="Coupon discount amount" />
         </coding>
@@ -123,7 +123,7 @@
     <adjudication>
       <category>
         <coding>
-          <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-patient-pay-type" />
+          <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type" />
           <code value="total" />
           <display value="Total patient responsibility" />
         </coding>

@@ -4,7 +4,7 @@
   <meta>
     <lastUpdated value="2020-05-23T00:00:00-05:00" />
   </meta>
-  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type" />
   <name value="RtpbcEventTypeCodeSystem" />
   <title value="RTPBC Event Type Code System" />
   <status value="active" />

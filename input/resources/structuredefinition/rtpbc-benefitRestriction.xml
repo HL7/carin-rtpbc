@@ -7,7 +7,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1" />
   </extension>
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction" />
   <version value="1" />
   <name value="RtpbcExtensionBenefitRestriction" />
   <title value="RTPBC benefitRestriction Extension" />
@@ -63,7 +63,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-benefitRestriction" />
+      <fixedUri value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -73,7 +73,7 @@
       </type>
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-benefit-restriction" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-benefit-restriction" />
       </binding>
     </element>
   </differential>

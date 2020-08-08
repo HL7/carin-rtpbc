@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-benefit-restriction" />
-  <url value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-benefit-restriction" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction" />
   <version value="1.0.0" />
   <name value="RtpbcBenefitRestrictionCodeSystem" />
   <title value="RTPBC Benefit Restriction Code System" />

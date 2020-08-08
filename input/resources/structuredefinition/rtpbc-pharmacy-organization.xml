@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-pharmacy-organization" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-pharmacy-organization" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization" />
   <version value="0.0.1" />
   <name value="RtpbcPharmacy" />
   <title value="RTPBC Pharmacy Organization" />
@@ -93,7 +93,7 @@
       <binding>
         <strength value="extensible" />
         <description value="RTPBC Pharmacy Type Value Set" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-pharmacy-type" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-pharmacy-type" />
       </binding>
     </element>
     <element id="Organization.name">
@@ -135,7 +135,7 @@
       <binding>
         <strength value="extensible" />
         <description value="RTPBC Two Letter State and Province Codes" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-state-and-province-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-state-and-province-code" />
       </binding>
     </element>
     <element id="Organization.address.postalCode">
@@ -151,7 +151,7 @@
       <binding>
         <strength value="required" />
         <description value="ISO 3166 2-character country codes" />
-        <valueSet value="http://hl7.org/fhir/us/carin/ValueSet/rtpbc-country-code" />
+        <valueSet value="http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code" />
       </binding>
     </element>
   </differential>

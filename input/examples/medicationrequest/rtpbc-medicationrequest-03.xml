@@ -2,7 +2,7 @@
 <MedicationRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-medicationrequest-03" />
   <meta>
-    <profile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-medicationrequest" />
+    <profile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest" />
   </meta>
   <status value="draft" />
   <intent value="proposal" />

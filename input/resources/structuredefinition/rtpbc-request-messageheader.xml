@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <id value="rtpbc-request-messageheader" />
-  <url value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-messageheader" />
+  <url value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader" />
   <name value="RtpbcRequestMessageHeader" />
   <title value="RTPBC Request MessageHeader" />
   <status value="active" />
@@ -34,7 +34,7 @@
         <code value="Coding" />
       </type>
       <patternCoding>
-        <system value="http://hl7.org/fhir/us/carin/CodeSystem/rtpbc-event-type" />
+        <system value="http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type" />
         <code value="rtpbc-request" />
         <display value="RTPBC Request" />
       </patternCoding>
@@ -47,7 +47,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/us/carin/StructureDefinition/rtpbc-request-claim" />
+        <targetProfile value="http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim" />
         <aggregation value="bundled" />
       </type>
       <mustSupport value="true" />
@@ -55,7 +55,7 @@
         <element id="MessageHeader.definition">
       <path value="MessageHeader.definition" />
       <min value="1" />
-      <fixedCanonical value="http://hl7.org/fhir/us/carin/MessageDefinition/rtpbc-request" />
+      <fixedCanonical value="http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/rtpbc-request" />
       <mustSupport value="true" />
     </element>
 
