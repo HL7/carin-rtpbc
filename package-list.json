@@ -3,6 +3,7 @@
    "title": "Consumer Real-time Pharmacy Benefit Check",
    "canonical": "http://hl7.org/fhir/us/carin-rtpbc",
    "introduction": "Using RTPBC, a patient can learn how their medications will be covered at the pharmacy, including out of pocket costs and any coverage restrictions or requirements that might apply.",
+   "category" : "Financial", 
    "list": [
       {
          "version": "current",
