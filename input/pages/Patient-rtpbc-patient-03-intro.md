@@ -11,6 +11,7 @@ US
 </code></pre></li>
 </ul>
 <br/>
+<!--
 <div><img src="rtpbc-patient-03.png" alt="patient"></div>
-
+-->
 <br/>

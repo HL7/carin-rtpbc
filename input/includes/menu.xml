@@ -28,23 +28,7 @@
       </li>
 	</ul>
   </li>
-  <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts<b class="caret">
-      </b>
-    </a>
-    <ul class="dropdown-menu">
-      <li>
-        <a href="profiles.html">Profiles and Extensions</a>
-      </li>
-      <li>
-        <a href="terminology.html">Terminology</a>
-      </li>
-   	  <li>
-        <a href="capstatements.html">Capability Statements</a>
-      </li>
-	</ul>
-  </li>
-  <li><a href="other.html">Examples</a></li>
+  <li><a href="artifacts.html">FHIR Artifacts</a></li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>

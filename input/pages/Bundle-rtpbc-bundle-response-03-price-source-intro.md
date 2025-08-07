@@ -12,6 +12,7 @@
 <li>the .addItem composite holds an alternative fulfillment (the requested drug at a different pharmacy). Adjudication is returned in the ClaimResponse.addItem composite</li>
 <li>a pharmacy Organization resource describes the alternative pharmacy option identified by the processor</li>
 </ul>
+<!-- 
 <div><img src="rtpbc-bundle-response-03-price-source.png" alt="bundle"></div>
-
+-->
 <br/>

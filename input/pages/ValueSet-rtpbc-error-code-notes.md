@@ -1,5 +1,5 @@
 <p>﻿All codes are from the licensed NCPDP Reject Code (511-FB) code set, maintained by the National Council for Prescription Drug Programs.
-See <a href="NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html">NCPDP Reject Code (511-FB) (NamingSystem)</a></p>
+See <a href="https://terminology.hl7.org/CodeSystem-NCPDPRejectCode.html">NCPDP Reject Code (NCPDP ECL: 511-FB)</a></p>
 <h3>Concept examples</h3> 
 
 <p>The full, up-to-date content of the NCPDP Reject Code (511-FB) code set is only available to NCPDP members.</p>

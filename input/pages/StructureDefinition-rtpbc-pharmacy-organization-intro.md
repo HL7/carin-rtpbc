@@ -3,7 +3,7 @@ The function of the Pharmacy resource in this exchange is to identify a pharmacy
 * or an alternative pharmacy for which information is being returned in the RTPBC response
 
 The set of conveyed pharmacy information consists of...
-* identification of the pharmacy. The [NCPDP Provider ID](NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html) is the preferred identifier for this purpose because it specifies the individual pharmacy location. Alternatively, an organizational NPI may be used
+* identification of the pharmacy. The [NCPDP Provider Identification Number](https://terminology.hl7.org/CodeSystem-NCPDPProviderIdentificationNumber.html) is the preferred identifier for this purpose because it specifies the individual pharmacy location. Alternatively, an organizational NPI may be used
 * the pharmacy name
 * the  phone number
 * the pharmacy address

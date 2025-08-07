@@ -8,6 +8,7 @@
 <li>PBM Member ID: MEMBER000001</li>
 </ul>
 <br/>
+<!--
 <div><img src="rtpbc-coverage-03.png" alt="coverage"></div>
-
+-->
 <br/>

@@ -8,7 +8,7 @@
 <li>the requested pharmacy is referenced to an Organization resource</li>
 </ul>
 <br/>
-
+<!--
 <div><img src="rtpbc-medication-request-03.png" alt="medicationrequest"></div>
-
+-->
 <p><br/></p>

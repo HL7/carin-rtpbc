@@ -23,14 +23,12 @@ The following code systems define consumer-friendly insurance coverage concepts 
 
 <br>
 
-### Naming Systems
+### Code and identifier systems maintained by other organizations
 
-**Code and identifier systems maintained by other organizations**
-
-- [NCPDP Provider ID](NamingSystem-rtpbc-NamingSystem-ncpdp-provider-id.html)
-- [NCPDP Reject Code (511-FB)](NamingSystem-rtpbc-NamingSystem-ncpdp-reject-code.html)
-- [NCPDP Pharmacy Type (955-HR)](NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html)
-- [Canada Post Province Code](NamingSystem-rtpbc-NamingSystem-canada-post-province-code.html)
+- [NCPDP Provider ID](https://terminology.hl7.org/CodeSystem-NCPDPProviderIdentificationNumber.html)
+- [NCPDP Reject Code (511-FB)](https://terminology.hl7.org/CodeSystem-NCPDPRejectCode.html)
+- [NCPDP Pharmacy Type (955-HR)](https://terminology.hl7.org/CodeSystem-NCPDPPharmacyType.html)
+- [Canada Post Province Code](https://terminology.hl7.org/CodeSystem-CanadaProvinceCodes.html)
 
 
 <br><br>

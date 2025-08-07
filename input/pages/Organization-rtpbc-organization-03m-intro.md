@@ -5,6 +5,7 @@
 <li>the pharmacy&#39;s NPI is 5515515515 (an NCPDP ID can optionally be included)</li>
 </ul>
 <p><br/></p>
+<!--
 <div><img src="rtpbc-organization-03m.png" alt="organization-pharmacy"></div>
-
+-->
 <br/>
