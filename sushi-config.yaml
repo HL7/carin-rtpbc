@@ -1,0 +1,159 @@
+# documentation: https://fshschool.org/docs/sushi/configuration/
+# 
+id: hl7.fhir.us.carin-rtpbc
+canonical: http://hl7.org/fhir/us/carin-rtpbc
+name: Consumer Real-Time Pharmacy Benefit Check
+title: Consumer Real-Time Pharmacy Benefit Check FHIR IG
+description: FHIR Implementation Guide for Consumer Real-Time Pharmacy Benefit Check
+status: active # draft | active | retired | unknown
+version: 2.0.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2024+
+releaseLabel: CI Build # CI Build | STU1 Ballot | STU 2
+license: CC0-1.0 
+jurisdiction: urn:iso:std:iso:3166#US "United States of America"
+publisher:
+  name: HL7 International / Pharmacy
+  url: http://www.hl7.org/Special/committees/medication
+
+parameters:
+  jira-code: FHIR-us-carin-rtpbc.xml
+  path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+
+
+#dependencies:
+#  hl7.fhir.uv.extensions.r4:
+#    id: ext
+#    version: 5.1.0
+
+#  hl7.terminology: 5.5.0
+dependencies:
+  hl7.fhir.us.core: 3.1.1
+#  hl7.fhir.us.core: 6.1.0
+
+#    reason: |
+#      Defines U.S. EHR expectations on a range of resources that will be passed to and/or queried by REMS CDS servers
+#  hl7.fhir.uv.smart-app-launch:
+#    id: SmartAppLaunch
+#    version: 2.1.0
+#    reason: |
+#      Defines base expectations and profiles for SMART app launch requirements
+#
+#
+#pages:
+#  index.md:
+#    title: Home Page
+#  cards-user-stories.md:
+#    title: Health Cards User Stories
+#  cards-specification.md:
+#    extension:
+#    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+#      valueCode: trial-use
+#    title: Health Cards Specification
+#  cards-credential-modeling.md:
+#    title: Credential Modeling
+#  cards-examples.md:
+#    title: Health Cards Examples
+#  frequently-asked-questions.md:
+#    title: Frequently Asked Questions
+#  cards-changelog.md:
+#    title: Health Cards Change Log
+#  links-user-stories.md:
+#    title: Health Links User Stories
+#  links-specification.md:
+#    extension:
+#    - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+#      valueCode: trial-use
+#    title: Health Links Specification
+#  links-examples.md:
+#    title: Health Links Examples
+#  glossary.md:
+#    title: Glossary
+#  downloads.xml:
+#    title: Downloads
+#  history.md:
+#    title: Change Log
+
+contact:
+  - name: Frank McKinney
+    telecom:
+      - system: email # phone | fax | email | pager | url | sms | other
+        value: fm@frankmckinney.com
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: phx
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 4
+
+# resources:
+#----------- Examples -------------
+#  Binary/shl-payload-1:
+#    extension:
+#      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+#        valueCode: application/fhir+json
+#    name: "Example SHL Payload 1"
+#    description: "Example of a SMART Health Links Payload object containing all properties."
+#  Binary/shl-payload-2:
+#    extension:
+#      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+#        valueCode: application/fhir+json
+#    name: "Example SHL Payload 2"
+#    description: "Example of a minimal SMART Health Links Payload object."
+#  Binary/shl-manifest-1:
+#    extension:
+#      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-format
+#        valueCode: application/fhir+json
+#    name: "Example SHL Manifest 1"
+#    description: "Example of a SMART Health Links Manifest including optional properties."
+
+# using exampleCanonical causes an error if the example doesn't contain a "resourceType" element, which isn't part of an actual instance
+#    exampleCanonical: http://hl7.org/fhir/uv/smart-health-cards-and-links/StructureDefinition/ShlPayload
+
+# Using the extension below instead of exampleCanonical didn't appear to do anything... the example was included in the IG and no error related to resourceType was generated. 
+# But the example wasn't associated with its logical model
+#      - url: http://hl7.org/fhir/tools/StructureDefinition/implementationguide-resource-logical
+#        valueCanonical: http://hl7.org/fhir/uv/smart-health-cards-and-links/StructureDefinition/ShlPayload
+    
+#auto-oid-root: tbd
+
+
+
+# * modifierExtension
+# * experimental
+# * useContext
+# * copyright
+# * packageId
+#
+#
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# The FSHOnly flag indicates if only FSH resources should be exported.
+# If set to true, no IG related content will be generated.
+# The default value for this property is false.
+#
+# FSHOnly: false
+#
+#
+# When set to true, the "short" and "definition" field on the root element of an Extension will
+# be set to the "Title" and "Description" of that Extension. Default is true.
+#
+# applyExtensionMetadataToRoot: true
+#
+#
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+# See the individual option definitions below for more detail.
+#
+# instanceOptions:
+#   Determines for which types of Instances SUSHI will automatically set meta.profile
+#   if InstanceOf references a profile:
+#
+#   setMetaProfile: always # always | never | inline-only | standalone-only
+#
+#
+#   Determines for which types of Instances SUSHI will automatically set id
+#   if InstanceOf references a profile:
+#
+#   setId: always # always | standalone-only

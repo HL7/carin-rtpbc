@@ -8,6 +8,8 @@
 <li>the patient&#39;s coverage identifiers are conveyed in a referenced Coverage resource</li>
 </ul>
 <br/>
+<!--
 <div><img src="rtpbc-claim-03.png" alt="claim"></div>
+-->
 
 <br/>

@@ -45,7 +45,7 @@ This implementation guide supports military and Canadian addresses for patients 
 </tr>
 <tr>
 <td>Frank McKinney</td>
-<td><a href="mailto:frank.mckinney@pocp.com">frank.mckinney@pocp.com</a></td>
+<td><a href="mailto:fm@frankmckinney.com">fm@frankmckinney.com</a></td>
 </tr>
 </tbody>
 </table>

@@ -6,9 +6,9 @@
 <li>the prescriber&#39;s NPI is 1234567890</li>
 </ul>
 <br/>
-
+<!--
 <div><img src="rtpbc-practitioner-03.png" alt="practitioner"></div>
 
 <br>
-
+-->
 <p><br/></p>

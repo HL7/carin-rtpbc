@@ -9,6 +9,7 @@
 </ul
 
 <br/>
+<!--
 <div><img src="rtpbc-claim-03-price-source.png" alt="claim"></div>
-
+-->
 <br/>

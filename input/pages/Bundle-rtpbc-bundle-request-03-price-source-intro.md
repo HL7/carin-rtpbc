@@ -13,10 +13,10 @@
 <li>the requested pharmacy is Hometown Drug (reflected in the Organization resource)</li>
 <li>a Coverage resource is not sent in the bundle, as it is not needed by the pricing source</li>
 </ul>
-
 <br/>
+<!-- 
 <div><img src="rtpbc-bundle-request-03-price-source.png" alt="bundle"></div>
-
 <br/>
+-->
 
 <br/>

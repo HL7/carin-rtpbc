@@ -13,6 +13,7 @@
 <li>a pharmacy Organization resource describes the alternative pharmacy option identified by the processor</li>
 <li>benefit restriction information (e.g., Covered, Covered but requiring PA) is returned in the .benefitRestriction extensions in the .item and .addItem composites</li>
 </ul>
+<!-- 
 <div><img src="rtpbc-bundle-response-03.png" alt="bundle"></div>
-
+-->
 <br/>
