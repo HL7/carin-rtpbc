@@ -23,3 +23,7 @@ Description: "This code system defines a set of benefit restrictions that may ap
 * #pharmacy-restriction "Pharmacy restriction applies" "Covered with restriction: Pharmacy restriction applies"
 * #other-restriction "Other restriction applies" "Covered with restriction: Other restriction applies"
 * #not-covered "Not covered" "Not covered"
+* #additional-fills-not-covered "Additional fills not covered" "Additional fills are not covered"
+* #fill-too-soon "Fill too soon" "Fill too soon"
+* #days-supply-limitation "Days supply limitation for product/service" "Days supply limitation for the product/service"
+* #route-not-covered "Route of administration not covered" "Route of administration is not covered"

@@ -104,7 +104,7 @@ Description: "An example response from a cash pricing source (ClaimResponse)"
 * addItem.extension.valueBoolean = true
 * addItem.itemSequence = 1
 * addItem.provider = Reference(rtpbc-organization-03ps)
-* addItem.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 60
 * addItem.quantity.unit = "{Each}"
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
@@ -212,7 +212,7 @@ Description: "An example of the primary RTPBC response resource containing patie
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
 * addItem.itemSequence = 1
 * addItem.provider = Reference(rtpbc-organization-03wh)
-* addItem.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 180
 * addItem.quantity.unit = "{Each}"
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"

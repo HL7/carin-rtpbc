@@ -107,7 +107,7 @@ Description: "An example of the primary RTPBC request resource (Claim)"
 * insurance.coverage.identifier.value = "GOODPRICING"
 * item.sequence = 1
 * item.careTeamSequence = 1
-* item.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
 
@@ -138,7 +138,7 @@ Description: "An example RTPBC MedicationRequest"
 * status = #draft
 * intent = #proposal
 * reportedBoolean = true
-* medicationCodeableConcept = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * subject = Reference(rtpbc-patient-03)
 * authoredOn = "2019-11-01"
 * requester = Reference(rtpbc-practitioner-03)
@@ -232,7 +232,7 @@ Usage: #inline
 * insurance.coverage = Reference(rtpbc-coverage-03a)
 * item.sequence = 1
 * item.careTeamSequence = 1
-* item.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
 
@@ -278,7 +278,7 @@ Usage: #inline
 * status = #draft
 * intent = #proposal
 * reportedBoolean = true
-* medicationCodeableConcept = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * subject = Reference(rtpbc-patient-03a)
 * authoredOn = "2019-11-01"
 * requester = Reference(rtpbc-practitioner-03a)

@@ -29,6 +29,8 @@ Alias: $rtpbc-error-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-
 Alias: $rtpbc-event-type-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type
 Alias: $processpriority-cs = http://terminology.hl7.org/CodeSystem/processpriority
 Alias: $rtpbc-patient-pay-type-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type
+Alias: $rtpbc-benefit-restriction-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction
+Alias: $rtpbc-formulary-status-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-formulary-status
 
 // - value sets
 Alias: $rtpbc-prescribable-product-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-prescribable-product-code
@@ -36,7 +38,8 @@ Alias: $rtpbc-patient-pay-type-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/
 Alias: $rtpbc-state-and-province-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-state-and-province-code
 Alias: $rtpbc-country-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code
 Alias: $rtpbc-pharmacy-type-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-pharmacy-type
-
+Alias: $rtpbc-benefit-restriction = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-benefit-restriction
+Alias: $rtpbc-formulary-status = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-formulary-status
 
 // US Core profiles
 // maybe needed:
@@ -69,4 +72,5 @@ Alias: $rtpbc-request-bundle = http://hl7.org/fhir/us/carin-rtpbc/StructureDefin
 Alias: $rtpbc-response-bundle = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-bundle
 Alias: $rtpbc-response-claimresponse = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse
 Alias: $rtpbc-benefitRestriction = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction
+Alias: $rtpbc-formularyStatus = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-formularyStatus
 Alias: $rtpbc-isAlternative = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative

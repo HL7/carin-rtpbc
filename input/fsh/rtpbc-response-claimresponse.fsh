@@ -91,6 +91,10 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * item.extension[benefitRestriction] ^short = "Benefit Restriction (Extension)"
 * item.extension[benefitRestriction] ^definition = "This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination."
 * item.extension[benefitRestriction] ^isModifier = false
+* item.extension contains $rtpbc-formularyStatus named formularyStatus 0..* MS
+* item.extension[formularyStatus] ^short = "Formulary Status (Extension)"
+* item.extension[formularyStatus] ^definition = "This extension conveys the formulary status that applies to the product."
+* item.extension[formularyStatus] ^isModifier = false
 * item.itemSequence MS
 * item.itemSequence ^definition = "Indicates that the information in this .item composite relates to the requested product and pharmacy."
 * item.noteNumber MS
@@ -106,7 +110,7 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * item.adjudication.category ^label = "Patient Pay Component"
 * item.adjudication.category ^short = "Patient Pay Component"
 * item.adjudication.category ^definition = "Identifies a component of the patient's financial responsibility for the product cost."
-* item.adjudication.category ^comment = "At least one .adjudication must contain a .category with the .code value 'total', representing the patient's total financial responsibility for the product"
+* item.adjudication.category ^comment = "At least one .adjudication must contain a .category with the .code value 'total', representing the patient's total financial responsibility for the product. Note that returned balance amounts (e.g., accumulated deductible or remaining deductible) are calculated from the current member balance and reflect only the effect of the associated RTPBC request"
 * item.adjudication.category ^requirements = "Corresponds to NCPDP C95-KQ Patient Pay Component Qualifier."
 * item.adjudication.category ^binding.description = "RTPBC Patient Pay Categories"
 * item.adjudication.amount 1.. MS
@@ -136,6 +140,10 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * addItem.extension[benefitRestriction] ^base.min = 0
 * addItem.extension[benefitRestriction] ^base.max = "*"
 * addItem.extension[benefitRestriction] ^isModifier = false
+* addItem.extension contains $rtpbc-formularyStatus named formularyStatus 0..* MS
+* addItem.extension[formularyStatus] ^short = "Formulary Status (Extension)"
+* addItem.extension[formularyStatus] ^definition = "This extension conveys the formulary status that applies to the product."
+* addItem.extension[formularyStatus] ^isModifier = false
 * addItem.itemSequence 1.. MS
 * addItem.itemSequence ^label = "Associated request Item Sequence"
 * addItem.itemSequence ^short = "Associated request Item Sequence"
@@ -268,7 +276,7 @@ Description: "This is an example of response stating that the requested drug is 
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#quantity-limit "Quantity limit applies"
 * addItem.itemSequence = 1
 * addItem.provider = Reference(Organization/rtpbc-organization-03wh)
-* addItem.productOrService = $rxnorm#1734642 "Zepatier 50 MG / 100 MG Oral Tablet"
+* addItem.productOrService = $rxnorm#1734642 "elbasvir 50 MG / grazoprevir 100 MG Oral Tablet [Zepatier]"
 * addItem.quantity.value = 28
 * addItem.quantity.unit = "{Each}"
 * addItem.noteNumber = 1
@@ -301,6 +309,8 @@ Usage: #example
 * disposition = "Processed successfully"
 * item.extension.url = $rtpbc-benefitRestriction
 * item.extension.valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
+* item.extension.url = $rtpbc-formularyStatus
+* item.extension.valueCoding = $rtpbc-formulary-status-cs#O "On Formulary"
 * item.itemSequence = 1
 * item.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
 * item.adjudication[=].amount.value = 40
@@ -315,19 +325,29 @@ Usage: #example
 * addItem.extension[=].valueBoolean = true
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
+* item.extension.url = $rtpbc-formularyStatus
+* item.extension.valueCoding = $rtpbc-formulary-status-cs#P "On Formulary/Preferred"
 * addItem.itemSequence = 1
 * addItem.provider = Reference(Organization/rtpbc-organization-03m)
-* addItem.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 180
 * addItem.quantity.unit = "{Each}"
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
+* addItem.adjudication[=].amount.value = 10
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#deductible "Deductible"
 * addItem.adjudication[=].amount.value = 20
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[=].amount.value = 195
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[=].amount.value = 305
 * addItem.adjudication[=].amount.currency = #USD
 * addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
 * addItem.adjudication[=].amount.value = 30
 * addItem.adjudication[=].amount.currency = #USD
 * addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* addItem.adjudication[=].amount.value = 50
+* addItem.adjudication[=].amount.value = 70
 * addItem.adjudication[=].amount.currency = #USD
 
 */
