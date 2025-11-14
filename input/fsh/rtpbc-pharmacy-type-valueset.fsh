@@ -1,5 +1,3 @@
-Alias: $pharmacy-type-cs = http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType
-
 ValueSet: RtpbcPharmacyTypeValueSet
 Id: rtpbc-pharmacy-type
 Title: "RTPBC Pharmacy Type Value Set"

@@ -14,6 +14,6 @@ Description: "This value set contains the quantity unit of measure to be used wh
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* UCUM#{Each} "Each"
-* UCUM#g "gram"
-* UCUM#mL "milliliter"
+* $ucum#{Each} "{Each}"
+* $ucum#g "g"
+* $ucum#mL "mL"

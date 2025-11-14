@@ -16,6 +16,10 @@ Alias: $processpriority = http://terminology.hl7.org/CodeSystem/processpriority
 Alias: $coverage-class = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias: $claim-type-cs = http://terminology.hl7.org/CodeSystem/claim-type
 Alias: $npi = http://hl7.org/fhir/sid/us-npi
+Alias: $simple-language = http://hl7.org/fhir/us/core/ValueSet/simple-language
+Alias: $canadapost = http://canadapost.ca/CodeSystem/ProvinceCodes
+Alias: $usps = https://www.usps.com/
+Alias: $ucum = http://unitsofmeasure.org
 
 // NCPDP terminology (HTA)
 Alias: $pharmacy-type-cs = http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType

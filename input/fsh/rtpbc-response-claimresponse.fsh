@@ -275,7 +275,7 @@ Description: "This is an example of response stating that the requested drug is 
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#quantity-limit "Quantity limit applies"
 * addItem.itemSequence = 1
-* addItem.provider = Reference(Organization/rtpbc-organization-03wh)
+* addItem.provider = Reference(Organization/rtpbc-organization-03m)
 * addItem.productOrService = $rxnorm#1734642 "elbasvir 50 MG / grazoprevir 100 MG Oral Tablet [Zepatier]"
 * addItem.quantity.value = 28
 * addItem.quantity.unit = "{Each}"
@@ -292,10 +292,11 @@ Description: "This is an example of response stating that the requested drug is 
 * processNote.number = 1
 * processNote.text = "Quantity limit: 28 tablets per month"
 
-/*
+
 Instance: rtpbc-claim-response-03
 InstanceOf: rtpbc-response-claimresponse
 Usage: #example
+Description: "An example RTPBC response indicating PA is required and providing patient out-of-pocket costs"
 * meta.profile = $rtpbc-response-claimresponse
 * identifier.value = "rtpbc-03-response"
 * status = #active
@@ -350,4 +351,47 @@ Usage: #example
 * addItem.adjudication[=].amount.value = 70
 * addItem.adjudication[=].amount.currency = #USD
 
-*/
+
+
+Instance: rtpbc-claim-response-03-price-source
+InstanceOf: ClaimResponse
+Usage: #example
+Description: "An example response from a cash pricing source"
+* meta.profile = $rtpbc-response-claimresponse
+* identifier.value = "rtpbc-03-response-price-source"
+* status = #active
+* type = $claim-type-cs#pharmacy "Pharmacy"
+* use = #predetermination
+* patient = Reference(rtpbc-patient-03ps)
+* created = "2019-11-01T11:20:59-05:00"
+* insurer.identifier.value = "GoodPricing"
+* request.identifier.value = "rtpbc-03"
+* outcome = #complete
+* disposition = "Processed successfully"
+* item.itemSequence = 1
+* item.noteNumber = 1
+* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* item.adjudication[=].amount.value = 105
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* item.adjudication[=].amount.value = -20
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* item.adjudication[=].amount.value = 85
+* item.adjudication[=].amount.currency = #USD
+* addItem.extension.url = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative"
+* addItem.extension.valueBoolean = true
+* addItem.itemSequence = 1
+* addItem.provider = Reference(rtpbc-organization-03ps)
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* addItem.quantity.value = 60
+* addItem.quantity.unit = "{Each}"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* addItem.adjudication[=].amount.value = 50
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* addItem.adjudication[=].amount.value = -10
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* addItem.adjudication[=].amount.value = 40
+* addItem.adjudication[=].amount.currency = #USD

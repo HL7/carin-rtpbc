@@ -1,6 +1,6 @@
 CodeSystem: RtpbcFormularyStatusCodeSystem
 Id: rtpbc-formulary-status
-Title: "RTPBC Benefit Restriction Code System"
+Title: "RTPBC Formulary Status Code System"
 Description: "This code system defines formulary statuses that may apply to a prescription product evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."
 * ^version = "1.0.0"
 * ^status = #active

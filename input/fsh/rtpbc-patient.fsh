@@ -1,7 +1,3 @@
-Alias: $rtpbc-state-and-province-code = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-state-and-province-code
-Alias: $rtpbc-country-code = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code
-Alias: $simple-language = http://hl7.org/fhir/us/core/ValueSet/simple-language
-
 Profile: RtpbcPatient
 Parent: Patient
 Id: rtpbc-patient
@@ -55,11 +51,11 @@ The RTPBC profile further constrains certain US Core and base elements in a mann
 * address.line 0..* MS
 * address.city 0..1 MS
 * address.state 0..1 MS
-* address.state from $rtpbc-state-and-province-code (extensible)
+* address.state from $rtpbc-state-and-province-code-vs (extensible)
 * address.state ^binding.description = "RTPBC Two Letter State and Province Codes"
 * address.postalCode 0..1 MS
 * address.country MS
-* address.country from $rtpbc-country-code (extensible)
+* address.country from $rtpbc-country-code-vs (extensible)
 * address.country ^comment = "Populate when not a US address"
 * address.country ^min = 0
 * address.country ^binding.description = "ISO 3166 2-character country codes"
@@ -68,4 +64,40 @@ The RTPBC profile further constrains certain US Core and base elements in a mann
 * communication.language 1..1
 * communication.language only CodeableConcept
 * communication.language from $simple-language (extensible)
+
+
+Instance: rtpbc-patient-03
+InstanceOf: rtpbc-patient
+Usage: #example
+Description: "An example RTPBC patient"
+* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient"
+* identifier.type = $v2-0203#PI "Patient internal identifier"
+* identifier.type.text = "Patient internal identifier"
+* identifier.system = "http://example.org/MyPatientApp"
+* identifier.value = "30455"
+* name.family = "Doe"
+* name.given = "Jane"
+* gender = #female
+* birthDate = "1975-12-05"
+* address.line = "100 Oak Court"
+* address.city = "Madison"
+* address.state = "WI"
+* address.postalCode = "53510"
+* address.country = "US"
+
+
+Instance: rtpbc-patient-03ps
+InstanceOf: rtpbc-patient
+Usage: #example
+Description: "An example RTPBC patient with minimal content"
+* meta.profile = $rtpbc-patient
+* identifier.type = $v2-0203#PI "Patient internal identifier"
+* identifier.type.text = "Patient internal identifier"
+* identifier.system = "http://example.org/MyPatientApp"
+* identifier.value = "30455"
+* name.family = "Doe"
+* name.given = "Jane"
+* gender = #female
+* birthDate = "1975-12-05"
+
 
