@@ -97,89 +97,23 @@ Description: "An example of the primary RTPBC request resource (Claim)"
 * use = #predetermination
 * patient = Reference(rtpbc-patient-03)
 * created = "2019-11-01T11:20:54-05:00"
-* provider = Reference(rtpbc-organization-03)
+* provider = Reference(Organization/rtpbc-organization-03)
 * priority = $processpriority-cs#normal "Normal"
-* prescription = Reference(rtpbc-medicationrequest-03)
+* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-03)
 * careTeam.sequence = 1
-* careTeam.provider = Reference(rtpbc-practitioner-03)
+* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-03)
 * insurance.sequence = 1
 * insurance.focal = true
 * insurance.coverage.identifier.value = "GOODPRICING"
 * item.sequence = 1
 * item.careTeamSequence = 1
-* item.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
 
-Instance: rtpbc-patient-03
-InstanceOf: rtpbc-patient
-//Usage: #inline
-Description: "An example RTPBC patient"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient"
-* identifier.type = $v2-0203#PI "Patient internal identifier"
-* identifier.type.text = "Patient internal identifier"
-* identifier.system = "http://example.org/MyPatientApp"
-* identifier.value = "30455"
-* name.family = "Doe"
-* name.given = "Jane"
-* gender = #female
-* birthDate = "1975-12-05"
-* address.line = "100 Oak Court"
-* address.city = "Madison"
-* address.state = "WI"
-* address.postalCode = "53510"
-* address.country = "US"
-
-Instance: rtpbc-medicationrequest-03
-InstanceOf: rtpbc-medicationrequest
-//Usage: #inline
-Description: "An example RTPBC MedicationRequest"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest"
-* status = #draft
-* intent = #proposal
-* reportedBoolean = true
-* medicationCodeableConcept = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
-* subject = Reference(rtpbc-patient-03)
-* authoredOn = "2019-11-01"
-* requester = Reference(rtpbc-practitioner-03)
-* dosageInstruction.text = "Take 2 capsules once a day"
-* dispenseRequest.quantity.value = 60
-* dispenseRequest.quantity.unit = "{Each}"
-* dispenseRequest.expectedSupplyDuration = 30 'd' "days"
-* dispenseRequest.performer = Reference(rtpbc-organization-03)
-* substitution.allowedBoolean = false
-
-Instance: rtpbc-practitioner-03
-InstanceOf: $us-core-practitioner
-//Usage: #inline
-Description: "An example US Core Practitioner"
-* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "1234567890"
-* name.family = "Johnson"
-
-Instance: rtpbc-organization-03
-InstanceOf: rtpbc-pharmacy-organization
-//Usage: #inline
-Description: "An example RTPBC pharmacy (Organization), representing a retail pharmacy"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization"
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "9876543210"
-* active = true
-* type = $pharmacy-type-cs#R "Retail"
-* name = "Hometown Drug"
-* telecom.system = #phone
-* telecom.value = "6081234567"
-* address.line = "900 9th Street"
-* address.city = "Madison"
-* address.state = "WI"
-* address.postalCode = "53535"
-* address.country = "US"
-
-
 //------------------
 
-/*
+
 Instance: rtpbc-bundle-request-03-w-header
 InstanceOf: rtpbc-request-bundle
 Usage: #example
@@ -191,16 +125,16 @@ Description: "An example RTPBC MedicationRequest"
 * entry[=].resource = rtpbc-messageheader-request-03a
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-03a"
 * entry[=].resource = rtpbc-claim-03a
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03a"
-* entry[=].resource = rtpbc-patient-03a
-* entry[+].fullUrl = "http://example.org/my-app/Coverage/rtpbc-coverage-03a"
-* entry[=].resource = rtpbc-coverage-03a
-* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-03a"
-* entry[=].resource = rtpbc-medicationrequest-03a
-* entry[+].fullUrl = "http://example.org/my-app/Practitioner/rtpbc-practitioner-03a"
-* entry[=].resource = rtpbc-practitioner-03a
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03a"
-* entry[=].resource = rtpbc-organization-03a
+* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03"
+* entry[=].resource = rtpbc-patient-03
+* entry[+].fullUrl = "http://example.org/my-app/Coverage/rtpbc-coverage-01"
+* entry[=].resource = rtpbc-coverage-01
+* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-03"
+* entry[=].resource = rtpbc-medicationrequest-03
+* entry[+].fullUrl = "http://example.org/my-app/Practitioner/rtpbc-practitioner-03"
+* entry[=].resource = rtpbc-practitioner-03
+* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
+* entry[=].resource = rtpbc-organization-03
 
 Instance: rtpbc-messageheader-request-03a
 InstanceOf: rtpbc-request-messageheader
@@ -220,98 +154,20 @@ Usage: #inline
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(rtpbc-patient-03a)
+* patient = Reference(rtpbc-patient-03)
 * created = "2019-11-01T11:20:54-05:00"
-* provider = Reference(rtpbc-organization-03a)
+* provider = Reference(Organization/rtpbc-organization-03)
 * priority = $processpriority-cs#normal "Normal"
-* prescription = Reference(rtpbc-medicationrequest-03a)
+* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-03)
 * careTeam.sequence = 1
-* careTeam.provider = Reference(rtpbc-practitioner-03a)
+* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-03)
 * insurance.sequence = 1
 * insurance.focal = true
-* insurance.coverage = Reference(rtpbc-coverage-03a)
+* insurance.coverage = Reference(Coverage/rtpbc-coverage-01)
 * item.sequence = 1
 * item.careTeamSequence = 1
-* item.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
 
-Instance: rtpbc-patient-03a
-InstanceOf: rtpbc-patient
-Usage: #inline
-* meta.profile = $rtpbc-patient
-* identifier.type = $v2-0203#PI "Patient internal identifier"
-* identifier.type.text = "Patient internal identifier"
-* identifier.system = "http://example.org/MyPatientApp"
-* identifier.value = "30455"
-* name.family = "Doe"
-* name.given = "Jane"
-* gender = #female
-* birthDate = "1975-12-05"
-* address.line = "100 Oak Court"
-* address.city = "Madison"
-* address.state = "WI"
-* address.postalCode = "53510"
-* address.country = "US"
 
-Instance: rtpbc-coverage-03a
-InstanceOf: rtpbc-coverage
-// Usage: #inline
-Description: "An example RTPBC Coverage"
-* meta.profile = $rtpbc-coverage
-* status = #active
-* beneficiary = Reference(rtpbc-patient-03a)
-* payor.identifier.value = "Pharmacy Plans US"
-* class[0].type = $coverage-class#rxbin
-* class[=].value = "BIN001"
-* class[+].type = $coverage-class#rxpcn
-* class[=].value = "PCN002"
-* class[+].type = $coverage-class#rxgroup
-* class[=].value = "GROUP0001"
-* class[+].type = $coverage-class#rxid
-* class[=].value = "MEMBER000001"
-
-Instance: rtpbc-medicationrequest-03a
-InstanceOf: rtpbc-medicationrequest
-Usage: #inline
-* meta.profile = $rtpbc-medicationrequest
-* status = #draft
-* intent = #proposal
-* reportedBoolean = true
-* medicationCodeableConcept = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
-* subject = Reference(rtpbc-patient-03a)
-* authoredOn = "2019-11-01"
-* requester = Reference(rtpbc-practitioner-03a)
-* dosageInstruction.text = "Take 2 capsules once a day"
-* dispenseRequest.quantity.value = 60
-* dispenseRequest.quantity.unit = "{Each}"
-* dispenseRequest.expectedSupplyDuration = 30 'd' "days"
-* dispenseRequest.performer = Reference(rtpbc-organization-03a)
-* substitution.allowedBoolean = false
-
-Instance: rtpbc-practitioner-03a
-InstanceOf: $us-core-practitioner
-Usage: #inline
-* meta.profile = $us-core-practitioner
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "1234567890"
-* name.family = "Johnson"
-
-Instance: rtpbc-organization-03a
-InstanceOf: rtpbc-pharmacy-organization
-Usage: #inline
-* meta.profile = $rtpbc-pharmacy-organization
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "9876543210"
-* active = true
-* type = $pharmacy-type-cs#R "Retail"
-* name = "Hometown Drug"
-* telecom.system = #phone
-* telecom.value = "6081234567"
-* address.line = "900 9th Street"
-* address.city = "Madison"
-* address.state = "WI"
-* address.postalCode = "53535"
-* address.country = "US"
-
-*/

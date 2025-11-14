@@ -1,5 +1,4 @@
 <p>﻿All codes are from the licensed NCPDP Pharmacy Type (955-HR) code set, maintained by the National Council for Prescription Drug Programs.
-See <a href="NamingSystem-rtpbc-NamingSystem-ncpdp-pharmacy-type.html">NCPDP Pharmacy Type (955-HR) (NamingSystem)</a></p>
 <h3>Concept examples</h3> 
 
 <p>The up-to-date content of the NCPDP Pharmacy Type (955-HR) code set is available to NCPDP members.</p>

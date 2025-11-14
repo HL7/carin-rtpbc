@@ -87,3 +87,23 @@ This profile differs from the US Core MedicationRequest in that it doesn't set t
 * substitution.allowed[x] ^label = "Substitution Allowed"
 * substitution.allowed[x] ^short = "Substitution Allowed"
 * substitution.allowed[x] ^definition = "Whether or not the pharmacy may dispense a substitutable generic product instead of a requested branded product"
+
+
+Instance: rtpbc-medicationrequest-03
+InstanceOf: rtpbc-medicationrequest
+//Usage: #inline
+Description: "An example RTPBC MedicationRequest"
+* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest"
+* status = #draft
+* intent = #proposal
+* reportedBoolean = true
+* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* subject = Reference(rtpbc-patient-03)
+* authoredOn = "2019-11-01"
+* requester = Reference(rtpbc-practitioner-03)
+* dosageInstruction.text = "Take 2 capsules once a day"
+* dispenseRequest.quantity.value = 60
+* dispenseRequest.quantity.unit = "{Each}"
+* dispenseRequest.expectedSupplyDuration = 30 'd' "days"
+* dispenseRequest.performer = Reference(rtpbc-organization-03)
+* substitution.allowedBoolean = false

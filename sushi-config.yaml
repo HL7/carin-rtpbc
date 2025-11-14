@@ -17,7 +17,7 @@ publisher:
   url: http://www.hl7.org/Special/committees/medication
 
 parameters:
-  jira-code: FHIR-us-carin-rtpbc.xml
+  jira-code: carin-rtpbc
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
 
 
@@ -157,3 +157,15 @@ extension:
 #   if InstanceOf references a profile:
 #
 #   setId: always # always | standalone-only
+menu:
+  Home: index.html
+  Guidance:
+      Use Cases: use_cases.html
+      Information Content: information_content_and_fhir_resources.html
+      Business Rules: business_rules.html
+      Submission Method: submission_method.html
+      Error Handling: error_handling.html
+      Security: security.html
+      Consumer vs Provider RTPBC: consumer_vs_provider_rtpbc.html
+  Artifacts: artifacts.html
+  Downloads: downloads.html

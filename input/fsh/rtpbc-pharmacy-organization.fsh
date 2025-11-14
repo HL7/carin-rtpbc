@@ -70,7 +70,42 @@ Description: "This profile builds on the US Core Organization to represent a pha
 
 //---------------------------
 
-/*
+Instance: rtpbc-organization-03
+InstanceOf: rtpbc-pharmacy-organization
+//Usage: #inline
+Description: "An example RTPBC pharmacy (Organization), representing a retail pharmacy"
+* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization"
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "9876543210"
+* active = true
+* type = $pharmacy-type-cs#R "Retail"
+* name = "Hometown Drug"
+* telecom.system = #phone
+* telecom.value = "6081234567"
+* address.line = "900 9th Street"
+* address.city = "Madison"
+* address.state = "WI"
+* address.postalCode = "53535"
+* address.country = "US"
+
+Instance: rtpbc-organization-03ps
+InstanceOf: rtpbc-pharmacy-organization
+Description: "An example retail pharmacy identified using an NCPDP Provider ID"
+* meta.profile = $rtpbc-pharmacy-organization
+* identifier.system = $ncpdp-id
+* identifier.value = "0999123"
+* active = true
+* type = $pharmacy-type-cs#R "Retail"
+* name = "Home Drugs"
+* telecom.system = #phone
+* telecom.value = "5556057672"
+* address.line = "101 1st St N"
+* address.city = "Minneapolis"
+* address.state = "MN"
+* address.postalCode = "55401"
+
+
+
 Instance: rtpbc-organization-03m
 InstanceOf: rtpbc-pharmacy-organization
 Usage: #example
@@ -88,4 +123,5 @@ Description: "An example RTPBC pharmacy (FHIR Organization) representing a mail 
 * address.state = "WI"
 * address.postalCode = "54444"
 * address.country = "US"
-*/
+
+

@@ -1,5 +1,3 @@
-Alias: $rtpbc-benefit-restriction-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction
-
 ValueSet: RtbpcBenefitRestrictionValueSet
 Id: rtpbc-benefit-restriction
 Title: "RTPBC Benefit Restriction Value Set"

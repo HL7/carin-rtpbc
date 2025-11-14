@@ -18,6 +18,8 @@ Description: "This code system defines components of a patient's responsibility 
 * ^caseSensitive = false
 * ^content = #complete
 * #deductible "Deductible" "Amount to be collected from a patient to be applied to a periodic deductible"
+* #accumulated-deductible "Accumulated deductible" "Total deductible paid after amount associated with this request"
+* #remaining-deductible "Remaining deductible" "Remaining deductible amount after payment associated with this request"
 * #coinsurance "Per prescription coinsurance" "Amount to be collected from a patient to satisfy a per prescription coinsurance"
 * #copay "Copay" "Amount to be collected from the patient to satisfy a per prescription copay"
 * #tax "Tax" "Amount to be collected from the patient for sales tax"

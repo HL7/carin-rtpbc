@@ -1,11 +1,11 @@
-ValueSet: RtpbcPharmacyTypeValueSet
-Id: rtpbc-pharmacy-type
-Title: "RTPBC Pharmacy Type Value Set"
-Description: "This value set contains pharmacy type categories defined in the NCPDP Pharmacy Type (955-HR) code system."
+ValueSet: RtbpcFormularyStatusValueSet
+Id: rtpbc-formulary-status
+Title: "RTPBC Formulary Status Value Set"
+Description: "This value set contains formulary statuses that may apply to a prescription product evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2025-10-03T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -14,4 +14,4 @@ Description: "This value set contains pharmacy type categories defined in the NC
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* include codes from system $pharmacy-type-cs
+* include codes from system $rtpbc-formulary-status-cs

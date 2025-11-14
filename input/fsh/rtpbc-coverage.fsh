@@ -91,3 +91,4 @@ Description: "An example RTPBC Coverage"
 * class[=].value = "GROUP0001"
 * class[+].type = $coverage-class#rxid
 * class[=].value = "MEMBER000001"
+

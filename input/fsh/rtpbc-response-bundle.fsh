@@ -44,7 +44,6 @@ Description: "This profile constrains a Bundle resource for use as the response 
 * entry[pharmacy].resource 1..1 MS
 * entry[pharmacy].resource only $rtpbc-pharmacy-organization
 
-//---------------------------------
 
 Instance: rtpbc-bundle-response-03-price-source
 InstanceOf: rtpbc-response-bundle
@@ -62,6 +61,7 @@ Description: "An example RTPBC response bundle produced by cash pricing source"
 * entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03ps"
 * entry[=].resource = rtpbc-organization-03ps
 
+
 Instance: rtpbc-messageheader-response-03ps
 InstanceOf: rtpbc-response-messageheader
 Usage: #inline
@@ -74,79 +74,6 @@ Usage: #inline
 * focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-03-price-source)
 * definition = $rtpbc-response
 
-Instance: rtpbc-claim-response-03-price-source
-InstanceOf: ClaimResponse
-//Usage: #inline
-Description: "An example response from a cash pricing source (ClaimResponse)"
-* meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-03-response-price-source"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient = Reference(rtpbc-patient-03ps)
-* created = "2019-11-01T11:20:59-05:00"
-* insurer.identifier.value = "GoodPricing"
-* request.identifier.value = "rtpbc-03"
-* outcome = #complete
-* disposition = "Processed successfully"
-* item.itemSequence = 1
-* item.noteNumber = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
-* item.adjudication[=].amount.value = 105
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
-* item.adjudication[=].amount.value = -20
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* item.adjudication[=].amount.value = 85
-* item.adjudication[=].amount.currency = #USD
-* addItem.extension.url = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative"
-* addItem.extension.valueBoolean = true
-* addItem.itemSequence = 1
-* addItem.provider = Reference(rtpbc-organization-03ps)
-* addItem.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
-* addItem.quantity.value = 60
-* addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
-* addItem.adjudication[=].amount.value = 50
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
-* addItem.adjudication[=].amount.value = -10
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* addItem.adjudication[=].amount.value = 40
-* addItem.adjudication[=].amount.currency = #USD
-
-Instance: rtpbc-patient-03ps
-InstanceOf: rtpbc-patient
-// Usage: #inline
-Description: "An example RTPBC patient with minimal content"
-* meta.profile = $rtpbc-patient
-* identifier.type = $v2-0203#PI "Patient internal identifier"
-* identifier.type.text = "Patient internal identifier"
-* identifier.system = "http://example.org/MyPatientApp"
-* identifier.value = "30455"
-* name.family = "Doe"
-* name.given = "Jane"
-* gender = #female
-* birthDate = "1975-12-05"
-
-Instance: rtpbc-organization-03ps
-InstanceOf: rtpbc-pharmacy-organization
-// Usage: #inline
-Description: "An example RTPBC pharmacy"
-* meta.profile = $rtpbc-pharmacy-organization
-* identifier.system = $ncpdp-id
-* identifier.value = "0999123"
-* active = true
-* type = $pharmacy-type-cs#R "Retail"
-* name = "Home Drugs"
-* telecom.system = #phone
-* telecom.value = "5556057672"
-* address.line = "101 1st St N"
-* address.city = "Minneapolis"
-* address.state = "MN"
-* address.postalCode = "55401"
 
 //--------------------------------
 
@@ -161,15 +88,14 @@ Description: "An example RTPBC response bundle produced by the patient's insurer
 * entry[=].resource = rtpbc-messageheader-response-03wh
 * entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-03wh"
 * entry[=].resource = rtpbc-claim-response-03wh
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03wh"
-* entry[=].resource = rtpbc-patient-03wh
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03wh"
-* entry[=].resource = rtpbc-organization-03wh
+* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03"
+* entry[=].resource = rtpbc-patient-03
+* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03m"
+* entry[=].resource = rtpbc-organization-03m
 
 Instance: rtpbc-messageheader-response-03wh
 InstanceOf: rtpbc-response-messageheader
 Usage: #inline
-//Description: "An example response MessageHeader"
 * meta.profile = $rtpbc-response-messageheader
 * eventCoding = $rtpbc-event-type-cs#rtpbc-response "RTPBC Response"
 * source.name = "PharmacyBenefitsCompany"
@@ -181,14 +107,14 @@ Usage: #inline
 
 Instance: rtpbc-claim-response-03wh
 InstanceOf: rtpbc-response-claimresponse
-//Usage: #inline
-Description: "An example of the primary RTPBC response resource containing patient out-of-pocket cost, benefit restrictions and an alternative (ClaimResponse)"
+Usage: #inline
+//Description: "An example of the primary RTPBC response resource containing patient out-of-pocket cost, benefit restrictions and an alternative (ClaimResponse)"
 * meta.profile = $rtpbc-response-claimresponse
 * identifier.value = "rtpbc-03-response"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(rtpbc-patient-03wh)
+* patient = Reference(rtpbc-patient-03)
 * created = "2019-11-01T11:20:59-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
 * request.identifier.value = "rtpbc-03"
@@ -211,8 +137,8 @@ Description: "An example of the primary RTPBC response resource containing patie
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
 * addItem.itemSequence = 1
-* addItem.provider = Reference(rtpbc-organization-03wh)
-* addItem.productOrService = $rxnorm#205535 "PROzac 10 MG Oral Capsule"
+* addItem.provider = Reference(rtpbc-organization-03m)
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 180
 * addItem.quantity.unit = "{Each}"
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
@@ -225,39 +151,3 @@ Description: "An example of the primary RTPBC response resource containing patie
 * addItem.adjudication[=].amount.value = 50
 * addItem.adjudication[=].amount.currency = #USD
 
-Instance: rtpbc-patient-03wh
-InstanceOf: rtpbc-patient
-//Usage: #inline
-Description: "Example RTPBC patient"
-* meta.profile = $rtpbc-patient
-* identifier.type = $v2-0203#PI "Patient internal identifier"
-* identifier.type.text = "Patient internal identifier"
-* identifier.system = "http://example.org/MyPatientApp"
-* identifier.value = "30455"
-* name.family = "Doe"
-* name.given = "Jane"
-* gender = #female
-* birthDate = "1975-12-05"
-* address.line = "100 Oak Court"
-* address.city = "Madison"
-* address.state = "WI"
-* address.postalCode = "53510"
-* address.country = "US"
-
-Instance: rtpbc-organization-03wh
-InstanceOf: rtpbc-pharmacy-organization
-Description: "An example of a mail service pharmacy"
-//Usage: #inline
-* meta.profile = $rtpbc-pharmacy-organization
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "5515515515"
-* active = true
-* type = $pharmacy-type-cs#M "Mail Order"
-* name = "My Mail Service Pharmacy"
-* telecom.system = #phone
-* telecom.value = "5551234567"
-* address.line = "10001 Oakland Road"
-* address.city = "Milwaukee"
-* address.state = "WI"
-* address.postalCode = "54444"
-* address.country = "US"
