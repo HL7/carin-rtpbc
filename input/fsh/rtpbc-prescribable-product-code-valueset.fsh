@@ -14,5 +14,5 @@ Description: "This value set includes codes used to specify prescribed medicatio
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* include codes from system Ndc
-* include codes from system RxNorm where TTY in "SCD,SBD,GPCK,BPCK"
+* include codes from system $ndc
+* include codes from system $rxnorm where TTY in "SCD,SBD,GPCK,BPCK"

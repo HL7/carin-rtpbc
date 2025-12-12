@@ -9,7 +9,7 @@
 // HL7 terminology
 //Alias: $taxonomy = http://nucc.org/provider-taxonomy
 //Alias: $operation-event-type = urn:ietf:rfc:3986
-//Alias: $ndc = http://hl7.org/fhir/sid/ndc
+Alias: $ndc = http://hl7.org/fhir/sid/ndc
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $processpriority = http://terminology.hl7.org/CodeSystem/processpriority
@@ -20,10 +20,12 @@ Alias: $simple-language = http://hl7.org/fhir/us/core/ValueSet/simple-language
 Alias: $canadapost = http://canadapost.ca/CodeSystem/ProvinceCodes
 Alias: $usps = https://www.usps.com/
 Alias: $ucum = http://unitsofmeasure.org
+Alias: $iso3166 = urn:iso:std:iso:3166
+Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 
 // NCPDP terminology (HTA)
 Alias: $pharmacy-type-cs = http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType
-Alias: $ncpdp-id = http://terminology.hl7.org/CodeSystem/NCPDPProviderIdentificationNumber
+Alias: $ncpdp-id-cs = http://terminology.hl7.org/CodeSystem/NCPDPProviderIdentificationNumber
 Alias: $rtpbc-patient-pay-type-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-patient-pay-type
 Alias: $rtpbc-billing-unit-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-billing-unit
 Alias: $rtpbc-error-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-error-code
@@ -43,13 +45,14 @@ Alias: $rtpbc-state-and-province-code-vs = http://hl7.org/fhir/us/carin-rtpbc/Va
 Alias: $rtpbc-country-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code
 Alias: $rtpbc-pharmacy-type-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-pharmacy-type
 Alias: $rtpbc-benefit-restriction = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-benefit-restriction
-Alias: $rtpbc-formulary-status = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-formulary-status
+Alias: $rtpbc-formulary-status-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-formulary-status
 
 // US Core profiles
 // maybe needed:
 //Alias: $us-core-medication = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication
-//Alias: $us-core-medicationrequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
-//Alias: $us-core-patient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias: $us-core-medicationrequest = http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest
+Alias: $us-core-patient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias: $us-core-coverage = http://hl7.org/fhir/us/core/StructureDefinition/us-core-coverage
 Alias: $us-core-organization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias: $us-core-practitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 
@@ -68,13 +71,19 @@ Alias: $rtpbc-response-messageheader = http://hl7.org/fhir/us/carin-rtpbc/Struct
 
 // RTPBC content profiles
 Alias: $rtpbc-request-claim = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim
+Alias: $rtpbc-request-claim-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim-non-phi
 Alias: $rtpbc-patient = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient
+Alias: $rtpbc-patient-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient-non-phi
 Alias: $rtpbc-medicationrequest = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest
+Alias: $rtpbc-medicationrequest-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest-non-phi
 Alias: $rtpbc-pharmacy-organization = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization
 Alias: $rtpbc-coverage = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage
 Alias: $rtpbc-request-bundle = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle
+Alias: $rtpbc-request-bundle-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-bundle-non-phi
 Alias: $rtpbc-response-bundle = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-bundle
 Alias: $rtpbc-response-claimresponse = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-claimresponse
 Alias: $rtpbc-benefitRestriction = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-benefitRestriction
 Alias: $rtpbc-formularyStatus = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-formularyStatus
+Alias: $rtpbc-preferenceLevel = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-preferenceLevel
+Alias: $rtpbc-nextAvailableFillDate = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-nextAvailableFillDate
 Alias: $rtpbc-isAlternative = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-isAlternative

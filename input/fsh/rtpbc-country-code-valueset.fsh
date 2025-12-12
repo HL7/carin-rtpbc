@@ -14,5 +14,5 @@ Description: "This value set contains a subset of two-letter ISO 3166-1-2 countr
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* ISO3166Part1#US "United States of America"
-* ISO3166Part1#CA "Canada"
+* $iso3166#US "United States of America"
+* $iso3166#CA "Canada"
