@@ -7,6 +7,15 @@ Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminolo
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
 The concepts in the value set include have not been validated because the terminology server https://terminologystandardsservice.ca/tx/fhir does not support batch validation (tests version < 1.7.8)
 
+# The terminology server omits the US “military states” AA, AE, AP from the www.usps.com code system.
+# I have submitted https://jira.hl7.org/browse/UP-766 to request addition of US “military states” AA, AE, AP to the THO USPS codesystem and valueset.
+The code 'AA' is not valid in the system https://www.usps.com/ (Unknown code 'AA' in the CodeSystem 'https://www.usps.com/' version 'null')
+The code 'AE' is not valid in the system https://www.usps.com/ (Unknown code 'AE' in the CodeSystem 'https://www.usps.com/' version 'null')
+The code 'AP' is not valid in the system https://www.usps.com/ (Unknown code 'AP' in the CodeSystem 'https://www.usps.com/' version 'null')
+
+# The display name for VI in the source USPS document https://pe.usps.com/text/pub28/28apb.htm is Virgin Islands
+Wrong Display Name 'Virgin Islands' for https://www.usps.com/#VI. Valid display is 'Virgin Islands of the U.S.' (for the language(s) 'en, en-US'). Note that the display in the ValueSet does not have to match; this check exists to help check that it's not accidentally the wrong code
+
 # Temporarily suppressing this while we decide how to address terminology items in the STU2 IG
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
