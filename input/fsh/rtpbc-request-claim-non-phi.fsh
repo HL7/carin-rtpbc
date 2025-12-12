@@ -141,13 +141,14 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * item.productOrService ^definition = "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
 * item.productOrService ^comment = "The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes"
 * item.productOrService ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
-* item.productOrService.coding 1..* MS
-* item.productOrService.coding.system 1.. MS
-* item.productOrService.coding.code 1.. MS
-* item.productOrService.coding.display 1.. MS
+* item.productOrService.coding 0..* MS
+* item.productOrService.coding.system 0.. MS
+* item.productOrService.coding.code 0.. MS
+* item.productOrService.coding.display 0.. MS
 * item.productOrService.coding.display ^label = "Product Description"
 * item.productOrService.coding.display ^short = "Product Description"
 * item.productOrService.coding.display ^definition = "The full prescribable product name, including drug name, strength and dose form. The drug name equals the brand name if the branded product is desired"
+* item.productOrService.text 0.. MS
 * item.quantity 1.. MS
 * item.quantity ^label = "Prescribed Quantity"
 * item.quantity ^short = "Prescribed Quantity"

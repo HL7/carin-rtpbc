@@ -33,7 +33,7 @@ Description: "This profile provides minimal prescription characteristics for sub
 * medication[x] ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
 * medication[x].coding.system 0..1 MS 
 * medication[x].coding.code 0..1 MS 
-* medication[x].text 1..1 MS 
+* medication[x].text 0..1 MS 
 * medication[x].text ^label = "Medication name, strength and dose form"
 * subject only Reference($rtpbc-patient-non-phi)
 * subject ^label = "Patient - non-PHI"
@@ -87,7 +87,7 @@ Description: "An example non-PHI RTPBC MedicationRequest"
 * status = #draft
 * intent = #proposal
 * reportedBoolean = true
-* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+//* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * medicationCodeableConcept.text = "Prozac 10mg Capsule"
 * subject = Reference(rtpbc-patient-non-phi-1)
 * authoredOn = "2025-11-01"
