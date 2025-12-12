@@ -21,7 +21,7 @@ Usage: #definition
 * eventCoding = $rtpbc-event-type-cs#rtpbc-request
 * category = #notification
 * focus.code = #Claim
-* focus.profile = $rtpbc-request-claim
+//* focus.profile = $rtpbc-request-claim
 * focus.min = 1
 * focus.max = "1"
 * allowedResponse.message = $rtpbc-response

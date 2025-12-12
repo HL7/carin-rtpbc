@@ -21,15 +21,13 @@ parameters:
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
 
 
-#dependencies:
-#  hl7.fhir.uv.extensions.r4:
-#    id: ext
-#    version: 5.1.0
-
 #  hl7.terminology: 5.5.0
 dependencies:
-  hl7.fhir.us.core: 3.1.1
-#  hl7.fhir.us.core: 6.1.0
+#  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core: 8.0.1
+  hl7.fhir.uv.extensions.r4:
+    id: ext
+    version: 5.2.0
 
 #    reason: |
 #      Defines U.S. EHR expectations on a range of resources that will be passed to and/or queried by REMS CDS servers

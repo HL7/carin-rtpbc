@@ -95,6 +95,14 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * item.extension[formularyStatus] ^short = "Formulary Status (Extension)"
 * item.extension[formularyStatus] ^definition = "This extension conveys the formulary status that applies to the product."
 * item.extension[formularyStatus] ^isModifier = false
+* item.extension contains $rtpbc-preferenceLevel named preferenceLevel 0..* MS
+* item.extension[preferenceLevel] ^short = "Preference Level (Extension)"
+* item.extension[preferenceLevel] ^definition = "This extension conveys the preference level that applies to the product."
+* item.extension[preferenceLevel] ^isModifier = false
+* item.extension contains $rtpbc-nextAvailableFillDate named nextAvailableFillDate 0..* MS
+* item.extension[nextAvailableFillDate] ^short = "Next Available Fill Date (Extension)"
+* item.extension[nextAvailableFillDate] ^definition = "This extension conveys the date on which a patient prescription will have passed the insurer's minimum consumption requirements and may be considered for dispensing."
+* item.extension[nextAvailableFillDate] ^isModifier = false
 * item.itemSequence MS
 * item.itemSequence ^definition = "Indicates that the information in this .item composite relates to the requested product and pharmacy."
 * item.noteNumber MS
@@ -144,6 +152,14 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * addItem.extension[formularyStatus] ^short = "Formulary Status (Extension)"
 * addItem.extension[formularyStatus] ^definition = "This extension conveys the formulary status that applies to the product."
 * addItem.extension[formularyStatus] ^isModifier = false
+* addItem.extension contains $rtpbc-preferenceLevel named preferenceLevel 0..* MS
+* addItem.extension[preferenceLevel] ^short = "Preference Level (Extension)"
+* addItem.extension[preferenceLevel] ^definition = "This extension conveys the preference level that applies to the product."
+* addItem.extension[preferenceLevel] ^isModifier = false
+* addItem.extension contains $rtpbc-nextAvailableFillDate named nextAvailableFillDate 0..* MS
+* addItem.extension[nextAvailableFillDate] ^short = "Next Available Fill Date (Extension)"
+* addItem.extension[nextAvailableFillDate] ^definition = "This extension conveys the date on which a patient prescription will have passed the insurer's minimum consumption requirements and may be considered for dispensing."
+* addItem.extension[nextAvailableFillDate] ^isModifier = false
 * addItem.itemSequence 1.. MS
 * addItem.itemSequence ^label = "Associated request Item Sequence"
 * addItem.itemSequence ^short = "Associated request Item Sequence"
@@ -303,15 +319,19 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient = Reference(Patient/rtpbc-patient-03)
-* created = "2019-11-01T11:20:59-05:00"
+* created = "2025-12-11T11:20:59-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
 * request.identifier.value = "rtpbc-03"
 * outcome = #complete
 * disposition = "Processed successfully"
-* item.extension.url = $rtpbc-benefitRestriction
-* item.extension.valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
-* item.extension.url = $rtpbc-formularyStatus
-* item.extension.valueCoding = $rtpbc-formulary-status-cs#O "On Formulary"
+* item.extension[0].url = $rtpbc-benefitRestriction
+* item.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
+* item.extension[+].url = $rtpbc-formularyStatus
+* item.extension[=].valueCoding = $rtpbc-formulary-status-cs#O "On Formulary"
+* item.extension[+].url = $rtpbc-preferenceLevel
+* item.extension[=].valuePositiveInt = 2
+* item.extension[+].url = $rtpbc-nextAvailableFillDate
+* item.extension[=].valueDate = "2025-12-20"
 * item.itemSequence = 1
 * item.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
 * item.adjudication[=].amount.value = 40
@@ -326,8 +346,10 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.extension[=].valueBoolean = true
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
-* item.extension.url = $rtpbc-formularyStatus
-* item.extension.valueCoding = $rtpbc-formulary-status-cs#P "On Formulary/Preferred"
+* addItem.extension[+].url = $rtpbc-formularyStatus
+* addItem.extension[=].valueCoding = $rtpbc-formulary-status-cs#P "On Formulary/Preferred"
+* addItem.extension[+].url = $rtpbc-preferenceLevel
+* addItem.extension[=].valuePositiveInt = 1
 * addItem.itemSequence = 1
 * addItem.provider = Reference(Organization/rtpbc-organization-03m)
 * addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"

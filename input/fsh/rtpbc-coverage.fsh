@@ -1,7 +1,5 @@
-Alias: $coverage-class = http://terminology.hl7.org/CodeSystem/coverage-class
-
 Profile: RtpbcCoverage
-Parent: Coverage
+Parent: $us-core-coverage
 Id: rtpbc-coverage
 Title: "RTPBC Coverage"
 Description: "This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process"
@@ -9,7 +7,7 @@ Description: "This profile constrains the Coverage resource for carrying the pha
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2020-12-02T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -18,14 +16,9 @@ Description: "This profile constrains the Coverage resource for carrying the pha
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* subscriberId MS
 * subscriberId ^label = "Health Plan Cardholder ID"
 * subscriberId ^short = "Health Plan Cardholder ID"
 * subscriberId ^comment = "Either *PBM Member ID* (.class.type = 'rxid') or *Subscriber ID* must be populated"
-* beneficiary MS
-* payor ..1 MS
-* payor ^label = "Payer ID"
-* payor ^short = "Payer ID"
 * payor.identifier MS
 * payor.identifier ^label = "Payer ID"
 * payor.identifier ^short = "Payer ID"
@@ -33,7 +26,6 @@ Description: "This profile constrains the Coverage resource for carrying the pha
 * payor.identifier.value 1.. MS
 * payor.identifier.value ^label = "Payer ID Value"
 * payor.identifier.value ^short = "Payer ID Value"
-* class ..* MS
 * class ^label = "Pharmacy coverage identifiers"
 * class ^slicing.discriminator.type = #value
 * class ^slicing.discriminator.path = "type"
@@ -81,7 +73,9 @@ Usage: #example
 Description: "An example RTPBC Coverage"
 * meta.profile = $rtpbc-coverage
 * status = #active
+* subscriberId = "121212"
 * beneficiary = Reference(rtpbc-patient-03)
+* relationship = $subscriber-relationship#self
 * payor.identifier.value = "Pharmacy Plans US"
 * class[0].type = $coverage-class#rxbin
 * class[=].value = "BIN001"

@@ -1,18 +1,11 @@
 == Suppressed Messages ==
 
-# This implementation guide uses external code systems which are in THO but not supported by the terminology server
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the code cannot be validated 
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the code cannot be validated (from https://tx.fhir.org/r4)
+# This implementation guide uses external code systems which are listed in THO at https://terminology.hl7.org/external_code_systems.html but not supported by the terminology server
 A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the code cannot be validated (from https://tx.fhir.org/r4)
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://canadapost.ca/CodeSystem/ProvinceCodes' could not be found, so the value set cannot be expanded
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the value set cannot be expanded
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
-
-# US Realm SC and Cross Group Projects WG approved use of non-US Core MedicationRequest and Patient profiles for this IG's STU1 version. Will revisit during work on STU2
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage').baseDefinition: US FHIR Usage rules require that all profiles on Coverage derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest').baseDefinition: US FHIR Usage rules require that all profiles on MedicationRequest derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+The concepts in the value set include have not been validated because the terminology server https://terminologystandardsservice.ca/tx/fhir does not support batch validation (tests version < 1.7.8)
 
 # Temporarily suppressing this while we decide how to address terminology items in the STU2 IG
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
@@ -24,3 +17,14 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc
 # Have not implemented the new system for tracking conformance statements yet
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause
+
+# The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
+The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# The purpose of this Organization profile is specifically to represent a dispensing pharmacy organization, for which CLIA and NAIC identifiers are not used. 
+# The other identifiers in this slice, NPI an NCPDP Provider ID are both marked Must Suport and this is discussed in Must Support guidance in the IG.
+The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+
+# This warning is inherited from the US Core Coverage profile. The US Core QA indicates the issue is recognized and may be addressed in a future update
+The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated

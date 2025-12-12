@@ -23,7 +23,7 @@ Description: "This profile constrains a MessageHeader resource for use in a Real
 * focus ^slicing.discriminator.path = "$this"
 * focus ^slicing.rules = #open
 * focus contains rtpbc-request 1..1 MS
-* focus[rtpbc-request] only Reference($rtpbc-request-claim)
+* focus[rtpbc-request] only Reference(Claim)
 * focus[rtpbc-request] ^type.aggregation = #bundled
 * definition 1.. MS
 * definition = $rtpbc-request (exactly)

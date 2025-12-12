@@ -117,7 +117,7 @@ Description: "An example of the primary RTPBC request resource (Claim)"
 Instance: rtpbc-bundle-request-03-w-header
 InstanceOf: rtpbc-request-bundle
 Usage: #example
-Description: "An example RTPBC MedicationRequest"
+Description: "An example RTPBC Request"
 * meta.profile = $rtpbc-request-bundle
 * type = #message
 * timestamp = "2019-11-15T13:10:13-05:00"
@@ -169,5 +169,4 @@ Usage: #inline
 * item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
-
 

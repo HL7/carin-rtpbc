@@ -15,7 +15,7 @@ Description: "This profile builds on the US Core Organization to represent a pha
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * identifier 1.. MS
 * identifier ^label = "Pharmacy Identifier"
-* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier ^short = "Pharmacy Identifier"
@@ -24,8 +24,6 @@ Description: "This profile builds on the US Core Organization to represent a pha
 * identifier.system 1.. MS
 * identifier.value 1.. MS
 * identifier contains
-//    NPI 0..1 MS
-//    CLIA 0..0
     NcpdpProviderId 0..1 MS
 * identifier[NPI] ^label = "National Provider Identifier (NPI)"
 * identifier[NPI] ^definition = "The pharmacy's organizational NPI"
@@ -34,7 +32,7 @@ Description: "This profile builds on the US Core Organization to represent a pha
 * identifier[NcpdpProviderId] ^label = "NCPDP Provider ID"
 * identifier[NcpdpProviderId] ^short = "NCPDP Provider ID"
 * identifier[NcpdpProviderId] ^definition = "The pharmacy's NCPDP Provider ID"
-* identifier[NcpdpProviderId] ^patternIdentifier.system = $ncpdp-id
+* identifier[NcpdpProviderId] ^patternIdentifier.system = $ncpdp-id-cs
 * type 1..1 MS
 * type from $rtpbc-pharmacy-type-vs (extensible)
 * type ^label = "Pharmacy Type"
@@ -76,7 +74,7 @@ InstanceOf: rtpbc-pharmacy-organization
 Description: "An example RTPBC pharmacy (Organization), representing a retail pharmacy"
 * meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "9876543210"
+* identifier.value = "9876543213"
 * active = true
 * type = $pharmacy-type-cs#R "Retail"
 * name = "Hometown Drug"
@@ -92,7 +90,7 @@ Instance: rtpbc-organization-03ps
 InstanceOf: rtpbc-pharmacy-organization
 Description: "An example retail pharmacy identified using an NCPDP Provider ID"
 * meta.profile = $rtpbc-pharmacy-organization
-* identifier.system = $ncpdp-id
+* identifier.system = $ncpdp-id-cs
 * identifier.value = "0999123"
 * active = true
 * type = $pharmacy-type-cs#R "Retail"
@@ -111,7 +109,7 @@ InstanceOf: rtpbc-pharmacy-organization
 Usage: #example
 Description: "An example RTPBC pharmacy (FHIR Organization) representing a mail order pharmacy"
 * meta.profile = $rtpbc-pharmacy-organization
-* identifier.system = $ncpdp-id
+* identifier.system = $ncpdp-id-cs
 * identifier.value = "0999029"
 * active = true
 * type = $pharmacy-type-cs#M "Mail Order"

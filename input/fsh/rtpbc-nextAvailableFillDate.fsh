@@ -1,7 +1,7 @@
-Extension: RtpbcExtensionFormularyStatus
-Id: rtpbc-formularyStatus
-Title: "RTPBC formularyStatus Extension"
-Description: "This extension conveys the formulary status of a prescription product."
+Extension: RtpbcExtensionNextAvailableFillDate
+Id: rtpbc-nextAvailableFillDate
+Title: "RTPBC nextAvailableFillDate Extension"
+Description: "This extension conveys the date on which a patient prescription will have passed the insurer's minimum consumption requirements and may be considered for dispensing."
 Context: ClaimResponse.item, ClaimResponse.addItem
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 * ^extension[=].valueCode = #phx
@@ -9,7 +9,7 @@ Context: ClaimResponse.item, ClaimResponse.addItem
 * ^extension[=].valueInteger = 1
 * ^version = "1.0.0"
 * ^experimental = false
-* ^date = "2025-10-03T00:00:00-05:00"
+* ^date = "2025-12-03T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -18,9 +18,8 @@ Context: ClaimResponse.item, ClaimResponse.addItem
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* . 0..*
-* . ^short = "Formulary status."
-* . ^definition = "Formulary status that may apply to a prescription product and pharmacy combination."
+* ^context.type = #element
 * value[x] 1..1
-* value[x] only Coding
-* value[x] from $rtpbc-formulary-status-vs (extensible)
+* value[x] only date
+* value[x] ^short = "Next available fill date."
+* value[x] ^definition = "Date on which a patient prescription will have passed the insurer's minimum consumption requirements and may be considered for dispensing."
