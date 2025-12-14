@@ -55,7 +55,7 @@ Description: "This profile constrains a Bundle resource for use as the request i
 
 //-------------------
 
-Instance: rtpbc-bundle-request-03-price-source
+Instance: rtpbc-bundle-request-price-source
 InstanceOf: rtpbc-request-bundle
 Usage: #example
 Description: "An example RTPBC request bundle"
@@ -114,7 +114,7 @@ Description: "An example of the primary RTPBC request resource (Claim)"
 //------------------
 
 
-Instance: rtpbc-bundle-request-03-w-header
+Instance: rtpbc-bundle-request-03
 InstanceOf: rtpbc-request-bundle
 Usage: #example
 Description: "An example RTPBC Request"

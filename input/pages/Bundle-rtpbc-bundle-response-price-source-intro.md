@@ -13,6 +13,6 @@
 <li>a pharmacy Organization resource describes the alternative pharmacy option identified by the processor</li>
 </ul>
 <!-- 
-<div><img src="rtpbc-bundle-response-03-price-source.png" alt="bundle"></div>
+<div><img src="rtpbc-bundle-response-price-source.png" alt="bundle"></div>
 -->
 <br/>

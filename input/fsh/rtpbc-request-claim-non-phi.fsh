@@ -54,7 +54,7 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * patient ^label = "Request Patient Information"
 * patient ^short = "Request Patient Information"
 * patient ^definition = "No PHI is sent in this Patient profile"
-* patient.reference 1..1 MS
+* patient.reference 0..1 MS
 * patient.reference ^label = "Patient Reference"
 * patient.reference ^short = "Patient Reference"
 * patient.reference ^definition = "Reference to a Patient resource"

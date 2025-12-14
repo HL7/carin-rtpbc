@@ -15,7 +15,7 @@
 </ul>
 <br/>
 <!-- 
-<div><img src="rtpbc-bundle-request-03-price-source.png" alt="bundle"></div>
+<div><img src="rtpbc-bundle-request-price-source.png" alt="bundle"></div>
 <br/>
 -->
 
