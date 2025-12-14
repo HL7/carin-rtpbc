@@ -35,10 +35,11 @@ Description: "This profile provides minimal prescription characteristics for sub
 * medication[x].coding.code 0..1 MS 
 * medication[x].text 0..1 MS 
 * medication[x].text ^label = "Medication name, strength and dose form"
-* subject only Reference($rtpbc-patient-non-phi)
+//* subject only Reference($rtpbc-patient-non-phi)
 * subject ^label = "Patient - non-PHI"
 * subject ^short = "Patient - non-PHI"
-* subject ^definition = "Non-PHI representation of patient characteristics"
+* subject ^definition = "Non-PHI representation of patient characteristics. May be omitted"
+* subject.display 0..1 MS
 * authoredOn ^definition = "The actual or approximate date on which the prescription was written."
 * requester only Reference($us-core-practitioner)
 * requester ^label = "Prescriber"
@@ -90,6 +91,22 @@ Description: "An example non-PHI RTPBC MedicationRequest"
 //* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * medicationCodeableConcept.text = "Prozac 10mg Capsule"
 * subject = Reference(rtpbc-patient-non-phi-1)
+* authoredOn = "2025-11-01"
+* dispenseRequest.quantity.value = 60
+* dispenseRequest.quantity.unit = "{Each}"
+* dispenseRequest.performer = Reference(rtpbc-organization-03)
+
+
+Instance: rtpbc-medicationrequest-non-phi-2
+InstanceOf: rtpbc-medicationrequest-non-phi
+Description: "An example non-PHI RTPBC MedicationRequest"
+* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest-non-phi"
+* status = #draft
+* intent = #proposal
+* reportedBoolean = true
+//* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* medicationCodeableConcept.text = "Prozac 10mg Capsule"
+* subject.display = "unspecified"
 * authoredOn = "2025-11-01"
 * dispenseRequest.quantity.value = 60
 * dispenseRequest.quantity.unit = "{Each}"

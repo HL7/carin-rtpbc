@@ -17,9 +17,9 @@ The response in the RTPBC exchange is expected to be synchronous, with real-time
 
 ### Examples
 
-<a href="Bundle-rtpbc-bundle-request-03-w-header.html">Example bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
+<a href="Bundle-rtpbc-bundle-request-03.html">Example bundled RTPBC request to payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
-<a href="Bundle-rtpbc-bundle-response-03-w-header.html">Example bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
+<a href="Bundle-rtpbc-bundle-response-03.html">Example bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
 
 <br><br>

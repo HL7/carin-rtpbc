@@ -45,7 +45,7 @@ Description: "This profile constrains a Bundle resource for use as the response 
 * entry[pharmacy].resource only $rtpbc-pharmacy-organization
 
 
-Instance: rtpbc-bundle-response-03-price-source
+Instance: rtpbc-bundle-response-price-source
 InstanceOf: rtpbc-response-bundle
 Usage: #example
 Description: "An example RTPBC response bundle produced by cash pricing source"
@@ -77,7 +77,7 @@ Usage: #inline
 
 //--------------------------------
 
-Instance: rtpbc-bundle-response-03-w-header
+Instance: rtpbc-bundle-response-03
 InstanceOf: rtpbc-response-bundle
 Usage: #example
 Description: "An example RTPBC response bundle produced by the patient's insurer"

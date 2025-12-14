@@ -10,7 +10,7 @@ The patient application submits a request containing...
 * information from the prescription for which coverage and cost is desired
 * the patient's preferred pharmacy
 
-*Example:* <a href="Bundle-rtpbc-bundle-request-03-w-header.html">Bundled RTPBC request</a>
+*Example:* <a href="Bundle-rtpbc-bundle-request-03.html">Bundled RTPBC request</a>
 
 
 #### *Response content*
@@ -20,7 +20,7 @@ The responder...
 * determines if alternative medications are available and identifies coverage and cost for those
 * returns the gathered information to requester
 
-*Example:* <a href="Bundle-rtpbc-bundle-response-03-w-header.html">Bundled RTPBC response from payer/PBM</a>
+*Example:* <a href="Bundle-rtpbc-bundle-response-03.html">Bundled RTPBC response from payer/PBM</a>
 
 ### Content when submitting to a medication pricing source
 #### *Request content*
