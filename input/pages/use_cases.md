@@ -1,9 +1,20 @@
-### Goal
+### Goals
 
-The goal of the consumer-focused real-time pharmacy benefit check (consumer RTPBC) is to inform a patient of the cost and insurance coverage related to medications they've been prescribed. This involves two key aspects:
+<p class="modified-content">This section has be adjusted. <i>Modifications are italicized.</i></p> 
+
+The _goals_ of the consumer-focused real-time pharmacy benefit check (consumer RTPBC) _are:_
+- _informing a patient of insurance coverage related to medications they've been prescribed, including out-of-pocket costs and coverage restrictions_
+- _providing information about cash pricing and discounts, as well as other sources of patient support available for the medication._
+
+This involves two key aspects:
 
 * **Use case 1:** Enable the patient to find out how their medications will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
-* **Use case 2:** Help the patient discover discount pricing available for the medication. 
+* **Use case 2:** Help the patient discover discount pricing _or other related information_ available for the medication. 
+
+_Retrieving insurance member-specific information requires that the full RTPBC request which contains individually-identifiable information such as patient demographics and insurance details which enable the insurer to locate the specific member coverage on which to base its response._
+
+_However, when requesting non-patient-specific information such as cash pricing, the Non-PHI RTPBC request may be used._
+
   <br/>
 
 ### Usage context
@@ -27,10 +38,12 @@ At a high level, the process looks like this...
 * a **medication pricing information source** 
 
 ### Consumer App Responsibilities
+<p class="modified-content">This section has be adjusted. <i>Modifications are italicized.</i></p> 
 
 *  the patient's app gathers information about the prescription... entered by the patient or imported from another source
-*  the patient provides coverage information from their insurance card, or the app retrieves it using an eligibility service (outside the scope of this guide)
-*  the app packages up the patient, coverage, prescription and preferred pharmacy information in HL7 FHIR&reg; resources and submits them to the patient's insurer
+*  the patient provides coverage information from _their physical insurance card or [CARIN Digital Insurance Card](https://hl7.org/fhir/us/insurance-card)_, or the app retrieves it using an eligibility service
+*  _when retrieving patient-specific information such as insurance coverage details,_ the app packages up the patient, coverage, prescription and preferred pharmacy information in HL7 FHIR resources and submits them _using the [RTPBC Request](StructureDefinition-rtpbc-medicationrequest-non-phi.html)_ to the patient's insurer _or other data source_
+*  _when retrieving non-patient-specific information, the app supplies_only non-patient-identifiable prescription, pharmacy and insurance information in the [Non-PHI RTPBC Request](StructureDefinition-rtpbc-medicationrequest-non-phi.html)_
 *  the app interprets and presents the returned information in an understandable way, possibly presenting insurance coverage alongside cash or discount pricing gathered from other sources
 
 ### Insurer Responsibilities 
@@ -38,11 +51,14 @@ At a high level, the process looks like this...
 *  determines the patient cost and coverage details for the requested pharmacy and potentially for other pharmacy options--such as a mail service pharmacy
 *  also checks for preferred alternative medications with better coverage under the patient's plan, and returns cost, coverage and pharmacy options for those as well
 
-#### Medication Pricing Source Responsibilities
+#### Other Data Source Source Responsibilities
+<p class="modified-content">This section has be adjusted. <i>Modifications are italicized.</i></p> 
 
 *  determines the price for the requested medication and pharmacy combination and other medication/pharmacy options
 *  identifies discounts that apply, related to coupons or memberships
+_*  or identifies other medication-related information or services to be presented to the patient_
 
+#### Error handling
 If the insurer or medication pricing source cannot complete processing of the request, it returns information about the exception that occurred. See <a href="error_handling.html">the Error Handling page</a>
 
 ### Related information flows outside of consumer RTPBC
