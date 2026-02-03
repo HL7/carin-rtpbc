@@ -34,7 +34,8 @@ Description: "This profile constrains a Bundle resource for use as the response 
     messageheader 1..1 MS and
     claimresponse 1..1 MS and
     patient 1..1 MS and
-    pharmacy 0..* MS
+    pharmacy 0..* MS and
+    coverage 0..* MS
 * entry[messageheader].resource 1..1 MS
 * entry[messageheader].resource only $rtpbc-response-messageheader
 * entry[claimresponse].resource 1..1 MS
@@ -43,6 +44,8 @@ Description: "This profile constrains a Bundle resource for use as the response 
 * entry[patient].resource only $rtpbc-patient
 * entry[pharmacy].resource 1..1 MS
 * entry[pharmacy].resource only $rtpbc-pharmacy-organization
+* entry[coverage].resource 1..1 MS
+* entry[coverage].resource only $rtpbc-coverage
 
 
 Instance: rtpbc-bundle-response-price-source
@@ -150,4 +153,18 @@ Usage: #inline
 * addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
 * addItem.adjudication[=].amount.value = 50
 * addItem.adjudication[=].amount.currency = #USD
+
+//--------------------------------
+
+Instance: rtpbc-messageheader-response-discount-card
+InstanceOf: rtpbc-response-messageheader
+Usage: #inline
+* meta.profile = $rtpbc-response-messageheader
+* eventCoding = $rtpbc-event-type-cs#rtpbc-response "RTPBC Response"
+* source.name = "GoodPricing"
+* source.endpoint = "http://example.org/GoodPricing/fhir"
+* response.identifier = "rtpbc-messageheader-request-03"
+* response.code = #ok
+* focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-discount-card)
+* definition = $rtpbc-response
 

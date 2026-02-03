@@ -62,12 +62,11 @@ This implementation guide supports military and Canadian addresses for patients 
 
 The guide is organized into the following sections:
 
-- [Use Case Overview](use_case.html) describes the RTPBC use case, participants and high-level exchange flows.
+- [Use Case Overview](use_cases.html) describes the RTPBC use case, participants and high-level exchange flows.
 - [Information Content](information_content_and_fhir_resources.html) describes what's in the RTPBC request and response.
 - [Business Rules](business_rules.html) highlights non-technical content and behavior expectations for requesters and responders.
 - [Submission Method](submission_method.html) provides key points about the IG's use of FHIR messaging.
 - [Error Handling](error_handling.html) sets expectations on reporting technical and business response errors.
-- [Mappings to Related Standards](mappings.html) describes how FHIR content relates to other standards use in the larger PDMP ecosystem.
 - [Security](security.html) provides direction on use of SMART on FHIR to secure RTPBC exchanges.
 - [Provider vs Consumer RTPBC](consumer_vs_provider_rtpbc.html) provides a comparison of this guide to provider-facing messaging defined in the NCPDP RTPB standard.
 - [Artifacts](artifacts.html) contains the FHIR profiles and other artifacts defined in this IG.

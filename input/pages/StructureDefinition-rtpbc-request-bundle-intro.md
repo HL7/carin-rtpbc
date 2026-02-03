@@ -1,4 +1,12 @@
-<br>The request Bundle profile identifies the resources to be submitted in an RTPBC request. The following are used in all circumstances and have a minimum cardinality of 1:
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+<blockquote class="stu-note">
+	The STU2 version of the Consumer RTPBC guide adds 
+</blockquote>
+</div>
+
+<br>
+
+The request Bundle profile identifies the resources to be submitted in an RTPBC request. The following are used in all circumstances and have a minimum cardinality of 1:
 * MessageHeader
 * Claim
 * Patient

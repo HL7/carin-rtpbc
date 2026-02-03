@@ -55,63 +55,6 @@ Description: "This profile constrains a Bundle resource for use as the request i
 
 //-------------------
 
-Instance: rtpbc-bundle-request-price-source
-InstanceOf: rtpbc-request-bundle
-Usage: #example
-Description: "An example RTPBC request bundle"
-* meta.profile = $rtpbc-request-bundle
-* type = #message
-* timestamp = "2019-11-15T13:10:13-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-03"
-* entry[=].resource = rtpbc-messageheader-request-03
-* entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-03"
-* entry[=].resource = rtpbc-claim-03
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03"
-* entry[=].resource = rtpbc-patient-03
-* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-03"
-* entry[=].resource = rtpbc-medicationrequest-03
-* entry[+].fullUrl = "http://example.org/my-app/Practitioner/rtpbc-practitioner-03"
-* entry[=].resource = rtpbc-practitioner-03
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
-* entry[=].resource = rtpbc-organization-03
-
-Instance: rtpbc-messageheader-request-03
-InstanceOf: rtpbc-request-messageheader
-Usage: #inline
-//Description: "An example request MessageHeader"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader"
-* eventCoding = $rtpbc-event-type-cs#rtpbc-request "RTPBC Request"
-* source.name = "MyPatientApp"
-* source.endpoint = "http://example.org/MyPatientApp"
-* focus = Reference(Claim/rtpbc-claim-03)
-* definition = "http://hl7.org/fhir/us/carin-rtpbc/MessageDefinition/rtpbc-request"
-
-Instance: rtpbc-claim-03
-InstanceOf: rtpbc-request-claim
-//Usage: #inline
-Description: "An example of the primary RTPBC request resource (Claim)"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim"
-* identifier.value = "rtpbc-03"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient = Reference(rtpbc-patient-03)
-* created = "2019-11-01T11:20:54-05:00"
-* provider = Reference(Organization/rtpbc-organization-03)
-* priority = $processpriority-cs#normal "Normal"
-* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-03)
-* careTeam.sequence = 1
-* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-03)
-* insurance.sequence = 1
-* insurance.focal = true
-* insurance.coverage.identifier.value = "GOODPRICING"
-* item.sequence = 1
-* item.careTeamSequence = 1
-* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
-* item.quantity.value = 60
-* item.quantity.unit = "{Each}"
-
-//------------------
 
 
 Instance: rtpbc-bundle-request-03

@@ -27,7 +27,7 @@ Description: "This profile builds on the US Core Organization to represent a pha
     NcpdpProviderId 0..1 MS
 * identifier[NPI] ^label = "National Provider Identifier (NPI)"
 * identifier[NPI] ^definition = "The pharmacy's organizational NPI"
-* identifier[NPI] ^requirements = "Populate with the organizational NPI that most specifically represents the intended pharmacy location"
+* identifier[NPI] ^requirements = "Populate with the Type 2 organizational NPI that most specifically represents the intended pharmacy location"
 * identifier[NPI] ^patternIdentifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier[NcpdpProviderId] ^label = "NCPDP Provider ID"
 * identifier[NcpdpProviderId] ^short = "NCPDP Provider ID"
