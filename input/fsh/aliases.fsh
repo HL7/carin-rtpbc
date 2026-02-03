@@ -2,13 +2,9 @@
 
 // Core FHIR resources and extensions
 // maybe needed:
-//Alias: $detectedissue = http://hl7.org/fhir/StructureDefinition/DetectedIssue
-//Alias: $operation-outcome = http://hl7.org/fhir/StructureDefinition/OperationOutcome
-//Alias: $fhir-resource = http://hl7.org/fhir/StructureDefinition/Resource   // confirm needed
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.2.0
 
 // HL7 terminology
-//Alias: $taxonomy = http://nucc.org/provider-taxonomy
-//Alias: $operation-event-type = urn:ietf:rfc:3986
 Alias: $ndc = http://hl7.org/fhir/sid/ndc
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
@@ -73,7 +69,6 @@ Alias: $rtpbc-response-messageheader = http://hl7.org/fhir/us/carin-rtpbc/Struct
 Alias: $rtpbc-request-claim = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim
 Alias: $rtpbc-request-claim-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim-non-phi
 Alias: $rtpbc-patient = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient
-Alias: $rtpbc-patient-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-patient-non-phi
 Alias: $rtpbc-medicationrequest = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest
 Alias: $rtpbc-medicationrequest-non-phi = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-medicationrequest-non-phi
 Alias: $rtpbc-pharmacy-organization = http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-pharmacy-organization

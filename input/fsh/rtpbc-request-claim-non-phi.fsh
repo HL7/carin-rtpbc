@@ -49,19 +49,29 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * use ^short = "Processing Mode"
 * use ^definition = "The mode of processing being requested of the payer/PBM"
 * use ^comment = "Value is always 'predetermination'"
-* patient only Reference($rtpbc-patient-non-phi)
-* patient MS
-* patient ^label = "Request Patient Information"
-* patient ^short = "Request Patient Information"
-* patient ^definition = "No PHI is sent in this Patient profile"
-* patient.reference 0..1 MS
-* patient.reference ^label = "Patient Reference"
-* patient.reference ^short = "Patient Reference"
-* patient.reference ^definition = "Reference to a Patient resource"
+* patient.extension 1..* MS
+* patient.extension contains
+    $data-absent-reason named data-masked 1..1 MS
+* patient.extension[data-masked].valueCode = #masked (exactly)
+* patient ^label = "Patient information (masked)"
+* patient ^short = "Patient information (masked)"
+* patient ^definition = "No personally-identifiable information is included in this profile. Instead, the patient element is populated with a Data Absent Reason = 'masked'"
+* patient.reference 0..0
+* patient.type 0..0
+* patient.identifier 0..1
+* patient.identifier ^label = "Unique, non-personally identifiable code"
+* patient.identifier ^short = "Unique, non-personally identifiable code"
+* patient.identifier ^definition = "A unique, non-personally identifiable code such as an anonymous account identifier"
+* patient.identifier ^comment = "The patient.identifier element in this profile is limited to only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server."
+* patient.display 0..0
 * created MS
 * created ^label = "Created DateTime"
 * created ^short = "Created DateTime"
 * created ^definition = "The date and time on which this RTBPC request was created"
+* insurer 0..0
+* insurer ^label = "Insurer (masked)"
+* insurer ^short = "Insurer (masked)"
+* insurer ^definition = "No personally-identifiable information is included in this profile. Insurance information is not included because it could potentially be used to re-identify patients"
 * provider only Reference($rtpbc-pharmacy-organization)
 * provider MS
 * provider ^label = "Preferred Pharmacy"
@@ -89,51 +99,36 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * prescription ^short = "Prescription Reference"
 * prescription ^definition = "Reference to the pertinent prescription information in a MedicationRequest resource."
 * prescription.reference 1.. MS
-* careTeam 0..1 MS
-* careTeam ^label = "Prescriber"
-* careTeam ^short = "Prescriber"
-* careTeam ^definition = "Prescriber reference"
-* careTeam ^comment = "The careTeam represents the specific practitioner that prescribed the medication. Thus, a single careTeam element is included in the RTPBC request"
-* careTeam ^requirements = "The specific practitioner that prescribed the medication."
-* careTeam.sequence = 1 (exactly)
-* careTeam.sequence MS
-* careTeam.provider 1..1 MS
-* careTeam.provider only Reference($us-core-practitioner)
-* careTeam.provider ^label = "Prescriber"
-* careTeam.provider ^short = "Prescriber"
-* careTeam.provider ^definition = "Prescriber of the item being submitted"
-* careTeam.provider.reference 0..1 MS
-* careTeam.provider.reference ^label = "Prescriber Reference"
-* careTeam.provider.reference ^short = "Prescriber Reference"
-* careTeam.provider.reference ^definition = "Reference to a Practitioner resource that represents the prescriber"
-* insurance ^label = "Pharmacy Coverage"
-* insurance ^short = "Pharmacy Coverage"
-* insurance ^definition = "The patient's pharmacy coverage information"
+* careTeam 0..0
+* careTeam ^label = "Care team information (masked)"
+* careTeam ^short = "Care team information (masked)"
+* careTeam ^definition = "No personally-identifiable information is included in this profile. Care team information is not included because it can be used to re-identify patients in some circumstances"
+* insurance 1..1
+* insurance ^label = "Patient insurance information (masked)"
+* insurance ^short = "Patient insurance information (masked)"
+* insurance ^comment = "Only one set of coverage is submitted in the request. Value is always '1'"
 * insurance.sequence = 1 (exactly)
-* insurance.sequence MS
-* insurance.sequence ^comment = "Only one set of coverage is submitted in the request. Value is always '1'"
-* insurance.focal = true (exactly)
-* insurance.focal MS
-* insurance.coverage 1..1
-* insurance.coverage only Reference($rtpbc-coverage)
-* insurance.coverage ^label = "Pharmacy Coverage Reference"
-* insurance.coverage ^short = "Pharmacy Coverage Reference"
-* insurance.coverage ^definition = "Reference to a Coverage resource containing identification of the patient's pharmacy coverage"
-* insurance.coverage.reference 0..1 MS
-* insurance.coverage.reference ^label = "Pharmacy Coverage Reference"
-* insurance.coverage.reference ^short = "Pharmacy Coverage Reference"
-* insurance.coverage.reference ^definition = "Reference to a Coverage resource containing identification of the patient's pharmacy coverage"
+* insurance.focal = false (exactly)
+* insurance.focal ^comment = "No insurance coverage information is contained in this profile because it can contain identifiers that can be used to re-identify patients"
+* insurance.coverage.extension 1..* MS
+* insurance.coverage.extension contains
+    $data-absent-reason named data-masked 1..1 MS
+* insurance.coverage.extension[data-masked].valueCode = #masked (exactly)
+* insurance.coverage ^label = "Insurance Coverage Masked"
+* insurance.coverage ^short = "Insurance Coverage Masked"
+* insurance.coverage ^definition = "No personally-identifiable information is included in this profile. Insurance information is not included because it can contain identifiers that can be used to re-identify patients. Instead, the insurance element is populated with a Data Absent Reason = 'masked'"
+* insurance.coverage.reference 0..0
+* insurance.coverage.type 0..0
+* insurance.coverage.identifier 0..0
+* insurance.coverage.display 0..0
 * item 1..1 MS
 * item ^label = "Max 1 item per request"
 * item ^short = "Max 1 item per request"
 * item.sequence = 1 (exactly)
 * item.sequence MS
 * item.sequence ^comment = "A maximum of one product is submitted per request. Value is always '1'"
-* item.careTeamSequence 1..1 MS
-* item.careTeamSequence ^label = "Care Team Sequence ID Reference"
-* item.careTeamSequence ^short = "Care Team Sequence ID Reference"
-* item.careTeamSequence ^definition = "A reference to the Care Team composite in this resource that reflects the prescriber"
-* item.careTeamSequence ^comment = "Populate with a reference to .careTeam.sequence.@id"
+* item.careTeamSequence 0..0
+* item.careTeamSequence ^comment = "No personally-identifiable information is included in this profile. Care team information is not included because it can be used to re-identify patients in some circumstances"
 * item.productOrService MS
 * item.productOrService from $rtpbc-prescribable-product-code-vs (extensible)
 * item.productOrService ^label = "Prescribed Product"

@@ -36,20 +36,19 @@ The responder...
 
 #### *Request content*
 The patient application submits a request containing...
-* _non-patient-identifiable information from the prescription: medication and quantity_
+_* non-patient-identifiable information from the prescription: medication and quantity_
 * _the patient's preferred pharmacy or location (ZIP Code) of the pharmacy_
-* _non-patient-identifiable coverage information: insurance type_
+* non-patient-identifiable coverage information: insurance type
 
-*Example:* _[Non-PHI RTPBC request](Bundle-rtpbc-bundle-request-non-phi-2.html)_
+*Example:* _[Non-PHI RTPBC request](Bundle-rtpbc-bundle-request-non-phi-1.html)_
 
-#### *Response content*
+#### Response content
 The responder... 
 * determines:
   * pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships
-  _* or other medication-related information_
 * returns the gathered information to requester
 
-*Example:* _[RTPBC response from a pricing source](rtpbc-bundle-response-price-source)_
+*Example:* _[RTPBC response from a pricing source](file:///C:/FHIR/IGs/carin-rtpbc-new/output/en/Bundle-rtpbc-bundle-response-price-source.html)_
 
 
 ### Resources used in the exchange

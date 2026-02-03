@@ -1,5 +1,5 @@
 Profile: RtpbcMedicationRequestNonPHI
-Parent: MedicationRequest
+Parent: $us-core-medicationrequest
 Id: rtpbc-medicationrequest-non-phi
 Title: "RTPBC Medication Request - Non-PHI"
 Description: "This profile provides minimal prescription characteristics for submission in an RTPBC request to data sources that can provide benefit or price information without receiving patient details."
@@ -35,16 +35,22 @@ Description: "This profile provides minimal prescription characteristics for sub
 * medication[x].coding.code 0..1 MS 
 * medication[x].text 0..1 MS 
 * medication[x].text ^label = "Medication name, strength and dose form"
-//* subject only Reference($rtpbc-patient-non-phi)
-* subject ^label = "Patient - non-PHI"
-* subject ^short = "Patient - non-PHI"
-* subject ^definition = "Non-PHI representation of patient characteristics. May be omitted"
-* subject.display 0..1 MS
+* subject.extension 1..* MS
+* subject.extension contains
+    $data-absent-reason named data-masked 1..1 MS
+* subject.extension[data-masked].valueCode = #masked (exactly)
+* subject ^label = "Patient Information Masked"
+* subject ^short = "Patient Information Masked"
+* subject ^definition = "No personally-identifiable information is included in this profile. Instead, the patient element is populated with a Data Absent Reason = 'masked'"
+* subject.reference 0..0
+* subject.type 0..0
+* subject.identifier 0..0
+* subject.display 0..0
 * authoredOn ^definition = "The actual or approximate date on which the prescription was written."
-* requester only Reference($us-core-practitioner)
-* requester ^label = "Prescriber"
-* requester ^short = "Prescriber"
-* requester ^definition = "The prescriber of the medication being requested"
+* requester 0..0
+* requester ^label = "Prescriber Information Masked"
+* requester ^short = "Prescriber Information Masked"
+* requester ^definition = "No personally-identifiable information is included in this profile. The requesting provider is not included because it can be used to re-identify patients in some circumstances"
 * reasonCode ^label = "Diagnosis"
 * dispenseRequest 1.. MS
 * dispenseRequest.quantity 1..1 MS
@@ -90,7 +96,8 @@ Description: "An example non-PHI RTPBC MedicationRequest"
 * reportedBoolean = true
 //* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * medicationCodeableConcept.text = "Prozac 10mg Capsule"
-* subject = Reference(rtpbc-patient-non-phi-1)
+* subject.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* subject.extension[data-masked].valueCode = #masked
 * authoredOn = "2025-11-01"
 * dispenseRequest.quantity.value = 60
 * dispenseRequest.quantity.unit = "{Each}"
@@ -106,7 +113,8 @@ Description: "An example non-PHI RTPBC MedicationRequest"
 * reportedBoolean = true
 //* medicationCodeableConcept = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * medicationCodeableConcept.text = "Prozac 10mg Capsule"
-* subject.display = "unspecified"
+* subject.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* subject.extension[data-masked].valueCode = #masked
 * authoredOn = "2025-11-01"
 * dispenseRequest.quantity.value = 60
 * dispenseRequest.quantity.unit = "{Each}"

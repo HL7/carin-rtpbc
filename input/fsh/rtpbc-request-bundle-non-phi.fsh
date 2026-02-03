@@ -33,25 +33,16 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * entry contains
     messageheader 1..1 MS and
     claim 1..1 MS and
-    patient 0..1 MS and
     medicationrequest 1..1 MS and
-    pharmacy 0..1 MS and
-    practitioner 0..1 MS and
-    coverage 0..1 MS
+    pharmacy 0..1 MS
 * entry[messageheader].resource 1..1 MS
 * entry[messageheader].resource only $rtpbc-request-messageheader
 * entry[claim].resource 1..1 MS
 * entry[claim].resource only $rtpbc-request-claim-non-phi
-* entry[patient].resource 1..1 MS
-* entry[patient].resource only $rtpbc-patient-non-phi
 * entry[medicationrequest].resource 1..1 MS
 * entry[medicationrequest].resource only $rtpbc-medicationrequest-non-phi
 * entry[pharmacy].resource 1..1 MS
 * entry[pharmacy].resource only $rtpbc-pharmacy-organization
-* entry[practitioner].resource 1..1 MS
-* entry[practitioner].resource only $us-core-practitioner
-* entry[coverage].resource 1..1 MS
-* entry[coverage].resource only $rtpbc-coverage
 
 // -----------
 // Non-PHI request 1
@@ -68,8 +59,6 @@ Description: "An example non-PHI RTPBC Request"
 * entry[=].resource = rtpbc-messageheader-request-non-phi-1
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-non-phi-1"
 * entry[=].resource = rtpbc-claim-non-phi-1
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-non-phi-1"
-* entry[=].resource = rtpbc-patient-non-phi-1
 * entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-non-phi-1"
 * entry[=].resource = rtpbc-medicationrequest-non-phi-1
 * entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
@@ -85,6 +74,7 @@ Usage: #inline
 * focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-non-phi-1)
 * definition = $rtpbc-request
 
+
 Instance: rtpbc-claim-non-phi-1
 InstanceOf: rtpbc-request-claim-non-phi
 Description: "An example of the non-PHI RTPBC request resource (Claim)"
@@ -93,79 +83,18 @@ Description: "An example of the non-PHI RTPBC request resource (Claim)"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(rtpbc-patient-non-phi-1)
+* patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* patient.extension[data-masked].valueCode = #masked
 * created = "2025-11-01T11:20:54-05:00"
 * provider = Reference(Organization/rtpbc-organization-03)
 * priority = $processpriority-cs#normal "Normal"
 * prescription = Reference(MedicationRequest/rtpbc-medicationrequest-non-phi-1)
-* careTeam.sequence = 1
-* careTeam.provider.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* careTeam.provider.extension.valueCode = #masked
-* careTeam.provider.display = "Masked"
 * insurance.sequence = 1
-* insurance.focal = true
-* insurance.coverage.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* insurance.coverage.extension.valueCode = #masked
-* insurance.coverage.display = "Masked"
+* insurance.focal = false
+* insurance.coverage.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+* insurance.coverage.extension[data-masked].valueCode = #masked
 * item.sequence = 1
-* item.careTeamSequence = 1
-//* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
-* item.productOrService.text = "Prozac 10mg Capsule"
-* item.quantity.value = 60
-* item.quantity.unit = "{Each}"
-
-
-// -----------
-// Non-PHI request 2
-// -----------
-
-Instance: rtpbc-bundle-request-non-phi-2
-InstanceOf: rtpbc-request-bundle-non-phi
-Usage: #example
-Description: "An example non-PHI RTPBC Request that omits the Patient resource"
-* meta.profile = $rtpbc-request-bundle-non-phi
-* type = #message
-* timestamp = "2025-11-15T13:10:13-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-non-phi-2"
-* entry[=].resource = rtpbc-messageheader-request-non-phi-2
-* entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-non-phi-2"
-* entry[=].resource = rtpbc-claim-non-phi-2
-* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-non-phi-2"
-* entry[=].resource = rtpbc-medicationrequest-non-phi-2
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
-* entry[=].resource = rtpbc-organization-03
-
-Instance: rtpbc-messageheader-request-non-phi-2
-InstanceOf: rtpbc-request-messageheader
-Usage: #inline
-* meta.profile = $rtpbc-request-messageheader
-* eventCoding = $rtpbc-event-type-cs#rtpbc-request "RTPBC Request"
-* source.name = "MyPatientApp"
-* source.endpoint = "http://example.org/MyPatientApp"
-* focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-non-phi-2)
-* definition = $rtpbc-request
-
-Instance: rtpbc-claim-non-phi-2
-InstanceOf: rtpbc-request-claim-non-phi
-Description: "An example of the non-PHI RTPBC request resource (Claim) that doesn't reference a Patient resource"
-* meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim-non-phi"
-* identifier.value = "rtpbc-non-phi-2"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient.display = "unspecified"
-* created = "2025-11-01T11:20:54-05:00"
-* provider = Reference(Organization/rtpbc-organization-03)
-* priority = $processpriority-cs#normal "Normal"
-* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-non-phi-2)
-* careTeam.sequence = 1
-* careTeam.provider.display = "unspecified"
-* insurance.sequence = 1
-* insurance.focal = true
-* insurance.coverage.display = "unspecified"
-* item.sequence = 1
-* item.careTeamSequence = 1
-//* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * item.productOrService.text = "Prozac 10mg Capsule"
 * item.quantity.value = 60
 * item.quantity.unit = "{Each}"
