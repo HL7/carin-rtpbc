@@ -62,3 +62,6 @@ WARNING: ClaimResponse/rtpbc-claim-response-discount-card: ClaimResponse.patient
 WARNING: ClaimResponse/rtpbc-claim-response-discount-card: ClaimResponse.insurer: A Reference without an actual reference or identifier should have a display
 WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.patient: A Reference without an actual reference or identifier should have a display
 WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.insurer: A Reference without an actual reference or identifier should have a display
+
+# TEMP - I'm not sure what this refers to... just started popping up on Mar 6
+The link 'http://hl7.org/fhir/us/core/ValueSet/simple-language' for "http://hl7.org/fhir/us/core/ValueSet/simple-language" cannot be resolved
