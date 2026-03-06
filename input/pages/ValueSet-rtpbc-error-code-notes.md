@@ -1,9 +1,14 @@
-<p>﻿All codes are from the licensed NCPDP Reject Code (511-FB) code set, maintained by the National Council for Prescription Drug Programs.
-See <a href="https://terminology.hl7.org/CodeSystem-NCPDPRejectCode.html">NCPDP Reject Code (NCPDP ECL: 511-FB)</a></p>
-<h3>Concept examples</h3> 
+All codes are from the licensed NCPDP Reject Code (511-FB) code set, maintained by the National Council for Prescription Drug Programs.
+See [NCPDP Reject Code (NCPDP ECL: 511-FB)](https://terminology.hl7.org/NamingSystem-NCPDPRejectCode.html)
 
-<p>The full, up-to-date content of the NCPDP Reject Code (511-FB) code set is only available to NCPDP members.</p>
-<p>However, a past version of the code set is publicly available in the AHRQ United States Health Information Knowledgebase (USHIK). Below is a subset of concepts from that public source, for illustration purposes.</p>
+<p></p>
+
+### Concept examples
+
+The full, up-to-date content of the NCPDP Reject Code (511-FB) code set is only available to NCPDP members.
+
+Below are examples of those concepts for illustration purposes.
+
 <table border="1">
 <tr><td><b>Code</b></td><td><b>Display</b></td></tr>
 <tr><td>PJ</td><td>M/I Request Insurance Segment</td></tr>
@@ -39,4 +44,5 @@ See <a href="https://terminology.hl7.org/CodeSystem-NCPDPRejectCode.html">NCPDP 
 <tr><td>10</td><td>M/I Patient Gender Code</td></tr>
 </table>
 
-<br/>
+<p></p>
+<p></p>

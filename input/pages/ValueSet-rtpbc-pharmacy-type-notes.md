@@ -1,8 +1,15 @@
-<p>﻿All codes are from the licensed NCPDP Pharmacy Type (955-HR) code set, maintained by the National Council for Prescription Drug Programs.
+
+### Concept examples
+
+All codes are from the licensed NCPDP Pharmacy Type (955-HR) code set, maintained by the National Council for Prescription Drug Programs.
+See [NCPDP Pharmacy Type (NCPDP ECL: 955-HR)](https://terminology.hl7.org/NamingSystem-NCPDPPharmacyType.html)
+
 <h3>Concept examples</h3> 
 
-<p>The up-to-date content of the NCPDP Pharmacy Type (955-HR) code set is available to NCPDP members.</p>
-<p>However, a past version of the code set is publicly available in the AHRQ United States Health Information Knowledgebase (USHIK). Below is the full set of concepts from that public source.</p>
+The up-to-date content of the NCPDP Pharmacy Type (955-HR) code set is available to NCPDP members.
+
+Below are examples of those concepts for illustration purposes.
+
 <table border="1">
 <tr><td><b>Code</b></td><td><b>Display</b></td></tr>
 <tr><td>R</td><td>Retail</td></tr>

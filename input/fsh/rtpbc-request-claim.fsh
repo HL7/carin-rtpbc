@@ -162,3 +162,28 @@ Description: "This profile constrains the Claim resource so that it can serve as
 * item.quantity.unit ^short = "Billing unit of measure"
 * item.quantity.unit ^definition = "Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)"
 * item.quantity.unit ^binding.description = "Billing quantity unit of measure"
+
+Instance: rtpbc-claim-03a
+InstanceOf: rtpbc-request-claim
+Usage: #inline
+* meta.profile = $rtpbc-request-claim
+* identifier.value = "rtpbc-03a"
+* status = #active
+* type = $claim-type-cs#pharmacy "Pharmacy"
+* use = #predetermination
+* patient = Reference(rtpbc-patient-03)
+* created = "2019-11-01T11:20:54-05:00"
+* provider = Reference(Organization/rtpbc-organization-03)
+* priority = $processpriority-cs#normal "Normal"
+* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-03)
+* careTeam.sequence = 1
+* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-03)
+* insurance.sequence = 1
+* insurance.focal = true
+* insurance.coverage = Reference(Coverage/rtpbc-coverage-01)
+* item.sequence = 1
+* item.careTeamSequence = 1
+* item.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* item.quantity.value = 60
+* item.quantity.unit = "{Each}"
+

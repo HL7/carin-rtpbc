@@ -37,12 +37,6 @@ WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[1].resource/*Claim/
 WARNING: Claim/rtpbc-claim-non-phi-1: Claim.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
 WARNING: Claim/rtpbc-claim-non-phi-2: Claim.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
 
-# The Non-PHI MedicationRequest profile excludes personally-identifiable information. The subject.display element in this profile is not used (0..0).
-WARNING: Bundle/rtpbc-bundle-request-non-phi-1: Bundle.entry[2].resource/*MedicationRequest/rtpbc-medicationrequest-non-phi-1*/.subject: A Reference without an actual reference or identifier should have a display
-WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[2].resource/*MedicationRequest/rtpbc-medicationrequest-non-phi-2*/.subject: A Reference without an actual reference or identifier should have a display
-WARNING: MedicationRequest/rtpbc-medicationrequest-non-phi-1: MedicationRequest.subject: A Reference without an actual reference or identifier should have a display
-WARNING: MedicationRequest/rtpbc-medicationrequest-non-phi-2: MedicationRequest.subject: A Reference without an actual reference or identifier should have a display
-
 # Have not yet marked conformance clauses
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'SHALL: '
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'dosageInstruction SHOULD be used when determining days supply'
@@ -51,8 +45,20 @@ The html source contains the word 'SHOULD' but it is not in a text phrase marked
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'When a party that has implemented the responder role of this implementation guide and can also respond to the provider-focused NCPDP Real-time Prescription Benefit (RTPB) transaction, it SHALL ensure that it returns consistent values for information that is common between the two standards.'
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set. '
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'The following SMART on FHIR Capability Sets SHOULD be supported when retrieving from RTPBC data sources that return patient-specific information–such as an insurer system that returns responses containing a member's benefit balances and coverage information.'
-INFORMATION: en/error_handling.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set.  'cxd
+INFORMATION: en/error_handling.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set.  '
+INFORMATION: en/StructureDefinition-rtpbc-request-claim-non-phi.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The patient.identifier element in this profile is available to be populated but SHALL contain only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server.  '
+INFORMATION: en/error_handling.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set.  '
+
 
 # Receiving an error related to expansion-parameters described in this Zulip thread as caused by a publisher issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
+# The IG includes profiles from which personally-identifiable information is omitted. The display elements below are in the masked elements
+WARNING: Bundle/rtpbc-bundle-response-discount-card: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-discount-card*/.patient: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-response-discount-card: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-discount-card*/.insurer: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-response-price-source: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-price-source*/.patient: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-response-price-source: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-price-source*/.insurer: A Reference without an actual reference or identifier should have a display
+WARNING: ClaimResponse/rtpbc-claim-response-discount-card: ClaimResponse.patient: A Reference without an actual reference or identifier should have a display
+WARNING: ClaimResponse/rtpbc-claim-response-discount-card: ClaimResponse.insurer: A Reference without an actual reference or identifier should have a display
+WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.patient: A Reference without an actual reference or identifier should have a display
+WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.insurer: A Reference without an actual reference or identifier should have a display

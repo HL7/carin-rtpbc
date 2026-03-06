@@ -16,9 +16,6 @@
 <br/>
 <p>The supporting data (patient, coverage, prescription, etc.) consists of identifying information that the processor will use to locate the patient&#39;s insurance record and coverage rules applying to the medication, pharmacy and prescriber.</p>
 <p><br/></p>
-<!-- 
-<div><img src="rtpbc-bundle-request-03.png" alt="bundle"></div>
--->
-<br/>
 
-<br/>
+### <p></p>
+<p></p>
