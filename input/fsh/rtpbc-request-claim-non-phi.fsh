@@ -49,13 +49,13 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * use ^short = "Processing Mode"
 * use ^definition = "The mode of processing being requested of the payer/PBM"
 * use ^comment = "Value is always 'predetermination'"
+* patient ^label = "Patient information (masked)"
+* patient ^short = "Patient information (masked)"
+* patient ^definition = "No personally-identifiable information is included in this profile. Instead, the patient element is populated with a Data Absent Reason = 'masked'"
 * patient.extension 1..* MS
 * patient.extension contains
     $data-absent-reason named data-masked 1..1 MS
 * patient.extension[data-masked].valueCode = #masked (exactly)
-* patient ^label = "Patient information (masked)"
-* patient ^short = "Patient information (masked)"
-* patient ^definition = "No personally-identifiable information is included in this profile. Instead, the patient element is populated with a Data Absent Reason = 'masked'"
 * patient.reference 0..0
 * patient.type 0..0
 * patient.identifier 0..1
@@ -72,11 +72,17 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * insurer ^label = "Insurer (masked)"
 * insurer ^short = "Insurer (masked)"
 * insurer ^definition = "No personally-identifiable information is included in this profile. Insurance information is not included because it could potentially be used to re-identify patients"
-* provider only Reference($rtpbc-pharmacy-organization)
 * provider MS
+* provider.extension contains
+    $rtpbc-preferredPharmacyPostalCode named preferred-pharmacy-postal-code 0..* MS
+* provider.extension[preferred-pharmacy-postal-code] ^short = "Preferred Pharmacy Postal Code (Extension)"
+* provider.extension[preferred-pharmacy-postal-code] ^definition = "Specifies the preferred geographic area for the dispensing pharmacy using a postal code"
+* provider.extension[preferred-pharmacy-postal-code] ^comment = "Used when a specific pharmacy is not populated."
+* provider only Reference($rtpbc-pharmacy-organization)
 * provider ^label = "Preferred Pharmacy"
 * provider ^short = "Preferred Pharmacy"
-* provider ^definition = "The patient's preferred pharmacy to be considered during creation of the response"
+* provider ^definition = "The patient's preferred pharmacy to be considered during creation of the response."
+* provider ^comment = "Either a specific pharmacy or the preferred geographic area (using preferredPharmacyPostalCode) must be present"
 * provider.reference 0..1 MS
 * provider.reference ^label = "Reference to Pharmacy Organization"
 * provider.reference ^short = "Reference to Pharmacy Organization"
@@ -93,12 +99,10 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * priority.coding.code = #normal (exactly)
 * priority.coding.display 1..1 MS
 * priority.coding.display = "Normal" (exactly)
-* prescription 1.. MS
-* prescription only Reference($rtpbc-medicationrequest-non-phi)
-* prescription ^label = "Prescription Reference"
-* prescription ^short = "Prescription Reference"
-* prescription ^definition = "Reference to the pertinent prescription information in a MedicationRequest resource."
-* prescription.reference 1.. MS
+* prescription 0..0
+* prescription ^label = "Prescription (masked)"
+* prescription ^short = "Prescription (masked)"
+* prescription ^definition = "No personally-identifiable information is included in this profile."
 * careTeam 0..0
 * careTeam ^label = "Care team information (masked)"
 * careTeam ^short = "Care team information (masked)"

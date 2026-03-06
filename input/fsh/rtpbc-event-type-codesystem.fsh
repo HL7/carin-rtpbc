@@ -18,4 +18,6 @@ Description: "This code system defines event types used in RTPBC message headers
 * ^caseSensitive = false
 * ^content = #complete
 * #rtpbc-request "RTPBC Request" "Real-time Pharmacy Benefit Check (RTPBC) request"
+* #rtpbc-request-non-phi "RTPBC Non-PHI Request" "Real-time Pharmacy Benefit Check (RTPBC) Non-PHI request"
 * #rtpbc-response "RTPBC Response" "Real-time Pharmacy Benefit Check (RTPBC) response"
+* #rtpbc-response-non-phi "RTPBC Non-PHI Response" "Real-time Pharmacy Benefit Check (RTPBC) Non-PHI response"

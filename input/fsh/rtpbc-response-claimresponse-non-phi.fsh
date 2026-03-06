@@ -1,11 +1,11 @@
-Profile: RtpbcResponseClaimResponse
+Profile: RtpbcResponseClaimResponseNonPHI
 Parent: ClaimResponse
-Id: rtpbc-response-claimresponse
-Title: "RTPBC Response Using ClaimResponse"
-Description: "This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's \"predetermination\" processing mode"
+Id: rtpbc-response-claimresponse-non-phi
+Title: "RTPBC Non-PHI Response Using ClaimResponse"
+Description: "This profile omits persoanlly-identifiable content in an RTPBC response. To be used by data sources that can provide benefit or price information without receiving patient details."
 * ^version = "1.0.0"
 * ^status = #active
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2026-02-17T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -50,17 +50,28 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * use ^short = "Processing Mode"
 * use ^definition = "The mode of processing being performed by the payer/PBM"
 * use ^comment = "Value is always 'predetermination'"
-* patient only Reference($rtpbc-patient)
-* patient MS
-* patient ^label = "Response Patient Information"
-* patient ^short = "Response Patient Information"
-* patient ^definition = "Limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process"
-* patient ^comment = "Echo the Patient resource received in the request"
-* insurer MS
-* insurer.identifier 1.. MS
-* insurer.identifier.value 1.. MS
-* insurer.identifier.value ^label = "Payer ID"
-* insurer.identifier.value ^short = "Payer ID"
+* patient.extension 1..* MS
+* patient.extension contains
+    $data-absent-reason named data-masked 1..1 MS
+* patient.extension[data-masked].valueCode = #masked (exactly)
+* patient ^label = "Patient information (masked)"
+* patient ^short = "Patient information (masked)"
+* patient ^definition = "No personally-identifiable information is included in this profile. Instead, the patient element is populated with a Data Absent Reason = 'masked'"
+* patient.reference 0..0
+* patient.type 0..0
+* patient.identifier 0..1
+* patient.identifier ^label = "Unique, non-personally identifiable code"
+* patient.identifier ^short = "Unique, non-personally identifiable code"
+* patient.identifier ^definition = "A unique, non-personally identifiable code such as an anonymous account identifier"
+* patient.identifier ^comment = "The patient.identifier element in this profile is limited to only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server."
+* patient.display 0..0
+* insurer.extension 1..* MS
+* insurer.extension contains
+    $data-absent-reason named data-masked 1..1 MS
+* insurer.extension[data-masked].valueCode = #masked (exactly)
+* insurer ^label = "Insurer (masked)"
+* insurer ^short = "Insurer (masked)"
+* insurer ^definition = "No personally-identifiable information is included in this profile. Insurance information is not included because it could potentially be used to re-identify patients"
 * request 1.. MS
 * request ^label = "Submitter's RTPBC Request ID"
 * request ^short = "Submitter's RTPBC Request ID"
@@ -91,15 +102,15 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * item.extension[benefitRestriction] ^short = "Benefit Restriction (Extension)"
 * item.extension[benefitRestriction] ^definition = "This extension conveys benefit restrictions that may apply to a prescription product and pharmacy combination."
 * item.extension[benefitRestriction] ^isModifier = false
-* item.extension contains $rtpbc-formularyStatus named formularyStatus 0..* MS
+* item.extension contains $rtpbc-formularyStatus named formularyStatus 0..1 MS
 * item.extension[formularyStatus] ^short = "Formulary Status (Extension)"
 * item.extension[formularyStatus] ^definition = "This extension conveys the formulary status that applies to the product."
 * item.extension[formularyStatus] ^isModifier = false
-* item.extension contains $rtpbc-preferenceLevel named preferenceLevel 0..* MS
+* item.extension contains $rtpbc-preferenceLevel named preferenceLevel 0..1 MS
 * item.extension[preferenceLevel] ^short = "Preference Level (Extension)"
 * item.extension[preferenceLevel] ^definition = "This extension conveys the preference level that applies to the product."
 * item.extension[preferenceLevel] ^isModifier = false
-* item.extension contains $rtpbc-nextAvailableFillDate named nextAvailableFillDate 0..* MS
+* item.extension contains $rtpbc-nextAvailableFillDate named nextAvailableFillDate 0..1 MS
 * item.extension[nextAvailableFillDate] ^short = "Next Available Fill Date (Extension)"
 * item.extension[nextAvailableFillDate] ^definition = "This extension conveys the date on which a patient prescription will have passed the insurer's minimum consumption requirements and may be considered for dispensing."
 * item.extension[nextAvailableFillDate] ^isModifier = false
@@ -268,116 +279,4 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * error.code.text ^label = "Reject Message"
 * error.code.text ^short = "Reject Message"
 * error.code.text ^definition = "Clarification of the reject cause."
-
-//-------------------------
-
-Instance: rtpbc-claim-response-not-covered
-InstanceOf: rtpbc-response-claimresponse
-Usage: #example
-Description: "This is an example of response stating that the requested drug is not covered"
-* meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-03-response-c-r"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient = Reference(Patient/rtpbc-patient-03)
-* created = "2019-11-01T11:20:59-05:00"
-* insurer.identifier.value = "Pharmacy Plans US"
-* request.identifier.value = "rtpbc-03"
-* outcome = #complete
-* disposition = "Processed successfully"
-* item.extension.url = $rtpbc-benefitRestriction
-* item.extension.valueCoding = $rtpbc-benefit-restriction-cs#not-covered "Not covered"
-* item.itemSequence = 1
-* item.adjudication.category = $rtpbc-patient-pay-type-cs#eligible "Eligible amount"
-* item.adjudication.amount.value = 0
-* item.adjudication.amount.currency = #USD
-* addItem.extension[0].url = $rtpbc-isAlternative
-* addItem.extension[=].valueBoolean = true
-* addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
-* addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#quantity-limit "Quantity limit applies"
-* addItem.itemSequence = 1
-* addItem.provider = Reference(Organization/rtpbc-organization-03m)
-* addItem.productOrService = $rxnorm#1734642 "elbasvir 50 MG / grazoprevir 100 MG Oral Tablet [Zepatier]"
-* addItem.quantity.value = 28
-* addItem.quantity.unit = "{Each}"
-* addItem.noteNumber = 1
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
-* addItem.adjudication[=].amount.value = 405
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
-* addItem.adjudication[=].amount.value = 469
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* addItem.adjudication[=].amount.value = 874
-* addItem.adjudication[=].amount.currency = #USD
-* processNote.number = 1
-* processNote.text = "Quantity limit: 28 tablets per month"
-
-
-Instance: rtpbc-claim-response-03
-InstanceOf: rtpbc-response-claimresponse
-Usage: #example
-Description: "An example RTPBC response indicating PA is required and providing patient out-of-pocket costs"
-* meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-03-response"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient = Reference(Patient/rtpbc-patient-03)
-* created = "2025-12-11T11:20:59-05:00"
-* insurer.identifier.value = "Pharmacy Plans US"
-* request.identifier.value = "rtpbc-03"
-* outcome = #complete
-* disposition = "Processed successfully"
-* item.extension[0].url = $rtpbc-benefitRestriction
-* item.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
-* item.extension[+].url = $rtpbc-formularyStatus
-* item.extension[=].valueCoding = $rtpbc-formulary-status-cs#O "On Formulary"
-* item.extension[+].url = $rtpbc-preferenceLevel
-* item.extension[=].valuePositiveInt = 2
-* item.extension[+].url = $rtpbc-nextAvailableFillDate
-* item.extension[=].valueDate = "2025-12-20"
-* item.itemSequence = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
-* item.adjudication[=].amount.value = 40
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
-* item.adjudication[=].amount.value = 30
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* item.adjudication[=].amount.value = 70
-* item.adjudication[=].amount.currency = #USD
-* addItem.extension[0].url = $rtpbc-isAlternative
-* addItem.extension[=].valueBoolean = true
-* addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
-* addItem.extension[+].url = $rtpbc-formularyStatus
-* addItem.extension[=].valueCoding = $rtpbc-formulary-status-cs#P "On Formulary/Preferred"
-* addItem.extension[+].url = $rtpbc-preferenceLevel
-* addItem.extension[=].valuePositiveInt = 1
-* addItem.itemSequence = 1
-* addItem.provider = Reference(Organization/rtpbc-organization-03m)
-* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
-* addItem.quantity.value = 180
-* addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
-* addItem.adjudication[=].amount.value = 10
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#deductible "Deductible"
-* addItem.adjudication[=].amount.value = 20
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#accumulated-deductible "Accumulated deductible"
-* addItem.adjudication[=].amount.value = 195
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#remaining-deductible "Remaining deductible"
-* addItem.adjudication[=].amount.value = 305
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
-* addItem.adjudication[=].amount.value = 30
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* addItem.adjudication[=].amount.value = 70
-* addItem.adjudication[=].amount.currency = #USD
 

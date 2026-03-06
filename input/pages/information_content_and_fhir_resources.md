@@ -1,10 +1,5 @@
-[Previous Page](use_cases.html)
-
-<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
-<blockquote class="stu-note">
-	The STU2 version of the Consumer RTPBC guide introduces a non-PHI request for submission to data services that do not need patient-identifiable infomration to provide a response, 
-</blockquote>
-</div>
+<p class="stu-note">
+	The STU2 version of the Consumer RTPBC guide introduces a non-PHI request for submission to data services that do not need patient-identifiable infomration to provide a response, </p>
 
 <p></p>
 
@@ -32,15 +27,17 @@ The responder...
 <p></p>
 
 ### Content when _requesting non-patient-specific info such as cash pricing_
-<p class="modified-content">This section was modified to use a request format that contains no patient-identifiable information. <i>Modifications are italicized.</i></p> 
+<p class="modified-content">This section was modified to use a request format that contains no patient-identifiable information.</p> 
 
 #### *Request content*
 The patient application submits a request containing...
-_* non-patient-identifiable information from the prescription: medication and quantity_
-* _the patient's preferred pharmacy or location (ZIP Code) of the pharmacy_
+* non-patient-identifiable information from the prescription: medication and quantity
+* the patient's preferred pharmacy or location (ZIP Code) of the pharmacy
 * non-patient-identifiable coverage information: insurance type
 
-*Example:* _[Non-PHI RTPBC request](Bundle-rtpbc-bundle-request-non-phi-1.html)_
+*Profile:* [RTPBC Request Bundle - Non-PHI](StructureDefinition-rtpbc-request-bundle-non-phi.html)
+
+*Example:* [Non-PHI RTPBC request](Bundle-rtpbc-bundle-request-non-phi-1.html)
 
 #### Response content
 The responder... 
@@ -48,23 +45,27 @@ The responder...
   * pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships
 * returns the gathered information to requester
 
-*Example:* _[RTPBC response from a pricing source](file:///C:/FHIR/IGs/carin-rtpbc-new/output/en/Bundle-rtpbc-bundle-response-price-source.html)_
+*Profile:* [RTPBC Response Bundle - Non-PHI](StructureDefinition-rtpbc-response-bundle-non-phi.html)
+
+*Example:* [RTPBC response from a pricing source](Bundle-rtpbc-bundle-response-price-source.html)
 
 
 ### Resources used in the exchange
+<p class="modified-content">This section was modified to add the content of the non-PHI request and response</p> 
+
 The consumer RTPBC request and response are accomplished using FHIR **Claim** and **ClaimResponse** resources in a "predetermination" (what-if) mode. Other FHIR&reg; resources support the exchange by fleshing out patient, prescription, pharmacy and coverage information needed to determine accurate cost and coverage. An OperationOutcome communicates exception situations where a ClaimResponse cannot be returned.
 
 <div><p>
   <img src="high-level-rtpbc-fhir-resource-mapping.png" style="float:none">  
-    </p>
-</div>
+</p></div>
+
 <br/>**[Claim](StructureDefinition-rtpbc-request-claim.html)** - Represents the RTPBC request. Uses the *predetermination* Claim.use mode  
 
 **[ClaimResponse](StructureDefinition-rtpbc-response-claimresponse.html)** - Represents the RTPBC response
 
 **[Patient](StructureDefinition-rtpbc-patient.html)** - Conveys the patient information needed for the exchange
 
-**[Coverage](StructureDefinition-rtpbc-coverage.html)** - Conveys the patient's pharmacy benefit coverage IDs 
+**[Coverage](StructureDefinition-rtpbc-coverage.html)** - In the request, conveys the patient's pharmacy benefit coverage IDs. In the response, contains information associated with a discount card, such as BIN/PCN, used by the pharmacy to apply the discount
 
 **[MedicationRequest](StructureDefinition-rtpbc-medicationrequest.html)** - Conveys the needed prescription information (a subset of what is present in a full prescription)
 

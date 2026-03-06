@@ -1,48 +1,45 @@
-<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
-<blockquote class="stu-note">
-	The STU2 version of the Consumer RTPBC guide expands information that clients can retrieve from a patient's insurer and other data sources, provides additional guidance, and refines other aspects based on implementer feedback, 
-</blockquote>
-</div>
+<p class="stu-note"> The STU2 version of the Consumer RTPBC guide expands information that clients can retrieve from a patient's insurer, adds a request format that omits personally-identifiable information for data sources that don't require patient specifics, adds optional discount card adjudication info to the responses, provides additional implementation guidance, and refines other aspects based on implementer feedback,</p>
 
 <p></p>
 
-<p class="new-content">Where possible, new content is highlighted with green text and background. This highlighting will be removed prior to publication.</p>
+<p class="new-content">Below is a placeholder containing the text that will be incorporated into a standard Plain Language Description widget.</p>
 
 <p></p>
 
-<p class="modified-content">Sections with additions or adjustments are noted in yellow.</p>
+This standard enables patients to learn about costs, insurance coverage and other related information for medications they've been prescribed. The guide defines how a consumer-facing application can interact with the patient's insurer and other data sources using FHIR to inform the patient of out-of-pocket costs, coverage restrictions, less expensive drug or pharmacy alternatives, cash discount pricing and other options to support their decision-making.
+
+Consumer Real-Time Pharmacy Benefit Check (RTPBC) leverages capabilities and terminology already in use by US pharmacy stakeholders to minimize implementation obstacles and to ensure that the patient receives information that's accurate and consistent with what they'll encounter at the pharmacy.
 
 <p></p>
-<p></p>
-_** To do: Add plain language description. **_
-<p></p>
-
 
 ### Overview
-<p class="modified-content">This section has be adjusted. <i>Modifications are italicized.</i></p> 
 
-This is a guide for implementing a *consumer-focused Real-time Pharmacy Benefit Check* (RTPBC) process using HL7 FHIR&reg; R4.
+<p class="modified-content">This wording of this section has been expanded. <i>Modifications are italicized.</i></p> 
+
+This is a guide for implementing a *consumer-focused Real-time Pharmacy Benefit Check* (RTPBC) process using HL7 FHIR&reg;.
 
 Using RTPBC, a patient can learn the cost, insurance coverage _and other information_ related to medications they've been prescribed. Specifically... 
 * how a medication will be covered by their insurance, including out of pocket costs and any coverage restrictions or requirements that might apply
 * _cash pricing and_ discounts available for the medication
 * _availability of financial assistance or other support._
 
-Consumer RTPBC leverages the predetermination process supported by the Claim and ClaimResponse FHIR&reg; resources. Accompanying resources carry information that identifies the patient and their insurance coverage, prescription information and the preferred pharmacy (Patient, Coverage, MedicationRequest, Practitioner and Organization). OperationOutcome is used to communicate exceptions.
+Consumer RTPBC _adapts_ the predetermination process supported by the  FHIR&reg; Claim and ClaimResponse resources _to request patient-specific medication coverage information from the insurer and cash pricing, discount cards and supporting information from other data sources_. Accompanying FHIR&reg; resources carry related information including patient and insurance coverage details, medication, prescriber and preferred pharmacy. A request format that omits personally-identifiable information is also included for data sources that don't require patient specifics.
 
-Where possible, the profile leverages terminology currently used in US pharmacy benefit processing, to minimize implementation obstacles for stakeholders who operate in that domain.
-<br>
+Where possible, the profile leverages _capabilities and_ terminology currently used in US pharmacy _stakeholders_, to minimize implementation obstacles _and to ensure that the patient receives information that's accurate and consistent with what they'll encounter at the pharmacy_
+
+<p></p>
+
 
 ### Scope of this guide
+<p class="modified-content">The following section has been adjusted. <i>Modifications are italicized.</i></p> 
+
 **Consumer RTPBC is intended to be used...**
 
 * in the United States (as it reflects unique US pharmacy insurance roles and conventions)
 * for medications that are covered under the *pharmacy benefit* portion of the patient's health insurance, which typically excludes medications administered during hospital care or as part of medical procedures
-* for commercially available medication products that are not compounded at the pharmacy. *(Support for compounds could potentially be added later)*
+* for commercially available medication products that are not compounded at the pharmacy. (Support for compounds could potentially be added later)
 
 **Relationship to the NCPDP provider-focused RTPBC transactions**
-
-<p class="modified-content">This section has be adjusted. <i>Modifications are italicized.</i></p> 
 
 _The consumer RTPBC profile seeks to provide a patients with coverage and cost information that's consistent with information made available to their provider through the NCPDP Real Time Prescription Benefit (RTPB) standard._ 
 
@@ -76,12 +73,10 @@ The guide is organized into the following sections:
 <table>
 <tbody>
 <tr>
-<td>HL7 Pharmacy Workgroup</td>
-<td></td>
+<td colspan="2">HL7 Pharmacy Workgroup</td>
 </tr>
 <tr>
-<td>HL7 Financial Management Workgroup</td>
-<td></td>
+<td colspan="2">HL7 Financial Management Workgroup</td>
 </tr>
 <tr>
 <td>Frank McKinney</td>
@@ -103,6 +98,10 @@ The guide is organized into the following sections:
 
 ### IP Statements
 {% lang-fragment ip-statements.xhtml %}
+
+- This guide incorporates terminology from NCPDP,  a not-for-profit, multi-stakeholder forum for developing and promoting industry standards and business solutions that improve patient safety and health outcomes, while also decreasing costs. National Council for Prescription Drugs Programs, Inc. (NCPDP) publications are owned by NCPDP, 9240 East Raintree Drive Scottsdale, AZ 85260, and protected by the copyright laws of the United States. 17 U.S.C. §101, et. seq. https://standards.ncpdp.org/Access-to-Standards.aspx. **Usage:** [Reject Code](ValueSet-rtpbc-error-code.html), [Pharmacy Type](ValueSet-rtpbc-pharmacy-type.html), [Formulary Status](ValueSet-rtpbc-formulary-status.html)
+
+<p></p>
 
 ### Expansion Parameters
 {% lang-fragment expansion-params.xhtml %}
