@@ -165,7 +165,8 @@ Description: "This profile constrains the Claim resource so that it can serve as
 
 Instance: rtpbc-claim-03a
 InstanceOf: rtpbc-request-claim
-Usage: #inline
+Usage: #example
+Description: "An example RTPBC Request Claim, requesting predetermination for a fluoxetine prescription."
 * meta.profile = $rtpbc-request-claim
 * identifier.value = "rtpbc-03a"
 * status = #active
