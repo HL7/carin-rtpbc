@@ -5,16 +5,22 @@ A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacy
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://canadapost.ca/CodeSystem/ProvinceCodes' could not be found, so the value set cannot be expanded
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the value set cannot be expanded
 Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
-The concepts in the value set include have not been validated because the terminology server https://terminologystandardsservice.ca/tx/fhir does not support batch validation (tests version < 1.7.8)
-Unable to check whether the code is in the value set '' because the code system http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType was not found
+WARNING: ValueSet.where(id = 'rtpbc-error-code'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
+WARNING: ValueSet.where(id = 'rtpbc-pharmacy-type'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the value set cannot be expanded
+WARNING: ValueSet.where(id = 'rtpbc-state-and-province-code'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://canadapost.ca/CodeSystem/ProvinceCodes' could not be found, so the value set cannot be expanded
 
-# Temporarily suppressing this while we decide how to address terminology items in the STU2 IG
-Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+# This implementation guide uses external code systems which are not supported by the HL7 terminology server
+INFORMATION: ValueSet/rtpbc-state-and-province-code: ValueSet.compose.include[1]: The concepts in the value set include have not been validated because the code system is not known, and no terminology service supports it
 
-# Examples of MessageHeader resources are included in the full request and response bundle examples. 
-INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader'): The Implementation Guide contains no explicitly linked examples for this profile
-INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-messageheader'): The Implementation Guide contains no explicitly linked examples for this profile
+# This code system is specific to the message definitions defined in this IG. We anticipate that it will remain within the IG. 
+INFORMATION: CodeSystem/rtpbc-event-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
+# This code system is temporary in this IG. Once the NCPDP Formulary Status code system is available in THO, the IG will be updated to use it instead of this temporary one. (HTA-169 Add NCPDP Formulary Status code system to HTA/THO)
+INFORMATION: CodeSystem/rtpbc-formulary-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# These code systems are continuing to evolve based on stakeholder input and implementation experience. They are expected to remain in this IG until it has stabilized further
+INFORMATION: CodeSystem/rtpbc-patient-pay-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/rtpbc-benefit-restriction: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # The pattern is set in a repeating slice. The pattern is expected to hold for all repetitions of that slice. (It's fixing the 'system' for the identifier.)
 The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
@@ -27,15 +33,19 @@ The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-suppor
 # This warning about the deprecated maxValueSet StuctureDefinition element is inherited from the US Core Coverage profile. The US Core QA indicates the issue is recognized and may be addressed in a future update
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
 
-# The Non-PHI Claim profile excludes personally-identifiable information. The patient.display and insuance.coverage.display elements in this profile are not used (0..0).
-WARNING: Bundle/rtpbc-bundle-request-non-phi-1: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-1*/.patient: A Reference without an actual reference or identifier should have a display
-WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-2*/.patient: A Reference without an actual reference or identifier should have a display
+# The Non-PHI Claim profile excludes personally-identifiable information. The patient.display and insurance.coverage.display elements in this profile are not used (0..0).
 WARNING: Claim/rtpbc-claim-non-phi-1: Claim.patient: A Reference without an actual reference or identifier should have a display
 WARNING: Claim/rtpbc-claim-non-phi-2: Claim.patient: A Reference without an actual reference or identifier should have a display
-WARNING: Bundle/rtpbc-bundle-request-non-phi-1: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-1*/.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
-WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-2*/.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
 WARNING: Claim/rtpbc-claim-non-phi-1: Claim.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
 WARNING: Claim/rtpbc-claim-non-phi-2: Claim.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-request-non-phi-1: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-1*/.patient: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-2*/.patient: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-request-non-phi-1: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-1*/.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
+WARNING: Bundle/rtpbc-bundle-request-non-phi-2: Bundle.entry[1].resource/*Claim/rtpbc-claim-non-phi-2*/.insurance[0].coverage: A Reference without an actual reference or identifier should have a display
+
+# The Non-PHI Coverage profile excludes personally-identifiable information. The beneficiary.display element in this profile are not used (0..0).
+WARNING: Bundle/rtpbc-bundle-response-discount-card: Bundle.entry[2].resource/*Coverage/rtpbc-coverage-non-phi-01*/.beneficiary: A Reference without an actual reference or identifier should have a display
+WARNING: Coverage/rtpbc-coverage-non-phi-01: Coverage.beneficiary: A Reference without an actual reference or identifier should have a display
 
 # Have not yet marked conformance clauses
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'SHALL: '
@@ -43,11 +53,9 @@ The html source contains the word 'SHOULD' but it is not in a text phrase marked
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'Pharmacy phone and address SHOULD be populated to assist in identifying a particular pharmacy location, especially when identifying the pharmacy using an NPI'
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'Responders SHOULD return pricing and coverage information for relevant drug/pharmacy alternatives, in the addItem composite'
 The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'When a party that has implemented the responder role of this implementation guide and can also respond to the provider-focused NCPDP Real-time Prescription Benefit (RTPB) transaction, it SHALL ensure that it returns consistent values for information that is common between the two standards.'
-The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set. '
 The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: 'The following SMART on FHIR Capability Sets SHOULD be supported when retrieving from RTPBC data sources that return patient-specific information–such as an insurer system that returns responses containing a member's benefit balances and coverage information.'
 INFORMATION: en/error_handling.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set.  '
-INFORMATION: en/StructureDefinition-rtpbc-request-claim-non-phi.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The patient.identifier element in this profile is available to be populated but SHALL contain only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server.  '
-INFORMATION: en/error_handling.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'In the event that the RTPBC source system (payer/PBM, discount pricing source) is unable to fully process a request because of data or business rule issue, that system SHALL respond by populating the .error composite in the ClaimResponse resource. Values SHOULD be taken from the set of RTPBC error codes as defined in the RTPBC Error Code Value Set.  '
+INFORMATION: en/StructureDefinition-rtpbc-request-claim-non-phi.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'The patient.identifier element in this profile is available to be populated but SHALL contain only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server.'
 
 
 # Receiving an error related to expansion-parameters described in this Zulip thread as caused by a publisher issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458
@@ -63,5 +71,16 @@ WARNING: ClaimResponse/rtpbc-claim-response-discount-card: ClaimResponse.insurer
 WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.patient: A Reference without an actual reference or identifier should have a display
 WARNING: ClaimResponse/rtpbc-claim-response-price-source: ClaimResponse.insurer: A Reference without an actual reference or identifier should have a display
 
-# TEMP - I'm not sure what this refers to... just started popping up on Mar 6
-The link 'http://hl7.org/fhir/us/core/ValueSet/simple-language' for "http://hl7.org/fhir/us/core/ValueSet/simple-language" cannot be resolved
+# The difference between the RTPBC Non-PHI Coverage profile and the base RTPBC Coverage is the requirement in the Non-PHI version to use a Data Absent Reason (masked) extension in the Beneficiary element.
+# The publisher evaluates a Coverage instance containing that Data Absent Reason as being valid for both the Non-PHI profile and base profile
+WARNING: Bundle/rtpbc-bundle-response-discount-card: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-discount-card*/.item[0].extension[0].value.ofType(Reference): Found multiple matching profiles for Coverage/rtpbc-coverage-non-phi-01 among choices: http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage|2.0.0-ballot, http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage-non-phi|2.0.0-ballot
+WARNING: Bundle/rtpbc-bundle-response-discount-card: Bundle.entry[1].resource/*ClaimResponse/rtpbc-claim-response-discount-card*/.addItem[0].extension[1].value.ofType(Reference): Found multiple matching profiles for Coverage/rtpbc-coverage-non-phi-01 among choices: http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage|2.0.0-ballot, http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-coverage-non-phi|2.0.0-ballot
+
+# Examples for the MessageHeader profiles are within the full request and response examples. (Instances of these profiles are only valid in the context of referenced resources within the same Bundle)
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-messageheader-non-phi'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-messageheader'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-response-messageheader-non-phi'): The Implementation Guide contains no explicitly linked examples for this profile
+
+# Need to understand this error. It refers to the Non-PHI Coverage profile's use of the Data Absent Reason extension in the Beneficiary element
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'

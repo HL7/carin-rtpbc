@@ -6,10 +6,10 @@ name: Consumer Real-Time Pharmacy Benefit Check
 title: Consumer Real-Time Pharmacy Benefit Check FHIR IG
 description: FHIR Implementation Guide for Consumer Real-Time Pharmacy Benefit Check
 status: active # draft | active | retired | unknown
-version: 2.0.0
+version: 2.0.0-ballot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2024+
-releaseLabel: CI Build # CI Build | STU1 Ballot | STU 2
+copyrightYear: 2020+
+releaseLabel: STU2 Ballot # CI Build | STU1 Ballot | STU 2
 license: CC0-1.0 
 jurisdiction: urn:iso:std:iso:3166#US "United States of America"
 publisher:
@@ -166,4 +166,5 @@ menu:
       Security: security.html
       Consumer vs Provider RTPBC: consumer_vs_provider_rtpbc.html
   Artifacts: artifacts.html
+  Change Log: history.html
   Downloads: downloads.html

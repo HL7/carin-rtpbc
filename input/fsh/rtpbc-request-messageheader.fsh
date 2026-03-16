@@ -27,3 +27,4 @@ Description: "This profile constrains a MessageHeader resource for use in a Real
 * focus[rtpbc-request] ^type.aggregation = #bundled
 * definition 1.. MS
 * definition = $rtpbc-request (exactly)
+
