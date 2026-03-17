@@ -22,7 +22,7 @@ All of the elements identified above are marked Must Support...
 
 **Responding systems**
 * §MS-MR-4:RTPBC Responders **SHALL** make use of all pertinent required MedicationRequest elements when determining pricing and coverage.§
-* §MS-MR-5:RTPBC Responders **MAY** use MedicationRequest.dosageInstruction when determining pricing and coverage.
+* §MS-MR-5:RTPBC Responders **MAY** use MedicationRequest.dosageInstruction when determining pricing and coverage.§
 
 <p></p>
 <p></p>
