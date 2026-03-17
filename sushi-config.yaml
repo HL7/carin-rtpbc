@@ -163,6 +163,7 @@ menu:
       Information Content: information_content_and_fhir_resources.html
       Consumer vs Provider RTPBC: consumer_vs_provider_rtpbc.html
   Specification:
+      Conformance Expectations: conformance.html
       Business Rules: business_rules.html
       Submission Method: submission_method.html
       Error Handling: error_handling.html
