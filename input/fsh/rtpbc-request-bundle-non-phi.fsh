@@ -108,8 +108,8 @@ Description: "An example non-PHI RTPBC Request"
 * entry[=].resource = rtpbc-messageheader-request-non-phi-2
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-non-phi-2"
 * entry[=].resource = rtpbc-claim-non-phi-2
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
-* entry[=].resource = rtpbc-organization-03
+* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-01"
+* entry[=].resource = rtpbc-organization-01
 
 Instance: rtpbc-messageheader-request-non-phi-2
 InstanceOf: rtpbc-request-messageheader-non-phi
@@ -133,7 +133,7 @@ Description: "An example of the non-PHI RTPBC request resource (Claim)"
 * patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * patient.extension[data-masked].valueCode = #masked
 * created = "2025-11-01T11:20:54-05:00"
-* provider = Reference(Organization/rtpbc-organization-03)
+* provider = Reference(Organization/rtpbc-organization-01)
 * priority = $processpriority-cs#normal "Normal"
 * insurance.sequence = 1
 * insurance.focal = false

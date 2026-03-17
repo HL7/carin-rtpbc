@@ -30,7 +30,7 @@ Pharmacy alternatives can be particularly valuable to the patient as they decide
 **Note regarding medication alternatives:** Alternatives returned in the response may or may not be appropriate for the given patient, and other alternatives may be available that are not returned in the RTPBC response.
 
 ### Consistency between implementations of consumer and provider-focused benefit check (NCPDP) processes
-When a party that has implemented the responder role of this implementation guide and can also respond to the provider-focused NCPDP Real-time Prescription Benefit (RTPB) transaction, it SHALL ensure that it returns consistent values for information that is common between the two standards.
+§BR-1:When a party that has implemented the responder role of this implementation guide and can also respond to the provider-focused NCPDP Real-time Prescription Benefit (RTPB) transaction, it **SHALL** ensure that it returns consistent values for information that is common between the two standards.§
 
 While the consumer and provider exchanges each contain unique content for its audience, it is very important that information that is common to both is reported consistently -- to support discussion between the patient and provider and to avoid confusion. 
 

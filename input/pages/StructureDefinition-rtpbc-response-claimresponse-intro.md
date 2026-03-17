@@ -13,18 +13,22 @@ Data population is similar to a typical *predetermination* ClaimResponse (where 
 In this profile, the ClaimResponse references the following supported resources, both of which are profiled in this guide:
 * [Patient](StructureDefinition-rtpbc-patient.html) (containing a small amount of identifying information to enable the insurer to locate the patient's records)
 * [Organization](StructureDefinition-rtpbc-pharmacy-organization.html) (identifying an alternative pharmacy)
-<br><br>
+
+<p></p>
 
 ### Must Support elements in this profile 
 **Responding systems**<br>
-* Responders SHOULD return pricing and coverage information for relevant drug/pharmacy alternatives, in the addItem composite
-* Every response must contain either an item composite or an error composite, but not both. The Item composite MUST be populated when sufficient information is received to be able to answer the request. The error composite MUST be populated when the responder cannot complete processing due to insufficient or invalid information in the request
+* §MS-CR-1:RTPBC Responders **SHOULD** return pricing and coverage information for relevant drug/pharmacy alternatives, in the ClaimResponse.addItem composite.§
+* §MS-CR-2:Every RTPBC response ClaimResponse **SHALL** contain either an item composite or an error composite, but not both.§ 
+* §MS-CR-3:The RTPBC response ClaimResponse.iItem composite **SHALL** be populated when sufficient information is received to be able to answer the request.§ 
+* §MS-CR-4:The RTPBC response ClaimResponse.error composite **SHALL** be populated when the responder cannot complete processing due to insufficient or invalid information in the request.§
 
-* The benefitRestrictions extension is a conditional element that MUST be populated when the responder is an insurer (or other processor representing the patient's pharmacy benefit). It is not expected to be populated when the responder is a medication pricing source
-* The processNote element is a conditional element that MAY be populated when the responder has additional information about costs or coverage related to an .item or .addItem. The noteNumber links an .item or .addItem to its associated processNote
-* All elements marked Must Support are essential to communicating patient costs and coverage. The responder MUST ensure that content in these elements is accurate and complete
+* §MS-CR-5:The benefitRestrictions extension is a conditional element that **SHALL** be populated in an RTPBC response ClaimResponse when the responder is an insurer (or other processor representing the patient's pharmacy benefit). It is not expected to be populated when the responder is a medication pricing source.§
+* §MS-CR-6:The RTPBC response ClaimResponse.processNote element is a conditional element that **MAY** be populated when the responder has additional information about costs or coverage related to an .item or .addItem.§ The noteNumber links an .item or .addItem to its associated processNote
+* All elements marked Must Support are essential to communicating patient costs and coverage. §MS-CR-7:The RTPBC Responder **SHALL** ensure that content in Must Support ClaimResponse elements is accurate and complete.§
 
 **Client systems**<br>
-* MUST be able to interpret and convey to users all cost and coverage information returned in the response, as appropriate to the application
+* §MS-CR-8:RTPBC Requesters **SHALL** be able to interpret and convey to users all cost and coverage information returned in an RTPBC response, as appropriate to the application.§
 
-<br>
+<p></p>
+<p></p>

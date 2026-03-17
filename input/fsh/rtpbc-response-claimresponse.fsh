@@ -280,10 +280,10 @@ Description: "This is an example of response stating that the requested drug is 
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(Patient/rtpbc-patient-03)
+* patient = Reference(Patient/rtpbc-patient-01)
 * created = "2019-11-01T11:20:59-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
-* request.identifier.value = "rtpbc-03"
+* request.identifier.value = "rtpbc-01"
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.extension.url = $rtpbc-benefitRestriction
@@ -317,19 +317,19 @@ Description: "This is an example of response stating that the requested drug is 
 * processNote.text = "Quantity limit: 28 tablets per month"
 
 
-Instance: rtpbc-claim-response-03
+Instance: rtpbc-claim-response-01
 InstanceOf: rtpbc-response-claimresponse
 Usage: #example
 Description: "An example RTPBC response indicating PA is required and providing patient out-of-pocket costs"
 * meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-03-response"
+* identifier.value = "rtpbc-01-response"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(Patient/rtpbc-patient-03)
+* patient = Reference(Patient/rtpbc-patient-01)
 * created = "2025-12-11T11:20:59-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
-* request.identifier.value = "rtpbc-03"
+* request.identifier.value = "rtpbc-01"
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.extension[0].url = $rtpbc-benefitRestriction

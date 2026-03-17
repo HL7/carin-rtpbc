@@ -18,8 +18,9 @@ publisher:
 
 parameters:
   jira-code: carin-rtpbc
-  path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
+#  path-expansion-params: "../../input/terminology-settings.json"
 
+#  path-expansion-params: '/input/_resources/exp-params.json'  # for using US ed of SNOMED
 
 #  hl7.terminology: 5.5.0
 dependencies:
@@ -160,11 +161,13 @@ menu:
   Guidance:
       Use Cases: use_cases.html
       Information Content: information_content_and_fhir_resources.html
+      Consumer vs Provider RTPBC: consumer_vs_provider_rtpbc.html
+  Specification:
       Business Rules: business_rules.html
       Submission Method: submission_method.html
       Error Handling: error_handling.html
       Security: security.html
-      Consumer vs Provider RTPBC: consumer_vs_provider_rtpbc.html
-  Artifacts: artifacts.html
+  Artifacts:
+      FHIR Artifacts: artifacts.html
+      Downloads: downloads.html
   Change Log: history.html
-  Downloads: downloads.html

@@ -57,35 +57,35 @@ Description: "This profile constrains a Bundle resource for use as the request i
 
 
 
-Instance: rtpbc-bundle-request-03
+Instance: rtpbc-bundle-request-01
 InstanceOf: rtpbc-request-bundle
 Usage: #example
 Description: "An example RTPBC Request"
 * meta.profile = $rtpbc-request-bundle
 * type = #message
 * timestamp = "2019-11-15T13:10:13-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-03a"
-* entry[=].resource = rtpbc-messageheader-request-03a
-* entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-03a"
-* entry[=].resource = rtpbc-claim-03a
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03"
-* entry[=].resource = rtpbc-patient-03
+* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-01"
+* entry[=].resource = rtpbc-messageheader-request-01
+* entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-01"
+* entry[=].resource = rtpbc-claim-01
+* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-01"
+* entry[=].resource = rtpbc-patient-01
 * entry[+].fullUrl = "http://example.org/my-app/Coverage/rtpbc-coverage-01"
 * entry[=].resource = rtpbc-coverage-01
-* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-03"
-* entry[=].resource = rtpbc-medicationrequest-03
-* entry[+].fullUrl = "http://example.org/my-app/Practitioner/rtpbc-practitioner-03"
-* entry[=].resource = rtpbc-practitioner-03
-* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03"
-* entry[=].resource = rtpbc-organization-03
+* entry[+].fullUrl = "http://example.org/my-app/MedicationRequest/rtpbc-medicationrequest-01"
+* entry[=].resource = rtpbc-medicationrequest-01
+* entry[+].fullUrl = "http://example.org/my-app/Practitioner/rtpbc-practitioner-01"
+* entry[=].resource = rtpbc-practitioner-01
+* entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-01"
+* entry[=].resource = rtpbc-organization-01
 
-Instance: rtpbc-messageheader-request-03a
+Instance: rtpbc-messageheader-request-01
 InstanceOf: rtpbc-request-messageheader
 Usage: #inline
 * meta.profile = $rtpbc-request-messageheader
 * eventCoding = $rtpbc-event-type-cs#rtpbc-request "RTPBC Request"
 * source.name = "MyPatientApp"
 * source.endpoint = "http://example.org/MyPatientApp"
-* focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-03a)
+* focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-01)
 * definition = $rtpbc-request
 

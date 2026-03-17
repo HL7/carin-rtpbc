@@ -22,7 +22,8 @@ This profile enables the patient to state their pharmacy preference by either sp
 - Geographic area: Use the preferredPharmacyPostalCode extension in Claim.provider. This may be repeated to specify multiple postal codes.
 
 ### Support for an anonymous patient identifier
-The patient.identifier element in this profile is available to be populated but SHALL contain only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server. 
+
+§PHI-1:The patient.identifier element in this profile is available to be populated but **SHALL** contain only non-personally-identifiable codes, such as an account or user ID assigned during an anonymous interaction with the server.§
 
 <p></p>
 <p></p>

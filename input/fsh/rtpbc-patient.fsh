@@ -25,10 +25,8 @@ The RTPBC profile further constrains certain US Core and base elements in a mann
 * address.country ^binding.description = "ISO 3166 2-character country codes"
 * address.period 0..1 MS
 * communication 0..* MS
-* communication.language from $simple-language (extensible)
 
-
-Instance: rtpbc-patient-03
+Instance: rtpbc-patient-01
 InstanceOf: rtpbc-patient
 Usage: #example
 Description: "An example RTPBC patient"
