@@ -19,7 +19,6 @@ WARNING: Organization/rtpbc-organization-02ps: Organization.type[0].coding[0].sy
 WARNING: Organization/rtpbc-organization-03m: Organization.type[0].coding[0].system: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the code cannot be validated
 WARNING: ValueSet.where(id = 'rtpbc-error-code'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
 WARNING: ValueSet.where(id = 'rtpbc-pharmacy-type'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the value set cannot be expanded
-WARNING: ValueSet.where(id = 'rtpbc-state-and-province-code'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://canadapost.ca/CodeSystem/ProvinceCodes' could not be found, so the value set cannot be expanded
 
 # This code system is specific to the message definitions defined in this IG. We anticipate that it will remain within the IG. 
 INFORMATION: CodeSystem/rtpbc-event-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
