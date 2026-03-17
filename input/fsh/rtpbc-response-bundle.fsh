@@ -50,77 +50,33 @@ Description: "This profile constrains a Bundle resource for use as the response 
 
 //--------------------------------
 
-Instance: rtpbc-bundle-response-03
+Instance: rtpbc-bundle-response-01
 InstanceOf: rtpbc-response-bundle
 Usage: #example
 Description: "An example RTPBC response bundle produced by the patient's insurer"
 * meta.profile = $rtpbc-response-bundle
 * type = #message
 * timestamp = "2019-11-15T13:10:15-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-response-03wh"
-* entry[=].resource = rtpbc-messageheader-response-03wh
-* entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-03wh"
-* entry[=].resource = rtpbc-claim-response-03wh
-* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-03"
-* entry[=].resource = rtpbc-patient-03
+* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-response-01"
+* entry[=].resource = rtpbc-messageheader-response-01
+* entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-01"
+* entry[=].resource = rtpbc-claim-response-01
+* entry[+].fullUrl = "http://example.org/my-app/Patient/rtpbc-patient-01"
+* entry[=].resource = rtpbc-patient-01
 * entry[+].fullUrl = "http://example.org/my-app/Organization/rtpbc-organization-03m"
 * entry[=].resource = rtpbc-organization-03m
 
-Instance: rtpbc-messageheader-response-03wh
+Instance: rtpbc-messageheader-response-01
 InstanceOf: rtpbc-response-messageheader
 Usage: #inline
 * meta.profile = $rtpbc-response-messageheader
 * eventCoding = $rtpbc-event-type-cs#rtpbc-response "RTPBC Response"
 * source.name = "PharmacyBenefitsCompany"
 * source.endpoint = "http://example.org/PharmacyBenefitsCo/fhir"
-* response.identifier = "rtpbc-messageheader-request-03"
+* response.identifier = "rtpbc-messageheader-request-01"
 * response.code = #ok
-* focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-03wh)
+* focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-01)
 * definition = $rtpbc-response
 
-Instance: rtpbc-claim-response-03wh
-InstanceOf: rtpbc-response-claimresponse
-Usage: #inline
-//Description: "An example of the primary RTPBC response resource containing patient out-of-pocket cost, benefit restrictions and an alternative (ClaimResponse)"
-* meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-03-response"
-* status = #active
-* type = $claim-type-cs#pharmacy "Pharmacy"
-* use = #predetermination
-* patient = Reference(rtpbc-patient-03)
-* created = "2019-11-01T11:20:59-05:00"
-* insurer.identifier.value = "Pharmacy Plans US"
-* request.identifier.value = "rtpbc-03"
-* outcome = #complete
-* disposition = "Processed successfully"
-* item.extension.url = $rtpbc-benefitRestriction
-* item.extension.valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
-* item.itemSequence = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
-* item.adjudication[=].amount.value = 40
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
-* item.adjudication[=].amount.value = 30
-* item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* item.adjudication[=].amount.value = 70
-* item.adjudication[=].amount.currency = #USD
-* addItem.extension[0].url = $rtpbc-isAlternative
-* addItem.extension[=].valueBoolean = true
-* addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
-* addItem.itemSequence = 1
-* addItem.provider = Reference(rtpbc-organization-03m)
-* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
-* addItem.quantity.value = 180
-* addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
-* addItem.adjudication[=].amount.value = 20
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
-* addItem.adjudication[=].amount.value = 30
-* addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
-* addItem.adjudication[=].amount.value = 50
-* addItem.adjudication[=].amount.currency = #USD
+
 

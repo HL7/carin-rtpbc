@@ -87,7 +87,7 @@ Description: "An example response containing a discount card (with Coverage reso
 * created = "2025-11-15T13:10:13-05:00"
 * insurer.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * insurer.extension[data-masked].valueCode = #masked
-* request.identifier.value = "rtpbc-03"
+* request.identifier.value = "rtpbc-01"
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.extension.url = $rtpbc-relatedCoverage
@@ -163,7 +163,7 @@ Description: "An example response from a cash pricing source, containing no pers
 * created = "2025-11-15T13:10:13-05:00"
 * insurer.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * insurer.extension[data-masked].valueCode = #masked
-* request.identifier.value = "rtpbc-03"
+* request.identifier.value = "rtpbc-01"
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.itemSequence = 1

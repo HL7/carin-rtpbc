@@ -7,13 +7,17 @@ The set of conveyed pharmacy information consists of...
 * the pharmacy name
 * the  phone number
 * the pharmacy address
-<br><br>
+
+<p></p>
 
 ### Must Support elements in this profile 
-**Client systems**<br>
-* The pharmacy identifier and name MUST be populated with correct information in order for the processor to determine reliable cost and coverage information
-* Pharmacy phone and address SHOULD be populated to assist in identifying a particular pharmacy location, especially when identifying the pharmacy using an NPI
+**Client systems**
+
+* §MS-PH-1:The pharmacy Organization.identifier and Organization.name **SHALL** be populated with correct information in order for the processor to determine reliable cost and coverage information.§
+* §MS-PH-2:Pharmacy phone (Organization.telecom.work) and address **SHOULD** be populated to assist in identifying a particular pharmacy location, especially when identifying the pharmacy using an NPI.§
 
 **Responding systems**<br>
-* MUST consider pharmacy type and location when determining pricing, coverage, and alternative pharmacy options
-<br><br>
+* §MS-PH-3:RTPBC Responders **SHALL** consider pharmacy type and location when determining pricing, coverage, and alternative pharmacy options§
+
+<p></p>
+<p></p>

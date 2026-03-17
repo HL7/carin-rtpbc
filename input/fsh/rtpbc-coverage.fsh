@@ -74,7 +74,7 @@ Description: "An example RTPBC Coverage"
 * meta.profile = $rtpbc-coverage
 * status = #active
 * subscriberId = "121212"
-* beneficiary = Reference(rtpbc-patient-03)
+* beneficiary = Reference(rtpbc-patient-01)
 * relationship = $subscriber-relationship#self
 * payor.identifier.value = "Pharmacy Plans US"
 * class[0].type = $coverage-class#rxbin

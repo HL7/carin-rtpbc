@@ -68,7 +68,7 @@ Description: "This profile builds on the US Core Organization to represent a pha
 
 //---------------------------
 
-Instance: rtpbc-organization-03
+Instance: rtpbc-organization-01
 InstanceOf: rtpbc-pharmacy-organization
 //Usage: #inline
 Description: "An example RTPBC pharmacy (Organization), representing a retail pharmacy"
@@ -86,7 +86,7 @@ Description: "An example RTPBC pharmacy (Organization), representing a retail ph
 * address.postalCode = "53535"
 * address.country = "US"
 
-Instance: rtpbc-organization-03ps
+Instance: rtpbc-organization-02ps
 InstanceOf: rtpbc-pharmacy-organization
 Description: "An example retail pharmacy identified using an NCPDP Provider ID"
 * meta.profile = $rtpbc-pharmacy-organization

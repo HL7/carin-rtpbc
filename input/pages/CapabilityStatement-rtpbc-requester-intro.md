@@ -1,16 +1,14 @@
-<h3 id="rtpbc-requester">RTPBC Requester</h3>
-<p><strong>SHALL</strong>: </p>
-<ul>
-<li>Support at least one use case defined in this Guide and listed in the <a href="use_cases.html">Use Cases</a> Section</li>
-<li>Implement the RESTful behavior according to the HL7 FHIR specification</li>
-<li>Support the JSON source format</li>
-</ul>
+### RTPBC Requester
+#### SHALL
+* §CS-REQ-1:An RTPBC Requester **SHALL** support at least one use case defined in this Guide and listed in the [Use Cases section](use_cases.html).§
+* §CS-REQ-2:An RTPBC Requester **SHALL** implement the RESTful behavior according to the HL7 FHIR specification.§
+* §CS-REQ-3:An RTPBC Requester **SHALL** support the JSON source format.§
 
-<br>
-<p><strong>SHOULD</strong>: </p>
-<ul>
-<li>Support the XML source format</li>
-<li>Identify the RTPBC profiles supported as part of the FHIR <code>meta.profile</code> attribute for each instance</li>
-</ul>
+<p></p>
 
-<br><br>
+#### SHOULD
+* §CS-REQ-4:An RTPBC Requester **SHOULD** support the XML source format.§
+* §CS-REQ-5:An RTPBC Requester **SHOULD** identify the RTPBC profiles supported as part of the FHIR `meta.profile` attribute for each instance.§
+
+<p></p>
+<p></p>

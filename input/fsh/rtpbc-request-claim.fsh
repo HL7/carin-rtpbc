@@ -163,22 +163,22 @@ Description: "This profile constrains the Claim resource so that it can serve as
 * item.quantity.unit ^definition = "Pharmacy metric billing unit: GM (gram), ML (milliliter) or EA (each)"
 * item.quantity.unit ^binding.description = "Billing quantity unit of measure"
 
-Instance: rtpbc-claim-03a
+Instance: rtpbc-claim-01
 InstanceOf: rtpbc-request-claim
 Usage: #example
 Description: "An example RTPBC Request Claim, requesting predetermination for a fluoxetine prescription."
 * meta.profile = $rtpbc-request-claim
-* identifier.value = "rtpbc-03a"
+* identifier.value = "rtpbc-01"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
-* patient = Reference(rtpbc-patient-03)
+* patient = Reference(rtpbc-patient-01)
 * created = "2019-11-01T11:20:54-05:00"
-* provider = Reference(Organization/rtpbc-organization-03)
+* provider = Reference(Organization/rtpbc-organization-01)
 * priority = $processpriority-cs#normal "Normal"
-* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-03)
+* prescription = Reference(MedicationRequest/rtpbc-medicationrequest-01)
 * careTeam.sequence = 1
-* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-03)
+* careTeam.provider = Reference(Practitioner/rtpbc-practitioner-01)
 * insurance.sequence = 1
 * insurance.focal = true
 * insurance.coverage = Reference(Coverage/rtpbc-coverage-01)
