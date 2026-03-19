@@ -1,5 +1,5 @@
 ValueSet: RtbpcFormularyStatusValueSet
-Id: rtpbc-formulary-status
+Id: ncpdp-formulary-status-temporary
 Title: "RTPBC Formulary Status Value Set"
 Description: "This value set contains formulary statuses that may apply to a prescription product evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."
 * ^version = "1.0.0"
@@ -14,4 +14,4 @@ Description: "This value set contains formulary statuses that may apply to a pre
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* include codes from system $rtpbc-formulary-status-cs
+* include codes from system $ncpdp-formulary-status-temporary-cs

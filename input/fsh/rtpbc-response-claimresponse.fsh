@@ -335,7 +335,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * item.extension[0].url = $rtpbc-benefitRestriction
 * item.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
 * item.extension[+].url = $rtpbc-formularyStatus
-* item.extension[=].valueCoding = $rtpbc-formulary-status-cs#O "On Formulary"
+* item.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#O "On Formulary"
 * item.extension[+].url = $rtpbc-preferenceLevel
 * item.extension[=].valuePositiveInt = 2
 * item.extension[+].url = $rtpbc-nextAvailableFillDate
@@ -355,7 +355,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
 * addItem.extension[+].url = $rtpbc-formularyStatus
-* addItem.extension[=].valueCoding = $rtpbc-formulary-status-cs#P "On Formulary/Preferred"
+* addItem.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#P "On Formulary/Preferred"
 * addItem.extension[+].url = $rtpbc-preferenceLevel
 * addItem.extension[=].valuePositiveInt = 1
 * addItem.itemSequence = 1

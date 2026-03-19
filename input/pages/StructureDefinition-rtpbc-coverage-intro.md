@@ -18,4 +18,4 @@ Different insurers PBMs or other responders may require just a subset of these e
 ### Must Support elements in this profile 
 **Client and Responding systems**
 
-The elements identified as Must Support are the typical set used in US pharmacy benefit processing; client systems must enable these to be submitted in requests, and responders must be able to accept them to be used as appropriate during processing.
+§MS-COV-1:The Coverage elements identified as Must Support are the typical set used in US pharmacy benefit processing; client systems **SHALL** enable these to be submitted in requests, and responders **SHALL** be able to accept them to be used as appropriate during processing.§

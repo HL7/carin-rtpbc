@@ -9,7 +9,7 @@ Data population is based on the [RTPBC Coverage](StructureDefinition-rtpbc-cover
 The following element is unavailable in this profile:
 * beneficiary
 
-In this element, the Data Absent Reason extension is to be used with the code, "masked".
+§PHI-COV-1:To conform with the Non-PHI Coverage profile, the Data Absent Reason extension **SHALL** be used in the Coverage.beneficiary element, populated with the code, "masked".§
 
 <p></p>
 <p></p>
