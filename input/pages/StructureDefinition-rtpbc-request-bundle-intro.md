@@ -1,12 +1,4 @@
-<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
-<blockquote class="stu-note">
-	The STU2 version of the Consumer RTPBC guide adds 
-</blockquote>
-</div>
-
-<br>
-
-The request Bundle profile identifies the resources to be submitted in an RTPBC request. The following are used in all circumstances and have a minimum cardinality of 1:
+The request Bundle profile identifies the resources to be submitted in an RTPBC request. The following are used in all circumstances, are designated Must Support and have a minimum cardinality of 1:
 * MessageHeader
 * Claim
 * Patient
@@ -14,16 +6,17 @@ The request Bundle profile identifies the resources to be submitted in an RTPBC 
 * Pharmacy
 * Practitioner
 * In addition, the Coverage resource is necessary when submitting a request to an insurer or other agent representing the patient's pharmacy benefit. It's minimum cardinality is 0.
-<br><br>
+
+<p></p>
 
 ### Must Support elements in this profile 
 **Client systems**
-* All the above Bundle resource entries are designated Must Support. The required elements MUST be populated with correct and complete information in order to elicit reliable information in the RTPBC response.
-* When submitting to an insurer, the Coverage resource MUST also be populated. When submitting to a pricing source, Coverage is not required.
+* §MS-RB-1:All RTPBC Request Bundle elements designated as Must Support **SHALL** be populated with correct and complete information in order to elicit reliable information in the RTPBC response.§
+* §MS-RB-2:When submitting to an insurer, the Coverage resource **SHALL** also be populated.§
 
 **Responding insurer systems**
-* MUST accept all Must Support resources and make use of provided information when determining cost and coverage
+* §MS-RB-3:RTPBC Responders that are insurers **SHALL** consider all information submitted in Must Support elements when determining cost and coverage.§
 
-**Responding discount pricing sources**
-* Must accept Claim, Patient, MedicationRequest, Pharmacy and Practitioner resources and use as applicable when determining pricing information
+**Responding discount pricing sources and other data sources**
+* §MS-RB-4:RTPBC Responders that are not insurers **SHOULD** use all applicable submitted information when determining responses.§
 <br><br>
