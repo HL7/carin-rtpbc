@@ -89,7 +89,7 @@ The guide is organized into the following sections:
 ### IP Statements
 {% lang-fragment ip-statements.xhtml %}
 
-- This guide incorporates terminology from NCPDP,  a not-for-profit, multi-stakeholder forum for developing and promoting industry standards and business solutions that improve patient safety and health outcomes, while also decreasing costs. National Council for Prescription Drugs Programs, Inc. (NCPDP) publications are owned by NCPDP, 9240 East Raintree Drive Scottsdale, AZ 85260, and protected by the copyright laws of the United States. 17 U.S.C. §101, et. seq. https://standards.ncpdp.org/Access-to-Standards.aspx. **Usage:** [Reject Code](ValueSet-rtpbc-error-code.html), [Pharmacy Type](ValueSet-rtpbc-pharmacy-type.html), [Formulary Status](ValueSet-ncpdp-formulary-status-temporary.html)
+- This guide incorporates terminology from NCPDP,  a not-for-profit, multi-stakeholder forum for developing and promoting industry standards and business solutions that improve patient safety and health outcomes, while also decreasing costs. National Council for Prescription Drugs Programs, Inc. (NCPDP) publications are owned by NCPDP, 9240 East Raintree Drive Scottsdale, AZ 85260, and protected by the copyright laws of the United States. 17 U.S.C. §101, et. seq. https://standards.ncpdp.org/Access-to-Standards.aspx. **Usage:** [Reject Code](ValueSet-rtpbc-error-code.html), [Pharmacy Type](ValueSet-rtpbc-pharmacy-type.html), [Formulary Status](CodeSystem-ncpdp-formulary-status-temporary.html)
 
 <p></p>
 
