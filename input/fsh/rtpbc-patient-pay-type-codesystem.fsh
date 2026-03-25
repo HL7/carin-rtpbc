@@ -1,12 +1,13 @@
 CodeSystem: RtpbcPatientPayTypeCodeSystem
-Id: rtpbc-patient-pay-type
-Title: "RTPBC Patient Pay Type Code System"
-Description: "This code system defines components of a patient's responsibility for a prescription product's cost."
-* ^meta.lastUpdated = "2019-12-08T00:00:00-05:00"
-* ^version = "1.0.0"
+Id: rtpbc-patient-pay-type-temporary
+Title: "RTPBC Patient Pay Type Code System (Temporary)"
+Description: "This code system defines components of a patient's responsibility for a prescription product's cost. (The contents of this code system are expected to be incorporated into the THO code system https://terminology.hl7.org/en/CodeSystem-adjudication.html)"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 2
+* ^version = "1.1.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2026-03-01T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url

@@ -287,30 +287,30 @@ Description: "This is an example of response stating that the requested drug is 
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.extension.url = $rtpbc-benefitRestriction
-* item.extension.valueCoding = $rtpbc-benefit-restriction-cs#not-covered "Not covered"
+* item.extension.valueCoding = $rtpbc-benefit-restriction-temporary-cs#not-covered "Not covered"
 * item.itemSequence = 1
-* item.adjudication.category = $rtpbc-patient-pay-type-cs#eligible "Eligible amount"
+* item.adjudication.category = $rtpbc-patient-pay-type-temporary-cs#eligible "Eligible amount"
 * item.adjudication.amount.value = 0
 * item.adjudication.amount.currency = #USD
 * addItem.extension[0].url = $rtpbc-isAlternative
 * addItem.extension[=].valueBoolean = true
 * addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
+* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#prior-auth "Prior authorization required"
 * addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#quantity-limit "Quantity limit applies"
+* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#quantity-limit "Quantity limit applies"
 * addItem.itemSequence = 1
 * addItem.provider = Reference(Organization/rtpbc-organization-03m)
 * addItem.productOrService = $rxnorm#1734642 "elbasvir 50 MG / grazoprevir 100 MG Oral Tablet [Zepatier]"
 * addItem.quantity.value = 28
 * addItem.quantity.unit = "{Each}"
 * addItem.noteNumber = 1
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * addItem.adjudication[=].amount.value = 405
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
 * addItem.adjudication[=].amount.value = 469
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * addItem.adjudication[=].amount.value = 874
 * addItem.adjudication[=].amount.currency = #USD
 * processNote.number = 1
@@ -333,7 +333,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.extension[0].url = $rtpbc-benefitRestriction
-* item.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#prior-auth "Prior authorization required"
+* item.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#prior-auth "Prior authorization required"
 * item.extension[+].url = $rtpbc-formularyStatus
 * item.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#O "On Formulary"
 * item.extension[+].url = $rtpbc-preferenceLevel
@@ -341,19 +341,19 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * item.extension[+].url = $rtpbc-nextAvailableFillDate
 * item.extension[=].valueDate = "2025-12-20"
 * item.itemSequence = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * item.adjudication[=].amount.value = 40
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
 * item.adjudication[=].amount.value = 30
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * item.adjudication[=].amount.value = 70
 * item.adjudication[=].amount.currency = #USD
 * addItem.extension[0].url = $rtpbc-isAlternative
 * addItem.extension[=].valueBoolean = true
 * addItem.extension[+].url = $rtpbc-benefitRestriction
-* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-cs#covered "Covered"
+* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#covered "Covered"
 * addItem.extension[+].url = $rtpbc-formularyStatus
 * addItem.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#P "On Formulary/Preferred"
 * addItem.extension[+].url = $rtpbc-preferenceLevel
@@ -363,21 +363,21 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 180
 * addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#copay "Copay"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * addItem.adjudication[=].amount.value = 10
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#deductible "Deductible"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
 * addItem.adjudication[=].amount.value = 20
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
 * addItem.adjudication[=].amount.value = 195
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
 * addItem.adjudication[=].amount.value = 305
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coinsurance "Per prescription coinsurance"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
 * addItem.adjudication[=].amount.value = 30
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * addItem.adjudication[=].amount.value = 70
 * addItem.adjudication[=].amount.currency = #USD
 

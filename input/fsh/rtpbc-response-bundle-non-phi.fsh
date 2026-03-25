@@ -94,13 +94,13 @@ Description: "An example response containing a discount card (with Coverage reso
 * item.extension[relatedCoverage].valueReference = Reference(Coverage/rtpbc-coverage-non-phi-01)
 * item.itemSequence = 1
 * item.noteNumber = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"
 * item.adjudication[=].amount.value = 105
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coupon-discount "Coupon discount amount"
 * item.adjudication[=].amount.value = -20
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * item.adjudication[=].amount.value = 85
 * item.adjudication[=].amount.currency = #USD
 * addItem.extension.url = $rtpbc-relatedCoverage
@@ -111,13 +111,13 @@ Description: "An example response containing a discount card (with Coverage reso
 * addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 60
 * addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"
 * addItem.adjudication[=].amount.value = 50
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coupon-discount "Coupon discount amount"
 * addItem.adjudication[=].amount.value = -10
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * addItem.adjudication[=].amount.value = 40
 * addItem.adjudication[=].amount.currency = #USD
 
@@ -168,13 +168,13 @@ Description: "An example response from a cash pricing source, containing no pers
 * disposition = "Processed successfully"
 * item.itemSequence = 1
 * item.noteNumber = 1
-* item.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"
 * item.adjudication[=].amount.value = 105
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coupon-discount "Coupon discount amount"
 * item.adjudication[=].amount.value = -20
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * item.adjudication[=].amount.value = 85
 * item.adjudication[=].amount.currency = #USD
 * addItem.extension.url = $rtpbc-isAlternative
@@ -183,13 +183,13 @@ Description: "An example response from a cash pricing source, containing no pers
 * addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
 * addItem.quantity.value = 60
 * addItem.quantity.unit = "{Each}"
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-cs#cash-price "Full product cash price"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"
 * addItem.adjudication[=].amount.value = 50
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#coupon-discount "Coupon discount amount"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coupon-discount "Coupon discount amount"
 * addItem.adjudication[=].amount.value = -10
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[+].category = $rtpbc-patient-pay-type-cs#total "Total patient responsibility"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * addItem.adjudication[=].amount.value = 40
 * addItem.adjudication[=].amount.currency = #USD
 

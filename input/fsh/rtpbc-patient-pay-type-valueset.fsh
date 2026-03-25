@@ -16,4 +16,4 @@ Description: "This value set contains components of a patient's responsibility f
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "fm@frankmckinney.com"
 * ^jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* include codes from system $rtpbc-patient-pay-type-cs
+* include codes from system $rtpbc-patient-pay-type-temporary-cs

@@ -1,6 +1,6 @@
-CodeSystem: RtpbcFormularyStatusCodeSystem
+CodeSystem: NCPDPFormularyStatusCodeSystem
 Id: ncpdp-formulary-status-temporary
-Title: "RTPBC Formulary Status Code System"
+Title: "NCPDP Formulary Status Code System (Temporary)"
 Description: "This code system defines formulary statuses that may apply to a prescription product evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process. (This code system is managed by NCPDP and is in the process of being listed in THO)"
 * ^version = "1.0.0"
 * ^status = #draft
