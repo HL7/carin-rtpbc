@@ -2,6 +2,8 @@ CodeSystem: RtpbcEventTypeCodeSystem
 Id: rtpbc-event-type
 Title: "RTPBC Event Type Code System"
 Description: "This code system defines event types used in RTPBC message headers"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 2
 * ^meta.lastUpdated = "2020-05-23T00:00:00-05:00"
 * ^version = "1.0.0"
 * ^status = #active

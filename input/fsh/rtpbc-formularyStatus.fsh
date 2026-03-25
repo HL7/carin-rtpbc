@@ -23,4 +23,4 @@ Context: ClaimResponse.item, ClaimResponse.addItem
 * . ^definition = "Formulary status that may apply to a prescription product and pharmacy combination."
 * value[x] 1..1
 * value[x] only Coding
-* value[x] from $ncpdp-formulary-status-temporary-vs (extensible)
+* value[x] from $ncpdp-formulary-status-vs (extensible)

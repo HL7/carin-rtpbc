@@ -1,5 +1,5 @@
 ValueSet: RtbpcFormularyStatusValueSet
-Id: ncpdp-formulary-status-temporary
+Id: ncpdp-formulary-status
 Title: "RTPBC Formulary Status Value Set"
 Description: "This value set contains formulary statuses that may apply to a prescription product evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process."
 * ^version = "1.0.0"

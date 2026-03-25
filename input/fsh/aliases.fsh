@@ -30,8 +30,8 @@ Alias: $rtpbc-error-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-
 // - code systems
 Alias: $rtpbc-event-type-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-event-type
 Alias: $processpriority-cs = http://terminology.hl7.org/CodeSystem/processpriority
-Alias: $rtpbc-patient-pay-type-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type
-Alias: $rtpbc-benefit-restriction-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction
+Alias: $rtpbc-patient-pay-type-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type-temporary
+Alias: $rtpbc-benefit-restriction-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction-temporary
 Alias: $ncpdp-formulary-status-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/ncpdp-formulary-status-temporary
 
 // - value sets
@@ -41,7 +41,7 @@ Alias: $rtpbc-state-and-province-code-vs = http://hl7.org/fhir/us/carin-rtpbc/Va
 Alias: $rtpbc-country-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-country-code
 Alias: $rtpbc-pharmacy-type-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-pharmacy-type
 Alias: $rtpbc-benefit-restriction = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-benefit-restriction
-Alias: $ncpdp-formulary-status-temporary-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/ncpdp-formulary-status-temporary
+Alias: $ncpdp-formulary-status-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/ncpdp-formulary-status
 
 // US Core profiles
 // maybe needed:
