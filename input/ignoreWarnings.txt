@@ -20,13 +20,13 @@ WARNING: Organization/rtpbc-organization-03m: Organization.type[0].coding[0].sys
 WARNING: ValueSet.where(id = 'rtpbc-error-code'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPRejectCode' could not be found, so the value set cannot be expanded
 WARNING: ValueSet.where(id = 'rtpbc-pharmacy-type'): Error from https://tx.fhir.org/r4: Error: A definition for CodeSystem 'http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType' could not be found, so the value set cannot be expanded
 
-# This code system is specific to the message definitions defined in this guide. TSMG approved an exemption allowing the code system to remain in the IG. See TSMG minutes: https://confluence.hl7.org/spaces/TSMG/pages/441520556/2026-03-23+TSMG+Agenda+and+Minutes
+# This code system is specific to the message definitions defined in this guide. TSMG approved an exemption allowing the code system to remain in the IG. See TSMG minutes at https://confluence.hl7.org/spaces/TSMG/pages/441520556/2026-03-23+TSMG+Agenda+and+Minutes
 INFORMATION: CodeSystem/rtpbc-event-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # A THO URL has been requested for this code system (https://jira.hl7.org/browse/UP-793)
 INFORMATION: CodeSystem/rtpbc-benefit-restriction-temporary: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Concepts from this code system are expected to be be incorporated into the THO code system https://terminology.hl7.org/en/CodeSystem-adjudication.html at a future time
+# Concepts from this code system are expected to be incorporated into the THO code system https://terminology.hl7.org/en/CodeSystem-adjudication.html at a future time
 INFORMATION: CodeSystem/rtpbc-patient-pay-type-temporary: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # This code system is temporary in this IG. Once the NCPDP Formulary Status code system is available in THO, the IG will be updated to use it instead of this temporary one. (HTA-169 Add NCPDP Formulary Status code system to HTA/THO)
