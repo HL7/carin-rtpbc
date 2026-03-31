@@ -41,7 +41,7 @@ The patient learns how how their medication will be covered by their insurance, 
 </p></div>
 
 
-#### Use case - Retrieve cash discount pricing and other information
+### Use case - Retrieve cash discount pricing and other information
 
 The patient discovers discount pricing _or other related information_ available for their medication. 
 
