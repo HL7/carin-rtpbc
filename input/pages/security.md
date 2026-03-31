@@ -2,12 +2,13 @@
 <blockquote class="stu-note">
 	The initial version of the RTPBC IG did not provide specific guidance for authenticating with data sources and authorizing release of information.
 	STU2 recommends use of the SMART on FHIR specification for accessing RTPBC data sources.
+	All content below that precedes Additional Guidance is new in STU2. 
 </blockquote>
 </div>
 
 <p></p>
 
-<p class="new-content">All following content preceding Additional Guidance is new in STU2. </p>
+<p class="new-content"></p>
 
 <p></p>
 
