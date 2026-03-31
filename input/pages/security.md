@@ -7,7 +7,7 @@
 
 <p></p>
 
-<p class="new-content">All following content preceding Additional Guidance is new in STU2. <b>This section is currently very draft and incomplete.</b></p>
+<p class="new-content">All following content preceding Additional Guidance is new in STU2. </p>
 
 <p></p>
 
