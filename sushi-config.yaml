@@ -19,6 +19,7 @@ publisher:
 parameters:
   jira-code: carin-rtpbc
   path-expansion-params: "../../input/terminology-settings.json"
+  auto-oid-root: 2.16.840.1.113883.4.642.40.90
 
 dependencies:
   hl7.fhir.us.core: 9.0.0
@@ -40,8 +41,6 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
  
-#auto-oid-root: tbd
-
 
 
 # * modifierExtension
