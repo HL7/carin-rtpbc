@@ -4,7 +4,7 @@ Id: rtpbc-patient
 Title: "RTPBC Patient"
 Description: """This profile constrains the Patient resource for carrying the limited patient information required in the consumer real-time pharmacy benefit check (RTPBC) process. 
 
-The RTPBC profile further constrains certain US Core and base elements in a manner that is compatible with the the US Core profile (e.g., tightening element cardinality and further limiting allowed terminology)."""
+The RTPBC profile further constrains certain US Core and base elements in a manner that is compatible with the US Core profile (e.g., tightening element cardinality and further limiting allowed terminology)."""
 * ^version = "1.0.0"
 * ^experimental = false
 * ^date = "2025-12-02T00:00:00-05:00"

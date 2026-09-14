@@ -137,9 +137,9 @@ Description: "This profile provides minimal, non-persoanlly-identifiable content
 * item.productOrService from $rtpbc-prescribable-product-code-vs (extensible)
 * item.productOrService ^label = "Prescribed Product"
 * item.productOrService ^short = "Prescribed Product"
-* item.productOrService ^definition = "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
-* item.productOrService ^comment = "The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes"
-* item.productOrService ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
+* item.productOrService ^definition = "A product identifier for the prescribed medication. Either an NDC or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
+* item.productOrService ^comment = "The NDC is a normalized format consisting of a labeler segment, product segment, and package segment, with no dashes"
+* item.productOrService ^binding.description = "RTPBC prescribable product codes (NDC and RxNorm)"
 * item.productOrService.coding 0..* MS
 * item.productOrService.coding.system 0.. MS
 * item.productOrService.coding.code 0.. MS

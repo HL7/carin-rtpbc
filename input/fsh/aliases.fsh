@@ -14,10 +14,11 @@ Alias: $claim-type-cs = http://terminology.hl7.org/CodeSystem/claim-type
 Alias: $npi = http://hl7.org/fhir/sid/us-npi
 Alias: $simple-language = http://hl7.org/fhir/us/core/ValueSet/simple-language
 Alias: $canadapost = http://canadapost.ca/CodeSystem/ProvinceCodes
-Alias: $usps = https://www.usps.com/
+Alias: $usps = http://terminology.hl7.org/ValueSet/USPS-State|2.0.0
 Alias: $ucum = http://unitsofmeasure.org
 Alias: $iso3166 = urn:iso:std:iso:3166
 Alias: $subscriber-relationship = http://terminology.hl7.org/CodeSystem/subscriber-relationship
+Alias: $ncpdp-formulary-status-cs = http://terminology.hl7.org/CodeSystem/NCPDPFormularyStatus
 
 // NCPDP terminology (HTA)
 Alias: $pharmacy-type-cs = http://terminology.hl7.org/CodeSystem/NCPDPPharmacyType
@@ -32,7 +33,6 @@ Alias: $rtpbc-event-type-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpb
 Alias: $processpriority-cs = http://terminology.hl7.org/CodeSystem/processpriority
 Alias: $rtpbc-patient-pay-type-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-patient-pay-type-temporary
 Alias: $rtpbc-benefit-restriction-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/rtpbc-benefit-restriction-temporary
-Alias: $ncpdp-formulary-status-temporary-cs = http://hl7.org/fhir/us/carin-rtpbc/CodeSystem/ncpdp-formulary-status-temporary
 
 // - value sets
 Alias: $rtpbc-prescribable-product-code-vs = http://hl7.org/fhir/us/carin-rtpbc/ValueSet/rtpbc-prescribable-product-code

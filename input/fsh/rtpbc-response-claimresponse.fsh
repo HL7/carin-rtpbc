@@ -3,9 +3,9 @@ Parent: ClaimResponse
 Id: rtpbc-response-claimresponse
 Title: "RTPBC Response Using ClaimResponse"
 Description: "This profile constrains the ClaimResponse resource to serve as the RTPBC Response in the consumer real-time pharmacy benefit check process. It uses the ClaimResponse's \"predetermination\" processing mode"
-* ^version = "1.0.0"
+* ^version = "1.1.0"
 * ^status = #active
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2026-09-14T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -185,9 +185,9 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * addItem.productOrService from $rtpbc-prescribable-product-code-vs (extensible)
 * addItem.productOrService ^label = "Product"
 * addItem.productOrService ^short = "Product"
-* addItem.productOrService ^definition = "A product identifier for the medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
-* addItem.productOrService ^comment = "The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes"
-* addItem.productOrService ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
+* addItem.productOrService ^definition = "A product identifier for the medication. Either an NDC or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
+* addItem.productOrService ^comment = "The NDC is a normalized format consisting of a segment, product segment, and package segment, with no dashes"
+* addItem.productOrService ^binding.description = "RTPBC prescribable product codes (NDC and RxNorm)"
 * addItem.productOrService.coding 1.. MS
 * addItem.productOrService.coding.system 1.. MS
 * addItem.productOrService.coding.code 1.. MS
@@ -253,7 +253,7 @@ Description: "This profile constrains the ClaimResponse resource to serve as the
 * error ^short = "Error Information"
 * error ^comment = "Must be populated when .outcome = 'error'"
 * error.code MS
-* error.code from $rtpbc-error-code-vs (preferred)
+* error.code from $rtpbc-error-code-vs (extensible)
 * error.code ^label = "Reject Reason"
 * error.code ^short = "Reject Reason"
 * error.code ^definition = "A code identifying the reason that processing could not be completed."
@@ -335,7 +335,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * item.extension[0].url = $rtpbc-benefitRestriction
 * item.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#prior-auth "Prior authorization required"
 * item.extension[+].url = $rtpbc-formularyStatus
-* item.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#O "On Formulary"
+* item.extension[=].valueCoding = $ncpdp-formulary-status-cs#O "On Formulary"
 * item.extension[+].url = $rtpbc-preferenceLevel
 * item.extension[=].valuePositiveInt = 2
 * item.extension[+].url = $rtpbc-nextAvailableFillDate
@@ -355,7 +355,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.extension[+].url = $rtpbc-benefitRestriction
 * addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#covered "Covered"
 * addItem.extension[+].url = $rtpbc-formularyStatus
-* addItem.extension[=].valueCoding = $ncpdp-formulary-status-temporary-cs#P "On Formulary/Preferred"
+* addItem.extension[=].valueCoding = $ncpdp-formulary-status-cs#P "On Formulary/Preferred"
 * addItem.extension[+].url = $rtpbc-preferenceLevel
 * addItem.extension[=].valuePositiveInt = 1
 * addItem.itemSequence = 1
@@ -381,3 +381,80 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.adjudication[=].amount.value = 70
 * addItem.adjudication[=].amount.currency = #USD
 
+
+Instance: rtpbc-claim-response-full-population
+InstanceOf: rtpbc-response-claimresponse
+Usage: #example
+Description: "An example payer RTPBC response with all benefit-related elements populated"
+* meta.profile = $rtpbc-response-claimresponse
+* identifier.value = "rtpbc-fully-populated-response"
+* status = #active
+* type = $claim-type-cs#pharmacy "Pharmacy"
+* use = #predetermination
+* patient = Reference(Patient/rtpbc-patient-01)
+* created = "2025-12-11T11:20:59-05:00"
+* insurer.identifier.value = "Pharmacy Plans US"
+* request.identifier.value = "rtpbc-01"
+* outcome = #complete
+* disposition = "Processed successfully"
+* item.extension[0].url = $rtpbc-benefitRestriction
+* item.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#prior-auth "Prior authorization required"
+* item.extension[+].url = $rtpbc-formularyStatus
+* item.extension[=].valueCoding = $ncpdp-formulary-status-cs#O "On Formulary"
+* item.extension[+].url = $rtpbc-preferenceLevel
+* item.extension[=].valuePositiveInt = 2
+* item.extension[+].url = $rtpbc-nextAvailableFillDate
+* item.extension[=].valueDate = "2025-12-20"
+* item.itemSequence = 1
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#eligible "Eligible amount"
+* item.adjudication[=].amount.value = 600
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
+* item.adjudication[=].amount.value = 40
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
+* item.adjudication[=].amount.value = 30
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
+* item.adjudication[=].amount.value = 50
+* item.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[=].amount.value = 235
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[=].amount.value = 275
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
+* item.adjudication[=].amount.value = 120
+* item.adjudication[=].amount.currency = #USD
+* addItem.extension[0].url = $rtpbc-isAlternative
+* addItem.extension[=].valueBoolean = true
+* addItem.extension[+].url = $rtpbc-benefitRestriction
+* addItem.extension[=].valueCoding = $rtpbc-benefit-restriction-temporary-cs#covered "Covered"
+* addItem.extension[+].url = $rtpbc-formularyStatus
+* addItem.extension[=].valueCoding = $ncpdp-formulary-status-cs#P "On Formulary/Preferred"
+* addItem.extension[+].url = $rtpbc-preferenceLevel
+* addItem.extension[=].valuePositiveInt = 1
+* addItem.itemSequence = 1
+* addItem.provider = Reference(Organization/rtpbc-organization-03m)
+* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* addItem.quantity.value = 180
+* addItem.quantity.unit = "{Each}"
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#eligible "Eligible amount"
+* addItem.adjudication[=].amount.value = 500
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
+* addItem.adjudication[=].amount.value = 10
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
+* addItem.adjudication[=].amount.value = 20
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[=].amount.value = 195
+* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[=].amount.value = 305
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
+* addItem.adjudication[=].amount.value = 30
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
+* addItem.adjudication[=].amount.value = 60
+* addItem.adjudication[=].amount.currency = #USD

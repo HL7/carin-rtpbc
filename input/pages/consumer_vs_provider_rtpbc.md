@@ -1,6 +1,4 @@
-[Previous Page](security.html)
-
-The consumer Real-time Prescription Benefit Check (RTPBC) profile is an adaptation of the existing NCPDP Real-time Prescription Benefit (RTPB) standard which was designed for use in provider systems. That specification includes content such as drug utilization review (DUR) alerts and other information to inform a provider's prescribing process.
+The consumer Real-time Pharmacy Benefit Check (RTPBC) profile is an adaptation of the existing NCPDP Real-time Prescription Benefit (RTPB) Standard© which was designed for use in provider systems. That specification includes content such as drug utilization review (DUR) alerts and other information to inform a provider's prescribing process.
 <br>In contrast, this patient-focused version of RTPBC aims to include only the coverage and cost information that is useful and meaningful to patients.
 <br>
 

@@ -1,13 +1,11 @@
-[Previous Page](information_content_and_fhir_resources.html)
+### Use of representative NDC drug identifiers
 
-### Use of representative NDC11 drug identifiers
+This implementation guide enables clients to identify the patient's medication using 'representative NDC' identifiers. A representative NDC has two important characteristics:
 
-This implementation guide enables clients to identify the patient's medication using 'representative NDC 11' identifiers. A representative NDC 11 has two important characteristics:
-
-- it consists of 11 digits and no dashes or spaces
+- it consists only of digits, with no dashes or spaces
 - it is selected by the submitting system to accurately represent the desired medication's product name, strength and dose form.
 
-Details on determining an appropriate representative NDC 11 are available in the [SCRIPT Implementation Recommendations](https://www.ncpdp.org/NCPDP/media/pdf/SCRIPT-Implementation-Recommendations.pdf) document, located on the public ePrescribing site of the National Council for Prescription Drug Programs (NCPDP). 
+Details on determining an appropriate representative NDC are available in the [SCRIPT Implementation Recommendations](https://www.ncpdp.org/NCPDP/media/pdf/SCRIPT-Implementation-Recommendations.pdf) document, located on the public ePrescribing site of the National Council for Prescription Drug Programs (NCPDP). 
 
 ### RTPBC response information is "point in time"
 The information contained in the RTPBC response must reflect patient cost and coverage as of the date and time the request is received. The implementation guide expects that all responses are calculated using the patient's current insurance coverage and current cost information; it doesn't enable requests for information related to future or past events.
@@ -19,6 +17,8 @@ The Patient Pay Type value set specifies different patient costs that may be ret
 - Cash prices and discounts available when the patient opts to pay cash for their prescription rather than submitting through their insurance. These types are expected to be returned when the responder is a discount pricing source or other responder that is not the patient's insurer.
 
 ### Alternatives in the RTPBC response
+The purpose of alternative information in the Consumer RTPBC IG is to provide transparency regarding potentially available covered, preferred, or lower-cost options. Any alternative information should be considered informational and not a prescribing recommendation. Determinations regarding clinical appropriateness remain the responsibility of the patient and their healthcare provider.
+
 The responder is encouraged to return all relevant alternatives to the submitted medication and pharmacy. An alternative is any drug + pharmacy combination that differs from what was specified in the request:
 
 - a different medication, but at the submitted pharmacy
@@ -34,7 +34,7 @@ Pharmacy alternatives can be particularly valuable to the patient as they decide
 
 While the consumer and provider exchanges each contain unique content for its audience, it is very important that information that is common to both is reported consistently -- to support discussion between the patient and provider and to avoid confusion. 
 
-For example, the total out of pocket cost returned for a given patient medication must be the same whether reported by the consumer or provider messaging. And the the Benefit Restriction information returned in the response described in this guide must accurately summarize benefit restrictions details returned in the NCPDP provider-focused RTPB transaction.
+For example, the total out of pocket cost returned for a given patient medication must be the same whether reported by the consumer or provider messaging. And the Benefit Restriction information returned in the response described in this guide must accurately summarize benefit restrictions details returned in the NCPDP provider-focused RTPB transaction.
 
 This guide was designed to be compatible with the NCPDP RTPB transaction and uses the same processing assumptions and information definitions wherever possible.
 
@@ -42,6 +42,4 @@ This guide was designed to be compatible with the NCPDP RTPB transaction and use
 
 The real-time benefit check process is a point-in-time exchange that does not result in persisted information for later client retrieval.
 
-<br><br>
-
-[Next Page](submission_method.html)
+<p></p>

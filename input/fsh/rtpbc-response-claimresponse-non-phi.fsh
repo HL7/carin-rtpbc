@@ -2,7 +2,7 @@ Profile: RtpbcResponseClaimResponseNonPHI
 Parent: ClaimResponse
 Id: rtpbc-response-claimresponse-non-phi
 Title: "RTPBC Non-PHI Response Using ClaimResponse"
-Description: "This profile omits persoanlly-identifiable content in an RTPBC response. To be used by data sources that can provide benefit or price information without receiving patient details."
+Description: "This profile omits personally-identifiable content in an RTPBC response. To be used by data sources that can provide benefit or price information without receiving patient details."
 * ^version = "1.0.0"
 * ^status = #active
 * ^date = "2026-02-17T00:00:00-05:00"
@@ -196,9 +196,9 @@ Description: "This profile omits persoanlly-identifiable content in an RTPBC res
 * addItem.productOrService from $rtpbc-prescribable-product-code-vs (extensible)
 * addItem.productOrService ^label = "Product"
 * addItem.productOrService ^short = "Product"
-* addItem.productOrService ^definition = "A product identifier for the medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
-* addItem.productOrService ^comment = "The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes"
-* addItem.productOrService ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
+* addItem.productOrService ^definition = "A product identifier for the medication. Either an NDC or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
+* addItem.productOrService ^comment = "The NDC is a normalized format consisting of a labeler segment, product segment, and package segment, with no dashes"
+* addItem.productOrService ^binding.description = "RTPBC prescribable product codes (NDC and RxNorm)"
 * addItem.productOrService.coding 1.. MS
 * addItem.productOrService.coding.system 1.. MS
 * addItem.productOrService.coding.code 1.. MS

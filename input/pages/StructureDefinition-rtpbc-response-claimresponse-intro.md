@@ -20,7 +20,7 @@ In this profile, the ClaimResponse references the following supported resources,
 **Responding systems**<br>
 * §MS-CR-1:RTPBC Responders **SHOULD** return pricing and coverage information for relevant drug/pharmacy alternatives, in the ClaimResponse.addItem composite.§
 * §MS-CR-2:Every RTPBC response ClaimResponse **SHALL** contain either an item composite or an error composite, but not both.§ 
-* §MS-CR-3:The RTPBC response ClaimResponse.iItem composite **SHALL** be populated when sufficient information is received to be able to answer the request.§ 
+* §MS-CR-3:The RTPBC response ClaimResponse.item composite **SHALL** be populated when sufficient information is received to be able to answer the request.§ 
 * §MS-CR-4:The RTPBC response ClaimResponse.error composite **SHALL** be populated when the responder cannot complete processing due to insufficient or invalid information in the request.§
 
 * §MS-CR-5:The benefitRestrictions extension is a conditional element that **SHALL** be populated in an RTPBC response ClaimResponse when the responder is an insurer (or other processor representing the patient's pharmacy benefit). It is not expected to be populated when the responder is a medication pricing source.§
