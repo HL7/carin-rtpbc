@@ -1,7 +1,7 @@
 ### Systems
 This implementation guide defines the responsibilities of two types of systems involved in a Consumer Real-Time Pharmacy Benefit Check interaction:
 
-[**An RTPBC Requester**](CapabilityStatement-rtpbc-requester.html) is a consumer-facing client applications that enables the user to retrieve and view information related to their medications from their insurer, drug discount sources and/or other related data sources.
+[**An RTPBC Requester**](CapabilityStatement-rtpbc-requester.html) is a consumer-facing client application that enables the user to retrieve and view information related to their medications from their insurer, drug discount sources and/or other related data sources.
 
 [**An RTPBC Responder**](CapabilityStatement-rtpbc-responder.html) is an insurer or data source that returns information in response to RTPBC requests.
 

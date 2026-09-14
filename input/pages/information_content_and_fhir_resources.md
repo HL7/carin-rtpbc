@@ -1,12 +1,7 @@
-<p class="stu-note">
-	The STU2 version of the Consumer RTPBC guide introduces a non-PHI request for submission to data services that do not need patient-identifiable infomration to provide a response, </p>
-
-<p></p>
-
 The real-time pharmacy benefit check (RTPBC) process involves a request from a consumer application used by a patient to either (a) the party that manages the pharmacy benefit portion of the patient's health insurance or (b) a party that serves as a source for typical and discount medication pricing information. 
 
 ### Content when submitting to the patient's insurer
-#### *Request content*
+#### _Request content_
 The patient application submits a request containing...
 * basic patient identifying information
 * payer and coverage identifiers
@@ -15,7 +10,7 @@ The patient application submits a request containing...
 
 *Example:* [RTPBC request bundle](Bundle-rtpbc-bundle-request-01.html)
 
-#### *Response content*
+#### _Response content_
 The responder... 
 * locates the patient's record and coverage details
 * determines the patient's out of pocket cost for the requested pharmacy and potentially other pharmacy options
@@ -26,23 +21,21 @@ The responder...
 
 <p></p>
 
-### Content when _requesting non-patient-specific info such as cash pricing_
+### Content when requesting non-patient-specific info such as cash pricing
 <p class="modified-content">This section was modified to use a request format that contains no patient-identifiable information.</p> 
 
-#### *Request content*
+#### _Request content_
 The patient application submits a request containing...
 * non-patient-identifiable information from the prescription: medication and quantity
 * the patient's preferred pharmacy or location (ZIP Code) of the pharmacy
-* non-patient-identifiable coverage information: insurance type
 
 *Profile:* [RTPBC Request Bundle - Non-PHI](StructureDefinition-rtpbc-request-bundle-non-phi.html)
 
 *Example:* [Non-PHI RTPBC request](Bundle-rtpbc-bundle-request-non-phi-1.html)
 
-#### Response content
+#### _Response content_
 The responder... 
-* determines:
-  * pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships
+* determines pricing for the requested pharmacy and potentially other nearby pharmacies, including discounts associated with coupons or memberships
 * returns the gathered information to requester
 
 *Profile:* [RTPBC Response Bundle - Non-PHI](StructureDefinition-rtpbc-response-bundle-non-phi.html)
@@ -59,7 +52,9 @@ The consumer RTPBC request and response are accomplished using FHIR **Claim** an
   <img src="high-level-rtpbc-fhir-resource-mapping.png" style="float:none">  
 </p></div>
 
-<br/>**[Claim](StructureDefinition-rtpbc-request-claim.html)** - Represents the RTPBC request. Uses the *predetermination* Claim.use mode  
+<p></p>
+
+**[Claim](StructureDefinition-rtpbc-request-claim.html)** - Represents the RTPBC request. Uses the *predetermination* Claim.use mode  
 
 **[ClaimResponse](StructureDefinition-rtpbc-response-claimresponse.html)** - Represents the RTPBC response
 
@@ -74,6 +69,4 @@ The consumer RTPBC request and response are accomplished using FHIR **Claim** an
 **Practitioner** - Prescriber information is conveyed using the US Core Practitioner profile.
 
 
-<br><br>
-
-[Next Page](business_rules.html)
+<p></p>

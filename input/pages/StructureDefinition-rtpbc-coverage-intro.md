@@ -1,6 +1,4 @@
-﻿This profile constrains the Coverage resource to carry the member and and coverage identifiers that insurers use to locate the patient's specific plan coverage rules. 
-
-(Note: When the responder is a medication pricing source, the Coverage resource is not required).
+﻿(Note: When the responder is a medication pricing source, the Coverage resource is not required).
 
 The Coverage elements available to be used by the RTPBC process are:
 

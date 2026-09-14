@@ -2,13 +2,11 @@ Profile: RtpbcMedicationRequest
 Parent: $us-core-medicationrequest
 Id: rtpbc-medicationrequest
 Title: "RTPBC Medication Request"
-Description: """This profile constrains the MedicationRequest resource to convey a subset of prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process. The content specifies the prescribed product and quantity, and references the prescribing practitioner and the patient's preferred pharmacy. 
-
-This profile differs from the US Core MedicationRequest in that it doesn't set the encounter or dosageInstruction elements as Must Support, because clients in the exchange will typically be mobile consumer applications that do not posess this information, and because that information is not pertinent to this use case."""
-* ^version = "1.0.0"
+Description: "This profile constrains the MedicationRequest resource to convey prescription information required in the consumer real-time pharmacy benefit check (RTPBC) process."
+* ^version = "1.1.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2020-12-02T00:00:00-05:00"
+* ^date = "2026-09-14T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -29,9 +27,9 @@ This profile differs from the US Core MedicationRequest in that it doesn't set t
 * medication[x] from $rtpbc-prescribable-product-code-vs (extensible)
 * medication[x] ^label = "Prescribed Product"
 * medication[x] ^short = "Prescribed Product"
-* medication[x] ^definition = "A product identifier for the prescribed medication. Either an NDC11 or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
-* medication[x] ^comment = "The NDC11 is an 11-digit normalized format consisting of a 5-digit labeler segment, 4-digit product segment, and 2-digit package segment, with no dashes"
-* medication[x] ^binding.description = "RTPBC prescribable product codes (NDC11 and RxNorm)"
+* medication[x] ^definition = "A product identifier for the prescribed medication. Either an NDC or an RxNorm code for a prescribable product (representing drug name, strength and dose form)"
+* medication[x] ^comment = "The NDC is a normalized format consisting of a labeler segment, product segment, and package segment, with no dashes"
+* medication[x] ^binding.description = "RTPBC prescribable product codes (NDC and RxNorm)"
 * subject only Reference($rtpbc-patient)
 * subject ^label = "Patient"
 * subject ^short = "Patient"

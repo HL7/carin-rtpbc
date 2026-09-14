@@ -8,7 +8,7 @@
 ### Operation outcome usage
 
 * §OP-3:In the event of a **system or communication error,** RTPBC source systems (payer/PBM, discount pricing source) **SHALL** respond by providing an OperationOutcome resource.§
-* §OP-4:OperationOutcomes **SHALL** contain a definition of severity in the OperationOutcome.issue.severity field providing a value from the [valueset-issue-severity](http://hl7.org/fhir/ValueSet/issue-severity.html) value set.§ The cases described below will specify the value to use for each outcome.
+* §OP-4:OperationOutcomes **SHALL** contain a definition of severity in the OperationOutcome.issue.severity field providing a value from the [valueset-issue-severity](https://hl7.org/fhir/R4/valueset-issue-severity.html) value set.§ 
 * §OP-5:OperationOutcomes **SHALL** contain a definition of the type of error in the OperationOutcome.issue.code element, providing a value from the [issue-type value set](http://hl7.org/fhir/valueset-issue-type.html).§
 * §OP-6:OperationOutcomes **SHALL** contain details of the error in the .issue.details.coding.code and .issue.details.coding.display fields.§ 
 * §OP-7:OperationOutcomes **SHOULD** provide additional diagnostic details of the error in OperationOutcome.diagnostics property.§

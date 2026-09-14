@@ -12,5 +12,3 @@ Note the following data population:</p>
 <p></p>
 
 <h3>Example data content</h3>
-<p>to be added...</p>
-<p></p>

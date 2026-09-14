@@ -1,4 +1,6 @@
-[Previous Page](business_rules.html)
+Pharmacy-related information exchange in the US is frequently facilitated by intermediaries.
+
+This guide uses FHIR messaging to provide support for exchange flows where an intermediary routes interactions between clients and server systems--utilizing the MessageHeader resource to convey routing information. FHIR messaging also supports direct exchange between a client and server.
 
 ### Operation: $process-message
 The RTPBC request is submitted using the $process-message operation on the processor's claim server...
@@ -21,7 +23,4 @@ The response in the RTPBC exchange is expected to be synchronous, with real-time
 
 <a href="Bundle-rtpbc-bundle-response-01.html">Example bundled RTPBC response from payer/PBM. Using messaging ($process-message operation, with MessageHeaders)</a>
 
-
-<br><br>
-
-[Next Page](error_handling.html)
+<p></p>

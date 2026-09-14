@@ -2,12 +2,11 @@ Profile: RtpbcCoverage
 Parent: $us-core-coverage
 Id: rtpbc-coverage
 Title: "RTPBC Coverage"
-Description: "This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process"
-* ^meta.lastUpdated = "2019-12-08T00:00:00-05:00"
+Description: "This profile constrains the Coverage resource for carrying the pharmacy benefit information required in the consumer real-time pharmacy benefit check process, including the member and and coverage identifiers that insurers use to locate the patient's specific plan coverage rules."
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2020-12-02T00:00:00-05:00"
+* ^date = "2026-09-14T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url

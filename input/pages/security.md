@@ -1,18 +1,3 @@
-<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
-<blockquote class="stu-note">
-	The initial version of the RTPBC IG did not provide specific guidance for authenticating with data sources and authorizing release of information.
-	STU2 recommends use of the SMART on FHIR specification for accessing RTPBC data sources.
-	All content below that precedes Additional Guidance is new in STU2. 
-</blockquote>
-</div>
-
-<p></p>
-
-<p class="new-content"></p>
-
-<p></p>
-
-
 ### Using SMART on FHIR in RTPBC client applications
 
 The [SMART App Launch](http://hl7.org/fhir/smart-app-launch/STU2.2) implementation guide provides features based on OAuth 2.0 that enable client applications to authorize, authenticate, and integrate with FHIR-based data systems. 
@@ -23,7 +8,7 @@ This guide recommends use of these patterns to enable patient applications to ac
 
 #### Capabilities to support retrieval of patient-specific information
 
-§SEC-1:The following SMART on FHIR Capability Sets **SHOULD** be supported when retrieving from RTPBC data sources that return patient-specific information--such as an insurer system that returns responses containing a member's benefit balances and coverage information.§
+§SEC-1:The following SMART on FHIR Capability Set **SHOULD** be supported when retrieving from RTPBC data sources that return patient-specific information--such as an insurer system that returns responses containing a member's benefit balances and coverage information.§
 
 - [Patient Access for Standalone Apps](https://hl7.org/fhir/smart-app-launch/STU2.2/conformance.html#patient-access-for-standalone-apps)
 
