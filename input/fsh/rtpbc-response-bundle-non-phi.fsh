@@ -51,12 +51,12 @@ Usage: #example
 Description: "An example non-PHI RTPBC Response containing discount card information"
 * meta.profile = $rtpbc-response-bundle-non-phi
 * type = #message
-* timestamp = "2025-11-15T13:10:13-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-response-discount-card"
+* timestamp = "2026-11-01T13:00:05-05:00"
+* entry[0].fullUrl = "http://example.org/GoodPricing/fhir/MessageHeader/rtpbc-messageheader-response-discount-card"
 * entry[=].resource = rtpbc-messageheader-response-discount-card
-* entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-discount-card"
+* entry[+].fullUrl = "http://example.org/GoodPricing/fhir/ClaimResponse/rtpbc-claim-response-discount-card"
 * entry[=].resource = rtpbc-claim-response-discount-card
-* entry[+].fullUrl = "http://example.org/my-app/Coverage/rtpbc-coverage-non-phi-01"
+* entry[+].fullUrl = "http://example.org/GoodPricing/fhir/Coverage/rtpbc-coverage-non-phi-01"
 * entry[=].resource = rtpbc-coverage-non-phi-01
 
 
@@ -70,7 +70,7 @@ Usage: #inline
 * source.endpoint = "http://example.org/GoodPricing/fhir"
 * response.identifier = "rtpbc-messageheader-request-non-phi-1"
 * response.code = #ok
-* focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-discount-card)
+* focus = Reference(http://example.org/GoodPricing/fhir/ClaimResponse/rtpbc-claim-response-discount-card)
 * definition = $rtpbc-response-non-phi
 
 Instance: rtpbc-claim-response-discount-card
@@ -84,7 +84,7 @@ Description: "An example response containing a discount card (with Coverage reso
 * use = #predetermination
 * patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * patient.extension[data-masked].valueCode = #masked
-* created = "2025-11-15T13:10:13-05:00"
+* created = "2026-11-01T13:00:05-05:00"
 * insurer.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * insurer.extension[data-masked].valueCode = #masked
 * request.identifier.value = "rtpbc-01"
@@ -130,10 +130,10 @@ Usage: #example
 Description: "An example non-PHI RTPBC Response containing cash pricing"
 * meta.profile = $rtpbc-response-bundle-non-phi
 * type = #message
-* timestamp = "2025-11-15T13:10:13-05:00"
-* entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-response-price-source"
+* timestamp = "2026-11-01T13:00:03-05:00"
+* entry[0].fullUrl = "http://example.org/GoodPricing/fhir/MessageHeader/rtpbc-messageheader-response-price-source"
 * entry[=].resource = rtpbc-messageheader-response-price-source
-* entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-price-source"
+* entry[+].fullUrl = "http://example.org/GoodPricing/fhir/ClaimResponse/rtpbc-claim-response-price-source"
 * entry[=].resource = rtpbc-claim-response-price-source
 
 
@@ -146,7 +146,7 @@ Usage: #inline
 * source.endpoint = "http://example.org/GoodPricing/fhir"
 * response.identifier = "rtpbc-messageheader-request-non-phi-1"
 * response.code = #ok
-* focus = Reference(http://example.org/my-app/ClaimResponse/rtpbc-claim-response-price-source)
+* focus = Reference(http://example.org/GoodPricing/fhir/ClaimResponse/rtpbc-claim-response-price-source)
 * definition = $rtpbc-response-non-phi
 
 Instance: rtpbc-claim-response-price-source
@@ -160,14 +160,13 @@ Description: "An example response from a cash pricing source, containing no pers
 * use = #predetermination
 * patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * patient.extension[data-masked].valueCode = #masked
-* created = "2025-11-15T13:10:13-05:00"
+* created = "2026-11-01T13:00:03-05:00"
 * insurer.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * insurer.extension[data-masked].valueCode = #masked
 * request.identifier.value = "rtpbc-01"
 * outcome = #complete
 * disposition = "Processed successfully"
 * item.itemSequence = 1
-* item.noteNumber = 1
 * item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"
 * item.adjudication[=].amount.value = 105
 * item.adjudication[=].amount.currency = #USD
@@ -177,10 +176,10 @@ Description: "An example response from a cash pricing source, containing no pers
 * item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * item.adjudication[=].amount.value = 85
 * item.adjudication[=].amount.currency = #USD
-* addItem.extension.url = $rtpbc-isAlternative
+* addItem.extension[isAlternative].url = $rtpbc-isAlternative
 * addItem.extension[isAlternative].valueBoolean = true
 * addItem.itemSequence = 1
-* addItem.productOrService = $rxnorm#205535 "fluoxetine 10 MG Oral Capsule [Prozac]"
+* addItem.productOrService = $rxnorm#313990 "FLUoxetine 10 MG Oral Tablet"
 * addItem.quantity.value = 60
 * addItem.quantity.unit = "{Each}"
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#cash-price "Full product cash price"

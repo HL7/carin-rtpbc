@@ -1,7 +1,7 @@
 CodeSystem: RtpbcBenefitRestrictionCodeSystem
 Id: rtpbc-benefit-restriction-temporary
 Title: "RTPBC Benefit Restriction Code System (Temporary)"
-Description: "This code system defines a set of benefit restrictions that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process. (A THO URL has been requested for this code system)"
+Description: "This code system defines a set of benefit restrictions that may apply to a prescription product and pharmacy combination evaluated in the Real-time Pharmacy Benefit Check (RTPBC) process. (The contents of this code system are expected to be incorporated into code systems managed in http://terminology.hl7.org in the future)"
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
 * ^extension[=].valueInteger = 2
 * ^version = "1.1.0"

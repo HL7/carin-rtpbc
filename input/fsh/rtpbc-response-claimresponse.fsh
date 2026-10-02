@@ -281,7 +281,7 @@ Description: "This is an example of response stating that the requested drug is 
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient = Reference(Patient/rtpbc-patient-01)
-* created = "2019-11-01T11:20:59-05:00"
+* created = "2026-11-01T13:00:05-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
 * request.identifier.value = "rtpbc-01"
 * outcome = #complete
@@ -322,12 +322,12 @@ InstanceOf: rtpbc-response-claimresponse
 Usage: #example
 Description: "An example RTPBC response indicating PA is required and providing patient out-of-pocket costs"
 * meta.profile = $rtpbc-response-claimresponse
-* identifier.value = "rtpbc-01-response"
+* identifier.value = "rtpbc-claim-response-01"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient = Reference(Patient/rtpbc-patient-01)
-* created = "2025-12-11T11:20:59-05:00"
+* created = "2026-11-01T13:00:05-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
 * request.identifier.value = "rtpbc-01"
 * outcome = #complete
@@ -339,7 +339,7 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * item.extension[+].url = $rtpbc-preferenceLevel
 * item.extension[=].valuePositiveInt = 2
 * item.extension[+].url = $rtpbc-nextAvailableFillDate
-* item.extension[=].valueDate = "2025-12-20"
+* item.extension[=].valueDate = "2026-12-20"
 * item.itemSequence = 1
 * item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * item.adjudication[=].amount.value = 40
@@ -366,12 +366,13 @@ Description: "An example RTPBC response indicating PA is required and providing 
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * addItem.adjudication[=].amount.value = 10
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
 * addItem.adjudication[=].amount.value = 20
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
 * addItem.adjudication[=].amount.value = 195
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
 * addItem.adjudication[=].amount.value = 305
 * addItem.adjudication[=].amount.currency = #USD
 * addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
@@ -392,7 +393,7 @@ Description: "An example payer RTPBC response with all benefit-related elements 
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient = Reference(Patient/rtpbc-patient-01)
-* created = "2025-12-11T11:20:59-05:00"
+* created = "2026-11-01T13:00:05-05:00"
 * insurer.identifier.value = "Pharmacy Plans US"
 * request.identifier.value = "rtpbc-01"
 * outcome = #complete
@@ -404,12 +405,12 @@ Description: "An example payer RTPBC response with all benefit-related elements 
 * item.extension[+].url = $rtpbc-preferenceLevel
 * item.extension[=].valuePositiveInt = 2
 * item.extension[+].url = $rtpbc-nextAvailableFillDate
-* item.extension[=].valueDate = "2025-12-20"
+* item.extension[=].valueDate = "2026-12-20"
 * item.itemSequence = 1
 * item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#eligible "Eligible amount"
 * item.adjudication[=].amount.value = 600
 * item.adjudication[=].amount.currency = #USD
-* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * item.adjudication[=].amount.value = 40
 * item.adjudication[=].amount.currency = #USD
 * item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"
@@ -418,10 +419,12 @@ Description: "An example payer RTPBC response with all benefit-related elements 
 * item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
 * item.adjudication[=].amount.value = 50
 * item.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
-* addItem.adjudication[=].amount.value = 235
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
-* addItem.adjudication[=].amount.value = 275
+* item.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
+* item.adjudication[=].amount.value = 235
+* item.adjudication[=].amount.currency = #USD
+* item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
+* item.adjudication[=].amount.value = 275
+* item.adjudication[=].amount.currency = #USD
 * item.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#total "Total patient responsibility"
 * item.adjudication[=].amount.value = 120
 * item.adjudication[=].amount.currency = #USD
@@ -441,15 +444,16 @@ Description: "An example payer RTPBC response with all benefit-related elements 
 * addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#eligible "Eligible amount"
 * addItem.adjudication[=].amount.value = 500
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#copay "Copay"
 * addItem.adjudication[=].amount.value = 10
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#deductible "Deductible"
 * addItem.adjudication[=].amount.value = 20
 * addItem.adjudication[=].amount.currency = #USD
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#accumulated-deductible "Accumulated deductible"
 * addItem.adjudication[=].amount.value = 195
-* addItem.adjudication[0].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
+* addItem.adjudication[=].amount.currency = #USD
+* addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#remaining-deductible "Remaining deductible"
 * addItem.adjudication[=].amount.value = 305
 * addItem.adjudication[=].amount.currency = #USD
 * addItem.adjudication[+].category = $rtpbc-patient-pay-type-temporary-cs#coinsurance "Per prescription coinsurance"

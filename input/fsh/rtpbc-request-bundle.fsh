@@ -63,7 +63,7 @@ Usage: #example
 Description: "An example RTPBC Request"
 * meta.profile = $rtpbc-request-bundle
 * type = #message
-* timestamp = "2019-11-15T13:10:13-05:00"
+* timestamp = "2026-11-01T13:00:03-05:00"
 * entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-01"
 * entry[=].resource = rtpbc-messageheader-request-01
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-01"
@@ -84,8 +84,8 @@ InstanceOf: rtpbc-request-messageheader
 Usage: #inline
 * meta.profile = $rtpbc-request-messageheader
 * eventCoding = $rtpbc-event-type-cs#rtpbc-request "RTPBC Request"
-* source.name = "MyPatientApp"
-* source.endpoint = "http://example.org/MyPatientApp"
+* source.name = "my-app"
+* source.endpoint = "http://example.org/my-app"
 * focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-01)
 * definition = $rtpbc-request
 
