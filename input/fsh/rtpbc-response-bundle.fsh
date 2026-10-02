@@ -3,9 +3,9 @@ Parent: Bundle
 Id: rtpbc-response-bundle
 Title: "RTPBC Response Bundle"
 Description: "This profile constrains a Bundle resource for use as the response in a Real-time Pharmacy Benefit Check (RTPBC) process"
-* ^version = "1.0.0"
+* ^version = "1.1.0"
 * ^experimental = false
-* ^date = "2020-05-23T00:00:00-05:00"
+* ^date = "2026-10-02T00:00:00-05:00"
 * ^publisher = "'HL7 International / Pharmacy"
 * ^contact[0].name = "'HL7 International / Pharmacy"
 * ^contact[=].telecom.system = #url
@@ -56,7 +56,7 @@ Usage: #example
 Description: "An example RTPBC response bundle produced by the patient's insurer"
 * meta.profile = $rtpbc-response-bundle
 * type = #message
-* timestamp = "2019-11-15T13:10:15-05:00"
+* timestamp = "2026-11-01T13:00:05-05:00"
 * entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-response-01"
 * entry[=].resource = rtpbc-messageheader-response-01
 * entry[+].fullUrl = "http://example.org/my-app/ClaimResponse/rtpbc-claim-response-01"

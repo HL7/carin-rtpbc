@@ -173,7 +173,7 @@ Description: "An example RTPBC Request Claim, requesting predetermination for a 
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient = Reference(rtpbc-patient-01)
-* created = "2019-11-01T11:20:54-05:00"
+* created = "2026-11-01T13:00:03-05:00"
 * provider = Reference(Organization/rtpbc-organization-01)
 * priority = $processpriority-cs#normal "Normal"
 * prescription = Reference(MedicationRequest/rtpbc-medicationrequest-01)

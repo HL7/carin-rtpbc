@@ -51,7 +51,7 @@ Usage: #example
 Description: "An example non-PHI RTPBC Request"
 * meta.profile = $rtpbc-request-bundle-non-phi
 * type = #message
-* timestamp = "2025-11-15T13:10:13-05:00"
+* timestamp = "2026-11-01T13:00:03-05:00"
 * entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-non-phi-1"
 * entry[=].resource = rtpbc-messageheader-request-non-phi-1
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-non-phi-1"
@@ -62,8 +62,8 @@ InstanceOf: rtpbc-request-messageheader-non-phi
 Usage: #inline
 * meta.profile = $rtpbc-request-messageheader-non-phi
 * eventCoding = $rtpbc-event-type-cs#rtpbc-request-non-phi "RTPBC Non-PHI Request"
-* source.name = "MyPatientApp"
-* source.endpoint = "http://example.org/MyPatientApp"
+* source.name = "my-app"
+* source.endpoint = "http://example.org/my-app"
 * focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-non-phi-1)
 * definition = $rtpbc-request-non-phi
 
@@ -72,13 +72,13 @@ Instance: rtpbc-claim-non-phi-1
 InstanceOf: rtpbc-request-claim-non-phi
 Description: "An example of the non-PHI RTPBC request resource (Claim)"
 * meta.profile = "http://hl7.org/fhir/us/carin-rtpbc/StructureDefinition/rtpbc-request-claim-non-phi"
-* identifier.value = "rtpbc-non-phi-1"
+* identifier.value = "rtpbc-claim-non-phi-1"
 * status = #active
 * type = $claim-type-cs#pharmacy "Pharmacy"
 * use = #predetermination
 * patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * patient.extension[data-masked].valueCode = #masked
-* created = "2025-11-01T11:20:54-05:00"
+* created = "2026-11-01T13:00:03-05:00"
 * provider.extension[preferred-pharmacy-postal-code].valueString = "55401"
 * provider.display = "Pharmacies in ZIP Code 55401"
 * priority = $processpriority-cs#normal "Normal"
@@ -103,7 +103,7 @@ Usage: #example
 Description: "An example non-PHI RTPBC Request"
 * meta.profile = $rtpbc-request-bundle-non-phi
 * type = #message
-* timestamp = "2025-11-15T13:10:13-05:00"
+* timestamp = "2026-11-01T13:00:03-05:00"
 * entry[0].fullUrl = "http://example.org/my-app/MessageHeader/rtpbc-messageheader-request-non-phi-2"
 * entry[=].resource = rtpbc-messageheader-request-non-phi-2
 * entry[+].fullUrl = "http://example.org/my-app/Claim/rtpbc-claim-non-phi-2"
@@ -116,8 +116,8 @@ InstanceOf: rtpbc-request-messageheader-non-phi
 Usage: #inline
 * meta.profile = $rtpbc-request-messageheader-non-phi
 * eventCoding = $rtpbc-event-type-cs#rtpbc-request-non-phi "RTPBC Non-PHI Request"
-* source.name = "MyPatientApp"
-* source.endpoint = "http://example.org/MyPatientApp"
+* source.name = "my-app"
+* source.endpoint = "http://example.org/my-app"
 * focus = Reference(http://example.org/my-app/Claim/rtpbc-claim-non-phi-2)
 * definition = $rtpbc-request-non-phi
 
@@ -132,7 +132,7 @@ Description: "An example of the non-PHI RTPBC request resource (Claim)"
 * use = #predetermination
 * patient.extension[data-masked].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * patient.extension[data-masked].valueCode = #masked
-* created = "2025-11-01T11:20:54-05:00"
+* created = "2026-11-01T13:00:03-05:00"
 * provider = Reference(Organization/rtpbc-organization-01)
 * priority = $processpriority-cs#normal "Normal"
 * insurance.sequence = 1
