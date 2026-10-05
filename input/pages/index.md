@@ -1,4 +1,4 @@
-<p class="stu-note"> The STU2 version of the Consumer RTPBC guide expands information that clients can retrieve from a patient's insurer, adds a request format that omits personally-identifiable information for data sources that don't require patient specifics, adds optional discount card adjudication info to the responses, provides additional implementation guidance, and refines other aspects based on implementer feedback,</p>
+<p class="stu-note"> The STU2 version of the Consumer RTPBC guide expands information that clients can retrieve from a patient's insurer, adds a request format that omits personally-identifiable information for data sources that don't require patient specifics, adds optional discount card adjudication info to the responses, provides additional implementation guidance, and refines other aspects based on implementer feedback.</p>
 
 <p></p>
 
