@@ -2,7 +2,7 @@
 
 // Core FHIR resources and extensions
 // maybe needed:
-Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.3.0
+Alias: $data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason|5.4.0
 
 // HL7 terminology
 Alias: $ndc = http://hl7.org/fhir/sid/ndc

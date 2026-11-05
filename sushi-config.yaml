@@ -20,12 +20,13 @@ parameters:
   jira-code: carin-rtpbc
   path-expansion-params: "../../input/terminology-settings.json"
   auto-oid-root: 2.16.840.1.113883.4.642.40.90
+  shownav: true
 
 dependencies:
   hl7.fhir.us.core: 9.0.0
   hl7.fhir.uv.extensions.r4:
     id: ext
-    version: 5.3.0
+    version: 5.4.0
 
 contact:
   - name: Frank McKinney
@@ -41,44 +42,57 @@ extension:
     valueInteger: 2
  
 
+pages:
+  index.md:
+    title: Home
+  business_rules.md:
+    title: Business Rules
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  capstatements.md:
+    title: Capability Statements
+  changelog.md:
+    title: Changelog
+  conformance.md:
+    title: Conformance
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  consumer_vs_provider_rtpbc.md:
+    title: Consumer vs Provider RTPBC
+  downloads.md:
+    title: Downloads
+  error_handling.md:
+    title: Error Handling
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  information_content_and_fhir_resources.md:
+    title: Information Content and FHIR Resources
+  profiles.md:
+    title: Profiles
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  security.md:
+    title: Security
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  submission_method.md:
+    title: Submission Method
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
+  use_cases.md:
+    title: Use Cases
+  artifacts.html:
+    title: Artifacts Summary
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
 
-# * modifierExtension
-# * experimental
-# * useContext
-# * copyright
-# * packageId
-#
-#
-# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
-# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# The FSHOnly flag indicates if only FSH resources should be exported.
-# If set to true, no IG related content will be generated.
-# The default value for this property is false.
-#
-# FSHOnly: false
-#
-#
-# When set to true, the "short" and "definition" field on the root element of an Extension will
-# be set to the "Title" and "Description" of that Extension. Default is true.
-#
-# applyExtensionMetadataToRoot: true
-#
-#
-# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
-# See the individual option definitions below for more detail.
-#
-# instanceOptions:
-#   Determines for which types of Instances SUSHI will automatically set meta.profile
-#   if InstanceOf references a profile:
-#
-#   setMetaProfile: always # always | never | inline-only | standalone-only
-#
-#
-#   Determines for which types of Instances SUSHI will automatically set id
-#   if InstanceOf references a profile:
-#
-#   setId: always # always | standalone-only
 
 menu:
   Home: index.html
