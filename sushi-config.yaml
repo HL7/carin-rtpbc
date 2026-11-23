@@ -2,7 +2,7 @@
 # 
 id: hl7.fhir.us.carin-rtpbc
 canonical: http://hl7.org/fhir/us/carin-rtpbc
-name: Consumer Real-Time Pharmacy Benefit Check
+name: ConsumerRealTimePharmacyBenefitCheck
 title: Consumer Real-Time Pharmacy Benefit Check FHIR IG
 description: FHIR Implementation Guide for Consumer Real-Time Pharmacy Benefit Check
 status: active # draft | active | retired | unknown
