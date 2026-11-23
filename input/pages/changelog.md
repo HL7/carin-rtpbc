@@ -6,9 +6,9 @@ This page describes the primary releases of the specification and summarizes the
 * [FHIR-57117 (Error Code binding)](https://jira.hl7.org/browse/FHIR-57117) - ValueSet binding of ClaimResponse.error to the [RTPBC Error Code Value Set](https://build.fhir.org/ig/HL7/carin-rtpbc/en/ValueSet-rtpbc-error-code.html) in the following profiles was changed from preferred to extensible:
   * [RTPBC Response Using ClaimResponse](https://build.fhir.org/ig/HL7/carin-rtpbc/en/StructureDefinition-rtpbc-response-claimresponse.html)
   * [RTPBC Non-PHI Response Using ClaimResponse](https://build.fhir.org/ig/HL7/carin-rtpbc/en/StructureDefinition-rtpbc-response-claimresponse-non-phi.html)
+  * [FHIR-56717 References NDC11](https://jira.hl7.org/browse/FHIR-56717). Changed narrative references to the NDC drug code from NDC-11 to simply NDC throughout, in light of the upcoming expansion of the NDC code to 12 characters. While the associated editorial changes do not affect the actual transmission of NDCs, they indicate that, in the future, the length of NDC identifiers conveyed using the IG will expand.
 
 **Non-substantive changes**
-* [FHIR-56717 References NDC11](https://jira.hl7.org/browse/FHIR-56717). Changed narrative references to the NDC drug code from NDC-11 to simply NDC throughout, in light of the upcoming expansion of the NDC code to 12 characters.
 * Clarifications and wording corrections on the Home page and Background pages. 
 
 ### Release 2.0.0-ballot
@@ -32,7 +32,9 @@ This page describes the primary releases of the specification and summarizes the
 
 **Non-substantive changes**:
 * [FHIR-51683 Convert profile definitions in IG from XML to FSH](https://jira.hl7.org/browse/FHIR-51683). Converted IG and profile definitions from manually-edited XML to FSH
-* [FHIR-51678	Correct resource referencing in Bundle examples](https://jira.hl7.org/browse/FHIR-51678)
+* [FHIR-51678 Correct resource referencing in Bundle examples](https://jira.hl7.org/browse/FHIR-51678)
+* [FHIR-57131 Reference to support for addresses outside the US - not supported in terminology binding](https://jira.hl7.org/browse/FHIR-57131)
+* [FHIR-56697 Use of Messaging](https://jira.hl7.org/browse/FHIR-56697)
 
 In addition, there have been various miscellaneous non-substantive improvements to formatting, spelling, grammar, etc.
 
